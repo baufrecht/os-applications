@@ -1,0 +1,129 @@
+#! /usr/bin/python
+
+# standard modules
+import string
+#import shutil
+#import signal
+#import subprocess
+import sys
+#import tempfile
+import base64
+import commands
+#import fileinput
+#import glob
+import ldapurl
+import os
+# import re
+# import tempfile
+import subprocess
+import syslog
+
+from subprocess import call
+
+
+# TCOS modules
+import pytcos.tcos as tcos
+
+u = tcos.Util()
+s = tcos.System()
+l = tcos.Ldap()
+
+mac = s.getMac()
+ldap_url = s.getLdapUrl()
+client_dn = l.getClientDn(mac, ldap_url)
+devices_dn = l.getDevicesDn(client_dn, ldap_url)
+
+# check if xrandr runs at all and get all connectors
+try :  
+    connectors = subprocess.check_output('xrandr -q | grep connect | cut -f1 -d " "', shell=True)
+except :  
+    syslog.syslog('WARNING: could not querry your grafic card connectors using xrandr. Better luck, next time.')
+    print >>sys.stderr, 'WARNING: could not querry your grafic card connectors using xrandr. Better luck, next time.'
+    sys.exit(1)
+
+
+connectorsToTurnOff = connectors.split('\n')
+
+xrandrTurnOffCmd = ''
+xrandrCmd = ''
+xrandrAddModeCmd = ''
+displayFound = False
+tcos_screenrc = '/home/tcos/.tcos_displayrc'
+
+# do we have to use settings from manager?
+# 
+for device in devices_dn:
+    deviceType = l.getGroupOfUniqueNamesInfo(device, ldap_url)["schema"]
+    if deviceType == "display":
+        # prevent running twice
+        if displayFound: 
+            print >>sys.stderr, 'WARNING: Found more than one displayset asigned to this client. Using only the first one.'
+            syslog.syslog('WARNING: Found more than one displayset asigned to this client. Using only the first one.')
+            sys.exit()
+        displayFound = True
+
+        ###################################################################
+        # check if the user has set his own command, run it and bail out
+        #
+        xrandrCmd = l.getNismapentry(device, ldap_url).get('xrandcmd', '')
+        if xrandrCmd != "" :
+            syslog.syslog("INFO: setting up xrand")
+            try: retcode = subprocess.call(xrandrCmd, shell=True)
+            except OSError as e:
+                print >>sys.stderr, 'ERROR: Command "' + xrandrCmd + ' " failed.' 
+                syslog.syslog('ERROR: Command "' + xrandrCmd + ' " failed.' )
+                sys.exit(1)
+                # TODO: handle resolution von env here
+                sys.exit(0)
+        ###################################################################
+
+        # substract the Connectors the users wants to use
+        try: connectorsToTurnOff.remove(l.getNismapentry(device, ldap_url).get('firstscreen.connect', 'DVI')) 
+        except: pass
+        try: connectorsToTurnOff.remove(l.getNismapentry(device, ldap_url).get('secondscreen.connect', 'NONE')) 
+        except: pass
+
+        # turn off all unused or disconnected connectors
+        for turnOff in connectorsToTurnOff :
+	     if turnOff: xrandrTurnOffCmd += ' --output ' + turnOff + ' --off '
+
+        f_screenrc = open(tcos_screenrc,"w")
+        for Display in  ("firstscreen",  "secondscreen") :
+            connector = l.getNismapentry(device, ldap_url).get(Display + '.connect', 'DVI')
+            if Display == "firstscreen" : primary_screen = connector # keep primary Display in mind
+
+            if connector != "NONE":
+                mode = l.getNismapentry(device, ldap_url).get(Display + '.resolution', '1920x1080')
+                rotate = l.getNismapentry(device, ldap_url).get(Display + '.rotation', 'normal')
+                xrandrCmd +=  ' --output ' + connector + ' --mode ' + mode + ' --rotate ' + rotate 
+                
+                # handle rotation and send environment vars  to tcos_screenrc
+                x, y = mode.split('x')                
+                if rotate != "normal" and rotate != "inverted" : x,y = y,x # swap (flip) if display is rotated left or right
+                f_screenrc.write('export ' + Display + 'Width=' + x + '\n')
+                f_screenrc.write('export ' + Display + 'Heigth=' + y + '\n')
+
+                if Display == "firstscreen" :
+                    xrandrCmd += ' ' + '--primary '
+                else : 
+                    secondScreenPosition = l.getNismapentry(device, ldap_url).get('secondscreen.positioning', ' --right-of')
+                    xrandrCmd += ' ' + secondScreenPosition + ' ' +  primary_screen
+                xrandrAddModeCmd +=  ' --addmode ' + connector + ' ' + mode
+        f_screenrc.close()
+
+# trigger commands to system
+#
+exe = 'xrandr ' + xrandrTurnOffCmd + '; xrandr ' + xrandrAddModeCmd + '; xrandr ' + xrandrCmd 
+syslog.syslog('INFO: ' + exe )        
+print 'INFO: ' + exe         
+try: retcode = subprocess.call(exe, shell=True)
+except OSError as e:
+    print >>sys.stderr, "WARNING: xrandr failed." 
+    syslog.syslog("WARNING: xrandr failed.")
+    sys.exit(1)
+
+# example
+# xrandr --addmode HDMI1 1920x1080
+# xrandr --output HDMI1 --primary --mode 1920x1080 --pos 1280x0 --rotate normal --output LVDS1 --off --output DP1 --off --output VGA1 --mode 1280x1024 --pos 0x56 --rotate normal
+
+

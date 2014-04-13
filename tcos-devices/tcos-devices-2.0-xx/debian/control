@@ -1,0 +1,13 @@
+Source: tcos-devices
+Section: admin
+Priority: optional
+Maintainer: Steffen Hoenig <s.hoenig@openthinclient.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+
+Package: tcos-devices
+Architecture: any
+Depends:
+Conflicts: openthinclient-schema
+Description: Schemas for openthinclient manager
+ Several XML files for devices like displays. 

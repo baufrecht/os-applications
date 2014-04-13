@@ -1,0 +1,39 @@
+#############################################
+Startup links, new method
+
+As we support a complete root filesystem inside each 
+package, you're able to place your own startup scripts 
+in PACKAGENAME/etc/init.d and place symbolic links to 
+/etc/rc*.d as usual.
+
+See http://en.wikipedia.org/wiki/Sysvinit
+
+
+#############################################
+Startup links, old method 
+(DEPRECATED, just for leagacy support)
+
+If your package needs something to be done during startup,
+please place your scripts in 
+
+rc2345.d
+rcS.d
+
+here inside the tcos folder. These scripts will get 
+triggered during startup.If you don't use these method, 
+feel free to delete this folders.
+
+#############################################
+launcher
+
+Place your python code inside the launcher to have things done 
+before start your binary. 
+See tcos.py to get an overview of all funtionality you can use.
+
+#############################################
+Icon
+
+Place or link your icon here to launcher.icon . Default format 
+is PNG 48 x 48, 8-bit/color RGBA, non-interlaced, with 
+transparency. 
+

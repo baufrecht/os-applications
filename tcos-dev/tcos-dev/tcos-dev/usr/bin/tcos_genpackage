@@ -1,0 +1,114 @@
+#!/bin/bash
+
+# set -x
+
+TCOS_TEMPLATE_DIR="/usr/share/tcos-dev/templates/tcos_genpackage"
+DHM_TEMPLATE_DIR="/usr/share/tcos-dev/templates/dh_make"
+DHM_OPTS="-n -d -s -t $DHM_TEMPLATE_DIR"
+
+INIT_VERSION="2.0-01"
+
+# functions
+#
+function echoUsageAndExit() {
+
+	BASENAME=`basename $0`
+	echo "$BASENAME - Script to generate a thin client os source archive"
+	echo
+	echo "  Usage: `basename $0` <packagename> [additional options for dh_make]"
+	echo
+	echo "  <packagename>                        must be all lowercase, digits and dashes"
+	echo "                                       must not start with a dash"
+	echo
+	echo "  [additional options for dh_make]     see manpage of dh_make for details"
+	echo "                                       default options: $DHM_OPTS"
+	echo
+	echo "See http://www.openthinclient.org for further informations."
+	exit
+}
+
+function echoError() {
+
+	echo $@ >&2
+}
+
+function runDHmake() {
+
+	mkdir -p "${PACKAGE_DIR}"
+	pushd "$PACKAGE_DIR" >/dev/null
+	dh_make $DHM_OPTS --packagename $PACKAGE_NAME $@
+	popd >/dev/null
+}
+
+function copyTemplateFiles() {
+
+        # some more slick code :-), Joern 09/2013
+	# copy templates
+	cp -a "$1"/* "$2"
+
+	# rename dirs
+	find "$2" -type d -name "package" | tac | while read folder; do mv $folder $(dirname $folder)/$PACKAGE_NAME; done 
+
+	# rename files
+	find "$2" -type f -name "*package*" | while read file; do 
+    	    FILENAME_NEW=$(basename "$file" | sed -s "s/package/$PACKAGE_NAME/g")
+	    mv $file $(dirname $file)/$FILENAME_NEW;  
+	done 
+
+	# for dir in `find "$2" -type d -name "package"`; do
+	# 	DIRNAME=`dirname "$dir"`
+	# 	FILENAME_OLD=`basename "$dir"`
+	# 	FILENAME_NEW=`echo "$FILENAME_OLD" | sed -s "s/package/$PACKAGE_NAME/g"`
+
+	# 	mv "$DIRNAME/$FILENAME_OLD" "$DIRNAME/$FILENAME_NEW"
+	# done
+
+	# rename files
+	# for file in `find "$2" -type f -name "*package*"`; do
+	# 	DIRNAME=`dirname "$file"`
+	# 	FILENAME_OLD=`basename "$file"`
+	# 	FILENAME_NEW=`echo "$FILENAME_OLD" | sed -s "s/package/$PACKAGE_NAME/g"`
+
+	# 	mv "$DIRNAME/$FILENAME_OLD" "$DIRNAME/$FILENAME_NEW"
+	# done
+}
+
+function substituteTemplateVars() {
+
+	# substitute in place
+	for file in `find "$1" -type f`; do
+		sed -i -s "s/#PACKAGE#/$PACKAGE_NAME/g" $file
+	done
+}
+
+# main()
+#
+if [ "$1" ]; then
+	PACKAGE_NAME="$1"
+	PACKAGE_DIR="$PACKAGE_NAME/${PACKAGE_NAME}-${INIT_VERSION}"
+	shift
+else
+	echoUsageAndExit
+fi
+
+case ${PACKAGE_NAME:0:1} in
+	-|_)
+		echoUsageAndExit
+		;;
+esac
+		
+if [ -e "$PACKAGE_NAME" ]; then
+	echoError "$PACKAGE_NAME exists. Exiting."
+	exit 65
+fi
+
+# be pedantic
+set -e
+
+# let's go
+runDHmake $@
+copyTemplateFiles "$TCOS_TEMPLATE_DIR" "$PACKAGE_DIR"
+substituteTemplateVars "$PACKAGE_DIR"
+
+echo
+echo "Generated source archive: $PACKAGE_DIR"

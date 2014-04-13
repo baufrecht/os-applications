@@ -1,0 +1,34 @@
+Source: sso-tcos
+Section: unknown
+Priority: optional
+Maintainer: Tobias Abt <t.abt@levigo.de>
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.6.2
+
+Package: sso-tcos
+Architecture: any
+Depends: base
+Description: Single-Sign-On addon for appications
+ This package provides single sign on capabilities
+ for applications like rdesktop and ica-client
+XB-Info: SECURITY WARNING
+ .
+ .
+ sso-tcos is a better than nothing implementation of a single-sign-on
+ mechanism which caches the entered password and provides it in an
+ weekly encrypted way via a environment variable to application starters
+ which can restore it to plain text in order to supply the password to
+ the application.
+ .
+ .
+ This package is designed to add convenience but does so at the EXPENSE
+ OF SECURITY. Using it will leave unattended ThinClients vulnerable to
+ spies or colleages trying to snoop out the password of the current user!
+ .
+ .
+ Make sure that everyone is aware of that risk and when in doubt, don't
+ install this package!
+ .
+ .
+ YOU HAVE BEEN WARNED!
+

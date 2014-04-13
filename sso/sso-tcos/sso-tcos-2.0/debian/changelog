@@ -1,0 +1,7 @@
+sso-tcos (2.0-1) unstable; urgency=low
+
+  * Initial release
+  * based on sso-tcos (0.2.2-7)
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Mon, 24 Mar 2014 15:23:28 +0100
+

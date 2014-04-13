@@ -1,0 +1,31 @@
+cmdline (2.0-01) unstable; urgency=low
+
+  * Initial for version 2
+  * new package format, new dependency 
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Mon, 07 Oct 2013 14:53:25 +0200
+
+cmdline (0.2.1-2) unstable; urgency=low
+
+  * schema/application/cmdline.xml: Added autostart
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Wed, 12 Mar 2008 13:14:38 +0000
+
+cmdline (0.2.1-1) unstable; urgency=low
+
+  * tcos/launcher: Fixed double execution bug
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Mon, 10 Mar 2008 18:42:35 +0000
+
+cmdline (0.1.0-1) unstable; urgency=low
+
+  * New openthinclient versioning
+  * schema/application/cmdline.xml: Added label
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Sat, 15 Dec 2007 03:24:12 +0000
+
+cmdline (0.0.1-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Tue, 27 Mar 2007 16:28:22 +0000

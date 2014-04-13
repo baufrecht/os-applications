@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema name="desktop" type="application" version="1">
+  <label lang="de" value="Desktop"/>
+  <label lang="en" value="Desktop"/>
+    <group name="org.mate.desktop.media-handling">
+      <label lang="de" value="Externe Medien"/>
+      <label lang="en"  value="External media"/>
+      <choice  name="automount__BOOL" value="true">
+          <label lang="de" value="Automount"/>
+          <label lang="en" value="Automount"/>
+          <option value="true">
+              <label lang="de" value="Ja"/>
+              <label lang="en" value="Yes"/>
+          </option>
+          <option value="false">
+              <label lang="de" value="Nein"/>
+              <label lang="en" value="No"/>
+          </option>
+      </choice>
+      <choice  name="automount-show__BOOL" value="true">
+          <label lang="de" value="Anzeige des Dateimanagers nach dem Einbinden von Laufwerken"/>
+          <label lang="en" value="Show the filemanager after the automount"/>
+          <option value="true">
+              <label lang="de" value="Ja"/>
+              <label lang="en" value="Yes"/>
+          </option>
+          <option value="false">
+              <label lang="de" value="Nein"/>
+              <label lang="en" value="No"/>
+          </option>
+      </choice>
+    </group>
+    <group name="org.mate.panel.toplevels.top">
+        <label value="Panel" lang="de"/>
+        <label value="Panel" lang="en"/>
+        <choice name="auto-hide__BOOL" value="false">
+            <label lang="de" value="Taskleiste automatisch verstecken"/>
+            <label lang="en" value="Taskbar autohide"/>
+            <option value="true">
+                <label lang="de" value="Ja"/>
+                <label lang="en" value="Yes"/>
+            </option>
+            <option value="false">
+                <label lang="de" value="Nein"/>
+                <label lang="en" value="No"/>
+            </option>
+        </choice>
+    </group>
+    <group name="org.mate.screensaver">
+        <label value="Bildschirmeinstellungen" lang="de"/>
+        <label value="Screen settings" lang="en"/>
+        <choice name="idle-activation-enabled__BOOL" value="false">
+            <label lang="de" value="Bildschirmsperre nach 5 min aktivieren"/>
+            <label lang="en" value="Enable screen lock after 5 minutes"/>
+            <option value="true">
+                <label lang="de" value="Ja"/>
+                <label lang="en" value="Yes"/>
+            </option>
+            <option value="false">
+                <label lang="de" value="Nein"/>
+                <label lang="en" value="No"/>
+            </option>
+        </choice>
+        <choice name="dpms-off__BOOL" value="false">
+            <label lang="de" value="Energiesparmodus deaktivieren"/>
+            <label lang="en" value="Disable display power saving mode"/>
+            <option value="true">
+                <label lang="de" value="Ja"/>
+                <label lang="en" value="Yes"/>
+            </option>
+            <option value="false">
+                <label lang="de" value="Nein"/>
+                <label lang="en" value="No"/>
+            </option>
+        </choice>
+	<entry name="dpms-time__INT" value="600">
+	     <label lang="de" value="Sekunden bis Aktivierung des Energiesparmodus"/>
+	     <label lang="en" value="Seconds to wait for activating power saving mode"/>
+                 <tip lang="de" value="&lt;html&gt;Tipp: Tragen Sie 0 ein, um den Energiesparmodus zu deaktivieren.&lt;/html&gt;"/>
+                 <tip lang="en" value="&lt;html&gt;Hint: Fill in 0 to deactivate the display power saving mode.&lt;/html&gt;"/>
+	</entry>
+    </group>
+    <group name="org.mate.marco.global-keybindings">
+        <label value="Tastaturkürzel" lang="de"/>
+        <label value="Keybindings"     lang="en"/>
+        <entry value="&lt;Alt&gt;+&lt;Tab&gt;" name="switch-windows">
+            <label lang="de" value="Fensterumschalter"/>
+            <label lang="en" value="Switch windows"/>
+		<tip lang="de" value="&lt;html&gt;Beispiel: &lt;Control&gt;Tab&lt;/html&gt;"/>
+                <tip lang="en" value="&lt;html&gt;Example: &lt;Control&gt;Tab&lt;/html&gt;"/>
+        </entry>
+        <entry value="&lt;Ctrl&gt;+&lt;Alt&gt;+x" name="run-command-1">
+            <label lang="de" value="Terminal öffnen"/>
+            <label lang="en" value="Open terminal"/>
+		<tip lang="de" value="&lt;html&gt;Beispiel: &lt;Control&gt;&lt;Alt&gt;x&lt;/html&gt;"/>
+                <tip lang="en" value="&lt;html&gt;Example: &lt;Control&gt;&lt;Alt&gt;x&lt;/html&gt;"/>
+        </entry>
+        <choice name="numlock" value="none">
+            <label lang="de" value="Ziffernblock aktivieren"/>
+            <label lang="en" value="Activate numlock"/>
+            <option value="none">
+                <label lang="de" value="Nutze Einstellung vom BIOS"/>
+                <label lang="en" value="Use BIOS setting"/>
+            </option>
+            <option value="on">
+                <label lang="de" value="Anschalten"/>
+                <label lang="en" value="Turn on"/>
+            </option>
+            <option value="off">
+                <label lang="de" value="Ausschalten"/>
+                <label lang="en" value="Turn off"/>
+            </option>
+        </choice>
+    </group>
+</schema>

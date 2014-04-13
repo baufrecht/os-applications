@@ -1,0 +1,216 @@
+#!/bin/bash
+#set -x
+
+######################################################################
+# script to emulate an hpjetdirect printing inteface.
+#
+# can automagically do:
+# raw printing, IBMPJLDRV / HPPJLDRV (AS/400), NETSTNDRV (AS/400)
+#
+#################################################
+# (c) 2005 Martin Kreiner <m.kreiner@levigo.de>
+#
+# This program is free software; you can redistribute it and/or modify it under
+# the terms of the GNU General Public License as published by the Free Software
+# Foundation; either version 2 of the License, or (at your option) any later
+# version.
+# 
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+# FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+# details.
+# 
+# You should have received a copy of the GNU General Public License along with
+# this program; if not, write to the Free Software Foundation, Inc., 59 Temple
+# Place - Suite 330, Boston, MA 02111-1307, USA.
+# Changelog:
+#
+#    y  m  d	comment
+# ----------	-------
+# 2005-05-09   initial release
+# 2005-05-10   hexdump fix: switch to `dd' because current "old version"
+#              of `hexdump' does not handle `-n $N_BYTES' properly
+# 2005-07-02   added printerReady() for ibmNetstnDrv()
+# 2006-18-01   putBytes() speedup (real `dd' needed, busybox `dd' obsolete) 
+# 2008-08-05   openthinclient adjustments
+#					
+
+######################
+# as/400 comand sets
+#
+ASSTATUS_HEX="\xF0\xF7"
+ASINFO_HEX="\xF0\xF5"
+ASVAR1_HEX="\xF0\xF4"
+ASVAR2_HEX="\xF0\xF3"
+ASREADY_HEX="\xF0\xF1"
+ASDATA_HEX="\xF0\xFB"
+
+# with answers
+STATUS_OK_HEX="\xF0\xFC\x00\x00"
+READY_OK_HEX="\xF0\xFF\x00\x00"
+READY_FAILED_HEX="\xF0\xFF\x00\x06"
+DATA_OK_DATASPLIT_HEX="\xF0\xFE\x00\x06"
+
+###############
+# magic bytes
+#
+IBMNETSTNDRV_MAGIC_BYTE_HEX="\xF0"
+PJL_MAGIC_BYTE_HEX="\x1B"
+
+BC="`dirname $0`/bc"
+
+# check for first argument (DEVICE)
+if [ "$1" -a -e "$1" ]; then
+	DEVICE="$1"
+else
+	DEVICE_UNSET=true
+	export DEVICE="/tmp/`basename $0`-OUT.$PPID"
+	>"$DEVICE"
+fi
+
+# clear variables that should never be
+# exported to this script
+unset ASVAR1_DATA_HEX ASVAR2_DATA_HEX 
+
+##############################################
+# checks if printer is online (needs tunelp).
+# tunelp stati: busy, ready, out of paper, on-line, error
+#
+# printer must follow the Centronics standard (see IEEE Std.1284-1994
+# Standard Signaling Method for a Bi-directional Parallel Peripheral Interface).
+#
+function printerReady() {
+
+	if [ "$DEVICE_UNSET" = "true" ]; then
+		return 0
+	else
+		return `tunelp -s "$DEVICE" 2>/dev/null | egrep -qv "out of paper|error"`
+	fi
+}
+
+
+##########################################################
+# reads N_BYTES from stdin and dumps them plain or whith 
+# hex escape sequences to stdout
+#
+function getBytes() {
+
+	local N_BYTES="$1"
+	[ -z "$N_BYTES" ] && N_BYTES="1"
+
+	if [ "$2" = "plain" ]; then
+		#hexdump -v -n "$N_BYTES" -e '1/1 "%02X"'
+		dd bs=1 count="$N_BYTES" 2>/dev/null | hexdump -v -e '1/1 "%02X"'
+	else
+		#hexdump -v -n "$N_BYTES" -e '"\\" "x" 1/1 "%02X"'
+		dd bs=1 count="$N_BYTES" 2>/dev/null | hexdump -v -e '"\\" "x" 1/1 "%02X"'
+	fi
+}
+
+#########################################################
+# reads N_BYTES from stdin and dumps them raw to DEVICE
+#
+function putBytes() {
+
+	local N_BYTES="$1"
+	[ -z "$N_BYTES" ] && N_BYTES="1"
+
+	#hexdump -v -n $N_BYTES -e '"%c"' >> "$DEVICE"
+	#dd bs=1 count="$N_BYTES" 2>/dev/null >> "$DEVICE"
+	dd ibs=1 obs="$N_BYTES" count="$N_BYTES" 2>/dev/null >> "$DEVICE"
+}
+
+############################
+# emulate the NETSTNDRV
+#
+function ibmNetstnDrv() {
+
+	case "$ASCMD_HEX" in
+		"$ASSTATUS_HEX")
+			if printerReady; then
+				echo -en "$STATUS_OK_HEX"
+			else
+				echo -en "$READY_FAILED_HEX"
+			fi
+			;;
+		"$ASINFO_HEX")
+			;;
+		"$ASVAR1_HEX")
+			ASVAR1_DATA_HEX=`getBytes 2 plain`
+			;;
+		"$ASVAR2_HEX")
+			ASVAR2_DATA_HEX=`getBytes 2 plain`
+			;;
+		"$ASREADY_HEX")
+			if [ -z "$ASVAR1_DATA_HEX" -a -z "$ASVAR2_DATA_HEX" ]; then
+				echo -en "$READY_OK_HEX"
+			else
+				echo -en "$DATA_OK_DATASPLIT_HEX"
+				unset ASVAR1_DATA_HEX ASVAR2_DATA_HEX
+			fi
+			;;
+		"$ASDATA_HEX")
+			N_BYTES_16=`getBytes 2 plain`
+			N_BYTES_10=`echo "ibase=16; $N_BYTES_16" | "$BC"`
+			putBytes $N_BYTES_10
+			;;
+		\\xF0\\\x[^F][0-9A-F])
+			rawOut
+			;;
+		"")
+			exit
+			;;
+	esac
+
+	ASCMD_HEX=`getBytes 2`
+	ibmNetstnDrv
+}
+
+#########################################
+# emulate the IBMPJLDRV or the HPPJLDRV
+#
+function ibmPjl() {
+
+	FAKE_PJL_ONLINE="@PJL INFO STATUS\nCODE=10001\nDISPLAY=\"00 BEREIT001H S1\"\nONLINE=TRUE"
+	echo -e "$FAKE_PJL_ONLINE"
+	awk -v RS="%-12345X" '{ if (!/^@PJL/) printf "%s", $0 >> ENVIRON["DEVICE"] }'
+}
+
+#########################
+# emulates raw printng
+#
+function rawOut() {
+	(
+		echo -en "${MAGIC_BYTE_HEX}${TAIL_HEX}"
+		cat
+		
+	) > "$DEVICE" 2>/dev/null
+}
+
+####################################################################
+# main():
+# decide on first MAGIC_BYTE_HEX and further tests what to emulate
+# 
+MAGIC_BYTE_HEX=`getBytes 1`
+
+if [ "$MAGIC_BYTE_HEX" = "$IBMNETSTNDRV_MAGIC_BYTE_HEX" ]; then
+
+	TAIL_HEX=`getBytes 1`
+	ASCMD_HEX=`echo -n "${MAGIC_BYTE_HEX}${TAIL_HEX}"`
+	ibmNetstnDrv
+
+elif [ "$MAGIC_BYTE_HEX" = "$PJL_MAGIC_BYTE_HEX" ]; then
+
+	TAIL_HEX=`getBytes 73`
+	IBMPJL_TAIL=`echo -en "%-12345X@PJL USTATUSOFF\n@PJL INFO STATUS\n@PJL USTATUS DEVICE=ON\n%-12345X"`
+	TAIL=`echo -en "$TAIL_HEX"`
+
+	if [ "$TAIL" = "$IBMPJL_TAIL" ]; then
+		ibmPjl
+	else
+		rawOut
+	fi
+
+else
+	rawOut
+fi

@@ -1,0 +1,36 @@
+#!/usr/bin/env python
+
+
+# TCOS modules
+import pytcos.tcos as tcos
+
+import os
+from subprocess import call
+
+###########################################################################
+#
+# we need to set the numblock here - ON or OFF
+# the files in tmp are written in tcos-desktop-customize
+# 
+if os.path.isfile('/tmp/tcos_numlock_ON'):
+    try: call('numlockx on', shell=True)
+    except: pass
+elif os.path.isfile('/tmp/tcos_numlock_OFF'):
+    try: call('numlockx off', shell=True)
+    except: pass
+
+###########################################################################
+# Write *.desktop files
+#
+
+d = tcos.Desktop()
+
+# Remove .desktop files
+try:
+    d.removeDesktopFiles()
+except:
+    pass
+
+# Write .desktop files
+d.writeDesktopFiles()
+

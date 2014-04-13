@@ -1,0 +1,11 @@
+4f7e4f0f647b62276c36b7df6a4d47f2  schema/applicationgroup.xml
+3cf7f49ea53d331a7d6b1b6cbac734cc  schema/client.xml
+4ae1555cd70c99870c7fabbbe3f0d231  schema/device/display.xml
+03bfb51873a8fdce0cab41a1c12498c8  schema/device/keyboard.xml
+65212e8017b23ff0c63488417f55d959  schema/device/nfs.xml
+89ba3c4bfa7ce37dc8e0fe318de73d6a  schema/hardwaretype.xml
+4765c2dfa37d94e767366e60be124370  schema/location.xml
+e0c204776c9607eb9f373cbf68dd7c43  schema/realm.xml
+6cd47e1c38e4971cd514a2ad8e76e50b  schema/tcat-schema.xsd
+925c45e6557e0096566238fb9009d059  schema/user.xml
+c683d9fb3086e6d12227e16169874161  schema/usergroup.xml

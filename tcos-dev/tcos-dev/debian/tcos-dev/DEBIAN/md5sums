@@ -1,0 +1,15 @@
+7f4e16b3f8719880db629e1a57f6803c  usr/bin/tcos_buildpackage
+b1623221c21d0249fd384f027ad00186  usr/bin/tcos_genpackage
+3956f7b21a1afdb01aac11243dad0538  usr/bin/tcos_upload-debs
+a8956013fa0eafa3a0dbf3d47e7ad3e9  usr/share/doc/tcos-dev/changelog.Debian.gz
+f1da1ba3b8790c455d99fe994a855644  usr/share/doc/tcos-dev/copyright
+d728243a25518ca253916b7164ffed80  usr/share/tcos-dev/templates/dh_make/changelog
+48a24b70a0b376535542b996af517398  usr/share/tcos-dev/templates/dh_make/compat
+8b078919b43418e0bcc9642ce77abfc3  usr/share/tcos-dev/templates/dh_make/control
+bde67c29c12b6c1d756313df607f37a2  usr/share/tcos-dev/templates/dh_make/dirs
+047eb6ba59f819b0510b2957cdc919d1  usr/share/tcos-dev/templates/dh_make/rules
+439f03195af4a3fd3d5b6f57f0745f19  usr/share/tcos-dev/templates/tcos_genpackage/schema/application/package.xml
+ff9ad2c77f5b41ff05359dbb98b77fe6  usr/share/tcos-dev/templates/tcos_genpackage/schema/application/package_tiny.xml.sample
+4f7190a5e1e78683e43c437ddda0bcfe  usr/share/tcos-dev/templates/tcos_genpackage/tcos/README
+908e8f00d1ebf9861dd0b228cd42fe6a  usr/share/tcos-dev/templates/tcos_genpackage/tcos/launcher
+d41d8cd98f00b204e9800998ecf8427e  usr/share/tcos-dev/templates/tcos_genpackage/tcos/package.desktop

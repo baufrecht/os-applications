@@ -1,0 +1,19 @@
+Source: cups-client
+Section: unknown
+Priority: optional
+Maintainer: Steffen Hoenig <s.hoenig@openthinclient.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+
+Package: cups-client
+Architecture: any
+Depends: base (>= 2.0)
+Description: allows a CUPS client configuration
+ .
+ If you'd like to print  from within a local session (openthinclient OS) with no
+ remote session in mind (e.g. Iceweasel, Atril (pdfs)), you may connect to an 
+ external cupsd.
+ .
+ Warning: It's mandatory that you configure a cupsd to share printers before 
+ using this package.
+

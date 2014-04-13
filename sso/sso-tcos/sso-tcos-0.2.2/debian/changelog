@@ -1,0 +1,54 @@
+sso-tcos (0.2.2-7) unstable; urgency=low
+
+  * cleanup
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Wed,  9 Jul 2008 20:33:14 +0200
+
+sso-tcos (0.2.2-6) unstable; urgency=low
+
+  * removed debug output
+
+ -- Tobias Abt <t.abt@levigo.de>  Wed,  4 Jun 2008 18:33:46 +0200
+
+sso-tcos (0.2.2-5) unstable; urgency=low
+
+  * debian/control: XB-License -> XB-Info
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Mon,  5 May 2008 17:53:50 +0200
+
+sso-tcos (0.2.2-4) unstable; urgency=low
+
+  * changed sed call in setup-sso
+
+ -- Tobias Abt <t.abt@levigo.de>  Wed, 30 Apr 2008 17:48:04 +0200
+
+sso-tcos (0.2.2-3) unstable; urgency=low
+
+  * rebuild
+
+ -- Tobias Abt <t.abt@levigo.de>  Wed, 30 Apr 2008 17:27:21 +0200
+
+sso-tcos (0.2.2-2) unstable; urgency=low
+
+  * removed debugging
+
+ -- Tobias Abt <t.abt@levigo.de>  Mon, 21 Apr 2008 15:04:21 +0200
+
+sso-tcos (0.2.2-1) unstable; urgency=low
+
+  * fixed versioning
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Fri, 18 Apr 2008 20:13:58 +0200
+
+sso-tcos (0.0.1-2) unstable; urgency=low
+
+  * changed setup script to ignore multiple invocations
+
+ -- Tobias Abt <t.abt@levigo.de>  Mon, 14 Apr 2008 16:29:21 +0000
+
+sso-tcos (0.0.1-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Tobias Abt <t.abt@levigo.de>  Mon, 25 Feb 2008 17:17:47 +0100
+

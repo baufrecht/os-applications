@@ -1,0 +1,39 @@
+tcos-branding (2.0-18) UNRELEASED; urgency=low
+
+  * bump (theme defect) 
+  * bump (tcos-dev defect)
+  * NEW: migration from blob to dconf config files 
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Wed, 26 Feb 2014 21:27:10 +0100
+
+tcos-branding (2.0-14) unstable; urgency=low
+
+  * FIX: modified owner 1000:1000 /home/tcos -R
+  * FIX: changed every folder within /home/tcos to 755
+  * FIX: moved folder schema away
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 20 Dec 2013 21:48:27 +0100
+
+tcos-branding (2.0-12) unstable; urgency=low
+
+  * FIX: adopted Debian override file
+  * FIX: path typo 
+  * FIX: took base out of Depends: 
+  * NEW: different look and feel for panels, applets and menues
+  * FIX: wrong rights 
+  * FIX: use tcos-base-buildpackage 
+  * FIX: added menu-settings 
+  * FIX: added local application files 
+  * FIX: right management 
+  * FIX: changed .local/applications to 555 and modified owner 
+  * NEW: locked panel, cleaned the Desktop
+  * NEW: support for ipaddress panel 
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Fri, 20 Dec 2013 21:48:27 +0100
+
+tcos-branding (2.0-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Mon, 18 Nov 2013 17:26:27 +0100
+

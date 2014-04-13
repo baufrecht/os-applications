@@ -1,0 +1,11 @@
+Package: tcos-libs
+Version: 2.0-8
+Architecture: i386
+Maintainer: Steffen Hoenig <s.hoenig@openthinclient.com>
+Installed-Size: 28
+Conflicts: python-tcos
+Section: unknown
+Priority: optional
+Description: python libraries for openthinclient
+ This libraries are used by the launchers and and other
+ scripts doing the magic inside a running client.

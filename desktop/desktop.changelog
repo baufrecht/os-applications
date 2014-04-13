@@ -1,0 +1,58 @@
+desktop (2.0-11) unstable; urgency=low
+
+  * NEW: add categorie tcos for main meue in taskbar
+  * FIX: finalized numlock on/off feature
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Tue, 25 Mar 2014 17:55:00 +0100
+
+desktop (2.0-10) unstable; urgency=low
+
+  [ Steffen Hoenig ]
+  * NEW: option to change the behaviour of the filemanager after mounting an
+    external device (e.g. a pen drive)
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Tue, 25 Mar 2014 14:39:04 +0100
+
+desktop (2.0-9) unstable; urgency=low
+
+  [ Steffen Hoenig ]
+  * FIX: translation of DPMS option 
+
+  [ Joern Frenzel ]
+  * NEW: implement numlock on/off, but tcos-xrandr still needs to hook it up
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Mon, 24 Mar 2014 21:22:24 +0100
+
+desktop (2.0-7) unstable; urgency=low
+
+  [ Steffen Hoenig ]
+  * NEW: settings for dpms-off, dpms-time, terminal-command
+  * NEW: merged tcos-branding
+
+  [ Joern Frenzel ]
+  * MODIFY: renamed customize.py (a.k.a lock-down.py) to
+      /usr/local/bin/tcos-desktop-customize
+      This script is now triggerd directly by tcos-postlogin .
+  * MODIFY: debian/control, conflicts now with package tcos-branding
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Wed, 12 Mar 2014 16:28:16 +0100
+
+desktop (2.0-4) unstable; urgency=low
+
+  * NEW: implemented xml, and PostLogin lock-down.py
+  * FIX: workaround for starting the PostLogin with the right ldap config
+  * NEW: migrated the whole configuration process from binaries to gsettings
+    to dconf
+  * Issues: settings need to be set explicitly, otherwise Mate defaults take
+    over
+  * FIX: set default values as per XML
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Thu, 27 Feb 2014 11:43:53 +0100
+
+desktop (2.0-1) unstable; urgency=low
+
+  * Initial release
+  * TEST: lock-down as shell script with hardcoded values to verify the
+    approach
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Wed, 11 Dec 2013 15:47:27 +0100

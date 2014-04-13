@@ -1,0 +1,11 @@
+printserver (2.0-1) unstable; urgency=low
+
+  * Initial release
+  * based on 'old' printserver (0.3.0)
+  * NEW: support for multiple printers (/etc/udev/rules.d/60-persistent-printer.rules)
+  * NEW: fallback mode, if no no udev string is set, it behaves exactly like
+    the old package
+  * CAVEAT: parallel mode is NOT working at the moment, the link between
+    parallel port and '/dev/parlp' needs to be set
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Sat, 22 Mar 2014 13:39:31 +0100

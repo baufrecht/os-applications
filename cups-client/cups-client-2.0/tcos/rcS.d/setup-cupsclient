@@ -1,0 +1,29 @@
+#!/usr/bin/env python
+
+import os
+import pytcos.tcos as tcos
+
+s = tcos.System()
+l = tcos.Ldap()
+
+mac = s.getMac()
+ldap_url = s.getLdapUrl()
+client_dn = l.getClientDn(mac, ldap_url)
+user_dn = l.getUserDn('tcos', ldap_url)
+printers_dn = l.getPrintersDn(client_dn, user_dn, ldap_url)
+
+cups_client_template = '''\
+ServerName %(cups_host)s %(tcp_port)s
+'''
+
+for printer in printers_dn:
+    tcp_port = l.getNismapentry(printer, ldap_url).get('TCPPort', '631')
+    cups_host = l.getNismapentry(printer, ldap_url).get('Host', '')
+    try:
+        os.system('mkdir -p /etc/cups')
+    except:
+        print('Couldn\'t create /etc/cups. I will exit')
+        exit
+    with open('/etc/cups/client.conf', 'a') as fobj:
+        template_values = dict(cups_host=cups_host, tcp_port=tcp_port)
+        fobj.write(cups_client_template % template_values)

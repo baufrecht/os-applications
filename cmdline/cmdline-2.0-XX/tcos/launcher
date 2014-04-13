@@ -1,0 +1,29 @@
+#!/usr/bin/env python
+
+# standard modules
+import os
+import sys
+
+# TCOS modules
+import pytcos.tcos as tcos
+
+
+l = tcos.Launcher()
+
+cmdline = l.ENTRY.get('Application.Cmdline', '')
+
+if not cmdline:
+	e = "Application.Cmdline value missing(" + \
+	    str(sys.exc_info()[0]) + ")"
+	l.log(2, e)
+	sys.exit(65)
+
+returncode = os.system(cmdline)
+
+if returncode != 0:
+	e = "Return value not zero(" + \
+	    str(sys.exc_info()[0]) + "): " + \
+	    "cmdline: " + cmdline + \
+	    ", returncode: " + str(returncode)
+	l.log(2, e)
+	sys.exit(66)

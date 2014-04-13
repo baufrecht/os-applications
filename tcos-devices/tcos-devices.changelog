@@ -1,0 +1,69 @@
+tcos-devices (2.0-11) unstable; urgency=low
+
+  * added ./schema/device/nfs.xml for persistent NFS Homes
+
+ -- Stephan Passow <s.passow@qmsrc.de>  Thu, 10 Apr 2014 15:54:00 +0200
+
+tcos-devices (2.0-10) unstable; urgency=low
+
+  * initial try to implement an NFS-Home
+  * FIX: default value for variant in keyboard.xml is now a empty string
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 14 Mar 2014 16:50:46 +0100
+
+tcos-devices (2.0-9) unstable; urgency=low
+
+  * FIX XML Settings
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 28 Feb 2014 17:03:10 +0100
+
+tcos-devices (2.0-8) unstable; urgency=low
+
+  [ Stephan Passow ]
+  * new: add Device "persistent home" for persitent Home Directorys on NFS (look at Realm)
+
+ -- Stephan Passow <stephan@qmsrc.de>  Fri, 28 Feb 2014 16:22:26 +0100
+
+tcos-devices (2.0-7) unstable; urgency=low
+
+  * FIX: took base out of Depends
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Thu, 21 Nov 2013 16:18:10 +0100
+
+tcos-devices (2.0-6) unstable; urgency=low
+
+  * change: display.xml add more options to displays connectors
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Tue, 19 Nov 2013 21:03:09 +0100
+
+tcos-devices (2.0-5) unstable; urgency=low
+
+  * change: display.xml add more options to displays connectors
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Tue, 19 Nov 2013 20:40:04 +0100
+
+tcos-devices (2.0-4) unstable; urgency=low
+
+  * change: display.xml implement feature rotation
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 15 Nov 2013 14:43:08 +0100
+
+tcos-devices (2.0-3) unstable; urgency=low
+
+  * NEW: keyboard.xml, model, layout, variant
+  * NEW: display.xml, connector, resolution, etc.
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Mon, 11 Nov 2013 19:38:47 +0100
+
+tcos-devices (2.0-2) unstable; urgency=low
+
+  * fix wrong folder structure
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Thu, 17 Oct 2013 18:12:37 +0200
+
+tcos-devices (2.0-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Tue, 15 Oct 2013 13:42:34 +0200
+

@@ -1,0 +1,13 @@
+Source: cmdline
+Section: unknown
+Priority: optional
+Maintainer: Joern Frenzel <j.frenzel@openthinclient.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+
+Package: cmdline
+Architecture: any
+Depends: base (>= 2.0)
+Description: General commandline application for TCOS
+ General commandline wrapper
+

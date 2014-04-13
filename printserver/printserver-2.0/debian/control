@@ -1,0 +1,29 @@
+Source: printserver
+Section: unknown
+Priority: optional
+Maintainer: Steffen Hoenig <s.hoenig@openthinclient.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+
+Package: printserver
+Architecture: any
+Depends: base (>= 2.0-13)
+Description: Printserver (HP JetDirect emulation)
+ HP JetDirect printserver emulation. The printserver can be configured to
+ listen on a specific TCP port. Received data is send raw to an attached
+ parallel or usb printer.
+ .
+ To get the device specific string, you may boot the client with the printer
+ plugged in and have a look at the path '/dev/usb/lp/'. The string combines the
+ hardware name with the corresponding serial.
+ Another approach would be to use 'udevadm monitor --environment --udev' and 
+ look for a tag named ID_SERIAL
+ .
+ Additionally the following AS/400 protocols/drivers are supported:
+ .
+ - IBMPJLDRV
+ .
+ - HPPJLDRV
+ .
+ - NETSTNDRV
+ 

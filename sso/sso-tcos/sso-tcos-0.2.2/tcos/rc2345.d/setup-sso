@@ -1,0 +1,5 @@
+#!/bin/bash
+grep -sq pam_sso-tcos.so /etc/pam.d/gdm
+if [ $? == 1 ] ; then
+	sed -i "/^auth.*pam_unix_auth.*/aauth       optional     /opt/sso-tcos/lib/security/pam_sso-tcos.so" /etc/pam.d/gdm 
+fi

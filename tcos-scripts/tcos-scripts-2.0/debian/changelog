@@ -1,0 +1,129 @@
+tcos-scripts (2.0-27) unstable; urgency=low
+
+  * NEW: tcos-xrandr writes $HOME/.tcos_displayrc
+      - screen dimensions can be used system wide
+      - .tcos_displayrc should be sourced in .xsession (done in base 2.0-14)
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Mon, 31 Mar 2014 19:04:51 +0200
+
+tcos-scripts (2.0-26) unstable; urgency=low
+
+  * NEW: add numlock on/off trigger to tcos-desktop-populate
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Tue, 25 Mar 2014 18:00:12 +0100
+
+tcos-scripts (2.0-25) unstable; urgency=low
+
+  * NEW: new script /usr/local/bin/tcos-mount-nfs-home, but not used yet
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Mon, 17 Mar 2014 14:30:21 +0100
+
+tcos-scripts (2.0-24) unstable; urgency=low
+
+  * FIXED: typo in tcos-postlogin 
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Wed, 12 Mar 2014 16:53:47 +0100
+
+tcos-scripts (2.0-23) unstable; urgency=low
+
+  [ Stephan Passow ]
+  * PREPARED: for further use /usr/local/bin/tcos-homemount.py
+      Remember to add device persistent home to your clients to get
+      working NFS Homes. For ICE Authority errors check the
+      /etc/security/pam_env.conf for ICEAUTHORITY DEFAULT
+      /tmp/$USER_ICE entry (it's already updated base 2.0-12)
+  [ Joern Frenzel ]
+  * RENAMED: tcos-desktop in /usr/local/bin/ to tcos-desktop-populate
+      Just to prevent confusion with tcos-desktop-customize delivered by
+      package desktop.
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Wed, 12 Mar 2014 16:31:11 +0100
+
+tcos-scripts (2.0-21) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * FIX: write desktop file no matter you find there
+  * NEW: hostname provision: dhcp > manager > default ('openthinclient')
+  * FIX: replaced tabs to whitespaces in tcos-bootstrap
+  * FIX: changed run-parts call in tcos-single to ease scripting  (e.G. no
+    need to define arguments)
+  * DEBUG: changed  runlevels (LSB-tag)
+  * NEW:  postlogin
+  * FIX: return "" if xkbvariant is not set
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Fri, 21 Feb 2014 14:31:00 +0100
+
+tcos-scripts (2.0-12) unstable; urgency=low
+
+  * ADD: tcos-shutdown, tcos-reboot, tcos-logout
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Thu, 19 Dec 2013 18:14:07 +0100
+
+tcos-scripts (2.0-11) unstable; urgency=low
+
+   * CHANGE: tcos-xrandr.py bugfixes
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Mon, 18 Nov 2013 18:01:43 +0100
+
+tcos-scripts (2.0-10) unstable; urgency=low
+
+   * add lightdm.conf
+   * CHANGE: tcos-xrandr.py bugfixes
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 15 Nov 2013 19:38:46 +0100
+
+tcos-scripts (2.0-8) unstable; urgency=low
+
+  * CHANGE: tcos-xrandr.py bugfixes
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 15 Nov 2013 19:15:36 +0100
+
+tcos-scripts (2.0-7) unstable; urgency=low
+
+  [ Steffen Hoenig ]
+  * NEW: added keyboard detection to tcos-bootstrap
+  * FIX: - typos
+	 - set default values for caller functions in bootstrap
+  * FIX: raise condition when no keyboard device is assigned
+  * WORKAROUND: copied tcos folder within package-rootfs
+
+  [ Joern Frenzel ]
+  * ADD: tcos-xrandr.py
+	 - gets display configuration information
+	 - is triggerd in /etc/lightdm/lightdm.conf
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 15 Nov 2013 14:50:49 +0100
+
+tcos-scripts (2.0-2) unstable; urgency=low
+
+  [ Steffen Hoenig ]
+  * CHANGE: bootstrap as a regular (means not an initscript) script, lives in tcos/rcS.d
+  * FIX: links had to repaired (due to a scp), removed calls to old paths
+  * FIX: moved everything to rc2.d due to debian standards
+  * FIX: changed the start value to S01 to force an earlier start
+  * FIX: add LSB header
+  * FIX: remove rc*.d links
+  * FIX: tcos-multi without syslog-ng X-START-BEFORE
+
+  [ Joern Frenzel ]
+  * tcos-multi delete usplash-stuff, add --lsbsysinit --new-session --arg=start to run-parts
+  * tcos-single add --lsbsysinit --new-session --arg=start to run-parts
+  * renamed package to tcos-scripts and joined it with some old funtionality of initscripts-tcos
+
+  [ Steffen Hoenig ]
+  * FIX: init.d/tcos-single: 25 Syntax error: "("  -> deleted "function" signifier
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Tue, 01 Oct 2013 19:17:06 +0200
+
+sysvinit (2.0-1) unstable; urgency=low
+
+  * Initial release
+  * NEW: tcos-multi (legacy support), tcos-single (legacy support) to call scripts from \
+	 /opt/*/tcos/rcS.d/ and /opt/*tcos/rc2345.d/
+  * NEW: boostrap init-script:
+		- syslog-ng
+		- localime
+		- /etc/environment
+		- setup ntpdate
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Mon, 30 Sep 2013 15:03:02 +0200
