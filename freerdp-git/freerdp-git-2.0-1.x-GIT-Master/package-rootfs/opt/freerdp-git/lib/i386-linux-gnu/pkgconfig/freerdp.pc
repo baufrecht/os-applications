@@ -1,0 +1,13 @@
+prefix=/opt/freerdp-git
+exec_prefix=/opt/freerdp-git
+libdir=/opt/freerdp-git/lib/i386-linux-gnu
+includedir=/opt/freerdp-git/include
+libs=-lfreerdp -lwinpr
+
+Name: FreeRDP
+Description: FreeRDP: A Remote Desktop Protocol Implementation
+URL: http://www.freerdp.com/
+Version: 1.2.0-beta1
+Requires: 
+Libs: -L${libdir} ${libs}
+Cflags: -I${includedir}

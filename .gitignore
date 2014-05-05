@@ -1,0 +1,10 @@
+1er_Pakete/
+000_Altkram
+manager-update-alle-sechs-pakete
+desktop/altes-1erPaket/
+tempcopy/
+tempcopy_test/
+*.deb
+*.tar.gz
+*.dsc
+*.changes

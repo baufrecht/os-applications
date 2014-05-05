@@ -1,0 +1,36 @@
+freerdp-git (2.0-1.2-05) unstable; urgency=low
+
+  * FIX: launcher triggers xfreerdp now in pulsaudio-mode rather than using alsa directly
+  * CHANGE: package depends now on base >= 2.0-17 to ensure a running pulseaudio
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 18 Apr 2014 01:17:25 +0200
+
+freerdp-git (2.0-1.2-04) unstable; urgency=low
+
+  * NEW:
+      - binaries compiled from git master branch on 04/09/2014
+      - uses now new xorg libs from debian sid inside base 2.0-15
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Thu, 10 Apr 2014 23:18:55 +0200
+
+freerdp-git (2.0-1.2-03) unstable; urgency=low
+
+  * FIX: launcher was not handling the language setting correctly
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Tue, 01 Apr 2014 18:37:02 +0200
+
+freerdp-git (2.0-1.2-02) unstable; urgency=low
+
+  * FIX:
+      - removed unclean debug code, sys.exit(),
+      - launcher starts now
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Tue, 01 Apr 2014 17:01:54 +0200
+
+freerdp-git (2.0-1.2-01) unstable; urgency=low
+
+  * initial version
+  * lots of new features, thanks to all the freerdp coders
+  * launcher now provides a detailed possibilities to place your session (multimon)
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Mon, 31 Mar 2014 19:10:20 +0200

@@ -1,0 +1,24 @@
+Package: freerdp-git
+Version: 2.0-1.2-05
+Architecture: i386
+Maintainer: Joern Frenzel <j.frenzel@openthinclient.com>
+Installed-Size: 1182
+Depends: base (>= 2.0-17)
+Section: x11
+Priority: optional
+Description: RDP client for Windows Terminal Services (GIT version)
+ FreeRDP is a client for Windows Terminal Services implementing the Remote
+ Desktop Protocol (RDP).
+ .
+ Currently, the following Windows Versions are supported:
+ .
+  * Windows NT Server
+  * Windows 2000 Terminal Server
+  * Windows XP
+  * Windows 2003 Server
+  * Windows Vista
+  * Windows 2008 Server
+  * Windows 7
+ .
+ Homepage: http://www.freerdp.com/
+ Homepage: http://openthinclientalliance.org/
