@@ -17,13 +17,15 @@ ServerName %(cups_host)s %(tcp_port)s
 '''
 
 for printer in printers_dn:
-    tcp_port = l.getNismapentry(printer, ldap_url).get('TCPPort', '631')
-    cups_host = l.getNismapentry(printer, ldap_url).get('Host', '')
-    try:
-        os.system('mkdir -p /etc/cups')
-    except:
-        print('Couldn\'t create /etc/cups. I will exit')
-        exit
-    with open('/etc/cups/client.conf', 'a') as fobj:
-        template_values = dict(cups_host=cups_host, tcp_port=tcp_port)
-        fobj.write(cups_client_template % template_values)
+    type = l.getGroupOfUniqueNamesInfo(printer, ldap_url)["schema"]
+    if type == 'cups-client':
+        tcp_port = l.getNismapentry(printer, ldap_url).get('TCPPort', '631')
+        cups_host = l.getNismapentry(printer, ldap_url).get('Host', '')
+        try:
+            os.system('mkdir -p /etc/cups')
+        except:
+            print('Couldn\'t create /etc/cups. I will exit')
+            exit()
+        with open('/etc/cups/client.conf', 'a') as fobj:
+            template_values = dict(cups_host=cups_host, tcp_port=tcp_port)
+            fobj.write(cups_client_template % template_values)

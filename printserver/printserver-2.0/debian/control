@@ -19,6 +19,11 @@ Description: Printserver (HP JetDirect emulation)
  Another approach would be to use 'udevadm monitor --environment --udev' and 
  look for a tag named ID_SERIAL
  .
+ To use classes of the same printer instead (for instance you want to assign 
+ any HP DeskJet F300 instead of one special printer) you can also insert 
+ usb-ids. To get them, plainly use lsusb and use the number separated by a 
+ colon behind "ID" e.G. 0a12:0001
+ .
  Additionally the following AS/400 protocols/drivers are supported:
  .
  - IBMPJLDRV

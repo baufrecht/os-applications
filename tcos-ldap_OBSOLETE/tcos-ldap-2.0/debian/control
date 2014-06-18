@@ -1,0 +1,15 @@
+Source: tcos-ldap
+Section: unknown
+Priority: optional
+Maintainer: Steffen Hoenig <s.hoenig@openthinclient.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+
+Package: tcos-ldap
+Architecture: any
+Depends: base
+Description: tcos-ldap allows user based login to the tcos os
+ supports login against:
+ - built-in LDAP
+ - Active Directory
+ - OpenLDAP

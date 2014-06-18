@@ -1,3 +1,16 @@
+tcos-libs (2.0-10) UNRELEASED; urgency=low
+
+  * NEW: debug.py for embedding 
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Wed, 28 May 2014 19:01:20 +0200
+
+tcos-libs (2.0-9) unstable; urgency=low
+
+  * CHANGE: behaviour of Ldap.getUserDn('tcos', ldap_url) now doesn't look for
+    the userdn on secondary LDAP servers
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Tue, 20 May 2014 15:29:58 +0200
+
 tcos-libs (2.0-8) unstable; urgency=low
 
   * CHANGE: tcos.py uses dconf now to get desktop dimensions

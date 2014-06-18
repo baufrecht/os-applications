@@ -1,3 +1,9 @@
+desktop (2.0-12) UNRELEASED; urgency=low
+
+  * FIX: defaults in the manager weren't visible 
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Thu, 05 Jun 2014 21:00:34 +0200
+
 desktop (2.0-11) unstable; urgency=low
 
   * NEW: add categorie tcos for main meue in taskbar

@@ -36,7 +36,7 @@ def format_ldap_key(ldap_keys):
         # front -> s - 1
         schema = entry[0][:s-1]
 	# dconf uses / to separate not .
-	schema = schema.replace('.', '/')
+	schema = schema.replace('_', '/')
         key = entry[0][s:]
         value = entry[1]
         return {'schema':schema, key:value}
@@ -125,14 +125,14 @@ if __name__ == '__main__':
     '''IMPORTANT: As the java component does not initialize empty elements we
        do need to provide the default settings as a dict
     '''
-    DEFAULT = {'org.mate.desktop.media-handling.automount': True,
-               'org.mate.desktop.media-handling.automount-open': False,
-               'org.mate.panel.toplevels.top.auto-hide': False,
-               'org.mate.screensaver.idle-activation-enabled': False,
-               'org.mate.screensaver.dpms-off': False,
-	       'org.mate.screensaver.dpms-time': 600,
-               'org.mate.marco.global-keybindings.run-command-1': '<Control><Alt>x',
-               'org.mate.marco.global-keybindings.numlock': 'none'}
+    DEFAULT = {'org_mate_desktop_media-handling_automount': True,
+               'org_mate_desktop_media-handling_automount-open': False,
+               'org_mate_panel_toplevels_top_auto-hide': False,
+               'org_mate_screensaver_idle-activation-enabled': False,
+               'org_mate_screensaver_dpms-off': False,
+	       'org_mate_screensaver_dpms-time': 600,
+               'org_mate_marco_global-keybindings_run-command-1': '<Control><Alt>x',
+               'org_mate_marco_global-keybindings_numlock': 'none'}
 
     try: 
         ENTRY.pop('schema_version')

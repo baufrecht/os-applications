@@ -1,0 +1,13 @@
+Package: tcos-ldap
+Version: 2.0-3
+Architecture: i386
+Maintainer: Steffen Hoenig <s.hoenig@openthinclient.com>
+Installed-Size: 112
+Depends: base
+Section: unknown
+Priority: optional
+Description: tcos-ldap allows user based login to the tcos os
+ supports login against:
+ - built-in LDAP
+ - Active Directory
+ - OpenLDAP

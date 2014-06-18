@@ -1,3 +1,15 @@
+tcos-devices (2.0-13) unstable; urgency=low
+
+  * this update tries to fix some versioning issues
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Mon, 19 May 2014 15:43:54 +0200
+
+tcos-devices (2.0-12) unstable; urgency=low
+
+  * added autologin.xml
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Mon, 19 May 2014 13:07:33 +0200
+
 tcos-devices (2.0-11) unstable; urgency=low
 
   * added ./schema/device/nfs.xml for persistent NFS Homes

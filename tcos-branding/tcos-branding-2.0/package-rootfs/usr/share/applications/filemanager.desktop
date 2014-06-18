@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[de]=caja
+Exec=caja %F
+Name[de]=Dateimanager
+Name=file-manager
+Icon=caja

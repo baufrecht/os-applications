@@ -32,10 +32,11 @@ def writeSyslog_ng(filename="/etc/syslog-ng/syslog-ng.conf"):
     logserver = s.getNfsrootServer()
 
     f = open(filename, "w")
-    f.write("source s_all {\n" +
+    f.write("@version: 3.3\n" +
+            "source s_all {\n" +
             "\tinternal();\n" +
             '\tunix-stream("/dev/log");\n' +
-            '\tfile("/proc/kmsg" log_prefix("kernel: "));\n' +
+            '\tfile("/proc/kmsg" program_override("kernel: "));\n' +
             "};\n\n" +
             "destination remote {\n" +
             '\tudp("' + logserver + '" template("<$PRI>$DATE ' + mac + ' $MSG"));\n' +
@@ -46,18 +47,21 @@ def writeSyslog_ng(filename="/etc/syslog-ng/syslog-ng.conf"):
             "};")
     f.close()
 
-def startSyslog_ng(initscript="/etc/init.d/syslog-ng"):
-    remove_cmdstatus = commands.getstatusoutput("update-rc.d -f `basename " +
-                                                initscript + "` remove")[0]
-    start_status = commands.getstatusoutput(initscript + " restart")[0]
-    if remove_cmdstatus == 0 and start_status == 0:
-        commands.getstatusoutput("update-rc.d syslog-ng stop 90 0 1 6 .")
+def startSyslog_ng():
+    try:
+        subprocess.call("update-rc.d -f syslog-ng start 14 2 . stop 90 0 1 6 .", shell=True)
+    except:
+        print("Couldn't start syslog-ng")
 
-def symlinkLocaltime(destination="/etc/localtime"):
+def write_timezones(destination="/etc/localtime"):
     localtime = locations_entry.get("Time.localtime", "posix/Etc/GMT")
     source = "/usr/share/zoneinfo/" + localtime
 
     u.symlinkSave(source, destination)
+    # update /etc/timezone
+    with open("/etc/timezone", 'w') as fobj:
+        # strip strange 'posix' value:
+        fobj.write(localtime.strip('posix/') + '\n')
 
 def writeEnvironment(filename="/etc/environment"):
     path = "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11"
@@ -87,6 +91,7 @@ def writeKeyboard(filename="/etc/default/keyboard"):
             types.append(l.getGroupOfUniqueNamesInfo(device, ldap_url)["schema"])
 
     if "keyboard" in types:
+        device = devices_dn[types.index('keyboard')]
         xkbmodel = l.getNismapentry(device, ldap_url).get("xkbmodel", "pc105")
         xkblayout = l.getNismapentry(device, ldap_url).get("xkblayout", "de")
         xkbvariant = l.getNismapentry(device, ldap_url).get("xkbvariant", "")
@@ -120,8 +125,8 @@ def write_hostname(filename="/etc/hostname"):
 if __name__ == "__main__":
     writeSyslog_ng("/etc/syslog-ng/syslog-ng.conf")
     # start syslog as early as possible
-    startSyslog_ng("/etc/init.d/syslog-ng")
-    symlinkLocaltime("/etc/localtime")
+    startSyslog_ng()
+    write_timezones()
     writeEnvironment("/etc/environment")
     writeNtpdate("/etc/default/ntpdate")
     writeKeyboard()

@@ -68,7 +68,7 @@ for device in devices_dn:
 
         if user == "tcos": macvsuser=mac
         #Commands basteln
-        NFSMountCommand = mountcmd + ' ' + mountopt + ' ' + nfsserver + ':' + mountdir_remote + '/' + macvsuser + ' ' + mountdir_local + '/' + user
+        NFSMountCommand = mountcmd + ' ' + mountopt + ' ' + nfsserver + ':' + mountdir_remote + '/' + macvsuser + ' ' + mountdir_local + '/' + "tcos"
         NFSMountCommand_home = mountcmd + ' ' + mountopt + ' ' + nfsserver + ':' + mountdir_remote + ' ' + mountdir_local
         # print NFSMountCommand
         # ersteinmal alle homes Mounten ob nachzuschauen ob MAC (oder User) schon vorhanden ist:

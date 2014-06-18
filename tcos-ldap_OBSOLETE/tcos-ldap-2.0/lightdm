@@ -1,0 +1,13 @@
+auth       required     pam_nologin.so
+auth       required     pam_env.so
+auth       sufficient   pam_unix_auth.so
+auth       required     pam_ldap.so use_first_pass
+account    sufficient   pam_ldap.so
+account    required     pam_unix_acct.so
+@include common-account
+password   sufficient   pam_ldap.so
+@include common-password
+@include common-session
+session    sufficient   pam_ldap.so
+session    required     pam_unix_session.so
+

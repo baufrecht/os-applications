@@ -1,3 +1,10 @@
+cups-client (2.0-2) unstable; urgency=low
+
+  * Fix: Added a condition to check if the printer belongs to cups-client or
+    not 
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Fri, 06 Jun 2014 20:54:19 +0200
+
 cups-client (2.0-1) unstable; urgency=low
 
   * Initial release

@@ -1,0 +1,9 @@
+Package: tcos-branding
+Version: 2.0-18
+Architecture: i386
+Maintainer: Steffen Hoenig <s.hoenig@openthinclient.com>
+Installed-Size: 1744
+Section: unknown
+Priority: optional
+Description: openthinclient look and feel
+ Have background images and other stuff to get a different look.

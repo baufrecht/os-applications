@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-MODNAME = 'printserver'
-
 # standard modules
 import commands
 import os
@@ -19,9 +17,9 @@ l = tcos.Ldap()
 mac = s.getMac()
 ldap_url = s.getLdapUrl()
 client_dn = l.getClientDn(mac, ldap_url)
-
+user_dn = l.getUserDn('tcos', ldap_url)
 xinetd_template = '''\
-service %(MODNAME)s-%(tcp_port)s
+service printserver-%(tcp_port)s
 {
         type = unlisted
         socket_type = stream
@@ -35,25 +33,26 @@ service %(MODNAME)s-%(tcp_port)s
         disable = no
 }
 '''
-devices_dn = l.getDevicesDn( client_dn, ldap_url)
-for device in devices_dn:
-    type = l.getGroupOfUniqueNamesInfo(device, ldap_url)["schema"]
-    if type == MODNAME:
-        port = l.getNismapentry(device, ldap_url).get('Port', 'usb')
-        tcp_port = l.getNismapentry(device, ldap_url).get('TCPPort', '9100')
+printers_dn = l.getPrintersDn(client_dn, user_dn, ldap_url)
+
+for printer in printers_dn:
+    type = l.getGroupOfUniqueNamesInfo(printer, ldap_url)["schema"]
+    if type == 'printserver':
+        port = l.getNismapentry(printer, ldap_url).get('Port', 'usb')
+        tcp_port = l.getNismapentry(printer, ldap_url).get('TCPPort', '9100')
         if port == 'usb':
             try:
-                portdev = '/'.join(['/dev', 'usb', 'lp', l.getNismapentry(device, ldap_url).get('Device')])
+                portdev = '/'.join(['/dev', 'usb', 'lp', l.getNismapentry(printer, ldap_url).get('Device')])
             except:
                 print('No Device string found. Defaulting to /dev/lp0')
                 portdev = '/dev/usb/lp0'
         elif port == 'parallel':
             portdev = '/dev/parlp'
         elif port == 'file':
-            portdev = l.getNismapentry(device, ldap_url).get('Filename', '/tmp/' + MODNAME + '.dmp')
+            portdev = l.getNismapentry(printer, ldap_url).get('Filename', '/tmp/' + 'printserver' + '.dmp')
         else:
             print("No valid port.")
-        xinetd_name = os.path.join('/etc/xinetd.d', MODNAME + '-' + tcp_port)
+        xinetd_name = os.path.join('/etc/xinetd.d', 'printserver' + '-' + tcp_port)
         xinetd_file = open(xinetd_name, 'w')
         xinetd_file.write(xinetd_template % locals())
         xinetd_file.close()

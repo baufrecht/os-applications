@@ -1,0 +1,41 @@
+PAM_PREPROFILE
+==============
+
+This module ensures that some program or script is run each time a user
+logs into the computer. Now, it isn't necessary to rely on a particular
+shell to exec the user's .profile, .bash_profile, .bashrc or similar.
+
+Such functionality can be used to create links from the user's home
+directory to some location, or other needs.
+
+The module was made as a modification of the example module
+"pam_permit".
+
+INSTALL & USAGE:
+
+To install this module you must compile and copy it into a known
+location, such as /lib/security
+Next, edit /etc/pam.d/X, being X the PAM service you want the module to
+run at (eg: su, gdm...). Add the following line at the end of the file:
+
+session required pam_preprofile.so my_program param1 ... paramN
+
+When my_program is called, it will receive param1 ... paramN, plus a
+paramN+1 being the username that has just been authenticated. For
+example:
+
+----
+session required pam_preprofile.so /tmp/myprogram.sh /usr/doc
+----
+#!/bin/sh
+# This is /tmp/myprogram.sh
+echo "Hello $2. Please, read the docs at $1."
+----
+
+NOTE:
+
+This module was written and tested only on Debian 3.0 (Woody)
+
+--
+Enrique Ocaña González
+eocanha@igalia.com

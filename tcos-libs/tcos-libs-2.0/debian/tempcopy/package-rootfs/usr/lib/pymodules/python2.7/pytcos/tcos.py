@@ -208,7 +208,7 @@ class Util(Logger):
              screen_geometry = int(x), int(y), 0, int(panel_size)
         return screen_geometry
         
-   def getSecondaryScreenDimensions(self, geometrystring=True):
+    def getSecondaryScreenDimensions(self, geometrystring=True):
         x = os.getenv('secondscreenWidth')
         y = os.getenv('secondscreenHeigth') 
         if x == "" or y == "":
@@ -667,7 +667,7 @@ class Ldap(Logger):
             usergroup_type = slc.getType()
 
             use_secondary_ldap_url = False
-            if (secondary_ldap_url and usergroup_ldap_dir == "secondary" and \
+            if (username != 'tcos' and secondary_ldap_url and usergroup_ldap_dir == "secondary" and \
                     (usergroup_type == "Users" or usergroup_type == "UsersGroups")):
                 use_secondary_ldap_url = True
                 ldap_url = secondary_ldap_url

@@ -1,0 +1,8 @@
+auth    requisite       pam_nologin.so
+auth    required        pam_env.so
+auth    optional        pam_sso-tcos.so
+auth    required        pam_permit.so
+@include common-account
+session required        pam_limits.so
+@include common-session
+@include common-password
