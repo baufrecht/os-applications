@@ -1,7 +1,7 @@
 Source: tcos-dev
 Section: devel
 Priority: optional
-Maintainer: Joern Frenzel <j.frenzel@openthinclient.com>
+Maintainer: Steffen Hoenig <s.hoenig@openthinclient.com>
 Build-Depends: debhelper (>= 4.0.0)
 Standards-Version: 3.6.2
 

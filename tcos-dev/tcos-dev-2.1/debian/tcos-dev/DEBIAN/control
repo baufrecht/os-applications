@@ -1,8 +1,8 @@
 Package: tcos-dev
-Version: 2.0.0-09
+Version: 2.1-1
 Architecture: i386
-Maintainer: Joern Frenzel <j.frenzel@openthinclient.com>
-Installed-Size: 94
+Maintainer: Steffen Hoenig <s.hoenig@openthinclient.com>
+Installed-Size: 97
 Depends: autotools-dev, build-essential, debhelper, devscripts, dh-make, fakeroot, squashfs-tools (>= 4.2), gcc-multilib
 Section: devel
 Priority: optional

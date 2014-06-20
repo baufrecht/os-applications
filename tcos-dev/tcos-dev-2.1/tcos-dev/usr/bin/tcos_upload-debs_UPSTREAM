@@ -3,7 +3,7 @@
 [ "$DEBUG" ] && set -x
 
 # Vars
-DST_DIR="/var/www/openthinclient/manager-contrib"
+DST_DIR="/var/www/openthinclient-upstream/manager-rolling"
 
 # Functions
 function usage() {
@@ -49,3 +49,9 @@ done
 # Regenerate Packages.gz
 echo "regenerating Packages.gz"
 (cd "$DST_DIR" && dpkg-scanpackages . /dev/null | gzip > Packages.gz)
+
+echo "#######################################"
+echo ""
+echo -e "\tDon't forget to upload to public repository server."
+echo -e "\tUse karlsruhe-sync to do so." 
+echo ""

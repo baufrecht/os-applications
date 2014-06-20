@@ -1,9 +1,10 @@
-tcos-dev (2.0.0-09) UNRELEASED; urgency=low
+tcos-dev (2.1-1) UNRELEASED; urgency=low
 
-  * change usr/bin/tcos_buildpackage: add -u to fakeroot to enable preserve the file ownership inside sfs
-  * change debian/control: have architecture independent dependencies
+  [ Steffen Hoenig ]
+  * added tcos_upload_debs_UPSTREAM, karlsruhe-sync
+  * updated tcos_uploads_debs, tcos-genpackage
 
- -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 04 Oct 2013 15:52:26 +0200
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Fri, 20 Jun 2014 14:49:37 +0000
 
 tcos-dev (2.0.0-06) unstable; urgency=low
 
