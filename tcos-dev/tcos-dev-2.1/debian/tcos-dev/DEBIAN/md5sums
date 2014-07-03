@@ -1,9 +1,10 @@
 39f58006c418e03785cde8e971baf13e  usr/bin/karlsruhe-sync
 7f4e16b3f8719880db629e1a57f6803c  usr/bin/tcos_buildpackage
 b1623221c21d0249fd384f027ad00186  usr/bin/tcos_genpackage
+02f2e28f5488ea8d5793adfc105b1d8e  usr/bin/tcos_testpackage
 333bfbe982867246c52a2e16740055a3  usr/bin/tcos_upload-debs
 f3e4f3dc5dcb297cff2fbbe47b502f67  usr/bin/tcos_upload-debs_UPSTREAM
-1784799f5756e39ddfed7a119dfa2e3a  usr/share/doc/tcos-dev/changelog.Debian.gz
+a20553b4856a622d172a1bf02abde701  usr/share/doc/tcos-dev/changelog.Debian.gz
 f1da1ba3b8790c455d99fe994a855644  usr/share/doc/tcos-dev/copyright
 d728243a25518ca253916b7164ffed80  usr/share/tcos-dev/templates/dh_make/changelog
 48a24b70a0b376535542b996af517398  usr/share/tcos-dev/templates/dh_make/compat
