@@ -8,3 +8,4 @@ tempcopy_test/
 *.tar.gz
 *.dsc
 *.changes
+*.sfs

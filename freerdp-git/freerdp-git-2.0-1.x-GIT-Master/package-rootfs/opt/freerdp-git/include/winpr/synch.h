@@ -29,8 +29,6 @@
 #include <winpr/error.h>
 #include <winpr/handle.h>
 
-#include <winpr/nt.h>
-
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -219,8 +217,6 @@ WINPR_API DWORD SignalObjectAndWait(HANDLE hObjectToSignal, HANDLE hObjectToWait
 
 /* Waitable Timer */
 
-#define CREATE_WAITABLE_TIMER_MANUAL_RESET		0x00000001
-
 typedef struct _REASON_CONTEXT
 {
 	ULONG Version;
@@ -242,9 +238,6 @@ typedef struct _REASON_CONTEXT
 
 typedef VOID (*PTIMERAPCROUTINE)(LPVOID lpArgToCompletionRoutine, DWORD dwTimerLowValue, DWORD dwTimerHighValue);
 
-WINPR_API HANDLE CreateWaitableTimerA(LPSECURITY_ATTRIBUTES lpTimerAttributes, BOOL bManualReset, LPCSTR lpTimerName);
-WINPR_API HANDLE CreateWaitableTimerW(LPSECURITY_ATTRIBUTES lpTimerAttributes, BOOL bManualReset, LPCWSTR lpTimerName);
-
 WINPR_API HANDLE CreateWaitableTimerExA(LPSECURITY_ATTRIBUTES lpTimerAttributes, LPCSTR lpTimerName, DWORD dwFlags, DWORD dwDesiredAccess);
 WINPR_API HANDLE CreateWaitableTimerExW(LPSECURITY_ATTRIBUTES lpTimerAttributes, LPCWSTR lpTimerName, DWORD dwFlags, DWORD dwDesiredAccess);
 
@@ -260,46 +253,12 @@ WINPR_API HANDLE OpenWaitableTimerW(DWORD dwDesiredAccess, BOOL bInheritHandle, 
 WINPR_API BOOL CancelWaitableTimer(HANDLE hTimer);
 
 #ifdef UNICODE
-#define CreateWaitableTimer		CreateWaitableTimerW
 #define CreateWaitableTimerEx		CreateWaitableTimerExW
 #define OpenWaitableTimer		OpenWaitableTimerW
 #else
-#define CreateWaitableTimer		CreateWaitableTimerA
 #define CreateWaitableTimerEx		CreateWaitableTimerExA
 #define OpenWaitableTimer		OpenWaitableTimerA
 #endif
-
-/**
- * Timer-Queue Timer
- */
-
-#define WT_EXECUTEDEFAULT			0x00000000
-#define WT_EXECUTEINIOTHREAD			0x00000001
-#define WT_EXECUTEINUITHREAD			0x00000002
-#define WT_EXECUTEINWAITTHREAD			0x00000004
-#define WT_EXECUTEONLYONCE			0x00000008
-#define WT_EXECUTELONGFUNCTION			0x00000010
-#define WT_EXECUTEINTIMERTHREAD			0x00000020
-#define WT_EXECUTEINPERSISTENTIOTHREAD		0x00000040
-#define WT_EXECUTEINPERSISTENTTHREAD		0x00000080
-#define WT_TRANSFER_IMPERSONATION		0x00000100
-
-typedef VOID (*WAITORTIMERCALLBACK)(PVOID lpParameter, BOOLEAN TimerOrWaitFired);
-
-WINPR_API HANDLE CreateTimerQueue(void);
-WINPR_API BOOL DeleteTimerQueue(HANDLE TimerQueue);
-WINPR_API BOOL DeleteTimerQueueEx(HANDLE TimerQueue, HANDLE CompletionEvent);
-
-WINPR_API BOOL CreateTimerQueueTimer(PHANDLE phNewTimer, HANDLE TimerQueue,
-		WAITORTIMERCALLBACK Callback, PVOID Parameter, DWORD DueTime, DWORD Period, ULONG Flags);
-WINPR_API BOOL ChangeTimerQueueTimer(HANDLE TimerQueue, HANDLE Timer, ULONG DueTime, ULONG Period);
-WINPR_API BOOL DeleteTimerQueueTimer(HANDLE TimerQueue, HANDLE Timer, HANDLE CompletionEvent);
-
-#endif
-
-#if ((_WIN32) && (_WIN32_WINNT < 0x0403))
-
-WINPR_API BOOL InitializeCriticalSectionEx(LPCRITICAL_SECTION lpCriticalSection, DWORD dwSpinCount, DWORD Flags);
 
 #endif
 

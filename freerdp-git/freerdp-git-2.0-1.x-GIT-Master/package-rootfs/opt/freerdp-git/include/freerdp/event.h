@@ -42,15 +42,6 @@ DEFINE_EVENT_BEGIN(ResizeWindow)
 	int height;
 DEFINE_EVENT_END(ResizeWindow)
 
-DEFINE_EVENT_BEGIN(PanningChange)
-	int XPan;
-	int YPan;
-DEFINE_EVENT_END(PanningChange)
-
-DEFINE_EVENT_BEGIN(ScalingFactorChange)
-	double ScalingFactor;
-DEFINE_EVENT_END(ScalingFactorChange)
-
 DEFINE_EVENT_BEGIN(LocalResizeWindow)
 	int width;
 	int height;
@@ -61,9 +52,22 @@ DEFINE_EVENT_BEGIN(EmbedWindow)
 	void* handle;
 DEFINE_EVENT_END(EmbedWindow)
 
+DEFINE_EVENT_BEGIN(PanningChange)
+	int XPan;
+	int YPan;
+DEFINE_EVENT_END(PanningChange)
+
+DEFINE_EVENT_BEGIN(ScalingFactorChange)
+	double ScalingFactor;
+DEFINE_EVENT_END(ScalingFactorChange)
+
 DEFINE_EVENT_BEGIN(ErrorInfo)
 	UINT32 code;
 DEFINE_EVENT_END(ErrorInfo)
+
+DEFINE_EVENT_BEGIN(ParamChange)
+	int id;
+DEFINE_EVENT_END(ParamChange)
 
 DEFINE_EVENT_BEGIN(Terminate)
 	int code;
@@ -82,12 +86,6 @@ DEFINE_EVENT_BEGIN(ChannelDisconnected)
 	const char* name;
 	void* pInterface;
 DEFINE_EVENT_END(ChannelDisconnected)
-
-DEFINE_EVENT_BEGIN(MouseEvent)
-	UINT16 flags;
-	UINT16 x;
-	UINT16 y;
-DEFINE_EVENT_END(MouseEvent)
 
 #ifdef	__cplusplus
 }

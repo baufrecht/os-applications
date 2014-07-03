@@ -1,3 +1,13 @@
+freerdp-git (2.0-1.2-06) UNRELEASED; urgency=low
+
+  * UDPATE: binaries compiled from git master branch on 05/19/2014
+  * NEW: launcher and xml do now support
+     - font smoothing
+     - gdi
+     - remote FX
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Tue, 20 May 2014 19:47:02 +0200
+
 freerdp-git (2.0-1.2-05) unstable; urgency=low
 
   * FIX: launcher triggers xfreerdp now in pulsaudio-mode rather than using alsa directly

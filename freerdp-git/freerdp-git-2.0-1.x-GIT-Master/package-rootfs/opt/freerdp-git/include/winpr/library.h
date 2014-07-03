@@ -46,17 +46,12 @@ WINPR_API HMODULE LoadLibraryW(LPCWSTR lpLibFileName);
 WINPR_API HMODULE LoadLibraryExA(LPCSTR lpLibFileName, HANDLE hFile, DWORD dwFlags);
 WINPR_API HMODULE LoadLibraryExW(LPCWSTR lpLibFileName, HANDLE hFile, DWORD dwFlags);
 
-WINPR_API DWORD GetModuleFileNameA(HMODULE hModule, LPSTR lpFilename, DWORD nSize);
-WINPR_API DWORD GetModuleFileNameW(HMODULE hModule, LPWSTR lpFilename, DWORD nSize);
-
 #ifdef UNICODE
-#define LoadLibrary		LoadLibraryW
-#define LoadLibraryEx		LoadLibraryExW
-#define GetModuleFileName	GetModuleFileNameW
+#define LoadLibrary	LoadLibraryW
+#define LoadLibraryEx	LoadLibraryExW
 #else
-#define LoadLibrary		LoadLibraryA
-#define LoadLibraryEx		LoadLibraryExA
-#define GetModuleFileName	GetModuleFileNameA
+#define LoadLibrary	LoadLibraryA
+#define LoadLibraryEx	LoadLibraryExA
 #endif
 
 WINPR_API FARPROC GetProcAddress(HMODULE hModule, LPCSTR lpProcName);

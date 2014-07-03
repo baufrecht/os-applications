@@ -1,8 +1,8 @@
 Package: freerdp-git
-Version: 2.0-1.2-05
+Version: 2.0-1.2-06
 Architecture: i386
 Maintainer: Joern Frenzel <j.frenzel@openthinclient.com>
-Installed-Size: 1182
+Installed-Size: 892
 Depends: base (>= 2.0-17)
 Section: x11
 Priority: optional

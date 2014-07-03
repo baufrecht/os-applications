@@ -26,20 +26,11 @@
 #include <wchar.h>
 #include <winpr/windows.h>
 
-#include <winpr/spec.h>
-
-#ifdef _WIN32
-#include <wtypes.h>
-#endif
-
 #if defined(__OBJC__) && defined(__APPLE__)
 #include <objc/objc.h>
 #endif
 
 #ifndef _WIN32
-
-#define WINAPI
-#define CDECL
 
 #define __int8	char
 #define __int16 short
@@ -92,15 +83,13 @@ typedef short SHORT;
 typedef void* HANDLE, *PHANDLE, *LPHANDLE;
 typedef HANDLE HINSTANCE;
 typedef HANDLE HMODULE;
-typedef HANDLE HWND;
-typedef HANDLE HBITMAP;
 
 typedef DWORD HCALL;
 typedef int INT, *LPINT;
 typedef signed char INT8;
 typedef signed short INT16;
-#ifndef XMD_H
 typedef signed int INT32;
+#ifndef XMD_H
 typedef signed __int64 INT64;
 #endif
 typedef const WCHAR* LMCSTR;
@@ -117,13 +106,14 @@ typedef signed int LONG32;
 typedef signed __int64 LONG64;
 #endif
 
-typedef CHAR *PSTR, *LPSTR, *LPCH;
+typedef CHAR* PSTR, *LPSTR, *LPCH;
 typedef const CHAR *LPCSTR,*PCSTR;
 
-typedef WCHAR *LPWSTR, *PWSTR, *LPWCH;
+typedef WCHAR* LPWSTR, *PWSTR, *LPWCH;
 typedef const WCHAR *LPCWSTR,*PCWSTR;
 
 typedef unsigned __int64 QWORD;
+typedef UCHAR* STRING;
 
 typedef unsigned int UINT;
 typedef unsigned char UINT8;
@@ -141,8 +131,7 @@ typedef unsigned int ULONG32;
 typedef unsigned __int64 ULONG64;
 typedef wchar_t UNICODE;
 typedef unsigned short USHORT;
-#define VOID void
-typedef void *PVOID, *LPVOID;
+typedef void VOID, *PVOID, *LPVOID;
 typedef void *PVOID64, *LPVOID64;
 typedef const void *LPCVOID;
 typedef unsigned short WORD, *PWORD, *LPWORD;
@@ -168,9 +157,6 @@ typedef struct _LUID
 	DWORD LowPart;
 	LONG  HighPart;
 } LUID, *PLUID;
-
-typedef GUID IID;
-typedef IID* REFIID;
 
 #ifdef UNICODE
 #define _T(x)	L ## x
@@ -277,8 +263,6 @@ typedef struct _SECURITY_DESCRIPTOR
 	PACL Dacl;
 } SECURITY_DESCRIPTOR, *PSECURITY_DESCRIPTOR;
 
-typedef WORD SECURITY_DESCRIPTOR_CONTROL, *PSECURITY_DESCRIPTOR_CONTROL;
-
 typedef struct _SECURITY_ATTRIBUTES
 {
 	DWORD nLength;
@@ -312,40 +296,6 @@ typedef unsigned long error_status_t;
 #ifndef _NTDEF_
 typedef LONG NTSTATUS;
 typedef NTSTATUS *PNTSTATUS;
-#endif
-
-#ifndef _WIN32
-
-typedef struct tagDEC
-{
-	USHORT wReserved;
-	union {
-		struct {
-			BYTE scale;
-			BYTE sign;
-		} DUMMYSTRUCTNAME;
-		USHORT signscale;
-	} DUMMYUNIONNAME;
-	ULONG Hi32;
-	union {
-		struct {
-			ULONG Lo32;
-			ULONG Mid32;
-		} DUMMYSTRUCTNAME2;
-		ULONGLONG Lo64;
-	} DUMMYUNIONNAME2;
-} DECIMAL;
-
-typedef DECIMAL *LPDECIMAL;
-
-#define DECIMAL_NEG		((BYTE) 0x80)
-#define DECIMAL_SETZERO(dec)	{ (dec).Lo64 = 0; (dec).Hi32 = 0; (dec).signscale = 0; }
-
-typedef char CCHAR;
-typedef DWORD LCID;
-typedef PDWORD PLCID;
-typedef WORD LANGID;
-
 #endif
 
 #endif /* WINPR_WTYPES_H */

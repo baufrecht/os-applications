@@ -2,8 +2,8 @@
  * FreeRDP: A Remote Desktop Protocol Implementation
  * Version includes
  *
- * Copyright 2013 Thincast Technologies GmbH
- * Copyright 2013 Bernhard Miklautz <bernhard.miklautz@thincast.com>
+ * Copyright 2013 Thinstuff Technologies GmbH
+ * Copyright 2013 Bernhard Miklautz <bmiklautz@thinstuff.at>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,12 +21,12 @@
 #define _FREERDP_VERSION_H_
 
 #define FREERDP_VERSION_MAJOR 1
-#define FREERDP_VERSION_MINOR 2
+#define FREERDP_VERSION_MINOR 1
 #define FREERDP_VERSION_REVISION 0
 #define FREERDP_VERSION_SUFFIX "beta1"
-#define FREERDP_API_VERSION "1.2"
-#define FREERDP_VERSION "1.2.0"
-#define FREERDP_VERSION_FULL "1.2.0-beta1"
-#define GIT_REVISION "1.1.0-beta+2013071101-1508-gaa46"
+#define FREERDP_API_VERSION "1.1"
+#define FREERDP_VERSION "1.1.0"
+#define FREERDP_VERSION_FULL "1.1.0-beta1"
+#define GIT_REVISION "n/a"
 
 #endif // _FREERDP_VERSION_H_

@@ -27,7 +27,6 @@
 #include <winpr/winpr.h>
 #include <winpr/wtypes.h>
 
-#include <winpr/crt.h>
 #include <winpr/synch.h>
 #include <winpr/stream.h>
 
@@ -36,16 +35,12 @@ extern "C" {
 #endif
 
 typedef void* (*OBJECT_NEW_FN)(void);
-typedef void (*OBJECT_INIT_FN)(void* obj);
-typedef void (*OBJECT_UNINIT_FN)(void* obj);
 typedef void (*OBJECT_FREE_FN)(void* obj);
 typedef void (*OBJECT_EQUALS_FN)(void* objA, void* objB);
 
 struct _wObject
 {
 	OBJECT_NEW_FN fnObjectNew;
-	OBJECT_INIT_FN fnObjectInit;
-	OBJECT_UNINIT_FN fnObjectUninit;
 	OBJECT_FREE_FN fnObjectFree;
 	OBJECT_EQUALS_FN fnObjectEquals;
 };
@@ -192,21 +187,16 @@ struct _wListDictionary
 	CRITICAL_SECTION lock;
 
 	wListDictionaryItem* head;
-	wObject object;
 };
 typedef struct _wListDictionary wListDictionary;
-
-#define ListDictionary_Object(_dictionary)	(&_dictionary->object)
 
 WINPR_API int ListDictionary_Count(wListDictionary* listDictionary);
 
 WINPR_API void ListDictionary_Add(wListDictionary* listDictionary, void* key, void* value);
-WINPR_API void* ListDictionary_Remove(wListDictionary* listDictionary, void* key);
-WINPR_API void* ListDictionary_Remove_Head(wListDictionary* listDictionary);
+WINPR_API void ListDictionary_Remove(wListDictionary* listDictionary, void* key);
 WINPR_API void ListDictionary_Clear(wListDictionary* listDictionary);
 
 WINPR_API BOOL ListDictionary_Contains(wListDictionary* listDictionary, void* key);
-WINPR_API int ListDictionary_GetKeys(wListDictionary* listDictionary, ULONG_PTR** ppKeys);
 
 WINPR_API void* ListDictionary_GetItemValue(wListDictionary* listDictionary, void* key);
 WINPR_API BOOL ListDictionary_SetItemValue(wListDictionary* listDictionary, void* key, void* value);
@@ -214,59 +204,14 @@ WINPR_API BOOL ListDictionary_SetItemValue(wListDictionary* listDictionary, void
 WINPR_API wListDictionary* ListDictionary_New(BOOL synchronized);
 WINPR_API void ListDictionary_Free(wListDictionary* listDictionary);
 
-/* System.Collections.Generic.LinkedList<T> */
-
-typedef struct _wLinkedListItem wLinkedListNode;
-
-struct _wLinkedListItem
-{
-	void* value;
-	wLinkedListNode* prev;
-	wLinkedListNode* next;
-};
-
-struct _wLinkedList
-{
-	int count;
-	int initial;
-	wLinkedListNode* head;
-	wLinkedListNode* tail;
-	wLinkedListNode* current;
-};
-typedef struct _wLinkedList wLinkedList;
-
-WINPR_API int LinkedList_Count(wLinkedList* list);
-WINPR_API void* LinkedList_First(wLinkedList* list);
-WINPR_API void* LinkedList_Last(wLinkedList* list);
-
-WINPR_API BOOL LinkedList_Contains(wLinkedList* list, void* value);
-WINPR_API void LinkedList_Clear(wLinkedList* list);
-
-WINPR_API void LinkedList_AddFirst(wLinkedList* list, void* value);
-WINPR_API void LinkedList_AddLast(wLinkedList* list, void* value);
-
-WINPR_API void LinkedList_Remove(wLinkedList* list, void* value);
-WINPR_API void LinkedList_RemoveFirst(wLinkedList* list);
-WINPR_API void LinkedList_RemoveLast(wLinkedList* list);
-
-WINPR_API void LinkedList_Enumerator_Reset(wLinkedList* list);
-WINPR_API void* LinkedList_Enumerator_Current(wLinkedList* list);
-WINPR_API BOOL LinkedList_Enumerator_MoveNext(wLinkedList* list);
-
-WINPR_API wLinkedList* LinkedList_New(void);
-WINPR_API void LinkedList_Free(wLinkedList* list);
-
 /* System.Collections.Generic.KeyValuePair<TKey,TValue> */
-
-typedef struct _wKeyValuePair wKeyValuePair;
 
 struct _wKeyValuePair
 {
 	void* key;
 	void* value;
-
-	wKeyValuePair* next;
 };
+typedef struct _wKeyValuePair wKeyValuePair;
 
 /* Reference Table */
 
@@ -319,72 +264,19 @@ WINPR_API void CountdownEvent_Reset(wCountdownEvent* countdown, DWORD count);
 WINPR_API wCountdownEvent* CountdownEvent_New(DWORD initialCount);
 WINPR_API void CountdownEvent_Free(wCountdownEvent* countdown);
 
-/* Hash Table */
-
-struct _wHashTable
-{
-	BOOL synchronized;
-	CRITICAL_SECTION lock;
-
-	long numOfBuckets;
-	long numOfElements;
-	float idealRatio;
-	float lowerRehashThreshold;
-	float upperRehashThreshold;
-	wKeyValuePair** bucketArray;
-	int (*keycmp)(void* key1, void* key2);
-	int (*valuecmp)(void* value1, void* value2);
-	unsigned long (*hashFunction)(void* key);
-	void (*keyDeallocator)(void* key);
-	void (*valueDeallocator)(void* value);
-};
-typedef struct _wHashTable wHashTable;
-
-WINPR_API int HashTable_Count(wHashTable* table);
-WINPR_API int HashTable_Add(wHashTable* table, void* key, void* value);
-WINPR_API BOOL HashTable_Remove(wHashTable* table, void* key);
-WINPR_API void HashTable_Clear(wHashTable* table);
-WINPR_API BOOL HashTable_Contains(wHashTable* table, void* key);
-WINPR_API BOOL HashTable_ContainsKey(wHashTable* table, void* key);
-WINPR_API BOOL HashTable_ContainsValue(wHashTable* table, void* value);
-WINPR_API void* HashTable_GetItemValue(wHashTable* table, void* key);
-WINPR_API BOOL HashTable_SetItemValue(wHashTable* table, void* key, void* value);
-
-WINPR_API wHashTable* HashTable_New(BOOL synchronized);
-WINPR_API void HashTable_Free(wHashTable* table);
-
 /* BufferPool */
-
-struct _wBufferPoolItem
-{
-	int size;
-	void* buffer;
-};
-typedef struct _wBufferPoolItem wBufferPoolItem;
 
 struct _wBufferPool
 {
-	int fixedSize;
-	DWORD alignment;
-	BOOL synchronized;
-	CRITICAL_SECTION lock;
-
 	int size;
 	int capacity;
 	void** array;
-
-	int aSize;
-	int aCapacity;
-	wBufferPoolItem* aArray;
-
-	int uSize;
-	int uCapacity;
-	wBufferPoolItem* uArray;
+	CRITICAL_SECTION lock;
+	int fixedSize;
+	DWORD alignment;
+	BOOL synchronized;
 };
 typedef struct _wBufferPool wBufferPool;
-
-WINPR_API int BufferPool_GetPoolSize(wBufferPool* pool);
-WINPR_API int BufferPool_GetBufferSize(wBufferPool* pool, void* buffer);
 
 WINPR_API void* BufferPool_Take(wBufferPool* pool, int bufferSize);
 WINPR_API void BufferPool_Return(wBufferPool* pool, void* buffer);
@@ -440,8 +332,6 @@ struct _wMessageQueue
 	wMessage* array;
 	CRITICAL_SECTION lock;
 	HANDLE event;
-
-	wObject object;
 };
 typedef struct _wMessageQueue wMessageQueue;
 
@@ -458,43 +348,7 @@ WINPR_API void MessageQueue_PostQuit(wMessageQueue* queue, int nExitCode);
 WINPR_API int MessageQueue_Get(wMessageQueue* queue, wMessage* message);
 WINPR_API int MessageQueue_Peek(wMessageQueue* queue, wMessage* message, BOOL remove);
 
-/*! \brief Clears all elements in a message queue.
- *
- *  \note If dynamically allocated data is part of the messages,
- *        a custom cleanup handler must be passed in the 'callback'
- *        argument for MessageQueue_New.
- *
- *  \param queue The queue to clear.
- *
- *  \return 0 in case of success or a error code otherwise.
- */
-WINPR_API int MessageQueue_Clear(wMessageQueue *queue);
-
-/*! \brief Creates a new message queue.
- * 				 If 'callback' is null, no custom cleanup will be done
- * 				 on message queue deallocation.
- * 				 If the 'callback' argument contains valid uninit or
- * 				 free functions those will be called by
- * 				 'MessageQueue_Clear'.
- *
- * \param callback a pointer to custom initialization / cleanup functions.
- * 								 Can be NULL if not used.
- *
- * \return A pointer to a newly allocated MessageQueue or NULL.
- */
-WINPR_API wMessageQueue* MessageQueue_New(const wObject *callback);
-
-/*! \brief Frees resources allocated by a message queue.
- * 				 This function will only free resources allocated
- *				 internally.
- *
- * \note Empty the queue before calling this function with
- * 			 'MessageQueue_Clear', 'MessageQueue_Get' or
- * 			 'MessageQueue_Peek' to free all resources allocated
- * 			 by the message contained.
- *
- * \param queue A pointer to the queue to be freed.
- */
+WINPR_API wMessageQueue* MessageQueue_New(void);
 WINPR_API void MessageQueue_Free(wMessageQueue* queue);
 
 /* Message Pipe */
@@ -560,9 +414,9 @@ typedef struct _wEventType wEventType;
 #define DEFINE_EVENT_END(_name) \
 	} _name ## EventArgs; \
 	DEFINE_EVENT_HANDLER(_name); \
-	DEFINE_EVENT_RAISE(_name) \
-	DEFINE_EVENT_SUBSCRIBE(_name) \
-	DEFINE_EVENT_UNSUBSCRIBE(_name)
+	DEFINE_EVENT_RAISE(_name); \
+	DEFINE_EVENT_SUBSCRIBE(_name); \
+	DEFINE_EVENT_UNSUBSCRIBE(_name);
 
 #define DEFINE_EVENT_ENTRY(_name) \
 	{ #_name, { sizeof( _name ## EventArgs) }, 0, { \
@@ -600,5 +454,4 @@ WINPR_API void PubSub_Free(wPubSub* pubSub);
 #ifdef __cplusplus
 }
 #endif
-
 #endif /* WINPR_COLLECTIONS_H */

@@ -1,2 +1,0 @@
-#!/bin/bash
-sed -i "/^auth.*/aauth       optional     pam_sso-tcos.so" /etc/pam.d/lightdm

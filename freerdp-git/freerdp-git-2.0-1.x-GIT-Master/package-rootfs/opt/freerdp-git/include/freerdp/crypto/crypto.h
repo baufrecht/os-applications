@@ -106,7 +106,6 @@ typedef struct crypto_hmac_struct* CryptoHmac;
 
 FREERDP_API CryptoHmac crypto_hmac_new(void);
 FREERDP_API void crypto_hmac_sha1_init(CryptoHmac hmac, const BYTE *data, UINT32 length);
-FREERDP_API void crypto_hmac_md5_init(CryptoHmac hmac, const BYTE *data, UINT32 length);
 FREERDP_API void crypto_hmac_update(CryptoHmac hmac, const BYTE *data, UINT32 length);
 FREERDP_API void crypto_hmac_final(CryptoHmac hmac, BYTE *out_data, UINT32 length);
 FREERDP_API void crypto_hmac_free(CryptoHmac hmac);
@@ -119,10 +118,7 @@ FREERDP_API CryptoCert crypto_cert_read(BYTE* data, UINT32 length);
 FREERDP_API char* crypto_cert_fingerprint(X509* xcert);
 FREERDP_API char* crypto_cert_subject(X509* xcert);
 FREERDP_API char* crypto_cert_subject_common_name(X509* xcert, int* length);
-FREERDP_API char** crypto_cert_subject_alt_name(X509* xcert, int* count,
-		int** lengths);
-FREERDP_API void crypto_cert_subject_alt_name_free(int count, int *lengths,
-		char** alt_name);
+FREERDP_API char** crypto_cert_subject_alt_name(X509* xcert, int* count, int** lengths);
 FREERDP_API char* crypto_cert_issuer(X509* xcert);
 FREERDP_API void crypto_cert_print_info(X509* xcert);
 FREERDP_API void crypto_cert_free(CryptoCert cert);

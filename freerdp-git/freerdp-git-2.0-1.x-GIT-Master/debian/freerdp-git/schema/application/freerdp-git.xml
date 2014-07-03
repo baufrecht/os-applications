@@ -166,6 +166,58 @@
                     <label lang="en" value="no"/>
                 </option>
             </choice>
+            <choice name="smoothFonts" value="yes">
+	      <label lang="de" value="Schriften glätten"/>
+	      <label lang="en" value="smooth fonts"/>
+	      <option name="yes" value="yes">
+		<label lang="de" value="ja"/>
+		<label lang="en" value="yes"/>
+	      </option>
+	      <option name="no" value="no">
+		<label lang="de" value="nein"/>
+		<label lang="en" value="no"/>
+	      </option>
+	  </choice>
+          <choice name="GDIrendering" value="hw">
+	    <label lang="de" value="GDI rendering"/>
+	    <label lang="en" value="GDI rendering"/>
+	    <option value="hw">
+	      <label lang="de" value="Hardware"/>
+	      <label lang="en" value="hardware"/>
+	    </option>
+	    <option value="sw">
+	      <label lang="de" value="Software"/>
+	      <label lang="en" value="software"/>
+	    </option>
+	    <option value="none">
+	      <label lang="de" value="keine"/>
+	      <label lang="en" value="none"/>
+	    </option>
+	  </choice>
+          <choice name="remoteFX" value="no">
+	    <label lang="de" value="Remote-FX nutzen"/>
+	    <label lang="en" value="use Remote-FX"/>
+	    <option name="yes" value="yes">
+	      <label lang="de" value="ja"/>
+	      <label lang="en" value="yes"/>
+	    </option>
+	    <option name="no" value="no">
+	      <label lang="de" value="nein"/>
+	      <label lang="en" value="no"/>
+	    </option>
+	  </choice>
+          <!--choice name="" value="no">
+	    <label lang="de" value=""/>
+	    <label lang="en" value=""/>
+	    <option name="yes" value="yes">
+	      <label lang="de" value="ja"/>
+	      <label lang="en" value="yes"/>
+	    </option>
+	    <option name="no" value="no">
+	      <label lang="de" value="nein"/>
+	      <label lang="en" value="no"/>
+	    </option>
+	  </choice-->
             <!--choice name="" value="no">
 			<label lang="de" value=""/>
 			<label lang="en" value=""/>

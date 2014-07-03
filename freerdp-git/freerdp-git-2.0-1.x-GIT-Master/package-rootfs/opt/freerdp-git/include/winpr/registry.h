@@ -35,9 +35,21 @@ extern "C" {
 #include <winpr/winpr.h>
 #include <winpr/wtypes.h>
 
-#include <winpr/nt.h>
-#include <winpr/io.h>
 #include <winpr/error.h>
+
+#define DELETE				0x00010000
+#define READ_CONTROL			0x00020000
+#define WRITE_DAC			0x00040000
+#define WRITE_OWNER			0x00080000
+#define SYNCHRONIZE			0x00100000
+#define STANDARD_RIGHTS_REQUIRED	0x000f0000
+
+#define STANDARD_RIGHTS_READ		READ_CONTROL
+#define STANDARD_RIGHTS_WRITE		READ_CONTROL
+#define STANDARD_RIGHTS_EXECUTE		READ_CONTROL
+
+#define STANDARD_RIGHTS_ALL		0x001F0000
+#define SPECIFIC_RIGHTS_ALL		0x0000FFFF
 
 #define OWNER_SECURITY_INFORMATION	0x00000001
 #define GROUP_SECURITY_INFORMATION	0x00000002
@@ -102,8 +114,13 @@ extern "C" {
 #define REG_QWORD			11
 #define REG_QWORD_LITTLE_ENDIAN		11
 
+#define WINAPI WINPR_API
+
 typedef HANDLE HKEY;
 typedef HANDLE* PHKEY;
+
+typedef DWORD ACCESS_MASK;
+typedef ACCESS_MASK* PACCESS_MASK;
 
 typedef ACCESS_MASK REGSAM;
 

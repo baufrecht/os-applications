@@ -39,10 +39,6 @@ struct rdp_window_list
 	rdpWindow* iterator;
 };
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 FREERDP_API void window_list_rewind(rdpWindowList* list);
 FREERDP_API BOOL window_list_has_next(rdpWindowList* list);
 FREERDP_API rdpWindow* window_list_get_next(rdpWindowList* list);
@@ -57,9 +53,5 @@ FREERDP_API void window_list_clear(rdpWindowList* list);
 
 FREERDP_API rdpWindowList* window_list_new(rdpRail* rail);
 FREERDP_API void window_list_free(rdpWindowList* list);
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif /* FREERDP_RAIL_WINDOW_LIST_H */

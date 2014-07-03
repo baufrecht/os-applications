@@ -1,0 +1,17 @@
+Package: tcos-dev
+Version: 2.1-2
+Architecture: all
+Maintainer: Steffen Hoenig <s.hoenig@openthinclient.com>
+Installed-Size: 78
+Depends: autotools-dev, build-essential, debhelper, devscripts, dh-make, fakeroot, squashfs-tools (>= 4.2), gcc-multilib
+Section: devel
+Priority: optional
+Description: TCOS develeloper package
+  This package is used to satisfy build dependencies for the TCOS packages.
+  Install this package to get a openthinclient os package build environment.
+  .
+  The following build helper scripts are included:
+  - tcos_genpackage (generate initial source package archive)
+  - tcos_buildpackage (build a source package)
+  - tcos_upload-debs (copy package files to webserver and regenerate
+    Packages.gz)

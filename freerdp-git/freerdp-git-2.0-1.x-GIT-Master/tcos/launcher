@@ -38,7 +38,7 @@ else:
 	ColorDepth = ' /bpp:' + l.ENTRY.get('Application.Window.ColorDepth', '8')
 KeyboardLayout = ' /kbd:' + l.ENTRY.get('Application.ConnectionParameters.KeyboardLayout', '0x00020409')
 
-# set always given parameters in front of line 
+# set some  always used parameters in front of line 
 Parameters = ProtocolSecurity + ColorDepth + KeyboardLayout
 
 # add bool parameters if needed
@@ -52,7 +52,17 @@ if l.ENTRY.get('Application.ConnectionParameters.redirectSmartcard', 'no') == 'y
 	Parameters += ' /smartcard:0'
 if l.ENTRY.get('Application.ConnectionParameters.redirectMedia', 'no') == 'yes':
 	Parameters += ' "/a:drive,media,/media"'	# we need to quote the parameter, otherwise os.system eats the commas
+if l.ENTRY.get('Application.ConnectionParameters.smoothFonts', 'yes') == 'yes':
+	Parameters += ' +fonts'
+if l.ENTRY.get('Application.ConnectionParameters.GDIrendering', 'hw') == 'hw':
+	Parameters += ' /gdi:hw'
+elif l.ENTRY.get('Application.ConnectionParameters.GDIrendering', 'hw') == 'sw':
+	Parameters += ' /gdi:sw'
+if l.ENTRY.get('Application.ConnectionParameters.remoteFX', 'no') == 'yes':
+	Parameters += ' /rfx'
 
+#if l.ENTRY.get('Application.ConnectionParameters.', 'no') == 'yes':
+#	Parameters += ''
 
 # all the window positioning stuff
 #

@@ -35,13 +35,16 @@
 #include <freerdp/types.h>
 #include <freerdp/peer.h>
 
-#include <winpr/winpr.h>
-#include <winpr/wtypes.h>
+typedef struct WTSVirtualChannelManager WTSVirtualChannelManager;
 
-#include <winpr/wtsapi.h>
+#define WTS_CHANNEL_OPTION_DYNAMIC 0x00000001
 
-#define WTSVirtualEventHandle	3 /* Extended */
-#define WTSVirtualChannelReady	4 /* Extended */
+typedef enum _WTS_VIRTUAL_CLASS
+{
+	WTSVirtualClientData,
+	WTSVirtualFileHandle,
+	WTSVirtualChannelReady
+} WTS_VIRTUAL_CLASS;
 
 #ifdef __cplusplus
 extern "C" {
@@ -50,12 +53,83 @@ extern "C" {
 /**
  * WTSVirtualChannelManager functions are FreeRDP extensions to the API.
  */
+FREERDP_API WTSVirtualChannelManager* WTSCreateVirtualChannelManager(freerdp_peer* client);
+FREERDP_API void WTSDestroyVirtualChannelManager(WTSVirtualChannelManager* vcm);
+FREERDP_API void WTSVirtualChannelManagerGetFileDescriptor(WTSVirtualChannelManager* vcm,
+	void** fds, int* fds_count);
+FREERDP_API BOOL WTSVirtualChannelManagerCheckFileDescriptor(WTSVirtualChannelManager* vcm);
 
-FREERDP_API void WTSVirtualChannelManagerGetFileDescriptor(HANDLE hServer, void** fds, int* fds_count);
-FREERDP_API BOOL WTSVirtualChannelManagerCheckFileDescriptor(HANDLE hServer);
-FREERDP_API HANDLE WTSVirtualChannelManagerGetEventHandle(HANDLE hServer);
+/**
+ * Opens a static or dynamic virtual channel and return the handle. If the
+ * operation fails, a NULL handle is returned.
+ * 
+ * The original MS API has 'DWORD SessionId' as the first argument, while we
+ * use our WTSVirtualChannelManager object instead.
+ *
+ * Static virtual channels must be opened from the main thread. Dynamic virtual channels
+ * can be opened from any thread.
+ */
+FREERDP_API void* WTSVirtualChannelOpenEx(
+	/* __in */ WTSVirtualChannelManager* vcm,
+	/* __in */ const char* pVirtualName,
+	/* __in */ UINT32 flags);
 
-FREERDP_API BOOL WTSVirtualChannelManagerIsChannelJoined(HANDLE hServer, const char* name);
+/**
+ * Returns information about a specified virtual channel.
+ *
+ * Servers use this function to gain access to a virtual channel file handle
+ * that can be used for asynchronous I/O.
+ */
+FREERDP_API BOOL WTSVirtualChannelQuery(
+	/* __in */  void* hChannelHandle,
+	/* __in */  WTS_VIRTUAL_CLASS WtsVirtualClass,
+	/* __out */ void** ppBuffer,
+	/* __out */ UINT32* pBytesReturned);
+
+/**
+ * Frees memory allocated by WTSVirtualChannelQuery
+ */
+FREERDP_API void WTSFreeMemory(
+	/* __in */ void* pMemory);
+
+/**
+ * Reads data from the server end of a virtual channel.
+ *
+ * FreeRDP behavior:
+ *
+ * This function will always return a complete channel data packet, i.e. chunks
+ * are already assembled. If BufferSize argument is smaller than the packet
+ * size, it will set the desired size in pBytesRead and return FALSE. The
+ * caller should allocate a large enough buffer and call this function again.
+ * Returning FALSE with pBytesRead set to zero indicates an error has occurred.
+ * If no pending packet to be read, it will set pBytesRead to zero and return
+ * TRUE.
+ *
+ * TimeOut is not supported, and this function will always return immediately.
+ * The caller should use the file handle returned by WTSVirtualChannelQuery to
+ * determine whether a packet has arrived.
+ */
+FREERDP_API BOOL WTSVirtualChannelRead(
+	/* __in */  void* hChannelHandle,
+	/* __in */  UINT32 TimeOut,
+	/* __out */ BYTE* Buffer,
+	/* __in */  UINT32 BufferSize,
+	/* __out */ UINT32* pBytesRead);
+
+/**
+ * Writes data to the server end of a virtual channel.
+ */
+FREERDP_API BOOL WTSVirtualChannelWrite(
+	/* __in */  void* hChannelHandle,
+	/* __in */  BYTE* Buffer,
+	/* __in */  UINT32 Length,
+	/* __out */ UINT32* pBytesWritten);
+
+/**
+ * Closes an open virtual channel handle.
+ */
+FREERDP_API BOOL WTSVirtualChannelClose(
+	/* __in */ void* hChannelHandle);
 
 #ifdef __cplusplus
 }

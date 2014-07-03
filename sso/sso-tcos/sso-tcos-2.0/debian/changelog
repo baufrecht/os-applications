@@ -1,3 +1,10 @@
+sso-tcos (2.0-2) UNRELEASED; urgency=low
+
+  * removed the script which adjusted /etc/pam.d/lightdm in favor of the new
+    tcos-ldap package approach which combines 'optional' sso with libpam-script
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Thu, 17 Apr 2014 21:07:58 +0200
+
 sso-tcos (2.0-1) unstable; urgency=low
 
   * Initial release
