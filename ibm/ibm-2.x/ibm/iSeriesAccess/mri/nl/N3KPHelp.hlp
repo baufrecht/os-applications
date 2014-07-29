@@ -1,0 +1,241 @@
+//// ENGLISH_SOURCE_VERSION= 1.2 
+////This file contains the pop-up keypad customization program on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file will be stored  in locale specific ASCII (code page 819 for Latin1 languages). 
+
+////Help text format (this section is not displayed to IBM emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1.
+//// 3. This help file contains help text for the 3270 and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator. A comment line of four "/" characters followed by:
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+////  3B. "5250" indicates subsequent data is only displayed in 5250 on-line help.
+////  3C. "9999" indicates subsequent data is displayed in both 3270 and 5250 on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+////  3D. Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters.  The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Do not change the order of topics in this help text file.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+
+----Help bij "3270-toetsenblok aanpassen"
+++++"Algemene informatie"
+Zie voor informatie over het gebruik van dit Help-programma het eerste onderwerp van de Help-informatie bij de Hoofdemulator (kies de optie "Help" op de menubalk in het emulatiescherm).
+
+In deze Help-informatie wordt beschreven hoe u toetsenblokken kunt maken en wijzigen.
+Een toetsenblok heeft toetsenblokknoppen. Bij elke knop hoort een toetsenreeks of een afspeelbestand.
+
+Opmerking: Er kan slechts één toetsenblokaanpassingsprogramma
+tegelijk actief zijn.
+
+
+++++"Vensterindeling"
+In het venster Toetsenblok aanpassen bevindt zich een toetsenblokselectieveld (links), een toets/actieveld (rechts) en een veld voor de actiebalk en berichten (onder).
+In een apart venster wordt het toetsenblok afgebeeld waar u op dat moment mee werkt.
+
+
+Het veld voor toetsenblokselectie bevat de volgende items:
+
+
+1) In de "Lijst van beschikbare acties" zijn de beschikbare toetsenblokfuncties opgenomen.
+De actie die u hier selecteert, wordt de actieve actie. 
+
+2) In de "Lijst van tekens" vindt u alle beschikbare tekens. Het geselecteerde teken wordt de huidige actie. Om een teken te selecteren, klikt u erop.
+
+3) De knop "Help bij acties" biedt definities van toetsenbordacties in een Help-venster. U kunt de actiedefinities afdrukken.
+
+4) De knop "Knopactie ->" koppelt de huidige actie aan de toetsenblokknop in het toetsenblokselectieveld.
+
+Opmerking: Maar één actie kan de huidige actie zijn. 
+
+
+Het werkgebied voor toetsenblokknoppen bevat de volgende items:
+
+
+1) In "Huidig toetsenblok" wordt het toetsenblok afgebeeld waarmee u werkt.
+Als dit een nieuw toetsenblok is dat u nog niet heeft opgeslagen, is Huidig toetsenblok leeg.
+
+
+2) In "Huidige tekst toetsenblokknop" wordt de tekst afgebeeld die op de toetsenblokknop staat.
+Klik in het tekstveld om de tekst op de knop te wijzigen met het toetsenbord.
+Er passen maximaal 32 tekens in dit veld.
+Opmerking: Er moet een toetsenblokknop zijn geselecteerd (klik op een toetsenblokknop in het aparte venster Toetsenblok aanpassen).
+
+
+3) "Huidige definitie toetsenblokknop" vormt de toetsenblokfunctie of het afspeelbestand dat gekoppeld is aan de toetsenblokknop.
+Om een toetsenblokfunctie aan een toetsenblokknop toe te wijzen, klikt u op de gewenste toetsenblokfunctie en vervolgens op "Knopactie->". Om een afspeelbestand aan een toetsenblokknop toe te wijzen, klikt u op "Afspeelbestand selecteren", selecteert u vervolgens een afspeelbestand en kiest u "OK". U kunt in het veld Huidige definitie toetsenblokknop klikken om de knopactie met het toetsenbord te wijzigen (bijvoorbeeld om een eenvoudige toetsenbordmacro toe te voegen of een andere functie toe te voegen).
+In het veld Knopactie kunnen maximaal ongeveer 100 tekens worden ingevoerd.
+Zie onder Meerdere acties voor informatie over het gebruik van meerdere toetsenbordfuncties voor een toetsenblokknop.
+
+
+4) Met "Toetsenblokknop leegmaken" kunt u de geselecteerde toetsenblokknop in het veld wissen.
+
+
+5) Met "Afspeelbestand selecteren" krijgt u een opsomming van uw afspeelbestanden zodat u een afspeelbestand kunt koppelen aan de toetsenblokknop.
+
+
+6) Met de knop "OK" bevestigt u de wijzigingen die aan de huidige toetsenblokknop zijn aangebracht.
+
+
+7) Met de knop "Annuleren" annuleert u de wijzigingen die op de huidige toetsenblokknop zijn aangebracht.
+
+
+
+De knoppen van de actiebalk bieden de volgende functies: 
+
+1) Met "Opslaan" kunt u de wijzigingen van het toetsenblok opslaan in een toetsenblokbestand.
+U kunt uw toetsenblokbestanden zelf een naam geven. 
+
+2) Met "Wissen" kunt u eerder gemaakte toetsenblokbestanden wissen.
+
+
+3) Met "Toetsenblokstijl wijzigen" kunt u het aantal rijen en kolommen in een toetsenblokvenster wijzigen, het aantal tekens in de tekst van een toetsenblokknop wijzigen en schakelen tussen een toetsenblokvenster en een toetsenblokmenu.
+
+4) Met "Afsluiten" sluit u het Toetsenblokaanpassingsprogramma af.
+
+
+5) Met "Help" roept u deze Help-informatie op. 
+
+
+Berichtengebied:
+Voor het afbeelden van status- en foutberichten.
+
+Uw huidige toetsenblok wordt afgebeeld in een afzonderlijk venster voor het aanpassen van het toetsenblok.
+Klik op een toetsenblokknop om de tekst of de functie(s) van een toetsenblokknop te wijzigen.
+Als u met een toetsenblokvenster werkt, ziet u in het venster hoe uw toetsenblokvenster wordt afgebeeld.
+Als u met een toetsenblokmenu werkt, ziet u uw toetsenblokknoppen in het venster.
+Toetsenblokmenuknoppen zijn beschikbaar in de menubalk van de Hoofdemulator.
+
+++++"Aan de slag"
+Hieronder wordt beschreven hoe u een toetsenblokvenster kunt maken en gebruiken (toewijzen van een toetsenbordfunctie aan een toetsenblokknop).
+
+////The note below was moved up from the end of this topic
+Opmerking: Onder Eenvoudige toetsenbordmacro's wordt uitgelegd hoe u met een eenvoudige toetsenbordmacro een toetsenblokknop kunt maken (een reeks toetsaanslagen).
+
+1) Start vanuit een emulatiesessie het programma Toetsenblok aanpassen (wat waarschijnlijk al is gebeurd).
+
+
+2) Maak een nieuw toetsenblok (misschien al gedaan).
+
+3) Klik op een toetsenblokknop in het afzonderlijke venster voor het aanpassen van het toetsenblok (meestal start dit met de knop linksboven).
+
+
+4) Klik in de lijst met beschikbare acties op een toetsenbordactie. 
+
+5) Klik op Knopactie->.
+
+6) Klik in het veld Huidige tekst toetsenbordknop en typ uw toetsenblokknoptekst (wordt op de toetsenblokknop afgebeeld).
+
+
+7) Klik op OK om de wijzigingen van de toetsenblokknop te bevestigen.
+
+
+8) Sla het toetsenblok op en geef het toetsenblok een toetsenblokbestandsnaam.
+
+
+9) Start het toetsenblokvenster via de Hoofdemulator (Toetsenblok...) en probeer het nieuwe toetsenblok uit.
+U kunt het toetsenblokbestand wijzigen en opnieuw opslaan (zo kunt u toetsenblokknoppen toevoegen of wijzigen).
+
+
+++++ "Toetsenblokstijl"
+U kunt eenvoudig het aantal rijen en kolommen wijzigen in een toetsenblokvenster, het aantal tekens wijzigen in de tekst van een toetsenblokknop (alle toetsenblokknoppen zijn even groot) en schakelen tussen een toetsenblokvenster en een toetsenblokmenu. Klik op "Toetsenbordstijl wijzigen" om een van bovengenoemde zaken te wijzigen.
+
+
+++++"Venster of menu"
+U kunt eenvoudig een bestaand toetsenblok wijzigen in een toetsenblokvenster of een toetsenblokmenu door op "Toetsenblokstijl wijzigen" te klikken.
+Het toetsenblokvenster is de standaardwaarde.
+
+
+Een toetsenblokvenster is een afzonderlijk venster met toetsenblokknoppen die u zelf instelt.
+Als u op een toetsenblokknop klikt, wordt de bijbehorende functie (toetsenbordfuncties of afspeelbestand) uitgevoerd in de 3270-sessie waarin het toetsenblokvenster is gestart.
+U besluit zelf wanneer een toetsenblokvenster wordt afgebeeld.
+Voor een 3270-sessie kunnen meerdere toetsenblokvensters worden gebruikt.
+
+
+Een toetsenblokmenu is beschikbaar in de menubalk van de Hoofdemulator. Als u werkt met een toetsenblokmenu, wordt de optie Toetsenblok aan de menubalk toegevoegd.
+Als u op een toetsenblokmenuknop klikt, wordt de bijbehorende functie uitgevoerd in de 3270-sessie.
+
+
+Als u voor meerdere 3270-sessies hetzelfde toetsenblok gebruikt, is het raadzaam een toetsenblokmenu te gebruiken.
+Bij toetsenblokvensters is er een apart toetsenblokvenster nodig voor elke 3270-sessie.
+
+
+Toetsenblokvensters zijn handiger als u meerdere toetsenblokknoppen in een toetsenblok heeft (10 tot 20 toetsenblokknoppen, afhankelijk van de beeldschermresolutie) of verschillende toetsenblokken voor verschillende 3270-sessies.
+
+
+Als u meerdere toetsenblokmenu's heeft, moet u eerst het toetsenblok selecteren voordat u een toetsenblokknop kiest.
+
+
+U kunt tegelijkertijd over toetsenblokvensters en toetsenblokmenu's beschikken.
+Als u over meerdere toetsenblokken beschikt, kunt u een toetsenblok definiëren dat als toetsenblokmenu voor meerdere sessies kan worden gebruikt en de overige toetsenblokken als toetsenblokvensters gebruiken.
+
+
+Een toetsenblokvenster kan tegelijk met uw 3270-sessie worden gestart.
+U kunt met het programma Configuratie IBM 3270-emulator een te starten toetsenblokvenster opgeven: selecteer de sessie en kies Verbinding-> Bewerken. Kies Uitgebreide 3270-verbinding en typ -KEYPAD, een spatie en de (hoofdlettergevoelige) naam van uw toetsenblokbestand in het veld Andere parameters. -KEYPAD is hoofdlettergevoelig. Als de naam van het toetsenblokbestand spaties bevat, typt u de naam van het toetsenblokbestand tussen dubbele aanhalingstekens (bijvoorbeeld: -KEYPAD "naam toetsenblokbestand").
+
+
+++++"Eenvoudige toetsenbordmacro's"
+Met een eenvoudige toetsenbordmacro kunt u gemakkelijk een reeks tekens in uw 3270-sessie plaatsen. U kunt als volgt een toetsenblokknop met een eenvoudige toetsenbordmacro maken:
+
+
+1) Start vanuit een emulatiesessie het programma Toetsenblok aanpassen (wat waarschijnlijk al is gebeurd) en selecteer het toetsenblokbestand voor uw toetsenbordmacro (wat waarschijnlijk al is gebeurd).
+
+
+2) Klik voor uw toetsenbordmacro op de toetsenblokknop in het afzonderlijke toetsenblokvenster.
+
+
+////Note: The translation of String() below should match the translated resource text for AllShare*string() in the keyboard remapping resource file.
+3) Klik op de toetsenbordfunctie Reeks() in de lijst van beschikbare acties.
+
+
+4) Klik op Knopactie->.
+
+5) Klik tussen de haakjes van Reeks() in het huidige keuzeveld.
+
+
+6) Typ aanhalingstekens, uw toetsenbordmacro en aanhalingstekens; bijvoorbeeld Reeks ("uw macrotekens").
+
+
+7) Klik in het veld Huidige tekst toetsenbordknop en typ uw tekst voor de toetsenblokknop (wordt op de toetsenblokknop afgebeeld).
+
+8) Klik op OK om de wijzigingen van de toetsenblokknop te bevestigen.
+
+9) Sla uw toetsenblok op.
+
+10) Test uw toetsenbordmacro met behulp van de Hoofdemulator (toetsenblokvenster of toetsenblokmenu).
+
+
+U kunt uw toetsenblok wijzigen en opnieuw opslaan als u het wilt wijzigen.
+
+
+Opmerking: Een lange of ingewikkelde macro moet worden gemaakt met behulp van de functie Afspelen.
+Een afspeelbestand kan worden gekoppeld aan een toetsenblokknop. Meer informatie hierover kunt u vinden bij de diverse onderwerpen over Opnemen en Afspelen in de Help-informatie bij de Hoofdemulator. 
+
+++++"Knoptekst en -functie bewerken"
+De tekst van de toetsenbordknop en de functie van de toetsenbordknop kunnen ook met behulp van het toetsenbord worden gewijzigd.
+Klik in het gewenste veld en wijzig het gebruik van het toetsenbord.
+Klik op OK als u de wijzigingen wilt accepteren. Onder Meerdere acties vindt u informatie over het gebruik van meerdere toetsenbordacties voor een toetsenblokknop.
+
+Houd er rekening mee dat de tekst van een gewijzigde actie correct gespeld moet zijn en hoofdlettergevoelig is.
+
+++++"Meerdere acties"
+In het veld Huidige definitie toetsenblokknop kunnen maximaal ongeveer 100 tekens worden ingevoerd.
+U kunt meerdere toetsenbordacties instellen voor een toetsenbordknop.
+Als de toetsenbordacties die u wilt instellen de 100 tekens overschrijden, neemt u de toetsenreeks op in een afspeelbestand en geeft u deze op als toetsenblokknopactie (zie de Help-tekst van de Hoofdemulator onder Opnemen en Afspelen voor meer informatie over afspeelbestanden).
+
+
+Om meerdere toetsenbordacties voor een toetsenblokknop in te stellen, klikt u in het veld Huidige definitie toetsenblokknop en typt u de gewenste functies, gescheiden door een spatie.
+Houd er rekening mee dat de tekst van een gewijzigde actie correct gespeld moet zijn en hoofdlettergevoelig is. U kunt ook met de muis een toetsenbordactie in het veld Huidige definitie toetsenblokknop invoegen. Hiertoe klikt u op de gewenste locatie in het veld Huidige definitie toetsenblokknop, selecteert u de gewenste toetsenbordfunctie en klikt u op de knop Knopactie->.
+
+
+++++"Lijst van tekens"
+Met de lijst van tekens kunt u gebruikmaken van tekens die niet op uw toetsenbord voorkomen.
+
+U kunt als volgt een teken opgeven voor een toetsenblokknop: Klik op de gewenste toetsenblokknop in  het toetsenblokvenster. Klik op het gewenste teken in de lijst van tekens. Klik op Knopactie->. Klik in het veld Huidige tekst toetsenbordknop en typ uw tekst voor de toetsenblokknop (wordt op de toetsenblokknop afgebeeld). Klik op OK om de wijziging te accepteren.
+
+U voegt als volgt een teken toe aan een toetsenbordmacro: Klik op de toetsenblokknop voor de toetsenbordmacro. Klik op het gewenste teken in de lijst van tekens. Klik in de macro op het toetsenblok, binnen de Reeks(), op de plaats waar het teken moet worden toegevoegd (met de cursortoetsen kunt u de cursor op de juiste plaats zetten). Klik op Knopactie->. Klik op OK om de wijziging te accepteren.
+
+++++"Toetsenblokknoppen verplaatsen"
+U kunt de knoppen van een toetsenblokvenster verplaatsen.
+Klik met de rechtermuisknop op de toetsenblokknop die u wilt verplaatsen, verplaats de muisaanwijzer naar de nieuwe locatie voor de toetsenblokknop en klik op de linkermuisknop.
+Als de nieuwe locatie al als toetsenblokknop is gedefinieerd, wisselen de twee toetsenblokknoppen van plaats.

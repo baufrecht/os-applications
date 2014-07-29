@@ -1,0 +1,102 @@
+//// ENGLISH_SOURCE_VERSION= 1.2 
+////This file contains the color mapping program on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file will be stored in locale specific ASCII (code page 819 for Latin1 languages). 
+
+////Help text format (this section is not displayed to IBM emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1.
+//// 3. This help file contains help text for the 3270 and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator. A comment line of four "/" characters followed by
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+//// 3B. "5250" indicates subsequent data is only displayed in 5250 on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in both 3270 and 5250 on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+////  3D. Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters.  The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Do not change the order of topics in this help text file.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+
+----"3270 Színkiosztás Súgó"
+++++"Általános információk"
+A súgómegjelenítõ programmal kapcsolatban lásd a fõ emulátorsúgó elsõ témáját (válassza a Súgó menüpontot az emulátorablakban).
+
+Ez a súgóinformáció leírja, hogy a Színkiosztás kezelõ programmal hogyan lehet megváltoztatni a(z) 3270 emulátor kapcsolatot.
+
+Megjegyzés: Csak egy Színkiosztás-kezelõ program lehet aktív.
+
+++++"Színkiosztási fájlok kiválasztása"
+A(z) 3270 indításkor megkeresi a kapcsolat színkiosztási fájljait. A következõ sorrendet használja, ha talál színkosztási fájlt, akkor azt használja a(z) 3270-es kapcsolatban:
+
+- A Színkiosztás kezelõ programban a kapcsolathoz megadott fájlt keresési. 
+
+- A Színkiosztás kezelõ programban megadott alapértelmezett színkiosztási fájlt keresi. 
+
+- Ha ezek egyikét sem találja, az alapértelmezett színeket (fekete háttér) használja.
+
+++++"Ablakelrendezés"
+Az Alap színkosztásnál a Színkosztás ablak egy színséma kiválasztó területbõl (balra), egy példa Segédprogramból és egy 3270 kapcsolat ablakterületbõl (jobbra lent) valamint egy mûveletsorból/üzenetsorból (alul) áll.
+
+A Haladó Színkiosztásnál a Színkosztás ablak egy összeállító területbõl (balra), egy színkiválasztó területbõl (jobbra fent), egy példa Segédprogramból és egy 3270 kapcsolat ablakterületbõl (jobbra lent) valamint egy mûveletsor/üzenetsorból (alul) áll.
+
+A Színkiválasztó terület a következõ elemkbõl áll:
+
+1) A többszínû sor 20 színt tartalmaz, amelybõl választhatunk, ha új színt akarunk a konstrukciónkhoz rendelni.
+
+2) A vörös/zöld/kék csúszkákkal finomíthatjuk a felvenni kívánt új színt.
+
+3) Az "Aktuális szín" ablak megmutatja a többszínû sávban vagy a vörös/zöld/kék csúszkákkal legutóbb módosított színt.
+
+4) Az "Aktuális Színek Elfogadása" gomb elfogadja a változtatásokat és hozzárendeli a példa Segédprogramhoz és a(z) 3270 kapcsolat ablakhoz. Ennek meg kell elõznie a változások kapcsolatokhoz rendelését.
+
+
+A Mûveletsoron a következõ mûveletek végezhetõek el: 
+
+1) "Mentés", amellyel színkiosztás változásai elmenthetõek a színkiosztási fájlba.
+
+2) "Törlés", korábban létrehozott fájlok törlése.
+
+3) "Változások alkalmazása a kapcsolatra", amelybõl az átdefiniálási programot indította. Ezzel tesztelheti mentés elõtt a változtatásokat.
+
+4) "Kilépés" a programból.
+
+5) A Súgó megjeleníti a súgót.
+
+Üzenetterület:
+információk és hibaüzenetek megjelenítése.
+
+++++"Alap Színkiosztás"
+Az Alap Színkiosztással kiválaszthatja a megfelelõ színsémát (színkiosztási fájlt) az aktuális 3270 kapcsolathoz és beállíthatja alapértelmezettként a jövõbeni 3270 kapcsolatokhoz.
+
+Az Alap Színkiosztás öt alap színsémát és egy ön által létrehozott haladó színsémát használ. Megjegyzés:: Az öt alap színsémából három ugyanazokat a színeket használják a Segédprogram ablakok (mint például ennek a(z) 3270 súgó ablaknak a színei).
+
+++++"Haladó Színkiosztás"
+A Haladó Színkiosztás lehetõvé teszi, hogy haladó színsémákat (színkiosztási fájlokat) hozzon létre. A(z) 3270 kapcsolat különféle elemeinek színei megváltoztathatóak. Ajánlott, hogy elõször válassza ki a legközelebb álló színsémát az Alap színkiosztás opcióval. Ezután használja a Haladó színkiosztási beállításokat a színek további módosításához.
+
+////Megjegyzés: Néhány IBM vékonykliens modell legfeljebb 256 színt támogat (1 MB Video RAM-ot használ). Ha ezt a határt átlépjük, a hibás színekmegzavarhatják a böngészõ képeit. Az alap IBM színséma színei megegyeznek a böngészõ és a Java által használttal. A haladó színsémák legfeljebb 22 féle színt használhatnak. A böngészõ és a Java lefoglalja a helyet egy palettának (a 256 színû Thin Client-nek) a következõ vörös, zöld és kék értékekkel: 0, 51, 102, 153, 204 és 255.
+
+Egy elem színeinek megváltoztatásához elõször válassza ki az elemet, hogy megtekinthesse annak színeit. Ha lényegesen meg akarja változtatni a színt, kattintson többszínû sávra. A vörös/zöld/kék értékek itt változtathatóak. Például átállíthatja a vörös csúszkát (nyomja az elsõdleges egérgombot és mozgassa az egérmutatót a csúszkán), kattintson a csúszkán belül, vagy nyomja meg a "+" vagy a "-" gombot. A vörös, zöld és kék értékei 0 és 255 között lehetnek. Ezután kattintson az "Aktuális Színek Elfogadása" gombra, és a munkaterület jobb alsó része frissülni fog.
+
+A jobb alsó terület a Segédprogram terület és a(z) 3270 terület. A Segédprogram színek használtak a(z) 3270 online súgó ablakban, az Egyéb beállítások ablakban, a Rögzítés/Lejátszás ablakban, a Billentyû újradefiniáló ablakban és a Színkiosztás ablakban (miután azt újra indították). A(z) 3270 területen található a fõ kapcsolat-háttér hét elõtérszínnel, nyomógombbal, vonlazóval és állapotsorral.
+
+A színséma kipróbálható az aktuális kapcsolatban a "Módosítások alkalmazása a kapcsolatban" gombra katitntva. Egy haladó színséma mentéséhez kattintson a Mentés gombra. Az elmentett színkiosztási fájl neve megjelenik az elérhetõ színsémák listájában az Alap Színkiosztásban. Az Alap színkiosztás használható arra, hogy egy vagy több 3270 kapcsolathoz színsémát rendeljünk. Megjegyzés: A Színkiosztási beállítások program a haladó színkiosztás fájl nevét maximum 32 karakterre korlátozza.
+
+Egy létezõ színséma módosítható. Válasszon ki egy haladó színsémát az Alap Színkiosztásban és rendelje a kapcsolathoz. A Haladó színkiosztási beállítások használható az elemek színeinek a megváltoztatására. Adjon meg egy létezõ színséma nevét a mentéskor.
+   
+Megjegyzés: A Haladó beállítások nem akadályozza meg, hogy az elõtér és a háttér színét azonosra (vagy közel azonosra) állítsa. Ha ilyen történik, az elõtér szövege nem lesz olvasható. A mûveleti területen ellenõrizhetõ, hogy az elõtér olvasható-e.
+
+++++"Színkiosztás Változásainak Elfogadása"
+A Módosítások alkalmazása a kapcsolatra gomb átmenetileg megváltoztatja a futattó kapcsolat színeit a módosításoknak megfelelõen. A változtatások így kipróbálhatóak. Lásd a "Színkosztás mentése" részt a változtatások mentésével kapcsolatban.
+
+++++"Színkosztás mentése"
+A Mentés gomb elmenti az színkiosztás változásait, hogy az késõbb is elérhetõ legyen. A színkiosztás változásai egy színkiosztási fájlba lesznek elmentve. Az elmentett színkiosztási fájl neve megjelenik az elérhetõ színsémák listájában az Alap Színkiosztásban. Az Alap Színkiosztásban válassza ki, hogyan legyen a színkiosztási fájl elmentve: mint alapértelmezett és ezután minden kapcsolat ezt használja, vagy mint kapcsolathoz tartozó és csak az a kapcsolat használja, ahonnan a Színkiosztási beállításokat indították.
+
+A kapcsolathoz kapcsolódó színkiosztással a különbözõ 3270 kapcsolatokhoz különbözõ színkombinációkat rendelhetünk. A kapcsolathoz kapcsolódó színkiosztásnak van a legmagasabb prioritása és ezt használja a rendszer abban a kapcsolatban, amelyikben készült (a kapcsolat száma és annak neve alapján).
+
+Az alapértelmezett színkiosztási fájlnak másodlagos prioritása van és minden olyan kapcsolatban ezt használja a rendszer, amelyiknek nincs saját színsémája.
+
+Lásd a "Színkosztási fájlok törlése" részt a színsémák törlésével kapcsolatban.
+
+++++"Színkosztási fájlok törlése"
+Kattintson a "Törlés" gombra a mûveletsoron, hogy törölje az elkészült színkiosztási fájlokat. Kattintson a törölni kívánt fájlon, majd kattintson a Törlés gombra.

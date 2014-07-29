@@ -1,0 +1,371 @@
+! ENGLISH_SOURCE_VERSION= 1.4.1.2 
+!
+!
+!
+! This file contains the resource text strings for the IBM Network Station 3270 and 5250
+! emulators, in particular the color mapping program.
+
+! This resource file will be stored on all servers in locale specific ASCII (819 for Latin1
+! languages). 
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. Resource format: 
+!    - A resource line starts with ColorMap* followed by a resource name
+!      and a ":".  Do NOT make any changes to the text to the left of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+!******************************************************************************
+!************************ BEGIN DO NOT TRANSLATE ******************************
+!******************************************************************************
+!*   The first section of resources are are locale specific but               *
+!*   DO NOT REQUIRE TRANSLATION.                                              *
+!*                                                                            *
+!* This source file enables the resource section for Latin1 and Latin2.       *
+!*                                                                            *
+!* For ru_RU or Latin5 locales and DBCS locales                               *
+!*      1. Place a '!' as the first character in each line in the Latin1      *
+!*      and Latin2 section                                                    *
+!*      2. Remove the '!' character for each resource line in the apropriate  *
+!*      section that matches your locale.                                     *
+!*                                                                            *
+!* For example, ru_RU should place ! in front of all lines in the LATIN1      *
+!* section remove the ! from all lines in the LATIN5 section.                 *      
+!******************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN1 and LATIN2                ****************
+!**************************************************************************
+!ColorMap*extraLargeFontList: -*-*-medium-r-normal-*-*-*-*-*-m-110-*-*
+!ColorMap*largeFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-90-*-*
+!ColorMap*mediumFontList:     -*-*-medium-r-normal-*-*-*-*-*-m-70-*-*
+!ColorMap*smallFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+!**************************************************************************
+!****************   END LATIN1 and LATIN2                  ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN5                           ****************
+!**************************************************************************
+!ColorMap*extraLargeFontList: -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*
+!ColorMap*largeFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!ColorMap*mediumFontList:     -*-*-medium-r-normal-*-*-*-*-*-c-70-*-*
+!ColorMap*smallFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!**************************************************************************
+!****************   END   LATIN5                           ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (ja_JP ko_KR zh_CN)   ****************
+!**************************************************************************
+ColorMap*extraLargeFontList: -*-*-medium-r-normal--24-*-*-*-c-*
+ColorMap*largeFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+ColorMap*mediumFontList:     -*-*-medium-r-normal--16-*-*-*-c-*
+ColorMap*smallFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!**************************************************************************
+!****************   END DBCS (ja_JP ko_KR zh_CN)     ****************
+!**************************************************************************
+!**************************************************************************
+!****************   BEGIN DBCS (zh_TW)   ****************
+!**************************************************************************
+!ColorMap*extraLargeFontList: -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!ColorMap*largeFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!ColorMap*mediumFontList:     -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!ColorMap*smallFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!**************************************************************************
+!****************   END DBCS (zh_TW)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   END DO NOT TRANSLATE                   ****************
+!**************************************************************************
+
+ColorMap*title: 			색상 맵핑
+
+! icons
+ColorMap*iname3270:                     3270 색상 맵
+ColorMap*iname5250:                     5250 색상 맵
+
+
+ColorMap*corrupt:               색상 파일이 손상되었습니다.
+
+ColorMap*lowMemMsgDialog.messageString:  도움말 표시기를 시작하기 위한 메모리가 부족합니다.
+
+ColorMap*okLabelString: 확인
+ColorMap*cancelLabelString: 취소
+
+!*******************************************************************************
+!**     Preferences area resources (top of window)                            **
+!*******************************************************************************
+ColorMap*modeInstructions.labelString:  색상 맵핑 기능 선택:
+
+ColorMap*Basic.labelString:             기본
+
+ColorMap*Advanced.labelString:          고급
+
+
+!*************************************************************
+!**   Basic and advanced action bar area resources          **
+!*************************************************************
+ColorMap*actionForm.saveButton.labelString:  	저장
+
+ColorMap*actionForm.deleteButton.labelString:   삭제
+
+ColorMap*actionForm.applyButton.labelString:    세션에 변경사항 적용
+
+ColorMap*actionForm.quitButton.labelString:     종료
+
+ColorMap*actionForm.helpButton.labelString:     도움말
+
+
+!************************************************
+!**  Basic and advanced color savebox          **
+!************************************************
+ColorMap*saveBoxLabel.labelString:         저장 옵션 선택:
+
+ColorMap*saveBoxToggle1.labelString:       모든 세션에 대해 기본값으로 저장
+
+ColorMap*saveBoxToggle2.labelString:       이 세션에 대해서만 저장
+
+ColorMap*saveBoxSaveBtn.labelString:  	   저장
+
+ColorMap*saveBoxCancelBtn.labelString:     취소
+
+ColorMap*advancedSaveBoxLabel.labelString: 고급 색상 파일 이름 입력:
+
+! Characters in file names must be 819 (ISO8859-1)
+ColorMap*invalidFileName.value:            입력한 문자는 파일 이름으로 유효하지 않습니다.
+
+ColorMap*invalidFileNameOkbutton.labelString:  확인
+!****************************************
+!**  Overwrite existing file dialog    **
+!****************************************
+ColorMap*fileWarningDialog.dialogTitle:        색상 맵핑 경고
+
+ColorMap*fileWarningDialog.messageString:      파일이 이미 존재합니다. 겹쳐쓰시겠습니까?
+
+ColorMap*fileWarningDialog.okLabelString:      예
+ColorMap*fileWarningDialog.cancelLabelString:  아니오
+!***************************************
+!**  Basic color work area            **
+!***************************************
+ColorMap*basicListLabel.labelString:        색상 스키마 선택:
+
+! The following two resource lines are a late addition to the color mapping resource file (March 12, 1998).  These indicate color map files that came from a system level or user created color map files.
+ColorMap*systemLabel:                       시스템:
+
+ColorMap*userLabel:                         사용자:
+
+ColorMap*ibmBlack:                          IBM: 검은색 배경
+
+ColorMap*ibmDarkGrey:                       IBM: 진한 회색 배경
+
+ColorMap*ibmLightGrey:                      IBM: 밝은 회색 배경
+
+ColorMap*ibmLight:                          IBM: 밝은 배경
+
+ColorMap*ibmLightBlue:                      IBM: 밝은 파란색 배경
+
+
+
+!******************************************
+!**  Advanced color work area            **
+!******************************************
+ColorMap*advancedListLabel.labelString:     변경할 구성 선택:
+
+! The following 22 *adv type resources are limited in size; they should not exceed 28 characters.
+ColorMap*advMenuBarBack:                    메뉴 표시줄 배경
+
+ColorMap*advMenuBarFore:                    메뉴 표시줄 전경
+
+ColorMap*advMainSess:                       기본 세션 배경
+
+ColorMap*advPushbut:                        누름 단추 배경
+
+ColorMap*advBlue:                           파란색 텍스트
+
+ColorMap*advGreen:                          초록색 텍스트
+
+ColorMap*advPink:                           분홍색 텍스트
+
+ColorMap*advRed:                            빨간색 텍스트
+
+ColorMap*advTurq:                           하늘색 텍스트
+
+ColorMap*advWhite:                          흰색 텍스트
+
+ColorMap*advYellow:                         노란색 텍스트
+
+ColorMap*advCursor:                         커서
+
+ColorMap*advMouse:                          마우스 포인터
+
+ColorMap*advRule:                           눈금선
+
+ColorMap*advStatLineBack:                   상태 표시줄 배경
+
+ColorMap*advStatLineFore:                   상태 표시줄 전경
+
+ColorMap*advMonoImageBack:                  단색 이미지 배경
+
+ColorMap*advMonoImageFore:                  단색 이미지 전경
+
+! Note: foreground color used for assist program windows
+ColorMap*advAssistFore:                     보조 프로그램 전경
+
+! Note: button background for assist program windows
+ColorMap*advAssistForm:                     보조 프로그램 단추
+
+! Note: main background color for assist program windows
+ColorMap*advAssistPrimary:                  보조 프로그램 기본
+
+! Note: entry area background color for assist program windows
+ColorMap*advAssistEntry:                    보조 프로그램 항목
+
+
+ColorMap*red.titleString:                   빨간색
+
+ColorMap*green.titleString:                 초록색
+
+ColorMap*blue.titleString:                  파란색
+
+ColorMap*currentColorLabel.labelString:     현재 색상
+
+ColorMap*applyCurrentColor.labelString:     현재 색상 적용
+
+
+!************************************
+!**  Delete file dialog            **
+!************************************
+ColorMap*deleteDialog.deleteBoxDeleteBtn.labelString:  삭제
+
+ColorMap*deleteDialog.deleteBoxCancelBtn.labelString:  취소
+
+! title of delete dialog
+ColorMap*deleteDialog.dialogTitle:                     색상 맵 파일 삭제
+
+ColorMap*deleteDialog.deleteBoxLabel.labelString:      삭제할 파일 선택:
+
+ColorMap*deleteDialog.deleteBoxLabelAlt.labelString:   삭제할 파일이 없습니다.
+
+! message at bottom of primary window
+ColorMap*selectedDeleted:                              선택한 색상 맵 파일이 삭제되었습니다.
+
+
+!*****************************************************
+!**  Delete file verification dialog box            **
+!*****************************************************
+ColorMap*deleteVerifyDialog.dialogTitle:        삭제 확인
+
+ColorMap*deleteVerifyDialog.okLabelString:      확인
+ColorMap*deleteVerifyDialog.cancelLabelString:  취소
+
+! this cannot be much longer
+ColorMap*noUndoDelete:                          파일 삭제는 실행 취소할 수 없습니다. 계속하시겠습니까? 
+ColorMap*noFilesDelete:                         파일이 선택되지 않았습니다. 삭제가 유효하지 않습니다.
+
+
+!****************************************************
+!**  Emulator preference in construct list         **
+!**						   **
+!**  MAX:  text should be less than 15 characters  **
+!****************************************************
+ColorMap*emuPrefMenuLabel.labelString:       메뉴 표시줄
+
+ColorMap*emuPrefBlueText.labelString:        파란색 텍스트
+
+ColorMap*emuPrefGreenText.labelString:       초록색 텍스트
+
+ColorMap*emuPrefPinkText.labelString:        분홍색 텍스트
+
+ColorMap*emuPrefRedText.labelString:         빨간색 텍스트
+
+ColorMap*emuPrefTurquoiseText.labelString:   하늘색 텍스트
+
+ColorMap*emuPrefWhiteText.labelString:       흰색 텍스트
+
+ColorMap*emuPrefYellowText.labelString:      노란색 텍스트
+
+ColorMap*emuPrefPbBackground.labelString:    누름 단추
+
+ColorMap*emuPrefStatusLine.labelString:      상태 표시줄
+
+ColorMap*groupBoxLabel.labelString:          보조 프로그램
+
+ColorMap*entryAreaLabel.labelString:         입력 영역
+
+ColorMap*helperFormLabel.labelString:        단추
+
+
+!**************************
+!**  Error dialog boxes  **
+!**************************
+ColorMap*noColorCellsMsgText.value: 색상 맵핑 프로그램을 시작하는 데 필요한 색상 자원을 할당할 수 없습니다. 많은 색을 사용하는 응용프로그램을 닫은 후에 다시 시도하십시오.
+
+ColorMap*setColorMsgText.value:      에뮬레이터 세션에 모든 색상이 적용되지는 않았습니다. 그러나 저장을 선택하면 올바른 색이 저장됩니다.
+
+ColorMap*setColorFailureCancelBtn.labelString:        취소
+
+ColorMap*invalidColor:   다음 전경 및 배경 색상이 서로 너무 가깝습니다:
+
+
+!**********************************
+!**  General Error dialog boxes  **
+!**********************************
+ColorMap*noAdvanced.value:            전기능 색상 맵핑을 제공할 색상 자원을 할당할 수 없습니다.
+
+ColorMap*noAdvancedOkbutton.labelString:  확인
+!*******************************************************************************
+!**  quitDialog resources                                                     **
+!*******************************************************************************
+ColorMap*quitDialog.dialogTitle:           종료 경고
+
+ColorMap*quitDialog1:                      에뮬레이터의 색상이 수정되었으나 적용 또는 저장되지 않았습니다.
+
+ColorMap*quitDialog2:                      에뮬레이터의 색상이 수정 및 적용되었으나 저장되지 않았습니다.
+
+ColorMap*quitDialog3:                      에뮬레이터의 색상이 수정 및 저장되었으나 적용되지 않았습니다.
+
+ColorMap*quitDialog*exitBox.labelString:   종료
+
+ColorMap*quitDialog*cancelBox.labelString: 취소
+
+ColorMap*quit1Tog1:                        변경사항을 적용하거나 저장하지 않고 종료합니다.
+
+ColorMap*quit2Tog1:                        변경사항을 저장하지 않고 종료합니다.
+
+ColorMap*quitDialog*quitTog2.labelString:  종료하기 전에 변경사항을 적용 및 저장합니다.
+
+ColorMap*quit3Tog1:                        변경사항을 적용하지 않고 종료합니다.
+
+ColorMap*quitTog3.labelString:             종료하기 전에 이 세션에 변경사항을 적용합니다.
+
+ColorMap*quitDialog*quitTog4.labelString:  종료하기 전에 변경사항을 저장합니다.
+
+
+!*******************************************************************************
+!**  Informational Messages                                                   **
+!*******************************************************************************
+ColorMap*InfoMsgColorsSaved:    파일에 저장된 색상:
+
+ColorMap*tempApp:               에뮬레이터 세션에 색상이 임시로 적용되었습니다.
+
+ColorMap*notLoaded:             색상 파일을 로드할 수 없습니다. 파일이 여전히 존재하는지 확인하십시오.
+
+ColorMap*errorLoad:             색상 파일의 형식이 올바르지 않습니다.
+
+
+! this resource should contain one black space character; do not translate.
+ColorMap*blank:  
+
+ColorMap*chooseApply:           세션에 색상을 적용하려면 적용을 선택하십시오.
+
+ColorMap*noAccessDir:           디렉토리에 액세스할 수 없습니다.
+
+! this cannot be made any longer during translation
+ColorMap*noOpenFile:            다음 색상 맵 파일을 열 수 없습니다:
+
+ColorMap*noMakeDir:             디렉토리를 만들 수 없습니다.
+
+ColorMap*noDeterminePath:       파일 경로를 판별할 수 없습니다.

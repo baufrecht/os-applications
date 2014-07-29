@@ -1,0 +1,172 @@
+//// ENGLISH_SOURCE_VERSION= 1.2 
+////This file contains the pop-up keypad customization program on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file will be stored in locale specific ASCII (code page 819 for Latin1 languages). 
+
+////Help text format (this section is not displayed to IBM emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1.
+//// 3. This help file contains help text for the 3270 and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator. A comment line of four "/" characters followed by:
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+//// 3B. "5250" indicates subsequent data is only displayed in 5250 on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in both 3270 and 5250 on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+//// 3D. Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters.  The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Do not change the order of topics in this help text file.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+
+----"Pøizpùsobení pomocné klávesnice 3270 - nápovìda"
+++++"Obecné informace"
+Informace o pou¾ití tohoto programu pro zobrazení nápovìdy lze najít v prvním tématu v hlavní nápovìdì emulátoru (v oknì emulátoru vyberte volbu pruhu nabídky Nápovìda). 
+
+V této èásti nápovìdy jsou popsány postupy pøi vytváøení a úpravách pomocnıch klávesnic. Pomocná klávesnice obsahuje speciální tlaèítka, ke kterım jsou pøiøazeny posloupnosti kláves nebo soubory pøehrávání. Poznámka: V jednom okam¾iku mù¾e bıt aktivní pouze jeden program pro pøizpùsobení pomocné klávesnice. 
+
+++++"Uspoøádání okna"
+Okno pro pøizpùsobení pomocné klávesnice obsahuje oblast pro vıbìr akcí klávesnice (vlevo), pracovní oblast pro tlaèítka pomocné klávesnice (vpravo), oblast øádku s akcemi (dole) a oblast pro zprávy (dole). V samostatném oknì je zobrazena pomocná klávesnice, se kterou právì pracujete. 
+
+Oblast vıbìru akcí klávesnice obsahuje následující prvky: 
+
+1) Seznam dostupnıch akcí obsahuje akce, které jsou pro pomocnou klávesnici k dispozici. Akce vybraná v tomto seznamu se stává aktuální akcí. 
+
+2) Seznam znakù obsahuje v¹echny dostupné znaky. Vybranı znak se stává aktuální akcí. Znaky lze vybrat klepnutím. 
+
+3) Pøi stisknutí tlaèítka Nápovìda k akci je v oknì nápovìdy k akcím zobrazena definice pøíslu¹né akce klávesnice. Definice akcí lze vytisknout. 
+
+4) Pomocí tlaèítka Akce tlaèítka -> lze aktuální akci asociovat s tlaèítkem v pracovní oblasti tlaèítek pomocné klávesnice. 
+
+Poznámka: Aktuální akcí mù¾e bıt pouze jedna akce. 
+
+
+Pracovní oblast tlaèítek pomocné klávesnice obsahuje následující prvky: 
+
+1) Okénko Aktuální pomocná klávesnice zobrazuje pomocnou klávesnici, se kterou právì pracujete. Jde-li o novou pomocnou klávesnici, která dosud nebyla ulo¾ena, bude aktuální pomocná klávesnice prázdná. 
+
+2) Pole Text aktuálního tlaèítka pomocné klávesnice obsahuje text, kterı bude zobrazen na tlaèítku pomocné klávesnice. Chcete-li tento text pomocí klávesnice doplnit nebo zmìnit, klepnìte na oblast s textem tlaèítka. Délka textové oblasti je omezena na 32 znakù. Poznámka: Musí bıt vybráno nìkteré tlaèítko pomocné klávesnice (klepnìte na nìkteré tlaèítko v samostatném oknì pro pøizpùsobení pomocné klávesnice). 
+
+3) Pole Akce aktuálního tlaèítka pomocné klávesnice obsahuje jednu nebo více akcí klávesnice nebo soubor pøehrávání asociovanı s tlaèítkem pomocné klávesnice. Chcete-li tlaèítku pomocné klávesnice pøiøadit akci klávesnice, klepnìte na po¾adovanou akci klávesnice a poté klepnìte na volbu Akce tlaèítka->. Chcete-li tlaèítku pomocné klávesnice pøiøadit soubor pøehrávání, klepnìte na volbu Vybrat akci souboru pøehrávání, poté vyberte soubor pøehrávání a klepnìte na tlaèítko OK. Chcete-li zmìnit akci tlaèítka pomocí klávesnice (napøíklad pøidat jednoduché makro klávesnice nebo pøidat jinou akci), klepnìte do oblasti akce aktuálního tlaèítka pomocné klávesnice. Délka oblasti akce tlaèítka je omezena na 100 znakù. Informace o pou¾ití více akcí klávesnice pro tlaèítko pomocné klávesnice lze najít v tématu Vícenásobné akce. 
+
+4) Pomocí tlaèítka Smazat tlaèítko pomocné klávesnice lze vymazat vybrané tlaèítko pomocné klávesnice. 
+
+5) Chcete-li asociovat s tlaèítkem pomocné klávesnice nìkterı soubor pøehrávání, mù¾ete zobrazit seznam souborù pøehrávání pomocí volby Vybrat akci souboru pøehrávání. 
+
+6) Zmìny provedené pro aktuální tlaèítko pomocné klávesnice lze potvrdit pomocí tlaèítka OK. 
+
+7) Zmìny provedené pro aktuální tlaèítko pomocné klávesnice lze zru¹it pomocí tlaèítka Zru¹it. 
+
+
+Tlaèítky v øádku s akcemi lze aktivovat následující funkce: 
+
+1) Tlaèítko Ulo¾it umo¾òuje ulo¾it úpravy pomocné klávesnice do souboru pomocné klávesnice. Soubory pomocné klávesnice lze pojmenovat. 
+
+2) Tlaèítko Odstranit soubor pomocné klávesnice umo¾òuje odstranit døíve vytvoøené soubory pomocné klávesnice. 
+
+3) Tlaèítko Zmìnit styl pomocné klávesnice umo¾òuje zmìnit poèet øádkù èi sloupcù u rozevírací pomocné klávesnice, zmìnit poèet znakù textu tlaèítek pomocné klávesnice nebo pøepnout mezi rozevírací a rozbalovací pomocnou klávesnicí. 
+
+4) Tlaèítkem Ukonèit lze ukonèit èinnost programu pøizpùsobení pomocné klávesnice. 
+
+5) Tlaèítkem Nápovìda lze zobrazit tuto nápovìdu. 
+
+
+Oblast zpráv: Zobrazuje informaèní a chybové zprávy. 
+
+Aktuální pomocná klávesnice je zobrazena v samostatném oknì pro pøizpùsobení. Chcete-li zmìnit text tlaèítka pomocné klávesnice nebo pøiøazené akce, klepnìte na po¾adované tlaèítko pomocné klávesnice. Pokud pracujete s rozevírací pomocnou klávesnicí, bude v tomto oknì zobrazen vıslednı vzhled této klávesnice. Pokud pracujete s rozbalovací pomocnou klávesnicí, budou v tomto oknì zobrazena tlaèítka této klávesnice. Tlaèítka rozbalovací pomocné klávesnice jsou dostupná prostøednictvím hlavního pruhu nabídky emulátoru.
+
+++++"Zaèínáme"
+V této èásti je uveden postup pøi vytvoøení a pou¾ití rozevírací pomocné klávesnice (definice akce klávesnice pro jedno tlaèítko pomocné klávesnice). 
+
+////The note below was moved up from the end of this topic
+Poznámka: Postup pøi vytvoøení tlaèítka pomocné klávesnice s jednoduchım makrem klávesnice (posloupnost úhozù kláves) je uveden v tématu Jednoduchá makra klávesnice. 
+
+1) Spus»te program pro pøizpùsobení pomocné klávesnice z relace emulátoru (pravdìpodobnì ji¾ bylo provedeno). 
+
+2) Vytvoøte novou pomocnou klávesnici (mohlo ji¾ bıt provedeno). 
+
+3) Klepnìte na nìkteré tlaèítko pomocné klávesnice v samostatném oknì pro pøizpùsobení pomocné klávesnice (obvykle se doporuèuje zaèínat levım horním tlaèítkem). 
+
+4) Klepnìte na nìkterou akci klávesnice se seznamu dostupnıch akcí. 
+
+5) Klepnìte na tlaèítko Akce tlaèítka->.
+
+6) Klepnìte na textovou oblast aktuálního tlaèítka pomocné klávesnice a zadejte po¾adovanı text pro toto tlaèítko (text bude zobrazen na tlaèítku). 
+
+7) Klepnutím na tlaèítko OK potvrïte provedené úpravy tlaèítka pomocné klávesnice. 
+
+8) Ulo¾te pomocnou klávesnici pøiøazením názvu souboru. 
+
+9) Spus»te rozevírací pomocnou klávesnici v hlavním emulátoru (Pomocná klávesnice) a vyzkou¹ejte ji. Soubor pomocné klávesnice lze zmìnit a poté znovu ulo¾it (napøíklad lze zmìnit stávající nebo pøidat dal¹í tlaèítka pomocné klávesnice).
+
+++++"Styl pomocné klávesnice"
+Mù¾ete snadno zmìnit poèet øádkù a sloupcù v rozevírací pomocné klávesnici, zmìnit poèet znakù textu tlaèítek (v¹echna tlaèítka pomocné klávesnice mají stejnou velikost) nebo pøepnout mezi rozevírací èi rozbalovací variantou pomocné klávesnice. Chcete-li zmìnit nìkterı z uvedenıch atributù, klepnìte na volbu Zmìnit styl pomocné klávesnice. 
+
+++++"Rozevírací nebo rozbalovací"
+Pomocí tlaèítka Zmìnit styl pomocné klávesnice mù¾ete snadno pøepnout mezi rozevírací èi rozbalovací variantou existující pomocné klávesnice. Vıchozí nastavení je rozevírací pomocná klávesnice. 
+
+Rozevírací pomocná klávesnice má formu samostatného okna s u¾ivatelem definovanımi tlaèítky pomocné klávesnice. Po klepnutí
+na nìkteré tlaèítko pomocné klávesnice je v relaci 3270, ve které bylo okno této klávesnice aktivováno, zpracována
+asociovaná akce (akce klávesnice nebo soubor pøehrávání). Zobrazení èi skrytí okna rozevírací pomocné klávesnice závisí na rozhodnutí u¾ivatele. V relaci 3270 lze pou¾ívat více oken rozevíracích pomocnıch klávesnic. 
+
+Rozbalovací pomocná klávesnice je pøístupná prostøednictvím hlavního pruhu nabídky emulátoru. Po vytvoøení rozbalovací pomocné klávesnice je do pruhu nabídky pøidána pøíslu¹ná volba. Po klepnutí na tlaèítko rozbalovací pomocné klávesnice je v relaci 3270 zpracována pøíslu¹ná akce. 
+
+Pou¾íváte-li stejnou pomocnou klávesnici pro více relací 3270, bude pravdìpodobnì vhodnìj¹í pou¾ít rozbalovací pomocnou klávesnice. Rozevírací pomocné klávesnice vy¾adují samostatné okno pro ka¾dou relaci 3270.
+
+Pou¾ití rozevírací pomocné klávesnice je vıhodnìj¹í v situacích, kdy pomocná klávesnice obsahuje mnoho tlaèítek (10 a¾ 20 tlaèítek, v závislosti na rozli¹ení monitoru) nebo kdy pro rùzné relace 3270 pou¾íváte rùzné pomocné klávesnice. 
+
+Pokud pou¾ijete více rozbalovacích pomocnıch klávesnic, je nejprve nutné vybrat pomocnou klávesnici a teprve poté lze vybrat nìkteré tlaèítko. 
+
+Rozevírací i rozbalovací pomocné klávesnice lze pou¾ívat zároveò. Pokud chcete pou¾ívat více pomocnıch klávesnic, mù¾ete napøíklad definovat jednu pomocnou klávesnici, která bude pou¾ívána ve více relacích, jako rozbalovací a ostatní pomocné klávesnice jako
+rozevírací. 
+
+Rozevírací pomocná klávesnice mù¾e bıt automaticky aktivována pøi spu¹tìní relace 3270. Spu¹tìní relace lze definovat v programu Nastavení emulátoru IBM 3270: Vyberte relaci a klepnìte na volbu Pøipojení->Upravit. Klepnìte na volbu Roz¹íøené pøipojení 3270 a v poli Dal¹í parametry zadejte parametr -KEYPAD následovanı jednou mezerou a po¾adovanım názvem souboru pomocné klávesnice (s rozli¹ením malıch a velkıch písmen). U parametru -KEYPAD jsou rozli¹ována malá a velká písmena. Pokud název souboru pomocné klávesnice obsahuje mezery, je nutné je uzavøít do uvozovek (napøíklad -KEYPAD "jm souboru pom klávesnice"). 
+
+++++"Jednoduchá makra klávesnice"
+Makra klávesnice umo¾òují snadné zadání posloupnosti znakù do relace 3270. Chcete-li vytvoøit tlaèítko pomocné klávesnice s jednoduchım makrem klávesnice, postupujte takto: 
+
+1) Spus»te program pro pøizpùsobení pomocné klávesnice z relace emulátoru (pravdìpodobnì ji¾ bylo provedeno) a vyberte soubor pomocné klávesnice obsahující makro klávesnice (pravdìpodobnì ji¾ bylo provedeno).
+
+2) V samostatném oknì pomocné klávesnice klepnìte na tlaèítko pomocné klávesnice pro po¾adované makro klávesnice.
+
+////Note: The translation of String() below should match the translated resource text for AllShare*string() in the keyboard remapping resource file.
+3) V seznamu dostupnıch akcí klepnìte na akci klávesnice String(). 
+
+4) Klepnìte na volbu Akce tlaèítka->.
+
+5) Klepnìte na pozici mezi závorkami akce String() v oblasti akce aktuálního tlaèítka pomocné klávesnice. 
+
+6) Zadejte znak uvozovek, po¾adované znaky makra klávesnice a opìt uvozovky. Pøíklad: String("moje znaky makra").
+
+7) Klepnìte na textovou oblast aktuálního tlaèítka pomocné klávesnice a zadejte po¾adovanı text pro toto tlaèítko (text bude zobrazen na tlaèítku). 
+
+8) Klepnutím na tlaèítko OK potvrïte provedené úpravy tlaèítka pomocné klávesnice. 
+
+9) Ulo¾te pomocnou klávesnici. 
+
+10) Otestujte makro klávesnice pro pomocnou klávesnici v hlavním oknì emulátoru (pro rozbalovací nebo pro rozevírací pomocnou klávesnici). 
+
+Chcete-li pomocnou klávesnici zmìnit, mù¾ete ji upravit a znovu ulo¾it. 
+
+Poznámka: Del¹í nebo slo¾itìj¹í makra klávesnice je tøeba vytváøet pomocí funkce Záznam. S tlaèítky pomocné klávesnice lze asociovat soubory pøehrávání. Viz také témata Záznam a Pøehrávání v hlavní nápovìdì emulátoru. 
+
+++++"Úpravy akcí a textu tlaèítek"
+Texty tlaèítek pomocné klávesnice i akce jim pøiøazené lze zmìnit pomocí klávesnice. Klepnìte do po¾adované oblasti a proveïte zmìnu pomocí klávesnice. Klepnutím na tlaèítko OK zmìny potvrïte. Informace o definování více akcí klávesnice pro tlaèítko pomocné klávesnice lze najít v tématu Vícenásobné akce. 
+
+U upravovanıch akcí je dùle¾itı správnı zápis a také rozli¹ování malıch a velkıch písmen. 
+
+++++"Vícenásobné akce"
+Délka oblasti akcí aktuálního tlaèítka pomocné klávesnice je omezena na 100 znakù. Pro tlaèítka pomocné klávesnice lze zadat více akcí. Pokud by délka akcí klávesnice pøesáhla 100 znakù, zaznamenejte posloupnost kláves do souboru pøehrávání a jako akci tlaèítka pomocné klávesnice zadejte tento soubor pøehrávání (dal¹í informace o souborech pøehrávání lze najít v tématech Záznam a Pøehrávání v hlavní nápovìdì). 
+
+Chcete-li pro nìkteré tlaèítko pomocné klávesnice zadat více akcí klávesnice, klepnìte do oblasti akcí aktuálního tlaèítka pomocné klávesnice a zadejte po¾adovanou sérii akcí (jednotlivé akce oddìlte jedním znakem mezery). U upravovanıch akcí je dùle¾itı správnı zápis a také rozli¹ování malıch a velkıch písmen. Akci klávesnice lze do oblasti akcí tlaèítka pomocné klávesnice zadat také pomocí my¹i: Klepnìte na po¾adovanou pozici v této oblasti, poté vyberte po¾adovanou akci klávesnice, kterou chcete pøidat, a klepnìte
+na volbu Akce tlaèítka->.
+
+++++"Seznam znakù"
+Seznam znakù umo¾òuje pøístup ke znakùm, které nemusí bıt pøístupné pomocí klávesnice.
+
+
+Urèete nìkterı znak pro tlaèítko pomocné klávesnice: Vyberte po¾adované tlaèítko pomocné klávesnice v samostatném oknì pomocné klávesnice. Klepnìte na po¾adovanı znak v seznamu znakù. Klepnìte na volbu Akce tlaèítka->. Klepnìte na textovou oblast aktuálního tlaèítka pomocné klávesnice a zadejte po¾adovanı text pro toto tlaèítko (text bude zobrazen na tlaèítku). Klepnutím na tlaèítko OK zmìnu potvrïte. 
+
+Pøidejte nìkterı znak do makra klávesnice: Klepnìte na tlaèítko pomocné klávesnice, které zobrazuje makro klávesnice. Klepnìte na po¾adovanı znak v seznamu znakù. Klepnìte do oblasti akcí aktuálního tlaèítka pomocné klávesnice (v rámci akce String()) na pozici, na kterou má bıt vlo¾en pøidávanı znak (správné pozice kurzoru lze dosáhnout pomocí kláves pro pohyb kurzoru doleva a doprava). Klepnìte na volbu Akce tlaèítka->. Klepnutím na tlaèítko OK zmìnu potvrïte. 
+
+++++"Pøesunutí tlaèítek pomocné klávesnice"
+Tlaèítka rozevírací pomocné klávesnice lze pøemístit. Klepnìte pravım tlaèítkem my¹i na tlaèítko pomocné klávesnice, které chcete pøesunout, pøesuòte ukazatel my¹i na novou pozici pro tlaèítko a poté klepnìte levım tlaèítkem my¹i. Pokud nová pozice tlaèítka ji¾ byla definována jako tlaèítko pomocné klávesnice, budou tato dvì tlaèítka zamìnìna.

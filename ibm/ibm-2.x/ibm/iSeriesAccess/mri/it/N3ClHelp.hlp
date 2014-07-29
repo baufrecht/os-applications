@@ -1,0 +1,101 @@
+//// ENGLISH_SOURCE_VERSION= 1.2 
+////This file contains the color mapping program on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file will be stored in locale specific ASCII (code page 819 for Latin1 languages). 
+
+////Help text format (this section is not displayed to IBM emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1.
+//// 3. This help file contains help text for the 3270 and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator. A comment line of four "/" characters followed by
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+//// 3B. "5250" indicates subsequent data is only displayed in 5250 on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in both 3270 and 5250 on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+//// 3D. Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters.  The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Do not change the order of topics in this help text file.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+
+----"Guida del Mapping dei colori 3270"
+++++"Informazioni generali"
+Per informazioni sull'utilizzo di questo programma di visualizzazione della guida, consultare il primo argomento nella finestra principale dell'emulatore (selezionare "Guida" nella barra dei menu nella finestra dell'emulatore).
+
+Queste informazioni descrivono in che modo utilizzare il Mapping dei colori per modificare i colori delle sessioni dell'emulatore 3270.
+
+Nota: è possibile attivare un solo programma Mapping dei colori per volta.
+
+++++"Selezione File di associazione colori"
+All'inizio della sessione 3270, l'emulatore 3270 ricerca un file di associazione colori per la sessione. Viene utilizzato il seguente ordine: se viene rilevato un file di associazione colori, viene utilizzato per la sessione 3270:
+
+- Ricercare un file di associazione colori specifico della sessione selezionato utilizzando il programma Mapping dei colori.
+
+- Ricercare un file di associazione colori predefinito selezionato utilizzando il programma Mapping dei colori.
+
+- Se non ne viene rilevato nessuno, l'emulatore 3270 utilizza i colori predefiniti (sfondo nero).
+
+++++"Layout della finestra"
+Per il Mapping dei colori di base, la finestra Mapping dei colori presenta un'area di selezione dello schema di colori (a sinistra), un'area delle finestre della sessione 3270 e un programma Assist di esempio (in basso a destra) ed un'area barra/messaggi azione (in basso).
+
+Per il Mapping dei colori avanzato, la finestra Mapping dei colori presenta un'area di selezione creazione (a sinistra), un'area delle finestre della sessione 3270 e un programma Assist di esempio (in basso a destra) ed un'area barra/messaggi azione (in basso).
+
+L'area di selezione dei colori contiene:
+
+1) La barra multicolore che contiene venti colori e funge da punto di partenza per la selezione del nuovo colore associato ad una delle creazioni.
+
+2) I dispositivi di scorrimento rosso/verde/blu che correggono il nuovo colore associato ad una delle creazioni.
+
+3) La finestra "Colore corrente" che visualizza il nuovo colore modificato dalla barra multicolore e dai dispositivi di scorrimento rosso/verde/blu.
+
+4) Il pulsante "Applica colore corrente" che applica la modifica al colore nel programma di esempio Assist e l'area delle finestre della sessione 3270. Ciò deve essere eseguito prima di applicare le modifiche alla sessione.
+
+
+I pulsanti della barra delle applicazioni contengono le seguenti funzioni:
+
+1) "Salva" le modifiche al mapping dei colori nel file relativo.
+
+2) "Elimina" i file di associazione colori creati precedentemente.
+
+3) "Applica le modifiche alla sessione" che avvia il programma di Mapping dei colori. Ciò consente la verifica delle modifiche prima di salvarle in un file di associazione colori.
+
+4) "Esci" dal programma di Mapping dei colori.
+
+5) "Guida" visualizza la guida.
+
+Area dei messaggi: contiene i messaggi di informazioni e di errore.
+
+++++"Mapping dei colori di base"
+L'opzione Mapping dei colori di base consente di selezionare uno schema dei colori (un file di associazione colori) per questa sessione 3270 oppure viene impostata come predefinita per questa e sessione e per le sessioni 3270 future.
+
+L'opzione Mapping dei colori di base offre cinque schemi di colore standard più gli schemi di colore avanzato creati. Nota: tre dei cinque schemi di colore standard utilizzano gli stessi colori per  le finestre del programma Assist(ad esempio, i colori di questa finestra della guida 3270).
+
+++++"Mapping dei colori avanzato"
+L'opzione Mapping dei colori avanzato consente di creare uno schema di colori avanzato (un file di associazione colori). E' possibile modificare i colori di vari elementi (creazioni) di una sessione 3270. E' consigliabile selezionare prima lo schema di colori più vicino mediante l'opzione Mapping dei colori di base. Quindi, utilizzare l'opzione Mapping dei colori avanzato per modificare ulteriormente il colore di creazioni specifiche.
+
+////Nota: Alcuni modelli IBM Thin Client supportano fino a 256 colori (utilizzando 1 Megabyte di Video RAM). Dopo questo limite, vengono riprodotti colori alterati che danneggiano le immagini  del browser. I cinque schemi di colori di base IBM corrispondono ai colori utilizzati dal browser e Java. Gli schemi di colori avanzati utilizzano fino a un massimo di 22 colori. Il browser e Java forniscono una tavolozza di colori (per i Thin Client a 256 colori) utilizzando i seguenti valori per rosso, verde e blu: 0, 51, 102, 153, 204 e 255.
+ 
+Per modificare il colore di una creazione, prima selezionare la creazione per visualizzare il colore corrente. Per modificare in modo sostanziale il colore, fare clic su un colore nella barra  multicolore come principio di ulteriori cambiamenti. E' possibile modificare i valori rosso/verde/blu. Ad esempio, è possibile trascinare il dispositivo di scorrimento del valore rosso (premere il tasto principale del mouse con il puntatore del mouse sul dispositivo di scorrimento e spostare il puntatore), fare clic accanto al dispositivo di scorrimento oppure fare clic sui pulsanti "-" o "+". I valori per rosso, verde e blu sono compresi tra 0 e 255. Quindi, fare clic su "Applica colore corrente"; viene aggiornata l'area in basso a destra.
+
+L'area in basso a destra dispone di un'area del programma Assist ed un'area 3270. I colori del programma Assist sono applicati alla finestra della guida in linea 3270, alla finestra delle Preferenze, alla finestra Registra/Riproduci, alla finestra di Reimpostazione della tastiera e alla finestra Mapping dei colori (quando quest'ultima viene avviata). L'area 3270 mostra una barra dei menu, lo sfondo della sessione principale con sette colori in primo piano, pulsante  Premi, righello e riga di stato.
+
+Per provare uno schema di colori durante la sessione corrente, fare clic su "Applica modifiche alla sessione". Per salvare uno schema di colore avanzato, fare clic sul pulsante Salva. Il nome del file di associazione colori verrà aggiunto all'elenco degli schemi di colori disponibili nell'opzione del Mapping dei colori di base. L'opzione Mapping dei colori di base viene utilizzata per selezionare uno schema di colori da applicare ad una o più sessioni 3270. Nota: il programma Mapping dei colori limita la lunghezza del nome file di associazione colori avanzato a 32 caratteri.
+
+E' possibile modificare uno schema di colori avanzato. Selezionare lo schema di colori avanzato utilizzando l'opzione Mapping dei colori di base ed applicando lo schema alla sessione. L'opzione Mapping dei colori avanzato viene quindi utilizzata per perfezionare i colori delle creazioni. Immettere un nome schema di colori avanzato esistente per salvare lo schema di colori.
+   
+Nota: l'opzione Avanzate non impedisce l'impostazione dello stesso colore per il testo in primo piano e per lo sfondo (o due colori molto simili). Se ciò si verifica, il testo in primo piano non è leggibile. L'area di lavoro può essere utilizzata per verificare che tutti i colori in primo piano siano leggibili.
+
+++++"Applicazione delle modifiche alla mappa dei colori"
+Il pulsante Applica modifiche alla sessione applica temporaneamente le modifiche alla mappa dei colori alla sessione dell'emulatore quando viene avviato il programma Mapping dei colori. E' possibile controllare le modifiche. Consultare "Salvataggio dei file di associazione colori" per informazioni su come salvare le modifiche per l'uso successivo.
+
+++++"Salvataggio dei file di associazione colori"
+Il pulsante Salva salva le modifiche alla mappa dei colori per l'uso successivo. Le modifiche vengono salvate in un file di associazione colori. Dopo aver salvato lo schema di colori avanzato, il nome del file di associazione colori verrà aggiunto all'elenco degli schemi di colori disponibili nell'opzione del Mapping dei colori di base. Nell'opzione Mapping dei colori di base, selezionare come sono state salvate le modifiche  alla nuova mappa dei colori: come file di associazione colori predefinito utilizzato per tutte le  sessioni o come file di associazione colori specifico della sessione utilizzato solo per la sessione da cui è stato  avviato il programma di Mapping dei colori.
+
+Un file di associazione colori specifico della sessione consente la combinazione di colori diversi in diverse sessioni 3270. Un file di associazione colori specifico della sessione ha la priorità più alta e viene utilizzato per la sessione specifica in cui il file di associazione colori è stato creato (utilizzando il numero della sessione della sessione 3270 e il nome della sessione).
+
+Un file di associazione colori predefinito ha la seconda priorità più alta e e viene utilizzato per tutte le sessioni che non dispongono di un file di associazione colori specifico della sessione.
+
+Consultare "Eliminazione dei file di associazione colori" per informazioni sull'eliminazione di un file di associazione colori.
+
+++++"Eliminazione dei file di associazione colori"
+Fare clic sul pulsante "Elimina" nella barra delle azioni per eliminare i file di associazione colori creati. Fare clic su ogni file di associazione colori da eliminare e premere il pulsante di eliminazione.

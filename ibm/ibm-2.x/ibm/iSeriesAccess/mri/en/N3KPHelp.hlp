@@ -1,0 +1,170 @@
+////This file contains the pop-up keypad customization program on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file will be stored in locale specific ASCII (code page 819 for Latin1 languages). 
+
+////Help text format (this section is not displayed to IBM emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1.
+//// 3. This help file contains help text for the 3270 and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator. A comment line of four "/" characters followed by:
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+//// 3B. "5250" indicates subsequent data is only displayed in 5250 on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in both 3270 and 5250 on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+////  3D. Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters.  The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Do not change the order of topics in this help text file.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+
+----"3270 Keypad Customization Help"
+++++"General Information"
+For information on using this help viewing program, see the first topic in the main emulator help (select the "Help" menu bar choice in the emulator window).
+
+This help information describes how to create and change keypads. A keypad has keypad buttons. Each keypad button has a key sequence or playback file associated with the button.
+
+Note: Only one keypad customization program can be active at a time.
+
+++++"Window Layout"
+The keypad customization window has a keyboard action selection area (left), a keypad button working area (right), action bar area (bottom), and message area (bottom). A separate window shows the keypad that you are currently working on.
+
+The Keyboard Action Selection Area contains the following:
+
+1) The "Available Actions List" is the available keyboard actions. An action selected from this list becomes the current action.
+
+2) The "Character List" lists all available characters. A selected character becomes the current action. To select a character, click on the character.
+
+3) The "Action Help" button provides keyboard action definitions in an action help window. The action definitions can be printed.
+
+4) The "Button Action ->" button associates the current action with the keypad button in the keypad button working area.
+
+Note: Only one action may be the current action.
+
+
+The Keypad Button Working Area contains the following:
+
+1) The "Current Keypad" displays the keypad that you are working on. If this is a new keypad and you have not saved the keypad yet, current keypad will be blank.
+
+2) The "Current Keypad Button Text" is the text that appears on the keypad button. Click in the button text area to add or change the button text using the keyboard. The button text area is limited to 32 characters. Note: You must have a keypad button selected (click on a keypad button in the separate keypad customizer window).
+
+3) The "Current Keypad Button Action" is the keyboard action(s) or playback file associated with the keypad button. To assign a keyboard action to a keypad button, click the desired keyboard action and click "Button Action->". To assign a playback file to the keypad button, click "Select Playback File Action", select a playback file, and click "OK". You can click in the current keypad button action area to change the button action using the keyboard (for example, add to a simple keyboard macro or add another action). The button action area is limited to about 100 characters. See the Multiple Actions topic for information on using multiple keyboard actions for a keypad button.
+
+4) The "Clear Keypad Button" clears the selected keypad button.
+
+5) The "Select Playback File Action" lists your playback files to associate a playback file with the keypad button.
+
+6) The "OK" button accepts changes made to the current keypad button.
+
+7) The "Cancel" button cancels changes made to the current keypad button.
+
+
+Action Bar buttons provide the following functions:
+
+1) "Save" allows to save your keypad changes in a keypad file. You name your keypad files.
+
+2) "Delete Keypad File" allows you to delete keypad files that you previously created.
+
+3) "Change Keypad Style" allows you to change the number of rows and columns in a pop-up keypad, change the number of text characters in keypad button text, and change between a pop-up and pull down keypad.
+
+4) "Exit" exits from the Keypad Customization Program.
+
+5) "Help" displays this help text.
+
+
+Message Area: Displays information and error messages.
+
+A separate keypad customizer window shows your current keypad. Click on a keypad button to change the keypad button text or keypad button action(s). If you are working on a pop-up keypad, the window shows how your pop-up keypad window will be displayed. If you are working on a pull down keypad, the window shows your keypad buttons. Pull down keypad buttons are available through the main emulator menu bar.
+ 
+++++"Getting Started"
+Below are steps for creating and using a pop-up keypad (define one keypad button with a keyboard action).
+
+////The note below was moved up from the end of this topic
+Note: The Simple Keyboard Macros topic lists the steps to create a keypad button with a simple keyboard macro (a keystroke sequence).
+
+1) Start the keypad customization program from an emulator session (probably already done).
+
+2) Create a new keypad (may already be done).
+
+3) Click on a keypad button in the separate keypad customizer window (typically starting with the upper left button).
+
+4) Click a keyboard action from the available actions list.
+
+5) Click Button Action->.
+
+6) Click in the current keypad button text area and type your keypad button text (will appear on the keypad button).
+
+7) Click OK to accept the keypad button change.
+
+8) Save your keypad, giving the keypad a keypad file name.
+
+9) Start the pop-up keypad using the main emulator (Keypad...) and try the new keypad.
+
+You can change and re-save the keypad file (for example, add additional keypad buttons or change keypad buttons).
+
+++++"Keypad Style"
+You can easily change the number of rows and columns in a pop-up keypad, change the number of text characters in keypad button text (all keypad buttons are the same size), and change between a pop-up and pull down keypads. Click "Change Keypad Style" to change any of the above.
+
+++++"Pop-up Or Pull Down"
+You can easily change an existing keypad to be a pop-up keypad or pull down keypad by clicking on "Change Keypad Style". Pop-up keypad is the default.
+
+A pop-up keypad is a separate window with keypad buttons that you define. When you click a keypad button, the associated action (keyboard actions or playback file) is processed in the 3270 session that started the pop-up keypad window. You decide when a pop-up keypad window is displayed and not displayed. Multiple pop-up keypad windows can be used for a 3270 session.  
+
+A pull down keypad is accessed using the main emulator menu bar. If you have a pull down keypad, a Keypad menu bar choice is added to your menu bar. When you click a pull down keypad button, the associated action is processed in the 3270 session.
+
+If you use multiple 3270 sessions with the same keypad, a pull down keypad may be preferred. Pop-up keypads would require a separate pop-up keypad window for each 3270 session.
+
+Pop-up keypads are better if you have many keypad buttons in a keypad (10 to 20 keypad buttons, depending on your monitor resolution) or have different keypads for different 3270 sessions.
+
+If you have multiple pull down keypads, you must first select the keypad before selecting a pull down keypad button.
+
+You can have both pop-up keypads and pull down keypads. If you have multiple keypads, you could consider defining a keypad that is used by multiple sessions as a pull down keypad and the remaining keypads as pop-up keypads.
+
+A pop-up keypad can be started when your 3270 session starts. You can use the IBM 3270 Emulator Setup program to specify a pop-up keypad to start: select the session, and click Connection-> Edit. Click Advanced 3270 Connection..., and enter -KEYPAD, one space, and your (case sensitive) keypad file name in Other Parameters. -KEYPAD is case sensitive. If your keypad file name contains any spaces, use double quotes around the file name (for example, -KEYPAD "keypad file name").
+
+++++"Simple Keyboard Macros"
+Keyboard macros allow you to easily key a sequence of characters into your 3270 session. You can create a keypad button with a simple keyboard macro as follows:
+
+1) Start the keypad customization program from an emulator session (probably already done) and select the keypad file that will have your keyboard macro (probably already done).
+
+2) Click the keypad button in the separate keypad window for your keyboard macro.
+
+////Note: The translation of String() below should match the translated resource text for AllShare*string() in the keyboard remapping resource file.
+3) Click the String() keyboard action from the available action list.
+
+4) Click Button Action->.
+
+5) Click between the parentheses of String() in the current keypad button action area.
+
+6) Type a double quote, your keyboard macro characters, and a double quote; for example, String("your macro characters").
+
+7) Click in the current keypad button text area and type your keypad button text (will appear on the keypad button).
+
+8) Click OK to accept the keypad button change.
+
+9) Save your keypad.
+
+10) Test your keypad keyboard macro using the main emulator (either pop-up keypad or pull down keypad).
+
+You can change and re-save your keypad if you wish to change the keypad.
+
+Note: A long or complex keyboard macro should be created using the Record feature. A playback file can be associated with a keypad button. See the Record and Playback topics in the main emulator Help text.
+
+++++"Editing Button Text and Action"
+Keypad button text and the keypad button action can be changed using the keyboard. Click in the desired area and change using the keyboard. Click OK to accept changes. See the Multiple Actions topic for information on defining multiple keyboard actions for a keypad button.
+
+Changed actions must be spelled correctly and are case sensitive.
+
+++++"Multiple Actions"
+The current keypad button action area is limited to about 100 characters. You can specify multiple keyboard actions for a keypad button. If your keyboard actions would exceed 100 characters, record the key sequence into a playback file and specify the playback file as the keypad button action (see the main emulator help text topics Record and Playback for more information on playback files).
+
+To specify multiple keyboard actions on a keypad button, you can click in the current keypad button action area and type the desired series of actions, separated by a single space. Changed actions must be spelled correctly and are case sensitive. You can also insert a keyboard action into the keypad button action area using the mouse: click at the desired location in the keypad button action area, select the desired keyboard action to add, and click the Button Action-> button.
+
+++++"Character List"
+The character list allows access to characters which may not be accessible from the keyboard.
+
+Specify a character for a keypad button: Click on the desired keypad button in the separate keypad window. Click on the desired character in the character list. Click Button Action->. Click in the current keypad button text area and type your keypad button text (will appear on the keypad button). Click OK to accept the change.
+
+Add a character to a keyboard macro: Click on the keypad button that displays the keyboard macro. Click on the desired character in the character list. Click in the current keypad button action area of the keyboard macro (within the String() action), at the location where the added character should be inserted (the cursor left and right keys can move the cursor to the correct location). Click Button Action->. Click OK to accept the change.
+
+++++"Moving Keypad Buttons"
+You can move pop-up keypad buttons. Click the right mouse button on the keypad button to move, move the mouse pointer to the new keypad button location, and click the left mouse button. If the new location was already defined as a keypad button, the two keypad buttons are switched.

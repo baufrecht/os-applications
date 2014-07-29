@@ -1,0 +1,380 @@
+! ENGLISH_SOURCE_VERSION= 1.4.1.2 
+!
+!
+!
+! This file contains the resource text strings for the IBM Network Station 3270 and 5250
+! emulators, in particular the color mapping program.
+
+! This resource file will be stored on all servers in locale specific ASCII (819 for Latin1
+! languages). 
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. Resource format: 
+!    - A resource line starts with ColorMap* followed by a resource name
+!      and a ":".  Do NOT make any changes to the text to the left of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+!******************************************************************************
+!************************ BEGIN DO NOT TRANSLATE ******************************
+!******************************************************************************
+!*   The first section of resources are are locale specific but               *
+!*   DO NOT REQUIRE TRANSLATION.                                              *
+!*                                                                            *
+!* This source file enables the resource section for Latin1 and Latin2.       *
+!*                                                                            *
+!* For ru_RU or Latin5 locales and DBCS locales                               *
+!*      1. Place a '!' as the first character in each line in the Latin1      *
+!*      and Latin2 section                                                    *
+!*      2. Remove the '!' character for each resource line in the apropriate  *
+!*      section that matches your locale.                                     *
+!*                                                                            *
+!* For example, ru_RU should place ! in front of all lines in the LATIN1      *
+!* section remove the ! from all lines in the LATIN5 section.                 *      
+!******************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN1 and LATIN2                ****************
+!**************************************************************************
+!ColorMap*extraLargeFontList: -*-*-medium-r-normal-*-*-*-*-*-m-110-*-*
+!ColorMap*largeFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-90-*-*
+!ColorMap*mediumFontList:     -*-*-medium-r-normal-*-*-*-*-*-m-70-*-*
+!ColorMap*smallFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+!**************************************************************************
+!****************   END LATIN1 and LATIN2                  ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN5                           ****************
+!**************************************************************************
+!ColorMap*extraLargeFontList: -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*
+!ColorMap*largeFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!ColorMap*mediumFontList:     -*-*-medium-r-normal-*-*-*-*-*-c-70-*-*
+!ColorMap*smallFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!**************************************************************************
+!****************   END   LATIN5                           ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (ja_JP ko_KR zh_CN)   ****************
+!**************************************************************************
+!ColorMap*extraLargeFontList: -*-*-medium-r-normal--24-*-*-*-c-*
+!ColorMap*largeFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!ColorMap*mediumFontList:     -*-*-medium-r-normal--16-*-*-*-c-*
+!ColorMap*smallFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!**************************************************************************
+!****************   END DBCS (ja_JP ko_KR zh_CN)     ****************
+!**************************************************************************
+!**************************************************************************
+!****************   BEGIN DBCS (zh_TW)   ****************
+!**************************************************************************
+ColorMap*extraLargeFontList: -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+ColorMap*largeFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+ColorMap*mediumFontList:     -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+ColorMap*smallFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!**************************************************************************
+!****************   END DBCS (zh_TW)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   END DO NOT TRANSLATE                   ****************
+!**************************************************************************
+
+ColorMap*title: 			顏色對映
+
+! icons
+ColorMap*iname3270:                     3270 顏色對映
+ColorMap*iname5250:                     5250 顏色對映
+
+
+ColorMap*corrupt:               顏色檔已損毀
+
+ColorMap*lowMemMsgDialog.messageString:  記憶體不足無法啟動「說明察看器」。
+
+ColorMap*okLabelString: 確定
+
+ColorMap*cancelLabelString: 取消
+
+!*******************************************************************************
+!**     Preferences area resources (top of window)                            **
+!*******************************************************************************
+ColorMap*modeInstructions.labelString:  選取顏色對映功能：
+
+ColorMap*Basic.labelString:             基本
+
+ColorMap*Advanced.labelString:          進階
+
+!*************************************************************
+!**   Basic and advanced action bar area resources          **
+!*************************************************************
+ColorMap*actionForm.saveButton.labelString:  	儲存
+
+ColorMap*actionForm.deleteButton.labelString:   刪除 
+
+ColorMap*actionForm.applyButton.labelString:    將變更套用到階段作業
+
+ColorMap*actionForm.quitButton.labelString:     結束
+
+ColorMap*actionForm.helpButton.labelString:     說明
+
+
+!************************************************
+!**  Basic and advanced color savebox          **
+!************************************************
+ColorMap*saveBoxLabel.labelString:         選擇儲存選項：
+
+ColorMap*saveBoxToggle1.labelString:       另存為所有階段作業的預設值
+
+ColorMap*saveBoxToggle2.labelString:       儲存後只供此階段作業使用
+
+ColorMap*saveBoxSaveBtn.labelString:  	   儲存
+
+ColorMap*saveBoxCancelBtn.labelString:     取消
+
+ColorMap*advancedSaveBoxLabel.labelString: 輸入進階顏色檔名稱：
+
+! Characters in file names must be 819 (ISO8859-1)
+ColorMap*invalidFileName.value:            您在檔名中鍵入的字元無效。
+
+ColorMap*invalidFileNameOkbutton.labelString:  確定
+
+!****************************************
+!**  Overwrite existing file dialog    **
+!****************************************
+ColorMap*fileWarningDialog.dialogTitle:        顏色對映警告
+
+ColorMap*fileWarningDialog.messageString:      檔案已存在。確定要覆寫它嗎？
+
+ColorMap*fileWarningDialog.okLabelString:      是
+
+ColorMap*fileWarningDialog.cancelLabelString:  否
+
+
+
+!***************************************
+!**  Basic color work area            **
+!***************************************
+ColorMap*basicListLabel.labelString:        選擇顏色配置：
+
+! The following two resource lines are a late addition to the color mapping resource file (March 12, 1998).  These indicate color map files that came from a system level or user created color map files.
+ColorMap*systemLabel:                       系統：
+
+ColorMap*userLabel:                         使用者：
+
+ColorMap*ibmBlack:                          IBM：黑色背景
+
+ColorMap*ibmDarkGrey:                       IBM：深灰色背景
+
+ColorMap*ibmLightGrey:                      IBM：淺灰色背景
+
+ColorMap*ibmLight:                          IBM：淺色背景
+
+ColorMap*ibmLightBlue:                      IBM：淺藍色背景
+
+
+
+!******************************************
+!**  Advanced color work area            **
+!******************************************
+ColorMap*advancedListLabel.labelString:     選擇要變更的建構：
+
+! The following 22 *adv type resources are limited in size; they should not exceed 28 characters.
+ColorMap*advMenuBarBack:                    功能表列背景
+
+ColorMap*advMenuBarFore:                    功能表列前景
+
+ColorMap*advMainSess:                       主階段作業背景
+
+ColorMap*advPushbut:                        按鈕背景
+
+ColorMap*advBlue:                           藍色文字
+
+ColorMap*advGreen:                          綠色文字
+
+ColorMap*advPink:                           粉紅色文字
+
+ColorMap*advRed:                            紅色文字
+
+ColorMap*advTurq:                           藍綠色文字
+
+ColorMap*advWhite:                          白色文字
+
+ColorMap*advYellow:                         黃色文字
+
+ColorMap*advCursor:                         游標
+
+ColorMap*advMouse:                          滑鼠指標
+
+ColorMap*advRule:                           尺規
+
+ColorMap*advStatLineBack:                   狀態行背景
+
+ColorMap*advStatLineFore:                   狀態行前景
+
+ColorMap*advMonoImageBack:                  單色影像背景
+
+ColorMap*advMonoImageFore:                  單色影像前景
+
+! Note: foreground color used for assist program windows
+ColorMap*advAssistFore:                     輔助程式前景
+
+! Note: button background for assist program windows
+ColorMap*advAssistForm:                     輔助程式按鈕
+
+! Note: main background color for assist program windows
+ColorMap*advAssistPrimary:                  輔助程式主要背景顏色
+
+! Note: entry area background color for assist program windows
+ColorMap*advAssistEntry:                    輔助程式登錄區背景顏色
+
+
+ColorMap*red.titleString:                   紅色
+
+ColorMap*green.titleString:                 綠色
+
+ColorMap*blue.titleString:                  藍色
+
+ColorMap*currentColorLabel.labelString:     現行顏色
+
+ColorMap*applyCurrentColor.labelString:     套用現行顏色
+
+
+!************************************
+!**  Delete file dialog            **
+!************************************
+ColorMap*deleteDialog.deleteBoxDeleteBtn.labelString:  刪除 
+
+ColorMap*deleteDialog.deleteBoxCancelBtn.labelString:  取消
+
+! title of delete dialog
+ColorMap*deleteDialog.dialogTitle:                     刪除顏色對映檔
+
+ColorMap*deleteDialog.deleteBoxLabel.labelString:      選取要刪除的檔案：
+
+ColorMap*deleteDialog.deleteBoxLabelAlt.labelString:   沒有要刪除的檔案。
+
+! message at bottom of primary window
+ColorMap*selectedDeleted:                              已刪除所選取的顏色對映檔。
+
+
+!*****************************************************
+!**  Delete file verification dialog box            **
+!*****************************************************
+ColorMap*deleteVerifyDialog.dialogTitle:        刪除確認
+
+ColorMap*deleteVerifyDialog.okLabelString:      確定
+
+ColorMap*deleteVerifyDialog.cancelLabelString:  取消
+
+! this cannot be much longer
+ColorMap*noUndoDelete:                          刪除檔案後將無法還原。您要繼續嗎？
+
+ColorMap*noFilesDelete:                         沒有選取檔案。刪除無效。
+
+
+!****************************************************
+!**  Emulator preference in construct list         **
+!**						   **
+!**  MAX:  text should be less than 15 characters  **
+!****************************************************
+ColorMap*emuPrefMenuLabel.labelString:       功能表列
+
+ColorMap*emuPrefBlueText.labelString:        藍色文字
+
+ColorMap*emuPrefGreenText.labelString:       綠色文字
+
+ColorMap*emuPrefPinkText.labelString:        粉紅色文字
+
+ColorMap*emuPrefRedText.labelString:         紅色文字
+
+ColorMap*emuPrefTurquoiseText.labelString:   藍綠色文字
+
+ColorMap*emuPrefWhiteText.labelString:       白色文字
+
+ColorMap*emuPrefYellowText.labelString:      黃色文字
+
+ColorMap*emuPrefPbBackground.labelString:    按鈕
+
+ColorMap*emuPrefStatusLine.labelString:      狀態行
+
+ColorMap*groupBoxLabel.labelString:          輔助程式
+
+ColorMap*entryAreaLabel.labelString:         登錄區
+
+ColorMap*helperFormLabel.labelString:        按鈕
+
+
+!**************************
+!**  Error dialog boxes  **
+!**************************
+ColorMap*noColorCellsMsgText.value: 無法配置啟動顏色對映程式所需的顏色資源。關閉使用許多顏色的應用程式，然後重試。
+
+ColorMap*setColorMsgText.value:      不是所有的顏色都會套用到模擬器階段作業。不過，如果選取「儲存」，則會儲存正確的顏色。
+
+ColorMap*setColorFailureCancelBtn.labelString:        取消
+
+ColorMap*invalidColor:   下列的前景及背景顏色太接近：
+
+
+!**********************************
+!**  General Error dialog boxes  **
+!**********************************
+ColorMap*noAdvanced.value:            無法配置顏色資源以提供完整的功能顏色對映。
+
+ColorMap*noAdvancedOkbutton.labelString:  確定
+
+
+!*******************************************************************************
+!**  quitDialog resources                                                     **
+!*******************************************************************************
+ColorMap*quitDialog.dialogTitle:           結束警告
+
+ColorMap*quitDialog1:                      已修改模擬器的顏色，但未套用或儲存。
+
+ColorMap*quitDialog2:                      已修改及套用模擬器的顏色，但未儲存。
+
+ColorMap*quitDialog3:                      已修改及儲存模擬器的顏色，但未套用。
+
+ColorMap*quitDialog*exitBox.labelString:   結束
+
+ColorMap*quitDialog*cancelBox.labelString: 取消
+
+ColorMap*quit1Tog1:                        沒有套用或儲存變更就結束。
+
+ColorMap*quit2Tog1:                        沒有儲存變更就結束。
+
+ColorMap*quitDialog*quitTog2.labelString:  套用及儲存變更後才結束。
+
+ColorMap*quit3Tog1:                        沒有套用變更就結束。
+
+ColorMap*quitTog3.labelString:             將變更套用到此階段作業後才結束。
+
+ColorMap*quitDialog*quitTog4.labelString:  儲存變更後才結束。
+
+
+!*******************************************************************************
+!**  Informational Messages                                                   **
+!*******************************************************************************
+ColorMap*InfoMsgColorsSaved:    儲存到檔案的顏色：
+
+ColorMap*tempApp:               暫時套用到模擬器階段作業的顏色。
+
+ColorMap*notLoaded:             無法載入顏色檔。檢查檔案是否仍然存在。
+
+ColorMap*errorLoad:             顏色檔的格式不正確。
+
+
+! this resource should contain one black space character; do not translate.
+ColorMap*blank:  
+
+ColorMap*chooseApply:           選擇「套用」，使顏色在階段作業中生效。
+
+ColorMap*noAccessDir:           無法存取目錄。
+
+! this cannot be made any longer during translation
+ColorMap*noOpenFile:            無法開啟「顏色對映檔」：
+
+ColorMap*noMakeDir:             無法建立目錄。
+
+ColorMap*noDeterminePath:       無法判斷檔案路徑。

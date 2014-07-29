@@ -8,6 +8,8 @@ import string
 import sys
 import tempfile
 
+from subprocess import check_call
+
 # TCOS modules
 import pytcos.tcos as tcos
 
@@ -47,7 +49,13 @@ for printer in printers_dn:
                 print('No Device string found. Defaulting to /dev/lp0')
                 portdev = '/dev/usb/lp0'
         elif port == 'parallel':
-            portdev = '/dev/parlp'
+	    try:
+	        # load lp module manually
+		ret = check_call(['/sbin/modprobe', 'lp', 'parport=0'])
+            except CalledProcessError as e:
+	        print(e)
+		sys.exit(1)	
+            portdev = '/dev/lp0'
         elif port == 'file':
             portdev = l.getNismapentry(printer, ldap_url).get('Filename', '/tmp/' + 'printserver' + '.dmp')
         else:

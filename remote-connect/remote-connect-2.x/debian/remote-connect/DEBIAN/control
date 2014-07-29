@@ -1,0 +1,14 @@
+Package: remote-connect
+Version: 2.0-9
+Architecture: i386
+Maintainer: Joern Frenzel <j.frenzel@openthinclient.com>
+Installed-Size: 31
+Depends: base
+Section: unknown
+Priority: optional
+Description: allows VNC remote view
+ This packages allows VNC remote view on the client. A password
+ file is generated on the fly. The user can be asked to allow
+ connections and can be allowed to disconnect sessions.
+ Thanks to Karl Runge.
+ See: http://www.karlrunge.com/x11vnc/

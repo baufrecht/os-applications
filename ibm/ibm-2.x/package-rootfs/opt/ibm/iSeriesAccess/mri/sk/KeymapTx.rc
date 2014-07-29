@@ -1,0 +1,1751 @@
+!
+!
+!
+! This file contains the resource text strings for the IBM Network Station 3270, 5250, VTxxx
+! emulators, in particular the keyboard remapping, keypad customize, and playback edit programs.
+
+! This resource file is stored in locale specific ASCII (code page 819 for Latin1 languages).
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. Resource format:
+!    - A resource line starts with one of the following strings:
+!      Keymap52* : for keymapper resources
+!      Keypad52* : for keypad customize resources
+!      Playedit* : for playback editor resources
+!      Keyxxx52* : for resources shared by keymapper and keypad
+!      AllShare* : for resources shared by keymapper, keypad, and playback editor
+!    - Each string is followed by a resource name and a ":".
+!       Do NOT make any changes to the text to the left of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+
+!******************************************************************************
+!************************ BEGIN DO NOT TRANSLATE ******************************
+!******************************************************************************
+!*   The first section of resources are are locale specific but               *
+!*   DO NOT REQUIRE TRANSLATION.                                              *
+!*                                                                            *
+!* This source file enables the resource section for Latin1 and Latin2.       *
+!*                                                                            *
+!* For ru_RU or Latin5 locales and DBCS locales                               *
+!*      1. Place a '!' as the first character in each line in the Latin1      *
+!*      and Latin2 section                                                    *
+!*      2. Remove the '!' character for each resource line in the apropriate  *
+!*      section that matches your locale.                                     *
+!*                                                                            *
+!* For example, ru_RU should place ! in front of all lines in the LATIN1      *
+!* section remove the ! from all lines in the LATIN5 section.                 *
+!******************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN1 and LATIN2                ****************
+!**************************************************************************
+Keypad52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-110-*-*
+Keypad52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-90-*-*
+Keypad52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+Keymap52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-90-*-*
+Keymap52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-70-*-*
+Keymap52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+Playedit*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-90-*-*
+Playedit*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-70-*-*
+Playedit*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+!**************************************************************************
+!****************   END LATIN1 and LATIN2                  ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN5                           ****************
+!**************************************************************************
+!Keypad52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*
+!Keypad52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!Keypad52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!Keymap52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!Keymap52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-70-*-*
+!Keymap52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!Playedit*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!Playedit*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-70-*-*
+!Playedit*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!**************************************************************************
+!****************   END   LATIN5                           ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (ja_JP ko_KR zh_CN)   ****************
+!**************************************************************************
+!Keypad52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*
+!Keypad52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!Keypad52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*
+!Keymap52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*
+!Keymap52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!Keymap52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*
+!Playedit*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*
+!Playedit*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!Playedit*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*
+!**************************************************************************
+!****************   END DBCS (ja_JP ko_KR zh_CN)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (zh_TW)   ****************
+!**************************************************************************
+!Keypad52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Keypad52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Keypad52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Keymap52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Keymap52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Keymap52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Playedit*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Playedit*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Playedit*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!**************************************************************************
+!****************   END DBCS (zh_TW)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   END DO NOT TRANSLATE                   ****************
+!**************************************************************************
+
+
+! ********************************************************************************
+! Keyboard Remapping Resources
+! ********************************************************************************
+!
+! In general, the following buttons should not be made much longer during translation.
+! Buttons have one to four words. Note: Testing is the only way to know for sure if all
+! buttons fit on the screen ok.  The emulators have a testing document that will be used
+! during testing; this will point out a problem if button text is too long. In many
+! cases, buttons are presented side by side, where the total button text length cannot
+! increase significantly.
+Keymap52*key.labelString:  Aktuálny kláves
+!
+Keymap52*title:  Premapovanie klávesnice
+!
+Keymap52*iname5250:  Mapa klávesov 5250
+!
+Keymap52*iname3270:  Mapa klávesov 3270
+!
+Keymap52*inameNSTERM:  Mapa klávesov emulátora VT
+!
+AllShare*fileSaveButton.labelString:  Ulo¾i»
+!
+Keymap52*fileDeleteButton.labelString:  Vymaza»
+!
+Keymap52*applyTranslationsButton.labelString:  Pou¾i» zmenu pre reláciu
+!
+AllShare*fileQuitButton.labelString:  Ukonèi»
+!
+AllShare*helpPush.labelString:  Pomoc
+!
+AllShare*lowMemMsgDialog.messageString:  Nedostatok pamäte na spustenie Prezeraèa pomoci
+!
+AllShare*quitDialog.dialogTitle:  Upozornenie pri ukonèení
+!
+! Note: \n causes a new line in the dialogue box and should not be translated.
+! You can move, add, or remove \n within this text string.
+Keymap52*invalidExt.value: Nesprávne alebo chýbajúce roz¹írenie názvu súboru mapy klávesov.\n\
+Automaticky bolo pridané správne roz¹írenie. \n\
+Pozrite si nový názov súboru a roz¹írenie v oblasti správ.
+!
+Keymap52*invalidExtOkButton.labelString:  OK
+!
+Keymap52*invalidFileName.value:  Zadali ste znak, ktorý názov súboru nemô¾e obsahova».
+!
+Keymap52*invalidFileNameOkbutton.labelString:  OK
+!
+Keymap52*noKeyCaps.value: Program premapovania klávesnice nebol zaktualizovaný pre vá¹ typ klávesnice. Text pre klávesy na grafickej klávesnici bude zobrazený v angliètine.
+!
+Keymap52*noKeyCapOkbutton.labelString:  OK
+!
+Keymap52*EBCMismatchText.value: Jazyk relácie emulátora, ktorá vyvolala program Premapovanie klávesnice sa nezhoduje s jazykom sie»ovej stanice IBM.  Znaky a re»azce vytvorené týmto programom premapovania mô¾u spôsobi» ne¾elané výsledky v relácii emulátora.
+!
+Keymap52*mismatchOKbutton.labelString:  OK
+!
+Keymap52*poorResolutionMsgText.value:   Rozlí¹enie vá¹ho monitora je men¹ie ako 800x600. Premapovanie klávesnice nie je podporované na monitoroch s rozlí¹ením men¹ím ako 800x600.
+!
+Keymap52*keymapFailureCancelBtn.labelString:  Zru¹i»
+!
+Keymap52*saveDialog.dialogTitle:  Ulo¾i» premapovanie klávesnice
+!
+Keymap52*saveBoxLabel*labelString:  Vyberte miesto na ulo¾enie zmien premapovania klávesnice:
+!
+Keymap52*saveBoxToggle1.labelString:  Ulo¾i» ako predvolené pre v¹etky va¹e relácie
+!
+Keymap52*saveBoxToggleNsterm1.labelString:      Ulo¾i» ako predvolené pre tento typ terminálu
+!
+Keymap52*saveBoxToggle2.labelString:  Ulo¾i» len pre túto reláciu
+!
+Keymap52*saveBoxToggle3.labelString:  Ulo¾i» ako pomenovaný mapovací súbor klávesov (len administrátor)
+!
+AllShare*saveBoxSaveBtn.labelString:  Ulo¾i»
+!
+AllShare*saveBoxCancelBtn.labelString:  Zru¹i»
+!
+Keymap52*fileNameSaveBoxLabel.labelString:  Zadajte názov mapovacieho súboru klávesov:
+!
+Keymap52*fileDeleteDialog.dialogTitle:  Vymaza» súbor premapovania klávesnice
+!
+Keymap52*fileDeleteBoxLabel*labelString:  Vyberte súbory na vymazanie:
+!
+KeyXXX52*fileDeleteBoxLabelAlt*labelString:  ®iadne súbory na vymazanie:
+!
+KeyXXX52*fileDeleteBoxDeleteBtn.labelString:  Vymaza»
+!
+KeyXXX52*fileDeleteBoxCancelBtn.labelString:  Zru¹i»
+!
+KeyXXX52*fileDeleteVerifyDialog.dialogTitle:  Potvrdenie vymazania
+!
+KeyXXX52*fileDeleteVerifyDialog.okLabelString:  OK
+!
+KeyXXX52*fileDeleteVerifyDialog.cancelLabelString:  Zru¹i»
+
+! this cannot be much longer
+KeyXXX52*noundoDelete:  Vymazanie súborov sa nedá vráti» spä». Chcete ich naozaj vymaza»?
+!
+KeyXXX52*novalidDelete:  Nie sú vybraté ¾iadne súbory. Vymazanie je neplatné.
+!
+Keymap52*fileWarningDialog.dialogTitle:  Upozornenie pre mapovanie klávesov
+!
+AllShare*fileWarningDialog.okLabelString:  Áno
+!
+AllShare*fileWarningDialog.cancelLabelString:  Nie
+!
+AllShare*fileAlreadyExists:  Súbor u¾ existuje. Chcete ho prepísa»?
+!
+Keymap52*transTempApp:  Zmeny premapovania klávesnice boli doèasne pou¾ité pre reláciu.
+!
+AllShare*nomakeDir:  Nedá sa vytvori» adresár.
+!
+AllShare*nofilepathSave:  Nedá sa urèi» cesta k súboru.
+!
+Keymap52*transRxd:  Z relácie emulátora bola získaná originálna mapa klávesnice.
+!
+Keymap52*saveTran:  Ukladanie súboru premapovania klávesnice...
+!
+Keymap52*savetoTranError:  Chyba poèas ukladania súboru premapovania klávesnice... Súbor sa neulo¾il.
+!
+Keymap52*savedtoTran:   Súbor premapovania klávesnice sa ulo¾il do:
+!
+Keymap52*quitDialog1:  Mapa klávesnice bola upravená, ale nie je pou¾itá ani ulo¾ená.
+!
+Keymap52*quit1Tog1:  Ukonèi» bez pou¾itia alebo ulo¾enia zmien.
+!
+Keymap52*quit1Tog2:  Pred ukonèením pou¾i» a ulo¾i» zmeny.
+!
+Keymap52*quitDialog2:  Mapa klávesnice bola upravená a pou¾itá, ale nie je ulo¾ená.
+!
+Keymap52*quit2Tog1:  Ukonèi» bez ulo¾enia, vráti» zmeny vykonané v mape klávesnice.
+!
+Keymap52*quit2Tog2:  Ukonèi» bez ulo¾enia, zmeny ponecha» doèasne pou¾ité na reláciu.
+!
+Keymap52*quitDialog3:  Mapa klávesnice bola upravená a ulo¾ená, ale nie je pou¾itá.
+!
+Keymap52*quit3Tog1:  Ukonèi» bez pou¾itia zmien.
+!
+Keymap52*quitTog3.labelString:  Pred ukonèením pou¾i» zmeny pre túto reláciu.
+!
+AllShare*quitDialog*quitTog4.labelString:  Pred ukonèením ulo¾i» zmeny.
+!
+AllShare*quitDialog*exitBox.labelString:  Ukonèi»
+!
+AllShare*quitDialog*cancelBox.labelString:  Zru¹i»
+!
+Keymap52*undoDialog.dialogTitle:  Dialógové okno Obnova
+!
+Keymap52*undoDialog1.labelString:  Vyberte stav mapovania klávesnice, ktorý sa má obnovi».
+!
+Keymap52*undoDialog*undoBox.labelString:  OK
+!
+Keymap52*undoDialog*cancelBox.labelString:  Zru¹i»
+!
+Keymap52*restoreWarning.dialogTitle:  Správa o ukonèení
+!
+Keymap52*restoreWarning.okLabelString:  OK
+
+! this cannot be made much longer during translation
+Keymap52*restoreWarning.messageString:  Premapovanie klávesnice pre túto reláciu bolo obnovené na pôvodnú hodnotu.
+!
+Keymap52*nonValidDialog.dialogTitle:  Upozoròujúca správa
+!
+KeyXXX52*nonValidDialog.okLabelString:  OK
+!
+Keymap52*nonValidDialog.messageString:  Jedna alebo viacero akcií pre tento kláves je neplatných.
+!
+Keymap52*reservedtrans.dialogTitle:  Upozoròujúca správa
+!
+Keymap52*reservedtrans.okLabelString:  OK
+
+! this cannot be made much longer during translation
+Keymap52*reservedtrans.messageString:  Stlaèenia klávesov, vyhradené pre Správcu okien sa nedajú premapova».
+!
+Keymap52*lastButton.labelString:  Obnovi» mapu klávesnice z posledného pou¾itia
+!
+Keymap52*origButton.labelString:  Obnovi» originálnu mapu klávesnice
+
+! this cannot be made much longer during translation
+Keymap52*lastRest:  Premapovanie klávesnice bolo obnovené na hodnoty, ktoré boli naposledy pou¾ité pre reláciu.
+!
+Keymap52*origRest:  Premapovanie klávesnice bolo obnovené na pôvodnú hodnotu.
+!
+Keymap52*noRest:  Nie sú vybraté ¾iadne voµby obnovy, nevykonali sa ¾iadne zmeny.
+!
+Keymap52*fileDeleted:  Vybraté súbory premapovania klávesnice boli vymazané.
+
+! this resource has been left intentionally blank, do not translate.
+Keymap52*blank:
+!
+Keymap52*basePb.labelString:  -> Základ
+!
+AllShare*changePb.labelString:  OK
+!
+AllShare*cancelPb.labelString:  Zru¹i»
+!
+AllShare*actionHelp.labelString: Pomoc pre akciu
+!
+AllShare*actionListLabel.labelString:  Zoznam dostupných akcií:
+!
+AllShare*charListLabel.labelString:  Zoznam znakov:
+!
+AllShare*actionDef.labelString:  Definícia akcie:
+!
+AllShare*printActionDefTitle:  Dostupné definície akcií
+!
+Keymap52*restorePB.labelString:  Obnovi»
+
+! this cannot be made any longer during translation.
+Keymap52*locatePB.labelString:  Vyhµada»
+
+! this cannot be made any longer during translation.
+Keymap52*nothingTB.labelString:  ®iadna akcia
+!
+Keymap52*translistdialog.dialogTitle:  Roz¹írené premapovanie klávesnice
+!
+Keymap52*noRemPass:  Neplatná operácia, pasívne mapovania klávesov sa nedajú odstráni».
+!
+Keymap52*searchFailed:  Hµadanie zlyhalo, v mape klávesnice sa nena¹li ¾iadne vyhovujúce akcie.
+!
+Keymap52*searchSuccess:  Hµadanie bolo úspe¹né...
+!
+Keymap52*searchSemi:  Hµadanie bolo úspe¹né..., kláves pre túto akciu je nedostupný.
+!
+Keymap52*noSearchMsg:  Nedá sa vykona» hµadanie, nie je vybratá platná akcia.
+!
+Keymap52*nonStand:  Pre tento kláves existuje minimálne jeden preklad, ktorý sa nedá zobrazi».
+!
+Keymap52*change.dialogTitle:  Upozornenie pre mapovanie klávesov
+!
+KeyXXX52*change.messageString:  Akceptujte alebo zru¹te zmeny pre aktuálny kláves pred zobrazením iného.
+!
+KeyXXX52*change.okLabelString:  Pokraèova»
+!
+Keymap52*editb.labelString:  Upravi»
+!
+Keymap52*insertb.labelString:  Vlo¾i»
+!
+Keymap52*removeb.labelString:  Odstráni»
+!
+Keymap52*closeb.labelString:  Zatvori»
+!
+Keymap52*editDialog.dialogTitle:  Dialógové okno Upravi»
+!
+Keymap52*editDialog*editLabel.labelString:  Upravte preklad dole:
+!
+Keymap52*editDialog*okButton.labelString:  OK
+!
+Keymap52*editDialog*clearButton.labelString:  Vyèisti»
+!
+Keymap52*editDialog*cancelButton.labelString:  Zru¹i»
+!
+Keymap52*Any:  -> Základ
+!
+Keymap52*Shift:  -> Shift
+!
+Keymap52*Lock:  -> Caps Lock
+!
+Keymap52*Lock122:  -> Shift Lock
+!
+Keymap52*Ctrl:  -> µavý Ctrl
+!
+Keymap52*CtrlNsterm: -> Ctrl
+!
+Keymap52*Alt:  -> Alt
+!
+Keymap52*Mod2:  -> Alt(Gr)
+!
+Keymap52*Mod3:  -> APL/Super
+!
+Keymap52*Mod4:  -> Mod4
+!
+Keymap52*Mod5:  -> Num Lock
+!
+Keymap52*Shift_Alt:  -> Shift Alt
+!
+Keymap52*cantdothat.dialogTitle:  Upozornenie pre mapovanie klávesov
+!
+Keymap52*cantdothat.messageString:  Akceptujte alebo zru¹te zmeny pre aktuálny kláves pred výberom voµby z li¹ty akcií.
+!
+KeyXXX52*cantdothat.okLabelString:  Pokraèova»
+!
+Keymap52*chooseApply:  Vyberte Pou¾i», aby zmeny nadobudli úèinnos» v relácii.
+!
+Keymap52*transListLabel.labelString:  Zoznam prekladov:
+!
+Keymap52*seeHelpLabel.labelString:  Pred vykonaním roz¹írených zmien si pozrite pomoc.
+!
+Keymap52*keyAction.labelString:  Kláves/akcia
+!
+Keymap52*nomapmod:  Modifikátory sa nedajú premapova».
+!
+AllShare*toobig:  Operácia zru¹ená, je prekroèená maximálna då¾ka akcie.
+!
+Keymap52*currKeyLabel.labelString:  Aktuálny kláves:
+!
+AllShare*printKeymap.labelString:  Vytlaèi»
+!
+AllShare*printDialogCancelButton.labelString:  Zru¹i»
+!
+AllShare*printDialogBoxLabel.labelString:  Vyberte voµby pre tlaè
+!
+AllShare*printDialogPrintCommandLabel.labelString: Príkaz tlaèe:
+!
+AllShare*printDialogSelectPrinter.labelString:  Vyberte tlaèiareò:
+!
+AllShare*PrinterSelectServerDelineator:  @
+!
+AllShare*PrinterSelectLocalDesignator:  (lokálna)
+!
+AllShare*ActionHelpPrinted:  Vytlaèené definície pomoci k akciám
+!
+AllShare*printDialogPrintInProgress.labelString:  Prebieha tlaè...
+!
+AllShare*okLabelString:  OK
+!
+AllShare*cancelLabelString:  Zru¹i»
+!
+! Start Action list translations (to be shared by keypad customizer and keymapper).
+!
+! Rules for translating actions:
+! 1) Action text (to the right of the ":") is translated
+! 2) All actions need to end in ()
+! 3) Action text may not contain spaces
+! 4) Action text may be separated by capitals or underscores (_)
+! 5) Because actions are cross-referenced, each translated action must be unique
+! 6) Action text should be a maximum of 29 characters, not counting the () characters
+!
+!    ValidActionText()
+!    InvalidActionText
+!    ValidActionText()
+!    Valid_Action_Text()
+!    Invalid Action Text()
+!
+!    Valid Unique action names:
+!    Keyxxx52*tab():  Tab()
+!    Keyxxx52*backtab():  BackTab()
+!    Keyxxx52*tabadvancefunction():  TabAdvance()
+!    Keyxxx52*tabfunction():  OfficeTabFunction()
+!
+!    Invalid action names, not unique:
+!    Keyxxx52*tab():  Tab()
+!    Keyxxx52*backtab():  Tab()
+!    Keyxxx52*tabadvancefunction():  Tab()
+!    Keyxxx52*tabfunction():  Tab()
+!
+! Each action is followed by an action definition (to the right of the ":") which is translated
+!
+Keyxxx52*nothing():  NoAction()
+AllShare*DEFnothing():  Táto akcie niè nevykonáva a pou¾íva sa na zobrazenie prázdnej akcie.
+!
+Keyxxx52*ruleline():  RuleLine()
+AllShare*DEFruleline():  Prepína stav zobrazenia vodiacej èiary medzi zobrazeným a nezobrazeným. Vodiaca èiara mô¾e pomôc» nájs» kurzor. Rôzne preferencie mô¾u povoli» (predvolené nastavenie) alebo zakáza» funkciu vodiacej èiary a zmeni» ¹týl vodiacej èiary.
+!
+AllShare*string():  String()
+AllShare*DEFstring():  Zobrazí znak alebo re»azec znakov na pozícii kurzora. Formát pre akciu je String("text"). Dvojité úvodzovky (") sú vy¾adované a 'text' by mal by» zobrazený znak alebo znaky. String() sa pou¾íva na vytváranie klávesnicových makier.
+!
+Keyxxx52*play():  Play()
+AllShare*DEFplay():  Akcia Play() zobrazí okno prehrávania, z ktorého mô¾ete spusti» prehrávací súbor. Akcia Play() tie¾ podporuje názov prehrávacieho súboru ako parameter (medzi zátvorkami); prehrávací súbor sa spustí automaticky.
+!
+Keyxxx52*record():  Record()
+AllShare*DEFrecord():  Zobrazí okno Zaznamena» na spustenie zaznamenávania postupnosti na prehratie.
+!
+AllShare*pause():  Pause()
+AllShare*DEFpause():  Pozastaví prehrávanie prehrávacieho súboru alebo zaznamenávanie prehrávacieho súboru. U¾ívateµ vyberie Pokraèova», ak chce pokraèova» v prehrávaní alebo zaznamenávaní.
+!
+AllShare*local-screen-print():  ScreenPrint()
+AllShare*DEFlocal-screen-print():  Zobrazí okno tlaèe obrazovky pre vytlaèenie aktuálnej obrazovky.
+!
+Keyxxx52*print-screen-now():  PrintScreenNow()
+AllShare*DEFprint-screen-now():  Vytlaèí aktuálnu obrazovku pomocou volieb poslednej tlaèe a poslednej pou¾itej tlaèiarne.
+!
+AllShare*extended():  DisplayAttributes()
+AllShare*DEFextended():  Zobrazí v¹etky atribúty polí na obrazovke.
+!
+AllShare*up():  CursorUp()
+AllShare*DEFup():  Posunie kurzor nahor o jednu pozíciu kurzora.
+!
+AllShare*down():  CursorDown()
+AllShare*DEFdown():  Posunie kurzor nadol o jednu pozíciu kurzora.
+!
+AllShare*left():  CursorLeft()
+AllShare*DEFleft():  Posunie kurzor doµava o jednu pozíciu kurzora.
+!
+AllShare*right():  CursorRight()
+AllShare*DEFright():  Posunie kurzor doprava o jednu pozíciu kurzora.
+!
+AllShare*fastleft():  FastCursorLeft()
+AllShare*DEFfastleft():  Posunie kurzor doµava o tri pozície kurzora.
+!
+AllShare*fastright():  FastCursorRight()
+AllShare*DEFfastright():  Posunie kurzor doprava o tri pozície kurzora.
+!
+AllShare*newline():  Newline()
+AllShare*DEFnewline():  Presunie kurzor na zaèiatok vstupného poµa na ïal¹í riadok.
+!
+AllShare*home():  Home()
+AllShare*DEFhome():  Presunie kurzor na zaèiatoènú pozíciu (zvyèajne prvá pozícia vstupného poµa na obrazovke) a niekedy po¹le do hostiteµského systému kód \
+Home AID.
+!
+AllShare*tab():  Tab()
+AllShare*DEFtab():  Presunie kurzor do ïal¹ieho vstupného poµa.
+!
+AllShare*backtab():  BackTab()
+AllShare*DEFbacktab():  Ak je kurzor na prvej pozícii vstupného poµa alebo vo výstupnej oblasti, kurzor sa presunie na prvú pozíciu predo¹lého vstupného poµa. Ak je kurzor vo vstupnom poli a nie je na prvej pozícii vstupného poµa, kurzor sa presunie na prvú pozíciu vstupného poµa.
+!
+AllShare*end():  EndOfLine()
+AllShare*DEFend():  Presunie kurzor za posledný nenulový alebo neprázdny znak vo vstupnom poli.
+!
+AllShare*tabadvancefunction():  TabAdvance()
+AllShare*DEFtabadvancefunction():  Presunie kurzor na ïal¹ie logické vstupné pole.
+!
+AllShare*insert():  Insert()
+AllShare*DEFinsert():  Aktivuje re¾im vkladania.
+!
+AllShare*delete():  Delete()
+AllShare*DEFdelete():  Vyma¾e (odstráni) znak na pozícii kurzora.
+!
+AllShare*backspace():  Backspace()
+AllShare*DEFbackspace():  Presunie kurzor spä» o jednu pozíciu kurzora a mô¾e vymaza» znak pred kurzorom. Rôzne preferencie mô¾u povoli» alebo zakáza» vymazanie znaku pri akcii Backspace.
+!
+AllShare*erase-eof():  ErasetoEnd()
+AllShare*DEFerase-eof():  Odstráni v¹etky znaky od pozície kurzora po koniec poµa.
+!
+AllShare*erase-input():  EraseInputFields()
+AllShare*DEFerase-input():  Vyèistí v¹etky vstupné polia na obrazovke.
+!
+AllShare*dup():  Dup()
+AllShare*DEFdup():  Vyplní aktuálne pole znakom dup od kurzora po koniec poµa.
+!
+AllShare*field-mark():  FieldMark()
+AllShare*DEFfield-mark():  Oznaèí pole znakom na oznaèenie poµa.
+!
+AllShare*pf1():  PF1()
+AllShare*DEFpf1():  Vykoná definovanú akciu klávesu F1.
+!
+AllShare*pf2():  PF2()
+AllShare*DEFpf2():  Vykoná definovanú akciu klávesu F2.
+!
+AllShare*pf3():  PF3()
+AllShare*DEFpf3():  Vykoná definovanú akciu klávesu F3.
+!
+AllShare*pf4():  PF4()
+AllShare*DEFpf4():  Vykoná definovanú akciu klávesu F4.
+!
+AllShare*pf5():  PF5()
+AllShare*DEFpf5():  Vykoná definovanú akciu klávesu F5.
+!
+AllShare*pf6():  PF6()
+AllShare*DEFpf6():  Vykoná definovanú akciu klávesu F6.
+!
+AllShare*pf7():  PF7()
+AllShare*DEFpf7():  Vykoná definovanú akciu klávesu F7.
+!
+AllShare*pf8():  PF8()
+AllShare*DEFpf8():  Vykoná definovanú akciu klávesu F8.
+!
+AllShare*pf9():  PF9()
+AllShare*DEFpf9():  Vykoná definovanú akciu klávesu F9.
+!
+AllShare*pf10():  PF10()
+AllShare*DEFpf10():  Vykoná definovanú akciu klávesu F10.
+!
+AllShare*pf11():  PF11()
+AllShare*DEFpf11():  Vykoná definovanú akciu klávesu F11.
+!
+AllShare*pf12():  PF12()
+AllShare*DEFpf12():  Vykoná definovanú akciu klávesu F12.
+!
+AllShare*pf13():  PF13()
+AllShare*DEFpf13():  Vykoná definovanú akciu klávesu F13.
+!
+AllShare*pf14():  PF14()
+AllShare*DEFpf14():  Vykoná definovanú akciu klávesu F14.
+!
+AllShare*pf15():  PF15()
+AllShare*DEFpf15():  Vykoná definovanú akciu klávesu F15.
+!
+AllShare*pf16():  PF16()
+AllShare*DEFpf16():  Vykoná definovanú akciu klávesu F16.
+!
+AllShare*pf17():  PF17()
+AllShare*DEFpf17():  Vykoná definovanú akciu klávesu F17.
+!
+AllShare*pf18():  PF18()
+AllShare*DEFpf18():  Vykoná definovanú akciu klávesu F18.
+!
+AllShare*pf19():  PF19()
+AllShare*DEFpf19():  Vykoná definovanú akciu klávesu F19.
+!
+AllShare*pf20():  PF20()
+AllShare*DEFpf20():  Vykoná definovanú akciu klávesu F20.
+!
+AllShare*pf21():  PF21()
+AllShare*DEFpf21():  Vykoná definovanú akciu klávesu F21.
+!
+AllShare*pf22():  PF22()
+AllShare*DEFpf22():  Vykoná definovanú akciu klávesu F22.
+!
+AllShare*pf23():  PF23()
+AllShare*DEFpf23():  Vykoná definovanú akciu klávesu F23.
+!
+AllShare*pf24():  PF24()
+AllShare*DEFpf24():  Vykoná definovanú akciu klávesu F24.
+!
+AllShare*clear():  Clear()
+AllShare*DEFclear():  Po¹le kód Clear AID do hostiteµského systému.
+!
+AllShare*enter():  Enter()
+AllShare*DEFenter():  Vykoná akciu Enter na zadanie vstupu.
+!
+AllShare*pa1():  PA1()
+AllShare*DEFpa1():  Po¹le kód PA1 AID do hostiteµského systému.
+!
+AllShare*pa2():  PA2()
+AllShare*DEFpa2():  Po¹le kód PA2 AID do hostiteµského systému.
+!
+AllShare*pa3():  PA3()
+AllShare*DEFpa3():  Po¹le kód PA3 AID do hostiteµského systému.
+!
+AllShare*sysreq():  SystemRequest()
+AllShare*DEFsysreq():  Po¹le System Request AID do hostiteµského systému.
+!
+AllShare*reset():  Reset()
+AllShare*DEFreset():  Vynuluje chybu.
+!
+AllShare*hex-entry():  HexMode()
+AllShare*DEFhex-entry():  Nastaví re¾im pre ïal¹ie dve stlaèenia klávesov na vytvorenie znaku EBCDIC. Stlaèené klávesy musia by» od 0 do 9 alebo od a do f.
+!
+AllShare*hex():  Hex()
+AllShare*DEFhex():  Vy¾aduje dvojitú hodnotu kódového bodu znaku ako parameter (medzi zátvorkami). Dvojitá hodnota znaku (00 a¾ ff) je znak z kódovej stránky \
+ASCII 819.
+!
+AllShare*cursor-select():  CursorSelect()
+AllShare*DEFcursor-select():  Vyberie pole obsahujúce kurzor.
+!
+AllShare*attention():  Attention()
+AllShare*DEFattention():  Po¹le kód Attention AID do hostiteµského systému.
+!
+AllShare*print():  SystemPrint()
+AllShare*DEFprint():  Po¹le kód Print AID do hostiteµského systému.
+!
+AllShare*scroll_image_up(): ScrollImageUp()
+AllShare*DEFscroll_image_up():  Roluje nahor zobrazený obrázok.
+!
+AllShare*scroll_image_down():   ScrollImageDown()
+AllShare*DEFscroll_image_down():  Roluje nadol zobrazený obrázok.
+!
+AllShare*scroll_image_right():  ScrollImageRight()
+AllShare*DEFscroll_image_right():  Roluje doprava zobrazený obrázok.
+!
+AllShare*scroll_image_left():   ScrollImageLeft()
+AllShare*DEFscroll_image_left():  Roluje doµava zobrazený obrázok.
+!
+AllShare*help():  SystemHelp()
+AllShare*DEFhelp():  Po¹le kód help AID do hostiteµského systému.
+!
+AllShare*rolldown():  PageUp()
+AllShare*DEFrolldown():  Posunie obrazovku na stranu nad aktuálnou stranou.
+!
+AllShare*rollup():  PageDown()
+AllShare*DEFrollup():  Posunie obrazovku na stranu pod aktuálnou stranou.
+!
+AllShare*fieldexit():  FieldExit()
+AllShare*DEFfieldexit():  Spraví presun na zaèiatok ïal¹ieho poµa na obrazovke.
+!
+AllShare*fieldplus():  FieldPlus()
+AllShare*DEFfieldplus():  Spraví presun na zaèiatok ïal¹ieho poµa na obrazovke.
+!
+AllShare*fieldminus():  FieldMinus()
+AllShare*DEFfieldminus():  Spraví hodnotu poµa zápornou a vykoná presun na ïal¹ie pole.
+!
+AllShare*testreq():  TestRequest()
+AllShare*DEFtestreq():  Po¹le kód Test Request AID do hostiteµského systému.
+!
+! Note: Office actions are used within the AS/400 OfficeVision editor.
+AllShare*tabfunction():  OfficeTabFunction()
+AllShare*DEFtabfunction():  V editore OV/400, vlo¾í znak tabulátora na pozíciu kurzora.
+!
+AllShare*textcarrierreturn():  OfficeCarrierReturn()
+AllShare*DEFtextcarrierreturn():  V editore OV/400, vlo¾í návrat vozíka na aktuálne umiestnenie kurzora.
+!
+AllShare*textrqtabfunction():  OfficeRequiredTabFunction()
+AllShare*DEFtextrqtabfunction():  V editore OV/400, umiestni vy¾adovaný tabulátor na aktuálnu pozíciu kurzora. Vy¾adované tabulátory definujú doèasné odsadenie, ktoré zostane úèinné do ukonèenia pomocou ukonèenia odseku (vy¾adovaný návrat vozíka).
+!
+AllShare*textunderscore():  OfficeStartUnderline()
+AllShare*DEFtextunderscore():  V editore OV/400, zaène podèiarkovanie na aktuálnom umiestnení kurzora.
+!
+AllShare*textintensify():  OfficeStartBold()
+AllShare*DEFtextintensify():  V editore OV/400, zaène zvýraznený text na aktuálnom umiestnení kurzora.
+!
+AllShare*textendattribute():  OfficeEndUnderlineOrBold()
+AllShare*DEFtextendattribute():  V editore OV/400, ukonèi» aktívny efekt podèiarknutia alebo zvýraznenia.
+!
+AllShare*textsymbolscmdprompt():  OfficeInsertSpecialCharacters()
+AllShare*DEFtextsymbolscmdprompt():  V editore OV/400, zobrazi» výzvu na zadanie symbolov, ktoré nie sú dostupné z klávesnice.
+!
+AllShare*textrqspace():  OfficeRequiredSpace()
+AllShare*DEFtextrqspace():  V editore OV/400, umiestni vy¾adovanú medzeru na aktuálne umiestnenie kurzora. Vy¾adovaná medzera sa zobrazí ako znak medzery, ale dve slová oddelené touto medzerou budú v¾dy spolu na rovnakom riadku.
+!
+AllShare*texttopofpage():  OfficeTopOfPage()
+AllShare*DEFtexttopofpage():  V editore OV/400, presunú» kurzor (a podµa mo¾nosti prestavi» obrazovku) na zaèiatok aktuálne zobrazenej strany.
+!
+AllShare*textbottomofpage():  OfficeBottomOfPage()
+AllShare*DEFtextbottomofpage():  V editore OV/400, presunú» kurzor (a podµa mo¾nosti prestavi» obrazovku) naspodok aktuálne zobrazenej strany.
+!
+AllShare*textbeginofline():  OfficeBeginningOfLine()
+AllShare*DEFtextbeginofline():  V editore OV/400, presunú» kurzor na zaèiatok aktuálneho textového riadka.
+!
+AllShare*textpageend():  OfficeInsertPageEnd()
+AllShare*DEFtextpageend():  V editore OV/400, vlo¾i» znak konca strany. Toto zaène novú stranu textu.
+!
+AllShare*textstopcodefunction():  OfficeStopCodeInsert()
+AllShare*DEFtextstopcodefunction():  V editore OV/400, zobrazi» príkazový riadok, ktorý dovoµuje definova» nový kód zastavenia na aktuálnom umiestnení kurzora.
+!
+AllShare*textstopcodeadvance():  OfficeStopCodeAdvance()
+AllShare*DEFtextstopcodeadvance():  V editore OV/400, presunú» kurzor na ïal¹í kód zastavenia v dokumente.
+!
+AllShare*textaltd():  OfficeNextTextColumn()
+AllShare*DEFtextaltd():  V editore OV/400, vlo¾i» riadiaci prvok, ktorý zaène nový textový ståpec na umiestnení kurzora. Táto funkcia je aktívna len pri úprave viacerých textových ståpcov.
+!
+AllShare*textcent():  OfficeCenter()
+AllShare*DEFtextcent():  V editore OV/400, centrova» riadok textu, ktorý obsahuje kurzor.
+!
+AllShare*textwordunderscore():  OfficeWordUnderscore()
+AllShare*DEFtextwordunderscore():  V editore OV/400, umiestni» riadiaci prvok podèiarknutia na aktuálne umiestnenie kurzora. Tento kurzor by mal by» na konci textu na podèiarknutie, efekt podèiarknutia sa roz¹íri od zaèiatku aktuálneho slova po umiestnenie kurzora.
+!
+AllShare*texthalfindexup():  OfficeHalfIndexUp()
+AllShare*DEFtexthalfindexup():  V editore OV/400, umiestni» riadiaci prvok polovièného horného indexu (superscript) na aktuálne umiestnenie kurzora. Polovièný horný index zostane aktívny po ïal¹í riadiaci prvok polovièného dolného indexu.
+!
+AllShare*texthalfindexdown():  OfficeHalfIndexDown()
+AllShare*DEFtexthalfindexdown():  V editore OV/400, umiestni» riadiaci prvok polovièného dolného indexu (subscript) na aktuálne umiestnenie kurzora. Polovièný dolný index zostane aktívny po ïal¹í riadiaci prvok polovièného horného indexu.
+!
+AllShare*displaytextsymb():  OfficeDisplaySymbols()
+AllShare*DEFdisplaytextsymb():  V editore OV/400, zobrazi» riadiace znaky, ktoré normálne nie sú zobrazené.  Patria sem znaky tabulátora, vy¾adovaného tabulátora, návratu vozíka, vy¾adovaného návratu vozíka, vy¾adovanej medzery a konca strany.
+!
+AllShare*kanji():  InsertSOandSI()
+AllShare*DEFkanji():  Vlo¾í znak DBCS shift out a shift in (pou¾íva sa v japonských, kórejských a èínskych jazykoch).
+!
+!//@bd_GBR1 start
+AllShare*lklayer():  LatinLayer()
+AllShare*DEFlklayer():  Nastaví jazyk klávesnice na Latin.
+!
+AllShare*nklayer():  BidiLayer()
+AllShare*DEFnklayer():  Nastaví jazyk klávesnice na národný jazyk (pou¾íva sa pri arabských a hebrejských jazykoch).
+!//@bd_GBR1 end
+! //@bd_GBR1 rename AllShare*reverse():  ReverseCursor()
+AllShare*reverse():  FieldReverse()
+AllShare*DEFreverse():  Obráti smer kurzora v poli a vyberie opaènú jazykovú vrstvu pre stláèanie klávesov (pou¾íva sa v arabských a hebrejských jazykoch).
+!
+AllShare*close():  CloseBIDIData()
+AllShare*DEFclose():  Zatvorí údaje v poli odstránením vlo¾ených medzier a posunie údaje smerom k logickému zaèiatku poµa (pou¾íva sa v arabských a hebrejských jazykoch).
+!
+AllShare*base():  BaseShape()
+AllShare*DEFbase():  Prepína arabské tvarovanie medzi zapnutým a vypnutým stavom (pou¾íva sa v arabských jazykoch).
+!
+AllShare*charadvance():  CharacterAdvance()
+AllShare*DEFcharadvance():  Presunie kurzor na ïal¹iu logickú pozíciu na obrazovke.
+!
+AllShare*displaySOSI():  DisplaySOandSI()
+AllShare*DEFdisplaySOSI():  Zobrazí v¹etky znaky shift out a shift in na obrazovke (pou¾íva sa v japonských, kórejských a èínskych jazykoch).
+!
+AllShare*reverse-scn():  ReverseScreen()
+AllShare*DEFreverse-scn():  Otoèí zobrazenie na obrazovke (pou¾íva sa pre arabské a hebrejské jazyky).
+!
+AllShare*EBChex():  EBCDICHexEntry()
+AllShare*DEFEBChex():  Dovoµuje pou¾itie kódových bodov EBCDIC na zadávanie údajov (pou¾íva sa v japonských, kórejských a èínskych jazykoch).
+!
+AllShare*AltView():  AlternateView()
+AllShare*DEFAltView():  Dovoµuje zobrazenie japonských údajov v alternatívnej kódovej stránke.
+!
+Keyxxx52*noop():  NoAction()
+AllShare*DEFnoop():  Táto akcie niè nevykonáva a pou¾íva sa na zobrazenie prázdnej akcie.
+!
+! There are no parentheses after Undefined, making this action different than other actions.
+Keyxxx52*undefined():  Nedefinované
+!
+AllShare*cursor-move():  MoveCursor()
+AllShare*DEFcursor-move():  Presunie kurzor na zadanú pozíciu na obrazovke.
+!
+AllShare*forward-word():  NextWord()
+AllShare*DEFforward-word():  Presunie kurzor na zaèiatok ïal¹ieho slova.
+!
+AllShare*backward-word():  PreviousWord()
+AllShare*DEFbackward-word():  Presunie kurzor na zaèiatok predo¹lého slova.
+!
+AllShare*spbackspace():  AlternateBackspace()
+AllShare*DEFspbackspace():  Vykoná podobnú akciu ako BackSpace(). Znaky napravo od kurzora sa presunú len v prípade, ak je aktívny re¾im vkladania.
+!
+AllShare*kill-word():  DeleteRemainderofWord()
+AllShare*DEFkill-word():  Vyma¾e znaky od kurzora po koniec slova.
+!
+AllShare*backward-kill-word():  DeletePreviousWord()
+AllShare*DEFbackward-kill-word():  Vyma¾e znaky predo¹lého slova.
+!
+AllShare*cent():  Cent()
+AllShare*DEFcent():  Zobrazí znak meny centu na pozícii kurzora.
+!
+AllShare*unlock():  UnlockKeyboard()
+AllShare*DEFunlock():  Odomkne klávesnicu, aby sa dal zadáva» vstup.
+!
+AllShare*selpen-attn():  SelectorPenAttention()
+AllShare*DEFselpen-attn():  Po¹le kód attention AID pre výber pera do hostiteµského systému.
+!
+AllShare*select-field():  PenSelectField()
+AllShare*DEFselect-field():  Vyberie vybrateµné pole.
+!
+AllShare*xh-attn():  AttentionAlternate()
+AllShare*DEFxh-attn():  Po¹le kód Alternate Attention AID do hostiteµského systému.
+!
+Keyxxx52*insert-selection:  Paste()
+Keyxxx52*DEFinsert-selection:  Akcia pre prilepenie obsahu odkladacej schránky na pozíciu kurzora.
+!
+Keyxxx52*jump():  Jump()
+AllShare*DEFjump():  Akcia skoèí do ïal¹ej relácie v zozname relácií. Ak je aktívna relácia 1, relácia 2 sa stane aktívnou reláciou.
+!
+Keyxxx52*jump-to-session():  JumpToSession()
+AllShare*DEFjump-to-session():  Akcia skoèí do relácie urèenej parametrom (medzi zátvorkami). Ak je hodnota 2 zadaná ako argument, druhá relácia sa stane aktívnou reláciou.
+!
+Keyxxx52*delay():  Delay()
+AllShare*DEFdelay(): Pridá pauzu medzi akcie pri nastavovaní viacerých akcií pre jednu postupnos» klávesov pri premapovaní klávesnice alebo prispôsobovaní klávesnice. Parameter (medzi zátvorkami) je hodnota oneskorenia v desatinách sekundy (predvolená hodnota je 5 desatín).
+!
+Keyxxx52*menu-bar-focus():  MenuBarFocus()
+AllShare*DEFmenu-bar-focus():  Dovoµuje prístup k ponukovej li¹te bez pou¾itia my¹i.
+!
+Keyxxx52*wider-font(): WiderFont()
+Keyxxx52*DEFwider-font(): Spraví aktuálne písmo ¹ir¹ím.
+!
+Keyxxx52*narrower-font(): ThinnerFont()
+Keyxxx52*DEFnarrower-font(): Spraví aktuálne písmo u¾¹ím.
+!
+Keyxxx52*taller-font(): TallerFont()
+Keyxxx52*DEFtaller-font(): Spraví aktuálne písmo vy¹¹ím.
+!
+Keyxxx52*shorter-font(): ShorterFont()
+Keyxxx52*DEFshorter-font(): Spraví aktuálne písmo krat¹ím.
+!
+! The following three key sequences should be translated; they may be used in the future for keyboard actions that we currently do not know about.
+Keyxxx52*key-seq1():  KeySequence1()
+Keyxxx52*key-seq2():  KeySequence2()
+Keyxxx52*key-seq3():  KeySequence3()
+!
+! General dead key (the first key of a key sequence to create a dead key character, for example tilda in many languages) that is not remappable because dead keys are processed by the Network Station kernel.
+! There are no parentheses at the end of the following line.
+Keyxxx52*unmappable():  Màtvy kláves
+!
+AllShare*inserteuro():  Euro()
+AllShare*DEFinserteuro():  Vlo¾í symbol Euro na pozíciu kurzora.
+!
+! Action List Translations for NSTerm (VTxxx)
+!
+Keymap52*vt-backspace(): VtBackspace()
+AllShare*DEFvt-backspace():  Presunie kurzor spä» o jednu pozíciu kurzora a vyma¾e znak pred kurzorom.
+!
+Keymap52*enterkey(): EnterKey()
+Keymap52*DEFenterkey():  Po¹le znak návratu vozíka do hostiteµa.
+!
+Keymap52*local-print-buffer(): LocalPrintBuffer()
+Keymap52*DEFlocal-print-buffer():  Zobrazí okno tlaèe obrazovky pre vytlaèenie aktuálneho obsahuj pamä»ového bloku rolovania.
+!
+Keymap52*local-print-screen(): LocalPrintScreen()
+Keymap52*DEFlocal-print-screen():  Zobrazí okno tlaèe obrazovky pre vytlaèenie aktuálnej obrazovky.
+!
+Keymap52*cut-clipboard(): CutClipboard()
+Keymap52*DEFcut-clipboard():  Skopíruje oznaèený región obrazovky do odkladacej schránky a odstráni tento región z obrazovky.
+!
+Keymap52*copy-clipboard(): CopyClipboard()
+Keymap52*DEFcopy-clipboard():  Skopíruje oznaèený región obrazovky do odkladacej schránky.
+!
+Keymap52*paste-clipboard(): PasteClipboard()
+Keymap52*DEFpaste-clipboard():  Skopíruje údaje ulo¾ené v odkladacej schránke a prenesie ich na pozíciu kurzora na obrazovke.
+!
+Keymap52*beginning-of-buffer(): BeginningOfBuffer()
+Keymap52*DEFbeginning-of-buffer(): Presunie obrazovku na zaèiatok pamä»ového bloku rolovania.
+!
+Keymap52*end-of-buffer(): EndOfBuffer()
+Keymap52*DEFend-of-buffer():  Posunie obrazovku, aby sa zobrazil koniec aktuálneho pamä»ového bloku.
+!
+Keymap52*hard-reset(): HardReset()
+Keymap52*DEFhard-reset():  Resetuje terminál do predvoleného stavu, vyma¾e v¹etok obsah obrazovky a vyèistí v¹etky výbery.
+!
+Keymap52*soft-reset(): SoftReset()
+Keymap52*DEFsoft-reset():  Resetuje terminál do predvoleného stavu.
+!
+Keymap52*vt-break(): VtBreak()
+Keymap52*DEFvt-break(): Po¹le signál preru¹enia RS-232 do hostiteµa.
+!
+Keymap52*vt-find(): VtFind()
+Keymap52*DEFvt-find(): Vykoná funkciu Hµada», ak re¾im VT200 alebo vy¹¹í po¹le kód DEC (CSI 1~) do hostiteµa.
+!
+Keymap52*vt-ins(): VtInsert()
+Keymap52*DEFvt-ins(): Vykoná funkciu Vlo¾i», ak re¾im VT200 alebo vy¹¹í po¹le kód DEC (CSI 2~) do hostiteµa.
+!
+Keymap52*vt-delete(): VtRemove()
+Keymap52*DEFvt-delete(): Vykoná funkciu Odstráni», ak re¾im VT200 alebo vy¹¹í po¹le kód DEC (CSI 3~) do hostiteµa.
+!
+Keymap52*vt-select(): VtSelect()
+Keymap52*DEFvt-select(): Vykoná funkciu Vybra», ak re¾im VT200 alebo vy¹¹í po¹le kód DEC (CSI 4~) do hostiteµa.
+!
+Keymap52*vt-prev-screen(): VtPreviousScreen()
+Keymap52*DEFvt-prev-screen(): Vykoná funkciu Predo¹lá obrazovka, ak re¾im VT200 alebo vy¹¹í po¹le kód DEC (CSI 5~) do hostiteµa.
+!
+Keymap52*vt-next-screen(): VtNextScreen()
+Keymap52*DEFvt-next-screen(): Vykoná funkciu Ïal¹ia obrazovka, ak re¾im VT200 alebo vy¹¹í po¹le kód DEC (CSI 6~) do hostiteµa.
+!
+Keymap52*vt-prev-page(): VtPreviousPage()
+Keymap52*DEFvt-prev-page(): Presunie text nadol a okno nahor o 1 stranu.
+!
+Keymap52*vt-next-page(): VtNextPage()
+Keymap52*DEFvt-next-page(): Presunie text nahor a okno nadol o 1 stranu.
+!
+Keymap52*vt-do(): VtDo()
+Keymap52*DEFvt-do(): Vykoná funkciu Vykona», ak re¾im VT200 alebo vy¹¹í po¹le kód DEC (CSI 29~) do hostiteµa.
+!
+Keymap52*vt-help(): VtHelp()
+Keymap52*DEFvt-help(): Vykoná funkciu Pomoc, ak re¾im VT200 alebo vy¹¹í po¹le kód DEC (CSI 28~) do hostiteµa.
+!
+Keymap52*vt-next-line(): VtNextLine()
+Keymap52*DEFvt-next-line():  Presunie text nahor a okno nadol o 1 riadok.
+!
+Keymap52*vt-prev-line(): VtPreviousLine()
+Keymap52*DEFvt-prev-line(): Presunie text nadol a okno nahor o 1 riadok.
+!
+Keymap52*tty-interrupt(): TtyInterrupt()
+Keymap52*DEFtty-interrupt(): Po¹le znak preru¹enia TTY (inter = Ctrl-C) do hostiteµa.
+!
+Keymap52*tty-suspend(): TtySuspend()
+Keymap52*DEFtty-suspend(): Po¹le znak TTY Suspend (susp = Ctrl-Z) do hostiteµa.
+!
+Keymap52*tty-start(): TtyStart()
+Keymap52*DEFtty-start(): Po¹le znak TTY Start (start = Ctrl-Q) do hostiteµa.
+!
+Keymap52*tty-stop(): TtyStop()
+Keymap52*DEFtty-stop(): Po¹le znak TTY Stop (stop = Ctrl-S) do hostiteµa.
+!
+Keymap52*delete-word(): TtyEraseWord()
+Keymap52*DEFdelete-word(): Po¹le znak TTY Word Erase (werase = Ctrl-W) do hostiteµa.
+!
+Keymap52*line-feed(): TtyLineFeed()
+Keymap52*DEFline-feed(): Po¹le znak Line Feed (Ctrl-J) do hostiteµa.
+!
+Keymap52*cr-lf(): TtyCR_LF()
+Keymap52*DEFcr-lf(): Po¹le znaky Carriage Return a Line Feed (Ctrl-M Ctrl-J) do hostiteµa.
+!
+Keymap52*escape(): EscapeCharacter()
+Keymap52*DEFescape(): Po¹le znak Escape (Ctrl-[) do hostiteµa.
+!
+Keymap52*udk-f1(): UDK_F1()
+Keymap52*DEFudk-f1():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F1.
+!
+Keymap52*udk-f2(): UDK_F2()
+Keymap52*DEFudk-f2():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F2.
+!
+Keymap52*udk-f3(): UDK_F3()
+Keymap52*DEFudk-f3():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F3.
+!
+Keymap52*udk-f4(): UDK_F4()
+Keymap52*DEFudk-f4():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F4.
+!
+Keymap52*udk-f5(): UDK_F5()
+Keymap52*DEFudk-f5():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F5.
+!
+Keymap52*udk-f6(): UDK_F6()
+Keymap52*DEFudk-f6():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F6.
+!
+Keymap52*udk-f7(): UDK_F7()
+Keymap52*DEFudk-f7():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F7.
+!
+Keymap52*udk-f8(): UDK_F8()
+Keymap52*DEFudk-f8():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F8.
+!
+Keymap52*udk-f9(): UDK_F9()
+Keymap52*DEFudk-f9():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F9.
+!
+Keymap52*udk-f10(): UDK_F10()
+Keymap52*DEFudk-f10():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F10.
+!
+Keymap52*udk-f11(): UDK_F11()
+Keymap52*DEFudk-f11():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F11.
+!
+Keymap52*udk-f12(): UDK_F12()
+Keymap52*DEFudk-f12():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F12.
+!
+Keymap52*udk-f13(): UDK_F13()
+Keymap52*DEFudk-f13():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F13.
+!
+Keymap52*udk-f14(): UDK_F14()
+Keymap52*DEFudk-f14():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F14.
+!
+Keymap52*udk-f15(): UDK_F15()
+Keymap52*DEFudk-f15():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F15.
+!
+Keymap52*udk-f16(): UDK_F16()
+Keymap52*DEFudk-f16():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F16.
+!
+Keymap52*udk-f17(): UDK_F17()
+Keymap52*DEFudk-f17():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F17.
+!
+Keymap52*udk-f18(): UDK_F18()
+Keymap52*DEFudk-f18():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F18.
+!
+Keymap52*udk-f19(): UDK_F19()
+Keymap52*DEFudk-f19():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F19.
+!
+Keymap52*udk-f20(): UDK_F20()
+Keymap52*DEFudk-f20():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F20.
+!
+Keymap52*udk-f21(): UDK_F21()
+Keymap52*DEFudk-f21():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F21.
+!
+Keymap52*udk-f22(): UDK_F22()
+Keymap52*DEFudk-f22():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F22.
+!
+Keymap52*udk-f23(): UDK_F23()
+Keymap52*DEFudk-f23():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F23.
+!
+Keymap52*udk-f24(): UDK_F24()
+Keymap52*DEFudk-f24():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F24.
+!
+Keymap52*udk-f25(): UDK_F25()
+Keymap52*DEFudk-f25():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F25.
+!
+Keymap52*udk-f26(): UDK_F26()
+Keymap52*DEFudk-f26():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F26.
+!
+Keymap52*udk-f27(): UDK_F27()
+Keymap52*DEFudk-f27():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F27.
+!
+Keymap52*udk-f28(): UDK_F28()
+Keymap52*DEFudk-f28():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F28.
+!
+Keymap52*udk-f29(): UDK_F29()
+Keymap52*DEFudk-f29():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F29.
+!
+Keymap52*udk-f30(): UDK_F30()
+Keymap52*DEFudk-f30():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F30.
+!
+Keymap52*udk-f31(): UDK_F31()
+Keymap52*DEFudk-f31():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F31.
+!
+Keymap52*udk-f32(): UDK_F32()
+Keymap52*DEFudk-f32():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F32.
+!
+Keymap52*udk-f33(): UDK_F33()
+Keymap52*DEFudk-f33():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F33.
+!
+Keymap52*udk-f34(): UDK_F34()
+Keymap52*DEFudk-f34():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F34.
+!
+Keymap52*udk-f35(): UDK_F35()
+Keymap52*DEFudk-f35():  Vykoná akciu u¾ívateµom definovaného klávesu DEC pre kláves F35.
+!
+Keymap52*x-f1(): F1()
+Keymap52*DEFx-f1():  Vykoná definovanú akciu klávesu F1.
+!
+Keymap52*x-f2(): F2()
+Keymap52*DEFx-f2():  Vykoná definovanú akciu klávesu F2.
+!
+Keymap52*x-f3(): F3()
+Keymap52*DEFx-f3():  Vykoná definovanú akciu klávesu F3.
+!
+Keymap52*x-f4(): F4()
+Keymap52*DEFx-f4():  Vykoná definovanú akciu klávesu F4.
+!
+Keymap52*x-f5(): F5()
+Keymap52*DEFx-f5():  Vykoná definovanú akciu klávesu F5.
+!
+Keymap52*x-f6(): F6()
+Keymap52*DEFx-f6():  Vykoná definovanú akciu klávesu F6.
+!
+Keymap52*x-f7(): F7()
+Keymap52*DEFx-f7():  Vykoná definovanú akciu klávesu F7.
+!
+Keymap52*x-f8(): F8()
+Keymap52*DEFx-f8():  Vykoná definovanú akciu klávesu F8.
+!
+Keymap52*x-f9(): F9()
+Keymap52*DEFx-f9():  Vykoná definovanú akciu klávesu F9.
+!
+Keymap52*x-f10(): F10()
+Keymap52*DEFx-f10():  Vykoná definovanú akciu klávesu F10.
+!
+Keymap52*x-f11(): F11()
+Keymap52*DEFx-f11():  Vykoná definovanú akciu klávesu F11.
+!
+Keymap52*x-f12(): F12()
+Keymap52*DEFx-f12():  Vykoná definovanú akciu klávesu F12.
+!
+Keymap52*x-f13(): F13()
+Keymap52*DEFx-f13():  Vykoná definovanú akciu klávesu F13.
+!
+Keymap52*x-f14(): F14()
+Keymap52*DEFx-f14():  Vykoná definovanú akciu klávesu F14.
+!
+Keymap52*x-f15(): F15()
+Keymap52*DEFx-f15():  Vykoná definovanú akciu klávesu F15.
+!
+Keymap52*x-f16(): F16()
+Keymap52*DEFx-f16():  Vykoná definovanú akciu klávesu F16.
+!
+Keymap52*x-f17(): F17()
+Keymap52*DEFx-f17():  Vykoná definovanú akciu klávesu F17.
+!
+Keymap52*x-f18(): F18()
+Keymap52*DEFx-f18():  Vykoná definovanú akciu klávesu F18.
+!
+Keymap52*x-f19(): F19()
+Keymap52*DEFx-f19():  Vykoná definovanú akciu klávesu F19.
+!
+Keymap52*x-f20(): F20()
+Keymap52*DEFx-f20():  Vykoná definovanú akciu klávesu F20.
+!
+Keymap52*x-f21(): F21()
+Keymap52*DEFx-f21():  Vykoná definovanú akciu klávesu F21.
+!
+Keymap52*x-f22(): F22()
+Keymap52*DEFx-f22():  Vykoná definovanú akciu klávesu F22.
+!
+Keymap52*x-f23(): F23()
+Keymap52*DEFx-f23():  Vykoná definovanú akciu klávesu F23.
+!
+Keymap52*x-f24(): F24()
+Keymap52*DEFx-f24():  Vykoná definovanú akciu klávesu F24.
+!
+Keymap52*x-f25(): F25()
+Keymap52*DEFx-f25():  Vykoná definovanú akciu klávesu F25.
+!
+Keymap52*x-f26(): F26()
+Keymap52*DEFx-f26():  Vykoná definovanú akciu klávesu F26.
+!
+Keymap52*x-f27(): F27()
+Keymap52*DEFx-f27():  Vykoná definovanú akciu klávesu F27.
+!
+Keymap52*x-f28(): F28()
+Keymap52*DEFx-f28():  Vykoná definovanú akciu klávesu F28.
+!
+Keymap52*x-f29(): F29()
+Keymap52*DEFx-f29():  Vykoná definovanú akciu klávesu F29.
+!
+Keymap52*x-f30(): F30()
+Keymap52*DEFx-f30():  Vykoná definovanú akciu klávesu F30.
+!
+Keymap52*x-f31(): F31()
+Keymap52*DEFx-f31():  Vykoná definovanú akciu klávesu F31.
+!
+Keymap52*x-f32(): F32()
+Keymap52*DEFx-f32():  Vykoná definovanú akciu klávesu F32.
+!
+Keymap52*x-f33(): F33()
+Keymap52*DEFx-f33():  Vykoná definovanú akciu klávesu F33.
+!
+Keymap52*x-f34(): F34()
+Keymap52*DEFx-f34():  Vykoná definovanú akciu klávesu F34.
+!
+Keymap52*x-f35(): F35()
+Keymap52*DEFx-f35():  Vykoná definovanú akciu klávesu F35.
+!
+Keymap52*vt-f1(): VtPF1()
+Keymap52*DEFvt-f1():  V ka¾dom re¾ime, po¹le kód znaku (SS3 P) do aplikácie.
+!
+Keymap52*vt-f2(): VtPF2()
+Keymap52*DEFvt-f2(): V ka¾dom re¾ime, po¹le kód znaku (SS3 Q) do aplikácie.
+!
+Keymap52*vt-f3(): VtPF3()
+Keymap52*DEFvt-f3(): V ka¾dom re¾ime, po¹le kód znaku (SS3 R) do aplikácie.
+!
+Keymap52*vt-f4(): VtPF4()
+Keymap52*DEFvt-f4(): V ka¾dom re¾ime, po¹le kód znaku (SS3 S) do aplikácie.
+!
+Keymap52*x-print(): X_Print()
+Keymap52*DEFx-print(): Po¹le escape postupnos» ANSI (Ctrl-[[209q) do hostiteµa.
+!
+Keymap52*x-scroll-lock(): X_ScrollLock()
+Keymap52*DEFx-scroll-lock(): Po¹le escape postupnos» ANSI (Ctrl-[[213q) do hostiteµa.
+!
+Keymap52*x-pause(): X_Pause()
+Keymap52*DEFx-pause(): Po¹le escape postupnos» ANSI pre kláves Pause (Ctrl-[[217q) do hostiteµa.
+!
+Keymap52*x-ins(): X_Insert()
+Keymap52*DEFx-ins(): Po¹le escape postupnos» ANSI (Ctrl-[[139q) do hostiteµa.
+!
+Keymap52*x-delete(): X_Delete()
+Keymap52*DEFx-delete(): Po¹le escape postupnos» ANSI (Ctrl-[[P) do hostiteµa.
+!
+Keymap52*x-home(): X_Home()
+Keymap52*DEFx-home(): Po¹le escape postupnos» ANSI (Ctrl-[[H) do hostiteµa.
+!
+Keymap52*x-end(): X_End()
+Keymap52*DEFx-end(): Po¹le escape postupnos» ANSI (Ctrl-[[146q) do hostiteµa.
+!
+Keymap52*x-page-up(): X_PageUp()
+Keymap52*DEFx-page-up(): Po¹le escape postupnos» ANSI (Ctrl-[[150q) do hostiteµa.
+!
+Keymap52*x-page-down(): X_PageDown()
+Keymap52*DEFx-page-down(): Po¹le escape postupnos» ANSI (Ctrl-[[154q) do hostiteµa.
+!
+Keymap52*kp-numlock(): KP_NumLock()
+Keymap52*DEFkp-numlock():  Vykoná akciu Numeric Lock.
+!
+Keymap52*kp-divide(): KP_Divide()
+Keymap52*DEFkp-divide():  Vykoná akciu delenia, ako je definovaná na klávesnici.
+!
+Keymap52*kp-multiply(): KP_Multiply()
+Keymap52*DEFkp-multiply():  Vykoná akciu násobenia, ako je definovaná na klávesnici.
+!
+Keymap52*kp-subtract(): KP_Minus()
+Keymap52*DEFkp-subtract():  V numerickom re¾ime, po¹le znak mínus (-) do aplikácie. V re¾ime aplikácie, po¹le kód znaku SS3 l (ESC ? l) do aplikácie.
+!
+Keymap52*kp-7(): KP_7()
+Keymap52*DEFkp-7():  V numerickom re¾ime, po¹le znak 7 do aplikácie. V re¾ime aplikácie, po¹le kód znaku SS3 w (ESC ? w) do aplikácie.
+!
+Keymap52*kp-8(): KP_8()
+Keymap52*DEFkp-8():  V numerickom re¾ime, po¹le znak 8 do aplikácie. V re¾ime aplikácie, po¹le kód znaku SS3 x (ESC ? x) do aplikácie.
+!
+Keymap52*kp-9(): KP_9()
+Keymap52*DEFkp-9():  V numerickom re¾ime, po¹le znak 9 do aplikácie. V re¾ime aplikácie, po¹le kód znaku SS3 y (ESC ? y) do aplikácie.
+!
+Keymap52*kp-4(): KP_4()
+Keymap52*DEFkp-4():  V numerickom re¾ime, po¹le znak 4 do aplikácie. V re¾ime aplikácie, po¹le kód znaku SS3 t (ESC ? t) do aplikácie.
+!
+Keymap52*kp-5(): KP_5()
+Keymap52*DEFkp-5():  V numerickom re¾ime, po¹le znak 5 do aplikácie. V re¾ime aplikácie, po¹le kód znaku SS3 u (ESC ?u) do aplikácie.
+!
+Keymap52*kp-6(): KP_6()
+Keymap52*DEFkp-6():  V numerickom re¾ime, po¹le znak 6 do aplikácie. V re¾ime aplikácie, po¹le kód znaku SS3 v (ESC ? v) do aplikácie.
+!
+Keymap52*kp-add(): KP_Plus()
+Keymap52*DEFkp-add():  Vykoná akciu súètu, ako je definovaná na klávesnici.
+!
+Keymap52*kp-1(): KP_1()
+Keymap52*DEFkp-1():  V numerickom re¾ime, po¹le znak 1 do aplikácie. V re¾ime aplikácie, po¹le kód znaku SS3 q (ESC ? q) do aplikácie.
+!
+Keymap52*kp-2(): KP_2()
+Keymap52*DEFkp-2():  V numerickom re¾ime, po¹le znak 2 do aplikácie. V re¾ime aplikácie, po¹le kód znaku SS3 r (ESC ? r) do aplikácie.
+!
+Keymap52*kp-3(): KP_3()
+Keymap52*DEFkp-3():  V numerickom re¾ime, po¹le znak 3 do aplikácie. V re¾ime aplikácie, po¹le kód znaku SS3 s (ESC ? s) do aplikácie.
+!
+Keymap52*kp-0(): KP_0()
+Keymap52*DEFkp-0():  V numerickom re¾ime, po¹le znak 0 do aplikácie. V re¾ime aplikácie, po¹le kód znaku SS3 p (ESC ? p) do aplikácie.
+!
+Keymap52*kp-decimal(): KP_Decimal()
+Keymap52*DEFkp-decimal():  V numerickom re¾ime, po¹le znak desatinnej èiarky (.) do aplikácie. V re¾ime aplikácie, po¹le kód znaku SS3 n (ESC ? n) do aplikácie.
+!
+Keymap52*kp-enter(): KP_Enter()
+Keymap52*DEFkp-enter():  V numerickom re¾ime, po¹le funkciu Enter do aplikácie. V re¾ime aplikácie, po¹le kód znaku SS3 M (ESC ? M) do aplikácie.
+!
+Keymap52*kp-space(): KP_Space()
+Keymap52*DEFkp-space():  Po¹le znak medzery do aplikácie.
+!
+Keymap52*kp-tab(): KP_Tab()
+Keymap52*DEFkp-tab():  Po¹le znak tabulátora do aplikácie.
+!
+Keymap52*kp-equal(): KP_Equal()
+Keymap52*DEFkp-equal():  Po¹le znak rovnosti (=) do aplikácie.
+!
+Keymap52*kp-separator(): KP_Separator()
+Keymap52*DEFkp-separator():  Po¹le znak oddeµovaèa do aplikácie.
+!
+Playedit*btn1-press():  MouseBtn1Press()
+Playedit*DEFbtn1-press():  Akcia pre stlaèenie tlaèidla my¹i 1.
+!
+Playedit*btn1-release():  MouseBtn1Release()
+Playedit*DEFbtn1-release():  Akcia pre uvoµnenie tlaèidla my¹i 1.
+!
+Playedit*btn2-press():  MouseBtn2Press()
+Playedit*DEFbtn2-press():  Akcia pre stlaèenie tlaèidla my¹i 2.
+!
+Playedit*btn2-release():  MouseBtn2Release()
+Playedit*DEFbtn2-release():  Akcia pre uvoµnenie tlaèidla my¹i 2.
+!
+Playedit*btn3-press():  MouseBtn3Press()
+Playedit*DEFbtn3-press():  Akcia pre stlaèenie tlaèidla my¹i 3.
+!
+Playedit*btn3-release():  MouseBtn3Release()
+Playedit*DEFbtn3-release():  Akcia pre uvoµnenie tlaèidla my¹i 3.
+!
+Playedit*shift-btn1-press():  MouseShiftBtn1Press()
+Playedit*DEFshift-btn1-press():  Akcia pre postupnos» klávesov stlaèenia tlaèidla my¹i 1 a modifikátora Shift.
+!
+Playedit*shift-btn1-release():  MouseShiftBtn1Release()
+Playedit*DEFshift-btn1-release():  Akcia pre postupnos» klávesov uvoµnenia tlaèidla my¹i 1 pri stlaèenom modifikátore Shift.
+!
+Playedit*shift-btn2-press():  MouseShiftBtn2Press()
+Playedit*DEFshift-btn2-press():  Akcia pre postupnos» klávesov stlaèenia tlaèidla my¹i 2 a modifikátora Shift.
+!
+Playedit*shift-btn2-release():  MouseShiftBtn2Release()
+Playedit*DEFshift-btn2-release():  Akcia pre postupnos» klávesov uvoµnenia tlaèidla my¹i 2 pri stlaèenom modifikátore Shift.
+!
+Playedit*shift-btn3-press():  MouseShiftBtn3Press()
+Playedit*DEFshift-btn3-press():  Akcia pre postupnos» klávesov stlaèenia tlaèidla my¹i 3 a modifikátora Shift.
+!
+Playedit*shift-btn3-release():  MouseShiftBtn3Release()
+Playedit*DEFshift-btn3-release():  Akcia pre postupnos» klávesov uvoµnenia tlaèidla my¹i 3 pri stlaèenom modifikátore Shift.
+!
+Playedit*btn1-double-press():  MouseBtn1DoublePress()
+Playedit*DEFbtn1-double-press():  Akcia pre dvojité stlaèenie tlaèidla my¹i 1.
+!
+Playedit*btn1-triple-press():  MouseBtn1TriplePress()
+Playedit*DEFbtn1-triple-press():  Akcia pre trojité stlaèenie tlaèidla my¹i 1.
+!
+Playedit*btn2-double-press():  MouseBtn2DoublePress()
+Playedit*DEFbtn2-double-press():  Akcia pre dvojité stlaèenie tlaèidla my¹i 2.
+!
+Playedit*btn2-triple-press():  MouseBtn2TriplePress()
+Playedit*DEFbtn2-triple-press():  Akcia pre trojité stlaèenie tlaèidla my¹i 2.
+!
+Playedit*btn3-double-press():  MouseBtn3DoublePress()
+Playedit*DEFbtn3-double-press():  Akcia pre dvojité stlaèenie tlaèidla my¹i 3.
+!
+Playedit*btn3-triple-press():  MouseBtn3TriplePress()
+Playedit*DEFbtn3-triple-press():  Akcia pre trojité stlaèenie tlaèidla my¹i 3.
+!
+Playedit*shift-btn1-double-press():  MouseShiftBtn1DoublePress()
+Playedit*DEFshift-btn1-double-press():  Akcia pre postupnos» klávesov dvojitého stlaèenia tlaèidla my¹i 1 a modifikátora Shift.
+!
+Playedit*shift-btn1-triple-press():  MouseShiftBtn1TriplePress()
+Playedit*DEFshift-btn1-triple-press():  Akcia pre postupnos» klávesov trojitého stlaèenia tlaèidla my¹i 1 a modifikátora Shift.
+!
+Playedit*shift-btn2-double-press():  MouseShiftBtn2DoublePress()
+Playedit*DEFshift-btn2-double-press():  Akcia pre postupnos» klávesov dvojitého stlaèenia tlaèidla my¹i 2 a modifikátora Shift.
+!
+Playedit*shift-btn2-triple-press():  MouseShiftBtn2TriplePress()
+Playedit*DEFshift-btn2-triple-press():  Akcia pre postupnos» klávesov trojitého stlaèenia tlaèidla my¹i 2 a modifikátora Shift.
+!
+Playedit*shift-btn3-double-press():  MouseShiftBtn3DoublePress()
+Playedit*DEFshift-btn3-double-press():  Akcia pre postupnos» klávesov dvojitého stlaèenia tlaèidla my¹i 3 a modifikátora Shift.
+!
+Playedit*shift-btn3-triple-press():  MouseShiftBtn3TriplePress()
+Playedit*DEFshift-btn3-triple-press():  Akcia pre postupnos» klávesov trojitého stlaèenia tlaèidla my¹i 3 a modifikátora Shift.
+!
+AllShare*paste():  Paste()
+AllShare*DEFpaste():  Akcia pre prilepenie obsahu odkladacej schránky na pozíciu kurzora.
+!
+AllShare*copy():  Copy()
+AllShare*DEFcopy():  Akcia pre kopírovanie aktuálneho výberu obrazovky do odkladacej schránky.
+!
+AllShare*cut():  Cut()
+AllShare*DEFcut():  Akcia na odstránenie aktuálneho výberu obrazovky.
+!
+Playedit*userid():  USERID()
+Playedit*DEFuserid():  Zadá ID u¾ívateµa aktuálneho u¾ívateµa. Táto akcia sa pou¾íva pre automatické prihlasovanie do relácií emulátora.
+!
+Playedit*password():  PASSWORD()
+Playedit*DEFpassword():  Zadá heslo aktuálneho u¾ívateµa. Táto akcia sa pou¾íva pre automatické prihlasovanie do relácií emulátora.
+!
+AllShare*adjust-copy-left():  AdjustCopyAreaLeft()
+AllShare*DEFadjust-copy-left():  Zaène kopírova» oblas» na obrazovke, ak sa e¹te nekopíruje a prispôsobí oblas» na kopírovanie o jeden znak doµava od aktuálnej pozície.
+!
+AllShare*adjust-copy-right():  AdjustCopyAreaRight()
+AllShare*DEFadjust-copy-right():  Zaène kopírova» oblas» na obrazovke, ak sa e¹te nekopíruje a prispôsobí oblas» na kopírovanie o jeden znak doprava od aktuálnej pozície.
+!
+AllShare*adjust-copy-up():  AdjustCopyAreaUp()
+AllShare*DEFadjust-copy-up():  Zaène kopírova» oblas» na obrazovke, ak sa e¹te nekopíruje a prispôsobí oblas» na kopírovanie o jeden riadok nahor od aktuálnej pozície.
+!
+AllShare*adjust-copy-down():  AdjustCopyAreaDown()
+AllShare*DEFadjust-copy-down():  Zaène kopírova» oblas» na obrazovke, ak sa e¹te nekopíruje a prispôsobí oblas» na kopírovanie o jeden riadok nadol od aktuálnej pozície.
+!
+AllShare*adjust-copy-anchor-left():  AdjustCopyAreaAnchorLeft()
+AllShare*DEFadjust-copy-anchor-left():  Zaène kopírova» oblas» na obrazovke, ak sa e¹te nekopíruje a prispôsobí oblas» na kopírovanie o jeden znak doµava, ale µavá strana oblasti na kopírovanie sa neprispôsobí.
+!
+AllShare*adjust-copy-anchor-right():  AdjustCopyAreaAnchorRight()
+AllShare*DEFadjust-copy-anchor-right():  Zaène kopírova» oblas» na obrazovke, ak sa e¹te nekopíruje a prispôsobí oblas» na kopírovanie o jeden znak doprava, ale pravá strana oblasti na kopírovanie sa neprispôsobí.
+!
+AllShare*adjust-copy-anchor-up():  AdjustCopyAreaAnchorUp()
+AllShare*DEFadjust-copy-anchor-up():  Zaène kopírova» oblas» na obrazovke, ak sa e¹te nekopíruje a prispôsobí oblas» na kopírovanie o riadok nadol, ale horná strana oblasti na kopírovanie sa neprispôsobí.
+!
+AllShare*adjust-copy-anchor-down():  AdjustCopyAreaAnchorDown()
+AllShare*DEFadjust-copy-anchor-down():  Zaène kopírova» oblas» na obrazovke, ak sa e¹te nekopíruje a prispôsobí oblas» na kopírovanie o riadok nahor, ale dolná strana oblasti na kopírovanie sa neprispôsobí.
+!
+AllShare*toggle-default-copy-type():  ToggleDefaultCopyType()
+AllShare*DEFtoggle-default-copy-type():  Nastaví kopírovanie na blokové alebo lineárne kopírovanie.
+!
+Playedit*hex-string():  HexString()
+Playedit*DEFhex-string():  Dovoµuje zadanie údajov v ¹estnástkovom formáte.
+!
+Playedit*graphics-hex-string():  GraphicsHexString()
+Playedit*DEFgraphics-hex-string():  Dovoµuje zadanie grafických údajov v ¹estnástkovom formáte EBCDIC.
+!
+Playedit*BIDItogglescrrev():  BIDIToggleScreenReverse()
+Playedit*DEFBIDItogglescrrev():  Zapne alebo vypne re¾im otoèenia obrazovky (pou¾íva sa pre arabské a hebrejské jazyky).
+!
+Playedit*BIDItogglefieldrev():  BIDIToggleFieldReverse()
+Playedit*DEFBIDItogglefieldrev():  Zapne alebo vypne re¾im otáèania polí (pou¾íva sa pre arabské a hebrejské jazyky).
+!
+Playedit*BIDItoggleautorev():  BIDIToggleAutoReverse()
+Playedit*DEFBIDItoggleautorev():  Zapne alebo vypne automatické otáèanie polí (pou¾íva sa pre arabské a hebrejské jazyky).
+!
+Playedit*BIDIpush():  BIDIPush()
+Playedit*DEFBIDIpush():  Aktivuje re¾im vkladania (pou¾íva sa pre arabské a hebrejské jazyky).
+!
+Playedit*BIDIendpush():  BIDIEndPush()
+Playedit*DEFBIDIendpush():  Vypne re¾im vkladania (pou¾íva sa pre arabské a hebrejské jazyky).
+!
+Playedit*BIDItoggleautopush():  BIDIToggleAutoPush()
+Playedit*DEFBIDItoggleautopush():  Nastaví emulátor na automatickú aktiváciu re¾imu vkladania pri prepnutí jazyka medzi BIDI a angliètinou (pou¾íva sa pre arabské a hebrejské jazyky).
+!
+Playedit*BIDIsetshape():  BIDISetShape()
+Playedit*DEFBIDIsetshape():  Nastaví re¾im tvarovania pre arabský jazyk.
+!
+Playedit*BIDIfieldshape():  BIDIFieldShape()
+Playedit*DEFBIDIfieldshape():  Tvaruje údaje v poli pre arabský jazyk.
+!
+Playedit*BIDItogglenumswap():  BIDIToggleNumericSwapping()
+Playedit*DEFBIDItogglenumswap():  Zapína a vypína prepínanie arabských/hindských èísiel pre arabský jazyk.
+!
+! End action names
+!
+!
+Keyxxx52*ERROR:  INVALID ACTION(S)
+!
+Keymap52*managing_server_text.value:  Tento súbor premapovania klávesnice sa nedá ulo¾i».  Zaktualizujte riadiaci server na posledné vydanie programu IBM Network Station Manager.
+!
+Keymap52*managingBtn.labelString:  OK
+!
+Keymap52*general_fatal_error.value:  V programe Premapovanie klávesnice do¹lo k chybe.  Program sa ukonèí.
+!
+Keymap52*genfatalBtn.labelString:  UKONÈI«
+!
+Keymap52*general_nonfatal_text.value:  Chyba premapovania klávesnice.
+!
+Keymap52*gennonfatBtn.labelString:  OK
+!
+!
+!************************************************************************
+!
+!
+!                        Keypad Customizer Resources
+!
+!
+!************************************************************************
+Keypad52*title:  Prispôsobenie pomocnej klávesnice
+
+Keypad52*iname5250:  Prispôsobenie pomocnej klávesnice 5250
+
+Keypad52*iname3270:  Prispôsobenie pomocnej klávesnice 3270
+
+Keypad52*keypadTitle.dialogTitle:  Pomocná klávesnica
+
+!following resource left blank on purpose, do not translate.
+AllShare*blankLabel.labelString:
+
+! initial popup dialog
+Keypad52*initialpopupDialoglist.labelString:  Vyberte súbor pomocnej klávesnice:
+
+Keypad52*initialpopupDialogaltlabel.labelString:  ®iadne súbory pomocnej klávesnice.
+
+Keypad52*initialpopupDialogOKbtn.labelString:  OK
+
+Keypad52*initialpopupDialogcancelbtn.labelString:  Zru¹i»
+
+Keypad52*initialpopupDialognewbtn.labelString:  Nová pomocná klávesnica
+
+!*************************************
+!**  Keypad Customizer Main Window  **
+!*************************************
+
+! In general, the following buttons should not be made much longer during translation.
+! Buttons have one to four words.
+
+Keypad52*keyAction.labelString:  Akcia tlaèidla ->
+
+Keypad52*fileDeleteButton.labelString:  Zru¹i» tlaèidlo pomocnej klávesnice
+
+Keypad52*selectplayfile.labelString:  Vybra» akciu prehrávacieho súboru
+
+Keypad52*changeSize.labelString:  Zmeni» ¹týl pomocnej klávesnice
+
+Keypad52*keypadfileDelete.labelString:  Vymaza» súbor pomocnej klávesnice
+
+Keypad52*transRxing:  Prijímajú sa informácie o prispôsobení aktuálnej pomocnej klávesnice z relácie emulátora.
+
+Keypad52*transRxd:  Z relácie emulátora sa prijali informácie o prispôsobení pomocnej klávesnice.
+
+Keypad52*currKeypadLabel.labelString:  Aktuálna pomocná klávesnica:
+
+Keypad52*currKeyLabel.labelString:  Text aktuálneho tlaèidla:
+
+Keypad52*currActLabel.labelString:  Akcia aktuálneho tlaèidla:
+
+!******************
+!**  Resolution  **
+!******************
+Keypad52*poorResolutionMsgText.value:   Rozlí¹enie vá¹ho monitora je men¹ie ako 800x600. Prispôsobenie pomocnej klávesnice nie je podporované na monitoroch s rozlí¹ením men¹ím ako 800x600.
+
+Keypad52*keypadFailureCancelBtn.labelString:  Zru¹i»
+
+!**************
+!**  Saving  **
+!**************
+Keypad52*saveDialog.dialogTitle:  Ulo¾i» pomocnú klávesnicu
+
+Keypad52*saveBoxLabel*labelString:  Ulo¾i» súbor pomocnej klávesnice ako:
+
+Keypad52*saveTran:  Súbor pomocnej klávesnice bol ulo¾ený...
+
+Keypad52*fileWarningDialog.dialogTitle:  Upozornenie pre pomocnú klávesnicu
+
+!**************
+!**  Delete  **
+!**************
+Keypad52*fileDeleteDialog.dialogTitle:  Vymaza» súbor pomocnej klávesnice
+
+Keypad52*fileDeleteBoxLabel.labelString:  Vyberte pomocné klávesnice na vymazanie:
+
+Keypad52*fileDeleted:  Vybraté súbory pomocnej klávesnice boli vymazané.
+
+!****************
+!**  Playback  **
+!****************
+Keypad52*invalidSelectionplay.messageString:  Nie je niè vybraté.  Vyberte nieèo zo zoznamu alebo Zru¹i».
+
+Keypad52*invalidSelectionplay.okLabelString:  Pokraèova»
+
+Keypad52*selectPlaybackFile.labelString:  Vybra» prehrávací súbor
+
+Keypad52*userPlaybackFiles.labelString:  U¾ívateµské prehrávacie súbory
+
+Keypad52*defaultPlaybackFiles.labelString:  Predvolené prehrávacie súbory
+
+AllShare*okLabel.labelString:  OK
+
+!********************
+!**  Keypad Style  **
+!********************
+Keypad52*selectSizeTitle.dialogTitle:  ©týl pomocnej klávesnice
+
+Keypad52*selectKeypadSizeLabel.labelString:  Vyberte ¹týl pomocnej klávesnice:
+
+Keypad52*selectKeypadStyle.labelString:  ©týl pomocnej klávesnice:
+
+Keypad52*popupStyleChoice.labelString:  Plávajúca pomocná klávesnica
+
+Keypad52*menuStyleChoice.labelString:  S»ahovacia pomocná klávesnica
+
+Keypad52*selectKeypadSizeRows.labelString:  Riadky:
+
+Keypad52*selectKeypadSizeCols.labelString:  Ståpce:
+
+Keypad52*selectKeypadSizeTextLen.labelString:  Då¾ka textu:
+
+Keypad52*changeKeypadSizeMessage:  Vyberte po¾adovaný ¹týl pomocnej klávesnice...
+
+Keypad52*newPb.labelString:  Nová
+
+Keypad52*row_col_pulldownvalue.labelString:  -
+
+Keypad52*invalidSizeSelection.messageString:  Vybratá veµkos» je primalá pre aktuálnu pomocnú klávesnicu.
+
+Keypad52*invalidSizeSelection.okLabelString:  Pokraèova»
+
+!***********************
+!**  Warning dialogs  **
+!***********************
+Keypad52*change.dialogTitle:  Upozornenie pre pomocnú klávesnicu
+
+Keypad52*unsaved.dialogTitle:  Upozornenie pre pomocnú klávesnicu
+
+Keypad52*unsaved.messageString:  Zmeny pomocnej klávesnice nie sú ulo¾ené.
+
+Keypad52*unsaved.okLabelString:  Pokraèova»
+
+Keypad52*nochange.dialogTitle:  Upozornenie pre pomocnú klávesnicu
+
+! this cannot be made much longer during translation.
+Keypad52*nochange.messageString:  Aplikujte alebo zru¹te aktuálnu zmenu pred vykonaním ïal¹ích zmien.
+
+Keypad52*nochange.okLabelString:  Pokraèova»
+
+Keypad52*cantdothat.dialogTitle:  Upozornenie pre pomocnú klávesnicu
+
+Keypad52*cantdothat.messageString:  Aplikujte alebo zru¹te zmeny pred výberom inej voµby.
+
+!nothing selected in first dialog box
+Keypad52*invalidSelectionwarn.messageString:  Nie je niè vybraté. Vyberte nieèo zo zoznamu, vyberte Nový alebo Zru¹i».
+
+Keypad52*invalidSelectionwarn.okLabelString:  Pokraèova»
+
+Keypad52*noaccessDir:  Nedá sa pristúpi» k adresáru.
+
+Keypad52*selectKeypadButton.messageString:  Pred zaèatím prispôsobovania je nutné vybra» tlaèidlo pomocnej klávesnice.
+
+Keypad52*generalError.dialogTitle:  Chyba pomocnej klávesnice
+
+Keypad52*generalError.messageString:  Poèas vykonávania akcie do¹lo k chybe.
+
+Keypad52*generalError.okLabelString:  OK
+
+Keypad52*emptyList:  V zozname prekladov je chyba, nedá sa ulo¾i» ani aplikova».
+
+Keypad52*ErrorMsgFileNameChars.messageString:  Zadali ste znak, ktorý názov súboru nemô¾e obsahova».
+
+Keypad52*EBCMismatchText.value: Jazyk relácie emulátora, ktorá vyvolala program Prispôsobenie pomocnej klávesnice sa nezhoduje s jazykom sie»ovej stanice IBM.  Znaky a re»azce vytvorené touto aplikáciou mô¾u spôsobi» neoèakávané a/alebo ne¾elané výsledky v relácii emulátora.
+
+!************************
+!**  Various Messages  **
+!************************
+! help button pressed
+Keypad52*helpMessage:  Naèítava sa Prezeraè pomoci...
+
+! after OK clicked
+Keypad52*chooseSave:  Vyberte Ulo¾i», aby ste ulo¾ili v¹etky zmeny.
+
+! after Cancel clicked
+Keypad52*chooseCancel:  Aktuálne zmeny sú zru¹ené.
+
+! original message when new keypad opens
+Keypad52*chooseNew:  Upravi» novú pomocnú klávesnicu
+
+! button pressed in keypad
+Keypad52*continueedit:  Upravi» aktuálne tlaèidlo...
+
+! click button action -> with nothing selected
+Keypad52*noActionSelected:  V Zozname akcií alebo v Zozname znakov nie je niè vybraté.
+
+! swapping messages (next 2)
+Keypad52*swapinprogress:  Vyberte OK, Zru¹i» alebo presuòte ïal¹ie tlaèidlá pomocnej klávesnice...
+
+Keypad52*swaprunninginfo:  Prebieha presun tlaèidla...
+
+! following 3 messages for invalid keypad action
+Keypad52*nonValidDialog.dialogTitle:  Upozoròujúca správa pre pomocnú klávesnicu
+
+Keypad52*nonValidDialog.messageString:  Akcie pomocnej klávesnice pre toto tlaèidlo sú neplatné.
+
+Keypad52*deleteKeypadMessage:  Vybra» pomocnú klávesnicu na vymazanie...
+
+!***************
+!**  Exiting  **
+!***************
+Keypad52*quitDialog1:  Pomocná klávesnica bola upravená, ale nie je ulo¾ená.
+
+Keypad52*quit1Tog1:  Ukonèi» bez ulo¾enia zmien.
+
+Keypad52*quit1Tog2:  Pred ukonèením ulo¾i» zmeny.
+
+!************************************************************************
+!
+!
+!                        Playback Editor Resources
+!
+!
+!************************************************************************
+Playedit*title:  Editor prehrávacích súborov
+
+Playedit*iname5250:  Editor prehrávacích súborov 5250
+
+Playedit*iname3270:  Editor prehrávacích súborov 3270
+
+Playedit*editorTitle.dialogTitle:  Editor prehrávacích súborov
+
+!****  Main Window
+Playedit*keyAction.labelString:  Vlo¾i» akciu ->
+
+Playedit*deleteAction.labelString:  Odstráni» akciu
+
+Playedit*insertAction.labelString:  Vlo¾i» riadok
+
+Playedit*editAction.labelString:  Upravi» akciu
+
+Playedit*transRxing:  Prijímajú sa informácie o editore prehrávacích súborov z relácie emulácie.
+
+Playedit*transRxd:  Z relácie emulátora sa prijali informácie o editore prehrávacích súborov.
+
+Playedit*currFileLabel.labelString:  Aktuálny prehrávací súbor:
+
+Playedit*currActLabel.labelString:  Akcie aktuálneho prehrávacieho súboru:
+
+!** Resolution
+Playedit*poorResolutionMsgText.value:  Rozlí¹enie vá¹ho monitora je men¹ie ako 800x600. Editor prehrávacích súborov nie je podporovaný na monitoroch s rozlí¹ením men¹ím ako 800x600.
+
+!** Saving
+Playedit*saveDialog.dialogTitle:  Ulo¾i» prehrávací súbor
+
+Playedit*saveBoxLabel*labelString:  Ulo¾i» prehrávací súbor ako:
+
+Playedit*saveTran:  Prehrávací súbor bol ulo¾ený...
+
+Playedit*fileWarningDialog.dialogTitle:  Upozornenie pre editor prehrávania
+
+!** Edit
+Playedit*editBoxLabel*labelString:  Upravi» akciu:
+
+!** Warning Dialogs
+Playedit*PlaybackMsgFileNoOpen.value:  Nedá sa otvori» prehrávací súbor.  Ukonèuje sa aplikácia.
+
+Playedit*PlaybackMsgFileNoRead.value:  Nedá sa preèíta» prehrávací súbor.  Ukonèuje sa aplikácia.
+
+Playedit*PlaybackMsgFileCorrupt.value:  Prehrávací súbor nie je vytvorený aplikáciou Zaznamena» emulátora. Nedá sa otvori» súbor.  Ukonèuje sa aplikácia.
+
+Playedit*noaccessDir:  Nedá sa pristúpi» k adresáru.
+
+Playedit*selectInsertLocation.messageString:  Zvýraznite riadok, kam sa má vlo¾i» táto akcia.
+
+Playedit*ErrorMsgFileNameChars.messageString:  Zadali ste znak, ktorý názov súboru nemô¾e obsahova».
+
+Playedit*EBCMismatchText.value:  Jazyk relácie emulátora, ktorá vyvolala Editor prehrávacích súborov sa nezhoduje s jazykom sie»ovej stanice IBM.  Znaky a re»azce vytvorené touto aplikáciou mô¾u spôsobi» neoèakávané a/alebo ne¾elané výsledky v relácii emulátora.
+
+Playedit*nonValidDialog.messageString:  Akcia(e) je neplatná.
+
+!** Messages
+Playedit*helpMessage:  Naèítava sa Prezeraè pomoci...
+
+Playedit*chooseSave:  Vyberte Ulo¾i», aby ste ulo¾ili v¹etky zmeny.
+
+Playedit*chooseCancel:  Aktuálne zmeny sú zru¹ené.
+
+Playedit*noActionSelected.messageString:  V Zozname akcií alebo v Zozname znakov nie je niè vybraté.
+
+Playedit*nothingHighlightedDelete.messageString:  Nie je vybratá polo¾ka na vymazanie.
+
+Playedit*nothingHighlightedInsert.messageString:  Zvýraznite umiestnenie po¾adovaného vlo¾enia.
+
+Playedit*nothingHighlightedEdit.messageString:  Nie je vybratá polo¾ka na úpravu.
+
+!** Exit
+Playedit*quitDialog1:  Prehrávací súbor bol upravený, ale nie je ulo¾ený.
+
+Playedit*quit1Tog1:  Ukonèi» bez ulo¾enia zmien.
+
+Playedit*quit1Tog2:  Pred ukonèením ulo¾i» zmeny.
+
+!**************************************************
+!*
+!*        Printing translations
+!*
+!*      Added by AJMEYER for V310.nc
+!*
+!**************************************************
+
+AllShare*printDialogPrinterTypeLabel.labelString:  Typ tlaèiarne:
+
+AllShare*printDialogPrinterTypeMenu*postscript.labelString:  PostScript
+
+AllShare*printDialogPrinterTypeMenu*ascii.labelString:  ASCII
+
+AllShare*printDialogPrinterTypeMenu*pcl.labelString:  PCL
+
+AllShare*printDialogPrinterSelectControls_popup.title:   Výber tlaèiarne
+
+AllShare*printSelectDialogOKButton.labelString:  OK
+
+AllShare*printSelectDialogCancelButton.labelString:  Zru¹i»
+! ENGL1SH_VERS10N 1.6.2.2 DO NOT REMOVE OR CHANGE THIS LINE

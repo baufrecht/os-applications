@@ -1,0 +1,44 @@
+!
+!
+!
+! This file contains the resource text strings for the IBM Network Station 3270, 5250, and
+! VTxxx emulators, in particular local print messages.
+
+! This resource file will be stored on all servers in locale specific ASCII (819 for Latin1
+! languages). This resource file is stored on the booting server as N3_5LocP.
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. Resource format: 
+!    - A resource line starts with Print* followed by a resource name
+!      and a ":".  Do NOT make any changes to the text to the left of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+
+! ******************************************************************
+! Screen Print Resources
+! ******************************************************************
+!
+Print*title:                         Utskriftsstatus
+!
+Print*statusLabel.labelString:       Skärmutskrift pågår.
+!
+Print*statusOk.labelString:          OK
+!
+! Note: \n causes a new line in the dialogue box and should not be translated.
+! You can move, add, or remove \n within this text string.
+Print*errorLabel.labelString:        Skrivaren svarade inte.\n Kontrollera att skrivaren är klar för utskrift.
+!
+Print*errorRetry.labelString:        Försök igen
+!
+Print*errorCancel.labelString:       Avbryt
+!
+Print*jobDesc:                       Skriv ut skärm
+!
+! Print*iconName:                      Skriv ut skärm
+!
+Print*okLabelString: OK
+!
+Print*cancelLabelString: Avbryt
+

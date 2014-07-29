@@ -1,0 +1,79 @@
+//// ENGLISH_SOURCE_VERSION= 1.2 
+////This file contains the playback editor program on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file will be stored in locale specific ASCII (code page 819 for Latin1 languages). 
+
+////Help text format (this section is not displayed to IBM emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1.
+//// 3. This help file contains help text for the 3270 and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator. A comment line of four "/" characters followed by:
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+//// 3B.  "5250" indicates subsequent data is only displayed in 5250 on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in both 3270 and 5250 on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+//// 3D Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters.  The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Do not change the order of topics in this help text file.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+
+----"3270 Hilfe zum Wiedergabe-Editor"
+++++"Allgemeine Informationen"
+Informationen zur Verwendung dieses Hilfeanzeigeprogramms finden Sie im ersten Abschnitt der Haupthilfe zum Emulator. (Wählen Sie hierzu die Menüauswahl "Hilfe" im Emulatorfenster aus.)
+
+In diesem Hilfetext wird erläutert, wie Sie vorhandene Wiedergabedateien bearbeiten können. Eine Wiedergabedatei wird mit Hilfe der Option "Aufzeichnung" im Menü "Optionen" erstellt; sie besteht aus verschiedenen benutzerdefinierten Aktionen und Tastenkombinationen.  
+
+Anmerkung: Es kann jeweils immer nur ein Wiedergabe-Editor aktiv sein.
+
+++++"Fensterlayout"
+Das Fenster des Wiedergabe-Editors enthält einen Bereich zur Auswahl von Tastaturaktionen (links), einen Arbeitsbereich mit einer Liste von Wiedergabeaktionen (rechts), eine Aktionsleiste (unten) und einen Nachrichtenbereich (unten). 
+
+Der Bereich zur Auswahl von Tastaturaktionen enthält folgende Elemente:
+
+1) Die "Liste verfügbarer Aktionen" enthält die verfügbaren Tastaturaktionen. Eine aus der Liste ausgewählte Aktion wird zur aktuellen Aktion.
+
+2) Die "Zeichenliste" enthält alle verfügbaren Zeichen. Ein ausgewähltes Zeichen wird zur aktuellen Aktion. Klicken Sie auf ein Zeichen, um es auszuwählen.
+
+3) Die Schaltfläche "Aktionshilfe" bietet Definitionen für Tastaturaktionen in einem Aktionshilfefenster. Sie können die Aktionsdefinitionen drucken.
+
+4) Mit der Schaltfläche "Aktion einfügen->" können Sie die aktuelle Aktion im Arbeitsbereich mit der Liste der Wiedergabeaktionen über der ausgewählten Wiedergabedateiaktion einfügen.
+
+Anmerkung: Es kann immer nur eine Aktion die aktuelle Aktion sein.
+
+
+Der Arbeitsbereich mit der Liste der Wiedergabeaktionen enthält folgende Elemente:
+
+1) Die Option "Aktuelle Wiedergabedatei" zeigt den Namen der Wiedergabedatei an.
+
+2) Im Bereich "Aktionen für aktuelle Wiedergabedatei" sind die Tastaturaktionen in der aktuellen Wiedergabedatei aufgelistet. Um eine Aktion einzufügen, zu bearbeiten oder zu entfernen muss eine Tastaturaktionszeile ausgewählt sein. Eine Aktionszeile ist auf etwa 100 Zeichen begrenzt.
+
+3) Über die Schaltfläche "Aktion bearbeiten" können Sie die ausgewählte Aktion bearbeiten. Über die Schaltfläche "OK" im Editierfenster können Sie die bearbeitete Aktion ersetzen. Über die Schaltfläche "Abbrechen" werden die Änderungen an der Aktion verworfen.
+
+4) Über die Schaltfläche "Zeile einfügen" können Sie an der ausgewählten Position eine leere Zeile in die Liste der Wiedergabeaktionen einfügen, die Sie dann bearbeiten können.
+
+5) Über die Schaltfläche "Aktion entfernen" wird die ausgewählte Aktion entfernt.
+
+6) Über die Schaltfläche "OK" können Sie Änderungen akzeptieren, die an der Liste der Wiedergabeaktionen vorgenommen wurden.
+
+7) Über die Schaltfläche "Abbrechen" werden an der Liste der Wiedergabeaktionen vorgenommene Änderungen verworfen.
+
+
+Die Schaltflächen der Aktionsleiste bieten die folgenden Funktionen:
+
+1) "Speichern" ermöglicht das Speichern der Änderungen an der Wiedergabedatei. Sie können die ursprüngliche Wiedergabedatei ändern oder die vorgenommenen Änderungen in einer neuen Wiedergabedatei speichern.
+
+2) Über "Verlassen" können Sie den Wiedergabedatei-Editor verlassen.
+
+3) Über "Hilfe" können Sie diesen Hilfetext anzeigen.
+
+
+Nachrichtenbereich: Zeigt Informations- und Fehlernachrichten an.
+
+++++"Mausaktionen"
+In der "Liste verfügbarer Aktionen" sind alle verfügbaren Aktionen aufgeführt, die in einer Wiedergabedatei verwendet werden können; dazu gehören Mausaktionen, die in einer Wiedergabedatei aufgezeichnet werden können. Eine Mausaktion verfügt über einen Positionsparameter für Zeilen und Spalten, die durch ein Komma getrennt sind, wie z. B. (12,61).
+
+////3270
+++++"3270 - Frühe Tastaturentsperrung"
+Anmerkung: 3270-Anwendungen entsperren die Tastatur möglicherweise bereits, bevor das Aktualisieren der Anzeige abgeschlossen ist. Während der Wiedergabe wird vom 3270-Emulator automatisch eine Verzögerung hinzugefügt. Im Abschnitt zur Wiedergabe in der Haupthilfe zu 3270 finden Sie weitere Informationen.
+////9999

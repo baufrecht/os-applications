@@ -1,0 +1,390 @@
+////This file is the on-line help for the IBM Emulator Setup Programs.
+////This help text file will be stored in locale specific ASCII (code page 819 for Latin1 languages).
+////Help text format:
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1.
+//// 3. This help file contains help text for the 3270 and 5250 emulator setup programs. There are some help text differences. The Network Station help viewer program will display the appropriate help text for the appropriate emulator. A comment line of four "/" characters followed by
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 setup on-line help.
+//// 3B. "5250" indicates subsequent data is only displayed in 5250 setup on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in both 3270 setup and 5250 setup on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters. The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Order of topics: The emulator help viewer program automatically orders topics in alphabetical order when displaying the topics. There are many topics in this main emulator help text file; alphabetical order should make it easier for users to find the topic that they are looking for.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed on the IBM Network Station).
+////About topic lengths (preceded by four "+" characters): The maximum characters in any topic should be about 38 characters. Exceeding 38 characters will cause the help viewer to display topics for most of the width of the help viewer window, instead of the main help text. You can abbreviate topic text as necessary.
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+////3252
+---- "Ayuda para el programa de configuración de emulador"
+////5250
+---- "Ayuda para el programa de configuración de emulador 5250"
+////3270
+---- "Ayuda para el programa de configuración de emulador 3270"
+////9999
+++++"Utilización del visor de ayuda"
+Este tema explica cómo utiliza este visor de ayuda.
+
+El panel izquierdo de la ventana de ayuda contiene una lista de temas de ayuda. Es posible desplazar estos temas utilizando el ratón (si existe una barra de desplazamiento en medio), la tecla RePág o la tecla AvPág, (con el puntero del ratón en el panel izquierdo), la tecla de cursor arriba o (en la parte superior de la ventana) la tecla de cursor abajo (en la parte inferior de la ventana).
+
+La acción de apuntar a un tema con el puntero del ratón y pulsar el botón principal del ratón (normalmente el botón izquierdo) pone una descripción del tema seleccionado en el panel derecho.
+
+Es posible desplazarse por la descripción del panel derecho utilizando el ratón, la tecla RePág, la tecla AvPág, la tecla Cursor arriba (en la parte superior de la ventana) o la tecla de Cursor abajo (en la parte inferior de la ventana).
+
+Los botones de búsqueda le permiten buscar una cadena de texto dentro del texto de la ayuda. Una cadena de texto de búsqueda puede contener blancos y no es sensible a mayúsculas y minúsculas.
+
+Pulse en los botones Tema siguiente y Tema anterior para volver a crear el orden de temas que ya ha visualizado.
+
+Pulse en el botón Imprimir para imprimir el tema del texto de ayuda que se está visualizando o todos los temas de texto de ayuda (debe haber una impresora configurada antes de imprimir el texto de ayuda).
+
+Pulse en el botón Salir para eliminar la ventana de ayuda.
+
+Si la resolución del monitor es 1024x768 o superior, un botón Font le permite cambiar el tamaño de font mientras visualiza la ayuda.
+++++"Visión general del programa de configuración"
+////MAI Used by help viewer to find this topic.
+El Programa de configuración de emulador se utiliza para configurar y ejecutar el emulador IBM. La ventana principal consta de dos áreas: la barra de menús y la lista de conexiones configuradas o listas por debajo de ella. La barra de menús consta de 4 listas desplegables: Conexión, Preferencias, Opciones y Ayuda. La lista de conexiones configuradas contiene las conexiones que se han configurado (no las conexiones que está activas). Si existen 2 listas de conexiones, la primera de ellas es la lista 'Conexiones de usuario' y la segunda lista es la lista 'Conexiones por omisión'. Si no existen conexiones por omisión, la lista 'Conexiones por omisión' no aparece.
+
+Utilice el menú desplegable Conexión para crear, editar, examinar, copiar y eliminar configuraciones de conexión del emulador. Utilice también el menú desplegable Conexión para conectar utilizando una configuración de conexión determinada. Las operaciones editar, examinar, copiar, conectar y eliminar se aplican a la conexión seleccionada actualmente en una lista de conexiones por debajo de la barra de menús. Si no existen configuraciones de conexión, o no hay seleccionada ninguna, solamente estarán disponibles las operaciones de los desplegables Nueva y Salir de conexión. Si se selecciona una conexión de la lista 'Conexiones por omisión', no estarán disponibles las operaciones de los desplegables Editar y Eliminar conexión. Utilice la opción Salir para salir del Programa de configuración.
+
+Utilice el menú desplegable Preferencias de la barra de menús para configurar las preferencias para los emuladores. Los valores de Preferencias se aplican a todas las conexiones del emulador, y se pueden en algunas ocasiones sobregrabar por las opciones de configuración de conexión individuales. Con el fin de que las preferencias tengan efecto, debe detener y reiniciar TODAS las sesiones de emulador.
+
+Utilice el menú desplegable Opciones de la barra de menús para cambiar el funcionamiento del propio Programa de configuración. Por ejemplo, para añadir una contraseña de Programa de configuración, utilice este desplegable.
+
+Utilice el menú desplegable Ayuda de la barra de menús para aprender a utilizar el Programa de configuración de emulador, obtener ayuda para el Programa de Configuración de emulador o visualizar la ayuda para el propio emulador.
+++++"Contraseña del Programa de configuración"
+////PAS Used by help viewer to find this topic.
+El panel Cambiar contraseña se utiliza para crear, cambiar o eliminar la contraseña del Programa de configuración. Para obtener este panel, seleccione Contraseña desde el menú desplegable Opciones de la barra de menús.
+
+Para cambiar o eliminar una contraseña, debe entrar en primer lugar la contraseña actual.
+
+Para crear o cambiar la contraseña, la nueva contraseña debe entrarse dos veces: primero en el campo "Nueva contraseña" y luego en el campo "Confirmar nueva contraseña". Tenga en cuenta que las contraseñas son sensibles a las mayúsculas y minúsculas, por tanto asegúrese de que el bloqueo de mayúsculas esté en el estado correcto.
+
+Para eliminar una contraseña, cambie la contraseña para que esté en blanco (no escriba nada en el campo "Nueva contraseña" o "Confirmar nueva contraseña".
+////3270
+++++"Conexión de emulador 3270"
+////3CN Used by help viewer to find this topic.
+El panel conexión de emulador 3270 se utiliza para crear, editar o examinar una configuración de conexión de emulador 3270. Para obtener este panel, seleccione Nueva, Editar o Examinar desde el menú desplegable Conexión de la barra de menús.
+
+Descripción de la conexión:
+
+Es un nombre o descripción de la configuración de conexión del emulador 3270. En este campo puede entrar cualquier información, pero habitualmente es de mayor utilidad alguna información que identifique el sistema de destino o el propósito de esta conexión. El único lugar en el que se utiliza esta descripción es en el Programa de configuración para identificar la configuración de conexión en la lista de conexiones configuradas. No se utiliza en el propio emulador.
+
+Nombre de sistema principal S/390 Ho dirección IP:
+
+Este campo es opcional. Si se deja en blanco, aparecerá un diálogo solicitando el nombre de sistema principal o la dirección IP (numérica) cuando se inicie el emulador 3270.
+
+Para esta conexión de emulador se puede especificar una conexión de emulador 3270 avanzada. Realice esta acción pulsando el botón Conexión 3270 avanzada... desde un panel Conexión de emulador 3270.
+
+Muchas de las preferencias de emulador 3270 son globales (las preferencias se aplican a todas las sesiones de emulador 3270); por ejemplo, la habilitación o inhabilitación del cambio de correlación de teclado del emulador. Especifique las preferencias globales utilizando el menú desplegable Preferencias de la barra de menús, o pulse el botón Preferencias 3270 globales... desde un panel Conexión de emulador 3270.
+++++" - Configuración avanzada"
+////3AC Used by help viewer to find this topic.
+Parámetros de conexión de emulador 3270 avanzada:
+
+Título de sesión:
+
+Este valor de texto aparecerá como el título de sesión del emulador. El texto del título por omisión es "3270". Este valor es opcional.
+
+Tamaño de pantalla:
+
+Esta opción establece el tamaño (número de filas y de columnas) que desea que la sesión 3270 utilice. Nota: Se necesita normalmente una resolución de 1024x768 o superior para soportar 27 filas por 132 columnas. Se requiere una resolución de monitor de 800x600 o superior para soportar 43 filas por 80 columnas. Los valores posibles son: 24 x 80, 32 x 80, 43 x 80 y 27 x 132. El valor por omisión es 32 x 80.
+
+Gráficos:
+
+La opción Gráficos le permite habilitar o inhabilitar la capacidad de la sesión 3270 de visualizar gráficos. Los gráficos solamente están disponibles con un tamaño de 32 por 80. Los valores posibles son: Habilitados o Inhabilitados.
+
+TN3270E:
+
+Los valores posibles son: Habilitado o Inhabilitado. El valor por omisión es Habilitado. La elección de Habilitado hace que el emulador 3270 negocie una sesión TN3270E (Telnet 3270 mejorado) con el servidor o, si no es posible negociar TN3270E, utilizar una sesión 3270 estándar. La elección de Inhabilitado no permitirá que se establezca una conexión de sesión TN3270E, se utiliza una sesión 3270 estándar.
+
+Puerto telnet:
+
+Esta opción especifica qué puerto TCP/IP se utilizará en un sistema System/390 para establecer una sesión 3270. El valor por omisión 23. El resto de
+valores válidos van de 1 a 65535. Para utilizar un número de puerto
+distinto del valor por omisión, debe ponerse en contacto con el
+administrador del servidor Telnet o System/390 remoto y preguntarle
+cuál es el número de puerto de la máquina.
+
+Tamaño y posición en píxeles de la ventana (opcional):
+
+Esta opción permite al usuario especificar el tamaño y localización inicial de la ventana 3270. Los
+campos que definen el tamaño de la ventana (altura y anchura) y la
+posición de la misma en el monitor (desplazamiento horizontal y
+vertical y desde qué ángulo) son los siguientes:
+
+Pantalla completa:
+Si se marca este recuadro, se permitirá que la ventana 3270 utilice la pantalla completa.
+
+Ancho:
+Este valor determina la anchura horizontal de la ventana (en píxeles).
+
+Alto:
+Este valor determina la altura vertical de la ventana (en píxeles).
+
+Desplazamiento horizontal:
+Este valor determina la distancia horizontal desde cualquier ángulo que se haya especificado como el Ángulo para valor de desplazamiento (por ejemplo, Superior izquierdo)(en píxeles). 
+
+Desplazamiento vertical:
+Este valor determina la distancia vertical desde cualquier ángulo que se haya especificado como el Ángulo para valor de desplazamiento (por ejemplo, Superior izquierdo)(en píxeles).
+
+Ángulo para desplazamiento:
+Este valor determina desde qué ángulo (superior izquierdo, superior derecho, inferior izquierdo o inferior derecho) se aplican los valores de los campos Desplazamiento horizontal y vertical.
+
+ID de usuario de emulador:
+
+Este valor se utiliza en el emulador para el ID de usuario siempre que se necesite. Por ejemplo, si se utiliza la conexión automática del emulador, este valor se utiliza para el ID de usuario.
+
+Contraseña de emulador:
+
+Este valor se utiliza en el emulador para la contraseña siempre que se necesite. Por ejemplo, si se utiliza la conexión automática del emulador, este valor se utiliza para la contraseña. La contraseña se almacena codificada.
+
+Otros parámetros:
+Se pueden configurar parámetros adicionales para el emulador 3270. En la ayuda en línea del emulador 3270 hallará la descripción de los
+parámetros y sus valores. Los valores de Otros parámetros son sensibles a las mayúsculas y minúsculas.
+
+++++"Preferencias de 3270"
+////3PR Used by help viewer to find this topic.
+Las Preferencias de 3270 permiten que las opciones del emulador están disponibles o no. Los valores de Preferencias se aplican a todas las sesiones 3270. Para hacer que las preferencias se apliquen, se deben cerrar y reiniciar todas las sesiones de emulador 3270.
+
+Posibilidad de cambio de correlación de teclas:
+
+El cambio de correlación del teclado le permite cambiar la correlación de las teclas en el emulador 3270. El cambio de correlación de teclado está disponible a través del menú desplegable Opción del emulador. "Inhabilitada" significa que el usuario puede ver la selección Cambio de correlación de teclado, pero no podrá seleccionarla (aparecerá en gris). "Oculta" significa que el usuario no verá la selección Cambio de correlación de teclado en el menú desplegable Opciones. La ayuda en línea del emulador 3270 describe el cambio de correlación de teclado.
+
+Posibilidad de área de teclado:
+
+La posibilidad de área de teclado le permite crear y utilizar botones de área de teclado personalizados. "Sí" le permite personalizar los botones de área de teclado. "Área de teclado solo de uso" significa que el usuario sólo puede utilizar áreas de teclado creadas previamente. La personalización del área de teclado está disponible a través del menú desplegable Opción del emulador. La ayuda en línea del emulador 3270 describe la personalización del área de teclado.
+
+Posibilidad de grabación y reproducción:
+
+Grabar/Reproducir permite al usuario grabar y posteriormente reproducir las secuencias de teclas grabadas en el emulador 3270. La grabación y reproducción están disponible a través del menú desplegable Opción del emulador. "Reproducción solo" significa que el usuario sólo puede archivos de reproducción creados previamente. La ayuda en línea del emulador 3270 describe la grabación y reproducción.
+
+Posibilidad de personalización de colores:
+
+La personalización de colores permite al usuario modificar colores dentro de las sesiones 3270. La correlación de colores está disponible a través del menú desplegable Opción del emulador. La correlación de colores "Básica" permite la usuario seleccionar un conjunto de esquemas de color 3270. "Avanzada" le permite crear sus propios esquemas de color 3270. La ayuda en línea del emulador 3270 describe la correlación de colores.
+
+Función Tecla para Intro:
+
+La opción Tecla para Intro especifica la tecla que se desea utilizar como tecla Intro. El valor por omisión es la tecla Intro. 
+
+Archivo de escritorio:
+
+Esta opción determina si el emulador 3270 almacena y utiliza la última posición y tamaño de font de las ventanas de emulador 3270. Si se selecciona "Sí" o "Sí, pero solo lectura", el emulador 3270 utilizará, al iniciar un emulador 3270, la posición y tamaño de font almacenados. Si se selecciona "Sí", también se almacenara la última posición y tamaño de font al salir de un emulador 3270. Si se selecciona "No" para archivo de Escritorio, el emulador 3270 no utilizará o almacenará la última posición y tamaño de font. Nota: Si la posición y tamaño de ventana inicial se establece en la configuración de conexión, el emulador 3270 no utilizará o almacenará la última posición y tamaño de font-- independientemente de este valor.
+
+Menú Mandato:
+
+La opción de menú Mandato permite al usuario habilitar o inhabilitar la selección Mandato de la barra de menús de 3270. "Sí" significa que la opción Mandato está disponible. Si la opción Mandato está inhabilitada, no tendrá acceso a nuevas sesiones 3270 o no le será posible salir de una sesión 3270 utilizando la selección Mandato.
+
+Menú Editar:
+
+El menú Editar permite al usuario habilitar o inhabilitar la selección Editar en la barra de menús de 3270 (copiar, cortar y pegar).
+
+Menú Opción:
+
+La opción de menú Opción permite al usuario habilitar o inhabilitar la selección Opción en la barra de menús de 3270. Si la selección Opción se inhabilita, no se tendrá acceso a selección de Fonts, Personalización de teclado, selecciones de Grabar/Reproducir, Preferencias varias (por ejemplo, selección de estilo de cursor), Correlación de colores o Cambio de correlación de teclado.
+
+Menú Imprimir:
+
+La opción de menú Imprimir permite al usuario habilitar o inhabilitar la selección Imprimir de la barra de menús de 3270. "Sin menú, solo impresión de teclado" significa que únicamente se puede utilizar una secuencia de teclas de impresión para imprimir la pantalla 3270. Preferencias varias y Cambio de correlación de teclado pueden especificar la secuencia de teclas de impresión. Nota: Antes de poder utilizar la impresión de pantalla de 3270 tiene que haber configurada una impresora.
+
+Menú Ayuda:
+
+La opción de menú Ayuda permite al usuario habilitar o inhabilitar la selección Ayuda de la barra de menús de 3270 (visualiza la ayuda en línea del emulador 3270).
+
+Preferencias varias:
+
+La opción Preferencias varias permite al usuario habilitar o inhabilitar Preferencias varias de 3270. Preferencias varias está disponible a través del menú desplegable Opción del emulador. Preferencias varias determina (hasta cierto punto) el aspecto y presentación que tendrá la pantalla de visualización 3270. Por ejemplo, se puede seleccionar el estilo del cursor (subrayado o bloque), la intermitencia del cursor (usarla o no) y la utilización de líneas de guía.
+
+Lista de menú Fonts:
+
+La opción de menú Fonts permite al usuario habilitar o inhabilitar la selección de fonts en el menú desplegable Opción del emulador 3270. Esta opción también especifica si el usuario puede redimensionar o mover la ventana de emulador 3270.
+
+Ventana de sesión nueva:
+
+La opción de Ventana de sesión nueva permite al usuario habilitar o inhabilitar el inicio de otro emulador 3270 en un sistema principal S/390 distinto. La ventana de la nueva sesión de emulador está disponible a través del menú desplegable Mandato (siempre y cuando la selección de barra de menú Mandato esté habilitada).
+
+ID de usuario de emulador:
+
+Este valor se utiliza en el emulador para el ID de usuario siempre que se necesite. Por ejemplo, si se utiliza la conexión automática del emulador, este valor se utiliza para el ID de usuario.
+
+Contraseña de emulador:
+
+Este valor se utiliza en el emulador para la contraseña siempre que se necesite. Por ejemplo, si se utiliza la conexión automática del emulador, este valor se utiliza para la contraseña. La contraseña se almacena codificada.
+
+Parámetros adicionales:
+
+Se pueden configurar parámetros adicionales para el emulador 3270. En la ayuda en línea del emulador 3270 se puede encontrar las descripciones de los parámetros y sus valores. Los parámetros adicionales son sensibles a las mayúsculas y minúsculas.
+////5250
+++++"Conexión de emulador 5250"
+////5CN Used by help viewer to find this topic.
+El panel conexión de emulador 5250 se utiliza para crear o editar una configuración de conexión de emulador 5250. Para obtener este panel, seleccione Nueva o Editar desde el menú desplegable Conexión de la barra de menús.
+
+Descripción de la conexión:
+
+Es un nombre o descripción de la configuración de conexión del emulador 5250. En este campo puede entrar cualquier información, pero habitualmente es de mayor utilidad alguna información que identifique el sistema de destino o el propósito de esta conexión. El único lugar en el que se utiliza esta descripción es en el Programa de configuración para identificar la configuración de conexión en la lista de conexiones configuradas. No se utiliza en el propio emulador.
+
+Nombre de sistema principal i5/OS o Dirección IP...:
+
+Este campo es opcional. Si se deja en blanco, aparecerá un diálogo solicitando el nombre de sistema principal o la dirección IP (numérica) cuando se inicie el emulador 5250.
+
+Para esta conexión de emulador se puede especificar una configuración de conexión de emulador 5250 avanzada. Realice esta acción pulsando el botón Conexión 5250 avanzada... desde un panel Conexión de emulador 5250.
+
+Muchas de las preferencias de emulador 5250 son globales (las preferencias se aplican a todas las sesiones de emulador 5250); por ejemplo, la habilitación o inhabilitación del cambio de correlación de teclado del emulador. Especifique las preferencias globales utilizando el menú desplegable Preferencias de la barra de menús, o pulse el botón Preferencias 5250 globales... desde un panel Conexión de emulador 5250.
+++++" - Configuración avanzada"
+////5AC Used by help viewer to find this topic.
+Parámetros de conexión de emulador 5250 avanzada:
+
+Título de sesión:
+
+Este valor de texto aparecerá como el título de sesión. El texto del título por omisión es "5250".  Este valor es opcional.
+
+Nombre de pantalla:
+
+Este valor determina el nombre de pantalla 5250. Este valor es opcional. Consulte el tema Nombre de pantalla en la ayuda en línea del emulador 5250 para obtener más información. 
+
+Tamaño y posición en píxeles de la ventana (opcional):
+
+Esta opción permite al usuario especificar el tamaño y localización inicial de la ventana 5250. Los campos que definen el tamaño de la ventana (altura y anchura) y la posición de la misma en el monitor (desplazamiento horizontal y vertical y desde qué ángulo) son los siguientes: 
+
+Pantalla completa:
+Marcar este recuadro permite que la ventana 5250 utilice la pantalla completa. 
+
+Ancho:
+Este valor determina la anchura horizontal de la ventana (en píxeles).
+
+Alto:
+Este valor determina la altura vertical de la ventana (en píxeles).
+
+Desplazamiento horizontal:
+Este valor determina la distancia horizontal desde cualquier ángulo que se haya especificado como el Ángulo para valor de desplazamiento (por ejemplo, Superior izquierdo)(en píxeles).
+
+Desplazamiento vertical:
+Este valor determina la distancia vertical desde cualquier ángulo que se haya especificado como el Ángulo para valor de desplazamiento (por ejemplo, Superior izquierdo)(en píxeles).
+
+Ángulo para desplazamiento:
+Este valor determina desde qué ángulo (superior izquierdo, superior derecho, inferior izquierdo o inferior derecho) se aplican los valores de los campos Desplazamiento horizontal y vertical.
+
+ID de usuario de emulador:
+
+Este valor se utiliza en el emulador para el ID de usuario siempre que se necesite. Por ejemplo, si se utiliza la conexión automática del emulador, este valor se utiliza para el ID de usuario.
+
+Contraseña de emulador:
+
+Este valor se utiliza en el emulador para la contraseña siempre que se necesite. Por ejemplo, si se utiliza la conexión automática del emulador, este valor se utiliza para la contraseña. La contraseña se almacena codificada.
+
+Puerto de Telnet:
+Especifica el puerto de telnet que está establecido para el puerto de telnet del servidor. En blanco significa el puerto de telnet por omisión, que es 23.
+
+Nombre de archivo de correlación de teclado:
+Especifica el nombre de archivo de correlación de teclado junto con la vía de acceso completa para ese archivo.
+
+Nombre de archivo de área de teclado:
+Especifica el nombre de archivo de área de teclado junto con la vía de acceso completa para ese archivo.
+
+Nombre de archivo SSL:
+Especifica el nombre de archivo SSL junto con la vía de acceso completa para ese archivo.
+
+Otros parámetros:
+Se pueden configurar parámetros adicionales para el emulador 5250. En la ayuda en línea del emulador 5250 hallará la descripción de los parámetros y sus valores. Los valores de Otros parámetros son sensibles a las mayúsculas y minúsculas.
+
+++++"Preferencias de 5250"
+////5PR Used by help viewer to find this topic.
+Las Preferencias de 5250 permiten que las opciones del emulador estén disponibles o no. Los valores de Preferencias se aplican a todas las sesiones 5250. Para hacer que las preferencias se apliquen, se deben cerrar y reiniciar todas las sesiones de emulador 5250.
+
+Posibilidad de cambio de correlación de teclas:
+
+El cambio de correlación del teclado le permite cambiar la correlación de las teclas en el emulador 5250. El cambio de correlación de teclado está disponible a través del menú desplegable Opción del emulador. "Inhabilitada" significa que el usuario puede ver la selección Cambio de correlación de teclado, pero no podrá seleccionarla (aparecerá en gris). "Oculta" significa que el usuario no verá la selección Cambio de correlación de teclado en el menú desplegable Opciones. La ayuda en línea del emulador 5250 describe el cambio de correlación de teclado. .
+
+Posibilidad de área de teclado:
+
+La posibilidad de área de teclado le permite crear y utilizar botones de área de teclado personalizados. "Sí" le permite personalizar los botones de área de teclado. "Área de teclado solo de uso" significa que el usuario sólo puede utilizar áreas de teclado creadas previamente. La personalización del área de teclado está disponible a través del menú desplegable Opción del emulador. La ayuda en línea del emulador 5250 describe la personalización del área de teclado.
+
+Posibilidad de grabación y reproducción:
+
+Grabar/Reproducir permite al usuario grabar y posteriormente reproducir las secuencias de teclas grabadas en el emulador 5250. La grabación y reproducción están disponible a través del menú desplegable Opción del emulador. "Reproducción solo" significa que el usuario sólo puede archivos de reproducción creados previamente. La ayuda en línea del emulador 5250 describe la grabación y reproducción.
+
+Posibilidad de personalización de colores:
+
+La personalización de colores permite al usuario modificar colores dentro de las sesiones 5250. La correlación de colores está disponible a través del menú desplegable Opción del emulador. La correlación de colores "Básica" permite la usuario seleccionar un conjunto de esquemas de color 5250. "Avanzada" le permite crear sus propios esquemas de color 5250. La ayuda en línea del emulador 5250 describe la correlación de color.
+
+Parámetros árabes:
+Esta opción sirve para proteger el carácter LamAlef en el archivo implícito de los sistemas iSeries. Cuando esta opción está activa, cada LamAlef asignará espacio al final del campo árabe. El valor por omisión es Off.
+
+132 columnas:
+
+Si se habilita, se permitirá un tamaño de pantalla de 27 filas por 132 columnas. La mayoría de las pantallas i5/OS son de 24 filas por 80 columnas. Algunas pantallas i5/OS utilizan 27 filas por 132 columnas si el emulador 5250 soporta este tamaño de pantalla. En general, para visualizar 27 filas por 132 columnas se requiere una resolución de monitor de 1024x768 o superior.
+
+Separadores de columnas:
+
+La opción Separadores de columnas habilita o inhabilita la visualización de separadores de columnas entre ciertos tipos de campos de entrada 5250. El valor por omisión es Inhabilitado, que significa que en los campos de entrada de 5250 no aparecerán caracteres separadores.
+
+Archivo de escritorio:
+
+Esta opción determina si el emulador 5250 almacena y utiliza la última posición y tamaño de font de las ventanas de emulador 5250. Si se selecciona "Sí" o "Sí, pero solo lectura", el emulador 5250 utilizará, al iniciar un emulador 5250, la posición y tamaño de font almacenados. Si se selecciona "Sí", también se almacenara la última posición y tamaño de font al salir de un emulador 5250. Si se selecciona "No" para archivo de Escritorio, el emulador 5250 no utilizará o almacenará la última posición y tamaño de font. Nota: Si la posición y tamaño de ventana inicial se establece en la configuración de conexión, el emulador 5250 no utilizará o almacenará la última posición y tamaño de font-- independientemente de este valor.
+
+Menú Mandato:
+
+La opción de menú Mandato permite al usuario habilitar o inhabilitar la selección Mandato de la barra de menús de 5250. "Sí" significa que la opción Mandato está disponible. Si la opción Mandato está inhabilitada, no tendrá acceso a nuevas sesiones 5250 o no le será posible salir de una sesión 5250 utilizando la selección Mandato.
+
+Menú Editar:
+
+La opción de menú Editar permite al usuario habilitar o inhabilitar la selección Editar en la barra de menús de 5250 (copiar, cortar y pegar).
+
+Menú Opción:
+
+La opción de menú Opción permite al usuario habilitar o inhabilitar la selección Opción en la barra de menús de 5250. Si la selección Opción se inhabilita, no se tendrá acceso a selección de Fonts, Personalización de teclado, selecciones de Grabar/Reproducir, Preferencias varias (por ejemplo, selección de estilo de cursor), Correlación de colores o Cambio de correlación de teclado.
+
+Menú Imprimir:
+
+La opción de menú Imprimir permite al usuario habilitar o inhabilitar la selección Imprimir de la barra de menús de 5250 (para imprimir la pantalla 5250). "Sin menú, solo impresión de teclado" significa que únicamente se puede utilizar una secuencia de teclas de impresión para imprimir la pantalla 5250. Preferencias varias y Cambio de correlación de teclado pueden especificar la secuencia de teclas de impresión. Nota: Antes de poder utilizar la impresión de pantalla de 5250 tiene que haber configurada una impresora.
+
+Menú Ayuda:
+
+La opción de menú Ayuda permite al usuario habilitar o inhabilitar la selección Ayuda de la barra de menús de 5250 (visualiza la ayuda en línea del emulador 5250).
+
+Menú Control:
+
+La opción de menú Control permite al usuario habilitar o inhabilitar la selección Control en la barra de menús de 5250. La selección de una tecla dentro del menú desplegable Control realiza la misma función que si se pulsase la tecla en el teclado.
+
+Preferencias varias:
+
+La opción Preferencias varias permite al usuario habilitar o inhabilitar Preferencias varias de 5250. Preferencias varias está disponible a través del menú desplegable Opción del emulador. Preferencias varias determina (hasta cierto punto) el aspecto y presentación que tendrá la pantalla de visualización de 5250. Por ejemplo, se puede seleccionar el estilo del cursor (subrayado o bloque), la intermitencia del cursor (usarla o no) y la utilización de líneas de guía.
+
+Lista de menú Fonts:
+
+La opción de lista de menú Fonts permite al usuario habilitar o inhabilitar la selección de fonts en el menú desplegable Opción del emulador 5250. Esta opción también especifica si el usuario puede redimensionar o mover la ventana de emulador 5250.
+
+Ventana de sesión nueva:
+
+La opción de Ventana de sesión nueva permite al usuario habilitar o inhabilitar el inicio de otro emulador 5250 en un sistema principal i5/OS distinto. La ventana de la nueva sesión de emulador está disponible a través del menú desplegable Mandato (siempre y cuando la selección de barra de menú Mandato esté habilitada).
+
+Zona activa de navegador: 
+
+La opción Zona activa de navegador permite al usuario habilitar o inhabilitar el reconocimiento de una zona activa de URL e iniciar un navegador.  Cuando esta opción está habilitada y el usuario pulsa en una zona activa de URL válida, se llama al mandato especificado en la variable de entorno del sistema $BROWSER con el URL pasado como un parámetro.  La variable del sistema $BROWSER necesita estar definida con el nombre calificado al completo o un nombre que se encuentre en la variable del sistema $PATH para el navegador que se vaya a utilizar.  Si la variable de entorno $BROWSER no se encuentra o bien no es válida, el navegador no se iniciará. 
+
+
+ID de usuario de emulador:
+
+Este valor se utiliza en el emulador para el ID de usuario siempre que se necesite. Por ejemplo, si se utiliza la conexión automática del emulador, este valor se utiliza para el ID de usuario.
+
+Contraseña de emulador:
+
+Este valor se utiliza en el emulador para la contraseña siempre que se necesite. Por ejemplo, si se utiliza la conexión automática del emulador, este valor se utiliza para la contraseña. La contraseña se almacena codificada.
+
+Parámetros adicionales:
+
+Se pueden configurar parámetros adicionales para el emulador 5250. En la ayuda en línea del emulador 5250 se puede encontrar las descripciones de los parámetros y sus valores. Los parámetros adicionales son sensibles a las mayúsculas y minúsculas.
+////9999
+++++"Conexiones por omisión"
+Para crear o modificar conexiones de emulador por omisión, inicie el Programa de configuración de emulador y seleccione "Conexión--> Nueva..." o seleccione una conexión ya definida y, a continuación, "Conexión-->Editar..."  Las conexiones se guardan en el archivo de preferencias de emulador del usuario, en el directorio $HOME/.iSeriesAccess/ibm_5250/.  Cuando las conexiones se guardan se convierten en las conexiones por omisión para ese usuario.  
+++++"Correlaciones de color por omisión"
+Para crear o modificar correlaciones de color del emulador por omisión, inicie una sesión de emulador desde el Programa de configuración de emulador y seleccione "Opción--> Correlación de color...".  Tenga en cuenta que la preferencia del emulador 'Posibilidad de personalización de color' debe estar 'Habilitada' desde la herramienta Configuración de emulador para la modificación de la correlación de color. Las correlaciones de color que se han creado o modificado se guardan en el archivo de preferencias del usuario, en el directorio $HOME/.iSeriesAccess/ibm_5250/.
+++++"Correlaciones de teclado por omisión"
+Para crear o modificar correlaciones de teclado del emulador por omisión, inicie una sesión de emulador y seleccione "Opción--> Cambio de correlación de teclado...". Tenga en cuenta que la preferencia del emulador 'Posibilidad de cambio de correlación de teclado' debe estar 'Habilitada' desde la herramienta Configuración de emulador para la modificación de la correlación de teclado. Las correlaciones de teclado que se han creado o modificado se guardan en el archivo de preferencias del usuario, en el directorio $HOME/.iSeriesAccess/ibm_5250/.
+++++"Áreas de teclado por omisión"
+Para crear o modificar áreas de teclado del emulador por omisión, inicie una sesión de emulador desde el Programa de configuración de emulador y seleccione "Opción--> Personalizar área de teclado...".  Tenga en cuenta que la preferencia del emulador 'Posibilidad de área de teclado' debe estar establecida en 'Sí' desde la herramienta Configuración de emulador para la modificación del área de teclado. Las áreas de teclado que se han creado o modificado en modalidad de vista previa se guardan en el archivo de preferencias del usuario, en el directorio $HOME/.iSeriesAccess/ibm_5250/.
+++++"Preferencias varias por omisión"
+Para modificar las Preferencias varias del emulador por omisión, inicie una sesión de emulador desde el Programa de configuración de emulador y seleccione "Opción--> Preferencias varias...". Tenga en cuenta que la preferencia del emulador 'Preferencias varias' debe estar establecida en 'Sí' desde la herramienta Configuración de emulador para la modificación de Preferencias varias. Las Preferencias varias que se hayan modificado en modalidad de vista previa se guardan en el archivo de preferencias del usuario, en el directorio $HOME/.iSeriesAccess/ibm_5250/.
+++++"Archivos de reproducción por omisión"
+Para crear o modificar archivos de reproducción del emulador por omisión, inicie una sesión de emulador y seleccione "Opción--> Grabar...".  Tenga en cuenta que la preferencia del emulador 'Posibilidad de Grabar/Reproducir' debe estar 'Habilitada' desde la herramienta Configuración de emulador para la modificación del archivo de reproducción. Los archivos de reproducción que se han creado o modificado se guardan en el archivo de preferencias del usuario, en el directorio $HOME/.iSeriesAccess/ibm_5250/.
+++++"Preferencias por omisión"
+Para crear, visualizar o modificar las preferencias del emulador por omisión, inicie el Programa de configuración de emulador. Las preferencias se guardan en el archivo de preferencias de emulador del usuario, en el directorio $HOME/.iSeriesAccess/ibm_5250/, y se convierten en las preferencias por omisión para ese usuario.
+//// ENGL1SH_VERS10N 1.5.2.1 DO NOT REMOVE OR CHANGE THIS LINE

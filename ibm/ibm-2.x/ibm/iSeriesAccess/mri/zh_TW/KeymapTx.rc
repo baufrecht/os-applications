@@ -1,0 +1,1747 @@
+!
+!
+!
+! This file contains the resource text strings for the IBM Network Station 3270, 5250, VTxxx
+! emulators, in particular the keyboard remapping, keypad customize, and playback edit programs.
+
+! This resource file is stored in locale specific ASCII (code page 819 for Latin1 languages).
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. Resource format:
+!    - A resource line starts with one of the following strings:
+!      Keymap52* : for keymapper resources
+!      Keypad52* : for keypad customize resources
+!      Playedit* : for playback editor resources
+!      Keyxxx52* : for resources shared by keymapper and keypad
+!      AllShare* : for resources shared by keymapper, keypad, and playback editor
+!    - Each string is followed by a resource name and a ":".
+!       Do NOT make any changes to the text to the left of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+
+!******************************************************************************
+!************************ BEGIN DO NOT TRANSLATE ******************************
+!******************************************************************************
+!*   The first section of resources are are locale specific but               *
+!*   DO NOT REQUIRE TRANSLATION.                                              *
+!*                                                                            *
+!* This source file enables the resource section for Latin1 and Latin2.       *
+!*                                                                            *
+!* For ru_RU or Latin5 locales and DBCS locales                               *
+!*      1. Place a '!' as the first character in each line in the Latin1      *
+!*      and Latin2 section                                                    *
+!*      2. Remove the '!' character for each resource line in the apropriate  *
+!*      section that matches your locale.                                     *
+!*                                                                            *
+!* For example, ru_RU should place ! in front of all lines in the LATIN1      *
+!* section remove the ! from all lines in the LATIN5 section.                 *
+!******************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN1 and LATIN2                ****************
+!**************************************************************************
+Keypad52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-110-*-*
+Keypad52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-90-*-*
+Keypad52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+Keymap52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-90-*-*
+Keymap52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-70-*-*
+Keymap52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+Playedit*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-90-*-*
+Playedit*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-70-*-*
+Playedit*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+!**************************************************************************
+!****************   END LATIN1 and LATIN2                  ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN5                           ****************
+!**************************************************************************
+!Keypad52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*
+!Keypad52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!Keypad52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!Keymap52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!Keymap52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-70-*-*
+!Keymap52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!Playedit*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!Playedit*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-70-*-*
+!Playedit*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!**************************************************************************
+!****************   END   LATIN5                           ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (ja_JP ko_KR zh_CN)   ****************
+!**************************************************************************
+!Keypad52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*
+!Keypad52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!Keypad52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*
+!Keymap52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*
+!Keymap52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!Keymap52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*
+!Playedit*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*
+!Playedit*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!Playedit*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*
+!**************************************************************************
+!****************   END DBCS (ja_JP ko_KR zh_CN)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (zh_TW)   ****************
+!**************************************************************************
+!Keypad52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Keypad52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Keypad52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Keymap52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Keymap52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Keymap52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Playedit*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Playedit*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Playedit*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!**************************************************************************
+!****************   END DBCS (zh_TW)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   END DO NOT TRANSLATE                   ****************
+!**************************************************************************
+
+
+! ********************************************************************************
+! Keyboard Remapping Resources
+! ********************************************************************************
+!
+! In general, the following buttons should not be made much longer during translation.
+! Buttons have one to four words. Note: Testing is the only way to know for sure if all
+! buttons fit on the screen ok.  The emulators have a testing document that will be used
+! during testing; this will point out a problem if button text is too long. In many
+! cases, buttons are presented side by side, where the total button text length cannot
+! increase significantly.
+Keymap52*key.labelString:  現行按鍵
+!
+Keymap52*title:  鍵盤重新對映
+!
+Keymap52*iname5250:  5250 按鍵對映
+!
+Keymap52*iname3270:  3270 按鍵對映
+!
+Keymap52*inameNSTERM:  VT 模擬器按鍵對映
+!
+AllShare*fileSaveButton.labelString:  儲存
+!
+Keymap52*fileDeleteButton.labelString:  刪除 
+!
+Keymap52*applyTranslationsButton.labelString:  將變更套用到階段作業
+!
+AllShare*fileQuitButton.labelString:  結束
+!
+AllShare*helpPush.labelString:  說明
+!
+AllShare*lowMemMsgDialog.messageString:  記憶體不足無法啟動「說明察看器」。
+!
+AllShare*quitDialog.dialogTitle:  結束警告
+!
+! Note: \n causes a new line in the dialogue box and should not be translated.
+! You can move, add, or remove \n within this text string.
+Keymap52*invalidExt.value: 按鍵對映檔名稱的副檔名不正確或遺漏。\n\
+已自動新增正確的副檔名。\n\
+請記下訊息區中的新檔名及副檔名。
+!
+Keymap52*invalidExtOkButton.labelString:  確定
+!
+Keymap52*invalidFileName.value:  您在檔名中鍵入的字元無效。
+!
+Keymap52*invalidFileNameOkbutton.labelString:  確定
+!
+Keymap52*noKeyCaps.value: 尚未對您的鍵盤類型更新鍵盤重新對映程式。會以英文顯示圖形鍵盤上的按鍵文字。
+!
+Keymap52*noKeyCapOkbutton.labelString:  確定
+!
+Keymap52*EBCMismatchText.value: 呼叫「鍵盤重新對映程式」的模擬器階段作業之語言不符合 IBM Network Station 的語言。使用此重新對映程式建立的字元及字串，可能會使模擬器階段作業出現意料之外的結果。
+!
+Keymap52*mismatchOKbutton.labelString:  確定
+!
+Keymap52*poorResolutionMsgText.value:   監視器的解析度小於 800x600。解析度小於 800x600 的監視器不支援鍵盤重新對映。
+!
+Keymap52*keymapFailureCancelBtn.labelString:  取消
+!
+Keymap52*saveDialog.dialogTitle:  儲存鍵盤重新對映
+!
+Keymap52*saveBoxLabel*labelString:  選取儲存鍵盤重新對映變更的位置：
+!
+Keymap52*saveBoxToggle1.labelString:  儲存為所有階段作業的預設值
+!
+Keymap52*saveBoxToggleNsterm1.labelString:      儲存為此「終端機」類型的預設值
+!
+Keymap52*saveBoxToggle2.labelString:  只為此階段作業儲存
+!
+Keymap52*saveBoxToggle3.labelString:  儲存為具名按鍵對映檔 (僅限管理員)
+!
+AllShare*saveBoxSaveBtn.labelString:  儲存
+!
+AllShare*saveBoxCancelBtn.labelString:  取消
+!
+Keymap52*fileNameSaveBoxLabel.labelString:  輸入按鍵對映檔名稱：
+!
+Keymap52*fileDeleteDialog.dialogTitle:  刪除鍵盤重新對映檔
+!
+Keymap52*fileDeleteBoxLabel*labelString:  選取要刪除的檔案：
+!
+KeyXXX52*fileDeleteBoxLabelAlt*labelString:  沒有要刪除的檔案
+!
+KeyXXX52*fileDeleteBoxDeleteBtn.labelString:  刪除 
+!
+KeyXXX52*fileDeleteBoxCancelBtn.labelString:  取消
+!
+KeyXXX52*fileDeleteVerifyDialog.dialogTitle:  刪除確認
+!
+KeyXXX52*fileDeleteVerifyDialog.okLabelString:  確定
+!
+KeyXXX52*fileDeleteVerifyDialog.cancelLabelString:  取消
+
+! this cannot be much longer
+KeyXXX52*noundoDelete:  刪除檔案後將無法還原。您要刪除嗎？
+!
+KeyXXX52*novalidDelete:  沒有選取檔案。刪除無效。
+!
+Keymap52*fileWarningDialog.dialogTitle:  按鍵對映警告
+!
+AllShare*fileWarningDialog.okLabelString:  是
+!
+AllShare*fileWarningDialog.cancelLabelString:  否
+!
+AllShare*fileAlreadyExists:  檔案已存在。確定要覆寫嗎？
+!
+Keymap52*transTempApp:  鍵盤重新對映變更暫時套用到階段作業。
+!
+AllShare*nomakeDir:  無法建立目錄。
+!
+AllShare*nofilepathSave:  無法判斷檔案路徑。
+!
+Keymap52*transRxd:  從模擬器階段作業收到的原始鍵盤對映。
+!
+Keymap52*saveTran:  正在儲存鍵盤重新對映檔...
+!
+Keymap52*savetoTranError:  儲存鍵盤重新對映檔時發生錯誤，未儲存檔案。
+!
+Keymap52*savedtoTran:   將鍵盤重新對映檔儲存到：
+!
+Keymap52*quitDialog1:  已修改鍵盤對映，但未套用或儲存它。
+!
+Keymap52*quit1Tog1:  沒有套用或儲存變更就結束。
+!
+Keymap52*quit1Tog2:  套用及儲存變更後才結束。
+!
+Keymap52*quitDialog2:  已修改及套用鍵盤對映，但未儲存它。
+!
+Keymap52*quit2Tog1:  沒有儲存就結束，還原對鍵盤對映所做的變更。
+!
+Keymap52*quit2Tog2:  沒有儲存就結束，暫時將變更套用到階段作業。
+!
+Keymap52*quitDialog3:  已修改及儲存鍵盤對映，但未套用它。
+!
+Keymap52*quit3Tog1:  沒有套用變更就結束。
+!
+Keymap52*quitTog3.labelString:  將變更套用到此階段作業後才結束。
+!
+AllShare*quitDialog*quitTog4.labelString:  儲存變更後才結束。
+!
+AllShare*quitDialog*exitBox.labelString:  結束
+!
+AllShare*quitDialog*cancelBox.labelString:  取消
+!
+Keymap52*undoDialog.dialogTitle:  還原對話框
+!
+Keymap52*undoDialog1.labelString:  選取要還原的鍵盤對映狀態。
+!
+Keymap52*undoDialog*undoBox.labelString:  確定
+!
+Keymap52*undoDialog*cancelBox.labelString:  取消
+!
+Keymap52*restoreWarning.dialogTitle:  結束訊息
+!
+Keymap52*restoreWarning.okLabelString:  確定
+
+! this cannot be made much longer during translation
+Keymap52*restoreWarning.messageString:  此階段作業的鍵盤重新對映已還原成原始值。
+!
+Keymap52*nonValidDialog.dialogTitle:  警告訊息
+!
+KeyXXX52*nonValidDialog.okLabelString:  確定
+!
+Keymap52*nonValidDialog.messageString:  此按鍵的一個或多個動作無效。
+!
+Keymap52*reservedtrans.dialogTitle:  警告訊息
+!
+Keymap52*reservedtrans.okLabelString:  確定
+
+! this cannot be made much longer during translation
+Keymap52*reservedtrans.messageString:  無法重新對映「視窗管理程式」所保留的按鍵值。
+!
+Keymap52*lastButton.labelString:  還原前次套用的鍵盤對映
+!
+Keymap52*origButton.labelString:  還原原始鍵盤對映
+
+! this cannot be made much longer during translation
+Keymap52*lastRest:  鍵盤重新對映已還原成前次套用到階段作業的值。
+!
+Keymap52*origRest:  鍵盤重新對映已還原成原始值。
+!
+Keymap52*noRest:  沒有選取還原選項，未做任何變更。
+!
+Keymap52*fileDeleted:  選取的鍵盤重新對映檔已被刪除。
+
+! this resource has been left intentionally blank, do not translate.
+Keymap52*blank:
+!
+Keymap52*basePb.labelString:  -> 基本
+!
+AllShare*changePb.labelString:  確定
+!
+AllShare*cancelPb.labelString:  取消
+!
+AllShare*actionHelp.labelString: 動作說明
+!
+AllShare*actionListLabel.labelString:  可用的動作清單：
+!
+AllShare*charListLabel.labelString:  字元清單：
+!
+AllShare*actionDef.labelString:  動作定義：
+!
+AllShare*printActionDefTitle:  可用的動作定義
+!
+Keymap52*restorePB.labelString:  復置
+! this cannot be made any longer during translation.
+Keymap52*locatePB.labelString:  尋找
+
+! this cannot be made any longer during translation.
+Keymap52*nothingTB.labelString:  無動作
+!
+Keymap52*translistdialog.dialogTitle:  進階的鍵盤重新對映
+!
+Keymap52*noRemPass:  無效的作業，無法移除被動的鍵盤對映。
+!
+Keymap52*searchFailed:  尋找失敗，在鍵盤對映中找不到符合動作。
+!
+Keymap52*searchSuccess:  順利找到....
+!
+Keymap52*searchSemi:  順利找到... 無法使用此動作的按鍵。
+!
+Keymap52*noSearchMsg:  無法執行尋找，未選取有效的動作。
+!
+Keymap52*nonStand:  這個無法顯示的按鍵至少存在一個轉換。
+!
+Keymap52*change.dialogTitle:  按鍵對映警告
+!
+KeyXXX52*change.messageString:  「確定」或「取消」現行按鍵的變更之後再檢視另一個按鍵。
+!
+KeyXXX52*change.okLabelString:  繼續
+!
+Keymap52*editb.labelString:  編輯
+!
+Keymap52*insertb.labelString:  插入
+!
+Keymap52*removeb.labelString:  移除
+!
+Keymap52*closeb.labelString:  關閉
+!
+Keymap52*editDialog.dialogTitle:  編輯對話框
+!
+Keymap52*editDialog*editLabel.labelString:  編輯下列轉換：
+!
+Keymap52*editDialog*okButton.labelString:  確定
+!
+Keymap52*editDialog*clearButton.labelString:  清除
+!
+Keymap52*editDialog*cancelButton.labelString:  取消
+!
+Keymap52*Any:  -> 基本
+!
+Keymap52*Shift:  -> Shift
+!
+Keymap52*Lock:  -> Caps Lock
+!
+Keymap52*Lock122:  -> Shift Lock
+!
+Keymap52*Ctrl:  -> Left Ctrl
+!
+Keymap52*CtrlNsterm: -> Ctrl
+!
+Keymap52*Alt:  -> Alt
+!
+Keymap52*Mod2:  -> Alt(Gr)
+!
+Keymap52*Mod3:  -> APL/Super
+!
+Keymap52*Mod4:  -> Mod4
+!
+Keymap52*Mod5:  -> Num Lock
+!
+Keymap52*Shift_Alt:  -> Shift Alt
+!
+Keymap52*cantdothat.dialogTitle:  按鍵對映警告
+!
+Keymap52*cantdothat.messageString:  「確定」或「取消」現行按鍵的變更之後再從動作列中選取動作。
+!
+KeyXXX52*cantdothat.okLabelString:  繼續
+!
+Keymap52*chooseApply:  選擇「套用」，使變更在階段作業中生效。
+!
+Keymap52*transListLabel.labelString:  轉換清單：
+!
+Keymap52*seeHelpLabel.labelString:  請參閱「說明」後再執行進階變更。
+!
+Keymap52*keyAction.labelString:  按鍵/動作
+!
+Keymap52*nomapmod:  無法重新對映修飾元。
+!
+AllShare*toobig:  已取消作業，因為已超出動作長度上限。
+!
+Keymap52*currKeyLabel.labelString:  現行按鍵：
+!
+AllShare*printKeymap.labelString:  列印
+!
+AllShare*printDialogCancelButton.labelString:  取消
+!
+AllShare*printDialogBoxLabel.labelString:  選取列印選項
+!
+AllShare*printDialogPrintCommandLabel.labelString: 列印指令：
+!
+AllShare*printDialogSelectPrinter.labelString:  選取印表機：
+!
+AllShare*PrinterSelectServerDelineator:  @
+!
+AllShare*PrinterSelectLocalDesignator:  (本端)
+!
+AllShare*ActionHelpPrinted:  已列印「動作說明定義」
+!
+AllShare*printDialogPrintInProgress.labelString:  列印中...
+!
+AllShare*okLabelString:  確定
+!
+AllShare*cancelLabelString:  取消
+!
+! Start Action list translations (to be shared by keypad customizer and keymapper).
+!
+! Rules for translating actions:
+! 1) Action text (to the right of the ":") is translated
+! 2) All actions need to end in ()
+! 3) Action text may not contain spaces
+! 4) Action text may be separated by capitals or underscores (_)
+! 5) Because actions are cross-referenced, each translated action must be unique
+! 6) Action text should be a maximum of 29 characters, not counting the () characters
+!
+!    ValidActionText()
+!    InvalidActionText
+!    ValidActionText()
+!    Valid_Action_Text()
+!    Invalid Action Text()
+!
+!    Valid Unique action names:
+!    Keyxxx52*tab():  Tab()
+!    Keyxxx52*backtab():  BackTab()
+!    Keyxxx52*tabadvancefunction():  TabAdvance()
+!    Keyxxx52*tabfunction():  OfficeTabFunction()
+!
+!    Invalid action names, not unique:
+!    Keyxxx52*tab():  Tab()
+!    Keyxxx52*backtab():  Tab()
+!    Keyxxx52*tabadvancefunction():  Tab()
+!    Keyxxx52*tabfunction():  Tab()
+!
+! Each action is followed by an action definition (to the right of the ":") which is translated
+!
+Keyxxx52*nothing():  NoAction()
+AllShare*DEFnothing():  此動作不會做任何事，它是用來顯示空的動作。
+!
+Keyxxx52*ruleline():  RuleLine()
+AllShare*DEFruleline():  在顯示與不顯示之間變更尺規的顯示狀態。尺規可以幫助尋找游標。「雜項喜好設定」可以啟用 (預設值) 或停用尺規功能，以及變更尺規樣式。
+!
+AllShare*string():  String()
+AllShare*DEFstring():  在游標位置處顯示字元或字串。動作的格式是 String(\"text\")。需要雙引號 (\") 而且 text 是要顯示的字元。String() 是用來建立鍵盤巨集的。
+!
+Keyxxx52*play():  Play()
+AllShare*DEFplay():  Play() 動作會顯示播放視窗，所以可以啟動播放檔。Play() 動作也支援播放檔名稱作為參數 (在括弧之間)；播放檔會自動啟動。
+!
+Keyxxx52*record():  Record()
+AllShare*DEFrecord():  顯示「記錄」視窗以開始記錄播放順序。
+!
+AllShare*pause():  Pause()
+AllShare*DEFpause():  暫停播放播放檔或暫停記錄播放檔。使用者選取「繼續」，即可繼續播放或記錄。
+!
+AllShare*local-screen-print():  ScreenPrint()
+AllShare*DEFlocal-screen-print():  顯示列印畫面視窗以列印現行畫面。
+!
+Keyxxx52*print-screen-now():  PrintScreenNow()
+AllShare*DEFprint-screen-now():  使用前次使用的列印選項和印表機來列印現行畫面。
+!
+AllShare*extended():  DisplayAttributes()
+AllShare*DEFextended():  顯示畫面上的所有欄位屬性。
+!
+AllShare*up():  CursorUp()
+AllShare*DEFup():  將游標上移一個位置。
+!
+AllShare*down():  CursorDown()
+AllShare*DEFdown():  將游標下移一個游標位置。
+!
+AllShare*left():  CursorLeft()
+AllShare*DEFleft():  將游標左移一個游標位置。
+!
+AllShare*right():  CursorRight()
+AllShare*DEFright():  將游標右移一個游標位置。
+!
+AllShare*fastleft():  FastCursorLeft()
+AllShare*DEFfastleft():  將游標左移三個游標位置。
+!
+AllShare*fastright():  FastCursorRight()
+AllShare*DEFfastright():  將游標右移三個游標位置。
+!
+AllShare*newline():  Newline()
+AllShare*DEFnewline():  將游標移到下一行輸入欄位的開頭。
+!
+AllShare*home():  Home()
+AllShare*DEFhome():  將游標移到起始位置 (通常是畫面上第一個輸入欄位的位置)，有時會將「起始 AID」碼傳送給主機系統。
+!
+AllShare*tab():  Tab()
+AllShare*DEFtab():  將游標移到下一個輸入欄位。
+!
+AllShare*backtab():  BackTab()
+AllShare*DEFbacktab():  如果游標位於輸入欄位的第一個位置或在輸出區域中，則游標會移到前一個輸入欄位的第一個位置。如果游標位於輸入欄位中但不在輸入欄位中的第一個位置，則游標會移到該輸入欄位的第一個位置。
+!
+AllShare*end():  EndOfLine()
+AllShare*DEFend():  將游標移到輸入欄位中的最後一個非 Null 或非空白字元後面。
+!
+AllShare*tabadvancefunction():  TabAdvance()
+AllShare*DEFtabadvancefunction():  使游標前進到下一個邏輯輸入欄位。
+!
+AllShare*insert():  Insert()
+AllShare*DEFinsert():  將插入模式設為「開啟」。
+!
+AllShare*delete():  Delete()
+AllShare*DEFdelete():  刪除 (移除) 游標位置處的字元。
+!
+AllShare*backspace():  Backspace()
+AllShare*DEFbackspace():  將游標往回移動一個游標位置，並且會刪除游標前面的字元。「雜項喜好設定」可以啟用或停用字元的「倒退」刪除。
+!
+AllShare*erase-eof():  ErasetoEnd()
+AllShare*DEFerase-eof():  移除從游標位置到欄位終止處之間的所有字元。
+!
+AllShare*erase-input():  EraseInputFields()
+AllShare*DEFerase-input():  清除畫面上的所有輸入欄位。
+!
+AllShare*dup():  Dup()
+AllShare*DEFdup():  從游標到欄位終止處之間，以 DUP 字元來填寫現行欄位。
+!
+AllShare*field-mark():  FieldMark()
+AllShare*DEFfield-mark():  以欄位標示字元來標示欄位。
+!
+AllShare*pf1():  PF1()
+AllShare*DEFpf1():  執行 F1 鍵的定義動作。
+!
+AllShare*pf2():  PF2()
+AllShare*DEFpf2():  執行 F2 鍵的定義動作。
+!
+AllShare*pf3():  PF3()
+AllShare*DEFpf3():  執行 F3 鍵的定義動作。
+!
+AllShare*pf4():  PF4()
+AllShare*DEFpf4():  執行 F4 鍵的定義動作。
+!
+AllShare*pf5():  PF5()
+AllShare*DEFpf5():  執行 F5 鍵的定義動作。
+!
+AllShare*pf6():  PF6()
+AllShare*DEFpf6():  執行 F6 鍵的定義動作。
+!
+AllShare*pf7():  PF7()
+AllShare*DEFpf7():  執行 F7 鍵的定義動作。
+!
+AllShare*pf8():  PF8()
+AllShare*DEFpf8():  執行 F8 鍵的定義動作。
+!
+AllShare*pf9():  PF9()
+AllShare*DEFpf9():  執行 F9 鍵的定義動作。
+!
+AllShare*pf10():  PF10()
+AllShare*DEFpf10():  執行 F10 鍵的定義動作。
+!
+AllShare*pf11():  PF11()
+AllShare*DEFpf11():  執行 F11 鍵的定義動作。
+!
+AllShare*pf12():  PF12()
+AllShare*DEFpf12():  執行 F12 鍵的定義動作。
+!
+AllShare*pf13():  PF13()
+AllShare*DEFpf13():  執行 F13 鍵的定義動作。
+!
+AllShare*pf14():  PF14()
+AllShare*DEFpf14():  執行 F14 鍵的定義動作。
+!
+AllShare*pf15():  PF15()
+AllShare*DEFpf15():  執行 F15 鍵的定義動作。
+!
+AllShare*pf16():  PF16()
+AllShare*DEFpf16():  執行 F16 鍵的定義動作。
+!
+AllShare*pf17():  PF17()
+AllShare*DEFpf17():  執行 F17 鍵的定義動作。
+!
+AllShare*pf18():  PF18()
+AllShare*DEFpf18():  執行 F18 鍵的定義動作。
+!
+AllShare*pf19():  PF19()
+AllShare*DEFpf19():  執行 F19 鍵的定義動作。
+!
+AllShare*pf20():  PF20()
+AllShare*DEFpf20():  執行 F20 鍵的定義動作。
+!
+AllShare*pf21():  PF21()
+AllShare*DEFpf21():  執行 F21 鍵的定義動作。
+!
+AllShare*pf22():  PF22()
+AllShare*DEFpf22():  執行 F22 鍵的定義動作。
+!
+AllShare*pf23():  PF23()
+AllShare*DEFpf23():  執行 F23 鍵的定義動作。
+!
+AllShare*pf24():  PF24()
+AllShare*DEFpf24():  執行 F24 鍵的定義動作。
+!
+AllShare*clear():  Clear()
+AllShare*DEFclear():  將清除 AID 碼傳送給主機系統。
+!
+AllShare*enter():  Enter()
+AllShare*DEFenter():  執行 Enter 動作將輸入內容輸入進去。
+!
+AllShare*pa1():  PA1()
+AllShare*DEFpa1():  將 PA1 AID 碼傳送給主機系統。
+!
+AllShare*pa2():  PA2()
+AllShare*DEFpa2():  將 PA2 AID 碼傳送給主機系統。
+!
+AllShare*pa3():  PA3()
+AllShare*DEFpa3():  將 PA3 AID 碼傳送給主機系統。
+!
+AllShare*sysreq():  SystemRequest()
+AllShare*DEFsysreq():  將「系統要求 AID」傳送給主機系統。
+!
+AllShare*reset():  Reset()
+AllShare*DEFreset():  重設錯誤。
+!
+AllShare*hex-entry():  HexMode()
+AllShare*DEFhex-entry():  針對下兩個按鍵值設定模式以建立 EBCDIC 字元。按鍵值必須是 0 到 9 或 a 到 f。
+!
+AllShare*hex():  Hex()
+AllShare*DEFhex():  需要兩個字元的字碼點值作為參數 (在括弧之間)。這兩個字元的值 (00 到 ff) 是 ASCII 字碼頁 819 字元。
+!
+AllShare*cursor-select():  CursorSelect()
+AllShare*DEFcursor-select():  選取包含游標的欄位。
+!
+AllShare*attention():  Attention()
+AllShare*DEFattention():  將「注意 AID」碼傳送給主機系統。
+!
+AllShare*print():  SystemPrint()
+AllShare*DEFprint():  將「列印 AID」碼傳送給主機系統。
+!
+AllShare*scroll_image_up(): ScrollImageUp()
+AllShare*DEFscroll_image_up():  向上捲動正在檢視的影像。
+!
+AllShare*scroll_image_down():   ScrollImageDown()
+AllShare*DEFscroll_image_down():  向下捲動正在檢視的影像。
+!
+AllShare*scroll_image_right():  ScrollImageRight()
+AllShare*DEFscroll_image_right():  向右捲動正在檢視的影像。
+!
+AllShare*scroll_image_left():   ScrollImageLeft()
+AllShare*DEFscroll_image_left():  向左捲動正在檢視的影像。
+!
+AllShare*help():  SystemHelp()
+AllShare*DEFhelp():  將說明 AID 碼傳送給主機系統。
+!
+AllShare*rolldown():  PageUp()
+AllShare*DEFrolldown():  將畫面移到現行頁面上的頁面。
+!
+AllShare*rollup():  PageDown()
+AllShare*DEFrollup():  將畫面移到現行頁面下的頁面。
+!
+AllShare*fieldexit():  FieldExit()
+AllShare*DEFfieldexit():  前進到畫面上的下一個欄位開頭。
+!
+AllShare*fieldplus():  FieldPlus()
+AllShare*DEFfieldplus():  前進到畫面上的下一個欄位開頭。
+!
+AllShare*fieldminus():  FieldMinus()
+AllShare*DEFfieldminus():  使欄位中的值變成負值，並前進到下一個欄位。
+!
+AllShare*testreq():  TestRequest()
+AllShare*DEFtestreq():  將「測試要求 AID」碼傳送給主機系統。
+!
+! Note: Office actions are used within the AS/400 OfficeVision editor.
+AllShare*tabfunction():  OfficeTabFunction()
+AllShare*DEFtabfunction():  在 OV/400 編輯器中，在游標位置處插入跳格字元。
+!
+AllShare*textcarrierreturn():  OfficeCarrierReturn()
+AllShare*DEFtextcarrierreturn():  在 OV/400 編輯器中，於現行游標位置處放置回車字元。
+!
+AllShare*textrqtabfunction():  OfficeRequiredTabFunction()
+AllShare*DEFtextrqtabfunction():  在 OV/400 編輯器中，於現行游標位置處放置必要的跳格字元。必要的跳格字元定義暫時性的內縮，這個內縮效果會一直維持到結束段落結尾 (需要有回車字元) 後才失效。
+!
+AllShare*textunderscore():  OfficeStartUnderline()
+AllShare*DEFtextunderscore():  在 OV/400 編輯器中，從現行游標位置開始加底線。
+!
+AllShare*textintensify():  OfficeStartBold()
+AllShare*DEFtextintensify():  在 OV/400 編輯器中，從現行游標位置開始高亮度顯示文字。
+!
+AllShare*textendattribute():  OfficeEndUnderlineOrBold()
+AllShare*DEFtextendattribute():  在 OV/400 編輯器中，結束作用中的底線或高亮度顯示效果。
+!
+AllShare*textsymbolscmdprompt():  OfficeInsertSpecialCharacters()
+AllShare*DEFtextsymbolscmdprompt():  在 OV/400 編輯器中顯示提示，此提示允許輸入在鍵盤上找不到的符號。
+!
+AllShare*textrqspace():  OfficeRequiredSpace()
+AllShare*DEFtextrqspace():  在 OV/400 編輯器中，於現行游標位置處放置必要的空格。必要的空格顯示成空格字元，但一定會讓彼此被空格分隔的兩個字保持在同一行中。
+!
+AllShare*texttopofpage():  OfficeTopOfPage()
+AllShare*DEFtexttopofpage():  在 OV/400 編輯器中，將游標 (並可能會重新定位畫面) 移到目前顯示的頁面頂端。
+!
+AllShare*textbottomofpage():  OfficeBottomOfPage()
+AllShare*DEFtextbottomofpage():  在 OV/400 編輯器中，將游標 (並可能會重新定位畫面) 移到目前顯示的頁面底端。
+!
+AllShare*textbeginofline():  OfficeBeginningOfLine()
+AllShare*DEFtextbeginofline():  在 OV/400 編輯器中，將游標移到現行文字行的開頭。
+!
+AllShare*textpageend():  OfficeInsertPageEnd()
+AllShare*DEFtextpageend():  在 OV/400 編輯器中，插入頁面結束字元。這樣會開始新的文字頁面。
+!
+AllShare*textstopcodefunction():  OfficeStopCodeInsert()
+AllShare*DEFtextstopcodefunction():  在 OV/400 編輯器中顯示提示，此提示允許在現行游標位置處定義新的停止碼。
+!
+AllShare*textstopcodeadvance():  OfficeStopCodeAdvance()
+AllShare*DEFtextstopcodeadvance():  在 OV/400 編輯器中，將游標移到文件中的下一個停止碼。
+!
+AllShare*textaltd():  OfficeNextTextColumn()
+AllShare*DEFtextaltd():  在 OV/400 編輯器中，在游標位置處插入開始新文字直欄的控制字元。只有在編輯多個文字直欄時，此功能才會發生作用。
+!
+AllShare*textcent():  OfficeCenter()
+AllShare*DEFtextcent():  在 OV/400 編輯器中，讓包含游標的文字行置中對齊。
+!
+AllShare*textwordunderscore():  OfficeWordUnderscore()
+AllShare*DEFtextwordunderscore():  在 OV/400 編輯器中，於現行游標位置處放置字的底線控制字元。此游標應該要放置在要加底線的文字結尾處，底線效果會從現行字的起始處開始延伸到游標位置。
+!
+AllShare*texthalfindexup():  OfficeHalfIndexUp()
+AllShare*DEFtexthalfindexup():  在 OV/400 編輯器中，於現行游標位置處放置上標 (註標) 控制字元。上標控制字元會持續作用到下一個下標控制字元出現為止。
+!
+AllShare*texthalfindexdown():  OfficeHalfIndexDown()
+AllShare*DEFtexthalfindexdown():  在 OV/400 編輯器中，於現行游標位置處放置下標 (註標) 控制字元。下標控制字元會持續作用到下一個上標控制字元出現為止。
+!
+AllShare*displaytextsymb():  OfficeDisplaySymbols()
+AllShare*DEFdisplaytextsymb():  在 OV/400 編輯器中，顯示平常看不見的控制字元。這些包括跳格字元、必要的跳格字元、回車字元、必要的回車字元、必要的空格以及頁面結束字元。
+!
+AllShare*kanji():  InsertSOandSI()
+AllShare*DEFkanji():  插入 DBCS 移出及移入字元 (用於日文、韓文及中文)。
+!
+!//@bd_GBR1 start
+AllShare*lklayer():  LatinLayer()
+AllShare*DEFlklayer():  將鍵盤層語言設為拉丁文。
+!
+AllShare*nklayer():  BidiLayer()
+AllShare*DEFnklayer():  將鍵盤層語言設為國際 (用於阿拉伯文及希伯萊文)。
+!//@bd_GBR1 end
+! //@bd_GBR1 rename AllShare*reverse():  ReverseCursor()
+AllShare*reverse():  FieldReverse()
+AllShare*DEFreverse():  反轉欄位中的游標方向，並對按鍵值選取相反的語言層 (用於阿拉伯文和希伯萊文)。
+!
+AllShare*close():  CloseBIDIData()
+AllShare*DEFclose():  移除內含的空格並將資料移往欄位的邏輯開頭，藉以關閉欄位中的資料 (用於阿拉伯文和希伯萊文)。
+!
+AllShare*base():  BaseShape()
+AllShare*DEFbase():  開啟及關閉阿拉伯文的外形 (用於阿拉伯文)。
+!
+AllShare*charadvance():  CharacterAdvance()
+AllShare*DEFcharadvance():  使游標前進到畫面上的下一個輸入位置。
+!
+AllShare*displaySOSI():  DisplaySOandSI()
+AllShare*DEFdisplaySOSI():  顯示畫面上的所有移出及移入字元 (用於日文、韓文及中文)。
+!
+AllShare*reverse-scn():  ReverseScreen()
+AllShare*DEFreverse-scn():  反轉畫面的顯示 (用於阿拉伯文和希伯萊文)。
+!
+AllShare*EBChex():  EBCDICHexEntry()
+AllShare*DEFEBChex():  允許使用 EBCDIC 字碼點來輸入資料 (用於日文、韓文及中文)。
+!
+AllShare*AltView():  AlternateView()
+AllShare*DEFAltView():  允許檢視替代字碼頁中的日文資料。
+!
+Keyxxx52*noop():  NoAction()
+AllShare*DEFnoop():  此動作不會做任何事，它是用來顯示空的動作。
+!
+! There are no parentheses after Undefined, making this action different than other actions.
+Keyxxx52*undefined():  未定義
+!
+AllShare*cursor-move():  MoveCursor()
+AllShare*DEFcursor-move():  將游標移到指定的畫面位置。
+!
+AllShare*forward-word():  NextWord()
+AllShare*DEFforward-word():  將游標移到下一個字的開頭。
+!
+AllShare*backward-word():  PreviousWord()
+AllShare*DEFbackward-word():  將游標移到前一個字的開頭。
+!
+AllShare*spbackspace():  AlternateBackspace()
+AllShare*DEFspbackspace():  執行類似 BackSpace() 的動作。只有在插入模式設為「開啟」時，才移動游標右邊的字元。
+!
+AllShare*kill-word():  DeleteRemainderofWord()
+AllShare*DEFkill-word():  刪除從游標到字結尾之間的字元。
+!
+AllShare*backward-kill-word():  DeletePreviousWord()
+AllShare*DEFbackward-kill-word():  刪除前一個字的字元。
+!
+AllShare*cent():  Cent()
+AllShare*DEFcent():  在游標位置處顯示分貨幣字元。
+!
+AllShare*unlock():  UnlockKeyboard()
+AllShare*DEFunlock():  解除鎖定鍵盤，以便將輸入內容輸入進去。
+!
+AllShare*selpen-attn():  SelectorPenAttention()
+AllShare*DEFselpen-attn():  將選擇器光筆注意 AID 傳送給主機系統。
+!
+AllShare*select-field():  PenSelectField()
+AllShare*DEFselect-field():  選取可選取的欄位。
+!
+AllShare*xh-attn():  AttentionAlternate()
+AllShare*DEFxh-attn():  將「替代注意 AID」碼傳送給主機系統。
+!
+Keyxxx52*insert-selection:  Paste()
+Keyxxx52*DEFinsert-selection:  此動作會在游標位置處貼上剪貼簿的內容。
+!
+Keyxxx52*jump():  Jump()
+AllShare*DEFjump():  此動作會跳到階段作業清單中的下一個階段作業。如果階段作業 1 是作用中的階段作業，則階段作業 2 會變成作用中的階段作業。
+!
+Keyxxx52*jump-to-session():  JumpToSession()
+AllShare*DEFjump-to-session():  此動作會跳到以參數來指定的階段作業 (在括弧之間)。若指定值 2 作為引數，則第二個階段作業會變成作用中的階段作業。
+!
+Keyxxx52*delay():  Delay()
+AllShare*DEFdelay(): 在鍵盤重新對映或數字鍵自訂中對某個鍵順序設定多個動作時，在各個動作之間加上暫停時間。此參數 (在括弧之間) 的值代表延遲時間 (以十分之一秒為單位)，預設值為十分之五。
+!
+Keyxxx52*menu-bar-focus():  MenuBarFocus()
+AllShare*DEFmenu-bar-focus():  允許存取功能表列，而不必使用滑鼠。
+!
+Keyxxx52*wider-font(): WiderFont()
+Keyxxx52*DEFwider-font(): 使現行字型更寬。
+!
+Keyxxx52*narrower-font(): ThinnerFont()
+Keyxxx52*DEFnarrower-font(): 使現行字型更窄。
+!
+Keyxxx52*taller-font(): TallerFont()
+Keyxxx52*DEFtaller-font(): 使現行字型更高。
+!
+Keyxxx52*shorter-font(): ShorterFont()
+Keyxxx52*DEFshorter-font(): 使現行字型更短。
+!
+! The following three key sequences should be translated; they may be used in the future for keyboard actions that we currently do not know about.
+Keyxxx52*key-seq1():  KeySequence1()
+Keyxxx52*key-seq2():  KeySequence2()
+Keyxxx52*key-seq3():  KeySequence3()
+!
+! General dead key (the first key of a key sequence to create a dead key character, for example tilda in many languages) that is not remappable because dead keys are processed by the Network Station kernel.
+! There are no parentheses at the end of the following line.
+Keyxxx52*unmappable():  死鍵
+!
+AllShare*inserteuro():  Euro()
+AllShare*DEFinserteuro():  在游標位置處插入歐元符號。
+!
+! Action List Translations for NSTerm (VTxxx)
+!
+Keymap52*vt-backspace(): VtBackspace()
+AllShare*DEFvt-backspace():  將游標往回移動一個游標位置，並刪除游標前面的字元。
+!
+Keymap52*enterkey(): EnterKey()
+Keymap52*DEFenterkey():  將「回車」字元傳送給主機。
+!
+Keymap52*local-print-buffer(): LocalPrintBuffer()
+Keymap52*DEFlocal-print-buffer():  顯示列印畫面視窗以列印捲動緩衝區的現行內容。
+!
+Keymap52*local-print-screen(): LocalPrintScreen()
+Keymap52*DEFlocal-print-screen():  顯示列印畫面視窗以列印現行畫面。
+!
+Keymap52*cut-clipboard(): CutClipboard()
+Keymap52*DEFcut-clipboard():  將標示的畫面範圍複製到剪貼簿，並從畫面中移除此範圍。
+!
+Keymap52*copy-clipboard(): CopyClipboard()
+Keymap52*DEFcopy-clipboard():  將標示的畫面範圍複製到剪貼簿。
+!
+Keymap52*paste-clipboard(): PasteClipboard()
+Keymap52*DEFpaste-clipboard():  複製儲存在剪貼簿緩衝區的資料，然後將它轉送到畫面上的游標位置。
+!
+Keymap52*beginning-of-buffer(): BeginningOfBuffer()
+Keymap52*DEFbeginning-of-buffer(): 將畫面移到捲動緩衝區的開頭。
+!
+Keymap52*end-of-buffer(): EndOfBuffer()
+Keymap52*DEFend-of-buffer():  捲動畫面以顯示現行緩衝區的結尾。
+!
+Keymap52*hard-reset(): HardReset()
+Keymap52*DEFhard-reset():  將終端機重設為預設狀態，刪除畫面上的所有內容，以及清除任何選項。
+!
+Keymap52*soft-reset(): SoftReset()
+Keymap52*DEFsoft-reset():  將終端機重設為預設狀態。
+!
+Keymap52*vt-break(): VtBreak()
+Keymap52*DEFvt-break(): 將 RS-232 中斷信號傳送給主機。
+!
+Keymap52*vt-find(): VtFind()
+Keymap52*DEFvt-find(): 如果「VT200 模式」或更高模式將 DEC 碼 (CSI 1~) 傳送給主機，則執行「尋找」功能。
+!
+Keymap52*vt-ins(): VtInsert()
+Keymap52*DEFvt-ins(): 如果「VT200 模式」或更高模式將 DEC 碼 (CSI 2~) 傳送給主機，則執行「在此插入」功能。
+!
+Keymap52*vt-delete(): VtRemove()
+Keymap52*DEFvt-delete(): 如果「VT200 模式」或更高模式將 DEC 碼 (CSI 3~) 傳送給主機，則執行「移除」功能。
+!
+Keymap52*vt-select(): VtSelect()
+Keymap52*DEFvt-select(): 如果「VT200 模式」或更高模式將 DEC 碼 (CSI 4~) 傳送給主機，則執行「選取」功能。
+!
+Keymap52*vt-prev-screen(): VtPreviousScreen()
+Keymap52*DEFvt-prev-screen(): 如果「VT200 模式」或更高模式將 DEC 碼 (CSI 5~) 傳送給主機，則執行「前一個畫面」功能。
+!
+Keymap52*vt-next-screen(): VtNextScreen()
+Keymap52*DEFvt-next-screen(): 如果「VT200 模式」或更高將 DEC 碼 (CSI 6~) 傳送給主機，則執行「下一個畫面」功能。
+!
+Keymap52*vt-prev-page(): VtPreviousPage()
+Keymap52*DEFvt-prev-page(): 將文字往下移動並將視窗往上移動一個頁面。
+!
+Keymap52*vt-next-page(): VtNextPage()
+Keymap52*DEFvt-next-page(): 將文字往上移動並將視窗往下移動一個頁面。
+!
+Keymap52*vt-do(): VtDo()
+Keymap52*DEFvt-do(): 如果「VT200 模式」或更高模式將 DEC 碼 (CSI 29~) 傳送給主機，則執行「執行」功能。
+!
+Keymap52*vt-help(): VtHelp()
+Keymap52*DEFvt-help(): 如果「VT200 模式」或更高模式將 DEC 碼 (CSI 28~) 傳送給主機，則執行「說明」功能。
+!
+Keymap52*vt-next-line(): VtNextLine()
+Keymap52*DEFvt-next-line():  將文字往上移動並將視窗往下移動一行。
+!
+Keymap52*vt-prev-line(): VtPreviousLine()
+Keymap52*DEFvt-prev-line(): 將文字往下移動並將視窗往上移動一行。
+!
+Keymap52*tty-interrupt(): TtyInterrupt()
+Keymap52*DEFtty-interrupt(): 將「TTY 岔斷」字元 (inter = Ctrl-C) 傳送給主機。
+!
+Keymap52*tty-suspend(): TtySuspend()
+Keymap52*DEFtty-suspend(): 將「TTY 暫停」字元 (susp = Ctrl-Z) 傳送給主機。
+!
+Keymap52*tty-start(): TtyStart()
+Keymap52*DEFtty-start(): 將「TTY 啟動」字元 (start = Ctrl-Q) 傳送給主機。
+!
+Keymap52*tty-stop(): TtyStop()
+Keymap52*DEFtty-stop(): 將「TTY 停止」字元 (stop = Ctrl-S) 傳送給主機。
+!
+Keymap52*delete-word(): TtyEraseWord()
+Keymap52*DEFdelete-word(): 將「TTY 字組消除」字元 (werase = Ctrl-W) 傳送給主機。
+!
+Keymap52*line-feed(): TtyLineFeed()
+Keymap52*DEFline-feed(): 將「換行」字元 (Ctrl-J) 傳送給主機。
+!
+Keymap52*cr-lf(): TtyCR_LF()
+Keymap52*DEFcr-lf(): 將「回車」字元和「換行」字元 (Ctrl-M Ctrl-J) 傳送給主機。
+!
+Keymap52*escape(): EscapeCharacter()
+Keymap52*DEFescape(): 將「跳出」字元 (Ctrl-[) 傳送給主機。
+!
+Keymap52*udk-f1(): UDK_F1()
+Keymap52*DEFudk-f1():  執行 F1 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f2(): UDK_F2()
+Keymap52*DEFudk-f2():  執行 F2 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f3(): UDK_F3()
+Keymap52*DEFudk-f3():  執行 F3 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f4(): UDK_F4()
+Keymap52*DEFudk-f4():  執行 F4 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f5(): UDK_F5()
+Keymap52*DEFudk-f5():  執行 F5 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f6(): UDK_F6()
+Keymap52*DEFudk-f6():  執行 F6 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f7(): UDK_F7()
+Keymap52*DEFudk-f7():  執行 F7 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f8(): UDK_F8()
+Keymap52*DEFudk-f8():  執行 F8 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f9(): UDK_F9()
+Keymap52*DEFudk-f9():  執行 F9 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f10(): UDK_F10()
+Keymap52*DEFudk-f10():  執行 F10 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f11(): UDK_F11()
+Keymap52*DEFudk-f11():  執行 F11 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f12(): UDK_F12()
+Keymap52*DEFudk-f12():  執行 F12 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f13(): UDK_F13()
+Keymap52*DEFudk-f13():  執行 F13 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f14(): UDK_F14()
+Keymap52*DEFudk-f14():  執行 F14 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f15(): UDK_F15()
+Keymap52*DEFudk-f15():  執行 F15 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f16(): UDK_F16()
+Keymap52*DEFudk-f16():  執行 F16 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f17(): UDK_F17()
+Keymap52*DEFudk-f17():  執行 F17 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f18(): UDK_F18()
+Keymap52*DEFudk-f18():  執行 F18 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f19(): UDK_F19()
+Keymap52*DEFudk-f19():  執行 F19 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f20(): UDK_F20()
+Keymap52*DEFudk-f20():  執行 F20 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f21(): UDK_F21()
+Keymap52*DEFudk-f21():  執行 F21 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f22(): UDK_F22()
+Keymap52*DEFudk-f22():  執行 F22 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f23(): UDK_F23()
+Keymap52*DEFudk-f23():  執行 F23 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f24(): UDK_F24()
+Keymap52*DEFudk-f24():  執行 F24 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f25(): UDK_F25()
+Keymap52*DEFudk-f25():  執行 F25 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f26(): UDK_F26()
+Keymap52*DEFudk-f26():  執行 F26 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f27(): UDK_F27()
+Keymap52*DEFudk-f27():  執行 F27 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f28(): UDK_F28()
+Keymap52*DEFudk-f28():  執行 F28 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f29(): UDK_F29()
+Keymap52*DEFudk-f29():  執行 F29 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f30(): UDK_F30()
+Keymap52*DEFudk-f30():  執行 F30 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f31(): UDK_F31()
+Keymap52*DEFudk-f31():  執行 F31 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f32(): UDK_F32()
+Keymap52*DEFudk-f32():  執行 F32 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f33(): UDK_F33()
+Keymap52*DEFudk-f33():  執行 F33 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f34(): UDK_F34()
+Keymap52*DEFudk-f34():  執行 F34 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*udk-f35(): UDK_F35()
+Keymap52*DEFudk-f35():  執行 F35 鍵的「DEC 使用者定義鍵」動作。
+!
+Keymap52*x-f1(): F1()
+Keymap52*DEFx-f1():  執行 F1 鍵的定義動作。
+!
+Keymap52*x-f2(): F2()
+Keymap52*DEFx-f2():  執行 F2 鍵的定義動作。
+!
+Keymap52*x-f3(): F3()
+Keymap52*DEFx-f3():  執行 F3 鍵的定義動作。
+!
+Keymap52*x-f4(): F4()
+Keymap52*DEFx-f4():  執行 F4 鍵的定義動作。
+!
+Keymap52*x-f5(): F5()
+Keymap52*DEFx-f5():  執行 F5 鍵的定義動作。
+!
+Keymap52*x-f6(): F6()
+Keymap52*DEFx-f6():  執行 F6 鍵的定義動作。
+!
+Keymap52*x-f7(): F7()
+Keymap52*DEFx-f7():  執行 F7 鍵的定義動作。
+!
+Keymap52*x-f8(): F8()
+Keymap52*DEFx-f8():  執行 F8 鍵的定義動作。
+!
+Keymap52*x-f9(): F9()
+Keymap52*DEFx-f9():  執行 F9 鍵的定義動作。
+!
+Keymap52*x-f10(): F10()
+Keymap52*DEFx-f10():  執行 F10 鍵的定義動作。
+!
+Keymap52*x-f11(): F11()
+Keymap52*DEFx-f11():  執行 F11 鍵的定義動作。
+!
+Keymap52*x-f12(): F12()
+Keymap52*DEFx-f12():  執行 F12 鍵的定義動作。
+!
+Keymap52*x-f13(): F13()
+Keymap52*DEFx-f13():  執行 F13 鍵的定義動作。
+!
+Keymap52*x-f14(): F14()
+Keymap52*DEFx-f14():  執行 F14 鍵的定義動作。
+!
+Keymap52*x-f15(): F15()
+Keymap52*DEFx-f15():  執行 F15 鍵的定義動作。
+!
+Keymap52*x-f16(): F16()
+Keymap52*DEFx-f16():  執行 F16 鍵的定義動作。
+!
+Keymap52*x-f17(): F17()
+Keymap52*DEFx-f17():  執行 F17 鍵的定義動作。
+!
+Keymap52*x-f18(): F18()
+Keymap52*DEFx-f18():  執行 F18 鍵的定義動作。
+!
+Keymap52*x-f19(): F19()
+Keymap52*DEFx-f19():  執行 F19 鍵的定義動作。
+!
+Keymap52*x-f20(): F20()
+Keymap52*DEFx-f20():  執行 F20 鍵的定義動作。
+!
+Keymap52*x-f21(): F21()
+Keymap52*DEFx-f21():  執行 F21 鍵的定義動作。
+!
+Keymap52*x-f22(): F22()
+Keymap52*DEFx-f22():  執行 F22 鍵的定義動作。
+!
+Keymap52*x-f23(): F23()
+Keymap52*DEFx-f23():  執行 F23 鍵的定義動作。
+!
+Keymap52*x-f24(): F24()
+Keymap52*DEFx-f24():  執行 F24 鍵的定義動作。
+!
+Keymap52*x-f25(): F25()
+Keymap52*DEFx-f25():  執行 F25 鍵的定義動作。
+!
+Keymap52*x-f26(): F26()
+Keymap52*DEFx-f26():  執行 F26 鍵的定義動作。
+!
+Keymap52*x-f27(): F27()
+Keymap52*DEFx-f27():  執行 F27 鍵的定義動作。
+!
+Keymap52*x-f28(): F28()
+Keymap52*DEFx-f28():  執行 F28 鍵的定義動作。
+!
+Keymap52*x-f29(): F29()
+Keymap52*DEFx-f29():  執行 F29 鍵的定義動作。
+!
+Keymap52*x-f30(): F30()
+Keymap52*DEFx-f30():  執行 F30 鍵的定義動作。
+!
+Keymap52*x-f31(): F31()
+Keymap52*DEFx-f31():  執行 F31 鍵的定義動作。
+!
+Keymap52*x-f32(): F32()
+Keymap52*DEFx-f32():  執行 F32 鍵的定義動作。
+!
+Keymap52*x-f33(): F33()
+Keymap52*DEFx-f33():  執行 F33 鍵的定義動作。
+!
+Keymap52*x-f34(): F34()
+Keymap52*DEFx-f34():  執行 F34 鍵的定義動作。
+!
+Keymap52*x-f35(): F35()
+Keymap52*DEFx-f35():  執行 F35 鍵的定義動作。
+!
+Keymap52*vt-f1(): VtPF1()
+Keymap52*DEFvt-f1():  在任何模式中，將字元碼 (SS3 P) 傳送給應用程式。
+!
+Keymap52*vt-f2(): VtPF2()
+Keymap52*DEFvt-f2(): 在任何模式中，將字元碼 (SS3 Q) 傳送給應用程式。
+!
+Keymap52*vt-f3(): VtPF3()
+Keymap52*DEFvt-f3(): 在任何模式中，將字元碼 (SS3 R) 傳送給應用程式。
+!
+Keymap52*vt-f4(): VtPF4()
+Keymap52*DEFvt-f4(): 在任何模式中，將字元碼 (SS3 S) 傳送給應用程式。
+!
+Keymap52*x-print(): X_Print()
+Keymap52*DEFx-print(): 將 ANSI ESC 序列 (Ctrl-[[209q) 傳送給主機。
+!
+Keymap52*x-scroll-lock(): X_ScrollLock()
+Keymap52*DEFx-scroll-lock(): 將 ANSI ESC 序列 (Ctrl-[[213q) 傳送給主機。
+!
+Keymap52*x-pause(): X_Pause()
+Keymap52*DEFx-pause(): 將 Pause 鍵的 ANSI ESC 序列 (Ctrl-[[217q) 傳送給主機。
+!
+Keymap52*x-ins(): X_Insert()
+Keymap52*DEFx-ins(): 將 ANSI ESC 序列 (Ctrl-[[139q) 傳送給主機。
+!
+Keymap52*x-delete(): X_Delete()
+Keymap52*DEFx-delete(): 將 ANSI ESC 序列 (Ctrl-[[P) 傳送給主機。
+!
+Keymap52*x-home(): X_Home()
+Keymap52*DEFx-home(): 將 ANSI ESC 序列 (Ctrl-[[H) 傳送給主機。
+!
+Keymap52*x-end(): X_End()
+Keymap52*DEFx-end(): 將 ANSI ESC 序列 (Ctrl-[[146q) 傳送給主機。
+!
+Keymap52*x-page-up(): X_PageUp()
+Keymap52*DEFx-page-up(): 將 ANSI ESC 序列 (Ctrl-[[150q) 傳送給主機。
+!
+Keymap52*x-page-down(): X_PageDown()
+Keymap52*DEFx-page-down(): 將 ANSI ESC 序列 (Ctrl-[[154q) 傳送給主機。
+!
+Keymap52*kp-numlock(): KP_NumLock()
+Keymap52*DEFkp-numlock():  執行「數字鍵鎖定」動作。
+!
+Keymap52*kp-divide(): KP_Divide()
+Keymap52*DEFkp-divide():  執行定義於鍵台上的除法功能。
+!
+Keymap52*kp-multiply(): KP_Multiply()
+Keymap52*DEFkp-multiply():  執行定義於鍵台上的乘法功能。
+!
+Keymap52*kp-subtract(): KP_Minus()
+Keymap52*DEFkp-subtract():  在「數字」模式中，將減號字元 (-) 傳送給應用程式。在「應用程式」模式中，將字元碼 SS3 l (ESC ? l) 傳送給應用程式。
+!
+Keymap52*kp-7(): KP_7()
+Keymap52*DEFkp-7():  在「數字」模式中，將字元 7 傳送給應用程式。在「應用程式」模式中，將字元碼 SS3 w (ESC ? w) 傳送給應用程式。
+!
+Keymap52*kp-8(): KP_8()
+Keymap52*DEFkp-8():  在「數字」模式中，將字元 8 傳送給應用程式。在「應用程式」模式中，將字元碼 SS3 x (ESC ? x) 傳送給應用程式。
+!
+Keymap52*kp-9(): KP_9()
+Keymap52*DEFkp-9():  在「數字」模式中，將字元 9 傳送給應用程式。在「應用程式」模式中，將字元碼 SS3 y (ESC ? y) 傳送給應用程式。
+!
+Keymap52*kp-4(): KP_4()
+Keymap52*DEFkp-4():  在「數字」模式中，將字元 4 傳送給應用程式。在「應用程式」模式中，將字元碼 SS3 t (ESC ? t) 傳送給應用程式。
+!
+Keymap52*kp-5(): KP_5()
+Keymap52*DEFkp-5():  在「數字」模式中，將字元 5 傳送給應用程式。在「應用程式」模式中，將字元碼 SS3 u (ESC ? u) 傳送給應用程式。
+!
+Keymap52*kp-6(): KP_6()
+Keymap52*DEFkp-6():  在「數字」模式中，將字元 6 傳送給應用程式。在「應用程式」模式中，將字元碼 SS3 v (ESC ? v) 傳送給應用程式。
+!
+Keymap52*kp-add(): KP_Plus()
+Keymap52*DEFkp-add():  執行定義於數字鍵上的加法功能。
+!
+Keymap52*kp-1(): KP_1()
+Keymap52*DEFkp-1():  在「數字」模式中，將字元 1 傳送給應用程式。在「應用程式」模式中，將字元碼 SS3 q (ESC ? q) 傳送給應用程式。
+!
+Keymap52*kp-2(): KP_2()
+Keymap52*DEFkp-2():  在「數字」模式中，將字元 2 傳送給應用程式。在「應用程式」模式中，將字元碼 SS3 r (ESC ? r) 傳送給應用程式。
+!
+Keymap52*kp-3(): KP_3()
+Keymap52*DEFkp-3():  在「數字」模式中，將字元 3 傳送給應用程式。在「應用程式」模式中，將字元碼 SS3 s (ESC ? s) 傳送給應用程式。
+!
+Keymap52*kp-0(): KP_0()
+Keymap52*DEFkp-0():  在「數字」模式中，將字元 0 傳送給應用程式。在「應用程式」模式中，將字元碼 SS3 p (ESC ? p) 傳送給應用程式。
+!
+Keymap52*kp-decimal(): KP_Decimal()
+Keymap52*DEFkp-decimal():  在「數字」模式中，將小數點 (.) 字元傳送給應用程式。在「應用程式」模式中，將字元碼 SS3 n (ESC ? n) 傳送給應用程式。
+!
+Keymap52*kp-enter(): KP_Enter()
+Keymap52*DEFkp-enter():  在「數字」模式中，將 Enter 功能傳送給應用程式。在「應用程式」模式中，將字元碼 SS3 M (ESC ? M) 傳送給應用程式。
+!
+Keymap52*kp-space(): KP_Space()
+Keymap52*DEFkp-space():  將空格字元傳送給應用程式。
+!
+Keymap52*kp-tab(): KP_Tab()
+Keymap52*DEFkp-tab():  將跳格字元傳送給應用程式。
+!
+Keymap52*kp-equal(): KP_Equal()
+Keymap52*DEFkp-equal():  將等號 (=) 字元傳送給應用程式。
+!
+Keymap52*kp-separator(): KP_Separator()
+Keymap52*DEFkp-separator():  將分隔字元傳送給應用程式。
+!
+Playedit*btn1-press():  MouseBtn1Press()
+Playedit*DEFbtn1-press():  按下滑鼠按鈕 1 的動作。
+!
+Playedit*btn1-release():  MouseBtn1Release()
+Playedit*DEFbtn1-release():  放開滑鼠按鈕 1 的動作。
+!
+Playedit*btn2-press():  MouseBtn2Press()
+Playedit*DEFbtn2-press():  按下滑鼠按鈕 2 的動作。
+!
+Playedit*btn2-release():  MouseBtn2Release()
+Playedit*DEFbtn2-release():  放開滑鼠按鈕 2 的動作。
+!
+Playedit*btn3-press():  MouseBtn3Press()
+Playedit*DEFbtn3-press():  按下滑鼠按鈕 3 的動作。
+!
+Playedit*btn3-release():  MouseBtn3Release()
+Playedit*DEFbtn3-release():  放開滑鼠按鈕 3 的動作。
+!
+Playedit*shift-btn1-press():  MouseShiftBtn1Press()
+Playedit*DEFshift-btn1-press():  鍵順序為按下滑鼠按鈕 1 及 Shift 修正鍵時的動作。
+!
+Playedit*shift-btn1-release():  MouseShiftBtn1Release()
+Playedit*DEFshift-btn1-release():  鍵順序為按下 Shift 修正鍵時放開滑鼠按鈕 1 的時候所做的動作。
+!
+Playedit*shift-btn2-press():  MouseShiftBtn2Press()
+Playedit*DEFshift-btn2-press():  鍵順序為按下滑鼠按鈕 2 及 Shift 修正鍵時的動作。
+!
+Playedit*shift-btn2-release():  MouseShiftBtn2Release()
+Playedit*DEFshift-btn2-release():  鍵順序為按下 Shift 修正鍵時放開滑鼠按鈕 2 的時候所做的動作。
+!
+Playedit*shift-btn3-press():  MouseShiftBtn3Press()
+Playedit*DEFshift-btn3-press():  鍵順序為按下滑鼠按鈕 3 及 Shift 修正鍵時的動作。
+!
+Playedit*shift-btn3-release():  MouseShiftBtn3Release()
+Playedit*DEFshift-btn3-release():  鍵順序為按下 Shift 修正鍵時放開滑鼠按鈕 3 的時候所做的動作。
+!
+Playedit*btn1-double-press():  MouseBtn1DoublePress()
+Playedit*DEFbtn1-double-press():  連按兩下滑鼠按鈕 1 的動作。
+!
+Playedit*btn1-triple-press():  MouseBtn1TriplePress()
+Playedit*DEFbtn1-triple-press():  連按三下滑鼠按鈕 1 的動作。
+!
+Playedit*btn2-double-press():  MouseBtn2DoublePress()
+Playedit*DEFbtn2-double-press():  連按兩下滑鼠按鈕 2 的動作。
+!
+Playedit*btn2-triple-press():  MouseBtn2TriplePress()
+Playedit*DEFbtn2-triple-press():  連按三下滑鼠按鈕 2 的動作。
+!
+Playedit*btn3-double-press():  MouseBtn3DoublePress()
+Playedit*DEFbtn3-double-press():  連按兩下滑鼠按鈕 3 的動作。
+!
+Playedit*btn3-triple-press():  MouseBtn3TriplePress()
+Playedit*DEFbtn3-triple-press():  連按三下滑鼠按鈕 3 的動作。
+!
+Playedit*shift-btn1-double-press():  MouseShiftBtn1DoublePress()
+Playedit*DEFshift-btn1-double-press():  鍵順序為連按兩下滑鼠按鈕 1 及 Shift 修正鍵時的動作。
+!
+Playedit*shift-btn1-triple-press():  MouseShiftBtn1TriplePress()
+Playedit*DEFshift-btn1-triple-press():  鍵順序為連按三下滑鼠按鈕 1 及 Shift 修正鍵時的動作。
+!
+Playedit*shift-btn2-double-press():  MouseShiftBtn2DoublePress()
+Playedit*DEFshift-btn2-double-press():  鍵順序為連按兩下滑鼠按鈕 2 及 Shift 修正鍵時的動作。
+!
+Playedit*shift-btn2-triple-press():  MouseShiftBtn2TriplePress()
+Playedit*DEFshift-btn2-triple-press():  鍵順序為連按三下滑鼠按鈕 2 及 Shift 修正鍵時的動作。
+!
+Playedit*shift-btn3-double-press():  MouseShiftBtn3DoublePress()
+Playedit*DEFshift-btn3-double-press():  鍵順序為連按三下滑鼠按鈕 3 及 Shift 修正鍵時的動作。
+!
+Playedit*shift-btn3-triple-press():  MouseShiftBtn3TriplePress()
+Playedit*DEFshift-btn3-triple-press():  鍵順序為連按三下滑鼠按鈕 3 及 Shift 修正鍵時的動作。
+!
+AllShare*paste():  Paste()
+AllShare*DEFpaste():  此動作會在游標位置處貼上剪貼簿的內容。
+!
+AllShare*copy():  Copy()
+AllShare*DEFcopy():  此動作會將現行畫面選擇複製到剪貼簿。
+!
+AllShare*cut():  Cut()
+AllShare*DEFcut():  此動作會移除現行畫面選擇。
+!
+Playedit*userid():  USERID()
+Playedit*DEFuserid():  輸入現行使用者的使用者 ID。此動作用於自動登入模擬器階段作業。
+!
+Playedit*password():  PASSWORD()
+Playedit*DEFpassword():  輸入現行使用者的密碼。此動作用於自動登入模擬器階段作業。
+!
+AllShare*adjust-copy-left():  AdjustCopyAreaLeft()
+AllShare*DEFadjust-copy-left():  在畫面上啟動一個複製區域 (如果尚未啟動複製區域)，然後對複製區域調整一個字元到其現行位置的左側。
+!
+AllShare*adjust-copy-right():  AdjustCopyAreaRight()
+AllShare*DEFadjust-copy-right():  在畫面上啟動一個複製區域 (如果尚未啟動複製區域)，然後對複製區域調整一個字元到其現行位置的右側。
+!
+AllShare*adjust-copy-up():  AdjustCopyAreaUp()
+AllShare*DEFadjust-copy-up():  在畫面上啟動一個複製區域 (如果尚未啟動複製區域)，然後從複製區域的現行位置向上調整一行。
+!
+AllShare*adjust-copy-down():  AdjustCopyAreaDown()
+AllShare*DEFadjust-copy-down():  在畫面上啟動一個複製區域 (如果尚未啟動複製區域)，然後從複製區域的現行位置向下調整一行。
+!
+AllShare*adjust-copy-anchor-left():  AdjustCopyAreaAnchorLeft()
+AllShare*DEFadjust-copy-anchor-left():  在畫面上啟動一個複製區域 (如果尚未啟動複製區域)，然後對複製區域向右調整一個字元，但不調整複製區域的左側。
+!
+AllShare*adjust-copy-anchor-right():  AdjustCopyAreaAnchorRight()
+AllShare*DEFadjust-copy-anchor-right():  在畫面上啟動一個複製區域 (如果尚未啟動複製區域)，然後對複製區域向左調整一個字元，但不調整複製區域的右側。
+!
+AllShare*adjust-copy-anchor-up():  AdjustCopyAreaAnchorUp()
+AllShare*DEFadjust-copy-anchor-up():  在畫面上啟動一個複製區域 (如果尚未啟動複製區域)，然後對複製區域向下調整一行，但不調整複製區域的頂端。
+!
+AllShare*adjust-copy-anchor-down():  AdjustCopyAreaAnchorDown()
+AllShare*DEFadjust-copy-anchor-down():  在畫面上啟動一個複製區域 (如果尚未啟動複製區域)，然後對複製區域向上調整一行，但不調整複製區域的底端。
+!
+AllShare*toggle-default-copy-type():  ToggleDefaultCopyType()
+AllShare*DEFtoggle-default-copy-type():  將複製設為區塊複製或線性複製。
+!
+Playedit*hex-string():  HexString()
+Playedit*DEFhex-string():  允許以十六進位模式來輸入資料。
+!
+Playedit*graphics-hex-string():  GraphicsHexString()
+Playedit*DEFgraphics-hex-string():  允許以 EBCDIC 十六進位模式來輸入圖形資料。
+!
+Playedit*BIDItogglescrrev():  BIDIToggleScreenReverse()
+Playedit*DEFBIDItogglescrrev():  開啟或關閉反轉畫面模式 (用於阿拉伯文和希伯萊文)。
+!
+Playedit*BIDItogglefieldrev():  BIDIToggleFieldReverse()
+Playedit*DEFBIDItogglefieldrev():  開啟或關閉反轉欄位 (用於阿拉伯文和希伯萊文)。
+!
+Playedit*BIDItoggleautorev():  BIDIToggleAutoReverse()
+Playedit*DEFBIDItoggleautorev():  開啟及關閉自動欄位反轉 (用於阿拉伯文和希伯萊文)。
+!
+Playedit*BIDIpush():  BIDIPush()
+Playedit*DEFBIDIpush():  將推送模式設為「開啟」(用於阿拉伯文和希伯萊文)。
+!
+Playedit*BIDIendpush():  BIDIEndPush()
+Playedit*DEFBIDIendpush():  將推送模式設為「關閉」(用於阿拉伯文和希伯萊文)。
+!
+Playedit*BIDItoggleautopush():  BIDIToggleAutoPush()
+Playedit*DEFBIDItoggleautopush():  當語言在 BIDI 與英文之間切換時，將模擬器設為自動進入推送模式 (用於阿拉伯文和希伯萊文)。
+!
+Playedit*BIDIsetshape():  BIDISetShape()
+Playedit*DEFBIDIsetshape():  設定阿拉伯文的外形模式。
+!
+Playedit*BIDIfieldshape():  BIDIFieldShape()
+Playedit*DEFBIDIfieldshape():  對阿拉伯文欄位中的資料塑造外形。
+!
+Playedit*BIDItogglenumswap():  BIDIToggleNumericSwapping()
+Playedit*DEFBIDItogglenumswap():  針對阿拉伯文，開啟及關閉阿拉伯文/北印度文的數字交換。
+!
+! End action names
+!
+!
+Keyxxx52*ERROR:  INVALID ACTION(S)
+!
+Keymap52*managing_server_text.value:  無法儲存此鍵盤重新對映檔。請將管理伺服器更新到 IBM Network Station Manager 的最新版本。
+!
+Keymap52*managingBtn.labelString:  確定
+!
+Keymap52*general_fatal_error.value:  「鍵盤重新對映程式」發生錯誤。將會終止程式。
+!
+Keymap52*genfatalBtn.labelString:  結束
+!
+Keymap52*general_nonfatal_text.value:  鍵盤重新對映錯誤。
+!
+Keymap52*gennonfatBtn.labelString:  確定
+!
+!
+!************************************************************************
+!
+!
+!                        Keypad Customizer Resources
+!
+!
+!************************************************************************
+Keypad52*title:  鍵台自訂程式
+
+Keypad52*iname5250:  5250 鍵台自訂程式
+
+Keypad52*iname3270:  3270 鍵台自訂程式
+
+Keypad52*keypadTitle.dialogTitle:  鍵台
+
+!following resource left blank on purpose, do not translate.
+AllShare*blankLabel.labelString:
+
+! initial popup dialog
+Keypad52*initialpopupDialoglist.labelString:  選取鍵台檔：
+
+Keypad52*initialpopupDialogaltlabel.labelString:  沒有鍵台檔。
+
+Keypad52*initialpopupDialogOKbtn.labelString:  確定
+
+Keypad52*initialpopupDialogcancelbtn.labelString:  取消
+
+Keypad52*initialpopupDialognewbtn.labelString:  新鍵台
+
+!*************************************
+!**  Keypad Customizer Main Window  **
+!*************************************
+
+! In general, the following buttons should not be made much longer during translation.
+! Buttons have one to four words.
+
+Keypad52*keyAction.labelString:  按鈕動作->
+
+Keypad52*fileDeleteButton.labelString:  清除鍵台按鈕
+
+Keypad52*selectplayfile.labelString:  選取播放檔動作
+
+Keypad52*changeSize.labelString:  變更鍵台樣式
+
+Keypad52*keypadfileDelete.labelString:  刪除鍵台檔案
+
+Keypad52*transRxing:  正在從模擬器階段作業接收現行鍵台自訂程式的資訊。
+
+Keypad52*transRxd:  從模擬器階段作業收到的鍵台自訂程式資訊。
+
+Keypad52*currKeypadLabel.labelString:  現行鍵台：
+
+Keypad52*currKeyLabel.labelString:  現行鍵台按鈕文字：
+
+Keypad52*currActLabel.labelString:  現行鍵台按鈕動作：
+
+!******************
+!**  Resolution  **
+!******************
+Keypad52*poorResolutionMsgText.value:   監視器的解析度小於 800x600。解析度小於 800x600 的監視器不支援「鍵台自訂程式」。
+
+Keypad52*keypadFailureCancelBtn.labelString:  取消
+
+!**************
+!**  Saving  **
+!**************
+Keypad52*saveDialog.dialogTitle:  儲存鍵台
+
+Keypad52*saveBoxLabel*labelString:  將鍵台檔另存為：
+
+Keypad52*saveTran:  已儲存鍵台檔...
+
+Keypad52*fileWarningDialog.dialogTitle:  鍵台警告
+
+!**************
+!**  Delete  **
+!**************
+Keypad52*fileDeleteDialog.dialogTitle:  刪除鍵台檔案
+
+Keypad52*fileDeleteBoxLabel.labelString:  選取要刪除的鍵台：
+
+Keypad52*fileDeleted:  選取的鍵台檔已被刪除。
+
+!****************
+!**  Playback  **
+!****************
+Keypad52*invalidSelectionplay.messageString:  沒有選取任何項目。從清單中選取或選擇「取消」。
+
+Keypad52*invalidSelectionplay.okLabelString:  繼續
+
+Keypad52*selectPlaybackFile.labelString:  選取播放檔
+
+Keypad52*userPlaybackFiles.labelString:  使用者播放檔
+
+Keypad52*defaultPlaybackFiles.labelString:  預設播放檔
+
+AllShare*okLabel.labelString:  確定
+
+!********************
+!**  Keypad Style  **
+!********************
+Keypad52*selectSizeTitle.dialogTitle:  鍵台樣式
+
+Keypad52*selectKeypadSizeLabel.labelString:  選取鍵台樣式：
+
+Keypad52*selectKeypadStyle.labelString:  鍵台樣式：
+
+Keypad52*popupStyleChoice.labelString:  蹦現鍵台
+
+Keypad52*menuStyleChoice.labelString:  下拉鍵台
+
+Keypad52*selectKeypadSizeRows.labelString:  列：
+
+Keypad52*selectKeypadSizeCols.labelString:  直欄：
+Keypad52*selectKeypadSizeTextLen.labelString:  文字長度：
+
+Keypad52*changeKeypadSizeMessage:  選取想要的「鍵台樣式」...
+
+Keypad52*newPb.labelString:  新建
+
+Keypad52*row_col_pulldownvalue.labelString:  - 
+
+Keypad52*invalidSizeSelection.messageString:  對現行鍵台來說，選取的大小太小。
+
+Keypad52*invalidSizeSelection.okLabelString:  繼續
+
+!***********************
+!**  Warning dialogs  **
+!***********************
+Keypad52*change.dialogTitle:  鍵台警告
+
+Keypad52*unsaved.dialogTitle:  鍵台警告
+
+Keypad52*unsaved.messageString:  尚未儲存鍵台變更。
+
+Keypad52*unsaved.okLabelString:  繼續
+
+Keypad52*nochange.dialogTitle:  鍵台警告
+
+! this cannot be made much longer during translation.
+Keypad52*nochange.messageString:  要先「確定」或「取消」現行變更，才能進行進一步的變更。
+
+Keypad52*nochange.okLabelString:  繼續
+
+Keypad52*cantdothat.dialogTitle:  鍵台警告
+
+Keypad52*cantdothat.messageString:  要先「確定」或「取消」變更，才能選取另一個選項。
+
+!nothing selected in first dialog box
+Keypad52*invalidSelectionwarn.messageString:  沒有選取任何項目。從清單中選取，選擇「新增」或「取消」。
+
+Keypad52*invalidSelectionwarn.okLabelString:  繼續
+
+Keypad52*noaccessDir:  無法存取目錄。
+
+Keypad52*selectKeypadButton.messageString:  必須先選取鍵台按鈕，自行設定才能開始。
+
+Keypad52*generalError.dialogTitle:  鍵台錯誤
+
+Keypad52*generalError.messageString:  執行動作時發生錯誤。
+
+Keypad52*generalError.okLabelString:  確定
+
+Keypad52*emptyList:  轉換清單有錯誤，所以無法儲存或套用它。
+
+Keypad52*ErrorMsgFileNameChars.messageString:  您在檔名中鍵入的字元無效。
+
+Keypad52*EBCMismatchText.value: 呼叫「鍵台自訂程式」的模擬器階段作業之語言不符合 IBM Network Station 的語言。使用此應用程式建立的字元及字串會使模擬器階段作業發生非預期及/或不願看到的結果。
+
+!************************
+!**  Various Messages  **
+!************************
+! help button pressed
+Keypad52*helpMessage:  「說明察看器」載入中...
+
+! after OK clicked
+Keypad52*chooseSave:  選擇「儲存」來儲存任何變更。
+
+! after Cancel clicked
+Keypad52*chooseCancel:  現行變更已還原。
+
+! original message when new keypad opens
+Keypad52*chooseNew:  編輯新鍵台
+
+! button pressed in keypad
+Keypad52*continueedit:  編輯現行按鈕...
+
+! click button action -> with nothing selected
+Keypad52*noActionSelected:  沒有在「動作」清單或「字元」清單中選取任何項目。
+
+! swapping messages (next 2)
+Keypad52*swapinprogress:  選擇「確定」、「取消」，或使另一個鍵台按鈕移動...
+
+Keypad52*swaprunninginfo:  按鈕移動進行中...
+
+! following 3 messages for invalid keypad action
+Keypad52*nonValidDialog.dialogTitle:  鍵台警告訊息
+
+Keypad52*nonValidDialog.messageString:  此按鈕的鍵台動作無效。
+
+Keypad52*deleteKeypadMessage:  選取要刪除的鍵台...
+
+!***************
+!**  Exiting  **
+!***************
+Keypad52*quitDialog1:  已修改鍵台但尚未儲存。
+
+Keypad52*quit1Tog1:  沒有儲存變更就結束。
+
+Keypad52*quit1Tog2:  儲存變更後才結束。
+
+!************************************************************************
+!
+!
+!                        Playback Editor Resources
+!
+!
+!************************************************************************
+Playedit*title:  播放檔編輯器
+
+Playedit*iname5250:  5250 播放檔編輯器
+
+Playedit*iname3270:  3270 播放檔編輯器
+
+Playedit*editorTitle.dialogTitle:  播放檔編輯器
+
+!****  Main Window
+Playedit*keyAction.labelString:  插入動作->
+
+Playedit*deleteAction.labelString:  移除動作
+
+Playedit*insertAction.labelString:  插入行
+
+Playedit*editAction.labelString:  編輯動作
+
+Playedit*transRxing:  正在從模擬器階段作業接收播放檔編輯器資訊。
+
+Playedit*transRxd:  從模擬器階段作業收到的「播放檔編輯器」資訊。
+
+Playedit*currFileLabel.labelString:  現行播放檔：
+
+Playedit*currActLabel.labelString:  現行播放檔動作：
+
+!** Resolution
+Playedit*poorResolutionMsgText.value:  監視器的解析度小於 800x600。解析度小於 800x600 的監視器不支援「播放檔編輯器」。
+
+!** Saving
+Playedit*saveDialog.dialogTitle:  儲存播放檔
+
+Playedit*saveBoxLabel*labelString:  將播放檔另存為：
+
+Playedit*saveTran:  已儲存播放檔...
+
+Playedit*fileWarningDialog.dialogTitle:  播放編輯器警告
+
+!** Edit
+Playedit*editBoxLabel*labelString:  編輯動作：
+
+!** Warning Dialogs
+Playedit*PlaybackMsgFileNoOpen.value:  無法開啟播放檔。正在結束應用程式。
+
+Playedit*PlaybackMsgFileNoRead.value:  無法讀取播放檔。正在結束應用程式。
+
+Playedit*PlaybackMsgFileCorrupt.value:  播放檔不是由模擬器「記錄」應用程式建立的。無法開啟檔案。正在結束應用程式。
+
+Playedit*noaccessDir:  無法存取目錄。
+
+Playedit*selectInsertLocation.messageString:  強調顯示要插入此動作的行。
+
+Playedit*ErrorMsgFileNameChars.messageString:  您在檔名中鍵入的字元無效。
+
+Playedit*EBCMismatchText.value:  呼叫「播放檔編輯器」的模擬器階段作業之語言不符合 IBM Network Station 的語言。使用此應用程式建立的字元及字串會使模擬器階段作業發生非預期及/或不願看到的結果。
+
+Playedit*nonValidDialog.messageString:  動作無效。
+
+!** Messages
+Playedit*helpMessage:  「說明察看器」載入中...
+
+Playedit*chooseSave:  選擇「儲存」來儲存任何變更。
+
+Playedit*chooseCancel:  現行變更已還原。
+
+Playedit*noActionSelected.messageString:  沒有在「動作」清單或「字元」清單中選取任何項目。
+
+Playedit*nothingHighlightedDelete.messageString:  沒有選取要刪除的項目。
+
+Playedit*nothingHighlightedInsert.messageString:  強調顯示想要的插入位置。
+
+Playedit*nothingHighlightedEdit.messageString:  沒有選取要編輯的項目。
+
+!** Exit
+Playedit*quitDialog1:  已修改播放檔但尚未儲存。
+
+Playedit*quit1Tog1:  沒有儲存變更就結束。
+
+Playedit*quit1Tog2:  儲存變更後才結束。
+
+!**************************************************
+!*
+!*        Printing translations
+!*
+!*      Added by AJMEYER for V310.nc
+!*
+!**************************************************
+
+AllShare*printDialogPrinterTypeLabel.labelString:  印表機類型：
+
+AllShare*printDialogPrinterTypeMenu*postscript.labelString:  PostScript
+
+AllShare*printDialogPrinterTypeMenu*ascii.labelString:  ASCII
+
+AllShare*printDialogPrinterTypeMenu*pcl.labelString:  PCL
+
+AllShare*printDialogPrinterSelectControls_popup.title:   印表機選擇器
+
+AllShare*printSelectDialogOKButton.labelString:  確定
+
+AllShare*printSelectDialogCancelButton.labelString:  取消
+! ENGL1SH_VERS10N 1.6.2.2 DO NOT REMOVE OR CHANGE THIS LINE

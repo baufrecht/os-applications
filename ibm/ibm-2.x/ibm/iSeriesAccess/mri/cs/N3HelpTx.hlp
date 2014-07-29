@@ -1,0 +1,1526 @@
+////(This is a post-V2R1 GA updated English help text file.)
+////This file contains the main on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file will be stored in locale specific ASCII (code page 819 for Latin1 languages) 
+
+////Help text format (this section is not displayed to IBM Emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1.
+//// 3. This help file contains help text for the IBM 3270 and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator. A comment line of four "/" characters followed by
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+//// 3B. "5250" indicates subsequent data is only displayed in 5250 on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in both 3270 and 5250 on-line help, and non-IBM partner on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+//// 3D. Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters. The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Order of topics: The emulator help viewer program automatically orders topics in alphabetical order when displaying the topics. There are many topics in this main emulator help text file; alphabetical order should make it easier for users to find the topic that they are looking for.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+
+----"Relace 3270 - nápovìda"
+++++"Pou¾ití nápovìdy k relacím 3270"
+V tomto tématu je popsán zpùsob pou¾ití kontextové nápovìdy k relacím 3270.
+
+Levý panel okna Relace 3270 - nápovìda obsahuje seznam hesel nápovìdy. Hesla lze procházet my¹í nebo pomocí kláves Page Up a Page Down. Pøesunete-li ukazatel my¹i na nìkteré heslo a stisknete-li primární tlaèítko my¹i (obvykle levé tlaèítko), bude v pravém panelu zobrazen popis vybraného hesla.
+
+Popis zobrazený v pravém panelu lze posouvat my¹í, klávesami Page Up a Page Down nebo klávesami Cursor Up (v horní èásti okna) a Cursor Down (v dolní èásti okna).
+
+Tlaèítka vyhledávání umo¾òují vyhledat textový øetìzec v rámci textových sekcí nápovìdy. Textový øetìzec pro hledání mù¾e obsahovat mezery a nejsou v nìm rozli¹ována malá a velká písmena.
+
+Pomocí tlaèítek Dal¹í téma a Pøedchozí téma mù¾ete znovu procházet zobrazená témata v pùvodním poøadí.
+
+Klepnutím na tlaèítko Tisk mù¾ete vytisknout zobrazené téma nebo v¹echna hesla textové nápovìdy.
+
+Klepnutím na tlaèítko Ukonèit mù¾ete ukonèit relaci nápovìdy.
+
+Pracujete-li s monitorem s hodnotou rozli¹ení 1024x768 nebo vy¹¹í, mù¾ete pomocí tlaèítka Písmo zmìnit velikost písma pro zobrazení kontextové nápovìdy.
+
+++++"Dal¹í parametry"
+V oknì Pøedvolby programu Nastavení emulátoru IBM 3270 lze nastavit dal¹í parametry. Sada Dal¹í parametry urèuje výchozí hodnoty pro Rùzné pøedvolby a dal¹í pøedvolby pro relace 3270.
+
+Poznámka: Hodnoty sady Dal¹í parametry jsou pou¾ity pro v¹echny relace 3270.
+
+//// For the rest of this topic, the preference names and values (in upper case) must not be translated. The "(default)" and other lower case text should be translated.
+Ka¾dá polo¾ka v sadì Dal¹í parametry musí být uvedena na samostatném øádku. Øádky sady Dal¹í parametry mají následující formát:
+
+  IBM3270*CURSOR_STYLE:BLOCK
+
+IBM3270 je název programu 3270, za ním následuje znak "*", název pøedvolby, znak ":" a hodnota pøedvolby.
+
+Zde jsou uvedeny dal¹í parametry, kterým odpovídají ekvivalentní nastavení hodnot Rùzné pøedvolby, a jejich hodnoty. Program Rùzné pøedvolby 3270 poskytuje dal¹í informace o jednotlivých pøedvolbách a jejich hodnotách. (Pokud pro daného u¾ivatele existuje soubor Rùzné pøedvolby, nebudou pro typ parametrù Rùzné pøedvolby pou¾ity hodnoty sady Dal¹í parametry. Pokud u¾ivatel pou¾ije pro hodnoty Rùzné pøedvolby volbu Nastavit výchozí, budou pou¾ity hodnoty sady Dal¹í parametry.)
+
+Název pøedvolby:   Hodnoty pøedvolby
+---------------    -----------------
+
+CURSOR_STYLE:  Styl kurzoru
+   UNDERSCORE  Kurzor ve tvaru podtr¾ítka
+   BLOCK  Blokový kurzor
+   BLOCK_INSERT_UNDERSCORE_REPLACE  (výchozí) Blok - vkládání/podtr¾ítko - náhrada
+   UNDERSCORE_INSERT_BLOCK_REPLACE  Podtr¾ítko - vkládání/blok - náhrada
+
+CURSOR_BLINK:  Blikání kurzoru
+   DISABLE  (výchozí) Bez blikání
+   ENABLE  Kurzor bliká
+
+////5250
+ENTER_KEY:  Klávesa Enter/pravá klávesa Ctrl
+   USE_DEFAULT  (výchozí) Pou¾ít výchozí nastavení
+   ENTER_ENTER_AND_RIGHT_CTRL_NEWLINE  Klávesa Enter - zadání a pravá klávesa Ctrl - nový øádek
+   ENTER_NEWLINE_AND_RIGHT_CTRL_ENTER  Klávesa Enter - nový øádek a pravá klávesa Ctrl - zadání
+   ENTER_ENTER_AND_RIGHT_CTRL_FIELD_EXIT  Klávesa Enter - zadání a pravá klávesa Ctrl - opu¹tìní pole
+   ENTER_FIELD_EXIT_AND_RIGHT_CTRL_ENTER  Klávesa Enter - opu¹tìní pole a pravá klávesa Ctrl - zadání
+////3270
+Poznámka: Klávesa Enter relace 3270 je v programu Nastavení emulátoru IBM 3270 nad polem Dal¹í parametry nastavena jako pøedvolba 3270.
+////9999
+
+PRINT_KEY:  Klávesa Print
+   USE_DEFAULT  (výchozí) Pou¾ít výchozí
+   SHIFTED_PRINT_IS_SCREEN_PRINT  Kombinace kláves Shift+Print - tisk obrazovky
+   PRINT_IS_SCREEN_PRINT  Klávesa Print - tisk obrazovky
+
+DESTRUCTIVE_BACKSPACE:  Destruktivní operace Backspace
+   ENABLE  (výchozí) Odstraní znak
+   DISABLE  Bez odstranìní
+
+INSERT_MODE:  Re¾im vkládání
+   DEFAULT_OFF_AUTOMATIC_RESET  (výchozí) Výchozí deaktivace/automatické obnovení
+   DEFAULT_OFF_NO_AUTOMATIC_RESET  Výchozí deaktivace/neprovádìt automatické obnovení
+   DEFAULT_ON_NO_AUTOMATIC_RESET  Výchozí aktivace/neprovádìt automatické obnovení
+
+DEFAULT_COPY_TYPE:  Výchozí typ kopírování
+   LINEAR  (výchozí) Lineární
+   BLOCK  Blokové
+
+PASTE_LOCATION:  Umístìní pøi vlo¾ení
+   AT_CURSOR  (výchozí) Na pozici kurzoru
+   AT_MOUSE_POINTER  Na pozici ukazatele my¹i
+
+////5250
+AUTOMATIC_HELP:  Automatická klávesa Help
+   ENABLE  (výchozí) Povolit
+   DISABLE  Zakázat
+
+////9999
+ERROR_RESET_KEYS:  Klávesy obnovení po chybì
+////5250
+   RESET_KEY_ONLY  (výchozí) Pouze klávesa Reset
+   CURSOR_MOVEMENT_ALSO  Také polohovací klávesy kurzoru
+////3270
+   RESET_KEY_ONLY  Pouze klávesa Reset
+   CURSOR_MOVEMENT_ALSO  (výchozí) Také polohovací klávesy kurzoru
+////9999
+   MOST_KEYS  Obnovení po chybì pomocí vìt¹iny kláves
+
+AUDIO_ALARM:  Zvuková výstraha
+   DISABLE  Zakázat
+   ENABLE  (výchozí) Povolit
+
+INPUT_ONLY_CURSOR_MOVEMENT:  Kurzor pouze pro vstup pozic
+   DISABLE  (výchozí) Zakázat
+   ENABLE  Povolit
+
+KEYBOARD_BUFFERING:  Ukládání do vyrovnávací pamìti pro uzamknutou klávesnici
+   DISABLE  Zakázat
+////5250
+   ENABLE  Povolit
+   USE_AS400_SETTING  (výchozí) Pou¾ít nastavení hostitele systému i5/OS
+////3270
+   ENABLE  (výchozí) Povolit
+////9999
+
+////5250
+LARGE_SCREEN_BEHAVIOR:  Chování velké obrazovky
+   MOVE_WINDOW_AND_REDUCE_FONT_IF_NEEDED  Posunutí okna
+   REDUCE_FONT_ONLY  Zmen¹ení písma
+   USE_LAST_FONT  (výchozí) Pou¾ití posledního písma
+   REDUCE_FONT_AND_MOVE_WINDOW_IF_NEEDED Zmen¹ení písma/posunutí okna
+
+////9999
+ROW_COLUMN_INDICATOR: Indikátor øádku/sloupce
+   ENABLE  (výchozí) Zobrazit
+   DISABLE  Nezobrazovat
+
+RULE_LINE:  Vodicí èára
+   DISABLE  Klávesa vodicí èáry není k dispozici
+   ENABLE_FOLLOW_CURSOR  Podle kurzoru
+   ENABLE_KEY_FIXED  Zadání klávesou vodicí èáry
+   ENABLE_KEY_FOLLOW_CURSOR  (výchozí) Povoleno/podle kurzoru  
+
+RULE_LINE_STYLE:  Styl vodicí èáry
+   BOTH  (výchozí) obojí
+   HORIZONTAL  Pouze vodorovná
+   VERTICAL  Pouze svislá
+
+////5250
+BLUE_UNDERSCORE:  Modré podtr¾ítko
+   ENABLE  Povolit
+   DISABLE  (výchozí) Zakázat
+
+////3270
+BRACKET:  Zmìna znaku závorky
+   DISABLE  (výchozí) Zakázat
+   ENABLE  Povolit
+
+AUTOMATIC_RECONNECT:  Automatické opìtné pøipojení
+   DISABLE  Zakázat
+   ENABLE  (výchozí) Povolit
+
+////9999
+HOTSPOTS:  Aktivní místa
+   DISABLE  Zakázat
+////5250
+   SINGLE_CLICK  (výchozí) Jedno klepnutí
+   DOUBLE_CLICK  Dvojí klepnutí
+////3270
+   SINGLE_CLICK   Jedno klepnutí
+   DOUBLE_CLICK  (výchozí) Dvojí klepnutí
+////9999
+
+HOTSPOT_HIGHLIGHTING:  Zvýraznìní aktivních míst
+   DISABLE  (výchozí) Bez zvýraznìní
+   ENABLE  Zvýraznìní
+
+
+Zde jsou uvedeny ostatní parametry ze sady Dal¹í parametry 3270:
+
+Název pøedvolby:   Hodnoty pøedvolby
+---------------    -----------------
+
+TITLE_OPTION:  Volby titulku okna
+   TEXT_AND_SESSION_ID  (výchozí) Text titulku a identifikátor relace
+   TEXT_ONLY  Pouze text titulku
+   SESSION_ID_ONLY  Pouze identifikátor relace
+   TEXT_AND_HOST  Text titulku a název hostitele
+   TEXT_HOST_AND_SESSION_ID  Text titulku, název hostitele a identifikátor relace
+
+SESSION_ID:  ID relace
+Identifikátor relace je obvykle zobrazen v titulku okna. Tato hodnota mù¾e mít délku a¾ 20 znakù (pøi pou¾ití èísla +n 18 nebo 19 znakù) a musí být uzavøena v uvozovkách. Je také podporováno zadání hodnoty +n, kde n je èíslo v rozsahu 1 a¾ 99. Pøíklad: Parametru IBM3270*SESSION_ID:"JUAN"+3 budou odpovídat identifikátory relací JUAN1, JUAN2 a JUAN3.
+
+MAX_SESSIONS:  Maximální poèet relací
+Tato hodnota udává maximální povolený poèet relací 3270, které mù¾e u¾ivatel spustit (v rozsahu 1 a¾ 99).
+
+DISPLAY_NAME:  Název displeje hostitele
+Hodnoty této pøedvolby jsou shodné jako hodnoty pøedvolby -DISPLAY_NAME; viz heslo Název displeje.
+
+RETRY_COUNT:  poèet pokusù
+Tato hodnota udává poèet opakovaných pokusù pøi chybì komunikace. Standardní hodnota je 144. Hodnota 0 odpovídá pouze ruèním pokusùm o opakování (bez automatických opìtných pokusù) pøi chybì.
+
+RETRY_INTERVAL:  Interval opakování
+Tato hodnota udává dobu (v sekundách) mezi jednotlivými opakovanými pokusy o komunikaci. Standardní hodnota je 300. Poznámka: Pøed pou¾itím tohoto intervalu jsou provedeny 3 pokusy v krat¹ích intervalech.
+
+INACTIVITY_TIMEOUT:  Prodleva neèinnosti
+Tato hodnota je uvedena v minutách, s rozsahem 0 a¾ 9999. Standardní hodnota je 0, co¾ odpovídá deaktivaci funkce prodlevy. Pøi nenulové hodnotì bude po uplynutí stanoveného poètu minut neèinnosti u¾ivatele provedena operace odpojení/opìtného pøipojení programu Telnet.
+
+ICONIFIED_ACTION:  Zmìna relace obsahující ikony pøi zmìnì displeje emulátoru
+   DISABLE  (výchozí) Není provedena ¾ádná zmìna relace s ikonami
+   BEEP  Zvuková výstraha
+   DEICONIFY  Odebrání ikon z relace
+   BLINK  Blikání titulku ikony
+
+BLINKING_TEXT:  Atribut blikajícího textu
+   DISABLE  (výchozí) Text nebliká
+   ENABLE   Text bliká na základì atributu blikajícího textu
+
+EURO: Symbol eura
+   ENABLE  (je pou¾ita kódová stránka 3270 EBCDIC obsahující Euro)
+   DISABLE  (je pou¾ita kódová stránka 3270 EBCDIC neobsahující Euro)
+
+////5250
+STAND_ALONE:
+   TRUE: Relace emulátoru je spu¹tìna jako vlastní samostatný proces namísto pøipojení k jiné relaci emulátoru.
+   FALSE: (výchozí) Je-li spu¹tìna jiná relace ibm5250, bude provedeno pøipojení k této relaci.
+
+27X132_IN_800X600:  Má být pøi hodnotì rozli¹ení monitoru 800x600 k dispozici 27 øádkù se 132 sloupci?
+   ENABLE  Pøi rozli¹ení 800x600 bude k dispozici 27 øádkù a 132 sloupcù.
+   DISABLE  (výchozí) Pøi rozli¹ení 800x600 bude k dispozici 27 øádkù a 132 sloupcù.
+////3270
+KEY_BUFFERING_DELAY:  Prodleva vyrovnávací pamìti klávesnice
+Tuto hodnotu lze zadat v rozsahu 0 a¾ 250 s mo¾ností pøírùstku 0,1 sekundy. K èasové prodlevì dojde po odemknutí klávesnice 3270 pøed zpracováním kláves ulo¾ených ve vyrovnávací pamìti. Standardní hodnota je 3.
+
+PLAYBACK_DELAY:  Prodleva pøehrání
+Tuto hodnotu lze zadat v rozsahu 1 a¾ 250 s mo¾ností pøírùstku 0,1 sekundy. K èasové prodlevì dojde po odemknutí klávesnice 3270 bìhem zpracování pøehrání. Standardní hodnota je 20.
+
+INPUT_ONLY_COPY:  Kopie pouze pro vstup
+   DISABLE  (výchozí) Není k dispozici
+   ENABLE  Kopie pouze pro vstup je k dispozici
+
+NUMERIC_INPUT_CHECK:  Vstupní pole 3270 pouze pro èíselné hodnoty
+   DISABLE  (výchozí) Není vynuceno.
+   ENABLE  Pro vstupní pole 3270 urèená pouze pro èíselné hodnoty je povoleno zadání pouze èíselných znakù.
+
+////9999
+++++"Automatické pøihlá¹ení"
+V této sekci je popsán postup pøi vytvoøení souboru pøehrávání s automatickým pøihlá¹ením (soubor pøehrávání, který je automaticky spou¹tìn pøi spu¹tìní relace 3270). Soubor pøehrávání s automatickým pøihlá¹ením umo¾òuje bìhem pøehrávání nahradit ID u¾ivatele a heslo. Postup pøi vytvoøení souboru pøehrávání s automatickým pøihlá¹ením:
+
+1) Spus»te relaci 3270.
+
+2) Klepnìte postupnì na volby Volba, Zaznamenat a Spustit.
+
+3) Nenachází-li se kurzor ve vstupním poli pro ID u¾ivatele, pøesuòte kurzor do pole ID u¾ivatele. 
+
+4) Klepnìte na volbu Pozastavit (vstupní pole ID u¾ivatele a Heslo relace 3270 bude pravdìpodobnì viditelné a¾ po pøesunutí okna Volby pozastavení záznamu).
+
+5) Vyberte volbu Vlo¾it na tomto místì ID u¾ivatele.
+
+6) Klepnutím na titulek okna relace 3270 aktivujte kurzor v relaci 3270.
+
+7) Do vstupního pole ID u¾ivatele zadejte své ID u¾ivatele (toto ID u¾ivatele není zaznamenáno).
+
+Poznámka ke kroku 7 a 13: Pøi pøehrávání budou pøi pøihlá¹ení k systému pou¾ity hodnoty ID u¾ivatele a hesla (krok 13) konfigurované v programu Nastavení emulátoru IBM 3270. Není-li ID a heslo u¾ivatele konfigurováno, mù¾ete pomocí volby Pozastavit na tomto místì pøehrávání umo¾nit u¾ivateli zadání pøíslu¹ného ID u¾ivatele a hesla pro daný systém.
+
+8) Klepnìte na volbu Pokraèovat v záznamu.
+
+9) Pøesuòte kurzor do vstupního pole Heslo: klepnìte my¹í na pozici prvního vstupního pole Heslo nebo pomocí kláves Home a Tab pøesuòte kurzor do vstupního pole Heslo (tímto zpùsobem lze správnì umístit kurzor do vstupního pole Heslo odpovídajícího zadanému ID u¾ivatele).
+
+10) Klepnìte na volbu Pozastavit.
+
+11) Vyberte volbu Vlo¾it na tomto místì heslo.
+
+12) Klepnutím na titulek okna relace 3270 aktivujte kurzor v relaci 3270.
+
+13) Zadejte své heslo (heslo není zaznamenáno).
+
+14) Klepnìte na volbu Pokraèovat v záznamu. Poznámka: Pøi pøehrávání s automatickým pøihlá¹ením bude pou¾ito heslo konfigurované v programu Nastavení emulátoru IBM 3270. 
+
+15) Stisknìte klávesu Enter. Po pou¾ití klávesy Enter bude v nìkterých pøípadech nutné pomocí dal¹ích kláves zavøít okna se zprávami systému.
+
+16) V pøípadì potøeby mù¾ete do souboru pøehrávání pøidat dal¹í operace. Mù¾ete napøíklad spustit specifickou aplikaci systému.
+
+17) Klepnìte na volbu Zastavit záznam.
+
+18) Zadejte název pro tento soubor pøehrávání s automatickým pøihlá¹ením a klepnìte na volbu Ulo¾it.
+
+19) Spus»te program Nastavení emulátoru IBM 3270.
+
+20) Vyberte pøipojení, které chcete konfigurovat pro automatické pøihlá¹ení a klepnìte na volbu Pøipojení->Upravit.
+
+21) Klepnìte na volbu Roz¹íøené pøipojení 3270.
+
+Poznámka: Pøi pou¾ití spou¹tìcího panelu pro automatické pøihlá¹ení nebude pracovní plocha u¾ivatele zabezpeèena (a¾ do uzamknutí nebo do odhlá¹ení). Není-li pracovní plocha u¾ivatele zamèena a spou¹tìcí panel provede automatické pøihlá¹ení, mù¾e se k systému pøihlásit kdokoli klepnutím na ikonu spou¹tìcího panelu. Jinou mo¾ností je zmìna vý¹e uvedeného kroku 9 a výbìr volby Pozastavit na tomto místì pøehrávání. V takovém pøípadì bude muset u¾ivatel pøi spu¹tìní relace 3270 zadat své heslo.
+
+////In the sentence below, "-playback" must not be translated.
+22) Pøidejte dal¹í parametr -playback (nebo -PLAYBACK) následovaný jednou mezerou a názvem souboru pøehrávání (s rozli¹ením velkých a malých písmen). Pokud název souboru pøehrávání obsahuje mezery, je nutné je uzavøít do uvozovek (napøíklad -playback "název souboru pøehrávání").
+
+23) Na stejném panelu mù¾ete volitelnì konfigurovat ID u¾ivatele 3270 a hesla u¾ivatelù.
+
+24) Klepnìte na tlaèítko OK. Znovu klepnìte na tlaèítko OK.
+
+Poznámka: Pokud soubor pøehrávání s automatickým pøihlá¹ením nepracuje správnì, mù¾ete soubor pøehrávání zaznamenat znovu a nahradit jím existující soubor pøehrávání.
+
+Poznámka: Pokud budete pøehrávat tento soubor pøehrávání s automatickým pøihlá¹ením prostøednictvím rozbalovacího seznamu Pøehrát 3270, bude nutné zadat heslo.
+
+////3270
+++++"Hranatá závorka"
+Pøi aktivaci této volby v oknì Rùzné pøedvolby budou znaky levé a pravé hranaté závorky ([ a ]) pøevádìny na odpovídající reprezentace ASCII. 
+
+Tuto funkci ocení zvlá¹tì programátoøi pracující v jazyku C. Pøi standardním pøevodu EBCDIC na ASCII nebývají tyto znaky pøevedeny správnì.
+////9999
+
+++++"Mapování barev"
+Program Mapování barev 3270 umo¾òuje zmìnit barvy pou¾ívané v relacích 3270.
+
+Pou¾ití programu Mapování barev 3270 lze autorizovat pomocí programu Nastavení emulátoru IBM 3270.
+
+Pro program Mapování barev 3270 existují ètyøi úrovnì pøístupu:
+
+1) Roz¹íøené: Mù¾ete pou¾ít volby mapování základních i roz¹íøených barev.
+
+2) Základní: Mù¾ete pou¾ít volbu mapování základních barev (tlaèítko Roz¹íøené není k dispozici).
+
+3) Vypnuto: Volba Mapování barev je zobrazena ¹edì, mapování je vypnuto.
+
+4) Skryté: Volba Mapování barev není v rozbalovací nabídce zobrazena.
+
+////Poznámka: Nìkteré modely IBM Thin Client podporují a¾ 256 barev. Po dosa¾ení této limitní hodnoty mù¾e vinou nesprávných barev dojít k naru¹enému zobrazení obrázkù prohlí¾eèe nebo obrázkù ICA. Pìt základních barevných schémat produktu IBM odpovídá barvám pou¾itým prohlí¾eèem Thin Client a modulem Java. Pro roz¹íøená barevná schémata lze pou¾ít a¾ 22 barev.
+
+Program Mapování barev 3270 obsahuje vlastní text nápovìdy. Podrobnìj¹í informace o programu Mapování barev 3270 najdete v této nápovìdì.
+
+Pøi zahájení relace 3270 vyhledá emulátor relace 3270 soubor mapování barev pro danou relaci. Pøitom je pou¾ito následující poøadí. Je-li v prùbìhu hledání nalezen soubor mapování barev, je pou¾it pro relaci 3270:
+
+- Hledání souboru mapování barev specifického pro danou relaci, který byl vybrán pomocí programu Mapování barev.
+
+- Hledání výchozího souboru mapování barev, který byl vybrán pomocí programu Mapování barev.
+
+- Není-li nalezen ¾ádný z tìchto souborù, emulátor 3270 pou¾ije výchozí barvy (èerné pozadí).
+
+////5250
+++++"Oddìlovaèe sloupcù"
+V relacích 3270 nejsou standardnì zobrazeny oddìlovaèe sloupcù (v nìkterých typech polí v systému i5/OS jde o znaky teèky). Zobrazení oddìlovaèù sloupcù lze povolit v programu Nastavení emulátoru IBM 3270.
+////9999
+
+++++"Obnovení pøi výskytu chyby komunikace"
+Emulátor 3270 ve výchozím nastavení provede automatickou obnovu pøi výskytu následujících chyb:
+
+////5250
+- Relace 3270 je pøeru¹ena kvùli ztrátì komunikace mezi emulátorem a systémem i5/OS.
+////3270
+- Relace 3270 je pøeru¹ena kvùli ztrátì komunikace mezi emulátorem a systémem System/390.
+////9999
+- Relaci emulátoru 3270 nelze úspì¹nì spustit kvùli mo¾né chybì komunikace. 
+
+////In the paragraph below, "-RETRY_COUNT" must not be translated.
+Funkci automatické obnovy pøi chybì pro emulátor 3270 lze upravit nebo vypnout pomocí programu Nastavení emulátoru IBM 3270. Vyberte po¾adovanou relaci a klepnìte na volbu Spojení->Upravit. Klepnìte na volbu Roz¹íøené pøipojení 3270 a v poli Dal¹í parametry zadejte parametr -RETRY_COUNT, následovaný mezerou a èíslem v rozsahu 0 a¾ 9999. Je-li tato hodnota vìt¹í nebo rovna jedné, udává poèet automatických opakovaných pokusù, které mají být emulátorem 3270 provedeny. Standardní hodnota je 144 opakování. Není-li funkce automatického obnovení pøi chybì úspì¹ná, je tøeba pou¾ít ruèní zotavení po chybì. Pøi zadání hodnoty 0 bude funkce automatické obnovy pøi chybì vypnuta (bude nastaveno ruèní zotavení pøi chybì). U parametru -RETRY_COUNT jsou rozli¹ována malá a velká písmena.
+
+////In the paragraph below, "-RETRY_COUNT" and "-RETRY_INTERVAL" must not be translated.
+Funkce emulátoru 3270 pro automatickou obnovu pøi chybì nejprve provede tøi rychlé opakované pokusy (s intervalem pøibli¾nì 20 sekund) a teprve poté zaène provádìt opakované pokusy urèené parametrem -RETRY_COUNT se zadaným intervalem opakování. Výchozí interval opakování je 300 sekund (5 minut). Interval opakování lze nastavit pomocí parametru -RETRY_INTERVAL následovaného mezerou a hodnotou v rozsahu 1 a¾ 9999 v poli Dal¹í parametry. Tato hodnota urèuje èasový interval (v sekundách) mezi jednotlivými pokusy.
+
+Poznámka: Pøi provádìní automatické obnovy po chybì bude pro u¾ivatele zobrazeno dialogové okno s chybovou zprávou. V tomto oknì mù¾e u¾ivatel relaci emulátoru 3270 zru¹it. Pokud emulátor 3270 provede úspì¹nou obnovu, bude dialogové okno s chybovou zprávou odstranìno bez nutnosti zásahu u¾ivatele.
+
+////5250
+++++"Volba pruhu nabídky Ovládání"
+Pøi výbìru volby pruhu nabídek Ovládání budou zobrazeny rùzné klávesy systému i5/OS 3270. Pøi výbìru jednotlivých kláves budou provedeny stejné funkce, jako kdyby u¾ivatel danou klávesu stiskl na klávesnici. Tímto zpùsobem si lze usnadnit orientaci na klávesnici.
+////9999
+
+++++"Kopírování"
+////CPY This comment line is used by the help viewer program to find the Copy topic. This line belongs after the Copy topic (do not translate this comment line).
+Data z relace 3270 lze zkopírovat do 'schránky' a poté je vlo¾it zpìt do této relace 3270, do jiné relace nebo dokonce do jiné aplikace.
+
+Kopírování pomocí pruhu nabídky: Data, která mají být zkopírována, je tøeba nejprve oznaèit umístìním ukazatele my¹i na první znak, pøeta¾ením ukazatele my¹i na poslední znak se stisknutým primárním (obvykle levým) tlaèítkem my¹i a následným uvolnìním tlaèítka. Poté výbìrem volby Kopírovat v nabídce Upravit pøeneste kopii dat do vyrovnávací pamìti (schránky).
+
+Jiným zpùsobem oznaèení oblasti pro kopírování je stisknutí sekundárního (obvykle pravého) tlaèítka my¹i. Tak lze oznaèit data nacházející se mezi textovým kurzorem a ukazatelem my¹i. Oznaèenou oblast kopírování lze upravit pomocí sekundárního tlaèítka my¹i.
+
+K dispozici je také funkce blokového kopírování (kopírování obdélníkové oblasti). Dvojím klepnutím sekundárním tlaèítkem my¹i mù¾ete oznaèit blokovou oblast kopírování mezi textovým kurzorem a ukazatelem my¹i. Oznaèenou blokovou oblast kopírování lze upravit pomocí sekundárního tlaèítka my¹i.
+
+Výchozí nastavení kopírování z lineárního na blokové lze zmìnit v oknì Rùzné pøedvolby nebo Dal¹í parametry.
+
+////3270
+Lze také oznaèit jednotlivé slovo nebo øádek. Chcete-li oznaèit slovo na pozici kurzoru my¹i, klepnìte dvakrát primárním tlaèítkem my¹i. Chcete-li oznaèit celý øádek, ve kterém je umístìn kurzor my¹i, klepnìte tøikrát primárním tlaèítkem my¹i.
+
+Poznámka: Jedno èi dvojí klepnutí tlaèítkem my¹i na aktivní místo nemusí vést k oznaèení oblasti kopírování. Provedená akce v tomto pøípadì závisí na nastavení aktivních míst v oknì Rùzné pøedvolby (dal¹í informace najdete v èásti týkající se aktivních míst). 
+////5250
+Poznámka: Funkci kopírování nelze zahájit na aktivním místì systému i5/OS (dal¹í informace najdete v èásti týkající se aktivních míst), v poli pro výbìr relace 3270, v pruhu nabídky, v rozbalovací nabídce, na tlaèítku ani na posouvacím pruhu. Kromì toho, v nìkterých aplikacích systému i5/OS mù¾e být primární tlaèítko my¹i naprogramováno pro provádìní nìkteré funkce aplikace namísto funkce kopírování.
+
+////9999
+Poznámka: Není-li zobrazena volba nabídky Upravit, lze ji zpøístupnit pomocí programu Nastavení emulátoru IBM 3270.
+
+Postup pøi vlo¾ení dat do této nebo do jiné relace je popsán v èásti Vlo¾ení.
+
+K dispozici je také funkce kopírování pomocí klávesnice: data urèená ke kopírování lze oznaèit stisknutím a podr¾ením klávesy Shift, stisknutím primárního tlaèítka my¹i (klávesa Shift mù¾e ji¾ být uvolnìna) a pøesunutím ukazatele s následným uvolnìním tlaèítka my¹i. Oznaèená data jsou automaticky zkopírována do schránky. Blok dat urèený ke kopírování lze pomocí klávesnice oznaèit stisknutím a podr¾ením klávesy Shift, stisknutím/uvolnìním/stisknutím primárního tlaèítka my¹i (s rychlostí dvojího klepnutí; klávesa Shift mù¾e ji¾ být uvolnìna) a pøesunutím ukazatele my¹i s následným uvolnìním tlaèítka my¹i. Oznaèenou oblast urèenou ke kopírování lze upravit pomocí sekundárního tlaèítka my¹i (nové zkopírování oblasti).
+
+++++"Vyjmutí"
+Data v relaci 3270 lze ze vstupního pole vyjmout (odstranit) a zkopírovat do 'schránky'. Vyjmutá data lze poté vlo¾it do této relace 3270, do jiné relace 3270 nebo do jiné aplikace.
+
+Data, která mají být zkopírována a poté odstranìna, je tøeba nejprve oznaèit umístìním ukazatele my¹i na první znak, pøeta¾ením ukazatele my¹i na poslední znak se stisknutým primárním (obvykle levým) tlaèítkem my¹i a následným uvolnìním tlaèítka. Poté výbìrem volby Vyjmout v nabídce Upravit odstraòte pùvodní text a pøeneste kopii dat do vyrovnávací pamìti (schránky). Oblast pro vyjmutí lze upravit stisknutím sekundárního (obvykle pravého) tlaèítka my¹i.
+
+Postup pøi vlo¾ení dat v této nebo v jiné relaci je popsán v èásti Vlo¾ení.
+
+Postup pøi kopírování dat je popsán v èásti Kopírování. Funkce kopírování podporuje dal¹í èinnosti, jako je napøíklad blokové kopírování (kopírování obdélníkové oblasti).
+
+++++"Soubory výchozího mapování barev"
+Výchozí barva pozadí pro relace 3270 je èerná. Barvy pou¾ité v relacích 3270 lze zmìnit pomocí programu Mapování barev (pokud vlastníte potøebná oprávnìní). I kdy¾ nevlastníte oprávnìní pro pou¾ití programu Mapování barev, mù¾ete pou¾ít výchozí barevné schéma.
+
+++++"Soubory standardního mapování klávesnice"
+Pomocí souboru standardního mapování klávesnice mù¾ete zmìnit akce pro klávesy na klávesnici, i kdy¾ nevlastníte oprávnìní pro pou¾ití programu Mapování klávesnice.
+
+++++"Soubory výchozí pomocné klávesnice"
+I kdy¾ nevlastníte oprávnìní pro pou¾ití programu Pøizpùsobení pomocné klávesnice 3270, mù¾ete pou¾ít soubory výchozí rozevírací nebo rozbalovací pomocné klávesnice.
+
+++++"Výchozí soubory pøehrávání"
+I kdy¾ nevlastníte oprávnìní pro pou¾ití programu Záznam 3270, mù¾ete pracovat s výchozími soubory záznamu/pøehrávání.
+
+Poznámka: Podporovány jsou soubory pøehrávání s automatickým pøihlá¹ením (dal¹í informace najdete v tématu Automatické pøehrávání).
+
+////5250
+++++"Název displeje (relace 3270)"
+////In the paragraph below, "-DISPLAY_NAME" must not be translated.
+V programu Nastavení emulátoru IBM 3270 lze zadat název virtuálního displeje pro relace 3270: vyberte relaci a klepnìte na volbu Pøipojení->Upravit. Klepnìte na volbu Roz¹íøené pøipojení 3270 a v poli Dal¹í parametry zadejte pøedvolbu -DISPLAY_NAME následovaný mezerou a parametrem (parametr je popsán dále). U pøedvolby -DISPLAY_NAME i u parametru jsou rozli¹ována malá a velká písmena.
+
+////In the sentence below, "-DISPLAY_NAME" must not be translated.
+Pøedvolba -DISPLAY_NAME umo¾òuje také øídit poèet relací 3270, které lze spustit v cílovém systému i5/OS. Cílový systém i5/OS musí být na úrovni verze 3/vydání 2, verze 3/vydání 7, verze 4/vydání 1 nebo novìj¹í.
+
+////This paragraph moved up from later in this topic and the 2 item added.
+Pro názvy displeje systému i5/OS platí následující pravidla:
+
+- Ka¾dá aktivní relace 3270 musí mít jedineèný název relace (název virtuálního displeje).
+
+- Délka názvù displeje musí být v rozsahu 2 a¾ 10 znakù.
+
+- Prvním znakem musí být abecední znak.
+
+- Lze pou¾ít abecední a èíselné znaky, znak teèky a znak podtr¾ítka.
+
+- V¹echny abecední znaky musí být zapsány velkými písmeny.
+
+Existuje 9 typù parametrù názvu displeje. Prvních 7 typù názvù se vztahuje k u¾ivateli bez ohledu na pou¾itý terminál. Poslední 2 typy názvù jsou asociovány se specifickým terminálem.
+
+////In the paragraph below, "XXXXXX" must not be translated.
+1) XXXXXX, kde XXXXXX je název pro relaci 3270 o délce 2 a¾ 10 znakù. U¾ivatel je omezen na jedinou relaci.
+
+////In the paragraph below, "XXXXXX+n", "XXXXXX", "n", "JUAN+4", 
+////"JUAN1", "JUAN2", "JUAN3", and "JUAN4" must not be translated.
+2) XXXXXX+n, kde XXXXXX je název relace 3270 o délce 1 a¾ 9 znakù. U¾ivatel je omezen na n relací. Hodnota n je èíslo v rozsahu 2 a¾ 9. Pøíklad: Parametr JUAN+4 umo¾ní u¾ivateli spustit ètyøi relace 3270, pøièem¾ první z nich se bude jmenovat JUAN1, druhá JUAN2, tøetí JUAN3 a ètvrtá JUAN4.
+
+3) "XXXXX YYYYYYYY ZZZZ" je seznam mo¾ných názvù displeje oddìlených mezerou. Poèáteèní a koncové uvozovky jsou povinné. Délka ka¾dého názvu musí být v rozsahu 2 a¾ 10 znakù. Maximální poèet názvù je urèen velikostí pole Dal¹í parametry v programu Nastavení emulátoru IBM 3270.
+
+////In the paragraph below, "USE_USER_ID" must not be translated.
+4) Parametr USE_USER_ID umo¾òuje u¾ivateli spustit jednu relaci 3270, pøièem¾ název této relace je shodný s ID terminálu daného u¾ivatele (2 a¾ 10 znakù) nebo s ID u¾ivatele relace 3270 konfigurovaným v programu Nastavení emulátoru IBM 3270.
+
+////In the paragraph below, "USE_USER_ID+n", "n", "USE_USER_ID+4",
+////"JUAN", "JUAN1", "JUAN2", "JUAN3", and "JUAN4" must not be translated.
+5) Parametr USE_USER_ID+n umo¾òuje u¾ivateli spustit n relací 3270, pøièem¾ název relace je shodný s ID terminálu u¾ivatele (nebo s ID u¾ivatele relace 3270 konfigurovaným v programu Nastavení emulátoru IBM 3270) s pøipojeným èíslem n na jeho konec. Hodnota n je èíslo v rozsahu 2 a¾ 9. Pøíklad: Parametr USE_USER_ID+4 spolu s ID u¾ivatele JUAN umo¾ní názvy relací JUAN1, JUAN2, JUAN3 a JUAN4. Poznámka: Pokud ID u¾ivatele obsahuje 10 znakù, bude poslední znak nahrazen èíslem n.
+
+////In the paragraph below, "USE_USER_ID+99" must not be translated.
+Je podporováno také zadání názvu USE_USER_ID+99 (èíslo 99 je povinné). Tato volba umo¾òuje více u¾ivatelùm sdílet shodné ID u¾ivatele. Lze spustit a¾ 99 relací 3270. S ohledem na výkon je v¹ak doporuèeným poètem 40 relací 3270 èi ménì. Èísla relací v rozsahu 1 a¾ 99 jsou vybrána náhodnì a jsou pøipojena k ID u¾ivatele. Pokud ID u¾ivatele obsahuje 9 znakù, bude poslední znak pøed pøipojením jednociferného èi dvouciferného èísla odstranìn. V pøípadì ID u¾ivatele s 10 znaky budou odstranìny dva znaky.
+
+////In the paragraph below, "USE_USER_ID+999" must not be translated.
+Je podporováno také zadání názvu USE_USER_ID+999 (èíslo 999 je povinné). Lze spustit a¾ 999 relací 3270. Èísla relací v rozsahu 1 a¾ 999 jsou vybrána náhodnì a jsou pøipojena k ID u¾ivatele. Pokud ID u¾ivatele obsahuje 8 znakù, bude poslední znak pøed pøipojením jednociferného a¾ tøíciferného èísla odstranìn. V pøípadì ID u¾ivatele s 9 znaky budou odstranìny dva znaky a v pøípadì desetiznakového ID u¾ivatele budou odstranìny tøi znaky.
+
+////In the paragraph below, "USE_USER_ID", "DSP", "JUAN", 
+////"DSPJUAN" must not be translated.
+6) Dal¹í variací názvu USE_USER_ID je název typu text+USE_USER_ID. Hodnota 'text' oznaèuje znaky pøedcházející ID u¾ivatele. Pøíklad: Pøi zadání parametru DSP+USE_USER_ID spolu s ID u¾ivatele JUAN bude vytvoøen název relace DSPJUAN. Délka textu mù¾e být 1 a¾ 8 znakù.
+
+////In the paragraph below, "USE_USER_ID+n" and "n" must not be translated.
+7) Podporován je také typ názvù text+USE_USER_ID+n. Hodnota n je èíslo v rozsahu 2 a¾ 9.
+
+////In the paragraph below, "USE_USER_ID+99" and "USE_USER_ID+999" must not be translated.
+Dále jsou podporovány typy názvù text+USE_USER_ID+99 a text+USE_USER_ID+999. Dal¹í informace najdete v èásti týkající se pátého typu názvù displeje.
+
+////In the paragraph below, "USE_USER_ID" must not be translated.
+Podporovány jsou také typy názvù USE_USER_ID+text, USE_USER_ID+text+n, USE_USER_ID+text+99 a USE_USER_ID+text+999 (viz vý¹e uvedené typy názvù displeje 6 a 7). Text nesmí zaèínat èíslicí.
+
+////In the paragraph below, "USE_HOST_NAME" must not be translated.
+8) Parametr USE_HOST_NAME umo¾òuje u¾ivatelùm spustit jednu relaci 3270, pøièem¾ názvem relace je název hostitele TCP/IP terminálu. Název hostitele je naèten ze serveru DNS (Domain Name Server) pøi pøihlá¹ení terminálu. Emulátor 3270 pøevede znaky malých písmen na velká písmena. Pokud délka názvu hostitelského systému pøekroèí 10 znakù, bude název relace zkrácen od konce ke znaku teèky (podle potøeby). Pøíklad: Terminálu s názvem hostitele ns23.newyork.ibm.com bude odpovídat název
+relace NS23.
+
+////In the paragraph below "USE_HOST_NAME+n" and "n" must not be translated.
+9) Podporován je také typ názvù USE_HOST_NAME+n. Hodnota n je èíslo v rozsahu 2 a¾ 9.
+
+////In the paragraph below, "USE_MAC_ADDRESS", "T", "E", "X",
+////"00.00.E5.68.D5.99", and "TE568D599" must not be translated.
+////10) Parametr USE_MAC_ADDRESS umo¾òuje u¾ivatelùm spustit jednu relaci 3270, pøièem¾ název relace zaèíná abecedním znakem oznaèujícím typ komunikaèní karty (T - token ring nebo E - Ethernet) následovaným ni¾¹ími ètyømi bajty adresy MAC. Pøíklad: Pøi pou¾ití parametru USE_MAC_ADDRESS s kartou token ring a adresou MAC 00.00.E5.68.D5.99 bude vytvoøen název relace TE568D599.
+
+////In the paragraph below, "USE_MAC_ADDRESS+n", "n", "E", 
+////"USE_MAC_ADDRESS+3", "00.00.E5.68.D5.99", "TE568D5991","TE568D5992", and "TE568D5993" must not be translated.
+////11) Parametr USE_MAC_ADDRESS+n umo¾òuje u¾ivatelùm spustit n relací 3270, pøièem¾ název relace je tvoøen vý¹e popsaným zpùsobem, ale s pøipojenou hodnotou n. Hodnota n je èíslo v rozsahu 2 a¾ 9. Pøíklad: Pøi pou¾ití parametru USE_MAC_ADDRESS+3 s kartou token ring a adresou MAC 00.00.E5.68.D5.99 budou povoleny názvy relace TE568D5991, TE568D5992 a TE568D5993.
+////3270
+++++"Název displeje (Název LU 3270)"
+////In the paragraph below, "-DISPLAY_NAME" must not be translated.
+V programu Nastavení emulátoru IBM 3270 lze zadat název displeje LU pro relace 3270: vyberte relaci a klepnìte na volbu Pøipojení->Upravit. Klepnìte na volbu Roz¹íøené pøipojení 3270 a v poli Dal¹í parametry zadejte pøedvolbu -DISPLAY_NAME následovanou mezerou a jedním parametrem (tento parametr je popsán dále). U pøedvolby -DISPLAY_NAME i u parametru jsou rozli¹ována malá a velká písmena.
+
+Poznámka: Chcete-li zadávat názvy displeje LU pro relace 3270, musí být na serveru konfigurováno roz¹íøení TN3270 (TN3270E).
+
+////In the sentence below, "-DISPLAY_NAME" must not be translated.
+Pøedvolba -DISPLAY_NAME také øídí poèet relací 3270, které lze spustit v cílovém systému System/390.
+
+Pro názvy displeje systému System/390 platí následující pravidla:
+
+- Ka¾dá aktivní relace 3270 musí mít jedineèný název relace (název virtuálního displeje).
+
+- Délka názvù displeje musí být v rozsahu 2 a¾ 8 znakù.
+
+- Prvním znakem musí být abecední znak, znak @, # nebo $.
+
+- Lze pou¾ít abecední a èíselné znaky a znaky @, # a $.
+
+- V¹echny abecední znaky musí být zapsány velkými písmeny.
+
+Existuje 7 typù parametrù názvu displeje. Prvních 5 typù názvù se vztahuje k u¾ivateli bez ohledu na pou¾itý terminál. Poslední 2 typy názvù jsou asociovány se specifickým terminálem.
+
+////In the paragraph below, "XXXXXX" must not be translated.
+1) XXXXXX, kde XXXXXX je název pro relaci 3270 o délce 2 a¾ 8 znakù. U¾ivatel je omezen na jedinou relaci.
+
+////In the paragraph below, "XXXXXX+n", "XXXXXX", "n", "JUAN+3", 
+////"JUAN1", "JUAN2", and "JUAN3" must not be translated.
+2) XXXXXX+n, kde XXXXXX je název relace 3270 o délce 1 a¾ 7 znakù. U¾ivatel je omezen na n relací. Hodnota n je èíslo v rozsahu 2 a¾ 9. Pøíklad: Parametr JUAN+3 umo¾ní u¾ivateli spustit tøi relace 3270, pøièem¾ první z nich se bude jmenovat JUAN1, druhá JUAN2 a tøetí JUAN3.
+
+3) "XXXXX YYYYYYYY ZZZZ" je seznam mo¾ných názvù displeje oddìlených mezerou. Poèáteèní a koncové uvozovky jsou povinné. Délka ka¾dého názvu musí být v rozsahu 2 a¾ 8 znakù. Maximální poèet názvù je urèen velikostí pole Dal¹í parametry v programu Nastavení emulátoru IBM 3270.
+
+////In the paragraph below, "USE_USER_ID" must not be translated.
+4) Parametr USE_USER_ID umo¾òuje u¾ivateli spustit jednu relaci 3270, pøièem¾ název této relace je shodný s ID daného u¾ivatele (2 a¾ 8 znakù) nebo s ID u¾ivatele relace 3270 konfigurovaným v programu Nastavení emulátoru IBM 3270.
+
+////In the paragraph below, "USE_USER_ID+n", "n", "USE_USER_ID+3",
+////"JUAN", "JUAN1", "JUAN2", and "JUAN3" must not be translated.
+5) Parametr USE_USER_ID+n umo¾òuje u¾ivateli spustit n relací 3270, pøièem¾ název relace je tvoøen ID u¾ivatele (s délkou omezenou na 7 znakù) s pøipojeným èíslem n na jeho konec. Hodnota n je èíslo v rozsahu 2 a¾ 9. Pøíklad: Parametr USE_USER_ID+3 spolu s ID u¾ivatele JUAN umo¾ní názvy relací JUAN1, JUAN2 a JUAN3.
+
+////In the paragraph below, "USE_HOST_NAME" must not be translated.
+6) Parametr USE_HOST_NAME umo¾òuje u¾ivatelùm spustit jednu relaci 3270, pøièem¾ názvem relace je název hostitele TCP/IP
+terminálu. Název hostitele je naèten ze serveru DNS (Domain Name Server) pøi pøihlá¹ení terminálu. Emulátor 3270 pøevede znaky malých písmen na velká písmena. Pokud délka názvu hostitelského systému pøekroèí 8 znakù, bude název relace zkrácen
+od konce ke znaku teèky (podle potøeby). Pøíklad: Terminálu s názvem hostitele ns23.newyork.ibm.com bude odpovídat název
+relace NS23.
+
+////In the paragraph below "USE_HOST_NAME+n" and "n" must not be translated.
+7) Podporován je také typ názvù USE_HOST_NAME+n. Hodnota n je èíslo v rozsahu 2 a¾ 9.
+
+////In the paragraph below, "USE_MAC_ADDRESS", "T", "E",
+////"00.00.E5.68.D5.99", and "T568D599" must not be translated.
+////8) Parametr USE_MAC_ADDRESS umo¾òuje u¾ivatelùm spustit jednu relaci 3270, pøièem¾ název relace zaèíná abecedním znakem oznaèujícím typ komunikaèní karty (T - token ring nebo E - Ethernet) následovaným ni¾¹ími tøemi a pùl bajtu adresy MAC. Pøíklad: Pøi pou¾ití parametru USE_MAC_ADDRESS s kartou token ring a adresou MAC 00.00.E5.68.D5.99 bude vytvoøen název relace T568D599.
+
+////In the paragraph below, "USE_MAC_ADDRESS+n", "n", 
+////"USE_MAC_ADDRESS+2", "00.00.E5.68.D5.99", "T68D5991"
+////and "T68D5992" must not be translated.
+////9) Parametr USE_MAC_ADDRESS+n umo¾òuje u¾ivatelùm spustit n relací 3270, pøièem¾ název relace je tvoøen pomocí ni¾¹ích tøí bajtù adresy MAC a pøipojené hodnoty n. Hodnota n je èíslo v rozsahu 2 a¾ 9. Pøíklad: Pøi pou¾ití parametru
+USE_MAC_ADDRESS+2 s kartou token ring a adresou MAC 00.00.E5.68.D5.99 bude mo¾né pou¾ít názvy relace T68D5991 a T68D5992.
+////9999
+
+++++"Umístìní klávesy Enter"
+////5250
+Volba Rùzné pøedvolby umo¾òuje pøenést funkci klávesy Enter na pozici pravé klávesy Ctrl. 
+
+////3270
+Pomocí volby Rùzné pøedvolby a programu Nastavení emulátoru IBM 3270 lze pøesunout funkci klávesy Enter na pozici pravé klávesy Ctrl. 
+
+////9999
+Výchozí umístìní kláves lze najít v èásti Posloupnosti kláves. 
+
+////Do not use the Euro character itself in the help text below. For this release, it will not display in the help text viewer because ASCII code page 819 is used.
+++++"Mìnový symbol eura"
+Mìnový symbol eura je emulátorem 3270 podporován v následujících jazycích: dán¹tina, holand¹tina, belgická holand¹tina, nìmèina, ¹výcarská nìmèina, britská angliètina, americká angliètina, fin¹tina, francouz¹tina, belgická francouz¹tina, kanadská francouz¹tina, ¹výcarská francouz¹tina, ital¹tina, ¹výcarská ital¹tina, nor¹tina, portugal¹tina, brazilská portugal¹tina, ¹panìl¹tina, latinsko-americká ¹panìl¹tina a ¹véd¹tina.
+
+////In the paragraph below, "$LANG" and "@euro" must not be translated.
+Emulátor pou¾ívá jazykové prostøedí urèené systémovou promìnnou prostøedí $LANG.  Pøidáním hodnoty "@euro" do promìnné $LANG lze povolit pou¾ití znaku eura (napøíklad de_DE@euro).
+
+////In the paragraph below, "-EURO" and "-NOEURO" must not be translated.
+Poznámka: V pøípadì potøeby mohou relace emulátoru 3270 jazykové nastavení potlaèit. V programu Nastavení emulátoru IBM 3270 vyberte relaci a klepnìte na volbu Pøipojení->Upravit. Klepnìte na volbu Roz¹íøené pøipojení 3270 a v poli Dal¹í parametry zadejte parametr -EURO (povolit) nebo -NOEURO (zakázat). U parametrù -EURO a -NOEURO jsou rozli¹ována malá a velká písmena.
+
+++++"Ukonèit 3270"
+Touto volbou lze ukonèit relaci 3270.
+
+////5250
+++++"Umístìní klávesy Field Exit"
+Volba Rùzné pøedvolby umo¾òuje pøenést funkci kláves Enter a Field Exit na pozice kláves Ctrl a Enter. 
+
+Výchozí umístìní kláves lze najít v èásti Posloupnosti kláves.
+////9999
+
+++++"Písma"
+Písmo relace 3270 lze zmìnit pomocí rozbalovací nabídky nebo pøeta¾ením okrajù okna nebo rohù okna relace 3270 (pomocí my¹i).
+
+V programu Nastavení emulátoru IBM 3270 lze nastavit poèáteèní umístìní a velikost okna relace 3270 (emulátor 3270 mù¾e výslednou velikost okna pøizpùsobit pou¾itému písmu).
+
+////3270
+++++"Grafika"
+V programu Nastavení emulátoru IBM 3270 lze pro relaci 3270 aktivovat grafickou podporu GDDM. Na panelu Roz¹íøené pøipojení emulátoru 3270 (volba Pøipojení-> Upravit, poté Roz¹íøené pøipojení emulátoru 3270) mù¾ete povolit nebo zakázat grafickou podporu pro jednotlivé relace. Pomocí volby Pøedvolby 3270 mù¾ete povolit grafiku pro v¹echny relace 3270. Je-li grafická podpora aktivní, bude v pravé èásti stavového øádku zobrazen grafický symbol.
+
+Poznámka: Grafická podpora GDDM vy¾aduje v porovnání s pouze textovými relacemi 3270 více pamìti poèítaèe (pøibli¾nì 0,5 MB na jednu relaci). V závislosti na konfiguraci poèítaèe mù¾e být nìkdy výhodné spou¹tìt grafickou podporu pouze v pøípadì potøeby. 
+////9999
+
+++++"Rychlost psaní pøi stisknuté klávese"
+Emulátor neobsahuje ¾ádnou mo¾nost nastavení rychlosti, s jakou jsou zpracovávány klávesové úhozy pøi podr¾ení stisknuté klávesy. Tato hodnota bude záviset na pou¾ívaném operaèním systému a bude pravdìpodobnì stejná v celém systému.
+
+++++"Aktivní místa"
+////5250
+Pomocí my¹i lze procházet nabídky aplikace klepnutím na aktivní místa. V oknì Rùzné pøedvolby mù¾ete aktivní místa zakázat nebo povolit jejich aktivaci jedním èi dvojím klepnutím primárního tlaèítka my¹i. Jsou podporovány následující funkce aktivních míst.
+////3270
+Pomocí my¹i lze procházet nabídky aplikace klepnutím na aktivní místa (nìkdy té¾ oznaèované jako funkce automatické akce). V oknì Rùzné pøedvolby mù¾ete aktivní místa zakázat nebo povolit jejich aktivaci jedním èi dvojím klepnutím primárního tlaèítka my¹i. Jsou podporovány následující funkce aktivních míst.
+////9999
+
+Pøi klepnutí primárním (obvykle levým) tlaèítkem my¹i na text funkèní klávesy bude emulováno stisknutí této klávesy (napøíklad "F3=Konec").
+
+////5250
+Pøi klepnutí primárním tlaèítkem my¹i na rozpoznané aktivní místo nabídky bude emulováno stisknutí èísla nabídky a následné stisknutí klávesy Enter (napøíklad "1. U¾ivatelské úlohy").
+
+Pøi klepnutí primárním tlaèítkem my¹i na volbu Více... bude zobrazení dat posunuto dále. Pomocí volby Konec lze zobrazení dat posunout smìrem nahoru. Pøi klepnutí sekundárním tlaèítkem my¹i na volbu Více... nebo na volbu Konec bude zobrazení dat posunuto smìrem nahoru. 
+
+V nìkterých pøípadech je k dispozici volba Více -/+. Pøi klepnutí primárním tlaèítkem my¹i na volbu "-" bude zobrazení dat posunuto smìrem nahoru. Pøi klepnutí primárním tlaèítkem my¹i na volbu "+" bude zobrazení dat posunuto dále.
+
+Klávesu Enter lze emulovat dvojím klepnutím primárním tlaèítkem my¹i. Pøi prvním klepnutí bude umístìn kurzor a pøi druhém klepnutí bude aktivována klávesa Enter.
+
+Chybu operátora (obvykle uvedenou v dolní èásti okna relace 3270 jako dùsledek chybného klávesového úhozu) lze resetovat klepnutím primárním tlaèítkem my¹i na chybovém øádku.
+////3270
+Klepnutím primárním tlaèítkem my¹i na volbu PA1, PA2 nebo PA3 lze emulovat stisknutí pøíslu¹né klávesy.
+////9999
+
+Výchozí akcí primárního tlaèítka my¹i je umístìní textového kurzoru.
+
+Ve zbývající èásti tohoto oddílu jsou uvedeny podrobné údaje o funkcích aktivních míst.
+
+////5250
+Pøi uzamknuté klávesnici a pøi chybových stavech operátora jsou události my¹i obvykle ignorovány. Výjimkou je klepnutí primárním tlaèítkem my¹i na chybový øádek, pøi nìm¾ je resetována chyba operátora.
+
+Pro aplikace v systému i5/OS lze my¹ naprogramovat tak, ¾e události budou navraceny aplikacím systému i5/OS. Tyto operace mají vy¹¹í prioritu ne¾ funkce aktivních míst.
+
+Podrobnosti k emulaci funkèních kláves: primárním tlaèítkem my¹i mù¾ete klepnout kdekoli v rámci rozpoznaného textu funkèních kláves (napøíklad "F23=Nastavení poèáteèní nabídky"). Rozpoznávané formáty pro funkèní klávesy jsou následující: 
+
+- "Fx=", kde x je nìkterá èíslice v rozsahu 1 a¾ 9.
+- "Fyz=", kde y je èíslice 0, 1 nebo 2.  Pokud je y èíslice 0, mù¾e z zastupovat nìkterou z èíslic v rozsahu 1 a¾ 9. Pokud je y èíslice 1, mù¾e z zastupovat nìkterou z èíslic v rozsahu 0 a¾ 9. Pokud je y èíslice 2, mù¾e z zastupovat nìkterou z èíslic v rozsahu 0 a¾ 4.
+- Formát "PFx=" je podporován obdobnì jako formát "Fx=".
+- Formát "PFyz=" je podporován obdobnì jako formát "Fyz=".
+
+Text funkèních kláves není rozpoznáván ve vstupních polích.
+
+Podrobnosti k emulaci aktivních míst nabídek: primárním tlaèítkem my¹i mù¾ete klepnout kdekoli v rámci rozpoznaného textu polo¾ek nabídek (napøíklad "1. U¾ivatelské úlohy"). Charakteristika rozpoznaného textu polo¾ky nabídky je následující:
+
+- Formát textu polo¾ky nabídky je "xxn.yzzzzzzzz", kde znak x zastupuje mezeru, hodnotu Null nebo atribut zobrazení. Hodnotou n mù¾e být jednociferné a¾ pìticiferné èíslo s èíslicemi 0 a¾ 9. Znak y zastupuje mezeru nebo hodnotu Null. Znaky zz pøedstavují libovolné znaky jiné ne¾ rozpoznaný vzor xx.
+- Je povolen jeden znak "x" (pøi umístìní znaku "x" ve sloupci 1).
+- Polo¾ka nabídky mù¾e být rozpoznána a¾ do konce øádku.
+
+Text polo¾ek nabídek není rozpoznáván ve vstupních polích.
+
+Je-li rozpoznáno platné aktivní místo nabídky, bude do platného vstupního pole automaticky zadáno jednociferné a¾ pìticiferné èíslo. Nachází-li se kurzor aktuálnì v platném vstupním poli, bude zadáno èíslo a zbytek vstupního pole bude vyplnìn hodnotami Null. Je emulována klávesa Enter. Nenachází-li se kurzor aktuálnì v platném vstupním poli, bude vyhledána platná polo¾ka.
+////3270
+Podrobnosti k emulaci funkèních kláves: primárním tlaèítkem my¹i mù¾ete klepnout kdekoli v rámci rozpoznaného textu funkèních kláves (napøíklad "F23=Nastavení poèáteèní nabídky"). Rozpoznávané formáty pro funkèní klávesy jsou následující: 
+
+- "Fx=", kde x je nìkterá èíslice v rozsahu 1 a¾ 9.
+- "Fyz=", kde y je èíslice 0, 1 nebo 2.  Pokud je y èíslice 0, mù¾e z zastupovat nìkterou z èíslic v rozsahu 1 a¾ 9. Pokud je y èíslice 1, mù¾e z zastupovat nìkterou z èíslic v rozsahu 0 a¾ 9. Pokud je y èíslice 2, mù¾e z zastupovat nìkterou z èíslic v rozsahu 0 a¾ 4.
+- Formát "PFx=" je podporován obdobnì jako formát "Fx=".
+- Formát "PFyz=" je podporován obdobnì jako formát "Fyz=".
+- Formát "x" je podporován obdobnì jako formát "Fx=".
+- Formát "yz" je podporován obdobnì jako formát "Fyz=".
+
+Text funkèních kláves není rozpoznáván ve vstupních polích.
+
+////9999
+////5250
+++++"Zobrazení obrázkù/faxu"
+Emulátor 3270 podporuje zobrazení a tisk obrázkù a faxu. Podporované formáty/algoritmy jsou popsány dále. Poznámka: Má-li emulátor 3270 zobrazit obrázek nebo fax, je nutné spustit aplikaci systému i5/OS, která podporuje obrázky, resp. fax. 
+
+Posunování obrázku/faxu: Obrázek/fax mù¾ete posunovat my¹í pomocí lokálního posouvacího pruhu pro obrázky/faxy. Jinou mo¾ností posouvání dat obrázku/faxu je klepnutí na obrázek/fax primárním (obvykle levým) tlaèítkem my¹i a následným posouváním ukazatele my¹i. Data obrázku/faxu lze posouvat také prostøednictvím klávesnice pomocí klávesy Alt v kombinaci s nìkterou z následujících kláves numerické klávesnice: '2', '4', '6' a '8'.
+
+Zmìna mìøítka obrázku/faxu: Pou¾ívaná aplikace pro zpracování obrázkù/faxù pravdìpodobnì obsahuje tlaèítko pro zmìnu mìøítka. Mìøítko obrázku/faxu lze upravit také klepnutím sekundárním tlaèítkem my¹i do oblasti dat obrázku/faxu, pøesunutím ukazatele my¹i a následným uvolnìním tlaèítka my¹i. Data obrázku/faxu v rámci takto vyznaèeného rámeèku budou zvìt¹ena. Chcete-li pøejít zpìt k pùvodní velikosti, klepnìte dvakrát sekundárním tlaèítkem my¹i.
+
+Aktivní podpora obrázkù/faxù je indikována grafickým symbolem v pravé èásti stavového øádku.
+
+Poznámka: Pøi zobrazení obrázku nebo faxu vy¾aduje emulátor 3270 v porovnání s relacemi 3270 bez obrázkù/faxù více pamìti poèítaèe. Pokud je nìkterý obrázek nebo fax pøíli¹ rozsáhlý a nelze jej zobrazit kvùli nedostatku dostupné pamìti v poèítaèi, bude zobrazeno dialogové okno s chybou.
+
+Informace týkající se tisku obrázku nebo faxu zobrazeného v relaci 3270 najdete v tématu Tisk obrazovky.
+
+Emulátor 3270 podporuje následující formáty obrázkù/faxù:
+
+1) Formát TIFF (TIFF je ochranná známka spoleènosti Aldus Corporation): Ve formátu TIFF je podporován v¾dy pouze jeden obrázek. Pokud nìkterý soubor TIFF obsahuje více obrázkù, musí systém i5/OS odeslat ka¾dý obrázek TIFF samostatnì. Podporovány jsou následující kompresní algoritmy TIFF:
+
+- Bez komprese
+- Kódování faxu RLE CCITT Group 3 (upravený Huffmanùv algoritmus)
+- Komprese faxu CCITT Group 3
+- Komprese faxu CCITT Group 4
+- Kódování RLE PackBits
+- Barevnì
+- Stupnì ¹edé
+
+2) Formát IOCA (pouze sada funkcí 10): Ve formátu IOCA je podporován v¾dy pouze jeden obrázek. Je podporováno následujících pìt kompresních algoritmù sady funkcí IOCA 10:
+
+- Algoritmus IBM MMR (Modified CCITT Modified Read)
+- Bez komprese
+- Kódování faxu RLE CCITT Group 3 (upravený Huffmanùv algoritmus)
+- Komprese faxu CCITT Group 3
+- Komprese faxu CCITT Group 4 
+
+3) Formát PCX: Jsou podporovány následující kompresní algoritmy:
+- Bez komprese
+- Kódování RLE
+- Barevnì
+
+4) JPEG barevnì/stupnì ¹edé (8 bitù) DCT se základní úrovní (roz¹íøená základní úroveò není podporována).
+
+5) Formát komprese samostatného faxu Group 3: Ètyøbajtová délka faxu Group 3, osm bajtù (obvykle zadána nulová hodnota) a fax s kompresí Group 3.
+////9999
+
+++++"Posloupnost kláves"
+////5250
+Nìkteré funkce klávesnice 3270 nejsou na klávesnicích typu PC k dispozici. Funkce klávesnice spolu s výchozími posloupnostmi kláves jsou uvedeny dále. Obrazovka editoru OV/400 obsahuje jedineèné funkce klávesnice, které jsou popsány v tématu Posloupnosti kláves editoru OV/400. Umístìní funkcí klávesnice 3270 lze na klávesnici zmìnit pomocí programu Pøemapování klávesnice 3270.
+
+////SORT  This line tells the viewer program to place the following information in alphabetical order when displaying this topic.
+Attention:  Esc
+                  
+Character Advance:  Shift + Backspace
+ 
+Character Backspace:  Backspace
+
+Clear:  Shift + Page Up
+
+Cursor Select:  Alt + Insert
+
+Dup:  Shift + Insert
+
+Enter:  Enter (také Shift + Enter) (V oknì Rùzné pøedvolby lze tuto klávesu zamìnit za klávesu Ctrl.)
+
+Erase End of Field:  Alt + Delete
+
+Erase Input:  Alt + End
+
+Roz¹íøené atributy zobrazení:  Alt + l (písmeno l)
+
+F13 - F24:  Shift + F1 - F12
+
+Fast Cursor Left:  Alt + Cursor Left
+
+Fast Cursor Right:  Alt + Cursor Right
+
+Field Exit:  + (na pravé stranì klávesnice, pokud se nenachází ve stavu Num Lock) (V oknì Rùzné pøedvolby lze tuto klávesu zamìnit za klávesu Ctrl nebo Enter.)
+
+Field Mark:  Shift + Home
+
+Field Minus:  - (na pravé stranì klávesnice, pokud se nenachází ve stavu Num Lock)
+
+Field Plus:  + (na pravé stranì klávesnice, pokud se nenachází ve stavu Num Lock) Poznámka: Field Exit a Field Plus provádìjí stejnou funkci.
+
+Help:  Scroll Lock
+
+Hex key:  Alt + 7 (numerická klávesa 7 umístìná nad abecedními klávesami)
+
+Image Scroll Down: Alt + '2' na numerické klávesnici
+
+Image Scroll Left: Alt + '4' na numerické klávesnici
+
+Image Scroll Right: Alt + '6' na numerické klávesnici
+
+Image Scroll Up: Alt + '8' na numerické klávesnici
+
+Screen Print: Shift + Print Screen (V oknì Rùzné pøedvolby lze povolit pou¾ití klávesy Screen Print bez klávesy Shift.)
+
+New Line:  Ctrl (V oknì Rùzné pøedvolby lze tuto klávesu zamìnit za klávesu Enter.)
+
+PA1:  Shift + Delete
+
+PA2:  Shift + End
+
+PA3:  Shift + Page Down
+
+Playback:  Alt + Page Up
+
+Record:  Alt + Home
+
+Reset:  Ctrl (na levé stranì klávesnice)
+
+Roll Down:  Page Up
+
+Roll Up:  Page Down
+
+Rule Line:  Alt + Page Down
+
+System Request:  Alt + Print Screen (Poznámka: Odeslání dat do systému i5/OS je tøeba potvrdit pomocí klávesy Enter.)
+
+Test Request:  Alt + Scroll Lock
+////SORTOFF  This line tells the viewer program to stop alphabetical ordering.
+
+////3270
+Nìkteré funkce klávesnice 3270 nejsou na klávesnicích typu PC k dispozici. Funkce klávesnice spolu s výchozími posloupnostmi kláves jsou uvedeny dále. Umístìní funkcí klávesnice 3270 lze na klávesnici zmìnit pomocí programu Pøemapování klávesnice 3270.
+
+////SORT  This line tells the viewer program to place the following information in alphabetical order when displaying this topic.
+Attention:  Shift + Esc
+
+Backward Kill Word:  Alt + Backspace 
+
+Backward Word:  Levá klávesa Ctrl + Cursor Left nebo Alt + b
+
+Clear:  Esc nebo Pause
+
+Dup:  Alt + End
+
+Enter:  Enter (V oknì Rùzné pøedvolby nebo pomocí nástroje IBM 3270 Nastavení emulátoru lze tuto klávesu zamìnit za pravou klávesu Ctrl.)
+
+Erase End of Field:  Levá klávesa Ctrl + End nebo levá klávesa Ctrl + k
+
+Erase Input:  Levá klávesa Ctrl + Delete
+
+F13 - F24:  Shift + F1 - F12
+
+Field Mark:  Shift + Home
+
+Forward Word:  Levá klávesa Ctrl + Cursor Right nebo Alt + f
+
+Kill Word:  Alt + d
+
+Screen Print: Shift + Print Screen (V oknì Rùzné pøedvolby lze povolit pou¾ití klávesy Screen Print bez klávesy Shift.)
+
+New Line:  Pravá klávesa Ctrl (V oknì Rùzné pøedvolby nebo pomocí nástroje IBM 3270 Nastavení emulátoru lze tuto klávesu zamìnit za klávesu Enter.)
+
+Menubar Focus:  Levá klávesa Ctrl + Cursor Up (pøepnutí fokusu kurzoru mezi pruhem nabídky emulátoru a hlavní textovou oblastí bez pou¾ití my¹i)
+
+PA1:  Print Screen, levá klávesa Ctrl + F1 nebo levá klávesa Ctrl + z
+
+PA2:  Scroll Lock, levá klávesa Ctrl + F2 nebo levá klávesa Ctrl + l (písmeno l)
+
+PA3:  Levá klávesa Ctrl + F3
+
+Playback:  Alt + Page Up
+
+Record:  Alt + Home
+
+Reset:  Alt + Esc nebo levá klávesa Ctrl + g
+
+Rule Line:  Alt + Page Down
+
+System Request:  Alt + Print Screen
+
+Unlock:  Levá klávesa Ctrl + u
+////SORTOFF  This line tells the viewer program to stop alphabetical ordering.
+////9999
+
+++++"Makra klávesnice"
+Pomocí maker klávesnice lze do relací 3270 snadno vlo¾it posloupnost znakù. Jednoduchá makra klávesnice (s men¹ím poètem znakù ne¾ pøibli¾nì 100) lze vytvoøit pomocí programu pøemapování klávesnice. Jednoduchá makra klávesnice lze pøiøadit také tlaèítkùm pomocné klávesnice.
+
+Pomocí programu Záznam/pøehrání lze vytváøet jednoduchá i slo¾itìj¹í makra klávesnice. Výsledný soubor pøehrávání lze spustit z rozbalovací nabídky emulátoru Pøehrát, pomocí posloupnosti kláves urèené v programu pøemapování klávesnice nebo pomocí tlaèítka pomocné klávesnice. Dal¹í informace najdete v tématu Pøehrávání.
+  
+++++"Pøemapování klávesnice"
+Program Pøemapování klávesnice 3270 umo¾òuje zmìnit akce pøiøazené klávesám v rámci relace 3270.
+
+Oprávnìní pro pou¾ití tohoto programu lze zmìnit pomocí programu Nastavení emulátoru IBM 3270. S ohledem na mo¾nost provedení nechtìných zmìn funkcí kláves v programu Pøemapování klávesnice, které by mohly vést k ne¾ádoucím výsledkùm, jsou pro program Pøemapování klávesnice 3270 k dispozici tøi úrovnì autorizace:
+
+1) Povoleno: U¾ivateli je povoleno pøemapovat klávesnici pro relace 3270.
+
+2) Zakázáno: U¾ivateli není povoleno pou¾ívat program Pøemapování klávesnice 3270. Volba s rozbalovací nabídkou Pøemapování klávesnice není k dispozici.
+
+3) Skryto: U¾ivateli není povoleno pou¾ívat program Pøemapování klávesnice 3270. Volba s rozbalovací nabídkou Pøemapování klávesnice není zobrazena.
+
+Program Pøemapování klávesnice 3270 obsahuje vlastní text nápovìdy. Podrobnìj¹í informace o programu Pøemapování klávesnice 3270 najdete v této nápovìdì.
+
+Poznámka: Program Pøemapování klávesnice není k dispozici pro monitory typu VGA. Monitory VGA umo¾òují pouze rozli¹ení s ni¾¹í hodnotou (640x480) a jde obvykle o star¹í monitory osobních poèítaèù.
+
+Pøi spu¹tìní relace 3270 vyhledá emulátor 3270 pro tuto relaci soubor mapování klávesnice. Pøitom musí souhlasit typ klávesnice. Soubor mapování klávesnice je urèen v¾dy pro jeden typ klávesnice (napøíklad pro klávesnici PC se 102 klávesami). Hledání probíhá podle následujícího poøadí. Pro relaci 3270 je pou¾it první nalezený soubor mapování klávesnice:
+
+//// $HOME/.iSeriesAccess/ibm3270/K should not be translated
+- Nejprve probíhá hledání souboru mapování klávesnice (oznaèeného parametrem -keyfile), který byl vytvoøen pomocí programu Pøemapování klávesnice (umístìní v adresáøi $HOME/.iSeriesAccess/ibm_3270/K).
+
+- Dále je hledán soubor mapování klávesnice specifický pro danou relaci a vytvoøený pomocí programu Pøemapování klávesnice.
+
+- Poté je hledán výchozí soubor mapování klávesnice vytvoøený pomocí programu Pøemapování klávesnice.
+
+- Není-li nalezen ¾ádný z uvedených souborù, bude emulátor 3270 pou¾ívat standardní akce klávesnice.
+
+++++"Jazyk relace 3270"
+Jazyk, ve kterém je zobrazen text nápovìdy tohoto emulátoru, polo¾ky pruhu nabídek/rozbalovacích nabídek a text dialogových oken závisí na nastaveném jazyku systémových zpráv.
+
+Výchozím nastavením jazyka relace 3270 je jazyk klávesnice nebo nastavení promìnné prostøedí LANG. Jazykem relace 3270 je mínìn jazyk dat 3270 v rámci hlavního okna 3270. Pro nìkteré, èi pøípadnì pro v¹echny relace 3270 lze oproti výchozímu jazyku relací 3270 nastavit  jiný jazyk.
+////3270
+
+Doporuèuje se zajistit korespondenci jazyka relace 3270 s primárním jazykem cílového systému System/390.
+////9999
+
+////In the paragraph below, "$LANG" and "@euro" must not be translated.
+Emulátor pou¾ívá jazykové prostøedí urèené systémovou promìnnou prostøedí $LANG.  Pøidáním hodnoty "@euro" do promìnné $LANG lze povolit pou¾ití znaku eura (napøíklad de_DE@euro).
+
+////In the paragraph below, "-LANGID" must not be translated.
+Pomocí volitelného parametru -LANGID lze jako jazyk relace 3270 nastavit jiný jazyk vzhledem k výchozímu jazyku relací 3270. Parametr -LANGID lze v programu Nastavení emulátoru IBM 3270 pou¾ívat následujícím zpùsobem. Vyberte po¾adovanou relaci a klepnìte na volbu Pøipojení-> Upravit. Klepnìte na volbu Roz¹íøené pøipojení 3270 a v poli Dal¹í parametry zadejte parametr -LANGID následovaný jednou mezerou a dal¹ím parametrem (tento parametr je popsán dále). U parametru -LANGID a u dal¹ího uvedeného parametru jsou rozli¹ována malá a velká písmena.
+
+////In the following line, "-LANGID" must not be translated.
+Za parametrem -LANGID musí následovat hodnota odpovídající po¾adovanému jazykovému prostøedí.  Pøíklad: Pøi pou¾ití parametru -LANGID en_US bude potlaèena hodnota klienta $LANG a budou pou¾ity hodnoty pro angliètinu, pøi pou¾ití parametru -LANGID es_ES budou pou¾ity hodnoty pro ¹panìl¹tinu.
+   
+Poznámka: U¾ivatel emulátoru IBM 3270 mù¾e pracovat s více relacemi 3270 v rùzných jazycích.
+
+////5250
+++++"Re¾im velké obrazovky: 27 na 132"
+V programu Nastavení emulátoru IBM 3270 (pøedvolby 3270) mù¾ete zakázat pou¾ití obrazovky s velikostí 27 øádkù na 132 sloupcù pro v¹echny vlastní relace 3270. 
+
+////In the paragraph below, "-wide disable" must not be translated.
+V programu Nastavení emulátoru IBM 3270 mù¾ete zakázat pou¾ití obrazovky o velikosti 27 øádkù na 132 sloupcù také pouze pro nìkteré z vlastních relací 3270. Akci lze provést následujícím zpùsobem: vyberte relaci a klepnìte na volbu Pøipojení-> Upravit. Klepnìte na volbu Roz¹íøené pøipojení 3270 a v poli Dal¹í parametry zadejte parametr -wide disable.
+
+Poznámka: U mnoha obrazovek systému i5/OS je pou¾ita velikost 24 øádkù na 80 sloupcù bez ohledu na nastavení volby velikosti 27 na 132. Pokud je v systému i5/OS pou¾ita velikost obrazovky 27 na 132, bude v oknì relace 3270 pravdìpodobnì zmìnìno písmo a okno bude pøemístìno. Tuto reakci lze upravit v oknì Rùzné pøedvolby.
+
+Poznámka: Star¹í monitory (VGA) obvykle zobrazení v re¾imu 27 øádkù na 132 sloupcù neumo¾òují. K tomu, aby daný monitor umo¾òoval zobrazení v re¾imu 27 øádkù na 132 sloupcù, musí být obvykle schopen poskytovat zobrazení s rozli¹ením 1024x768 nebo vy¹¹ím (a toto rozli¹ení musí být aktivováno). Zobrazení 27 øádkù na sloupcù 132 je pro monitory s rozli¹ením 800x600 k dispozici v re¾imu posuvu; pøitom musí být nastaven na hodnotu ENABLE jeden z dal¹ích parametrù: 27X132_IN_800X600.
+
+////9999
+////++++"My¹ pro praváky/leváky"
+////U klientù IBM Thin Client je my¹ ve výchozím nastavení urèena pro praváky. Primárním tlaèítkem my¹i je v tomto pøípadì levé tlaèítko. Primárním tlaèítkem my¹i urèené pro leváky je pravé tlaèítko. 
+
+////3270
+++++"Emulace svìtelného pera"
+V programu Pøemapování klávesnice 3270 lze emulovat svìtelné pero. Dal¹í informace najdete v tématu Emulace svìtelného pera v nápovìdì k programu pøemapování klávesnice.
+////9999
+
+++++"Maximalizace"
+Zobrazení okna relace 3270 lze maximalizovat na celou plochu obrazovky. Mezi bì¾ným a maximalizovaným zobrazením okna lze pøepínat pomocí tlaèítka se symbolem ètverce v pravém horním rohu.
+
+++++"Rùzné pøedvolby"
+////MIS This comment line is used by the help viewer program to find the Miscellaneous Preferences topic. This line belongs after the Miscellaneous Preferences topic (do not translate this comment line).
+V oknì Rùzné pøedvolby mù¾ete upravit rùzné pøedvolby pro relace 3270, napøíklad vzhled kurzoru, funkci klávesy Backspace nebo ovládací prvek vodicí èáry.
+
+Poznámka: V programu Nastavení emulátoru IBM 3270 lze pou¾ití okna Rùzné pøedvolby zakázat.
+
+V programu Nastavení emulátoru IBM 3270 lze nastavit výchozí hodnoty pøedvoleb. Dal¹í informace najdete v tématu Dal¹í parametry.
+
+V levé èásti okna Rùzné pøedvolby je uveden seznam pøedvoleb, které lze zmìnit. V daném okam¾iku je vybrána v¾dy jedna pøedvolba. 
+
+V pravé èásti okna Rùzné pøedvolby je uveden seznam mo¾ných hodnot, které lze pro vybranou pøedvolbu nastavit. Pøi zmìnì hodnoty pøedvolby jsou v¹echny relace emulátoru 3270 doèasnì aktualizovány podle novì nastavené hodnoty. Chcete-li napøíklad zmìnit styl kurzoru, staèí pouze vybrat hodnotu odpovídající jinému stylu kurzoru. Pokud pøedvolby vyberete pouze v levé èásti okna, pøedvolby nebudou zmìnìny.
+
+V dolní èásti okna Rùzné pøedvolby jsou umístìna ètyøi tlaèítka:
+
+1) Klepnutím na tlaèítko Ulo¾it mù¾ete v¹echny zmìnìné pøedvolby ulo¾it pro pozdìj¹í pou¾ití. Pøedvolby jsou ulo¾eny v pøíslu¹ném adresáøi u¾ivatele. 
+
+2) Klepnutím na tlaèítko Ukonèit mù¾ete zavøít okno Rùzné pøedvolby.
+
+3) Klepnutím na volbu Nastavit výchozí mù¾ete v¹echny pøedvolby obnovit zpìt na pùvodní hodnoty.
+
+4) Klepnutím na volbu Nápovìda mù¾ete zobrazit aktuální text nápovìdy.
+
+Hodnoty v oknì Rùzné pøedvolby jsou pro v¹echny relace daného u¾ivatele stejné.
+
+////5250
+Pøi zmìnì klávesy Enter/Ukonèení pole (klávesy Enter a Ctrl) nebo klávesy Print (klávesa Print Screen) nebude mo¾né tyto klávesy pøemapovat pomocí programu Pøemapování klávesnice 3270.
+////3270
+Pøi zmìnì klávesy Print (klávesa Print Screen) nebude mo¾né tuto klávesu pøemapovat pomocí programu Pøemapování klávesnice 3270.
+////9999
+
+++++"Funkce my¹i"
+////Pomocí my¹i lze ovládat mnoho funkcí klienta Thin Client.
+
+////Pomocí my¹i lze pøemis»ovat okna (klepnutím na titulek okna a jeho pøeta¾ením), mìnit velikost oken (pomocí rozbalovací nabídky Písma nebo pøeta¾ením okraje èi rohu okna) nebo mìnit uspoøádání oken.
+
+Pomocí my¹i lze také provádìt následující operace:
+
+- Pøistupovat k funkcím v pruzích nabídek a v rozbalovacích nabídkách.
+
+- Vyjímat, kopírovat a vkládat data: dal¹í informace najdete v tématech Vyjmutí, Kopírování a Vlo¾ení.
+
+- Aktivovat aktivní místa 3270: napøíklad výbìrem funkèních kláves (dal¹í informace lze najít v tématu Aktivní místa).
+
+- Zmìnit umístìní kurzoru (výchozí akce primárního tlaèítka my¹i, obvykle levého).
+
+////5250
+- Vybírat a pracovat s prvky roz¹íøeného u¾ivatelského rozhraní 3270 (napøíklad ovládání polí, tlaèítek èi posouvacích pruhù). 
+
+////9999
+++++"Rychlost my¹i"
+Samotný emulátor IBM 3270 neobsahuje ¾ádný ovládací prvek rychlosti my¹i (rychlost pohybu ukazatele my¹i vzhledem k fyzickému pohybu my¹i). 
+
+++++"Nová relace 3270"
+Tato rozbalovací nabídka umo¾òuje spustit dal¹í relace 3270. Je zobrazena výzva k zadání názvu hostitele. Jako výchozí hodnota je k dispozici název aktuálního hostitele. Názvem hostitele mù¾e být název (serveru názvù) nebo (èíselná) adresa IP
+po¾adovaného systému.
+
+////3270
+Pøi spu¹tìní nové relace 3270 prostøednictvím nabídky Pøíkaz bude zobrazeno nìkolik voleb pro zadání velikosti obrazovky. Emulátor 3270 podporuje následující typy terminálù a jim odpovídající velikosti obrazovky:
+
+  Mod 2 - 24 x 80
+  Mod 3 - 32 x 80 (výchozí)
+  Mod 4 - 43 x 80
+  Mod 5 - 27 x 132
+
+Poznámka: Jediným podporovaným re¾imem pro grafiku je re¾im 32 x 80.
+
+Není-li nìkterá z velikostí obrazovky v seznamu uvedena, znamená to, ¾e daný monitor (obvykle monitory star¹ích typù) neumo¾òuje zobrazení pøíslu¹ného re¾imu (nebo je pro tento monitor nastavena hodnota ni¾¹ího rozli¹ení). Poznámka: Je-li pro relaci nastavena velikost obrazovky, která pøesahuje mo¾nosti rozli¹ení monitoru, bude pou¾ita velikost obrazovky 24 x 80.
+
+////9999
+++++"Dal¹í parametry"
+V poli Dal¹í parametry na panelu Pøipojení emulátoru 3270 programu Nastavení emulátoru IBM 3270 lze nastavit parametry emulátoru: vyberte relaci a klepnìte na volbu Pøipojení-> Upravit. Klepnìte na volbu Roz¹íøené pøipojení 3270 a upravte parametry v poli Dal¹í parametry.
+
+Ka¾dému z tìchto dal¹ích parametrù musí pøedcházet znaménko minus ("-"). U tìchto parametrù jsou rozli¹ována velká a malá písmena. Pøi zadání více parametrù v poli Dal¹í parametry je tøeba tyto parametry oddìlit jednou mezerou. Mezi dal¹í parametry patøí následující parametry:
+
+//// For the rest of this topic, the parameters and values (in upper case) must not be translated.
+-TITLE_OPTION následovaný hodnotou parametru TEXT_AND_SESSION_ID (výchozí -- text názvu a ID relace), TEXT_ONLY (pouze text názvu), SESSION_ID_ONLY (pouze ID relace), TEXT_AND_HOST (text názvu a název hostitele) nebo TEXT_HOST_AND_SESSION_ID (text názvu, název hostitele a ID relace);
+
+-LANGID následovaný hodnotou jazyka pro danou relaci 3270 (napøíklad en_US odpovídá americké anglièitnì);
+
+-EURO a -NOEURO povolující èi zakazující pou¾ití symbolu eura pro danou relaci 3270;
+
+////In the following line, do not translate -playback).
+-PLAYBACK (èi -playback) následovaný názvem souboru (s rozli¹ením malých a velkých písmen) pro pøehrávání s automatickým pøihlá¹ením;
+
+-KEYPAD (èi -keypad) následovaný názvem souboru (s rozli¹ením malých a velkých písmen) pro rozevírací pomocnou klávesnici. Pomocná klávesnice bude zobrazena pøi spu¹tìní relace 3270;
+
+-KEYFILE následovaný názvem souboru mapování klávesnice (s rozli¹ením velkých a malých písmen). Pomocí parametru -KEYFILE lze modifikovat název výchozího souboru mapování klávesnice;
+
+-DISPLAY_NAME urèuje název dané relace 3270;
+
+-ICONIC urèuje, ¾e relace 3270 má být spu¹tìna s ikonou;
+
+////5250
+-STAND_ALONE urèuje, ¾e relace 5250 má být spu¹tìna jako samostatný proces namísto pøipojení k jiné relaci 5250; 
+
+-PORT následovaný èíslem portu systému i5/OS. Výchozí èíslo portu je 23. 
+////3270
+-PORT následovaný èíslem portu systému System/390. Výchozí èíslo portu je 23. 
+
+////5250
+++++"Funkce editoru OV/400"
+////OVE This comment line is used by the help viewer program to find the OV/400 Editor Function topic. This line belongs after the OV/400 Editor Function topic (do not translate this comment line).
+Program 3270 poskytuje funkce editoru OV/400 podobné terminálùm 3477, 3487 a 3488 InfoWindow II. Informace o posloupnostech kláves najdete v tématu Editor OV/400 - posloupnosti kláves. 
+////9999
+
+////5250
+++++"Editor OV/400 - posloupnosti kláves"
+Mnohé funkce editoru OV/400 nejsou na klávesnicích osobních poèítaèù typu PC oznaèeny. Funkce klávesnice spolu s výchozími posloupnostmi kláves jsou uvedeny dále. Umístìní funkcí klávesnice 3270 lze na klávesnici zmìnit pomocí programu Pøemapování klávesnice 3270.
+
+////SORT  This line tells the viewer program to place the following information in alphabetical order when displaying this topic.
+Begin Bold:  Alt + b
+
+Begin Underscore:  Alt + u
+
+Beginning of Line:  Shift + Cursor Left (¹ipka vlevo)
+
+Bottom of Page:  Shift + Cursor Down (¹ipka dolù)
+
+Carrier Return:  Alt + hlavní klávesa Enter na klávesnici (nikoli klávesa Enter na pravé stranì klávesnice)
+
+Center Text:  Alt + c
+
+Display Text Attributes:  Alt + i
+
+End Active Attribute:  Alt + j
+
+End Current Column:  Alt + d
+
+End of Line:  Shift + Cursor Right (¹ipka vpravo)
+
+Half Index Down:  Alt + h
+
+Half Index Up:  Alt + y
+
+Keyboard Change (Symbols):  Alt + a
+
+Next Stop Code:  Alt + n
+
+Page End:  Alt + p
+
+Required Carrier Return:  - nebo + (na pravé stranì klávesnice, pokud se nenachází ve stavu Num Lock)
+
+Required Space:  Bez výchozí posloupnosti kláves
+
+Required Tab:  Alt + t
+
+Stop Code Insert:  Alt + s
+
+Top of Page:  Shift + Cursor Up (¹ipka nahoru)
+
+Word Underline:  Alt + w
+////SORTOFF  This line tells the viewer program to stop alphabetical ordering.
+////9999
+
+++++"Vlo¾ení"
+Data døíve pøenesená do vyrovnávací pamìti (schránky) pomocí funkce Cut (Vyjmout) nebo Copy (Kopírovat) lze vlo¾it do relace 3270.
+
+Chcete-li pøenést kopii dat ulo¾ených ve vyrovnávací pamìti (schránce) do relace 3270 (se zaèátkem na pozici ukazatele my¹i), rozbalte volbu Vlo¾it.
+
+Operaci vlo¾ení lze provést také pomocí klávesnice. Stisknìte a podr¾te klávesu Shift a pøitom stisknìte sekundární (obvykle pravé) tlaèítko my¹i. V oknì Rùzné pøedvolby mù¾ete urèit, ¾e poèáteèní pozicí pro vlo¾ení dat pomocí klávesnice má být namísto pozice textového kurzoru ukazatel my¹i.
+
+Pokud vkládaná data pocházejí z operace blokového kopírování v rámci relace 3270, bude operace vlo¾ení také blokovou operací.
+
+////5250
+Omezení pro operaci vlo¾ení na editaèní obrazovce OV/400: Pokud bude ve vkládaných datech nalezena textová instrukce nebo znak zmìny formátu, bude operace vlo¾ení ukonèena. Èasto se vyskytující textovou instrukcí je napøíklad instrukce data. Znak zmìny formátu je zobrazen jako symbol podobný obrácenému velkému písmenu 'F'. Pøi pøeru¹ení operace vlo¾ení je zaznamenána chyba operátora '0072' nebo 'Key not allowed' (Nepovolená klávesa). 
+////9999
+
+++++"Pøehrávání"
+////PLY This comment line is used by the help viewer program to find the Playback topic. This line belongs after the Playback topic (do not translate this comment line).
+Funkce pøehrávání umo¾òuje v oknì relace 3270 pøehrát zaznamenané klávesové úhozy. Informace o záznamu najdete v tématu Záznam.
+
+Autorizaci pro operace záznamu/pøehrávání lze zmìnit v programu Nastavení emulátoru IBM 3270. Pro operace záznamu/pøehrávání v relacích 3270 jsou k dispozici tøi úrovnì autorizace:
+
+1) Povoleno: U¾ivateli je povoleno provádìt operace záznamu/pøehrávání v relacích 3270.
+
+2) Pouze pøehrávání: U¾ivateli je v relacích 3270 povoleno pouze provádìní operací pøehrávání. Volba rozbalovací nabídky Zaznamenat není zobrazena. 
+
+3) Skryto: U¾ivateli není povoleno pou¾ívat operace záznamu/pøehrávání v relacích 3270. Volby rozbalovací nabídky Zaznamenat ani Pøehrát nejsou zobrazeny.
+ 
+Pøehrávání: Umístìte kurzor na po¾adovanou pozici v po¾adované nabídce a spus»te pøehrávání. Soubor pøehrávání lze spustit pìti zpùsoby:
+
+1) Vyberte volbu rozbalovací nabídky Pøehrát, poté vyberte soubor pøehrávání a klepnìte na tlaèítko Spustit.
+
+2) Stisknìte klávesu Pøehrát a pøíslu¹nou funkèní klávesu (akceleraèní funkèní klávesa je definována pøi operaci nahrávání). Umístìní klávesy pøehrávání najdete v tématu Posloupnosti kláves.
+
+////Note: The translation of Play() below should match the translated resource text for Keyxxx52*play() in the keyboard remapping resource file.
+3) V programu Pøemapování klávesnice mù¾ete urèit soubor pøehrávání, který má být spu¹tìn pøi stisknutí specifické posloupnosti kláves. Název souboru pøehrávání zadejte do uvozovek akce Play() v rámci pøemapování klávesnice.
+
+4) Soubor pøehrávání lze pøiøadit tlaèítku pomocné klávesnice. Dal¹í informace najdete v tématu Rozevírací/rozbalovací pomocná klávesnice.
+
+5) Pøi spu¹tìní relace 3270 je spu¹tìn soubor pøehrávání s automatickým pøihlá¹ením. Dal¹í informace najdete v tématu Automatické pøihlá¹ení.
+
+Pøehrávání bude pozastaveno, co¾ umo¾ní zadání dat do vstupního pole bez zobrazení (kromì souborù pøehrávání s automatickým pøihlá¹ením pøi spu¹tìní relace 3270 - v nìkterých pøípadech v¹ak mù¾e být provedeno pozastavení pro vstupní pole bez zobrazení také pro soubor pøehrávání s automatickým pøihlá¹ením - dal¹í informace najdete v tématu Automatické pøihlá¹ení). Bìhem záznamu lze do posloupnosti vlo¾it prodlevu umo¾òující zadání hodnoty promìnné (napøíklad objednací èíslo) nebo soukromé údaje (napøíklad heslo). Klepnutím na tlaèítko Pokraèovat lze obnovit pøehrávání.
+
+Rychlost pøehrávání lze upravit pomocí posuvného ovladaèe Rychlost pøehrávání.
+
+Bìhem pøehrávání je ve stavovém øádku uveden indikátor pøehrávání. Klepnutím na indikátor pøehrávání lze pøehrávání ukonèit.
+
+Chcete-li ukonèit relaci pøehrávání, klepnìte na volbu Zru¹it v oknì Pøehrávání.
+
+U¾ivatelské soubory pøehrávání lze odstranit výbìrem po¾adovaného souboru a následným klepnutím na tlaèítko Odstranit. 
+
+////3270
+////In the paragraph below, "-PLAYBACK_NEW_SCREEN_DELAY" must not be translated.
+Aplikace 3270 v nìkterých pøípadech odemknou klávesnici pøed dokonèením aktualizací obrazovky. Emulátor 3270 èeká po odemknutí klávesnice na zahájení pøehrávání na aktualizované obrazovce po dobu 2 sekund (aby nebyly ztraceny zaznamenané klávesové úhozy). Dobu prodlevy lze upravit. V programu Nastavení emulátoru IBM 3270 lze pøidat parametr -PLAYBACK_NEW_SCREEN_DELAY: vyberte po¾adovanou relaci a klepnìte na volbu Pøipojení-> Upravit. Klepnìte na volbu Roz¹íøené pøipojení 3270 a v poli Dal¹í parametry zadejte po¾adovanou hodnotu parametru. U parametru jsou rozli¹ována malá a velká písmena a je následován jednou mezerou a èíslem v rozsahu 1 a¾ 255. Zadané èíslo odpovídá dobì prodlevy s pøírùstkem 0,1 sekundy.
+
+////9999
+++++"Rozevírací/rozbalovací pomocná klávesnice"
+Emulátor 3270 umo¾òuje vytvoøení rozevírací èi rozbalovací pomocné klávesnice. Pomocná klávesnice obsahuje speciální tlaèítka, ke kterým jsou pøiøazeny posloupnosti kláves nebo soubory pøehrávání.
+
+Poznámka: V programu Nastavení emulátoru IBM 3270 lze pou¾ití pomocných klávesnic zakázat.
+
+Pokud byla vytvoøena jedna èi více pomocných klávesnic, bude zobrazena volba rozbalovací nabídky Pomocná klávesnice. Pomocí volby rozbalovací nabídky Pomocná klávesnice lze aktivovat jednu nebo více pomocných klávesnic. Pøi výbìru nìkterého tlaèítka pomocné klávesnice bude provedena pøíslu¹ná akce v relaci 3270, ve které byla daná rozevírací pomocná klávesnice aktivována.
+
+Pokud byla vytvoøena jedna èi více pomocných klávesnic, bude zobrazena volba pruhu nabídky Pomocná klávesnice.
+
+Pomocí volby rozbalovací nabídky Pøizpùsobit pomocnou klávesnici lze vytvoøit novou nebo upravit ji¾ existující pomocnou klávesnici.
+
+Okno pro pøizpùsobení pomocné klávesnice obsahuje vlastní text nápovìdy. Klepnìte na tlaèítko Nápovìda v oknì pro pøizpùsobení pomocné klávesnice.
+
+V¹echny u¾ivatelem vytvoøené pomocné klávesnice jsou k dispozici ve v¹ech relacích 3270.
+
+Poznámka: Program Pøizpùsobit pomocnou klávesnici není k dispozici pro monitory typu VGA. Monitory VGA umo¾òují pouze rozli¹ení s ni¾¹í hodnotou (640x480) a jde obvykle o star¹í monitory osobních poèítaèù.
+
+////3270
+++++"Port"
+////In the paragraph below, "-port" should not be translated.
+Výchozí cílový port telnet 3270 lze pøepsat pomocí volitelného parametru pro port Telnet. Tento parametr lze nastavit v programu Nastavení emulátoru IBM 3270.
+////9999
+
+++++"Záznam"
+////REC This comment line is used by the help viewer program to find the Record topic. This line belongs after the Record topic (do not translate this comment line).
+Funkce záznamu umo¾òuje zaznamenat klávesové úhozy bìhem relace 3270 pro jejich pozdìj¹í pøehrávání.
+
+V programu Nastavení emulátoru IBM 3270 lze specifikovat oprávnìní pro pou¾ití funkcí záznamu a pøehrávání. Pro operace záznamu/pøehrávání v relacích 3270 jsou k dispozici tøi úrovnì autorizace:
+
+1) Povoleno: U¾ivateli je povoleno provádìt operace záznamu/pøehrávání v relacích 3270.
+
+2) Pouze pøehrávání: U¾ivateli je v relacích 3270 povoleno pouze provádìní operací pøehrávání. Volba rozbalovací nabídky Zaznamenat není zobrazena.
+
+3) Skryto: U¾ivateli není povoleno pou¾ívat operace záznamu/pøehrávání v relacích 3270. Volby rozbalovací nabídky Zaznamenat ani Pøehrát nejsou zobrazeny.
+
+Záznam: Umístìte kurzor na po¾adovanou pozici na obrazovce systému a vyberte volbu rozbalovací nabídky Zaznamenat (nebo stisknìte klávesu Record). Klepnutím na tlaèítko Spustit spus»te záznam. Klávesové úhozy (a operace provedené my¹í) budou zaznamenány.
+  
+Záznam mù¾ete doèasnì pozastavit klepnutím na tlaèítko Pozastavit. Záznam lze pozastavit tøemi zpùsoby:
+
+////5250
+1) Záznam lze doèasnì pozastavit výbìrem volby ®ádná (napøíklad pøi zpracování zprávy systému i5/OS náhodnì zobrazené bìhem vytváøení záznamu).
+////3270
+1) Záznam lze doèasnì pozastavit výbìrem volby ®ádná.
+////9999
+
+2) Výbìrem volby Pozastavit na tomto místì pøehrávání mù¾ete u¾ivateli umo¾nit zadání soukromých údajù (napøíklad hesla) nebo dat, která se mohou mìnit (napøíklad objednací èíslo). Pozastavte záznam pøed provedením úhozu první klávesy odpovídající soukromým èi promìnlivým datùm a pokraèujte v nìm po provedení úhozu poslední klávesy odpovídající tìmto datùm.
+
+3) V pøípadì souborù s automatickým pøihlá¹ením a s automatickým spu¹tìním pøi spu¹tìní relace 3270 vyberte volby Vlo¾it ID u¾ivatele a Vlo¾it heslo (dal¹í informace najdete v tématu Automatické pøihlá¹ení).
+
+Pozastavený záznam lze obnovit klepnutím na volbu Pokraèovat v záznamu.
+
+Chcete-li záznam ukonèit nebo chcete-li zaznamenanou posloupnost odstranit, klepnìte na volbu Zastavit. Chcete-li nahradit (pøepsat) nìkterý soubor pøehrávání, vyberte jej. Jinou mo¾ností je zadání názvu nového souboru pøehrávání. Chcete-li zaznamenanou posloupnost odstranit, klepnìte na volbu Neukládat.
+
+Poznámka: Název souboru pøehrávání je v programu záznamu omezen délkou 32 znakù.
+
+Souboru pøehrávání lze v rámci mapování klávesnice pøiøadit nìkterou posloupnost kláves.
+
+Mù¾ete urèit akceleraèní klávesu. Pozdìj¹í pøehrání souboru je pak mo¾né stisknutím klávesy Playback s následným stisknutím urèené funkèní klávesy. Klepnìte na tlaèítko Pøidat nepovinnou akceleraèní klávesu a poté na po¾adovanou funkèní klávesu nebo stisknìte po¾adovanou funkèní klávesu na klávesnici.
+
+U¾ivatelské soubory pøehrávání lze upravovat v oknì Pøehrávání.
+
+V oknì Pøehrávání lze také odstranit u¾ivatelské soubory pøehrávání.
+
+Poznámka: Pomocí programu Pøemapování klávesnice lze vytváøet jednoduchá makra klávesnice. 
+
+++++"Zmìna velikosti okna relace 3270"
+Velikost okna relace 3270 lze upravit výbìrem jiného písma v rozbalovací nabídce Písma.
+  
+Velikost okna relace lze také zmìnit stisknutím primárního (obvykle levého) tlaèítka my¹i pøi umístìní ukazatele na okraji okna relace 3270, následným pøeta¾ením ukazatele a uvolnìním tlaèítka my¹i. Velikost okna relace 3270 je upravena tak, aby co nejlépe odpovídala pozici pøi uvolnìní tlaèítka my¹i.
+
+V programu Nastavení emulátoru IBM 3270 lze nastavit poèáteèní umístìní okna relace 3270 a písmo v nìm.
+
+++++"Podpora vodicí èáry"
+V relaci 3270 lze zobrazit tzv. vodicí èáru. V oknì relace 3270 mù¾e být zobrazena vodorovná nebo svislá vodicí èára, pøípadnì obì.
+ 
+Podporu klávesy vodicí èáry a typ zobrazené vodicí èáry lze nastavit po rozbalení nabídky Rùzné pøedvolby.
+
+Výchozí umístìní klávesy vodicí èáry (Rule Line) je uvedeno v tématu Posloupnosti kláves.
+
+++++"Tisk obrazovky"
+////SCR This comment line is used by the help viewer program to find the Screen Print topic. This line belongs after the Screen Print topic (do not translate this comment line).
+Funkce emulátoru 3270 pro tisk obrazovky umo¾òuje vytisknout obsah obrazovky relace 3270 na tiskárnì lokálního poèítaèe nebo na sí»ové tiskárnì.
+
+Oprávnìní pro pou¾ití funkce tisku obrazovky lze zmìnit pomocí programu Nastavení emulátoru IBM 3270. V¹echny dostupné tiskárny ji¾ musí být konfigurovány.
+
+Funkci tisku obrazovky lze spustit klepnutím na volbu Tisk obrazovky v rozbalovací nabídce Tisk nebo stisknutím kombinace kláves Shift + Print Screen. V oknì Rùzné pøedvolby lze umo¾nit tisk obrazovky bez pou¾ití klávesy Shift. Pomocí funkce pøemapování klávesnice lze funkci tisku obrazovky pøiøadit jedinou klávesu (akce PrintScreenNow); pøitom budou pou¾ity naposled vybrané volby tisku a naposled pou¾itá tiskárna.
+
+Podporován je také tisk pouze èásti relace 3270. Pøi tisku obrazovky s vyznaèenou oblastí kopírování (lineární nebo blokovou; dal¹í informace najdete v tématu Kopírování) jsou ti¹tìna pouze oznaèená data.
+
+Funkce Tisk obrazovky ode¹le obsah obrazovky relace 3270 na urèenou tiskárnu. Obsah obrazovky relace 3270 je pøed tiskem v závislosti na jazyku relace 3270 pøeveden do formátu PostScript úrovnì 2 (PostScript je obchodní známka spoleènosti Adobe Systems Incorporated). Dal¹í informace mù¾ete najít dále.
+
+////5250
+Tisk obrázkù/faxù: Tiskárny typu PostScript obecnì umo¾òují tisk obrázkù nebo faxù zobrazených v dané relaci 3270. Máte-li zobrazen obrázek nebo fax, mù¾ete vybrat mezi tiskem dat obrázku/faxu a tiskem znakových dat relace 3270.
+
+////3270
+Tisk GDDM: Tiskárny typu PostScript obecnì umo¾òují tisk grafických objektù GDDM zobrazených v dané relaci 3270. Máte-li zobrazen grafický objekt GDDM, mù¾ete zvolit mezi tiskem grafických dat a tiskem znakových dat relace 3270.
+
+////9999
+Poznámka: Pøi klepnutí na tlaèítko Tisk budou v¹echny zmìny provedené v oknì Tisk obrazovky 3270 ulo¾eny pro pou¾ití pøi následujícím výbìru volby tisku obrazovky. 
+
+Pøed tiskem je na základì jazyka dané relace 3270 proveden pøevod obsahu relace 3270. Pøedpokládá se, ¾e jazyk tiskárny se shoduje s jazykem relace 3270. Poznámka: Ne v¹echny znaky budou ve v¹ech jazycích vyti¹tìny správnì.
+
+Pro tiskárny typu PostScript je obsah relace 3270 pøeveden do kódování ISO Latin1.
+
+V následující tabulce lze najít kódovou stránku tiskárny ASCII (informace týkající se primární korespondenci zemì vzhledem k danému jazyku najdete v tématu Jazyk relace 3270):
+
+Jazyk relace  Kódová
+3270          stránka
+              ASCII
+              tiskárny
+
+Dán¹tina      850
+Holand¹tina   850
+Belgická holand¹tina 850
+////Poznámka: Nìkdy oznaèována jako belgická vlám¹tina
+Angliètina    850
+Fin¹tina      850
+Francouz¹tina 850
+Nìmèina       850
+Ital¹tina     850
+Nor¹tina      850
+Portugal¹tina 850
+©panìl¹tina   850
+©véd¹tina     850  
+
+////3270
+++++"Velikost obrazovky"
+Relace 3270 ve výchozím nastavení podporují velikost obrazovky 32 øádkù a 80 sloupcù. V programu Nastavení emulátoru IBM 3270 lze vybrat dal¹í hodnoty velikosti obrazovky a s jejich pou¾itím lze upravit emulátor 3270 pøi spu¹tìní. Pokud pøi zmìnì velikosti obrazovky relace 3270 pou¾ijete my¹, nebudou zmìnìny hodnoty poètu øádkù ani sloupcù pro danou relaci 3270.
+
+Emulátor 3270 podporuje následující typy terminálù a jim odpovídající velikosti obrazovky:
+
+  Mod 2 - 24 x 80
+  Mod 3 - 32 x 80 (výchozí)
+  Mod 4 - 43 x 80
+  Mod 5 - 27 x 132
+
+Poznámka: Jediným podporovaným re¾imem pro grafiku je re¾im 32 x 80.
+
+Poznámka: Je-li v programu Nastavení emulátoru IBM 3270 nastavena velikost obrazovky, která pøesahuje mo¾nosti rozli¹ení monitoru, bude pou¾ita velikost obrazovky 24 x 80.
+////9999
+
+++++"Stavový øádek (oblast OIA)"
+Stavový øádek (nìkdy také oznaèovaný jako oblast OIA) je umístìn v dolní èásti ka¾dé relace 3270. Stavový øádek obsahuje následující informace:
+
+////3270
+Podtr¾ený znak A indikuje, ¾e emulátor je prostøednictvím protokolu TCP/IP pøipojen k systému System/390.
+
+////9999
+V první èásti stavového øádku je uvedeno èíslo relace 3270 v systému. 
+
+V následující èásti stavového øádku je uveden název systému, se kterým tato relace 3270 komunikuje.
+
+Poznámka: Pøi spu¹tìní relace 3270 je doèasnì zobrazen indikátor stavu pøipojení.
+
+////5250
+V následující èásti stavového øádku je v pøípadì, ¾e je pro danou relaci aktivován indikátor èekajících zpráv, pøípadnì uveden text Èekající zpráva. 
+
+Následující èást stavového øádku obsahuje nìkolik indikátorù týkajících se stavu klávesnice dané relace 3270:
+
+////In the sentence below, "X" does not get translated.
+- Velké písmeno "X" indikuje, ¾e klávesnice je uzamknuta a èeká na data ze systému i5/OS.
+////3270
+Následující èást stavového øádku obsahuje nìkolik indikátorù týkajících se stavu klávesnice dané relace 3270: 
+
+////In the sentence below, "X" does not get translated.
+- Indikátor zablokovaného zadávání obsahující velké písmeno "X" spolu s dal¹ími symboly indikuje, ¾e emulátor neumo¾òuje zadávání vstupu z klávesnice, spolu s nìjakým dal¹ím stavem.
+
+////In the sentence below, "NUM" does not get translated.
+- Velká písmena "NUM" indikují, ¾e kurzor se nachází v èíselném vstupním poli.
+
+////9999
+////In the sentence below, ">>" does not get translated.
+- Dvojitá pravá ¹pièatá závorka (>>) indikuje, ¾e je aktivováno pou¾ití pamìti pro stisknuté klávesy (výchozí nastavení).
+
+- Znak ¹ipky nahoru indikuje, ¾e je na klávesnici podr¾ena klávesa Shift.
+
+////In the sentence below, "A" does not get translated.
+- Velké písmeno "A" indikuje, ¾e klávesnice je ve stavu Caps Lock nebo Shift Lock (v závislosti na jazyku).
+
+////In the sentence below, "V" does not get translated.
+- Obrácený znak "V" indikuje, ¾e klávesnice se nachází ve stavu vkládání.
+
+////In the sentence below, "d" does not get translated.
+- Indikátor podobný malému písmeni "d" indikuje, ¾e klávesnice je v diakritickém stavu (tento indikátor není ve vìt¹inì jazykù pou¾íván).
+
+////3270
+- Symbol sloupcového diagramu indikuje, ¾e v relaci 3270 je povolena grafika.
+////5250
+- Symbol sloupcového diagramu indikuje, ¾e relace 3270 umo¾òuje zobrazení obrázkù a faxù. 
+
+- Pøi zobrazení ménì ne¾ 132 sloupcù umo¾òují obrazovky relací 3270 o velikosti 27 øádkù x 132 sloupcù pou¾ití vìt¹ího písma. Je zobrazen indikátor posuvu smìrem doprava nebo doleva. Klepnutím na indikátor mù¾ete posouvat data.
+////9999
+
+V poslední èásti stavového øádku je pomocí øádkù a sloupcù uvedeno umístìní textového kurzoru (zobrazení umístìní pomocí øádkù a sloupcù lze aktivovat èi deaktivovat v oknì Rùzné pøedvolby).
+
+////3270
+++++"Konfigurace tiskárny TN3270E"
+Roz¹íøení TN3270 (TN3270E) podporují tisk prostøednictvím emulátoru 3270 v systému System/390. Chcete-li pou¾ívat funkci tisku v re¾imu TN3270E, musí být na daném serveru instalována podpora TN3270E. (Tisk TN3270E je také nìkdy oznaèován jako tisk 3270 LU1 nebo 3270 LU3.)
+
+////PARALLEL1 and SERIAL1 must not be translated below.
+V konfiguraci tiskárny TN3270E (popsané dále) je pou¾it název tiskové fronty tiskárny. Pro tiskárny lokálnì pøipojené k terminálùm jsou pou¾ívány názvy front PARALLEL1 a SERIAL1. Název fronty pro vzdálenou tiskárnu pøidìluje administrátor.
+
+Tisková podpora TN3270E zahrnuje:
+- Tiskárny pro obecné pou¾ití (nejsou pøipojeny ke specifickým aplikacím)
+- Tiskárny závisející na aplikacích (je-li spu¹tìna urèitá aplikace, budou tiskové po¾adavky smìrovány na specifickou tiskárnu)
+
+Tiskárny TN3270E pro obecné pou¾ití i tiskárny TN3270E závisející na aplikacích jsou konfigurovány v programu Nastavení emulátoru IBM 3270 spolu s relací obrazovky 3270: Vyberte po¾adovanou relaci a poté klepnìte na volbu Pøipojení-> Upravit. Klepnìte na volbu Roz¹íøené pøipojení 3270 a v poli Dal¹í parametry zadejte konfiguraèní údaje pro tiskárnu TN3270E. U parametrù v poli Dal¹í parametry jsou rozli¹ována velká a malá písmena.
+
+Tiskárny TN3270E pro obecné pou¾ití
+-----------------------------------
+
+////PRINTER_GENERAL and PRINTER_NAME must not be translated below.
+V poli Dal¹í parametry zadejte následující parametry: 
+
+-PRINTER_GENERAL XXXXXX, kde XXXXXX je název fronty (s rozli¹ením malých a velkých písmen).
+
+-PRINTER_NAME YYYYYY , kde YYYYYY je jeden nebo více názvù LU tiskáren, které chcete zpøístupnit pro danou relaci 3270. Parametr -PRINTER_NAME je nepovinný. Pokud není zadán, bude pravdìpodobnì konfigurována výchozí tiskárna z fondu názvù LU tiskáren v systému S/390. Jako parametr názvu tiskárny YYYYYY lze zadat jeden nebo více názvù LU. Pøi zadání více názvù je tøeba názvy LU uzavøít do uvozovek a vlo¾it mezi nì znaky mezery. Pøíklad: -PRINTER_NAME "LUtiskarny1 LUtiskarny2 LUtiskarny3". Názvy LU tiskáren lze obvykle získat u administrátora systému System/390.
+
+Tiskárny TN3270E závisející na aplikacích
+-----------------------------------------
+
+////PRINTER_APP and DISPLAY_NAME must not be translated below.
+V poli Dal¹í parametry zadejte následující parametry:
+
+-PRINTER_APP XXXXXX, kde XXXXXX je název fronty (s rozli¹ením malých a velkých písmen).
+
+-DISPLAY_NAME YYYYYY, kde YYYYYY je jeden nebo více názvù LU displeje, které chcete pou¾ít pro relaci obrazovky 3270. Parametr -DISPLAY_NAME je pro tisk TN3270E závisející na aplikacích obvykle povinný. Promìnná YYYYYY obvykle pøedstavuje jeden nebo více názvù LU displeje. Pøi zadání více názvù je tøeba názvy LU uzavøít do uvozovek a vlo¾it mezi nì znaky mezery. Pøíklad: -DISPLAY_NAME "LUdispleje1 LUdispleje2 LUdispleje3". Dal¹í informace lze najít v tématu Název displeje (název LU 3270). Názvy LU displeje lze obvykle získat u administrátora systému System/390.
+
+////9999
+++++"Titulek okna"
+Pro ka¾dou relaci 3270 je v horní èásti okna uveden titulek. Standardní titulek okna sestává ze dvou èástí.
+
+1) První èást tvoøí text titulku okna. Výchozí text titulku okna je "3270". Tento text mù¾ete libovolnì zmìnit.
+
+2) Dal¹í èást titulku okna tvoøí ID relace emulátoru.
+
+Obsah titulku okna mù¾ete zmìnit (dal¹í informace mù¾ete najít v tématu Dal¹í parametry).
+
+++++"Obousmìrný text (BIDI)"
+Specifikace prezentace obousmìrného textu
+
+V emulátoru jsou implementovány funkce popsané ve specifikaci pro podporu re¾imu BIDI (obousmìrný text) terminálu 5250 vèetnì podpory obrácené obrazovky a orientace polí. Tyto funkce re¾imu BIDI jsou k dispozici v pøípadì, ¾e byl emulátor spu¹tìní s jazykovým prostøedím s podporou re¾imu BIDI nebo ¾e parametr LANGID pøíkazového øádku urèuje jeden z jazykù s podporou re¾imu BIDI. V¹echny názvy jazykových prostøedí a jazykù zaèínající znaky "ar" jsou interpretovány jako arab¹tina (napøíklad "ar_EG" nebo "ar_EG.UTF-8") a v¹echny názvy jazykových prostøedí a jazykù zaèínající znaky "he" jsou interpretovány jako hebrej¹tina (napøíklad "he_IL" nebo "he_IL.UTF-8"). Smí¹ený text BIDI (obousmìrný text) lze zadávat v obou orientacích (zprava doleva i zleva doprava) v angliètinì i v národních jazycích (arab¹tina nebo hebrej¹tina). V pøípadì nastavení smìru kurzoru zleva doprava je v¹ak pøi výchozím nastavení jako jazyk nastavena angliètina. V pøípadì nastavení smìru kurzoru zprava doleva je nicménì pøi výchozím nastavení jako jazyk nastaven národní jazyk. Výchozí smìr kurzoru v poli je urèen jeho orientací. Pøi obrácení zpùsobu prezentace obrazovky se zobrazí celý obraz obrazovky zrcadlovì. Pøi obrácení obrazovky se zmìní smìr prezentace dat na obrazovce, samotná data v¹ak zùstanou beze zmìny. Ve¹keré funkce pro úpravy jsou k dispozici na obrazovce v re¾imu zprava doleva (obrácené zobrazení) i na obrazovce v re¾imu zleva doprava.
+
+Jazyková prostøedí s podporou re¾imu BIDI lze nastavit pomocí pøíkazu chhmc. Pøíklad: pøíkaz "chhmc -c locale -s modify -l ar_EG" pøepne systém do arabského národního prostøedí a pøíkaz "chhmc -c locale -s modify -l he_IL" pøepne systém do hebrejského národního prostøedí. 
+
+
+
+Výbìr jazyka
+
+Pomocí kombinací kláves Ctrl+N a Ctrl+L lze mìnit jazykovou vrstvu.
+V pøípadì jazykové vrstvy pro sadu Latin se stisknutím kombinace kláves Ctrl+N zmìní jazyková vrstva na hebrej¹tinu/arab¹tinu.
+V pøípadì jazykové vrstvy pro hebrej¹tinu/arab¹tinu se stisknutím kombinace kláves Ctrl+L zmìní jazyková vrstva na volbu odpovídající sadì Latin.
+
+
+
+
+Popis indikátorù v oblasti s informacemi pro operátora (OIA)
+
+V relaci hostitele je spodní øádek obrazovky oznaèován jako oblast s informacemi pro operátora (OIA). Tento øádek se v¾dy zobrazuje zleva doprava.
+Pro prostøedí s podporou re¾imu BIDI byly pøidány následující symboly: 
+
+
+Indikátor jazyka: 
+
+	H: Aktuální jazyk, hebrej¹tina (pouze pro relace v hebrej¹tinì)
+	Znak EIN arab¹tiny: Aktuální jazyk, arab¹tina (pouze pro relace v arab¹tinì)
+	E: Aktuální jazyk, angliètina (pro relace v arab¹tinì èi hebrej¹tinì)
+
+
+Smìr zobrazení obrazovky: 
+
+	S> : Zobrazení obrazovky zleva doprava
+	<S : Zobrazení obrazovky zprava doleva 
+
+
+Smìr zadávání textu: 
+
+	=> : Zleva doprava
+	<= : Zprava doleva
+
+
+Pro arab¹tinu byly pøidány následující symboly pro tvarování:
+
+Znak Alef-Madda oznaèuje re¾im CSD (urèení tvaru podle kontextu).
+Izolovaný znak GHEIN oznaèuje re¾im základního èi izolovaného tvarování. 
+
+Pomocí klávesy Base (Ctrl+B) lze pøepínat mezi obìma stavy a obìma re¾imy. 
+
+
+
+Orientace textu
+
+Volba Orientace textu definuje poøadí pøi ètení v textovém editoru. Orientace textu se shoduje s výchozím smìrem pro kurzor a výchozím zarovnáním textu. To znamená, ¾e pokud je text zobrazen v re¾imu zleva doprava, mìli byste vybrat volbu Zleva doprava. Je-li text zobrazen v re¾imu zprava doleva, mìli byste vybrat volbu Zprava doleva. Nìkteré textové editory pracují podle kontextu; to znamená, ¾e je orientace textu ka¾dého odstavce nastavena podle prvního zadaného znaku. Je-li prvním znakem znak sady Latin, bude nastavena orientace zleva doprava. Je-li prvním znakem národní znak (tedy hebrejský èi arabský znak), bude nastavena orientace zprava doleva. Pou¾íváte-li textový editor, který pracuje podle kontextu, mìli byste v emulátoru vybrat pro orientaci textu volbu Podle kontextu.
+Nezapomeòte, ¾e pokud textový editor pracuje v re¾imu Podle kontextu, mù¾e dojít k poru¹ení øazení segmentù pøi jejich kopírování z emulátoru do externího textového editoru. K tomuto chování dochází proto, ¾e nìkteré formy øazení segmentù nejsou k dispozici v re¾imu zadávání Podle kontextu (to znamená, ¾e pøi vlo¾ení do externího editoru nebudou vypadat stejnì jako pùvodní verze v emulátoru). 
+
+
+
+Tvar èíslic (pouze pro arab¹tinu)
+
+Volba Tvar èíslic definuje zpùsob zobrazení èíslic v textu obsahujícím arab¹tinu i znaky sady Latin.
+Pokud externí aplikace pracuje pouze s evropskými èíslicemi, vyberte v nabídce pøedvoleb Tvar èíslic volbu Nominální.
+Pokud aplikace v¾dy pracuje s arabskými (indickými) èíslicemi, vyberte volbu Národní. Pokud vzhled èíslic závisí na segmentu, v nìm¾ jsou zobrazeny (tedy evropské èíslice v segmentu sady Latin a arabské (indické) èíslice v segmentu v arab¹tinì), vyberte re¾im Podle kontextu.
+
+
+
+
+Pøemapování kláves obousmìrného re¾imu
+
+	1. Klepnìte pravým tlaèítkem my¹i na ikonu konfigurované relace. 
+
+	2. Klepnìte na volbu Pøemapování klávesnice. 
+
+	3. Stisknìte klávesu, kterou chcete pøemapovat. 
+
+	4. Vyberte funkci obousmìrného re¾imu, kterou chcete pøemapovat. 
+
+
+Pro relace 5250 s obousmìrným re¾imem jsou k dispozici následující funkce obousmìrného re¾imu: 
+
+	Obrácení obrazovky
+	Národní vrstva klávesnice
+	Vrstva klávesnice sady Latin
+	Obrácení pole
+	Zavøení
+	Pøepnutí urèování tvaru (pouze pro arab¹tinu) 
+
+Pøi výchozím nastavení jsou definovány následující kombinace kláves:
+
+	Národní rozlo¾ení klávesnice (arab¹tina nebo hebrej¹tina): Ctrl+N
+	Rozlo¾ení klávesnice sady Latin: Ctrl+N
+	Obrácení obrazovky: Ctrl+S
+	Obrácení pole: Ctrl+F
+	Zavøení: Ctrl+C
+	Pøepínání urèování tvarù (automatické nebo základní): Ctrl+B
+
+
+
+Obrácení obrazovky
+
+Kombinace kláves Ctrl+S zpùsobí obrácení obrazu obrazovky.
+V pøípadì orientace obrazovky zleva doprava bude po stisknutí kombinace kláves Ctrl+S obraz obrazovky obrácen (nová orientace: zprava doleva).
+V pøípadì orientace obrazovky zprava doleva bude po stisknutí kombinace kláves Ctrl+S obraz obrazovky obrácen (nová orientace: zleva doprava). 
+
+Pøi zmìnì orientace obrazovky bude jazyková vrstva zmìnìna na výchozí jazyk nové orientace obrazovky.
+V pøípadì obrácení obrazovky na orientaci zprava doleva se jazyk zmìní na národní (hebrej¹tina nebo arab¹tina). V pøípadì obrácení obrazovky na orientaci zleva doprava se jazyk zmìní na sadu Latin. 
+
+Pøi obrácení obrazovky není obrácena oblast s informacemi pro operátora. 
+
+
+
+Obrácení pole
+
+Tato funkce je aktivována kombinací kláves Ctrl+F a pøepíná orientaci pole mezi mo¾nostmi zleva doprava a zprava doleva. Text v poli není invertován. Orientace kurzoru je nastavena stejnì jako nová orientace pole a jazyková vrstva je vybrána odpovídajícím zpùsobem. Pokud u¾ivatel vybere funkci obrácení pole, pøesune se kurzor na druhou stranu pøíslu¹ného pole èi øádku, která se nyní stává první logickou pozicí. 
+Pozice kurzoru se v¹ak nezmìní, pokud byla pøi poslední zmìnì pozice kurzoru pou¾ita klávesa pro posun kurzoru (klávesa se ¹ipkou nebo klepnutí my¹i). 
+
+
+
+Zavøení
+
+Tato funkce je aktivována kombinací kláves Ctrl+C a umo¾òuje zøetìzení dat zadaných v jednom smìru s daty zadanými døíve v opaèném smìru. Pracuje následujícím zpùsobem:
+	Z aktuálního øádku jsou odebrány v¹echny vlo¾ené prázdné znaky.
+	Zøetìzený text je pøesunut k pravému okraji pole (v pøípadì orientace pole zprava doleva) nebo k levému okraji (v pøípadì orientace pole zleva doprava).
+	Smìr pohybu kurzoru je nastaven v souladu s orientací pole.
+	Jazyková vrstva je nastavena na výchozí hodnotu odpovídající pøíslu¹né orientaci pole.
+	V pøípadì zmìny orientace obrazovky na orientaci zleva doprava je kurzor umístìn na první prázdnou pozici vpravo od zøetìzeného textu.
+	V pøípadì zmìny orientace obrazovky na orientaci zprava doleva je kurzor umístìn na první prázdnou pozici vlevo od zøetìzeného textu. Tato funkce je uvedena v seznamu dostupných akcí pod názvem CloseBIDIData().
+
+
+Základní
+
+Tato funkce je aktivována kombinací kláves Ctrl+B a slou¾í jako pøepínaè aktivace èi deaktivace funkce urèování automatického tvaru pro text v arab¹tinì s orientací zprava doleva. Je pou¾ití má význam pouze v pøípadì zpracování textu v arab¹tinì s orientací zprava doleva. 
+
+
+
+Speciální informace týkající se znakù v arab¹tinì
+
+V následujícím textu jsou popsány zpùsoby zpracování znaku ukonèení Sín a znaku LamAlef v arab¹tinì.
+
+
+Práce se znakem ukonèení Sín
+
+Skupinu znakù ukonèení Sín tvoøí znaky arab¹tiny Sín, ©ín, Sád a Dád. Ka¾dý z uvedených znakù Sín sestává ze znaku tìla Sín a znaku ukonèení Sín.
+Pøi odstraòování tìchto znakù je tøeba postupovat peèlivì. K dispozici jsou tøi metody odstranìní:
+
+	1. Stisknutí klávesy Backspace za znakem ukonèení Sín
+		Je-li kurzor umístìn za znakem ukonèení Sín, bude stisknutím klávesy Backspace odstranìn znak tìla Sín i znak ukonèení Sín.
+	2. Stisknutí klávesy Backspace na pozici znaku ukonèení Sín
+		Je-li kurzor umístìn na pozici znaku tìla Sín nebo znaku ukonèení Sín, bude stisknutím klávesy Backspace odstranìn znak pøed znakem Sín.
+	3. Stisknutí klávesy Delete na pozici znaku ukonèení Sín
+		Je-li kurzor umístìn na pozici znaku tìla Sín nebo znaku ukonèení Sín, bude stisknutím klávesy Delete odstranìn znak tìla Sín i znak ukonèení Sín. 
+
+
+Práce se znakem LamAlef
+
+Znak LamAlef je v souborech oznaèených vizuálním identifikátorem CCSID 420 tradiènì ukládán jako jediný znak. V zájmu shody s implicitní reprezentací nových identifikátorù CCSID pou¾ité na platformì iSeries provádí stroj rozvr¾ení Bidi pøevod mezi vizuální a implicitní reprezentací. 
+V dùsledku toho je ligatura <Lam-Alef> ve vizuální reprezentaci expandována na znaky <lam> a <Alef> v implicitní reprezentaci, pøièem¾ jsou spotøebovány mezerové znaky na konci textu v arab¹tinì, napøíklad na zaèátku pole v angliètinì.
+Pokud pøi pøevodu znaku <Lam-Alef> do implicitního formátu není na zaèátku pole dostatek mezerových znakù pro expanzi na znaky <Lam> a <Alef>, bude znak ztracen a nahrazen øídicím znakem <SUB>.
+Chcete-li tento problém vyøe¹it, nechávejte na zaèátku ka¾dého pole mezerový znak pro ka¾dý zadaný znak LamAlef a zabraòte u¾ivatelùm v zadávání dat na toto místo, proto¾e stroj rozvr¾ení pou¾ívá mezerové znaky pro expanzi znaku <Lam-Alef>.
+Toto chování je podporováno pouze emulací Host On-Demand, nikoli terminálem 5250.
+Chcete-li povolit mo¾nost pøidìlení prostoru pro znak LamAlef, spus»te program setup5250 a poté pro volbu Allocate space for LamAlef (Pøidìlit prostor pro znak LamAlef) zadejte hodnotu Yes (ano) .
+
+
+
+
+
+//// ENGL1SH_VERS10N 1.6.2.4 DO NOT REMOVE OR CHANGE THIS LINE

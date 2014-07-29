@@ -1,0 +1,314 @@
+!
+!
+!
+! This file contains the resource text strings for the IBM Network Station 3270 and 5250
+! emulators, in particular the color mapping program.
+
+! This resource file will be stored on all servers in locale specific ASCII (819 for Latin1
+! languages). This resource file is stored on the booting server as N3_5ColM.
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. Resource format: 
+!    - A resource line starts with ColorMap* followed by a resource name
+!      and a ":".  Do NOT make any changes to the text to the left of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+ColorMap*title: 			Värien valinta
+
+! icons
+ColorMap*iname3270:                     3270-istunnon värit
+ColorMap*iname5250:                     5250-istunnon värit
+
+
+ColorMap*corrupt:               Väritiedosto on viallinen
+
+ColorMap*lowMemMsgDialog.messageString:  Muisti ei riitä ohjeen katseluohjelman aloittamiseen.
+
+ColorMap*okLabelString: OK
+
+ColorMap*cancelLabelString: Peruutus
+
+!*******************************************************************************
+!**     Preferences area resources (top of window)                            **
+!*******************************************************************************
+ColorMap*modeInstructions.labelString:  Värien valintatoiminnon valinta:
+
+ColorMap*Basic.labelString:             Perusasetukset
+
+ColorMap*Advanced.labelString:          Lisäasetukset
+
+
+!*************************************************************
+!**   Basic and advanced action bar area resources          **
+!*************************************************************
+ColorMap*actionForm.saveButton.labelString:  	Tallennus
+
+ColorMap*actionForm.deleteButton.labelString:   Poisto
+
+ColorMap*actionForm.applyButton.labelString:    Muutosten käyttö istunnossa
+
+ColorMap*actionForm.quitButton.labelString:     Lopetus
+
+ColorMap*actionForm.helpButton.labelString:     Ohje
+
+
+!************************************************
+!**  Basic and advanced color savebox          **
+!************************************************
+ColorMap*saveBoxLabel.labelString:         Tallennusvaihtoehdon valinta:
+
+ColorMap*saveBoxToggle1.labelString:       Tallennus kaikkien istuntojen oletusarvoksi
+
+ColorMap*saveBoxToggle2.labelString:       Tallennus vain tätä istuntoa varten
+
+ColorMap*saveBoxSaveBtn.labelString:  	   Tallennus
+
+ColorMap*saveBoxCancelBtn.labelString:     Peruutus
+
+ColorMap*advancedSaveBoxLabel.labelString: Lisäväritiedoston nimi:
+
+! Characters in file names must be 819 (ISO8859-1)
+ColorMap*invalidFileName.value:            Kirjoitettua merkkiä ei voi käyttää tiedostonimessä.
+
+ColorMap*invalidFileNameOkbutton.labelString:  OK
+
+!****************************************
+!**  Overwrite existing file dialog    **
+!****************************************
+ColorMap*fileWarningDialog.dialogTitle:        Värien valinnan varoitus
+
+ColorMap*fileWarningDialog.messageString:      Tiedosto on jo olemassa. Haluatko varmasti korvata sen?
+
+ColorMap*fileWarningDialog.okLabelString:      Kyllä
+
+ColorMap*fileWarningDialog.cancelLabelString:  Ei
+
+
+
+!***************************************
+!**  Basic color work area            **
+!***************************************
+ColorMap*basicListLabel.labelString:        Värimallin valinta:
+
+! The following two resource lines are a late addition to the color mapping resource file (March 12, 1998).  These indicate color map files that came from a system level or user created color map files.
+ColorMap*systemLabel:                       Järjestelmä:
+
+ColorMap*userLabel:                         Käyttäjä:
+
+ColorMap*ibmBlack:                          IBM: Musta tausta
+
+ColorMap*ibmDarkGrey:                       IBM: Tummanharmaa tausta
+
+ColorMap*ibmLightGrey:                      IBM: Vaaleanharmaa tausta
+
+ColorMap*ibmLight:                          IBM: Vaalea tausta
+
+ColorMap*ibmLightBlue:                      IBM: Vaaleansininen tausta
+
+
+
+!******************************************
+!**  Advanced color work area            **
+!******************************************
+ColorMap*advancedListLabel.labelString:     Muutettavan komponentin valinta:
+
+! The following 22 *adv type resources are limited in size; they should not exceed 28 characters.
+ColorMap*advMenuBarBack:                    Valikkorivin tausta
+
+ColorMap*advMenuBarFore:                    Valikkorivin edusta
+
+ColorMap*advMainSess:                       Pääistunnon tausta
+
+ColorMap*advPushbut:                        Painikkeen tausta
+
+ColorMap*advBlue:                           Sininen teksti
+
+ColorMap*advGreen:                          Vihr. teksti
+
+ColorMap*advPink:                           V.pun. teksti
+
+ColorMap*advRed:                            Pun. teksti
+
+ColorMap*advTurq:                           Turk. teksti
+
+ColorMap*advWhite:                          Valkoinen teksti
+
+ColorMap*advYellow:                         Keltainen teksti
+
+ColorMap*advCursor:                         Kohdistin
+
+ColorMap*advMouse:                          Hiiren osoitin
+
+ColorMap*advRule:                           Kohdistusviiva
+
+ColorMap*advStatLineBack:                   Tilarivin tausta
+
+ColorMap*advStatLineFore:                   Tilarivin edusta
+
+ColorMap*advMonoImageBack:                  Yksivärisen kuvan tausta
+
+ColorMap*advMonoImageFore:                  Yksivärisen kuvan edusta
+
+! Note: foreground color used for assist program windows
+ColorMap*advAssistFore:                     Apuohjelman edusta
+
+! Note: button background for assist program windows
+ColorMap*advAssistForm:                     Apuohjelman tausta
+
+! Note: main background color for assist program windows
+ColorMap*advAssistPrimary:                  Apuohjelman pääikkuna
+
+! Note: entry area background color for assist program windows
+ColorMap*advAssistEntry:                    Apuohjelman syöttökenttä
+
+
+ColorMap*red.titleString:                   PUNAINEN
+
+ColorMap*green.titleString:                 VIHREÄ
+
+ColorMap*blue.titleString:                  SININEN
+
+ColorMap*currentColorLabel.labelString:     Nykyinen väri
+
+ColorMap*applyCurrentColor.labelString:     Nykyisen värin käyttö
+
+
+!************************************
+!**  Delete file dialog            **
+!************************************
+ColorMap*deleteDialog.deleteBoxDeleteBtn.labelString:  Poisto
+
+ColorMap*deleteDialog.deleteBoxCancelBtn.labelString:  Peruutus
+
+! title of delete dialog
+ColorMap*deleteDialog.dialogTitle:                     Väritiedoston poisto
+
+ColorMap*deleteDialog.deleteBoxLabel.labelString:      Poistettavat tiedostot:
+
+ColorMap*deleteDialog.deleteBoxLabelAlt.labelString:   Poistettavia tiedostoja ei ole.
+
+! message at bottom of primary window
+ColorMap*selectedDeleted:                              Järjestelmä on poistanut valitut väritiedostot.
+
+
+!*****************************************************
+!**  Delete file verification dialog box            **
+!*****************************************************
+ColorMap*deleteVerifyDialog.dialogTitle:        Poiston vahvistus
+
+ColorMap*deleteVerifyDialog.okLabelString:      OK
+
+ColorMap*deleteVerifyDialog.cancelLabelString:  Peruutus
+
+! this cannot be much longer
+ColorMap*noUndoDelete:                          Tiedostojen poistoa ei voi kumota. Haluatko jatkaa?
+
+ColorMap*noFilesDelete:                         Tiedostoja ei ole valittu. Järjestelmä ei voi toteuttaa poistoa.
+
+
+!****************************************************
+!**  Emulator preference in construct list         **
+!**						   **
+!**  MAX:  text should be less than 15 characters  **
+!****************************************************
+ColorMap*emuPrefMenuLabel.labelString:       Valikkorivi
+
+ColorMap*emuPrefBlueText.labelString:        Sininen teksti
+
+ColorMap*emuPrefGreenText.labelString:       Vihr. teksti
+
+ColorMap*emuPrefPinkText.labelString:        V.pun. teksti
+
+ColorMap*emuPrefRedText.labelString:         Pun. teksti
+
+ColorMap*emuPrefTurquoiseText.labelString:   Turk. teksti
+
+ColorMap*emuPrefWhiteText.labelString:       Valkoinen teksti
+
+ColorMap*emuPrefYellowText.labelString:      Keltainen teksti
+
+ColorMap*emuPrefPbBackground.labelString:    Painike
+
+ColorMap*emuPrefStatusLine.labelString:      Tilarivi
+
+ColorMap*groupBoxLabel.labelString:          Apuohjelma
+
+ColorMap*entryAreaLabel.labelString:         Syöttöalue
+
+ColorMap*helperFormLabel.labelString:        Button
+
+
+!**************************
+!**  Error dialog boxes  **
+!**************************
+ColorMap*noColorCellsMsgText.value: Värien valintaohjelman aloituksessa tarvittavien väriresurssien varaus ei onnistu. Sulje useita värejä käyttävä sovellus ja yritä uudelleen.
+
+ColorMap*setColorMsgText.value:      Kaikkia emulointi-istunnon värejä ei ole asetettu oikein. Tallennus-vaihtoehto tallentaa kelvolliset asetukset.
+
+ColorMap*setColorFailureCancelBtn.labelString:        Peruutus
+
+
+!**********************************
+!**  General Error dialog boxes  **
+!**********************************
+ColorMap*noAdvanced.value:            Järjestelmä ei voi varata väriresursseja täydellistä värien valintaa varten.
+
+ColorMap*noAdvancedOkbutton.labelString:  OK
+
+
+!*******************************************************************************
+!**  quitDialog resources                                                     **
+!*******************************************************************************
+ColorMap*quitDialog.dialogTitle:           Lopetustoiminnon varoitus
+
+ColorMap*quitDialog1:                      Emulointi-istunnon värejä on muutettu, mutta niitä ei ole otettu käyttöön tai tallennettu.
+
+ColorMap*quitDialog2:                      Emulointi-istunnon värejä on muutettu ja ne on otettu käyttöön, mutta niitä ei ole tallennettu.
+
+ColorMap*quitDialog3:                      Emulointi-istunnon värejä on muutettu ja ne on tallennettu, mutta niitä ei ole otettu käyttöön.
+
+ColorMap*quitDialog*exitBox.labelString:   Lopetus
+
+ColorMap*quitDialog*cancelBox.labelString: Peruutus
+
+ColorMap*quit1Tog1:                        Lopetus ilman muutosten käyttöönottoa tai tallennusta.
+
+ColorMap*quit2Tog1:                        Lopetus ilman muutosten tallennusta.
+
+ColorMap*quitDialog*quitTog2.labelString:  Muutosten käyttöönotto ja tallennus ennen lopetusta.
+
+ColorMap*quit3Tog1:                        Lopetus ilman muutosten käyttöönottoa.
+
+ColorMap*quitTog3.labelString:             Muutosten käyttöönotto tässä istunnossa ennen lopetusta.
+
+ColorMap*quitDialog*quitTog4.labelString:  Muutosten tallennus ennen lopetusta.
+
+
+!*******************************************************************************
+!**  Informational Messages                                                   **
+!*******************************************************************************
+ColorMap*InfoMsgColorsSaved:    Värit on tallennettu tiedostoon:
+
+ColorMap*tempApp:               Värit on otettu tilapäisesti käyttöön emulointi-istunnossa.
+
+ColorMap*notLoaded:             Väritiedoston lataus ei onnistu. Tarkista, onko tiedosto vielä olemassa.
+
+ColorMap*errorLoad:             Väritiedoston muoto on virheellinen.
+
+
+! this resource should contain one black space character; do not translate.
+ColorMap*blank:  
+
+ColorMap*chooseApply:           Ota värit käyttöön tässä istunnossa valitsemalla Käyttö-painike.
+
+ColorMap*noAccessDir:           Hakemiston käyttö ei onnistu.
+
+! this cannot be made any longer during translation
+ColorMap*noOpenFile:            Seuraavan väritiedoston avaus ei onnistu:
+
+ColorMap*noMakeDir:             Hakemiston luonti ei onnistu.
+
+ColorMap*noDeterminePath:       Tiedoston saantipolun määritys ei onnistu.
+

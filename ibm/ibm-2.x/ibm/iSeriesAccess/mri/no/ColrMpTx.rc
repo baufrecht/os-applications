@@ -1,0 +1,314 @@
+!
+!
+!
+! This file contains the resource text strings for the IBM Network Station 3270 and 5250
+! emulators, in particular the color mapping program.
+
+! This resource file will be stored on all servers in locale specific ASCII (819 for Latin1
+! languages). This resource file is stored on the booting server as N3_5ColM.
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. Resource format: 
+!    - A resource line starts with ColorMap* followed by a resource name
+!      and a ":".  Do NOT make any changes to the text to the left of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+ColorMap*title: 			Definer farger
+
+! icons
+ColorMap*iname3270:                     3270-fargekart
+ColorMap*iname5250:                     5250-fargekart
+
+
+ColorMap*corrupt:               Fargefilen er ødelagt
+
+ColorMap*lowMemMsgDialog.messageString:  Ikke nok minne til å starte hjelpen.
+
+ColorMap*okLabelString: OK
+
+ColorMap*cancelLabelString: Avbryt
+
+!*******************************************************************************
+!**     Preferences area resources (top of window)                            **
+!*******************************************************************************
+ColorMap*modeInstructions.labelString:  Velg funksjonen Definer farge:
+
+ColorMap*Basic.labelString:             Grunnleggende
+
+ColorMap*Advanced.labelString:          Avansert
+
+
+!*************************************************************
+!**   Basic and advanced action bar area resources          **
+!*************************************************************
+ColorMap*actionForm.saveButton.labelString:  	Lagre
+
+ColorMap*actionForm.deleteButton.labelString:   Slett
+
+ColorMap*actionForm.applyButton.labelString:    Ta i bruk endringer i sesjonen
+
+ColorMap*actionForm.quitButton.labelString:     Avslutt
+
+ColorMap*actionForm.helpButton.labelString:     Hjelp
+
+
+!************************************************
+!**  Basic and advanced color savebox          **
+!************************************************
+ColorMap*saveBoxLabel.labelString:         Velg et lagringsvalg:
+
+ColorMap*saveBoxToggle1.labelString:       Lagre som standard for alle sesjonene
+
+ColorMap*saveBoxToggle2.labelString:       Lagre bare for denne sesjonen
+
+ColorMap*saveBoxSaveBtn.labelString:  	   Lagre
+
+ColorMap*saveBoxCancelBtn.labelString:     Avbryt
+
+ColorMap*advancedSaveBoxLabel.labelString: Oppgi et navn på den avanserte fargefilen:
+
+! Characters in file names must be 819 (ISO8859-1)
+ColorMap*invalidFileName.value:            Tegnet som du oppgav, er ikke gyldig i et filnavn.
+
+ColorMap*invalidFileNameOkbutton.labelString:  OK
+
+!****************************************
+!**  Overwrite existing file dialog    **
+!****************************************
+ColorMap*fileWarningDialog.dialogTitle:        Advarsel
+
+ColorMap*fileWarningDialog.messageString:      Filen finnes allerede. Vil du overskrive den?
+
+ColorMap*fileWarningDialog.okLabelString:      Ja
+
+ColorMap*fileWarningDialog.cancelLabelString:  Nei
+
+
+
+!***************************************
+!**  Basic color work area            **
+!***************************************
+ColorMap*basicListLabel.labelString:        Velg farge:
+
+! The following two resource lines are a late addition to the color mapping resource file (March 12, 1998).  These indicate color map files that came from a system level or user created color map files.
+ColorMap*systemLabel:                       System:
+
+ColorMap*userLabel:                         Bruker:
+
+ColorMap*ibmBlack:                          IBM: Svart bakgrunn
+
+ColorMap*ibmDarkGrey:                       IBM: Mørkegrå bakgrunn
+
+ColorMap*ibmLightGrey:                      IBM: Lysegrå bakgrunn
+
+ColorMap*ibmLight:                          IBM: Lys bakgrunn
+
+ColorMap*ibmLightBlue:                      IBM: Lyseblå bakgrunn
+
+
+
+!******************************************
+!**  Advanced color work area            **
+!******************************************
+ColorMap*advancedListLabel.labelString:     Velg hvilken konstruksjon som skal endres:
+
+! The following 22 *adv type resources are limited in size; they should not exceed 28 characters.
+ColorMap*advMenuBarBack:                    Handlingslinjebakgrunn
+
+ColorMap*advMenuBarFore:                    Handlingslinjeforgrunn
+
+ColorMap*advMainSess:                       Hovedsesjonsbakgrunn
+
+ColorMap*advPushbut:                        Skjermtastbakgrunn
+
+ColorMap*advBlue:                           Blå tekst
+
+ColorMap*advGreen:                          Grønn tekst
+
+ColorMap*advPink:                           Rosa tekst
+
+ColorMap*advRed:                            Rød tekst
+
+ColorMap*advTurq:                           Turkis tekst
+
+ColorMap*advWhite:                          Hvit tekst
+
+ColorMap*advYellow:                         Gul tekst
+
+ColorMap*advCursor:                         Markør
+
+ColorMap*advMouse:                          Musepeker
+
+ColorMap*advRule:                           Streklinje
+
+ColorMap*advStatLineBack:                   Statuslinjebakgrunn
+
+ColorMap*advStatLineFore:                   Statuslinjeforgrunn
+
+ColorMap*advMonoImageBack:                  Monokrom bildebakgrunn
+
+ColorMap*advMonoImageFore:                  Monokrom bildeforgrunn
+
+! Note: foreground color used for assist program windows
+ColorMap*advAssistFore:                     Forgrunn i Funksjoner
+
+! Note: button background for assist program windows
+ColorMap*advAssistForm:                     Tast i Funksjoner
+
+! Note: main background color for assist program windows
+ColorMap*advAssistPrimary:                  Hovedfarge i Funksjoner
+
+! Note: entry area background color for assist program windows
+ColorMap*advAssistEntry:                    Skrivefelt i Funksjoner
+
+
+ColorMap*red.titleString:                   RØD
+
+ColorMap*green.titleString:                 GRØNN
+
+ColorMap*blue.titleString:                  BLÅ
+
+ColorMap*currentColorLabel.labelString:     Gjeldende farge
+
+ColorMap*applyCurrentColor.labelString:     Bruk gjeldende farge
+
+
+!************************************
+!**  Delete file dialog            **
+!************************************
+ColorMap*deleteDialog.deleteBoxDeleteBtn.labelString:  Slett
+
+ColorMap*deleteDialog.deleteBoxCancelBtn.labelString:  Avbryt
+
+! title of delete dialog
+ColorMap*deleteDialog.dialogTitle:                     Slett fargedefinisjonsfil
+
+ColorMap*deleteDialog.deleteBoxLabel.labelString:      Velg hvilke filer som skal slettes:
+
+ColorMap*deleteDialog.deleteBoxLabelAlt.labelString:   Ingen filer å slette.
+
+! message at bottom of primary window
+ColorMap*selectedDeleted:                              Valgte fargedefinisjonsfiler ble slettet.
+
+
+!*****************************************************
+!**  Delete file verification dialog box            **
+!*****************************************************
+ColorMap*deleteVerifyDialog.dialogTitle:        Bekreft sletting
+
+ColorMap*deleteVerifyDialog.okLabelString:      OK
+
+ColorMap*deleteVerifyDialog.cancelLabelString:  Avbryt
+
+! this cannot be much longer
+ColorMap*noUndoDelete:                          Sletting av filene kan ikke oppheves. Vil du fortsette?
+
+ColorMap*noFilesDelete:                         Ingen filer er valgt. Sletting ugyldig.
+
+
+!****************************************************
+!**  Emulator preference in construct list         **
+!**						   **
+!**  MAX:  text should be less than 15 characters  **
+!****************************************************
+ColorMap*emuPrefMenuLabel.labelString:       Handlingslinje
+
+ColorMap*emuPrefBlueText.labelString:        Blå tekst
+
+ColorMap*emuPrefGreenText.labelString:       Grønn tekst
+
+ColorMap*emuPrefPinkText.labelString:        Rosa tekst
+
+ColorMap*emuPrefRedText.labelString:         Rød tekst
+
+ColorMap*emuPrefTurquoiseText.labelString:   Turkis tekst
+
+ColorMap*emuPrefWhiteText.labelString:       Hvit tekst
+
+ColorMap*emuPrefYellowText.labelString:      Gul tekst
+
+ColorMap*emuPrefPbBackground.labelString:    Skjermtast
+
+ColorMap*emuPrefStatusLine.labelString:      Statuslinje
+
+ColorMap*groupBoxLabel.labelString:          Funksjoner
+
+ColorMap*entryAreaLabel.labelString:         Skrivefelt
+
+ColorMap*helperFormLabel.labelString:        Skjermtast
+
+
+!**************************
+!**  Error dialog boxes  **
+!**************************
+ColorMap*noColorCellsMsgText.value: Kunne ikke tildele fargeressursene som er nødvendig for å starte fargedefinisjonsprogrammet. Lukk en applikasjon som bruker mange farger, og prøv på nytt.
+
+ColorMap*setColorMsgText.value:      Ikke alle fargene ble tatt i bruk i emuleringssesjonen. De riktige fargene blir lagret hvis du har valgt Lagre.
+
+ColorMap*setColorFailureCancelBtn.labelString:        Avbryt
+
+
+!**********************************
+!**  General Error dialog boxes  **
+!**********************************
+ColorMap*noAdvanced.value:            Kunne ikke tildele fargeressurser for å få en fargedefinisjon av alle funksjoner.
+
+ColorMap*noAdvancedOkbutton.labelString:  OK
+
+
+!*******************************************************************************
+!**  quitDialog resources                                                     **
+!*******************************************************************************
+ColorMap*quitDialog.dialogTitle:           Advarsel
+
+ColorMap*quitDialog1:                      Fargene i emuleringen er endret, men ikke tatt i bruk eller lagret.
+
+ColorMap*quitDialog2:                      Fargene i emuleringen er endret og tatt i bruk, men ikke lagret.
+
+ColorMap*quitDialog3:                      Fargene i emuleringen er endret og lagret, men ikke tatt i bruk.
+
+ColorMap*quitDialog*exitBox.labelString:   Avslutt
+
+ColorMap*quitDialog*cancelBox.labelString: Avbryt
+
+ColorMap*quit1Tog1:                        Avslutt uten å ta i bruk eller lagre endringene.
+
+ColorMap*quit2Tog1:                        Avslutt uten å lagre endringene.
+
+ColorMap*quitDialog*quitTog2.labelString:  Ta i bruk og lagre endringene før du avslutter.
+
+ColorMap*quit3Tog1:                        Avslutt uten å ta i bruk endringene.
+
+ColorMap*quitTog3.labelString:             Ta i bruk endringene i denne sesjonen før du avslutter.
+
+ColorMap*quitDialog*quitTog4.labelString:  Lagre endringene før du avslutter.
+
+
+!*******************************************************************************
+!**  Informational Messages                                                   **
+!*******************************************************************************
+ColorMap*InfoMsgColorsSaved:    Farger som er lagret i filen:
+
+ColorMap*tempApp:               Farger som er midlertidig tatt i bruk i emuleringssesjonen.
+
+ColorMap*notLoaded:             Kunne ikke laste ned fargedefinisjonsfilen. Kontroller om filen finnes fremdeles.
+
+ColorMap*errorLoad:             Formatet på fargefilen var feil.
+
+
+! this resource should contain one black space character; do not translate.
+ColorMap*blank:  
+
+ColorMap*chooseApply:           Velg Bruk hvis du vil at fargene skal bli brukt i denne sesjonen.
+
+ColorMap*noAccessDir:           Fikk ikke tilgang til katalogen.
+
+! this cannot be made any longer during translation
+ColorMap*noOpenFile:            Kan ikke åpne fargefilen:
+
+ColorMap*noMakeDir:             Kan ikke opprette katalogen.
+
+ColorMap*noDeterminePath:       Kan ikke finne filbanen.
+

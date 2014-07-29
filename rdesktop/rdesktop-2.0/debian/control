@@ -1,0 +1,15 @@
+Source: rdesktop
+Section: x11
+Priority: optional
+Maintainer: Joern Frenzel <t.bauspiess@openthinclient.com>
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.6.1
+
+Package: rdesktop
+Architecture: i386
+Depends: base (>= 2.0)
+Description: RDP client for Windows NT/2000 Terminal Server
+ rdesktop is an open source client for Windows NT/2000 Terminal Server, capable
+ of natively speaking its Remote Desktop Protocol (RDP) in order to present
+ the user's NT/2000 desktop. Unlike Citrix ICA, no server extensions are
+ required.

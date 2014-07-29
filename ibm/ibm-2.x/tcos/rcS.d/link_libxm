@@ -1,0 +1,5 @@
+#! /bin/bash
+set -u -e 
+
+logger "linking libXm."
+[ ! -e /usr/lib/libXm.so.3  ] && /bin/ln -snf /usr/lib/libXm.so.4.0.3 /usr/lib/libXm.so.3 

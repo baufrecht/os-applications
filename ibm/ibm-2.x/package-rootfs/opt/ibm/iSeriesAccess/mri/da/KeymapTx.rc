@@ -1,0 +1,1648 @@
+!
+!
+!
+! This file contains the resource text strings for the IBM Network Station 3270, 5250, VTxxx 
+! emulators, in particular the keyboard remapping, keypad customize, and playback edit programs.
+
+! This resource file is stored in locale specific ASCII (code page 819 for Latin1 languages).
+! This resource file is stored on the booting server as N3_5KeyM.
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. Resource format: 
+!    - A resource line starts with one of the following strings:
+!      Keymap52* : for keymapper resources
+!      Keypad52* : for keypad customize resources
+!      Playedit* : for playback editor resources  
+!      Keyxxx52* : for resources shared by keymapper and keypad
+!      AllShare* : for resources shared by keymapper, keypad, and playback editor
+!    - Each string is followed by a resource name and a ":".  
+!		Do NOT make any changes to the text to the left of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+
+! ********************************************************************************
+! Keyboard Remapping Resources
+! ********************************************************************************
+!
+! In general, the following buttons should not be made much longer during translation.
+! Buttons have one to four words. Note: Testing is the only way to know for sure if all
+! buttons fit on the screen ok.  The emulators have a testing document that will be used
+! during testing; this will point out a problem if button text is too long. In many 
+! cases, buttons are presented side by side, where the total button text length cannot
+! increase significantly.
+Keymap52*key.labelString:  Aktuel tast
+!
+Keymap52*title:  Omdefinition af taster
+!
+Keymap52*iname5250:  5250-tastaturoversigt
+!
+Keymap52*iname3270:  3270-tastaturoversigt
+!
+Keymap52*inameNSTERM:  Tastaturoversigt til VT-emulering
+!
+AllShare*fileSaveButton.labelString:  Gem
+!
+Keymap52*fileDeleteButton.labelString:  Slet
+!
+Keymap52*applyTranslationsButton.labelString:  Aktivér ændringer for sessionen
+!
+AllShare*fileQuitButton.labelString:  Afslut
+!
+AllShare*helpPush.labelString:  Hjælp
+!
+AllShare*lowMemMsgDialog.messageString:  Der er ikke nok hukommelse til at starte Vis hjælp.
+!
+AllShare*quitDialog.dialogTitle:  Afslut advarsel
+!
+! Note: \n causes a new line in the dialogue box and should not be translated.
+! You can move, add, or remove \n within this text string.
+Keymap52*invalidExt.value: Filtypen for tastdefinitionsfilen er forkert eller mangler. \n Den korrekte filtype er automatisk tilføjet. \n Bemærk det nye navn og den nye filtype i meddelelsesområdet.
+!
+Keymap52*invalidExtOkButton.labelString:  OK
+!
+Keymap52*invalidFileName.value:  Det indtastede tegn er ikke gyldigt i filnavne.
+!
+Keymap52*invalidFileNameOkbutton.labelString:  OK
+!
+Keymap52*noKeyCaps.value: Tastdefinitionsprogrammet er blevet opdateret i forbindelse med tastaturtypen. Teksten til tasterne på grafiske tastaturer bliver vist på engelsk.
+!
+Keymap52*noKeyCapOkbutton.labelString:  OK
+!
+Keymap52*EBCMismatchText.value: Sproget for emuleringssessionen, der har kaldt programmet Omdefinition af taster, svarer ikke til sproget for IBM Network Station. Tegn og strenge, der oprettes af dette program, kan give uønskede resultater i emuleringssessionen.
+!
+Keymap52*mismatchOKbutton.labelString:  OK
+!
+Keymap52*poorResolutionMsgText.value:   Skærmopløsningsgraden er mindre end 800 x 600. Programmet Omdefinition af taster understøtter ikke skærme med en opløsningsgrad, der er mindre end 800 x 600.
+!
+Keymap52*keymapFailureCancelBtn.labelString:  Annullér
+!
+Keymap52*saveDialog.dialogTitle:  Gem Omdefinition af taster
+!
+Keymap52*saveBoxLabel*labelString:  Vælg, hvor ændringer til omdefinition af taster skal gemmes:
+!
+Keymap52*saveBoxToggle1.labelString:  Gem som standardværdi for alle sessionerne
+!
+Keymap52*saveBoxToggleNsterm1.labelString:      Gem som standardværdi for denne terminaltype.
+!
+Keymap52*saveBoxToggle2.labelString:  Gem kun for denne session
+!
+Keymap52*saveBoxToggle3.labelString:  Gem som en navngivet tastdefinitionsfil (kun administrator)
+!
+AllShare*saveBoxSaveBtn.labelString:  Gem
+!
+AllShare*saveBoxCancelBtn.labelString:  Annullér
+!
+Keymap52*fileNameSaveBoxLabel.labelString:  Indtast navn på tastdefinitionsfilen:
+!
+Keymap52*fileDeleteDialog.dialogTitle:  Slet fil med omdefinition af taster
+!
+Keymap52*fileDeleteBoxLabel*labelString:  Vælg filer, der skal slettes:
+!
+KeyXXX52*fileDeleteBoxLabelAlt*labelString:  Der er ingen filer at slette
+!
+KeyXXX52*fileDeleteBoxDeleteBtn.labelString:  Slet
+!
+KeyXXX52*fileDeleteBoxCancelBtn.labelString:  Annullér
+!
+KeyXXX52*fileDeleteVerifyDialog.dialogTitle:  Bekræft sletning
+!
+KeyXXX52*fileDeleteVerifyDialog.okLabelString:  OK
+!
+KeyXXX52*fileDeleteVerifyDialog.cancelLabelString:  Annullér
+
+! this cannot be much longer
+KeyXXX52*noundoDelete:  Sletning af filer kan ikke fortrydes. Vil du slette?
+!
+KeyXXX52*novalidDelete:  Der er ikke valgt nogen filer. Sletning er ikke gyldig.
+!
+Keymap52*fileWarningDialog.dialogTitle:  Advarsel - tastdefinition
+!
+AllShare*fileWarningDialog.okLabelString:  Ja
+!
+AllShare*fileWarningDialog.cancelLabelString:  Nej
+!
+AllShare*fileAlreadyExists:  Filen findes allerede. Skal den overskrives?
+!
+Keymap52*transTempApp:  Ændringer fra Omdefinition af taster er midlertidigt aktiveret for sessionen.
+!
+AllShare*nomakeDir:  Kan ikke oprette bibliotek.
+!
+AllShare*nofilepathSave:  Stien til filen er forkert.
+!
+Keymap52*transRxd:  Oprindelig tastaturdefinition er hentet fra emuleringssession.
+!
+Keymap52*saveTran:  Gemmer fil med omdefinition af taster...
+!
+Keymap52*savetoTranError:  Fejl, da fil med omdefinition af taster skulle gemmes. Filen er ikke gemt.
+!
+Keymap52*savedtoTran:  	Fil med omdefinition af taster gemmes i:
+!
+Keymap52*quitDialog1:  Tastdefinition er ændret, men ikke aktiveret eller gemt.
+!
+Keymap52*quit1Tog1:  Afslut uden at aktivere eller gemme ændringer.
+!
+Keymap52*quit1Tog2:  Aktivér og gem ændringer, før du afslutter.
+!
+Keymap52*quitDialog2:  Tastdefinition er ændret og aktiveret, men ikke gemt.
+!
+Keymap52*quit2Tog1:  Afslut uden at gemme. Fortryd ændringer til tastdefinition.
+!
+Keymap52*quit2Tog2:  Afslut uden at gemme. Lad ændringer midlertidigt være aktive for session.
+!
+Keymap52*quitDialog3:  Tastdefinition er ændret og gemt, men ikke aktiveret.
+!
+Keymap52*quit3Tog1:  Afslut uden at aktivere ændringer.
+!
+Keymap52*quitTog3.labelString:  Aktivér ændringerne til sessionen, før du afslutter.
+!
+AllShare*quitDialog*quitTog4.labelString:  Gem ændringer, før du afslutter.
+!
+AllShare*quitDialog*exitBox.labelString:  Afslut
+!
+AllShare*quitDialog*cancelBox.labelString:  Annullér
+!
+Keymap52*undoDialog.dialogTitle:  Genindlæs dialogboks
+!
+Keymap52*undoDialog1.labelString:  Vælg en tastdefinitionstilstand, der skal genindlæses.
+!
+Keymap52*undoDialog*undoBox.labelString:  OK
+!
+Keymap52*undoDialog*cancelBox.labelString:  Annullér
+!
+Keymap52*restoreWarning.dialogTitle:  Afslut meddelelse
+!
+Keymap52*restoreWarning.okLabelString:  OK
+
+! this cannot be made much longer during translation
+Keymap52*restoreWarning.messageString:  Omdefinition af taster for session er genindlæst med de oprindelige værdier.
+!
+Keymap52*nonValidDialog.dialogTitle:  Advarsel
+!
+KeyXXX52*nonValidDialog.okLabelString:  OK
+!
+Keymap52*nonValidDialog.messageString:  En eller flere af funktionerne for tasten er ikke gyldige.
+!
+Keymap52*reservedtrans.dialogTitle:  Advarsel
+!
+Keymap52*reservedtrans.okLabelString:  OK
+
+! this cannot be made much longer during translation
+Keymap52*reservedtrans.messageString:  Tastanslag, reserveret af Window Manager, kan ikke omdefineres.
+!
+Keymap52*lastButton.labelString:  Genindlæs tastdefinition fra sidste aktivering
+!
+Keymap52*origButton.labelString:  Genindlæs oprindelig tastdefinition
+
+! this cannot be made much longer during translation
+Keymap52*lastRest:  Omdefinition af taster er genindlæst til værdierne fra sidste aktivering af session.
+!
+Keymap52*origRest:  Omdefinition af taster er genindlæst med de oprindelige værdier.
+!
+Keymap52*noRest:  Der er ikke valgt genindlæsningsværdier. Der udføres ingen ændringer.
+!
+Keymap52*fileDeleted:  De valgte filer til omdefinition af taster er slettet.
+
+! this resource has been left intentionally blank, do not translate.
+Keymap52*blank: 
+!
+Keymap52*basePb.labelString:  -> Basis
+!
+AllShare*changePb.labelString:  OK
+!
+AllShare*cancelPb.labelString:  Annullér
+!
+AllShare*actionListLabel.labelString:  Oversigt over tilgængelige funktioner:
+!
+AllShare*charListLabel.labelString:  Tegnoversigt:
+!
+AllShare*actionDef.labelString:  Definition af funktion:
+!
+AllShare*printActionDefTitle:  Tilgængelige definitioner af funktioner
+!
+Keymap52*restorePB.labelString:  Genindlæs
+
+! this cannot be made any longer during translation.
+Keymap52*locatePB.labelString:  Søg
+
+! this cannot be made any longer during translation.
+Keymap52*nothingTB.labelString:  Ingen funktion
+!
+Keymap52*translistdialog.dialogTitle:  Udvidet omdefinition af taster
+!
+Keymap52*noRemPass:  Ugyldig funktion. Passive tastdefinitioner kan ikke fjernes.
+!
+Keymap52*searchFailed:  Søgning har ikke fundet funktioner, som svarer til tastdefinition.
+!
+Keymap52*searchSuccess:  Søgning er udført....
+!
+Keymap52*searchSemi:  Søgning er udført... tasten til denne funktion er ikke tilgængelig.
+!
+Keymap52*noSearchMsg:  Søgning kan ikke udføres, fordi der ikke er valgt en gyldig funktion.
+!
+Keymap52*nonStand:  Der er mindst en konvertering for tasten, som ikke kan vises.
+!
+Keymap52*change.dialogTitle:  Advarsel - tastdefinition
+!
+KeyXXX52*change.messageString:  Godkend eller annullér ændringer til aktuel tast, før du får vist en anden tast.
+!
+KeyXXX52*change.okLabelString:  Fortsæt
+!
+Keymap52*editb.labelString:  Redigér
+!
+Keymap52*insertb.labelString:  Indsæt
+!
+Keymap52*removeb.labelString:  Fjern
+!
+Keymap52*closeb.labelString:  Luk
+!
+Keymap52*editDialog.dialogTitle:  Redigér dialogboks
+!
+Keymap52*editDialog*editLabel.labelString:  Redigér konverteringen herunder:
+!
+Keymap52*editDialog*okButton.labelString:  OK
+!
+Keymap52*editDialog*clearButton.labelString:  Ryd
+!
+Keymap52*editDialog*cancelButton.labelString:  Annullér
+!
+Keymap52*Any:  -> Basis
+!
+Keymap52*Shift:  -> Skift
+!
+Keymap52*Lock:  -> Caps Lock
+!
+Keymap52*Lock122:  -> Skiftelås
+!
+Keymap52*Ctrl:  -> Venstre Ctrl
+!
+Keymap52*CtrlNsterm: -> Ctrl
+!
+Keymap52*Alt:  -> Alt
+!
+Keymap52*Mod2:  -> Alt Gr
+!
+Keymap52*Mod3:  -> APL/Super
+!
+Keymap52*Mod4:  -> Mod4
+!
+Keymap52*Mod5:  -> Num Lock
+!
+Keymap52*Shift_Alt:  -> Skift+Alt
+!
+Keymap52*cantdothat.dialogTitle:  Advarsel - tastdefinition
+!
+Keymap52*cantdothat.messageString:  Godkend eller annullér ændringer til aktuel tast, før du vælger punkt på menulinien.
+!
+KeyXXX52*cantdothat.okLabelString:  Fortsæt 
+!
+Keymap52*chooseApply:  Vælg Aktivér, så ændringer kan træde i kraft for sessionen.
+!
+Keymap52*transListLabel.labelString:  Oversigt over konverteringer:
+!
+Keymap52*seeHelpLabel.labelString:  Læs hjælpen, før du foretager udvidede ændringer.
+!
+Keymap52*keyAction.labelString:  Tast/Funktion
+!
+Keymap52*nomapmod:  Revideringstaster kan ikke omdefineres.
+!
+AllShare*toobig:  Funktionen er annulleret. Maksimal funktionslængde er overskredet.
+!
+Keymap52*currKeyLabel.labelString:  Aktuel tast:
+!
+AllShare*printKeymap.labelString:  Udskriv
+!
+AllShare*printDialogCancelButton.labelString:  Annullér
+!
+AllShare*printDialogBoxLabel.labelString:  Vælg udskrivningsmuligheder
+!
+AllShare*printDialogSelectPrinter.labelString:  Vælg en printer:
+!
+AllShare*PrinterSelectServerDelineator:  @
+!
+AllShare*PrinterSelectLocalDesignator:  (Lokal)
+!
+AllShare*ActionHelpPrinted:  Hjælp til definitioner af funktioner er udskrevet
+!
+AllShare*printDialogPrintInProgress.labelString:  Udskriver...
+!
+AllShare*okLabelString:  OK
+!
+AllShare*cancelLabelString:  Annullér
+!
+! Start Action list translations (to be shared by keypad customizer and keymapper).
+! 
+! Rules for translating actions:
+! 1) Action text (to the right of the ":") is translated
+! 2) All actions need to end in ()
+! 3) Action text may not contain spaces
+! 4) Action text may be separated by capitals or underscores (_)
+! 5) Because actions are cross-referenced, each translated action must be unique
+! 6) Action text should be a maximum of 29 characters, not counting the () characters
+!
+!    ValidActionText()
+!    InvalidActionText
+!    ValidActionText()
+!    Valid_Action_Text()
+!    Invalid Action Text()
+!
+!    Valid Unique action names:
+!    Keyxxx52*tab():  Tab()
+!    Keyxxx52*backtab():  BackTab()
+!    Keyxxx52*tabadvancefunction():  TabAdvance()
+!    Keyxxx52*tabfunction():  OfficeTabFunction()
+!
+!    Invalid action names, not unique:
+!    Keyxxx52*tab():  Tab()
+!    Keyxxx52*backtab():  Tab()
+!    Keyxxx52*tabadvancefunction():  Tab()
+!    Keyxxx52*tabfunction():  Tab()
+!
+! Each action is followed by an action definition (to the right of the ":") which is translated
+!
+Keyxxx52*nothing():  IngenFunktion()
+AllShare*DEFnothing():  Denne funktion udfører ingenting og bruges til at vise en tom funktion.
+!
+Keyxxx52*ruleline():  Lineal()
+AllShare*DEFruleline():  Skifter mellem visning og ikke-visning af lineal.  Linealen kan bruges til at finde markøren. Med punktet Diverse indstillinger kan du aktivere (standardværdi) eller deaktivere linealfunktionen og ændre linealtypen.
+!
+AllShare*string():  Streng()
+AllShare*DEFstring():  Viser et tegn eller en tegnstreng ved markørens position.  Funktionens format er Streng("tekst"). Du skal bruge dobbelte anførselstegn ("), og teksten er det tegn eller den tegnstreng, som bliver vist.Streng() bruges til at oprette tastaturmakroer.
+!
+Keyxxx52*play():  Afspil()
+AllShare*DEFplay():  Funktionen Afspil() viser afspilningsvinduet, så du kan starte en afspilningsfil. Funktionen Afspil() kan også bruge et navn på en afspilningsfil som parameter (i parentesen). Afspilningsfilen startes automatisk.
+!
+Keyxxx52*record():  Indspil()
+AllShare*DEFrecord():  Viser vinduet Indspil, hvor du kan starte indspilningen af en sekvens.
+!
+AllShare*pause():  Pause()
+AllShare*DEFpause():  Holder pause i afspilningen eller indspilningen af en fil.  Brugeren skal vælge Fortsæt for at fortsætte med afspilningen eller indspilningen.
+!
+AllShare*local-screen-print():  SkærmPrint()
+AllShare*DEFlocal-screen-print():  Viser et vindue, hvor du kan udskrive det aktuelle skærmbillede.
+!
+Keyxxx52*print-screen-now():  SkærmPrintNu()
+AllShare*DEFprint-screen-now():  Udskriver det aktuelle skærmbillede vha. de sidst anvendte udskrivningsmuligheder og den sidst anvendte printer.
+!
+AllShare*extended():  VisAttributter()
+AllShare*DEFextended():  Viser alle feltattributter på skærmen.
+!
+AllShare*up():  MarkørOp()
+AllShare*DEFup():  Flytter markøren én markørposition op.
+!
+AllShare*down():  MarkørNed()
+AllShare*DEFdown():  Flytter markøren én markørposition ned.
+!
+AllShare*left():  MarkørVenstre()
+AllShare*DEFleft():  Flytter markøren én markørposition til venstre.
+!
+AllShare*right():  MarkørHøjre()
+AllShare*DEFright():  Flytter markøren én markørposition til højre.
+!
+AllShare*fastleft():  HurtigModVenstre()
+AllShare*DEFfastleft():  Flytter markøren tre markørpositioner til venstre.
+!
+AllShare*fastright():  HurtigModHøjre()
+AllShare*DEFfastright():  Flytter markøren tre markørpositioner til højre.
+!
+AllShare*newline():  NyLinie()
+AllShare*DEFnewline():  Flytter markøren til begyndelsen af indtastningsfeltet på den næste linie.
+!
+AllShare*home():  Home()
+AllShare*DEFhome():  Flytter markøren til Home-positionen (typisk positionen for det første indtastningsfelt på skærmen) og sender nogle gange Home AID-koden til værtssystemet.
+!
+AllShare*tab():  Tabulatortast()
+AllShare*DEFtab():  Flytter markøren til det næste indtastningsfelt.
+!
+AllShare*backtab():  Tilbagetabuleringstast()
+AllShare*DEFbacktab():  Hvis markøren er placeret i den første position i et indtastningsfelt eller i et outputområde, flytter den til den første position i det foregående indtastningsfelt. Hvis markøren er placeret i en anden position end første position i et felt, flytter den til første position i feltet.
+!
+AllShare*end():  Linieslut()
+AllShare*DEFend():  Flytter markøren hen efter det sidste ikke-NULL eller ikke-tomme tegn i et indtastningsfelt.
+!
+AllShare*tabadvancefunction():  TabulatorRykFrem()
+AllShare*DEFtabadvancefunction():  Flytter markøren til det næste logiske indtastningsfelt.
+!
+AllShare*insert():  Indsæt()
+AllShare*DEFinsert():  Starter indsættetilstand.
+!
+AllShare*delete():  Slet()
+AllShare*DEFdelete():  Sletter tegnet på markørens position.
+!
+AllShare*backspace():  Baktast()
+AllShare*DEFbackspace():  Flytter markøren én markørposition tilbage og kan slette tegnet før markøren. Ved hjælp af Diverse indstillinger kan du aktivere eller deaktivere sletningen af tegnet vha. baktasten.
+!
+AllShare*erase-eof():  SletTilFeltslut()
+AllShare*DEFerase-eof():  Sletter alle tegn fra markørens position til slutningen af feltet.
+!
+AllShare*erase-input():  RydInputfelter()
+AllShare*DEFerase-input():  Rydder alle inputfelter på skærmen.
+!
+AllShare*dup():  Dup()
+AllShare*DEFdup():  Udfylder feltet med dup-tegnet (det samme tegn) fra markørens position til slutningen af feltet.
+!
+AllShare*field-mark():  FeltMarkering()
+AllShare*DEFfield-mark():  Markerer et felt med tegnet for feltmarkering.
+!
+AllShare*pf1():  F1()
+AllShare*DEFpf1():  Udfører den funktion, der er defineret for F1-tasten.
+!
+AllShare*pf2():  F2()
+AllShare*DEFpf2():  Udfører den funktion, der er defineret for F2-tasten.
+!
+AllShare*pf3():  F3()
+AllShare*DEFpf3():  Udfører den funktion, der er defineret for F3-tasten.
+!
+AllShare*pf4():  F4()
+AllShare*DEFpf4():  Udfører den funktion, der er defineret for F4-tasten.
+!
+AllShare*pf5():  F5()
+AllShare*DEFpf5():  Udfører den funktion, der er defineret for F5-tasten.
+!
+AllShare*pf6():  F6()
+AllShare*DEFpf6():  Udfører den funktion, der er defineret for F6-tasten.
+!
+AllShare*pf7():  F7()
+AllShare*DEFpf7():  Udfører den funktion, der er defineret for F7-tasten.
+!
+AllShare*pf8():  F8()
+AllShare*DEFpf8():  Udfører den funktion, der er defineret for F8-tasten.
+!
+AllShare*pf9():  F9()
+AllShare*DEFpf9():  Udfører den funktion, der er defineret for F9-tasten.
+!
+AllShare*pf10():  F10()
+AllShare*DEFpf10():  Udfører den funktion, der er defineret for F10-tasten.
+!
+AllShare*pf11():  F11()
+AllShare*DEFpf11():  Udfører den funktion, der er defineret for F11-tasten.
+!
+AllShare*pf12():  F12()
+AllShare*DEFpf12():  Udfører den funktion, der er defineret for F12-tasten.
+!
+AllShare*pf13():  F13()
+AllShare*DEFpf13():  Udfører den funktion, der er defineret for F13-tasten.
+!
+AllShare*pf14():  F14()
+AllShare*DEFpf14():  Udfører den funktion, der er defineret for F14-tasten.
+!
+AllShare*pf15():  F15()
+AllShare*DEFpf15():  Udfører den funktion, der er defineret for F15-tasten.
+!
+AllShare*pf16():  F16()
+AllShare*DEFpf16():  Udfører den funktion, der er defineret for F16-tasten.
+!
+AllShare*pf17():  F17()
+AllShare*DEFpf17():  Udfører den funktion, der er defineret for F17-tasten.
+!
+AllShare*pf18():  F18()
+AllShare*DEFpf18():  Udfører den funktion, der er defineret for F18-tasten.
+!
+AllShare*pf19():  F19()
+AllShare*DEFpf19():  Udfører den funktion, der er defineret for F19-tasten.
+!
+AllShare*pf20():  F20()
+AllShare*DEFpf20():  Udfører den funktion, der er defineret for F20-tasten.
+!
+AllShare*pf21():  F21()
+AllShare*DEFpf21():  Udfører den funktion, der er defineret for F21-tasten.
+!
+AllShare*pf22():  F22()
+AllShare*DEFpf22():  Udfører den funktion, der er defineret for F22-tasten.
+!
+AllShare*pf23():  F23()
+AllShare*DEFpf23():  Udfører den funktion, der er defineret for F23-tasten.
+!
+AllShare*pf24():  F24()
+AllShare*DEFpf24():  Udfører den funktion, der er defineret for F24-tasten.
+!
+AllShare*clear():  Ryd()
+AllShare*DEFclear():  Sender AID-koden om rydning til værtssystemet.
+!
+AllShare*enter():  Enter()
+AllShare*DEFenter():  Udfører Enter-funktionen.
+!
+AllShare*pa1():  PA1()
+AllShare*DEFpa1():  Sender PA1 AID-koden til værtssystemet.
+!
+AllShare*pa2():  PA2()
+AllShare*DEFpa2():  Sender PA2 AID-koden til værtssystemet.
+!
+AllShare*pa3():  PA3()
+AllShare*DEFpa3():  Sender PA3 AID-koden til værtssystemet.
+!
+AllShare*sysreq():  SysRq()
+AllShare*DEFsysreq():  Sender AID-koden om systembestilling til værtssystemet.
+!
+AllShare*reset():  Reset()
+AllShare*DEFreset():  Genindstiller en fejl.
+!
+AllShare*hex-entry():  HexTilstand()
+AllShare*DEFhex-entry():  Angiver en tilstand for de næste to anslag for at oprette et EBCDIC-tegn. Anslagene skal være 0 til 9 eller a til f.
+!
+AllShare*hex():  Hex()
+AllShare*DEFhex():  Kræver en tegnværdi på to tegn som parameter (i parentesen). Værdien på to tegn (00 til ff) er et tegn i en 819 ASCII-tegntabel.
+!
+AllShare*cursor-select():  MarkørValg()
+AllShare*DEFcursor-select():  Markerer det felt, hvor markøren er placeret.
+!
+AllShare*attention():  Attention()
+AllShare*DEFattention():  Sender Attention AID-koden til værtssystemet.
+!
+AllShare*print():  SystemPrint()
+AllShare*DEFprint():  Sender AID-koden om udskrivning til værtssystemet.
+!
+AllShare*scroll_image_up():	BladOp()
+AllShare*DEFscroll_image_up():  Blader op i billedet.
+!
+AllShare*scroll_image_down():	BladNed()
+AllShare*DEFscroll_image_down():  Blader ned i billedet.
+!
+AllShare*scroll_image_right():	BladModVenstre()
+AllShare*DEFscroll_image_right():  Blader til højre i billedet.
+!
+AllShare*scroll_image_left():	BladModHøjre()
+AllShare*DEFscroll_image_left():  Blader til venstre i billedet.
+!
+AllShare*help():  SystemHjælp()
+AllShare*DEFhelp():  Sender AID-koden om hjælp til værtssystemet.
+!
+AllShare*rolldown():  PageUp()
+AllShare*DEFrolldown():  Blader én side op.
+!
+AllShare*rollup():  PageDown()
+AllShare*DEFrollup():  Blader én side ned.
+!
+AllShare*fieldexit():  FieldExit()
+AllShare*DEFfieldexit():  Flytter til begyndelsen af det næste felt på skærmbilledet.
+!
+AllShare*fieldplus():  FieldPlus()
+AllShare*DEFfieldplus():  Flytter til begyndelsen af det næste felt på skærmbilledet.
+!
+AllShare*fieldminus():  FieldMinus()
+AllShare*DEFfieldminus():  Gør værdien i feltet negativ og flytter til det næste felt.
+!
+AllShare*testreq():  Test()
+AllShare*DEFtestreq():  Sender AID-koden om testanmodning til værtssystemet.
+!
+! Note: Office actions are used within the AS/400 OfficeVision editor.
+AllShare*tabfunction():  OfficeTabulator()
+AllShare*DEFtabfunction():  Indsætter et tabulatortegn ved markørens position i OV/400-redigeringsprogrammet.
+!
+AllShare*textcarrierreturn():  OfficeLinieskift()
+AllShare*DEFtextcarrierreturn():  Placerer et linieskift ved markørens position i OV/400-redigeringsprogrammet.
+!
+AllShare*textrqtabfunction():  OfficeFastTabulatorstop()
+AllShare*DEFtextrqtabfunction():  Placerer et fast tabulatorstop ved markørens position i OV/400-redigeringsprogrammet. Et fast tabulatorstop definerer en midlertidig indrykning, som forbliver i kraft, indtil den afsluttes af et fast linieskift.
+!
+AllShare*textunderscore():  OfficeUnderstreg()
+AllShare*DEFtextunderscore():  Begynder understregning ved markørens position i OV/400-redigeringsprogrammet.
+!
+AllShare*textintensify():  OfficeStartFedSkrift()
+AllShare*DEFtextintensify():  Begynder fed skrift ved markørens position i OV/400-redigeringsprogrammet.
+!
+AllShare*textendattribute():  OfficeSlutUnderstreg_Fed()
+AllShare*DEFtextendattribute():  Afslutter understregningen eller den fede skrift i OV/400-redigeringsprogrammet.
+!
+AllShare*textsymbolscmdprompt():  OfficeIndsætSpecialtegn()
+AllShare*DEFtextsymbolscmdprompt():  Viser feltet, hvor der kan indtastes symboler, som ikke findes på tastaturet, i OV/400-redigeringsprogrammet.
+!
+AllShare*textrqspace():  OfficeFastMellemrum()
+AllShare*DEFtextrqspace():  Placerer et fast mellemrum ved markørens position i OV/400-redigeringsprogrammet. Et fast mellemrum vises som et mellemrum, men de to tegn, der deles pga. det faste mellemrum, holdes altid på samme linie.
+!
+AllShare*texttopofpage():  OfficeSidestart()
+AllShare*DEFtexttopofpage():  Flytter markøren (og flytter evt. skærmbilledet) til toppen af den viste side i OV/400-redigeringsprogrammet og
+!
+AllShare*textbottomofpage():  OfficeSideslut()
+AllShare*DEFtextbottomofpage():  Flytter markøren (og flytter evt. skærmbilledet) til slutningen af den viste side i OV/400-redigeringsprogrammet og
+!
+AllShare*textbeginofline():  OfficeLiniestart()
+AllShare*DEFtextbeginofline():  Flytter markøren til begyndelsen af den aktuelle tekstlinie i OV/400-redigeringsprogrammet.
+!
+AllShare*textpageend():  OfficeIndsætSideslut()
+AllShare*DEFtextpageend():  Indsætter et tegn for sideslut i OV/400-redigeringsprogrammet. Der begyndes på en ny side.
+!
+AllShare*textstopcodefunction():  OfficeStopkodeIndsætning()
+AllShare*DEFtextstopcodefunction():  Viser feltet, hvor en ny stopkode kan defineres ved markørens position, i OV/400-redigeringsprogrammet.
+!
+AllShare*textstopcodeadvance():  OfficeStopkodeRykFrem()
+AllShare*DEFtextstopcodeadvance():  Flytter markøren til den næste stopkode i dokumentet i OV/400-redigeringsprogrammet.
+!
+AllShare*textaltd():  OfficeNæsteTekstkolonne()
+AllShare*DEFtextaltd():  Indsætter den styrekode, som starter på en ny tekstkolonne ved markørens position i OV/400-redigeringsprogrammet. Denne funktion er kun aktiv ved redigering af flere tekstkolonner (spalter).
+!
+AllShare*textcent():  OfficeCentrér()
+AllShare*DEFtextcent():  Centrerer den tekstlinie, hvor markøren er placeret, i OV/400-redigeringsprogrammet.
+!
+AllShare*textwordunderscore():  OfficeUnderstregOrd()
+AllShare*DEFtextwordunderscore():  Placerer en styrekode for understregning af ord ved markørens position i OV/400-redigeringsprogrammet. Markøren skal være placeret i slutningen af den tekst, der skal understreges. Understregningen går fra begyndelsen af ordet til markørens position.
+!
+AllShare*texthalfindexup():  OfficeHalvLinieOp()
+AllShare*DEFtexthalfindexup():  Placerer en styrekode for Halv linie op ved markørens position i OV/400-redigeringsprogrammet. Styrekoden for Halv linie op forbliver aktiv indtil den næste styrekode for Halv linie ned.
+!
+AllShare*texthalfindexdown():  OfficeHalvLinieNed()
+AllShare*DEFtexthalfindexdown():  Placerer en styrekode for Halv linie ned ved markørens position i OV/400-redigeringsprogrammet. Styrekoden for Halv linie ned forbliver aktiv indtil den næste styrekode for Halv linie op.
+!
+AllShare*displaytextsymb():  OfficeVisSymboler()
+AllShare*DEFdisplaytextsymb():  Viser de styretegn, som normalt ikke vises, i OV/400-redigeringsprogrammet. De omfatter tabulatorstop, fast tabulatorstop, linieskift, fast linieskift, fast mellemrum og sideslut.
+!
+AllShare*kanji():  IndsætSO_SI_Tegn()
+AllShare*DEFkanji():  Indsætter et DBCS skift ud-tegn og et DBCS skift ind-tegn. Benyttes på japansk, koreansk og kinesisk.
+!
+AllShare*reverse():  OmvendtMarkør()
+AllShare*DEFreverse():  Ændrer markørens retning i et felt og vælger det modsatte sprogniveau (language layer) til anslag. Benyttes på arabisk og hebraisk.
+!
+AllShare*close():  AfslutOmvendtMarkør()
+AllShare*DEFclose():  Lukker data i et felt ved at fjerne indlejrede blanktegn og flytte data hen mod feltets logiske start. Benyttes på arabisk og hebraisk.
+!
+AllShare*base():  BasisForm()
+AllShare*DEFbase():  Aktiverer og deaktiverer arabisk tegnudformning (shape). Benyttes på arabisk.
+!
+AllShare*charadvance():  RykTegnFrem()
+AllShare*DEFcharadvance():  Flytter markøren til den næste inputposition på skærmen.
+!
+AllShare*displaySOSI():  VisSO_SI_Tegn()
+AllShare*DEFdisplaySOSI():  Viser alle skift ud- og skift ind-tegn på skærmen. Benyttes på japansk, koreansk og kinesisk.
+!
+AllShare*reverse-scn():  OmvendtSkærmbillede()
+AllShare*DEFreverse-scn():  Ændrer skærmbilledets fremvisning. Benyttes på arabisk og hebraisk.
+!
+AllShare*EBChex():  EBCDIC_Hex()
+AllShare*DEFEBChex():  Gør det muligt at benytte EBCDIC-tegnværdier til indtastning af data. Benyttes på japansk, koreansk og kinesisk.
+!
+AllShare*AltView():  SkiftFremvisning()
+AllShare*DEFAltView():  Gør det muligt at få vist japanske data med en anden tegntabel.
+!
+Keyxxx52*noop():  IngenFunktion()
+AllShare*DEFnoop():  Denne funktion udfører ingenting og bruges til at vise en tom funktion.
+!
+! There are no parentheses after Undefined, making this action different than other actions.
+Keyxxx52*undefined():  Ikke defineret
+!
+AllShare*cursor-move():  FlytMarkør()
+AllShare*DEFcursor-move():  Flytter markøren til en angivet position på skærmen.
+!
+AllShare*forward-word():  NæsteOrd()
+AllShare*DEFforward-word():  Flytter markøren til begyndelsen af det næste ord.
+!
+AllShare*backward-word():  ForrigeOrd()
+AllShare*DEFbackward-word():  Flytter markøren til begyndelsen af det forrige ord.
+!
+AllShare*spbackspace():  SkiftBaktast()
+AllShare*DEFspbackspace():  Udfører en funktion, der svarer til Baktast.  Tegnene til højre for markøren flyttes kun, hvis indsættetilstand er aktiveret.
+!
+AllShare*kill-word():  SletRestenAfOrd()
+AllShare*DEFkill-word():  Sletter tegnene fra markøren til slutningen af ordet.
+!
+AllShare*backward-kill-word():  SletForrigeOrd()
+AllShare*DEFbackward-kill-word():  Sletter tegnene i det forrige ord.
+!
+AllShare*cent():  Cent()
+AllShare*DEFcent():  Viser valutategnet cent på markørens position.
+!
+AllShare*unlock():  LåsTastaturOp()
+AllShare*DEFunlock():  Låser tastaturet op, så der kan indtastes data.
+!
+AllShare*selpen-attn():  SelectorPenAttention()
+AllShare*DEFselpen-attn():  Sender AID-koden for Selector Pen Attention til værtssystemet.
+!
+AllShare*select-field():  PenVælgFelt()
+AllShare*DEFselect-field():  Vælger et felt.
+!
+AllShare*xh-attn():  AttentionSkift()
+AllShare*DEFxh-attn():  Sender AID-koden Skift Attention til værtssystemet.
+!
+Keyxxx52*insert-selection:  Klistre()
+Keyxxx52*DEFinsert-selection:  Indsætter udklipsholderens indhold ved markørens position.
+!
+Keyxxx52*jump():  Skift()
+AllShare*DEFjump():  Skifter til den næste session i sessionsoversigten. Hvis session 1 er den aktive session, bliver session 2 den aktive session.
+!
+Keyxxx52*jump-to-session():  SkiftTilSession()
+AllShare*DEFjump-to-session():  Skifter til den session, der er angivet som parameter i parentesen. Hvis værdien 2 er angivet som parameter, bliver den anden session den aktive session.
+!
+Keyxxx52*delay():  Forsink()
+AllShare*DEFdelay(): Tilføjer en pause mellem funktionerne, når der angives flere funktioner til én tastsekvens i forbindelse med omdefinition af taster eller tilpasning af tastgruppe. Parameteren i parentesen er en værdi angivet som tiendedele af et sekund. Fem tiendedele er standardværdien.
+!
+Keyxxx52*menu-bar-focus():  MenulinieFokus()
+AllShare*DEFmenu-bar-focus():  Giver adgang til menulinien uden brug af musen.
+!
+Keyxxx52*wider-font(): BredereFont()
+Keyxxx52*DEFwider-font(): Gør den aktuelle font bredere.
+!
+Keyxxx52*narrower-font(): SmallereFont()
+Keyxxx52*DEFnarrower-font(): Gør den aktuelle font smallere.
+!
+Keyxxx52*taller-font(): HøjereFont()
+Keyxxx52*DEFtaller-font(): Gør den aktuelle font højere.
+!
+Keyxxx52*shorter-font(): LavereFont()
+Keyxxx52*DEFshorter-font(): Gør den aktuelle font lavere.
+!	
+! The following three key sequences should be translated; they may be used in the future for keyboard actions that we currently do not know about.
+Keyxxx52*key-seq1():  Tastsekvens1()
+Keyxxx52*key-seq2():  Tastsekvens2()
+Keyxxx52*key-seq3():  Tastsekvens3()
+!
+! General dead key (the first key of a key sequence to create a dead key character, for example tilda in many languages) that is not remappable because dead keys are processed by the Network Station kernel.
+! There are no parentheses at the end of the following line.
+Keyxxx52*unmappable():  Dødtast
+!
+AllShare*inserteuro():  Euro()
+AllShare*DEFinserteuro():  Indsætter et eurosymbol ved markørens position.
+!
+! Action List Translations for NSTerm (VTxxx) 
+!
+Keymap52*vt-backspace(): VtBaktast()
+AllShare*DEFvt-backspace():  Flytter markøren én markørposition tilbage og sletter tegnet før markøren.
+!
+Keymap52*enterkey(): EnterTast()
+Keymap52*DEFenterkey():  Sender et tegn for Retur i samme linie til værten.
+!
+Keymap52*local-print-buffer(): LokalPrintBuffer()
+Keymap52*DEFlocal-print-buffer():  Viser et vindue, hvor du kan udskrive indholdet af bladringsbufferen.
+!
+Keymap52*local-print-screen(): LokalSkærmPrint()
+Keymap52*DEFlocal-print-screen():  Viser et vindue, hvor du kan udskrive det aktuelle skærmbillede.
+!
+Keymap52*cut-clipboard(): KlipUdklipsholder()
+Keymap52*DEFcut-clipboard():  Kopierer det markerede område på skærmen til udklipsholderen og fjerner området fra skærmen.
+!
+Keymap52*copy-clipboard(): KopiérUdklipsholder()
+Keymap52*DEFcopy-clipboard():  Kopierer det markerede område på skærmen til udklipsholderen.
+!
+Keymap52*paste-clipboard(): KlisteUdklipsholder()
+Keymap52*DEFpaste-clipboard():  Kopierer dataene i udklipsholderens buffer og placerer dem ved markørens position på skærmen.
+!
+Keymap52*beginning-of-buffer(): StartPåBuffer()
+Keymap52*DEFbeginning-of-buffer(): Flytter skærmbilledet til begyndelsen af bladringsbufferen.
+!
+Keymap52*end-of-buffer(): SlutPåBuffer()
+Keymap52*DEFend-of-buffer():  Blader i skærmbilledet, så slutningen af den aktuelle buffer vises.
+!
+Keymap52*hard-reset(): ResetFuld()
+Keymap52*DEFhard-reset():  Genindstiller terminalen til standardtilstand, sletter indholdet fra skærmen og rydder alle valg.
+!
+Keymap52*soft-reset(): ResetStd()
+Keymap52*DEFsoft-reset():  Genindstiller terminalen til standardtilstand.
+!
+Keymap52*vt-break(): VtBreak()
+Keymap52*DEFvt-break(): Sender et RS-232 break-signal til værtssystemet.
+!
+Keymap52*vt-find(): VtSøg()
+Keymap52*DEFvt-find(): Udfører søgningsfunktionen, hvis VT200-tilstand eller derover sender DEC-kode (CSI 1~) til værtssystemet.
+!
+Keymap52*vt-ins(): VtIndsæt()
+Keymap52*DEFvt-ins(): Udfører funktionen Indsæt her, hvis VT200-tilstand eller derover sender DEC-kode (CSI 2~) til værtssystemet.
+!
+Keymap52*vt-delete(): VtFjern()
+Keymap52*DEFvt-delete(): Udfører Fjern-funktionen, hvis VT200-tilstand eller højere sender DEC-kode (CSI 3~) til værtssystemet.
+!
+Keymap52*vt-select(): VtVælg()
+Keymap52*DEFvt-select(): Udfører Vælg-funktionen, hvis VT200-tilstand eller derover sender DEC-kode (CSI 4~) til værtssystemet.
+!
+Keymap52*vt-prev-screen(): VtForrigeSkærmbillede()
+Keymap52*DEFvt-prev-screen(): Udfører funktionen til Forrige skærmbillede, hvis VT200-tilstand eller derover sender DEC-kode (CSI 5~) til værtssystemet.
+!
+Keymap52*vt-next-screen(): VtNæsteSkærmbillede()
+Keymap52*DEFvt-next-screen(): Udfører funktionen til Næste skærmbillede, hvis VT200-tilstand eller derover sender DEC-kode (CSI 6~) til værtssystemet.
+!
+Keymap52*vt-prev-page(): VtForrigeSide()
+Keymap52*DEFvt-prev-page(): Flytter teksten én side ned og vinduet én side op.
+!
+Keymap52*vt-next-page(): VtNæsteSide()
+Keymap52*DEFvt-next-page(): Flytter teksten én side op og vinduet én side ned.
+!
+Keymap52*vt-do(): VtUdfør()
+Keymap52*DEFvt-do(): Udfører Udfør-funktionen, hvis VT200-tilstand eller derover sender DEC-kode (CSI 29~) til værtssystemet.
+!
+Keymap52*vt-help(): VtHjælp()
+Keymap52*DEFvt-help(): Udfører Hjælp-funktionen, hvis VT200-tilstand eller derover sender DEC-kode (CSI 28~) til værtssystemet.
+!
+Keymap52*vt-next-line(): VtNæsteLinie()
+Keymap52*DEFvt-next-line():  Flytter teksten én linie op og vinduet én linie ned.
+!
+Keymap52*vt-prev-line(): VtForrigeLinie()
+Keymap52*DEFvt-prev-line(): Flytter teksten én linie ned og vinduet én linie op.
+!
+Keymap52*tty-interrupt(): TtyAfbryd()
+Keymap52*DEFtty-interrupt(): Sender et TTY-tegn for afbrydelse (inter = Ctrl-C) til værtssystemet.
+!
+Keymap52*tty-suspend(): TtyAfbrydMidl()
+Keymap52*DEFtty-suspend(): Sender et TTY-tegn for midlertidig afbrydelse (susp = Ctrl-Z) til værtssystemet.
+!
+Keymap52*tty-start(): TtyStart()
+Keymap52*DEFtty-start(): Sender et TTY-tegn for start (start = Ctrl-Q) til værtssystemet.
+!
+Keymap52*tty-stop(): TtyStop()
+Keymap52*DEFtty-stop(): Sender et TTY-tegn for standsning (stop = Ctrl-S) til værtssystemet.
+!
+Keymap52*delete-word(): TtySletOrd()
+Keymap52*DEFdelete-word(): Sender et TTY-tegn for for sletning af ord (werase = Ctrl-W) til værtssystemet.
+!
+Keymap52*line-feed(): TtyLinieskift()
+Keymap52*DEFline-feed(): Sender et tegn for linieskift (Ctrl-J) til værtssystemet.
+!
+Keymap52*cr-lf(): TtyCR_LF()
+Keymap52*DEFcr-lf(): Sender både tegn for Retur i samme linie og Linieskift (Ctrl-M Ctrl-J) til værtssystemet.
+!
+Keymap52*escape(): EscapeCharacter()
+Keymap52*DEFescape(): Sender et Escape-tegn (Ctrl-[) til værtssystemet.
+!
+Keymap52*udk-f1(): UDK_F1()
+Keymap52*DEFudk-f1():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F1-tasten.
+!
+Keymap52*udk-f2(): UDK_F2()
+Keymap52*DEFudk-f2():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F2-tasten.
+!
+Keymap52*udk-f3(): UDK_F3()
+Keymap52*DEFudk-f3():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F3-tasten.
+!
+Keymap52*udk-f4(): UDK_F4()
+Keymap52*DEFudk-f4():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F4-tasten.
+!
+Keymap52*udk-f5(): UDK_F5()
+Keymap52*DEFudk-f5():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F5-tasten.
+!
+Keymap52*udk-f6(): UDK_F6()
+Keymap52*DEFudk-f6():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F6-tasten.
+!
+Keymap52*udk-f7(): UDK_F7()
+Keymap52*DEFudk-f7():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F7-tasten.
+!
+Keymap52*udk-f8(): UDK_F8()
+Keymap52*DEFudk-f8():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F8-tasten.
+!
+Keymap52*udk-f9(): UDK_F9()
+Keymap52*DEFudk-f9():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F9-tasten.
+!
+Keymap52*udk-f10(): UDK_F10()
+Keymap52*DEFudk-f10():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F10-tasten.
+!
+Keymap52*udk-f11(): UDK_F11()
+Keymap52*DEFudk-f11():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F11-tasten.
+!
+Keymap52*udk-f12(): UDK_F12()
+Keymap52*DEFudk-f12():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F12-tasten.
+!
+Keymap52*udk-f13(): UDK_F13()
+Keymap52*DEFudk-f13():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F13-tasten.
+!
+Keymap52*udk-f14(): UDK_F14()
+Keymap52*DEFudk-f14():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F14-tasten.
+!
+Keymap52*udk-f15(): UDK_F15()
+Keymap52*DEFudk-f15():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F15-tasten.
+!
+Keymap52*udk-f16(): UDK_F16()
+Keymap52*DEFudk-f16():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F16-tasten.
+!
+Keymap52*udk-f17(): UDK_F17()
+Keymap52*DEFudk-f17():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F17-tasten.
+!
+Keymap52*udk-f18(): UDK_F18()
+Keymap52*DEFudk-f18():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F18-tasten.
+!
+Keymap52*udk-f19(): UDK_F19()
+Keymap52*DEFudk-f19():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F19-tasten.
+!
+Keymap52*udk-f20(): UDK_F20()
+Keymap52*DEFudk-f20():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F20-tasten.
+!
+Keymap52*udk-f21(): UDK_F21()
+Keymap52*DEFudk-f21():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F21-tasten.
+!
+Keymap52*udk-f22(): UDK_F22()
+Keymap52*DEFudk-f22():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F22-tasten.
+!
+Keymap52*udk-f23(): UDK_F23()
+Keymap52*DEFudk-f23():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F23-tasten.
+!
+Keymap52*udk-f24(): UDK_F24()
+Keymap52*DEFudk-f24():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F24-tasten.
+!
+Keymap52*udk-f25(): UDK_F25()
+Keymap52*DEFudk-f25():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F25-tasten.
+!
+Keymap52*udk-f26(): UDK_F26()
+Keymap52*DEFudk-f26():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F26-tasten.
+!
+Keymap52*udk-f27(): UDK_F27()
+Keymap52*DEFudk-f27():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F27-tasten.
+!
+Keymap52*udk-f28(): UDK_F28()
+Keymap52*DEFudk-f28():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F28-tasten.
+!
+Keymap52*udk-f29(): UDK_F29()
+Keymap52*DEFudk-f29():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F29-tasten.
+!
+Keymap52*udk-f30(): UDK_F30()
+Keymap52*DEFudk-f30():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F30-tasten.
+!
+Keymap52*udk-f31(): UDK_F31()
+Keymap52*DEFudk-f31():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F31-tasten.
+!
+Keymap52*udk-f32(): UDK_F32()
+Keymap52*DEFudk-f32():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F32-tasten.
+!
+Keymap52*udk-f33(): UDK_F33()
+Keymap52*DEFudk-f33():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F33-tasten.
+!
+Keymap52*udk-f34(): UDK_F34()
+Keymap52*DEFudk-f34():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F34-tasten.
+!
+Keymap52*udk-f35(): UDK_F35()
+Keymap52*DEFudk-f35():  Udfører DEC-funktionen til Brugerdefineret tast (UDK) for F35-tasten.
+!
+Keymap52*x-f1(): F1()
+Keymap52*DEFx-f1():  Udfører den funktion, der er defineret for F1-tasten.
+!
+Keymap52*x-f2(): F2()
+Keymap52*DEFx-f2():  Udfører den funktion, der er defineret for F2-tasten.
+!
+Keymap52*x-f3(): F3()
+Keymap52*DEFx-f3():  Udfører den funktion, der er defineret for F3-tasten.
+!
+Keymap52*x-f4(): F4()
+Keymap52*DEFx-f4():  Udfører den funktion, der er defineret for F4-tasten.
+!
+Keymap52*x-f5(): F5()
+Keymap52*DEFx-f5():  Udfører den funktion, der er defineret for F5-tasten.
+!
+Keymap52*x-f6(): F6()
+Keymap52*DEFx-f6():  Udfører den funktion, der er defineret for F6-tasten.
+!
+Keymap52*x-f7(): F7()
+Keymap52*DEFx-f7():  Udfører den funktion, der er defineret for F7-tasten.
+!
+Keymap52*x-f8(): F8()
+Keymap52*DEFx-f8():  Udfører den funktion, der er defineret for F8-tasten.
+!
+Keymap52*x-f9(): F9()
+Keymap52*DEFx-f9():  Udfører den funktion, der er defineret for F9-tasten.
+!
+Keymap52*x-f10(): F10()
+Keymap52*DEFx-f10():  Udfører den funktion, der er defineret for F10-tasten.
+!
+Keymap52*x-f11(): F11()
+Keymap52*DEFx-f11():  Udfører den funktion, der er defineret for F11-tasten.
+!
+Keymap52*x-f12(): F12()
+Keymap52*DEFx-f12():  Udfører den funktion, der er defineret for F12-tasten.
+!
+Keymap52*x-f13(): F13()
+Keymap52*DEFx-f13():  Udfører den funktion, der er defineret for F13-tasten.
+!
+Keymap52*x-f14(): F14()
+Keymap52*DEFx-f14():  Udfører den funktion, der er defineret for F14-tasten.
+!
+Keymap52*x-f15(): F15()
+Keymap52*DEFx-f15():  Udfører den funktion, der er defineret for F15-tasten.
+!
+Keymap52*x-f16(): F16()
+Keymap52*DEFx-f16():  Udfører den funktion, der er defineret for F16-tasten.
+!
+Keymap52*x-f17(): F17()
+Keymap52*DEFx-f17():  Udfører den funktion, der er defineret for F17-tasten.
+!
+Keymap52*x-f18(): F18()
+Keymap52*DEFx-f18():  Udfører den funktion, der er defineret for F18-tasten.
+!
+Keymap52*x-f19(): F19()
+Keymap52*DEFx-f19():  Udfører den funktion, der er defineret for F19-tasten.
+!
+Keymap52*x-f20(): F20()
+Keymap52*DEFx-f20():  Udfører den funktion, der er defineret for F20-tasten.
+!
+Keymap52*x-f21(): F21()
+Keymap52*DEFx-f21():  Udfører den funktion, der er defineret for F21-tasten.
+!
+Keymap52*x-f22(): F22()
+Keymap52*DEFx-f22():  Udfører den funktion, der er defineret for F22-tasten.
+!
+Keymap52*x-f23(): F23()
+Keymap52*DEFx-f23():  Udfører den funktion, der er defineret for F23-tasten.
+!
+Keymap52*x-f24(): F24()
+Keymap52*DEFx-f24():  Udfører den funktion, der er defineret for F24-tasten.
+!
+Keymap52*x-f25(): F25()
+Keymap52*DEFx-f25():  Udfører den funktion, der er defineret for F25-tasten.
+!
+Keymap52*x-f26(): F26()
+Keymap52*DEFx-f26():  Udfører den funktion, der er defineret for F26-tasten.
+!
+Keymap52*x-f27(): F27()
+Keymap52*DEFx-f27():  Udfører den funktion, der er defineret for F27-tasten.
+!
+Keymap52*x-f28(): F28()
+Keymap52*DEFx-f28():  Udfører den funktion, der er defineret for F28-tasten.
+!
+Keymap52*x-f29(): F29()
+Keymap52*DEFx-f29():  Udfører den funktion, der er defineret for F29-tasten.
+!
+Keymap52*x-f30(): F30()
+Keymap52*DEFx-f30():  Udfører den funktion, der er defineret for F30-tasten.
+!
+Keymap52*x-f31(): F31()
+Keymap52*DEFx-f31():  Udfører den funktion, der er defineret for F31-tasten.
+!
+Keymap52*x-f32(): F32()
+Keymap52*DEFx-f32():  Udfører den funktion, der er defineret for F32-tasten.
+!
+Keymap52*x-f33(): F33()
+Keymap52*DEFx-f33():  Udfører den funktion, der er defineret for F33-tasten.
+!
+Keymap52*x-f34(): F34()
+Keymap52*DEFx-f34():  Udfører den funktion, der er defineret for F34-tasten.
+!
+Keymap52*x-f35(): F35()
+Keymap52*DEFx-f35():  Udfører den funktion, der er defineret for F35-tasten.
+!
+Keymap52*vt-f1(): VtPF1()
+Keymap52*DEFvt-f1():  Sender i en vilkårlig tilstand tegnkoden (SS3 P) til programmet.
+!
+Keymap52*vt-f2(): VtPF2()
+Keymap52*DEFvt-f2(): Sender i en vilkårlig tilstand tegnkoden (SS3 Q) til programmet.
+!
+Keymap52*vt-f3(): VtPF3()
+Keymap52*DEFvt-f3(): Sender i en vilkårlig tilstand tegnkoden (SS3 R) til programmet.
+!
+Keymap52*vt-f4(): VtPF4()
+Keymap52*DEFvt-f4(): Sender i en vilkårlig tilstand tegnkoden (SS3 S) til programmet.
+!
+Keymap52*x-print(): X_Print()
+Keymap52*DEFx-print(): Sender ANSI escape-koden (Ctrl-[[209q) til værtssystemet.
+!
+Keymap52*x-scroll-lock(): X_ScrollLock()
+Keymap52*DEFx-scroll-lock(): Sender ANSI escape-koden (Ctrl-[[213q) til værtssystemet.
+!
+Keymap52*x-pause(): X_Pause()
+Keymap52*DEFx-pause(): Sender ANSI escape-koden for Pause-tasten (Ctrl-[[217q) til værtssystemet.
+!
+Keymap52*x-ins(): X_Insert()
+Keymap52*DEFx-ins(): Sender ANSI escape-koden (Ctrl-[[139q) til værtssystemet.
+!
+Keymap52*x-delete(): X_Delete()
+Keymap52*DEFx-delete(): Sender ANSI escape-koden (Ctrl-[[P) til værtssystemet.
+!
+Keymap52*x-home(): X_Home()
+Keymap52*DEFx-home(): Sender ANSI escape-koden (Ctrl-[[H) til værtssystemet.
+!
+Keymap52*x-end(): X_End()
+Keymap52*DEFx-end(): Sender ANSI escape-koden (Ctrl-[[146q) til værtssystemet.
+!
+Keymap52*x-page-up(): X_PageUp()
+Keymap52*DEFx-page-up(): Sender ANSI escape-koden (Ctrl-[[150q) til værtssystemet.
+!
+Keymap52*x-page-down(): X_PageDown()
+Keymap52*DEFx-page-down(): Sender ANSI escape-koden (Ctrl-[[154q) til værtssystemet.
+!
+Keymap52*kp-numlock(): KP_NumLock()
+Keymap52*DEFkp-numlock():  Udfører Num Lock-funktionen.
+!
+Keymap52*kp-divide(): KP_Dividere()
+Keymap52*DEFkp-divide():  Udfører dividerefunktionen som defineret på tastgruppen.
+!
+Keymap52*kp-multiply(): KP_Gange()
+Keymap52*DEFkp-multiply():  Udfører gangefunktionen som defineret på tastgruppen.
+!
+Keymap52*kp-subtract(): KP_Minus()
+Keymap52*DEFkp-subtract():  Sender i numerisk tilstand minustegnet (-) til programmet. Sender i programtilstand tegnkoden SS3 l (ESC ? l) til programmet.
+!
+Keymap52*kp-7(): KP_7()
+Keymap52*DEFkp-7():  Sender i numerisk tilstand tegnet 7 til programmet.  Sender i programtilstand tegnkoden SS3 w (ESC ? w) til programmet.
+!
+Keymap52*kp-8(): KP_8()
+Keymap52*DEFkp-8():  Sender i numerisk tilstand tegnet 8 til programmet.  Sender i programtilstand tegnkoden SS3 x (ESC ? x) til programmet.
+!
+Keymap52*kp-9(): KP_9()
+Keymap52*DEFkp-9():  Sender i numerisk tilstand tegnet 9 til programmet.  Sender i programtilstand tegnkoden SS3 y (ESC ? y) til programmet.
+!
+Keymap52*kp-4(): KP_4()
+Keymap52*DEFkp-4():  Sender i numerisk tilstand tegnet 4 til programmet.  Sender i programtilstand tegnkoden SS3 t (ESC ? t) til programmet.
+!
+Keymap52*kp-5(): KP_5()
+Keymap52*DEFkp-5():  Sender i numerisk tilstand tegnet 5 til programmet.  Sender i programtilstand tegnkoden SS3 u (ESC ?u) til programmet.
+!
+Keymap52*kp-6(): KP_6()
+Keymap52*DEFkp-6():  Sender i numerisk tilstand tegnet 6 til programmet.  Sender i programtilstand tegnkoden SS3 v (ESC ? v) til programmet.
+!
+Keymap52*kp-add(): KP_Plus()
+Keymap52*DEFkp-add():  Udfører tilføjefunktionen som defineret på tastgruppen.
+!  
+Keymap52*kp-1(): KP_1()
+Keymap52*DEFkp-1():  Sender i numerisk tilstand tegnet 1 til programmet.  Sender i programtilstand tegnkoden SS3 q (ESC ? q) til programmet.
+!
+Keymap52*kp-2(): KP_2()
+Keymap52*DEFkp-2():  Sender i numerisk tilstand tegnet 2 til programmet.  Sender i programtilstand tegnkoden SS3 r (ESC ? r) til programmet.
+!
+Keymap52*kp-3(): KP_3()
+Keymap52*DEFkp-3():  Sender i numerisk tilstand tegnet 3 til programmet.  Sender i programtilstand tegnkoden SS3 s (ESC ? s) til programmet.
+!
+Keymap52*kp-0(): KP_0()
+Keymap52*DEFkp-0():  Sender i numerisk tilstand tegnet 0 til programmet.  Sender i programtilstand tegnkoden SS3 p (ESC ? p) til programmet.
+!
+Keymap52*kp-decimal(): KP_Decimal()
+Keymap52*DEFkp-decimal():  Sender i numerisk tilstand decimaltegnet (,) til programmet. Sender i programtilstand tegnkoden SS3 n (ESC ? n) til programmet.
+!
+Keymap52*kp-enter(): KP_Enter()
+Keymap52*DEFkp-enter():  Sender i numerisk tilstand Enter-funktionen til programmet. Sender i programtilstand tegnkoden SS3 M (ESC ? M) til programmet.
+!
+Keymap52*kp-space(): KP_Mellemrum()
+Keymap52*DEFkp-space():  Sender tegnet for mellemrum til programmet.
+!
+Keymap52*kp-tab(): KP_Tabulering()
+Keymap52*DEFkp-tab():  Sender tabuleringstegnet til programmet.
+!
+Keymap52*kp-equal(): KP_LigMed()
+Keymap52*DEFkp-equal():  Sender lighedstegnet (=) til programmet.
+!
+Keymap52*kp-separator(): KP_Skilletegn()
+Keymap52*DEFkp-separator():  Sender skilletegnet til programmet.
+!
+Playedit*btn1-press():  MuseknapTryk()
+Playedit*DEFbtn1-press():  Trykker på museknap 1.
+!
+Playedit*btn1-release():  Museknap1Slip()
+Playedit*DEFbtn1-release():  Slipper museknap 1.
+!
+Playedit*btn2-press():  Museknap2Tryk()
+Playedit*DEFbtn2-press():  Trykker på museknap 2.
+!
+Playedit*btn2-release():  Museknap2Slip()
+Playedit*DEFbtn2-release():  Slipper museknap 2.
+!
+Playedit*btn3-press():  Museknap3Tryk()
+Playedit*DEFbtn3-press():  Trykker på museknap 3.
+!
+Playedit*btn3-release():  Museknap3Slip()
+Playedit*DEFbtn3-release():  Slipper museknap 3.
+!
+Playedit*shift-btn1-press():  MusSkiftKnap1Tryk()
+Playedit*DEFshift-btn1-press():  Trykker på museknap 1 og Skift-revideringstasten.
+!
+Playedit*shift-btn1-release():  MusSkiftKnap1Slip()
+Playedit*DEFshift-btn1-release():  Slipper museknap 1, mens der trykkes på Skift.
+!
+Playedit*shift-btn2-press():  MusSkiftKnap2Tryk()
+Playedit*DEFshift-btn2-press():  Trykker på museknap 2 og Skift-revideringstasten.
+!
+Playedit*shift-btn2-release():  MusSkiftKnap2Slip()
+Playedit*DEFshift-btn2-release():  Slipper museknap 2, mens der trykkes på Skift.
+!
+Playedit*shift-btn3-press():  MusSkiftKnap3Tryk()
+Playedit*DEFshift-btn3-press():  Trykker på museknap 3 og Skift-revideringstasten.
+!
+Playedit*shift-btn3-release():  MusSkiftKnap3Slip()
+Playedit*DEFshift-btn3-release():  Slipper museknap 3, mens der trykkes på Skift.
+!
+Playedit*btn1-double-press():  Museknap1Dobbelttryk()
+Playedit*DEFbtn1-double-press():  Trykker to gange på museknap 1.
+!
+Playedit*btn1-triple-press():  Museknap1TredobbeltTryk()
+Playedit*DEFbtn1-triple-press():  Trykker tre gange på museknap 1.
+!
+Playedit*btn2-double-press():  Museknap2Dobbelttryk()
+Playedit*DEFbtn2-double-press():  Trykker to gange på museknap 2.
+!
+Playedit*btn2-triple-press():  Museknap2TredobbeltTryk()
+Playedit*DEFbtn2-triple-press():  Trykker tre gange på museknap 2.
+!
+Playedit*btn3-double-press():  Museknap3Dobbelttryk()
+Playedit*DEFbtn3-double-press():  Trykker to gange på museknap 3.
+!
+Playedit*btn3-triple-press():  Museknap3TredobbeltTryk()
+Playedit*DEFbtn3-triple-press():  Trykker tre gange på museknap 3.
+!
+Playedit*shift-btn1-double-press():  MusSkiftKnap1Dobbelttryk()
+Playedit*DEFshift-btn1-double-press():  Trykker to gange på museknap 1 og Skift-revideringstasten.
+!
+Playedit*shift-btn1-triple-press():  MusSkiftKnap1TredobbeltTryk()
+Playedit*DEFshift-btn1-triple-press():  Trykker tre gange på museknap 1 og Skift-revideringstasten.
+!
+Playedit*shift-btn2-double-press():  MusSkiftKnap2Dobbelttryk()
+Playedit*DEFshift-btn2-double-press():  Trykker to gange på museknap 2 og Skift-revideringstasten.
+!
+Playedit*shift-btn2-triple-press():  MusSkiftKnap2TredobbeltTryk()
+Playedit*DEFshift-btn2-triple-press():  Trykker tre gange på museknap 2 og Skift-revideringstasten.
+!
+Playedit*shift-btn3-double-press():  MusSkiftKnap3Dobbelttryk()
+Playedit*DEFshift-btn3-double-press():  Trykker to gange på museknap 3 og Skift-revideringstasten.
+!
+Playedit*shift-btn3-triple-press():  MusSkiftKnap3TredobbeltTryk()
+Playedit*DEFshift-btn3-triple-press():  Trykker tre gange på museknap 3 og Skift-revideringstasten.
+!
+AllShare*paste():  Klistre()
+AllShare*DEFpaste():  Indsætter udklipsholderens indhold ved markørens position.
+!
+AllShare*copy():  Kopiér()
+AllShare*DEFcopy():  Kopierer det aktuelle valg på skærmen til udklipsholderen.
+!
+AllShare*cut():  Klip()
+AllShare*DEFcut():  Fjerner det aktuelle valg på skærmen.
+!
+Playedit*userid():  Brugerid()
+Playedit*DEFuserid():  Indtaster den aktuelle brugers bruger-id. Anvendes til at logge automatisk på emuleringssessioner.
+!
+Playedit*password():  Kodeord()
+Playedit*DEFpassword():  Indtaster den aktuelle brugers kodeord. Anvendes til at logge automatisk på emuleringssessioner.
+!
+AllShare*adjust-copy-left():  JustérKopiområdeVenstre()
+AllShare*DEFadjust-copy-left():  Starter et kopieringsområde på skærmen, hvis der ikke er startet noget, og justerer området et tegn til venstre for den aktuelle position.
+!
+AllShare*adjust-copy-right():  JustérKopiområdeHøjre()
+AllShare*DEFadjust-copy-right():  Starter et kopieringsområde på skærmen, hvis der ikke er startet noget, og justerer området et tegn til højre for den aktuelle position.
+!
+AllShare*adjust-copy-up():  JustérKopiområdeOp()
+AllShare*DEFadjust-copy-up():  Starter et kopieringsområde på skærmen, hvis der ikke er startet noget, og justerer området en linie op i forhold til den aktuelle position.
+!
+AllShare*adjust-copy-down():  JustérKopiområdeNed()
+AllShare*DEFadjust-copy-down():  Starter et kopieringsområde på skærmen, hvis der ikke er startet noget, og justerer området en linie ned i forhold til den aktuelle position.
+!
+AllShare*adjust-copy-anchor-left():  JustérKopiområdeAnkerVenstre()
+AllShare*DEFadjust-copy-anchor-left():  Starter et kopieringsområde på skærmen, hvis der ikke er startet noget, og justerer området et tegn til højre, mens den venstre side af området ikke justeres.
+!
+AllShare*adjust-copy-anchor-right():  JustérKopiområdeAnkerHøjre()
+AllShare*DEFadjust-copy-anchor-right():  Starter et kopieringsområde på skærmen, hvis der ikke er startet noget, og justerer området et tegn til venstre, mens den højre side af området ikke justeres.
+!
+AllShare*adjust-copy-anchor-up():  JustérKopiområdeAnkerOp()
+AllShare*DEFadjust-copy-anchor-up():  Starter et kopieringsområde på skærmen, hvis der ikke er startet noget, og justerer området en linie ned, mens den øverste del af området ikke justeres.
+!
+AllShare*adjust-copy-anchor-down():  JustérKopiområdeAnkerNed()
+AllShare*DEFadjust-copy-anchor-down():  Starter et kopieringsområde på skærmen, hvis der ikke er startet noget, og justerer området en linie op, mens den nederste del af området ikke justeres.
+!
+AllShare*toggle-default-copy-type():  SkiftStdKopitype()
+AllShare*DEFtoggle-default-copy-type():  Angiver enten blokkopiering eller lineær kopiering.
+!
+Playedit*hex-string():  HexStreng()
+Playedit*DEFhex-string():  Data kan indtastes i hexadecimal tilstand.
+!
+Playedit*graphics-hex-string():  GrafikHexStreng()
+Playedit*DEFgraphics-hex-string():  Grafikdata kan indtastes i hexadecimal EBCDIC-tilstand.
+!
+Playedit*BIDItogglescrrev():  BIDISkiftOmvendtSkærmbillede()
+Playedit*DEFBIDItogglescrrev():  Aktiverer og deaktiverer Omvendt skærmbillede. Bruges på arabisk og hebraisk.
+!
+Playedit*BIDItogglefieldrev():  BIDISkiftOmvendtFelt()
+Playedit*DEFBIDItogglefieldrev():  Aktiverer og deaktiverer Omvendt felt. Bruges på arabisk og hebraisk.
+!
+Playedit*BIDItoggleautorev():  BIDISkiftAutoOmvendtFelt()
+Playedit*DEFBIDItoggleautorev():  Aktiverer og deaktiverer Automatisk omvendt felt. Bruges på arabisk og hebraisk.
+!
+Playedit*BIDIpush():  BIDIPush()
+Playedit*DEFBIDIpush():  Aktiverer push-tilstand. Bruges på arabisk og hebraisk.
+!
+Playedit*BIDIendpush():  BIDIAfslutPush()
+Playedit*DEFBIDIendpush():  Deaktiverer push-tilstand. Bruges på arabisk og hebraisk.
+!
+Playedit*BIDItoggleautopush():  BIDISkiftAutoPush()
+Playedit*DEFBIDItoggleautopush():  Emuleringsprogrammet går automatisk i push-tilstand, når sproget skifter mellem BIDI og engelsk. Bruges på arabisk og hebraisk.
+!
+Playedit*BIDIsetshape():  BIDIAngivForm()
+Playedit*DEFBIDIsetshape():  Angiver den form (shape), der skal bruges på arabisk.
+!
+Playedit*BIDIfieldshape():  BIDIFeltShape()
+Playedit*DEFBIDIfieldshape():  Former dataene i et felt på arabisk (shape).
+!
+Playedit*BIDItogglenumswap():  BIDISkiftNumeriskSkift()
+Playedit*DEFBIDItogglenumswap():  Aktiverer og deaktiverer numerisk skift mellem arabisk/hindi på arabisk.
+!
+! End action names
+!
+!
+Keyxxx52*ERROR:  Ugyldige funktioner
+!
+Keymap52*managing_server_text.value:  Filen med omdefinition af taster kan ikke gemmes. Opdatér den styrende server til den nyeste release af IBM Network Station Manager.
+!
+Keymap52*managingBtn.labelString:  OK
+!
+Keymap52*general_fatal_error.value:  Der er opstået en fejl i programmet Omdefinition af taster. Programmet afbrydes.
+!
+Keymap52*genfatalBtn.labelString:  Afslut
+!
+Keymap52*general_nonfatal_text.value:  Fejl i Omdefinition af taster
+!
+Keymap52*gennonfatBtn.labelString:  OK
+!
+!
+!************************************************************************
+!
+!
+!                        Keypad Customizer Resources
+!
+!
+!************************************************************************
+Keypad52*title:  Programmet Tilpasning af tastgruppe
+
+Keypad52*iname5250:  Tilpasning af tastgruppe til 5250
+
+Keypad52*iname3270:  Tilpasning af tastgruppe til 3270
+
+Keypad52*keypadTitle.dialogTitle:  Tastgruppe
+
+!following resource left blank on purpose, do not translate.
+AllShare*blankLabel.labelString:     
+
+! initial popup dialog
+Keypad52*initialpopupDialoglist.labelString:  Vælg en tastgruppefil:
+
+Keypad52*initialpopupDialogaltlabel.labelString:  Der er ingen tastgruppefiler
+Keypad52*initialpopupDialogOKbtn.labelString:  OK
+
+Keypad52*initialpopupDialogcancelbtn.labelString:  Annullér
+
+Keypad52*initialpopupDialognewbtn.labelString:  Ny tastgruppe
+
+!*************************************
+!**  Keypad Customizer Main Window  **
+!*************************************
+
+! In general, the following buttons should not be made much longer during translation.
+! Buttons have one to four words.
+
+Keypad52*keyAction.labelString:  Trykknapfunktion->
+
+Keypad52*fileDeleteButton.labelString:  Ryd tastgruppetrykknap
+
+Keypad52*selectplayfile.labelString:  Vælg funktion for afspilningsfil
+
+Keypad52*changeSize.labelString:  Skift tastgruppetype
+
+Keypad52*keypadfileDelete.labelString:  Slet tastgruppefil
+
+Keypad52*transRxing:  Modtager oplysninger om aktuel tilpasning af tastgruppe fra emuleringssessionen.
+
+Keypad52*transRxd:  Oplysninger om tilpasning af tastgruppe er modtaget fra emuleringssessionen.
+
+Keypad52*currKeypadLabel.labelString:  Aktuel tastgruppe:
+
+Keypad52*currKeyLabel.labelString:  Aktuel tekst til tastgruppetrykknap:
+
+Keypad52*currActLabel.labelString:  Aktuel funktion for tastgruppetrykknap:
+
+!******************
+!**  Resolution  **
+!******************
+Keypad52*poorResolutionMsgText.value:   Skærmopløsningsgraden er mindre end 800 x 600. Programmet Tilpasning af tastgruppe understøtter ikke skærme med en opløsningsgrad, der er mindre end 800 x 600.
+
+Keypad52*keypadFailureCancelBtn.labelString:  Annullér
+
+!**************
+!**  Saving  **
+!**************
+Keypad52*saveDialog.dialogTitle:  Gem tastgruppe
+
+Keypad52*saveBoxLabel*labelString:  Gem tastgruppefil som:
+
+Keypad52*saveTran:  Tastgruppefil er gemt...
+
+Keypad52*fileWarningDialog.dialogTitle:  Advarsel - tastgruppe
+
+!**************
+!**  Delete  **
+!**************
+Keypad52*fileDeleteDialog.dialogTitle:  Slet tastgruppefil
+
+Keypad52*fileDeleteBoxLabel.labelString:  Vælg tastgrupper, der skal slettes:
+
+Keypad52*fileDeleted:  De valgte tastgruppefiler er slettet.
+
+!****************
+!**  Playback  **
+!****************
+Keypad52*invalidSelectionplay.messageString:  Du har ikke valgt noget. Vælg fra oversigten, eller vælg Annullér.
+
+Keypad52*invalidSelectionplay.okLabelString:  Fortsæt
+
+Keypad52*selectPlaybackFile.labelString:  Vælg en afspilningsfil
+
+Keypad52*userPlaybackFiles.labelString:  Brugerafspilningsfiler
+
+Keypad52*defaultPlaybackFiles.labelString:  Standardafspilningsfiler
+
+AllShare*okLabel.labelString:  OK
+
+!********************
+!**  Keypad Style  **
+!********************
+Keypad52*selectSizeTitle.dialogTitle:  Tastgruppetype
+
+Keypad52*selectKeypadSizeLabel.labelString:  Vælg tastgruppetype:
+
+Keypad52*selectKeypadStyle.labelString:  Tastgruppetype:
+
+Keypad52*popupStyleChoice.labelString:  Pop op-tastgruppe
+  
+Keypad52*menuStyleChoice.labelString:  Menu-tastgruppe
+
+Keypad52*selectKeypadSizeRows.labelString:  Rækker:
+
+Keypad52*selectKeypadSizeCols.labelString:  Kolonner:
+
+Keypad52*selectKeypadSizeTextLen.labelString:  Tekstlængde:
+
+Keypad52*changeKeypadSizeMessage:  Vælg den ønskede tastgruppetype...
+
+Keypad52*newPb.labelString:  Ny
+
+Keypad52*row_col_pulldownvalue.labelString:  - 
+
+Keypad52*invalidSizeSelection.messageString:  Den valgte størrelse er for lille til den aktuelle tastgruppe.
+
+Keypad52*invalidSizeSelection.okLabelString:  Fortsæt  
+
+!***********************
+!**  Warning dialogs  **
+!***********************
+Keypad52*change.dialogTitle:  Advarsel - tastgruppe
+
+Keypad52*unsaved.dialogTitle:  Advarsel - tastgruppe
+
+Keypad52*unsaved.messageString:  Tastgruppeændringer er ikke gemt.
+
+Keypad52*unsaved.okLabelString:  Fortsæt
+
+Keypad52*nochange.dialogTitle:  Advarsel - tastgruppe
+
+! this cannot be made much longer during translation.
+Keypad52*nochange.messageString:  Godkend eller annullér den aktuelle ændring, før du ændrer mere.
+
+Keypad52*nochange.okLabelString:  Fortsæt
+
+Keypad52*cantdothat.dialogTitle:  Advarsel - tastgruppe
+
+Keypad52*cantdothat.messageString:  Godkend eller annullér ændringer, før du foretager et andet valg.
+
+!nothing selected in first dialog box
+Keypad52*invalidSelectionwarn.messageString:  Du har ikke valgt noget. Vælg fra oversigten, eller vælg Ny eller Annullér.
+
+Keypad52*invalidSelectionwarn.okLabelString:  Fortsæt
+
+Keypad52*noaccessDir:  Kan ikke få adgang til bibliotek.
+
+Keypad52*selectKeypadButton.messageString:  En tastgruppetrykknap skal vælges, før tilpasning kan begynde.
+
+Keypad52*generalError.dialogTitle:  Fejl - tastgruppe
+	
+Keypad52*generalError.messageString:  Der er opstået fejl under udførelse af funktion.
+
+Keypad52*generalError.okLabelString:  OK
+
+Keypad52*emptyList:  Der er en fejl i oversigten over konverteringer. Den kan ikke gemmes eller aktiveres.
+
+Keypad52*ErrorMsgFileNameChars.messageString:  Det indtastede tegn er ikke gyldigt i filnavne.
+
+Keypad52*EBCMismatchText.value: Sproget for emuleringssessionen, der har kaldt programmet Tilpas tastgruppe, svarer ikke til sproget for IBM Network Station.   Tegn og strenge, der oprettes af dette program, kan give uventede resultater i emuleringssessionen.
+
+!************************
+!**  Various Messages  **
+!************************
+! help button pressed
+Keypad52*helpMessage:  Fremvisning af hjælp indlæses...
+
+! after OK clicked
+Keypad52*chooseSave:  Vælg Gem for at gemme evt. ændringer.
+
+! after Cancel clicked
+Keypad52*chooseCancel:  Aktuelle ændringer fortrydes.
+
+! original message when new keypad opens
+Keypad52*chooseNew:  Redigér ny tastgruppe
+
+! button pressed in keypad
+Keypad52*continueedit:  Redigér den aktuelle trykknap...
+
+! click button action -> with nothing selected
+Keypad52*noActionSelected:  Der er ikke valgt noget i funktions- eller tegnoversigten.
+
+! swapping messages (next 2)
+Keypad52*swapinprogress:  Vælg OK eller Annullér, eller flyt andre tastgruppeknapper...
+
+Keypad52*swaprunninginfo:  Trykknapper flyttes...
+
+! following 3 messages for invalid keypad action
+Keypad52*nonValidDialog.dialogTitle:  Advarsel - tastgruppe
+
+Keypad52*nonValidDialog.messageString:  Tastgruppefunktioner til denne trykknap er ikke gyldige.
+
+Keypad52*deleteKeypadMessage:  Vælg tastgrupper, der skal slettes...
+
+!***************
+!**  Exiting  **
+!***************
+Keypad52*quitDialog1:  Tastgruppe er ændret, men ikke gemt.
+
+Keypad52*quit1Tog1:  Afslut uden at gemme ændringer.
+
+Keypad52*quit1Tog2:  Gem ændringer, før du afslutter.
+
+!************************************************************************
+!
+!
+!                        Playback Editor Resources
+!
+!
+!************************************************************************
+Playedit*title:  Redigér afspilningsfil
+
+Playedit*iname5250:  Redigér 5250-afspilningsfil
+
+Playedit*iname3270:  Redigér 3270-afspilningsfil
+
+Playedit*editorTitle.dialogTitle:  Redigér afspilningsfil
+
+!****  Main Window
+Playedit*keyAction.labelString:  Indsæt funktion->
+
+Playedit*deleteAction.labelString:  Fjern funktion
+
+Playedit*insertAction.labelString:  Indsæt linie
+
+Playedit*editAction.labelString:  Redigér funktion
+
+Playedit*transRxing:  Modtager oplysninger om redigering af afspilningsfil fra emuleringssessionen.
+
+Playedit*transRxd:  Oplysninger om redigering af afspilningsfil er modtaget fra emuleringssessionen.
+
+Playedit*currFileLabel.labelString:  Aktuel afspilningsfil:
+
+Playedit*currActLabel.labelString:  Aktuelle funktioner for afspilningsfil:
+
+!** Resolution
+Playedit*poorResolutionMsgText.value:  Skærmopløsningsgraden er mindre end 800 x 600. Redigér afspilningsfil understøttes ikke på skærme med en opløsningsgrad på mindre end 800 x 600.
+
+!** Saving
+Playedit*saveDialog.dialogTitle:  Gem afspilningsfil
+
+Playedit*saveBoxLabel*labelString:  Gem afspilningsfil som:
+
+Playedit*saveTran:  Afspilningsfil gemt...
+
+Playedit*fileWarningDialog.dialogTitle:  Redigér afspilningsfil - advarsel
+
+!** Edit
+Playedit*editBoxLabel*labelString:  Redigeringsfunktion:
+
+!** Warning Dialogs
+Playedit*PlaybackMsgFileNoOpen.value:  Kan ikke åbne afspilningsfil.  Programmet afsluttes.
+
+Playedit*PlaybackMsgFileNoRead.value:  Kan ikke læse afspilningsfil.  Programmet afsluttes.
+
+Playedit*PlaybackMsgFileCorrupt.value:  Afspilningsfil er ikke oprettet vha. emuleringsprogrammets indspilningsfunktion. Filen kan ikke åbnes. Programmet afsluttes.
+
+Playedit*noaccessDir:  Kan ikke få adgang til bibliotek.
+
+Playedit*selectInsertLocation.messageString:  Fremhæv den linie, hvor funktionen skal indsættes.
+
+Playedit*ErrorMsgFileNameChars.messageString:  Det indtastede tegn er ikke gyldigt i filnavne.
+
+Playedit*EBCMismatchText.value:  Sproget for emuleringssessionen, der har kaldt Redigér afspilningsfil, svarer ikke til sproget for IBM Network Station. Tegn og strenge, der oprettes af dette program, kan give uventede resultater i emuleringssessionen.
+	
+Playedit*nonValidDialog.messageString:  Funktionen er ikke gyldig.
+
+!** Messages
+Playedit*helpMessage:  Fremvisning af hjælp indlæses...
+
+Playedit*chooseSave:  Vælg Gem for at gemme evt. ændringer.
+
+Playedit*chooseCancel:  Aktuelle ændringer fortrydes.
+
+Playedit*noActionSelected.messageString:  Du har ikke valgt noget i funktions- eller tegnoversigten.
+
+Playedit*nothingHighlightedDelete.messageString:  Du har ikke valgt det, der skal slettes.
+
+Playedit*nothingHighlightedInsert.messageString:  Fremhæv placeringen for det, der skal indsættes.
+
+Playedit*nothingHighlightedEdit.messageString:  Du har ikke valgt det, der skal redigeres.
+
+!** Exit
+Playedit*quitDialog1:  Afspilningsfilen er ændret, men ikke gemt.
+
+Playedit*quit1Tog1:  Afslut uden at gemme ændringer.
+
+Playedit*quit1Tog2:  Gem ændringer, før du afslutter.
+
+!**************************************************
+!*
+!*        Printing translations 
+!*
+!*      Added by AJMEYER for V310.nc
+!*
+!**************************************************
+
+AllShare*printDialogPrinterTypeLabel.labelString:  Printertype:
+
+AllShare*printDialogPrinterTypeMenu*postscript.labelString:  PostScript
+
+AllShare*printDialogPrinterTypeMenu*ascii.labelString:  ASCII
+
+AllShare*printDialogPrinterTypeMenu*pcl.labelString:  PCL
+
+AllShare*printDialogPrinterSelectControls_popup.title:   Printer
+
+AllShare*printSelectDialogOKButton.labelString:  OK
+
+AllShare*printSelectDialogCancelButton.labelString: Annullér
+

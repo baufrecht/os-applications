@@ -1,0 +1,335 @@
+//// ENGLISH_SOURCE_VERSION= 1.1 
+////This file contains the keyboard remapping program on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file is stored in locale specific ASCII (code page 819 for Latin1 languages). This help text is stored on the booting server as N3_5KeyH.
+
+////Help text format (this section is not displayed to IBM emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1. Do not translated (or change) anything in a comment line.
+//// 3. This help file contains help text for the 3270, and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator.   A comment line of four "/" characters followed by:
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+//// 3B. "5250" indicates subsequent data is only displayed in 5250 on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in 3270, and 5250 on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+////  3G. Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters.  The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Do not change the order of topics in this help text file.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+----"3270 Hilfe zur Tastaturbelegung"
+++++"Allgemeine Informationen"
+Informationen zur Verwendung dieses Hilfeanzeigeprogramms finden Sie im ersten Abschnitt der Haupthilfe zum Emulator. (Wählen Sie hierzu die Menüauswahl "Hilfe" im Emulatorfenster aus.)
+
+In diesem Hilfetext finden Sie Informationen zur Verwendung des Programms zur Tastaturneubelegung für die Änderung von Tastaturaktionen innerhalb von Emulationssitzungen.
+
+Anmerkung: Es kann jeweils immer nur ein Programm zur Tastaturneubelegung aktiv sein.
+
+++++"Auswahl der Tastaturbelegungsdatei"
+Zu Beginn einer 3270-Sitzung sucht der 3270-Emulator nach einer Tastaturbelegungsdatei für die Sitzung. Der Tastaturtyp muss übereinstimmen; eine Tastaturbelegungsdatei wird für einen bestimmten Tastaturtyp verwendet (z. B. eine PC-Tastatur mit 102 Tasten). Die folgende Reihenfolge wird eingehalten; wenn eine Tastaturbelegungsdatei gefunden wird, wird sie für die 3270-Sitzung verwendet:
+
+- Suche nach einer Tastaturbelegungsdatei mit dem Namen "-KEYFILE".
+
+- Suche nach einer sitzungsspezifischen Tastaturbelegungsdatei, die Sie mit Hilfe des Programms zur Tastaturneubelegung erstellt haben.
+
+- Suche nach einer Standard-Tastaturbelegungsdatei, die Sie mit Hilfe des Programms zur Tastaturneubelegung erstellt haben.
+
+- Wurde keine der oben genannten Dateien gefunden, verwendet der Emulator die standardmäßigen Tastaturaktionen.
+
+////5250
+++++"Taste für Eingabe/Verlassen des Feldes"
+Über die Option "Verschiedene Einstellungen" können Sie die Position der Aktionen zur Eingabe und zum Verlassen eines Feldes ändern. Wenn Sie die Position der Eingabefunktion oder der rechten Steuertaste ändern möchten, überprüfen Sie zunächst, ob die gewünschte Zuordnung unter "Verschiedene Einstellungen" verfügbar ist. Öffnen Sie hierzu das Pulldown-Menü "Optionen" in der Menüleiste des Emulators, und klicken Sie auf "Verschiedene Einstellungen".
+
+Alle an der Eingabetaste oder an der rechten Steuertaste vorgenommenen Tastaturneubelegungen werden durch "Verschiedene Einstellungen" außer Kraft gesetzt, wenn für die Option "Taste für Eingabe/Verlassen des Feldes" nicht der Standardwert festgelegt ist.
+
+Ist die gewünschte Zuordnung unter "Verschiedene Einstellungen" nicht verfügbar, setzen Sie zunächst die Option "Taste für Eingabe/Verlassen des Feldes" auf den Standardwert, und führen Sie mit Hilfe des Programms zur Tastaturneubelegung die gewünschten Änderungen durch.
+
+Anmerkung: Über "Verschiedene Einstellungen" können Sie auch die Position der Druckaktion ändern und damit die Änderungen der Tastaturneubelegung für die Taste für den Anzeigenausdruck außer Kraft setzen. 
+
+////3270
+++++"Eingabetaste"
+Über die Option "Verschiedene Einstellungen" und das Konfigurationsprogramm des IBM 3270-Emulators können Sie die Position der Eingabetaste ändern. Wenn Sie die Position der Eingabetaste oder der rechten Steuertaste ändern möchten, überprüfen Sie zunächst, ob die gewünschte Zuordnung unter "Verschiedene Einstellungen" oder im Konfigurationsprogramm des IBM 3270-Emulators verfügbar ist. 
+
+Die Position der Eingabefunktion unter "Verschiedene Einstellungen" hat die höchste Priorität. Dann wird eine Einstellung für die Position der Eingabetaste im Konfigurationsprogramm des IBM 3270-Emulators verwendet. Wenn die Position der Eingabetaste unter "Verschiedene Einstellungen" und im Konfigurationsprogramm des IBM 3270-Emulators auf den Standardwert gesetzt ist, können Sie über die Tastaturneubelegung die Aktionen für die Eingabetaste und die rechte Steuertaste ändern.
+
+Anmerkung: Über die Option "Verschiedene Einstellungen" können Sie die Position der Aktion für lokales Drucken ändern. Diese Einstellung setzt alle Tastaturneubelegungen für die Taste für Anzeigenausdruck außer Kraft. 
+
+////9999
+++++"Fensterlayout"
+Das Fenster zur Tastaturneubelegung enthält einen Layoutbereich für die grafische Tastatur (oben), einen Bereich zur Aktionsauswahl (links), einen Bereich für Tasten/Aktionen (rechts) und einen Bereich für die Aktionsleiste und die Nachrichtenanzeige (unten).
+
+Grafische Tastatur: Zeigt das physische Layout der aktuellen Tastatur. Wenn Sie auf eine Taste klicken, werden die Aktionen im Bereich "Taste/Aktion" angezeigt, die dieser Taste zugeordnet sind. 
+
+
+Der Bereich zur Aktionsauswahl enthält folgende Elemente:
+
+1) Die "Liste verfügbarer Aktionen" enthält die verfügbaren Aktionen. Eine aus der Liste ausgewählte Aktion wird zur aktuellen Aktion.
+
+2) Die "Zeichenliste" enthält alle verfügbaren Zeichen. Ein ausgewähltes Zeichen wird zur aktuellen Aktion. Klicken Sie auf ein Zeichen, um es auszuwählen.
+
+3) Die Schaltfläche "Aktionshilfe" bietet Definitionen für Tastaturaktionen in einem Aktionshilfefenster. Sie können die Aktionsdefinitionen drucken.
+
+////5250
+4) Die Schaltfläche "Keine Aktion", über die Sie die aktuelle Aktion auf den Wert "Nichts" setzen können. Eine Tastenkombination mit der Aktion "Nichts" hat dieselbe Wirkung als wäre die Tastenkombination nicht gedrückt worden.
+////3270
+4) Die Schaltfläche "Keine Aktion", über die Sie die aktuelle Aktion auf "noop" setzen können. Eine Tastenkombination mit der Aktion "noop" hat dieselbe Wirkung als wäre die Tastenkombination nicht gedrückt worden.
+////9999
+
+5) Die Schaltfläche "Suchen", über die Sie alle Tasten suchen können, die der in der Liste der verfügbaren Aktionen hervorgehobenen Aktion zugeordnet sind. Die gesuchten Tasten werden in der grafischen Tastatur hervorgehoben; die erste Taste im Bereich "Taste/Aktion" ist die aktuelle Taste.
+
+Anmerkung: Es kann immer nur eine Aktion die aktuelle Aktion sein.
+
+
+Der Bereich "Taste/Aktion" enthält folgende Elemente:
+
+1) Die "Aktuelle Taste", die die Taste anzeigt, die geändert werden kann. Die "Aktuelle Taste" wird im oberen Teil des Bereichs "Taste/Aktion" oder im Auswahlbereich für Aktionen (je nach Tastaturtyp) angezeigt. Es kann jeweils immer nur eine Taste geändert werden.
+
+2) Die Tasten für die "Änderungswerte" mit den Tastenkombinationen, die vom Programm zur Tastaturneubelegung erkannt werden. Die Tasten mit den Änderungswerten beginnen mit "-> ". Wenn Sie auf eine Taste mit einem Änderungswert klicken, ersetzt die aktuelle Aktion (aus der Liste verfügbarer Aktionen, der Zeichenliste oder keine Aktion) die Aktion im Aktionstextbereich.
+
+3) Der Aktionstextbereich befindet sich rechts von den jeweiligen Tasten mit Änderungswerten und zeigt die Aktion an, die der aktuellen Taste für diesen Änderungswert zugeordnet ist. Dieser Bereich kann bearbeitet werden (weitere Informationen finden Sie im Abschnitt "Aktionstextbereich bearbeiten").
+
+4) Über die Schaltfläche "OK" können Sie Änderungen akzeptieren, die an der aktuellen Taste vorgenommen wurden.
+
+5) Über die Schaltfläche "Abbrechen" werden an der aktuellen Taste vorgenommene Änderungen verworfen.
+
+
+Die Schaltflächen der Aktionsleiste bieten die folgenden Funktionen:
+
+1) Über die Schaltfläche "Speichern" können Sie die Tastaturneubelegung in einer Tastaturbelegungsdatei speichern.
+
+2) Über die Schaltfläche "Löschen" können Sie zuvor erstellte Tastaturbelegungsdateien löschen.
+
+3) Über die Schaltfläche "Änderungen auf Sitzung anwenden" können Sie Änderungen auf die Sitzung anwenden, in der das Programm zur Tastaturneubelegung gestartet wurde. Hierdurch können Sie die Änderungen testen, bevor Sie sie in einer Tastaturbelegungsdatei speichern.
+
+4) Über die Schaltfläche "Wiederherstellen" können Sie Änderungen, die Sie seit dem letzten "Anwenden" oder seit dem Starten des Programms zur Tastaturneubelegung vorgenommen haben, rückgängig machen.
+
+5) Über die Schaltfläche "Verlassen" können Sie das Programm zur Tastaturneubelegung verlassen. 
+
+6) Über die Schaltfläche "Drucken" können Sie die Kombinationen von Tasten/Änderungswerten und die erfolgenden Aktionen drucken.
+
+7) Über "Hilfe" können Sie diesen Hilfetext anzeigen.
+
+Nachrichtenbereich:
+Zeigt Informations- und Fehlernachrichten an.
+
+++++"Erste Schritte"
+Gehen Sie zum Vornehmen von Änderungen an der Tastaturbelegung wie folgt vor:
+
+1) Starten Sie das Programm zur Tastaturneubelegung von der Emulationssitzung aus, für die Sie die Änderungen vornehmen möchten.
+
+2) Klicken Sie auf der grafischen Tastatur auf die zu ändernde Taste.
+
+3) Der Bereich "Taste/Aktion" ist nun aktiv, und die ausgewählte Taste ist die aktuelle Taste. Die Aktionen, die zurzeit der Taste für mehrere Änderungswerte zugeordnet sind, werden in den Bereichen mit dem Aktionstext angezeigt.
+
+4) Klicken Sie auf eine Aktion, um sie aus der Liste der verfügbaren Aktionen oder der Zeichenliste oder um keine Aktion der aktuellen Taste zuzuordnen. (Anmerkung: Im Abschnitt "Einfache Tastaturmakros" finden Sie Informationen zum Erstellen eines einfachen Tastaturmakros.)
+
+5) Klicken Sie auf die Taste für den Änderungswert, der die Aktion zugeordnet werden soll. Der Aktionstextbereich für den Änderungswert sollte die gewünschte Aktion anzeigen. Ist die Aktion für mehrere Änderungswerte für diese Taste erwünscht, klicken Sie auf die entsprechenden Änderungswerte. Sie können den Aktionstextbereich bearbeiten; weitere Informationen hierzu finden Sie im Abschnitt "Aktionstextbereich bearbeiten".
+
+6) Klicken Sie auf "OK", um die an der Taste vorgenommenen Änderungen zu akzeptieren, oder klicken Sie auf "Abbrechen", um die ursprünglichen Aktionen wiederherzustellen.
+
+7) Klicken Sie auf "Änderungen auf Sitzung anwenden".
+
+8) Testen Sie die Tastaturneubelegungen in der Emulationssitzung; verlassen Sie das Programm zur Tastaturneubelegung nicht.
+
+9) Im Programm zur Tastaturneubelegung können Sie weitere Tastaturneubelegungen vornehmen oder nötigenfalls die vorherige Tastaturbelegung wiederherstellen.
+
+10) Speichern Sie nach dem Anwenden und Testen aller Tastaturbelegungsänderungen die Änderungen. 
+
+11) Verlassen Sie das Programm zur Tastaturneubelegung.
+
+++++"Aktionstextbereich bearbeiten"
+Ein Aktionstextbereich befindet sich rechts von den einzelnen Tasten mit Änderungswerten und zeigt die Aktion(en) an, die der aktuellen Taste für diesen Änderungswert zugeordnet ist/sind. Aktionstextbereiche können Sie über die Tastatur ändern. Klicken Sie auf den gewünschten Aktionstextbereich, und nehmen Sie die Änderung mit Hilfe der Tastatur vor. Klicken Sie auf "OK", um die Änderungen zu akzeptieren. 
+
+Die geänderten Aktionen müssen richtig und unter Beachtung von Groß-/Kleinschreibung geschrieben werden. Die einzelnen Aktionen müssen durch eine Leerstelle voneinander getrennt sein.
+
+Wurde ein Fehler im Aktionstext gefunden, wird ein Warndialog angezeigt, und die fehlerhafte Aktion wird hervorgehoben.
+
+Wenn Sie in einen Aktionstextbereich klicken, wird dieser aktiviert. Wird eine Taste mit einem Änderungswert geklickt, während der zugehörige Aktionstextbereich aktiv ist, wird die aktuelle Aktion an der Cursorposition in den Aktionstextbereich eingefügt. Wenn auf eine Taste mit Änderungswert geklickt wird und der zugehörige Aktionstextbereich nicht aktiv ist, ersetzt die aktuelle Aktion die vorherige(n) Aktion(en).
+
+//// Note: The translation of String() and Play() below should match the translated resource text for AllShare*string() and Keyxxx52*play() in the keyboard remapping resource file.
+Die Tastenkombinationen aus Strg+Alt+Taste 0 bis 9 auf dem numerischen Tastenblock unterstützen keinen Text innerhalb der Klammer für den Aktionstextbereich. String() und Play() unterstützen bei dieser Tastenkobination keinen Text.
+
+++++"Änderungen an der Tastaturbelegung anwenden"
+Über die Schaltfläche "Änderungen auf Sitzung anwenden" werden die Änderungen der Tastaturneubelegung vorübergehend auf die Emulationssitzung angewendet, in der das Programm zur Tastaturneubelegung gestartet wurde. Sie können Ihre Änderungen dann testen. Im Abschnitt zum Speichern der Tastaturneubelegung finden Sie Informationen zum Speichern Ihrer Änderungen für den zukünftigen Gebrauch.
+
+++++"Tastaturbelegungsdateien speichern"
+Über die Schaltfläche "Speichern" können Sie Ihre Tastaturneubelegung für den zukünftigen Gebrauch speichern. Die Tastaturneubelegungen werden in einer Tastaturbelegungsdatei gespeichert. Sie können auswählen, wie die Tastaturneubelegung gespeichert werden soll: als Standardtastaturbelegungsdatei, die für alle Sitzungen verwendet werden soll, oder als sitzungsspezifische Tastaturbelegungsdatei, die nur für die Sitzung verwendet werden soll, in der das Programm zur Tastaturneubelegung gestartet wurde.
+
+Eine sitzungsspezifische Tastaturbelegungsdatei bietet verschiedene Tastaturaktionen für verschiedene 3270-Sitzungen. Eine sitzungsspezifische Tastaturbelegungsdatei hat die höchste Priorität und wird für die Sitzung verwendet, in der die Tastaturbelegungsdatei erstellt wurde (hierbei werden die Sitzungsnummer der 3270-Sitzung und der Sitzungsname verwendet).
+
+Eine Standardtastaturbelegungsdatei hat die zweithöchste Priorität und wird für alle Sitzungen verwendet, die nicht über eine sitzungsspezifische Tastaturbelegungsdatei verfügen. 
+
+Im Abschnitt zum Löschen von Tastaturbelegungsdateien finden Sie Informationen zum Löschen einer Tastaturbelegungsdatei.
+
+++++"Tastaturbelegungsdateien löschen"
+Wählen Sie die Schaltfläche "Löschen" in der Aktionsleiste aus, um von Ihnen erstellte Tastaturbelegungsdateien zu löschen. Wählen Sie die Tastaturbelegungsdateien aus, die Sie löschen möchten, und klicken Sie dann auf "Löschen".
+
+++++"Tastaturbelegung wiederherstellen"
+Wenn eine ungewünschte Tastaturneubelegung vorgenommen wurde, können Sie folgende Tastaturbelegungen wiederherstellen:
+
+1) Die ursprüngliche Tastaturbelegung, die beim Starten des Programms zur Tastaturneubelegung erkannt wurde.
+
+2) Den Status der letzten Anwendung; dabei handelt es sich um die Zuordnung, die zuletzt über die Schaltfläche "Anwenden" in der Aktionsleiste auf die Sitzung angewendet wurde.
+
+Bei der Wiederherstellung werden die wiederhergestellten Tastaturzuordnungen nicht gespeichert oder angewendet. Es werden lediglich die Umsetzungen für das Programm zur Tastaturneubelegung wiederhergestellt.
+
+Um die Zuordnungen einer Standardtastaturbelegung wiederherzustellen, müssen Sie die sitzungsspezifische Tastaturbelegungsdatei für diese Sitzung löschen und die Sitzung erneut starten.
+
+++++"Einfache Tastaturmakros"
+Ein Tastaturmakro ist eine Tastenkombination, die Sie einfach in Ihre Emulationssitzung hinzufügen können. Sie können mit Hilfe des Programms zur Tastaturneubelegung einfache Tastaturmakros erstellen. Lange oder komplexe Tastenkombinationen sollten mit Hilfe der Funktion zur Aufzeichnung und Wiedergabe erstellt werden. Weitere Informationen finden Sie in den Abschnitten zur Aufzeichnung und Wiedergabe in der Haupthilfe des Emulators.
+
+Gehen Sie zum Erstellen eines einfachen Tastaturmakros wie folgt vor:
+
+1) Klicken Sie auf die Taste der grafischen Tastatur, die Ihr Tastaturmakro ausführen soll.
+
+//// Note: The translation of String() below should match the translated resource text for AllShare*string() in the keyboard remapping resource file.
+2) Blättern Sie zur Aktion "String()" in der Liste verfügbarer Aktionen, und klicken Sie auf "String()".
+
+3) Klicken Sie für die ausgewählte Taste auf die gewünschte Taste mit Änderungswert.
+
+4) Klicken Sie zwischen die Klammern von "String()" im Bereich "Taste/Aktion".
+
+5) Geben Sie ein doppeltes Anführungszeichen, die Zeichen des Tastaturmakros und ein weiteres doppeltes Anführungszeichen ein (z. B. String("Ihre Makrozeichen").
+
+6) Klicken Sie auf "OK", um die Änderungen zu akzeptieren.
+
+7) Klicken Sie auf "Änderungen auf Sitzung anwenden".
+
+8) Testen Sie Ihr Tastaturmakro; drücken Sie die Tastenkombination in der Emulationssitzung. Sie können das Tastaturmakro ggf. ändern. Klicken Sie auf "Speichern".
+
+Anmerkung: Sie können einer Taste mehrere Aktionen zuordnen. Klicken Sie hierzu auf den Textbereich der gewünschten Aktion, und geben Sie die gewünschte Aktionsfolge ein. Sie können auch auf den Textbereich der gewünschten Aktion klicken, und auf die Tasten mit den Änderungswerten klicken, um die Aktionen aus der Liste der verfügbaren Aktionen und aus der Zeichenliste hinzuzufügen. Die einzelnen Aktionen müssen durch eine Leerstelle voneinander getrennt sein.
+
+Anmerkung: Wenn Sie ein Makro mit mehreren Kombinationen aus Änderungswerten erstellen möchten, die nicht im Bereich "Taste/Aktion" verfügbar sind, können Sie hierzu die Funktion "Erweiterte Tastaturneubelegung" verwenden (weitere Informationen hierzu finden Sie im Abschnitt zur erweiterten Tastaturneubelegung).
+
+++++"Wiedergabedateien"
+Sie können einer Tastenkombination eine Wiedergabedatei zuordnen. Zeichnen Sie mit Hilfe der Aufzeichnungsfunktion eine Wiedergabedatei auf (weitere Informationen hierzu finden Sie im Abschnitt zur Aufzeichnung in der Haupthilfe zum Emulator).
+
+////Note: The translation of Play() below should match the translated resource text for Keyxxx52*play() in the keyboard remapping resource file.
+Wählen Sie dann bei der Tastaturneubelegung die Taste aus, um die Wiedergabedatei zu starten. Ordnen Sie die Aktion "Play()" Ihrer Tastenkombination zu. Klicken Sie mit der Maus zwischen die Klammern von "Play()" im Bereich "Taste/Aktion". Geben Sie den Namen der Wiedergabedatei zwischen die Klammern ein.
+
+++++"Keine Aktion"
+Damit eine Tastenkombination keine Aktion ausführt, klicken Sie im Bereich zur Aktionsauswahl auf die Schaltfläche "Keine Aktion", und klicken Sie für die gewünschte Tastenkombination auf die Taste mit dem Änderungswert. Akzeptieren Sie dann die Änderungen mit der Schaltfläche "OK".
+
+////Note: The translation of Dead Key below should match the translated resource text for Keyxxx52*unmappable() in the keyboard remapping resource file.
+Anmerkung: Eine Taste mit dem Vermerk "Kombinationstaste" im Aktionstextbereich kann nicht zugeordnet werden, da das Betriebssystem für die Verarbeitung von Kombinationstasten zuständig ist.
+
+////Note: The translation of Undefined below should match the translated resource text for Keyxxx52*undefined() in the keyboard remapping resource file.
+Anmerkung: Eine Taste mit dem Vermerk "Nicht definiert" im Aktionstextbereich kann zugeordnet werden.
+
+++++"Aktionen suchen"
+Um Tastatureingaben zu suchen, die einer Aktion zugeordnet sind, wählen Sie die Aktion in der Liste verfügbarer Aktionen aus, und klicken Sie im Aktionsauswahlbereich auf "Suchen".
+
+Alle Tasten, die der gesuchten Aktion zugeordnet sind, werden hervorgehoben, und die erste gefundene Taste wird im Bereich "Taste/Aktion" zur aktuellen Taste.
+
+Die Option "Suchen" kann nicht für die Auswahl "Keine Aktion", Zeichenlistenzeichen oder Tastaturmakros verwendet werden.
+
+++++"Zeichenliste"
+Die Zeichenliste ermöglicht den Zugriff auf Zeichen, auf die Sie möglicherweise nicht über die Tastatur zugreifen können.
+
+Geben Sie ein Zeichen für eine Tastenkombination an: Klicken Sie auf die Taste auf der grafischen Tastatur, die das Zeichen anzeigen soll. Klicken Sie auf das gewünschte Zeichen in der Zeichenliste. Klicken Sie auf die gewünschte Taste mit Änderungswert. Klicken Sie auf "OK", um die Änderung zu akzeptieren und auf die aktuelle Sitzung anzuwenden.
+
+Fügen Sie einem Tastaturmakro ein Zeichen hinzu: Klicken auf die Taste auf der grafischen Tastatur, die das Tastaturmakro anzeigt. Klicken Sie auf das gewünschte Zeichen in der Zeichenliste. Klicken Sie im Aktionstextbereich des Tastaturmakros (innerhalb der Aktion "String()") auf die Position, an der das Zeichen hinzugefügt werden soll (mit der linken und der rechten Cursortaste können Sie den Cursor an die gewünschte Position bewegen). Klicken Sie auf die gewünschte Taste mit Änderungswert. Klicken Sie auf "OK", um die Änderung zu akzeptieren und auf die aktuelle Sitzung anzuwenden.
+
+++++"Window Manager-Tasten"
+Bestimmte Tasten werden vom Programm "Window Manager" verarbeitet (z. B. die Tastenkombination zum Verschieben eines Fensters in den Hintergrund. Window Manager-Tasten sind nicht für die Tastaturneubelegung über das Emulatorprogramm zur Tastaturneubelegung verfügbar.
+
+////3270
+++++"Lichtstiftemulation"
+Ein Lichtstift (Auswahl eines Feldes) kann über eine Tastenkombination oder die Maus emuliert werden. Sie definieren die Tastenkombination oder Maus mit Hilfe des Programms zu Tastaturneubelegung.
+
+//// Note: The translation of PenSelectField() below should match the translated resource text for Keyxxx52*select-field() in the keyboard remapping resource file.
+Tastenkombination: Klicken Sie auf die gewünschte Taste auf der grafischen Tastatur, und ordnen Sie die Aktion "PenSelectField()" der gewünschten Tastenkombination zu.
+
+////Note: Do not translate Alt<KeyPress>Insert: select-field() and Alt<Btn3Down>: select-field() below.
+Maus: Legen Sie die Tastenfolge für die Maus zum Emulieren des Lichtstifts fest; achten Sie darauf, keine wichtige Mausfunktion zu inaktivieren. Am einfachsten ist es, die Aktion "PenSelectField()" wie oben beschrieben vorübergehend einer Tastenkombination zuzuordnen. Überschreiben Sie keine wichtige Tastenkombination (Alt-Einfügen ist beispielsweise normalerweise verfügbar). Verwenden Sie dann die Funktion "Erweiterte Tastaturneubelegung" (weitere informationen finden Sie im Hilfetext "Erweiterte Tastaturneubelegung") zur Bearbeitung der Tastenkombination, die die erste Tastenkombination in der Liste sein sollte. Beispiel: Ändern Sie Alt<KeyPress>Insert: select-field() in Alt<Btn3Down>: select-field(). In diesem Fall wird durch gleichzeitiges Drücken der Alt-Taste und der rechten Maustaste der Lichtstift emuliert.
+////9999 
+
+++++"Nicht anzeigbare Umsetzungen"
+Nicht anzeigbare Umsetzungen treten nur dann auf, wenn Sie Umsetzungen über die "Erweiterte Tastaturneubelegung" hinzugefügt haben, oder Sie über eine Tastaturneubelegungsdatei verfügen, die mit einer früheren Version des Programms zur Tastaturneubelegung erstellt wurde.
+
+Bei der erweiterten Tastaturneubelegung (und der Verwendung einer früheren Version des Programms zur Tastaturneubelegung) sind mehrere Umsetzungen von Änderungswerten zulässig. Diese Änderungswerte werden nicht im Bereich "Taste/Aktion" angezeigt.
+
+Besteht eine Umsetzung für die aktuelle Taste, die nicht angezeigt werden kann, wird eine entsprechende Nachricht im Nachrichtenbereich angezeigt. Diese Umsetzung kann nur mit Hilfe der Funktion "Erweiterte Tastaturneubelegung" angezeigt, bearbeitet oder entfernt werden. Diese Umsetzungen können nützliche Funktionen bieten; das Programm zur Tastaturneubelegung ändert diese Umsetzungen nicht. 
+
+++++"Tastaturbelegungsdateien drucken"
+Sie können die aktuelle Tastaturbelegungsdatei drucken, indem Sie die Schaltfläche "Drucken" in der Aktionsleiste auswählen und die Druckoptionen im Druckdialog auswählen. Die einzelnen Kombinationen aus Tasten/Änderungswerten auf der Tastatur werden mit den entsprechenden Aktionen aufgeführt. Tastenkombinationen, die über die Funktion "Erweiterte Tastaturneubelegung" erstellt wurden, werden nicht gedruckt.
+
+++++"Erweiterte Tastaturneubelegung"
+Warnung: Bei Verwendung der Funktion "Erweiterte Tastaturneubelegung" kann es zu unerwünschten Ergebnissen sowie zu schwer wiegenden Fehlern bei der Emulationssitzung kommen. Beheben Sie diese Fehler, indem Sie die Tastaturneubelegungen korrigieren (ändern und anwenden) oder indem Sie die Tastaturbelegungsdatei löschen. Sie müssen die Emulationssitzung verlassen und erneut starten, nachdem Sie die Tastaturbelegungsdatei gelöscht haben.
+
+Die Funktion "Erweiterte Tastaturneubelegung" bietet erfahrenen Benutzern die Möglichkeit, die interne Umsetzliste für Tasteneingaben für die Emulationssitzung zu bearbeiten.
+
+Halten Sie die Alt-Taste gedrückt, und drücken Sie dann die Taste "a", um die Funktion "Erweiterte Tastaturneubelegung" zu starten.
+
+Das Fenster "Erweiterte Tastaturneubelegung" enthält die interne Umsetzliste und die folgenden vier Schaltflächen:
+
+1) "Bearbeiten", zur Bearbeitung der ersten ausgewählten Umsetzung in der Liste.
+
+2) "Einfügen", zum Einfügen einer Leerzeile vor der ausgewählten Umsetzung.
+
+3) "Entfernen", zum Entfernen aller ausgewählten Umsetzungen in der Liste (überprüfen Sie, ob Sie wirklich alle ausgewählten Umsetzungen löschen möchten, bevor Sie auf "Entfernen" klicken).
+
+4) "Schließen", zum Schließen des Fensters "Erweiterte Tastaturneubelegung".
+
+Elemente in der Umsetzliste suchen: Wenn Sie auf eine Taste auf der grafischen Tastatur geklickt haben, werden alle dieser Taste zugeordneten Umsetzungen in der Umsetzliste hervorgehoben. Die Liste wird automatisch so angepasst, dass die erste ausgewählte Umsetzung sichtbar ist.
+
+Um eine Aktion in der Umsetzliste zu finden, wählen Sie die Aktion in der Hauptliste der verfügbaren Aktionen aus, und klicken Sie auf die Schaltfläche "Suchen". Die Tasten, die diese Aktion ausführen, werden hervorgehoben.
+
+Vorrangstellung bei der Umsetzung: Die Umsetzungen müssen in der richtigen Reihenfolge ausgeführt werden. Die Umsetzliste wird von oben nach unten nach einer Umsetzung durchsucht, die einer Tastatureingabe entspricht. Der erste gefundene Eintrag, der den Anforderungen entspricht, wird verwendet. Die Einträge der Umsetzliste mit den meisten Änderungswerten (die zutreffendsten) stehen vor den Einträgen, die weniger Änderungswerte aufweisen.
+
+Beispiel:
+
+////5250
+////In the following two lines, only "must come before" should be translated.
+  Alt<KeyPress>Print: sysreq() muss vor
+  <KeyPress>Print: print() stehen
+
+"sysreq" wird ausgewählt, wenn die Drucktaste gemeinsam mit der Alt-Taste gedrückt wird (andere Tasten für Änderungswerte können gleichzeitig gedrückt werden). "print" wird ausgewählt, wenn die Drucktaste gedrückt wird (andere Tasten für Änderungswerte können gleichzeitig gedrückt werden). Wenn Sie <KeyPress>Print: print() vor Alt<KeyPress>Print: sysreq() drücken, wird die Aktion Alt<KeyPress>Print: sysreq() nicht verarbeitet, da <KeyPress>Print: print() zuerst verarbeitet wird.
+////3270
+  Alt<KeyPress>Print: sysreq()  muss vor
+  <KeyPress>Print: pa1() stehen
+
+"sysreq" wird ausgewählt, wenn die Drucktaste gemeinsam mit der Alt-Taste gedrückt wird (andere Tasten für Änderungswerte können gleichzeitig gedrückt werden). "pa1" wird ausgewählt, wenn die Drucktaste gedrückt wird (andere Tasten für Änderungswerte können gleichzeitig gedrückt werden). Wenn Sie <KeyPress>Print: pa1() vor Alt<KeyPress>Print: sysreq() drücken, wird die Aktion Alt<KeyPress>Print: sysreq() nicht verarbeitet, da <KeyPress>Print: pa1() zuerst verarbeitet wird.
+////9999
+
+Umsetzungsstruktur:
+
+////In the following line, "<KeyPress>" should not be translated.
+  Änderungswert Änderungswert<KeyPress>Taste: action() action()
+
+Es ist kein Änderungswert erforderlich. Mehrere Änderungswerte werden unterstützt. Es ist mindestens eine Aktion erforderlich. Mehrere Aktionen werden unterstützt. 
+
+Änderungswerte bei Tastaturneubelegung erkannt:
+
+////In the following list, the left column ("Any" through "Mod5") should not be translated. The information in parenthesis to the right should be translated.
+////5250
+Any      (gleiche Wirkung als würde kein Änderungswert angegeben)
+Shift    (Umschalten)
+Lock     (Großschreibmodus oder Feststelltaste)
+Ctrl     (linke Steuertaste)
+Alt      (Alt-Taste)
+Mod2     (rechte Alt-Taste, Alt-Gr)
+Mod3     (zurzeit nicht verwendet)
+Mod4     (zurzeit nicht verwendet)
+Mod5     (Sperrtaste für numerischen Tastenblock)
+////3270
+Any      (gleiche Wirkung als würde kein Änderungswert angegeben)
+Shift    (Umschalten)
+Lock     (Großschreibmodus oder Feststelltaste)
+Ctrl     (linke Steuertaste)
+Alt      (Alt-Taste)
+Mod2     (rechte Alt-Taste, Alt-Gr)
+Mod3     (zurzeit nicht verwendet)
+Mod4     (zurzeit nicht verwendet)
+Mod5     (Sperrtaste für numerischen Tastenblock)
+////9999
+
+Das Programm zur Tastaturneubelegung erkennt auch die Kennzeichnung "ausschließlich" (!) am Anfang einer Liste mit Änderungswerten.
+
+////5250
+////Do not translate "reset()" and "Ctrl" below.
+Die Aktion "reset()" ist der linken Steuertaste zugeordnet (die Grundstellungsaktion sollte nicht versetzt werden). Wenn Sie den Änderungswert "Ctrl" zum Auswählen einer Aktion angeben, verarbeitet die linke Steuertaste die Aktion "reset()", bevor Ihre Aktion verarbeitet wird.
+////9999
+
+////Do not translate "enter()", "newline()", and "Control_R" below.
+Die Aktion "enter()" oder "newline()" wird normalerweise auf die Taste "Control_R" gelegt.

@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema name="ibm" type="application" version="1">
+	<label lang="de" value="IBM iSeries Access Emulation"/>
+	<label lang="en" value="IBM iSeries Access Emulation"/>
+
+	<group name="General">
+		<label lang="en" value="General settings"/>
+		<label lang="de" value="Generelle Einstellungen"/>
+		<choice name="Autostart" value="No">
+			<label lang="en" value="Autostart"/>
+			<label lang="de" value="Autostart"/>
+			<option name="Yes" value="Yes">
+				<label lang="en" value="Yes"/>
+				<label lang="de" value="Ja"/>
+			</option>
+			<option name="No" value="No">
+				<label lang="en" value="No"/>
+				<label lang="de" value="Nein"/>
+			</option>
+		</choice>
+		<choice name="ExitAction" value="">
+			<label lang="en" value="On application exit"/>
+			<label lang="de" value="Nach beenden der Anwendung"/>
+			<option name="Do nothing" value="">
+				<label lang="en" value="Do nothing"/>
+				<label lang="de" value="Nichts machen"/>
+			</option>
+			<option name="Restart application" value="Restart">
+				<label lang="en" value="Restart application"/>
+				<label lang="de" value="Anwendung neustarten"/>
+			</option>
+			<option name="Logout user" value="Logout">
+				<label lang="en" value="Logout user"/>
+				<label lang="de" value="Benutzer abmelden"/>
+			</option>
+			<option name="Reboot device" value="Reboot">
+				<label lang="en" value="Reboot thin client"/>
+				<label lang="de" value="Thin Client neustarten"/>
+			</option>
+			<option name="Shutdown device" value="Shutdown">
+				<label lang="en" value="Shutdown thin client"/>
+				<label lang="de" value="Thin Client ausschalten"/>
+			</option>
+		</choice>
+		<choice name="Fullscreen" value="No">
+			<label lang="en" value="Full Screen"/>
+			<label lang="de" value="Vollbild"/>
+			<option name="Yes" value="Yes">
+				<label lang="en" value="Yes"/>
+				<label lang="de" value="Ja"/>
+			</option>
+			<option name="No" value="No">
+				<label lang="en" value="No"/>
+				<label lang="de" value="Nein"/>
+			</option>
+		</choice>
+	</group>
+
+	<group name="Application">
+		<label lang="en" value="Application settings"/>
+		<label lang="de" value="Anwendungseinstellungen"/>
+		<entry name="Server" value="">
+			<label lang="de" value="Serveradresse"/>
+			<label lang="en" value="server address"/>
+		</entry>
+		<entry name="Parameter" value="">
+			<label lang="de" value="manuelle Parameter"/>
+			<label lang="en" value="manual parameters"/>
+		</entry>
+		<!--
+		<choice name="EmulatorType" value="ISERIES">
+			<label lang="de" value="Emulator-Typ"/>
+			<label lang="en" value="Emulator Type"/>
+			<option name="Networkstation5250" value="NWSTATION">
+				<label lang="de" value="Networkstation 5250"/>
+				<label lang="en" value="Networkstation 5250"/>
+			</option>
+			<option name="iSeriesAccess" value="ISERIES">
+				<label lang="de" value="iSeries Access"/>
+				<label lang="en" value="iSeries Access"/>
+			</option>
+		</choice>
+		-->
+		<group name="iSeriesAccessLicensing">
+			<label lang="de" value="iSeries Access Lizensierung"/>
+			<label lang="en" value="iSeries Access Licensing"/>
+			<choice name="UserData" value="Nothing">
+				<label lang="de" value="User Daten"/>
+				<label lang="en" value="user data"/>
+				<option name="Nothing" value="Nothing">
+					<label lang="de" value="Manuelle Benutzereingabe beim Programmstart"/>
+					<label lang="en" value="ask user when starting"/>
+				</option>
+				<!--
+				<option name="Login" value="Login">
+					<label lang="de" value="Login Daten durchreichen"/>
+					<label lang="en" value="passthrough login data"/>
+				</option>
+				-->
+				<option name="Account" value="Account">
+					<label lang="de" value="vorgegebenen Dummyaccount verwenden (unten)"/>
+					<label lang="en" value="use explicit dummy account data (below)"/>
+				</option>
+			</choice>
+			<entry name="User" value="">
+				<label lang="de" value="Benutzer"/>
+				<label lang="en" value="user"/>
+			</entry>
+			<entry name="Password" value="">
+				<label lang="de" value="Passwort"/>
+				<label lang="en" value="password"/>
+			</entry>
+		</group>
+		<group name="MenuEntries">
+			<label lang="de" value="Menü Eintäge"/>
+			<label lang="en" value="menu entries"/>
+			<choice name="KeyRemap" value="enable">
+				<label lang="de" value="Key Remap"/>
+				<label lang="en" value="Key Remap"/>
+				<option name="On" value="enable">
+					<label lang="de" value="An"/>
+					<label lang="en" value="On"/>
+				</option>
+				<option name="Off" value="disable">
+					<label lang="de" value="Aus"/>
+					<label lang="en" value="Off"/>
+				</option>
+				<option name="Hide" value="disable_and_hide">
+					<label lang="de" value="Versteckt"/>
+					<label lang="en" value="Hide"/>
+				</option>
+			</choice>
+			<choice name="KeyPad" value="enable">
+				<label lang="de" value="Key Pad"/>
+				<label lang="en" value="Key Pad"/>
+				<option name="On" value="enable">
+					<label lang="de" value="An"/>
+					<label lang="en" value="On"/>
+				</option>
+				<option name="Off" value="disable">
+					<label lang="de" value="Aus"/>
+					<label lang="en" value="Off"/>
+				</option>
+				<option name="KeyPadOnly" value="keypad_only">
+					<label lang="de" value="Nur KeyPad benutzen"/>
+					<label lang="en" value="Key Pad only"/>
+				</option>
+			</choice>
+			<choice name="PlayBack" value="enable">
+				<label lang="de" value="Play Back"/>
+				<label lang="en" value="Play Back"/>
+				<option name="On" value="enable">
+					<label lang="de" value="An"/>
+					<label lang="en" value="On"/>
+				</option>
+				<option name="Off" value="disable">
+					<label lang="de" value="Aus"/>
+					<label lang="en" value="Off"/>
+				</option>
+				<option name="Hide" value="disable_and_hide">
+					<label lang="de" value="Versteckt"/>
+					<label lang="en" value="Hide"/>
+				</option>
+				<option name="PlaybackOnly" value="playback_only">
+					<label lang="de" value="Nur Wiedergabe"/>
+					<label lang="en" value="Playback only"/>
+				</option>
+			</choice>
+			<choice name="Colors" value="basic">
+				<label lang="de" value="Farben"/>
+				<label lang="en" value="Colors"/>
+				<option name="Basic" value="basic">
+					<label lang="de" value="Basic"/>
+					<label lang="en" value="Basic"/>
+				</option>
+				<option name="Advanced" value="advanced">
+					<label lang="de" value="Erweitert"/>
+					<label lang="en" value="Advanced"/>
+				</option>
+				<option name="Off" value="disable">
+					<label lang="de" value="Aus"/>
+					<label lang="en" value="Off"/>
+				</option>
+				<option name="Hide" value="disable_and_hide">
+					<label lang="de" value="Versteckt"/>
+					<label lang="en" value="Hide"/>
+				</option>
+			</choice>
+		</group>
+		<group name="Appearance">
+			<label lang="de" value="Erscheinungsbild"/>
+			<label lang="en" value="Appearance"/>
+			<!--
+			<choice name="Fenster maximiert" value="Y">
+				<option name="An" value="Y"/>
+				<option name="Aus" value="N"/>
+			</choice>
+			<choice name="Fensterrahmen" value="N">
+				<option name="An" value="Y"/>
+				<option name="Aus" value="N"/>
+			</choice>
+			-->
+			<choice name="27x132" value="enable">
+				<label lang="de" value="27x132 Zeichen Modus"/>
+				<label lang="en" value="27x132 character mode"/>
+				<option name="On" value="enable">
+					<label lang="de" value="An"/>
+					<label lang="en" value="enable"/>
+				</option>
+				<option name="Off" value="disable">
+					<label lang="de" value="Aus"/>
+					<label lang="en" value="disable"/>
+				</option>
+			</choice>
+			<choice name="ColumnSeparator" value="enable">
+				<label lang="de" value="Spaltentrenner"/>
+				<label lang="en" value="Column separator"/>
+				<option name="On" value="enable">
+					<label lang="de" value="An"/>
+					<label lang="en" value="enable"/>
+				</option>
+				<option name="Off" value="disable">
+					<label lang="de" value="Aus"/>
+					<label lang="en" value="disable"/>
+				</option>
+			</choice>
+			<choice name="DesktopFile" value="disable">
+				<label lang="de" value="Desktopdatei"/>
+				<label lang="en" value="Use desktop file"/>
+				<option name="On" value="enable">
+					<label lang="de" value="An"/>
+					<label lang="en" value="enable"/>
+				</option>
+				<option name="Off" value="disable">
+					<label lang="de" value="Aus"/>
+					<label lang="en" value="disable"/>
+				</option>
+			</choice>
+			<choice name="CursorStyle" value="BLOCK_INSERT_UNDERSCORE_REPLACE">
+				<label lang="de" value="Cursor Stil"/>
+				<label lang="en" value="Cursor Style"/>
+				<option name="block" value="BLOCK">
+					<label lang="de" value="immer block"/>
+					<label lang="en" value="always block"/>
+				</option>
+				<option name="underline" value="UNDERLINE">
+					<label lang="de" value="immer underline"/>
+					<label lang="en" value="always underline"/>
+				</option>
+				<option name="underline" value="BLOCK_INSERT_UNDERSCORE_REPLACE">
+					<label lang="de" value="underline replace - block insert"/>
+					<label lang="en" value="underline replace - block insert"/>
+				</option>
+				<option name="underline" value="UNDERSCORE_INSERT_BLOCK_REPLACE">
+					<label lang="de" value="underline insert - block replace"/>
+					<label lang="en" value="underline insert - block replace"/>
+				</option>
+			</choice>
+			<choice name="CursorBlinking" value="disable">
+				<label lang="de" value="Cursor blinken"/>
+				<label lang="en" value="Cursor blinking"/>
+				<option name="disable" value="disable">
+					<label lang="de" value="deaktiviert"/>
+					<label lang="en" value="disable"/>
+				</option>
+				<option name="enable" value="enable">
+					<label lang="de" value="aktiviert"/>
+					<label lang="en" value="enable"/>
+				</option>
+			</choice>
+			<choice name="CopyType" value="LINEAR">
+				<label lang="de" value="Kopiermodus"/>
+				<label lang="en" value="Copy type"/>
+				<option name="Block" value="BLOCK">
+					<label lang="de" value="als Block"/>
+					<label lang="en" value="Block"/>
+				</option>
+				<option name="Zeile" value="LINEAR">
+					<label lang="de" value="zeilenweise"/>
+					<label lang="en" value="Line"/>
+				</option>
+			</choice>
+			<choice name="Euro" value="enable">
+				<label lang="de" value="Euro"/>
+				<label lang="en" value="Euro"/>
+				<option name="On" value="enable">
+					<label lang="de" value="An"/>
+					<label lang="en" value="On"/>
+				</option>
+				<option name="Off" value="disable">
+					<label lang="de" value="Aus"/>
+					<label lang="en" value="Off"/>
+				</option>
+			</choice>
+		</group>
+		<group name="EnableCommands">
+			<label lang="de" value="Befehle zulassen"/>
+			<label lang="en" value="Enable Commands"/>
+			<choice name="Command" value="enable">
+				<label lang="de" value="Command"/>
+				<label lang="en" value="Command"/>
+				<option name="On" value="enable">
+					<label lang="de" value="An"/>
+					<label lang="en" value="On"/>
+				</option>
+				<option name="Off" value="disable_and_hide">
+					<label lang="de" value="Aus"/>
+					<label lang="en" value="Off"/>
+				</option>
+				<option name="OffAllowClose" value="disable_and_allow_wm_close">
+					<label lang="de" value="Aus, aber schliessen erlauben"/>
+					<label lang="en" value="Off but allow closing"/>
+				</option>
+			</choice>
+			<choice name="Edit" value="enable">
+				<label lang="de" value="Bearbeiten"/>
+				<label lang="en" value="Edit"/>
+				<option name="On" value="enable">
+					<label lang="de" value="An"/>
+					<label lang="en" value="On"/>
+				</option>
+				<option name="Off" value="disable_and_hide">
+					<label lang="de" value="Aus"/>
+					<label lang="en" value="Off"/>
+				</option>
+			</choice>
+			<choice name="Option" value="enable">
+				<label lang="de" value="Option"/>
+				<label lang="en" value="Option"/>
+				<option name="On" value="enable">
+					<label lang="de" value="An"/>
+					<label lang="en" value="On"/>
+				</option>
+				<option name="Off" value="disable_and_hide">
+					<label lang="de" value="Aus"/>
+					<label lang="en" value="Off"/>
+				</option>
+			</choice>
+			<choice name="LocalPrint" value="enable">
+				<label lang="de" value="Local Print"/>
+				<label lang="en" value="Local Print"/>
+				<option name="On" value="enable">
+					<label lang="de" value="An"/>
+					<label lang="en" value="On"/>
+				</option>
+				<option name="Off" value="disable_and_hide">
+					<label lang="de" value="Aus"/>
+					<label lang="en" value="Off"/>
+				</option>
+			</choice>
+			<choice name="Help" value="enable">
+				<label lang="de" value="Hilfe"/>
+				<label lang="en" value="Help"/>
+				<option name="On" value="enable">
+					<label lang="de" value="An"/>
+					<label lang="en" value="On"/>
+				</option>
+				<option name="Off" value="disable_and_hide">
+					<label lang="de" value="Aus"/>
+					<label lang="en" value="Off"/>
+				</option>
+			</choice>
+			<choice name="Control" value="enable">
+				<label lang="de" value="Control"/>
+				<label lang="en" value="Control"/>
+				<option name="On" value="enable">
+					<label lang="de" value="An"/>
+					<label lang="en" value="On"/>
+				</option>
+				<option name="Off" value="disable_and_hide">
+					<label lang="de" value="Aus"/>
+					<label lang="en" value="Off"/>
+				</option>
+			</choice>
+			<choice name="MiscPref" value="enable">
+				<label lang="de" value="Misc Pref"/>
+				<label lang="en" value="Misc Pref"/>
+				<option name="On" value="enable">
+					<label lang="de" value="An"/>
+					<label lang="en" value="On"/>
+				</option>
+				<option name="Off" value="disable_and_hide">
+					<label lang="de" value="Aus"/>
+					<label lang="en" value="Off"/>
+				</option>
+			</choice>
+			<choice name="FontMenu" value="enable">
+				<label lang="de" value="Font Menu"/>
+				<label lang="en" value="Font Menu"/>
+				<option name="On" value="enable">
+					<label lang="de" value="An"/>
+					<label lang="en" value="On"/>
+				</option>
+				<option name="Off" value="disable">
+					<label lang="de" value="Aus"/>
+					<label lang="en" value="Off"/>
+				</option>
+				<option name="OffNoWindowChange" value="disable_no_resize_or_move">
+					<label lang="de" value="Aus, Fenster kann nicht geänder werden"/>
+					<label lang="en" value="Off, Window can not be changed"/>
+				</option>
+			</choice>
+			<choice name="ChangeIPAddress" value="enable">
+				<label lang="de" value="IP Adresse ändern"/>
+				<label lang="en" value="Change IP Address"/>
+				<option name="On" value="enable">
+					<label lang="de" value="An"/>
+					<label lang="en" value="On"/>
+				</option>
+				<option name="Off" value="disable">
+					<label lang="de" value="Aus"/>
+					<label lang="en" value="Off"/>
+				</option>
+			</choice>
+			<choice name="BrowserStart" value="disable">
+				<label lang="de" value="Browser starten"/>
+				<label lang="en" value="Start Browser"/>
+				<option name="On" value="enable">
+					<label lang="de" value="An"/>
+					<label lang="en" value="On"/>
+				</option>
+				<option name="Off" value="disable">
+					<label lang="de" value="Aus"/>
+					<label lang="en" value="Off"/>
+				</option>
+			</choice>
+		</group>
+		<group name="Session">
+			<label lang="de" value="Sitzung"/>
+			<label lang="en" value="Session"/>
+			<entry name="SessionID" value="Session-+2">
+				<label lang="de" value="Session ID"/>
+				<label lang="en" value="Session ID"/>
+			</entry>
+			<entry name="DisplayName" value="USE_HOST_NAME+9">
+				<label lang="de" value="Display Name"/>
+				<label lang="en" value="Display Name"/>
+			</entry>
+			<entry name="TitleOption" value="TEXT_HOST_AND_SESSION_ID">
+				<label lang="de" value="Title Option"/>
+				<label lang="en" value="Title Option"/>
+			</entry>
+			<entry name="MaxSessions" value="99">
+				<label lang="de" value="Maximale Anzahl von Sitzungen"/>
+				<label lang="en" value="Maximum number of sessions"/>
+			</entry>
+		</group>
+		<group name="SpecificColormap">
+			<label lang="de" value="Spezifische Colormap"/>
+			<label lang="en" value="Specific Colormap"/>
+			<choice name="Colormap" value="system">
+				<label lang="de" value="Colormap"/>
+				<label lang="en" value="Colormap"/>
+				<option name="SystemSetting" value="system">
+					<label lang="de" value="Systemvorgabe (grün/schwarz)"/>
+					<label lang="en" value="System setting (green/black)"/>
+				</option>
+				<option name="manualSelection" value="manual">
+					<label lang="de" value="Manuelle Auswahl"/>
+					<label lang="en" value="Manual selection"/>
+				</option>
+			</choice>
+			<entry name="ColormapName" value="">
+				<label lang="de" value="Colormap Name"/>
+				<label lang="en" value="Colormap Name"/>
+			</entry>
+		</group>
+		<group name="SpecificKeymap">
+			<label lang="de" value="Spezifische Keymap"/>
+			<label lang="en" value="Specific Keymap"/>
+			<choice name="KeyFile" value="5250.101">
+				<label lang="de" value="Tastaturdefinition"/>
+				<label lang="en" value="Key File"/>
+				<option name="PCStyle" value="pc.101">
+					<label lang="de" value="PC-Style (Return-Taste)"/>
+					<label lang="en" value="PC-Style (return key)"/>
+				</option>
+				<option name="5250-Style" value="5250.101">
+					<label lang="de" value="5250-Style (rechte STRG-Taste)"/>
+					<label lang="en" value="5250-Style (right CTRL key)"/>
+				</option>
+				<option name="ManualSelection" value="manual">
+					<label lang="de" value="Manuelle Auswahl"/>
+					<label lang="en" value="Manual Selection"/>
+				</option>
+			</choice>
+			<entry name="KeyFileName" value="">
+				<label lang="de" value="Tastaturdefinitionsdatei (absoluter Pfad)"/>
+				<label lang="en" value="Key File Name (absolut path)"/>
+			</entry>
+			<!--
+			<choice name="DataRelease" value="5250">
+				<label lang="de" value="Data Release"/>
+				<label lang="en" value="Datenfreigabe"/>
+				<option name="PCStyle" value="pc">
+					<label lang="de" value="PC-Style (Return-Taste)"/>
+					<label lang="en" value="PC-Style (return key)"/>
+				</option>
+				<option name="5250-Style" value="5250">
+					<label lang="de" value="5250-Style (rechte STRG-Taste)"/>
+					<label lang="en" value="5250-Style (right CTRL key)"/>
+				</option>
+			</choice>
+			-->
+		</group>
+		<group name="Language">
+			<label lang="de" value="Sprache"/>
+			<label lang="en" value="Language"/>
+			<choice name="locale" value="system">
+				<label lang="de" value="Lokalisierung"/>
+				<label lang="en" value="Locales"/>
+				<option value="system">
+					<label lang="de" value="Vom System vorgegeben (locale)"/>
+					<label lang="en" value="system-wide default value (locale)"/>
+				</option>
+				<option value="custom">
+					<label lang="de" value="benutzerdefinierter Wert (s. unten)"/>
+					<label lang="en" value="user defined entry (following entry)"/>
+				</option>
+				<option value="POSIX">
+					<label lang="de" value="POSIX"/>
+					<label lang="en" value="POSIX"/>
+				</option>
+				<option value="C">
+					<label lang="de" value="C"/>
+					<label lang="en" value="C"/>
+				</option>
+				<option value="de_DE.UTF-8">
+					<label lang="de" value="de_DE (utf-8)"/>
+					<label lang="en" value="de_DE (utf-8)"/>
+				</option>
+				<option value="de_DE">
+					<label lang="de" value="de_DE (iso)"/>
+					<label lang="en" value="de_DE (iso)"/>
+				</option>
+				<option value="en_US.UTF-8">
+					<label lang="de" value="en_US (utf-8)"/>
+					<label lang="en" value="en_US (utf-8)"/>
+				</option>
+				<option value="en_US">
+					<label lang="de" value="en_US (iso)"/>
+					<label lang="en" value="en_US (iso)"/>
+				</option>
+			</choice>
+			<entry name="locale_custom" value="C">
+				<label lang="de" value="benutzerdefinierte Lokalisierung"/>
+				<label lang="en" value="user defined locales"/>
+			</entry>
+		</group>
+		<group name="Autostart">
+			<label lang="de" value="Autostart"/>
+			<label lang="en" value="Autostart"/>
+			<entry name="PlaybackFile" value="">
+				<label lang="de" value="Playback Datei"/>
+				<label lang="en" value="Playback File"/>
+			</entry>
+		</group>
+	</group>
+</schema>

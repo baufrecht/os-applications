@@ -1,0 +1,1381 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>iSeries Access</title>
+<!-- iSeries Access for Linux -->
+</head>
+
+<body bgcolor="#00FFFF" text="#000000">
+
+<h1>iSeries Access Error Messages</h1>
+
+<h2><a name="Contents">Contents</a></h2>
+
+<ul>
+    <li><a href="#CWBCO1001">CWBCO1001</a> </li>
+    <li><a href="#CWBCO1002">CWBCO1002</a> </li>
+    <li><a href="#CWBCO1003">CWBCO1003</a> </li>
+    <li><a href="#CWBCO1004">CWBCO1004</a> </li>
+    <li><a href="#CWBCO1006">CWBCO1006</a> </li>
+    <li><a href="#CWBCO1007">CWBCO1007</a> </li>
+    <li><a href="#CWBCO1008">CWBCO1008</a> </li>
+    <li><a href="#CWBCO1009">CWBCO1009</a> </li>
+    <li><a href="#CWBCO1010">CWBCO1010</a> </li>
+    <li><a href="#CWBCO1011">CWBCO1011</a> </li>
+    <li><a href="#CWBCO1014">CWBCO1014</a> </li>
+    <li><a href="#CWBCO1015">CWBCO1015</a> </li>
+    <li><a href="#CWBCO1016">CWBCO1016</a> </li>
+    <li><a href="#CWBCO1017">CWBCO1017</a> </li>
+    <li><a href="#CWBCO1018">CWBCO1018</a> </li>
+    <li><a href="#CWBCO1019">CWBCO1019</a> </li>
+    <li><a href="#CWBCO1020">CWBCO1020</a> </li>
+    <li><a href="#CWBCO1021">CWBCO1021</a> </li>
+    <li><a href="#CWBCO1022">CWBCO1022</a> </li>
+    <li><a href="#CWBCO1023">CWBCO1023</a> </li>
+    <li><a href="#CWBCO1024">CWBCO1024</a> </li>
+<!-- NOSSL *******************************************************************
+    <li><a href="#CWBCO1029">CWBCO1029</a> </li>
+    <li><a href="#CWBCO1030">CWBCO1030</a> </li>
+    <li><a href="#CWBCO1031">CWBCO1031</a> </li>
+    <li><a href="#CWBCO1032">CWBCO1032</a> </li>
+    <li><a href="#CWBCO1033">CWBCO1033</a> </li>
+    <li><a href="#CWBCO1034">CWBCO1034</a> </li>
+    <li><a href="#CWBCO1035">CWBCO1035</a> </li>
+    <li><a href="#CWBCO1036">CWBCO1036</a> </li>
+    <li><a href="#CWBCO1037">CWBCO1037</a> </li>
+    <li><a href="#CWBCO1038">CWBCO1038</a> </li>
+******************************************************************* NO SSL -->
+    <li><a href="#CWBCO1039">CWBCO1039</a> </li>
+    <li><a href="#CWBCO1040">CWBCO1040</a> </li>
+    <li><a href="#CWBCO1041">CWBCO1041</a> </li>
+    <li><a href="#CWBCO1042">CWBCO1042</a> </li>
+    <li><a href="#CWBCO1043">CWBCO1043</a> </li>
+    <li><a href="#CWBCO1044">CWBCO1044</a> </li>
+    <li><a href="#CWBCO1045">CWBCO1045</a> </li>
+    <li><a href="#CWBCO1047">CWBCO1047</a> </li>
+    <li><a href="#CWBCO1048">CWBCO1048</a> </li>
+    <li><a href="#CWBCO1049">CWBCO1049</a> </li>
+<!-- NOSSL *******************************************************************
+    <li><a href="#CWBCO1050">CWBCO1050</a> </li>
+******************************************************************* NO SSL -->
+    <li><a href="#CWBCO1051">CWBCO1051</a> </li>
+<!-- NOSSL *******************************************************************
+    <li><a href="#CWBCO1052">CWBCO1052</a> </li>
+    <li><a href="#CWBCO1053">CWBCO1053</a> </li>
+******************************************************************* NO SSL -->
+    <li><a href="#CWBCO1054">CWBCO1054</a> </li>
+<!-- NOSSL *******************************************************************
+    <li><a href="#CWBCO1055">CWBCO1055</a> </li>
+******************************************************************* NO SSL -->
+    <li><a href="#CWBCO1099">CWBCO1099</a> </li>
+    <li><a href="#ServerConnProp">Server Connection Properties</a>
+    </li>
+    <li><a href="#StartHostServer">How to start iSeries Access
+        servers</a> </li>
+</ul>
+
+<h1><a name="CWBCO1001">CWBCO1001</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+iSeries Access could not start or could not access the TCP/IP
+communications provider on your personal computer. Either the
+communications provider is not installed, or is no longer in a
+usable state.<br>
+<b>Recovery</b><br>
+The provider must be BSD sockets compatible.<br>
+Install or re-install the TCP/IP communications provider and
+verify that it is working correctly </p>
+
+<h1><a name="CWBCO1002">CWBCO1002</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The level of communications provider found is not supported by or
+compatible with iSeries Access.<br>
+<b>Recovery</b><br>
+Use a communications provider that is supported for use with
+iSeries Access. The provider must be BSD sockets compatible.</p>
+
+<h1><a name="CWBCO1003">CWBCO1003</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+An error occurred during communications. The name of the function
+that failed, if available, and its error code are specified.<br>
+<b>Recovery</b><br>
+Check the list below for the error code specified in the message
+and take the action specified. If the function and/or error code
+in the message are not listed here, they may be listed in
+Informational APAR II10598 along with cause and recovery
+information.<br>
+<b>Error codes (for all functions)</b></p>
+
+<blockquote>
+    <p><b>8405</b> - The connection was initially established,
+    but was disconnected by the server application before
+    communications were completed. See message <a
+    href="#CWBCO1047">CWBCO1047</a> for additional information.</p>
+</blockquote>
+
+<blockquote>
+    <p><b>8411</b> - The connection attempt did not complete
+    before the user configured timeout expired. The timeout can
+    occur while querying the IP address or making the initial
+    connection attempt to the server. See <a
+    href="#ServerConnProp">Server Connection Properties</a> for
+    information on configuring the connection to the server. See
+    message <a href="#CWBCO1051">CWBCO1051</a> for additional
+    information.</p>
+</blockquote>
+<!-- NOSSL *************************************
+<blockquote>
+    <p><b>8412</b> - An error occurred during Java key database
+    processing. See message <a href="#CWBCO1053">CWBCO1053</a>. </p>
+</blockquote>
+************************************* NO SSL -->
+<blockquote>
+    <p><b>8413</b> - A user configurable time-out occurred during
+    a send or receive attempt. See message <a href="#CWBCO1054">CWBCO1054</a>.
+    </p>
+</blockquote>
+
+<blockquote>
+    <p><b>11001, 11002, 11003</b> - The server name was not found
+    during TCP/IP address lookup. Verify the server name entered
+    is correct. Verify the TCP/IP settings are correct for
+    resolving addresses. See message <a href="#CWBCO1004">CWBCO1004</a>
+    for additional help. See <a href="#ServerConnProp">Server
+    Connection Properties</a> for information on changing the IP
+    address and mode.</p>
+</blockquote>
+
+<blockquote>
+    <p><b>11004</b> - The iSeries service name was not found in
+    the local SERVICES file. Verify the required iSeries service
+    names are correctly entered in the local SERVICES file.</p>
+</blockquote>
+
+<p>Port numbers for host servers and server mapper: </p>
+
+<table border="0">
+    <tr>
+        <td valign="top"><b>Service Name </b></td>
+        <td valign="top"><b>Description</b></td>
+        <td valign="top"><b>Port Number </b></td>
+        <td valign="top"><b>Subsystem</b></td>
+        <td valign="top"><b>Daemon</b></td>
+        <td valign="top"><b>Server</b></td>
+    </tr>
+    <tr>
+        <td valign="top">as-central</td>
+        <td valign="top">Central server </td>
+        <td valign="top">8470</td>
+        <td valign="top">QSYSWRK</td>
+        <td valign="top">QZSCSRVSD</td>
+        <td valign="top">QZDASOINIT and QZSCSRVS </td>
+    </tr>
+    <tr>
+        <td valign="top">as-database</td>
+        <td valign="top">Database server </td>
+        <td valign="top">8471</td>
+        <td valign="top">QSERVER</td>
+        <td valign="top">QZDASRVSD</td>
+        <td valign="top">QZDASOINIT and QTFPJTCP </td>
+    </tr>
+    <tr>
+        <td valign="top">as-dtaq</td>
+        <td valign="top">Data queue server </td>
+        <td valign="top">8472</td>
+        <td valign="top">QSYSWRK</td>
+        <td valign="top">QZHQSRVD</td>
+        <td valign="top">QZHQSSRV</td>
+    </tr>
+    <tr>
+        <td valign="top">as-file</td>
+        <td valign="top">File server </td>
+        <td valign="top">8473</td>
+        <td valign="top">QSERVER</td>
+        <td valign="top">QPWFSERVSD</td>
+        <td valign="top">QNPSERVS and QIWVPPJT </td>
+    </tr>
+    <tr>
+        <td valign="top">as-netprt</td>
+        <td valign="top">Network print server </td>
+        <td valign="top">8474</td>
+        <td valign="top">QSYSWRK</td>
+        <td valign="top">QNPSERVD</td>
+        <td valign="top">QNPSERVS and QIWVPPJT </td>
+    </tr>
+    <tr>
+        <td valign="top">as-rmtcmd</td>
+        <td valign="top">Remote command / Program call server </td>
+        <td valign="top">8475</td>
+        <td valign="top">QSYSWRK</td>
+        <td valign="top">QZRCSRVSD</td>
+        <td valign="top">QZRCSRVS</td>
+    </tr>
+    <tr>
+        <td valign="top">as-signon</td>
+        <td valign="top">Signon server </td>
+        <td valign="top">8476</td>
+        <td valign="top">QSYSWRK</td>
+        <td valign="top">QZSOSGND</td>
+        <td valign="top">QZSOSIGN</td>
+    </tr>
+    <tr>
+        <td valign="top">as-svrmap</td>
+        <td valign="top">Server mapper </td>
+        <td valign="top">449</td>
+        <td valign="top">QSYSWRK</td>
+        <td valign="top">QZSOSMAPD</td>
+        <td valign="top">n/a</td>
+    </tr>
+    <tr>
+        <td valign="top">drda</td>
+        <td valign="top">DDM</td>
+        <td valign="top">446</td>
+        <td valign="top">QSYSWRK</td>
+        <td valign="top">QRWTLSTN</td>
+        <td valign="top">QRWTSRVR</td>
+    </tr>
+    <tr>
+        <td valign="top">as-usf</td>
+        <td valign="top">Ultimedia Facilities </td>
+        <td valign="top">8480</td>
+        <td valign="top">QSYSWRK</td>
+        <td valign="top">QUMBDMN</td>
+        <td valign="top">QUMBPJTC</td>
+    </tr>
+    <tr>
+        <td valign="top">as-admin-http</td>
+        <td valign="top">HTTP Administration </td>
+        <td valign="top">2001</td>
+        <td valign="top">QHTTPSVR</td>
+        <td valign="top">n/a</td>
+        <td valign="top">all within QHTTPSVR subsystem </td>
+    </tr>
+    <tr>
+        <td valign="top">as-mtgtctrl</td>
+        <td valign="top">Management Central </td>
+        <td valign="top">5555</td>
+        <td valign="top">QSYSWRK</td>
+        <td valign="top">n/a</td>
+        <td valign="top">QYPSSRV</td>
+    </tr>
+    <tr>
+        <td valign="top">telnet</td>
+        <td valign="top">Telnet server </td>
+        <td valign="top">23</td>
+        <td valign="top">QSYSWRK</td>
+        <td valign="top">n/a</td>
+        <td valign="top">QTVTELNET and QTVDEVICE </td>
+    </tr>
+</table>
+<!-- NOSSL *************************************
+<p>Port numbers for host servers and server daemons that use SSL:
+</p>
+
+<table border="0">
+    <tr>
+        <td valign="top"><b>Service Name</b></td>
+        <td valign="top"><b>Description</b></td>
+        <td valign="top"><b>Port Number</b></td>
+        <td valign="top"><b>Subsystem</b></td>
+        <td valign="top"><b>Daemon</b></td>
+        <td valign="top"><b>Server</b></td>
+    </tr>
+    <tr>
+        <td valign="top">as-central-s</td>
+        <td valign="top">Secure Central server</td>
+        <td valign="top">9470 </td>
+        <td valign="top">QSYSWRK </td>
+        <td valign="top">QZSCSRVSD </td>
+        <td valign="top">QZDASOINIT and QZSCSRVS </td>
+    </tr>
+    <tr>
+        <td valign="top">as-database-s </td>
+        <td valign="top">Secure Database server </td>
+        <td valign="top">9471 </td>
+        <td valign="top">QSERVER </td>
+        <td valign="top">QZDASRVSD </td>
+        <td valign="top">QZDASOINIT and QTFPJTCP </td>
+    </tr>
+    <tr>
+        <td valign="top">as-dtaq-s </td>
+        <td valign="top">Secure Data queue server </td>
+        <td valign="top">9472 </td>
+        <td valign="top">QSYSWRK </td>
+        <td valign="top">QZHQSRVD </td>
+        <td valign="top">QZHQSSRV </td>
+    </tr>
+    <tr>
+        <td valign="top">as-file-s </td>
+        <td valign="top">Secure File server </td>
+        <td valign="top">9473 </td>
+        <td valign="top">QSERVER </td>
+        <td valign="top">QPWFSERVSD </td>
+        <td valign="top">QNPSERVS and QIWVPPJT </td>
+    </tr>
+    <tr>
+        <td valign="top">as-netprt-s </td>
+        <td valign="top">Secure Network print server </td>
+        <td valign="top">9474 </td>
+        <td valign="top">QSYSWRK </td>
+        <td valign="top">QNPSERVD </td>
+        <td valign="top">QNPSERVS and QIWVPPJT </td>
+    </tr>
+    <tr>
+        <td valign="top">as-rmtcmd-s </td>
+        <td valign="top">Secure Remote command / Program call
+        server </td>
+        <td valign="top">9475 </td>
+        <td valign="top">QSYSWRK </td>
+        <td valign="top">QZRCSRVSD </td>
+        <td valign="top">QZRCSRVS </td>
+    </tr>
+    <tr>
+        <td valign="top">as-signon-s </td>
+        <td valign="top">Secure Signon server </td>
+        <td valign="top">9476 </td>
+        <td valign="top">QSYSWRK </td>
+        <td valign="top">QZSOSGND </td>
+        <td valign="top">QZSOSIGN </td>
+    </tr>
+    <tr>
+        <td valign="top">ddm-ssl </td>
+        <td valign="top">DDM </td>
+        <td valign="top">448 </td>
+        <td valign="top">QSYSWRK </td>
+        <td valign="top">QRWTLSTN </td>
+        <td valign="top">QRWTSRVR </td>
+    </tr>
+    <tr>
+        <td valign="top">as-admin-https </td>
+        <td valign="top">HTTP Administration </td>
+        <td valign="top">2010 </td>
+        <td valign="top">QHTTPSVR </td>
+        <td valign="top">n/a </td>
+        <td valign="top">all within QHTTPSVR subsystem </td>
+    </tr>
+    <tr>
+        <td valign="top">as-mgtctrl-ss </td>
+        <td valign="top">Management Central </td>
+        <td valign="top">5566 </td>
+        <td valign="top">QSYSWRK </td>
+        <td valign="top">n/a </td>
+        <td valign="top">QYPSSRV </td>
+    </tr>
+    <tr>
+        <td valign="top">Telnet-ssl </td>
+        <td valign="top">Telnet server </td>
+        <td valign="top">992 </td>
+        <td valign="top">QSYSWRK </td>
+        <td valign="top">n/a </td>
+        <td valign="top">QTVTELNET and QTVDEVICE </td>
+    </tr>
+</table>
+************************************* NO SSL -->
+<blockquote>
+    <p>See <a href="#ServerConnProp">Server Connection Properties</a>
+    for information on changing the port mode.</p>
+</blockquote>
+
+<blockquote>
+    <p><b>10014, 10022</b> - The TCP/IP provider has detected an
+    invalid argument. This can happen when the connection
+    terminates and invalidates its resources before notifying the
+    calling application. Try re-connecting to the server, then
+    try the action again.</p>
+</blockquote>
+
+<blockquote>
+    <p><b>10050, 10051</b> - The network is down or unreachable.
+    Check your local and remote network settings.</p>
+</blockquote>
+
+<blockquote>
+    <p><b>10048</b> - The local socket address and port are
+    already in use. Restart the application and try again.</p>
+</blockquote>
+
+<blockquote>
+    <p><b>10050, 10051, 10064, 10065</b> - No route to the server
+    was found. Check your TCP/IP address and configuration. There
+    may also be a network problem.</p>
+</blockquote>
+
+<blockquote>
+    <p><b>10052</b> - The server you were connected to somehow
+    lost the knowledge of the connection, possibly due to a
+    network failure or a &quot;keep-alive&quot; activity timeout.
+    Try re-connecting to the server, then try the action again.</p>
+</blockquote>
+
+<blockquote>
+    <p><b>10053</b> - The connection was established, but was
+    broken by the client TCP/IP communications provider. Try
+    re-connecting to the server, then try the action again.</p>
+</blockquote>
+
+<blockquote>
+    <p><b>10054 </b>- See 8405 above.</p>
+</blockquote>
+
+<blockquote>
+    <p><b>10055, 10067</b> - The TCP/IP provider has run out of
+    resources to process your request. Your PC system may be too
+    low on available memory, or you may have too many programs
+    that use TCP/IP running. End any unnecessary programs and try
+    the action again. If this error still occurs, shutdown and
+    re-start your pc, and try the action again with as few other
+    programs active as possible.</p>
+</blockquote>
+
+<blockquote>
+    <p><b>10057, 10058</b> - A request to send or receive failed
+    because the socket had already been closed.</p>
+</blockquote>
+
+<blockquote>
+    <p><b>10060, 10064</b> - The address used for the server was
+    found, but the connection to the server timed out. See <a
+    href="#CWBCO10">CWBCO1048</a> for additional information.</p>
+</blockquote>
+
+<blockquote>
+    <p><b>10061</b> - The server was contacted, but refused the
+    connection request. See <a href="#CWBCO1049">CWBCO1049</a>
+    for additional information.
+</blockquote>
+
+<blockquote>
+    <p><b>10107</b> - The TCP/IP
+    provider received a failure from an operating system call
+    that should never fail. Check to make sure you have the
+    latest operating system service pack installed.</p>
+</blockquote>
+
+<p><b>Any other</b><br>
+Ask your systems administrator to verify that the host servers
+are running on the iSeries server, and look for messages logged
+on the server that might indicate a network or other problem. If
+there are routers in the network between your personal computer
+and the server, the problem may be related to router
+configuration or operation. Check for general network problems.</p>
+
+<h1><a name="CWBCO1004">CWBCO1004</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+iSeries Access could not determine the IP address for the server.<br>
+<b>Recovery</b><br>
+If you use a Domain Name Server (DNS), contact your network
+administrator to verify that the DNS is operational. You can
+determine if your PC can communicate with the DNS by using the
+'ping' utility that comes with the TCP/IP communications support
+you installed on your PC.<br>
+If you rely on the file on your PC called 'HOSTS' for IP address
+resolution, verify that an entry exists in that file for the
+server you are trying to connect to. For example, if the server
+name is SYSA and its IP address is 4.5.6.7, for address
+resolution using the HOSTS file to work, the following entry must
+exist in the HOSTS file:<br>
+4.5.6.7 SYSA<br>
+If an entry for the server exists in the HOSTS file, but the ping
+utility fails to contact the server and tells you the system name
+you entered is an invalid IP address, the cause of failure may be
+invalid characters in the system name. Which characters are valid
+in a system name may vary from one TCP/IP implementation to
+another. Try using a system name containing only letters ('a'-'z'
+and 'A'-'Z'), numbers ('0'-'9'), dashes ('-') and periods ('.').
+Add a new entry to the HOSTS file using the new system name, and
+if the ping program can contact the server using that system
+name, iSeries Access should no longer fail with this message.<br>
+If you are not using either DNS or a HOSTS file for IP address
+resolution, but do have a connection to the server configured in
+iSeries Access, verify that the IP address field in the
+Properties for that system's connection is correct. Also, verify
+that the IP Address lookup mode is <b>NEVER</b>.<br>
+See <a href="#ServerConnProp">Server Connection Properties</a>
+for information on changing the IP address and mode.</p>
+
+<h1><a name="CWBCO1006">CWBCO1006</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+Connecting to the Service Mapper on the server failed.<br>
+<b>Recovery</b><br>
+Ensure that the TCP/IP host servers on the iSeries server are
+started and see help for previous communications-related
+messages.<br>
+For information on starting host servers, see <a
+href="#StartHostServer">How to Start Host Socket Servers</a>.</p>
+
+<h1><a name="CWBCO1007">CWBCO1007</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The Service Mapper on the server was found and contacted.
+However, the port number to use for connecting to the specified
+host server was not successfully retrieved from the Service
+Mapper.<br>
+<b>Recovery</b><br>
+Notify your system administrator of this message. The existence
+of an entry for the server application in the service table on
+the server must be verified. If this entry is missing, it can be
+re-entered, or Option 12 (Host Servers) can be re-installed on
+the server. <br>
+</p>
+
+<h1><a name="CWBCO1008">CWBCO1008</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The Service Mapper was successfully contacted on the server, but
+connecting to the specified application server on that server
+failed, probably because the host server is not running. The
+error code is specified.<br>
+<b>Recovery</b><br>
+Verify that the host server is ready to receive connections by
+doing the following on the server:<br>
+</p>
+
+<ol>
+    <li>Enter the NETSTAT command. </li>
+    <li>Select option 3, Work with TCP/IP connection status. </li>
+    <li>Search for an entry for which the Local Port is the name
+        of the server application specified in the message. This
+        name may be truncated for display in NETSTAT. </li>
+    <li>Press F14 (Display port numbers) and note what port
+        number that server is using; also note what the state of
+        the server is. </li>
+</ol>
+
+<p>* If the entry exists but the port number shown is different
+from the one listed in the CWBCO1022 message text, then either
+the iSeries Access configuration for the system specifies to
+lookup the remote port on the PC, or the services table on the
+server is incorrect. Have your systems administrator verify that
+the entry for the specified host server is correct. See <a
+href="#ServerConnProp">Server Connection Properties</a> for
+information on configuring the connection to the server. </p>
+
+<p>* If there is no such entry, or if the State listed for the
+entry is not Listen, the server application is not ready to
+accept connections; see <a href="StartHostServer">How to Start
+Host Socket Servers</a>. You may have to stop and restart
+the host socket servers.<br>
+</p>
+
+<p>* If the entry exists and the state is Listen, there may be a
+problem related to one or more routers in your network not
+allowing connections to be made through them. Contact your system
+administrator for assistance. </p>
+
+<p>See <a href="#CWBCO1003">CWBCO1003</a> <!-- NOSSL *************************************
+and <a href="#CWBCO1034">CWBCO1034</a>
+************************************* NO SSL --> for details on the
+error code specified.</p>
+
+<h1><a name="CWBCO1009">CWBCO1009</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+This message displays the name of the TCP/IP provider in use on
+your PC.<br>
+<b>Recovery</b><br>
+If you expected a different TCP/IP provider, contact whoever is
+responsible for installing and configuring software on your PC
+for assistance</p>
+
+<h1><a name="CWBCO1010">CWBCO1010</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The server's IP address could not be resolved.<br>
+<b>Recovery</b><br>
+See message <a href="#CWBCO1004">CWBCO1004</a> for recovery
+methods to solve this problem. <br>
+Check previous messages for details.</p>
+
+<h1><a name="CWBCO1011">CWBCO1011</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The remote server port could not be resolved<br>
+<b>Recovery</b><br>
+See <a href="#ServerConnProp">Server Connection Properties</a>
+for information on changing the remote server port.<br>
+Check previous messages for details.</p>
+
+<h1><a name="CWBCO1014">CWBCO1014</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The attempt to connect to the specified host server application
+on the specified server failed. Since this host server
+application is not necessary to complete a iSeries Access
+connection, this failure is a warning only. Although a iSeries
+Access connection does not require that the specified host server
+application be running, some iSeries Access functions do; those
+functions will not work until connecting to the host server
+application succeeds.<br>
+For example, if the host server application as-database cannot be
+connected to, iSeries Access data transfer and ODBC functions
+will not work.<br>
+<b>Recovery</b><br>
+See <a href="#StartHostServer">How to Start Host Socket
+Servers</a><br>
+See previous messages for recovery information.</p>
+
+<h1><a name="CWBCO1015">CWBCO1015</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+At least one failure occurred when trying to connect to a host
+server application on the server. A connection may be
+established, but some iSeries Access functions will not work.<br>
+<b>Recovery</b><br>
+See earlier messages related to the connection failures for
+recovery information.</p>
+
+<h1><a name="CWBCO1016">CWBCO1016</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+At least one failure occurred during the connection verification
+that will prevent an iSeries Access connection from succeeding.<br>
+<b>Recovery</b><br>
+See earlier messages for recovery information.</p>
+
+<h1><a name="CWBCO1017">CWBCO1017</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The connection verification was canceled, either by the user or
+by the PC operating system, before it completed. No determination
+was made of whether a iSeries Access connection to server will
+succeed.<br>
+<b>Recovery</b><br>
+To verify the connection, retry the operation without canceling.
+If the connection verification seemed to take much too long to
+complete (and so was canceled), it is likely that there is a
+configuration problem. Have your network administrator help you
+determine if communications are correctly configured on your PC
+system and on the server, and whether or not there are any
+network problems.</p>
+
+<h1><a name="CWBCO1018">CWBCO1018</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The server you are verifying a connection to is running a
+release older than V4R2M0. Most functions of iSeries Access will
+not work correctly or at all when running to such a server.<br>
+<b>Recovery</b><br>
+Connect to a server running release V4R2M0 or later, or
+upgrade the release level of software on the server you were trying to verify
+the connection to.</p>
+
+<h1><a name="CWBCO1019">CWBCO1019</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The specified communications provider is not ready for use.<br>
+<b>Recovery</b><br>
+Verify that the communications provider is installed and
+configured properly, and that basic functions, such as 'ping',
+are working properly. Contact your network administrator to make
+sure there are no problems with the network or its configuration.</p>
+
+<h1><a name="CWBCO1020">CWBCO1020</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The Signon transaction program is not functioning properly or
+there is a network problem between your personal computer and the
+server.<br>
+<b>Recovery</b><br>
+Have your system administrator verify that the latest service
+level for the Signon transaction program has been installed on
+the server, and retry the operation.</p>
+
+<h1><a name="CWBCO1021">CWBCO1021</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The connection to the server is not configured correctly.<br>
+<b>Recovery</b><br>
+Verify that the properties of that connection are correct, and
+that the communication provider shown for that connection is what
+you expected.<br>
+See <a href="#ServerConnProp">Server Connection Properties</a>
+for information on configuring the connection to the server.</p>
+
+<h1><a name="CWBCO1022">CWBCO1022</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+Informational message - The remote port that will be used for
+this connection is shown.<br>
+<b>Recovery</b><br>
+If the connections fails, verify this is the correct remote port.<br>
+See <a href="#ServerConnProp">Server Connection Properties</a>
+for information on configuring the connection to the server.<br>
+See help for message <a href="#CWBCO1008">CWBCO1008</a>.</p>
+
+<h1><a name="CWBCO1023">CWBCO1023</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+Informational message - The local port that will be used for this
+connection is shown.<br>
+<b>Recovery</b><br>
+See <a href="#ServerConnProp">Server Connection Properties</a>
+for information on configuring the connection to the server.</p>
+
+<h1><a name="CWBCO1024">CWBCO1024</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+A condition exists that has prevented the cancel mechanism from
+working properly. The connection verification will continue, but
+if you try to cancel it, it may not end, or unpredictable results
+could occur. This could be the result of low PC system resources.<br>
+<b>Recovery</b><br>
+Try freeing PC system resources by ending unnecessary programs
+(especially those that communicate with other systems) and
+deleting unnecessary files from your hard disk, and try the
+connection verification again. If the problem persists, shutdown
+and restart your pc, and try again.</p>
+<!-- NOSSL
+<h1>
+<A NAME="CWBCO1029">CWBCO1029</A>     <a href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+Informational message - The Secure Sockets Layer is in use for this
+connection.<br>
+<b>Recovery</b><br>
+If you don't want to use Secure Sockets Layer for this connection, change the
+properties for this server configuration.<br>
+See
+<a href="#ServerConnProp">Server
+Connection Properties</a> for information on configuring the connection to the
+server.</p>
+
+<h1>
+<A NAME="CWBCO1030">CWBCO1030</A>     <a href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+Informational message - The Secure Sockets Layer version and cipher suite that
+has been negotiated for this connection.<br>
+SSL Version 3 cipher suites:<br>
+01 - No encryption with an MD5 MAC<br>
+02 - No encryption with an SHA-1 MAC<br>
+03 - RC4 encryption with a 40-bit key and an MD5 MAC<br>
+04 - RC4 encryption with a 128-bit key and an MD5 MAC<br>
+05 - RC4 encryption with a 128-bit key and an SHA-1 MAC<br>
+06 - RC2 encryption with a 40-bit key and an MD5 MAC<br>
+07 - not supported<br>
+08 - DES encryption with a 40-bit key and a SHA-1 MAC<br>
+09 - DES encryption with a 56-bit key and a SHA-1 MAC<br>
+0A - Triple DES encryption with a 168-bit key and a SHA-1 MAC<br>
+<b>Recovery</b><br>
+The server Certificate Manager can be used to change the list of available
+cipher suites for iSeries Access.<br>
+To change/verify the iSeries Access key database, use the Secure
+Sockets tab of iSeries Access Properties.</p>
+
+<h1>
+<A NAME="CWBCO1031">CWBCO1031</A>     <a href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+Informational message - The Secure Sockets Layer certificate database that has
+been used for this connection. <br>
+The default iSeries Access key database file name is cwbssldf.kdb
+and by default is located in the "IBM\Client Access" directory within the
+Common Documents directory.
+<b>Recovery</b><br>
+To change the iSeries Access key database, use the Secure Sockets
+tab of iSeries Access Properties.</p>
+
+<h1>
+<A NAME="CWBCO1032">CWBCO1032</A>     <a href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The Secure Sockets Layer initial handshake with the server failed for the
+reason specified.<br>
+<b>Recovery</b><br>
+See message <a href="#CWBCO1034">CWBCO1034</a>
+for the list of the return codes and their recovery.<br>
+To change the iSeries Access key database, use the Secure Sockets
+tab of iSeries Access Properties.<br>
+The server Certificate Manager can be used to change the list of available
+cipher suites for iSeries Access.</p>
+
+<h1>
+<A NAME="CWBCO1033">CWBCO1033</A>     <a href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+Informational message - The TCP/IP service name was not configured for this
+service; the standard TCP/IP port will be used.</p>
+
+<h1>
+<A NAME="CWBCO1034">CWBCO1034</A>     <a href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+An error occurred while communicating over Secure Sockets Layer. The name of
+the function that failed and its error code are specified.<br>
+<b>Recovery</b><br>
+Check the list below for the error code specified in the message and take the
+action specified. If the function and/or error code in the message are not
+listed here, they may be listed in Informational APAR II10598 along with cause
+and recovery information.<br>
+See
+<a href="#ServerConnProp">Server
+Connection Properties</a> for information on configuring the connection to the
+server.<br>
+<b>Key Database error codes</b></p>
+<br><b>20001</b> - An unknown error occurred.
+<br><b>20002</b> - An asn.1 encoding/decoding error occurred.
+<br><b>20003</b> - An error occurred while initializing asn.1 encoder/decoder.
+<br><b>20004</b> - An asn.1 encoding/decoding error occurred.
+<br><b>20005</b> - A database error occurred.
+<br><b>20006</b> - An error occurred while opening the database file.
+<br><b>20007</b> - An error occurred while re-opening the database file.
+<br><b>20008</b> - Database creation failed.
+<br><b>20009</b> - The database already exists.
+<br><b>20010</b> - An error occurred while deleting the database file.
+<br><b>20011</b> - Database has not been opened.
+<br><b>20012</b> - An error occurred while reading the database file.
+<br><b>20013</b> - An error occurred while writing data to the database file.
+<br><b>20014</b> - A database validation error occurred.
+<br><b>20015</b> - An encountered database version is not valid.
+<br><b>20016</b> - An encountered database password is not valid.
+<br><b>20017</b> - An encountered database file type is not valid.
+<br><b>20018</b> - The database has been corrupted.
+<br><b>20019</b> - An encountered password is not valid.
+<br><b>20020</b> - A database key entry integrity error occurred.
+<br><b>20021</b>- A duplicate key already exists in the database.
+<br><b>20022</b> - A password encryption error occurred.
+<br><b>20023</b> - An LDAP related error occurred.
+<br><b>20024</b> - A cryptographic error occurred.
+<br><b>20025</b> - An encryption/decryption error occurred.
+<br><b>20026</b> - An encountered cryptographic algorithm is not valid.
+<br><b>20027</b> - An error occurred while signing data.
+<br><b>20028</b> - An error occurred while verifying data.
+<br><b>20029</b> - An error occurred while computing digest of data.
+<br><b>20030</b> - An encountered cryptographic parameter is not valid.
+<br><b>20031</b> - An unsupported cryptographic algorithm is encountered.
+<br><b>20032</b> - The given input size is greater than the supported.
+<br><b>20033</b> - An unsupported modulus size is encountered.
+<br><b>20034</b> - A database validation error occurred.
+<br><b>20035</b> - Key entry validation failed.
+<br><b>20036</b> - A duplicate extension field exists.
+<br><b>20037</b> - The key has wrong version.
+<br><b>20038</b> - A required extension field does not exist.
+<br><b>20039</b> - The validity period does not contain today.
+<br><b>20040</b> - The validity period does not contain today.
+<br><b>20041</b> - An error occurred while validating validity.
+<br><b>20042</b> - The issuer of the key is not found.
+<br><b>20043</b> - A required certificate extension is missing.
+<br><b>20044</b> - An basic constraint extension is not valid.
+<br><b>20045</b> - The key signature validation failed.
+<br><b>20046</b> - The root key of the key is not trusted.
+<br><b>20047</b> - The key has been revoked.
+<br><b>20048</b> - An error occurred while validating authority.
+<br><b>20049</b> - An error occurred while validating private.
+<br><b>20050</b> - An error occurred while validating subject.
+<br><b>20051</b> - An error occurred while validating issuer.
+<br><b>20052</b> - An error occurred while validating key.
+<br><b>20053</b> - An unknown critical extension is encountered.
+<br><b>20054</b> - An error occurred while validating key pair entries.
+<br><b>20055</b> - An error occurred while validating CRL.
+<br><b>20056</b> - A mutex error occurred.
+<br><b>20057</b> - An encountered parameter is not valid.
+<br><b>20058</b> - A null parameter or memory allocation error is encountered.
+<br><b>20059</b> - Number or size is too large or too small.
+<br><b>20060</b> - The old password is not valid.
+<br><b>20061</b> - The new password is not valid.
+<br><b>20062</b> - The password has expired.
+<br><b>20063</b> - A thread related error occurred.
+<br><b>20064</b> - An error occurred while creating threads.
+<br><b>20065</b> - An error occurred while a thread is waiting to exit.
+<br><b>20066</b> - An I/O error occurred.
+<br><b>20067</b> - An error occurred while loading CMS.
+<br><b>20068</b> - A cryptography hardware related error occurred.
+<br><b>20069</b> - The library initialization routine has not be successfully called.
+<br><b>20070</b> - The internal database handle table is corrupted.
+<br><b>20071</b> - A memory allocation error occurred.
+<br><b>20072</b> - An unrecognized option is encountered.
+<br><b>20073</b> - An error occurred while getting time information.
+<br><b>20074</b> - Mutex creation error occurred.
+<br><b>20075</b> - An error occurred while opening message catalog.
+<br><b>20076</b> - An error occurred while opening error message catalog.
+<br><b>20077</b> - An null file name is encountered.
+<br><b>20078</b> - An error occurred while opening files, check for file existence.
+<br><b>20079</b> - An error occurred while opening files to read.
+<br><b>20080</b> - An error occurred while opening files to write.
+<br><b>20081</b> - There is no such file.
+<br><b>20082</b> - The file can not be opened because of its permission setting.
+<br><b>20083</b> - An error occurred while writing data to files.
+<br><b>20084</b> - An error occurred while deleting files.
+<br><b>20085</b> - Invalid Base64 encoded data is encountered.
+<br><b>20086</b> - Invalid Base64 message type is encountered.
+<br><b>20087</b> - An error occurred while encoding data with Base64 encoding rule.
+<br><b>20088</b> - An error occurred while decoding Base64 encoded data.
+<br><b>20089</b> - An error occurred while getting a distinguished name tag.
+<br><b>20090</b> - The required common name field is empty.
+<br><b>20091</b> - The required country name field is empty.
+<br><b>20092</b> - An encountered database handle is not valid.
+<br><b>20093</b> - The key database does not exist.
+<br><b>20094</b> - The request key pair database does not exist.
+<br><b>20095</b> - The password file does not exist.
+<br><b>20096</b> - New password is identical to the old one.
+<br><b>20097</b> - No key is found in the key database.
+<br><b>20098</b> - No request key is found.
+<br><b>20099</b> - No trust CA is found.
+<br><b>20100</b> - No request key is found for the certificate.
+<br><b>20101</b> - There is no private key in the key database.
+<br><b>20102</b> - There is no default key in the key database.
+<br><b>20103</b> - There is no private key in the key record.
+<br><b>20104</b> - There is no certificate in the key record.
+<br><b>20105</b> - There is no CRL entry.
+<br><b>20106</b> - An invalid key database file name is encountered.
+<br><b>20107</b> - An unrecognized private key type is encountered.
+<br><b>20108</b> - An encountered distinguished name input is not valid.
+<br><b>20109</b> - No key entry is found with the given key label.
+<br><b>20110</b> - Key label list has been corrupted.
+<br><b>20111</b> - The input data is not valid PKCS12 data.
+<br><b>20112</b> - An encountered password is not valid.
+<br><b>20113</b> - An unrecognized key export type is encountered.
+<br><b>20114</b> - An unsupported password-based encryption algorithm is encountered.
+<br><b>20115</b> - An error occurred while converting the keyring file to a CMS.
+<br><b>20116</b> - An error occurred while converting the CMS key database.
+<br><b>20117</b> - An error occurred while creating a certificate for the certificate.
+<br><b>20118</b> - A complete issuer chain can not be built.
+<br><b>20119</b> - Invalid WEBDB data is encountered.
+<br><b>20120</b> - There is no data to be written to the keyring file.
+<br><b>20121</b> - The certificate expiration date is too far from now.
+<br><b>20122</b> - The password is too short.
+<br><b>20123</b> - A password should contain at least one numeric digit.
+<br><b>20124</b> - All characters in the password are either alphabetic or numeric.
+<p><br>
+<b>SSL error codes</b></p>
+<br><b>25001</b> - The handle is not valid.
+<br><b>25002</b> - The dynamic link library is not available.
+<br><b>25003</b> -  An internal error occurred.
+<br><b>25004</b> - Main memory is insufficient to perform the operation.
+<br><b>25005</b> - The handle is not in a valid state for operation.
+<br><b>25006</b> - The key label is not found.
+<br><b>25007</b> - The certificate is not available.
+<br><b>25101</b> - An error occurred processing the cipher.
+<br><b>25201</b> - The key file could not be initialized.
+<br><b>25202</b> - Unable to open the key file. Either the path was specified incorrectly or the file permissions did not allow the file to be opened.
+<br><b>25203</b> - Unable to generate a temporary key pair.
+<br><b>25301</b> - An error occurred on close.
+<br><b>25401</b> - The system date was set to an invalid value.
+<br><b>25402</b> - Neither SSLV2 nor SSLV3 is enabled.
+<br><b>25403</b> - The required certificate was not received from partner.
+<br><b>25404</b> - The received certificate was formatted incorrectly.
+<br><b>25405</b> - The received certificate type was not supported.
+<br><b>25406</b> - An IO error occurred on a data read or write.
+<br><b>25407</b> - The specified label in the key file could not be found.
+<br><b>25408</b> - The specified key-file password is incorrect. The key file could not be used. The key file may also be corrupt.
+<br><b>25409</b> - In a restricted cryptography environment, the key size is too long to be supported.
+<br><b>25410</b> - An incorrectly formatted SSL message was received from the partner.
+<br><b>25411</b> - The message authentication code (MAC) was not successfully verified.
+<br><b>25412</b> - The operation is unsupported.
+<br><b>25413</b> - The received certificate contained an incorrect signature.
+<br><b>25414</b> - The server certificate is not trusted. This usually occurs when you have not downloaded the certificate authority for the server certificate. Use the iSeries Digital Certificate Manager to obtain the certificate authority and use the PC IBM Key Management utility to place the certificate authority in your local key database.
+<br><b>25415</b> - The remote system information is not valid.
+<br><b>25416</b> - Access denied.
+<br><b>25417</b> - The self-signed certificate is not valid.
+<br><b>25418</b> - The read failed.
+<br><b>25419</b> - The write failed.
+<br><b>25420</b> - The partner closed the socket before the protocol completed. This could mean the partner is configured for SSL Client Authentication and no client certificate was sent to the partner. <br><b>25421</b> - The specified V2 cipher is not valid.
+<br><b>25422</b> - The specified V3 cipher is not valid.
+<br><b>25425</b> - The handle could not be created.
+<br><b>25426</b> - Initialization failed.</blockquote><p><br>
+<b>Recovery</b><br>
+Use the IBM Key Management utility to verify the certificate being used for
+this service, along with the database name, password, and contents.<br>
+Check memory usage and reduce the number of programs running if necessary.
+Check disk space, and cleanup any unneeded files. </p>
+
+<h1>
+<A NAME="CWBCO1035">CWBCO1035</A>     <a href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+An error occurred while loading entry points from a DLL. The name of the DLL
+that failed and its error code are specified.<br>
+<b>Recovery</b><br>
+Check to make sure the DLL specified is located in the PATH and try again.</p>
+
+<h1>
+<A NAME="CWBCO1036">CWBCO1036</A>     <a href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The Secure Socket Layer DLL interface could not be loaded. The name of the DLL
+that failed and its error code are specified.<br>
+<b>Recovery</b><br>
+Check to make sure the DLL specified is located in the PATH and try again.</p>
+
+<h1>
+<A NAME="CWBCO1037">CWBCO1037</A>     <a href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The Secure Socket Layer interface is not available or not installed. <br>
+<b>Recovery</b><br>
+Use Selective Setup to verify that the Secure Sockets component is installed on
+the PC. Click<b> Start &gt; Programs &gt; iSeries Access</b>
+<b>&gt; Selective Setup</b>.<br>
+
+<h1>
+<A NAME="CWBCO1038">CWBCO1038</A>     <a href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The Secure Socket Layer is not configured for use.<br>
+<b>Recovery</b><br>
+Verify the Secure Sockets configuration on the iSeries Access
+properties page in the Control panel.<br>
+NOSSL -->
+<h1><a name="CWBCO1039">CWBCO1039</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+Informational message - The remote TCP/IP address lookup mode
+that was used for this connection<br>
+<b>Recovery</b><br>
+Verify the correct mode has been configured for this server.<br>
+See <a href="#ServerConnProp">Server Connection Properties</a>
+for information on configuring the connection to the server.</p>
+
+<h1><a name="CWBCO1040">CWBCO1040</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+Informational message - The remote port lookup mode that was used
+for this connection<br>
+Server - Always connect to the Service Mapper to determine the
+port number for this service<br>
+Local - Always look in the local services file for the port
+number<br>
+Standard - Always use the pre-defined port number<br>
+<b>Recovery</b><br>
+Verify the correct mode has been configured for this server.<br>
+See <a href="#ServerConnProp">Server Connection Properties</a>
+for information on configuring the connection to the server.</p>
+
+<h1><a name="CWBCO1041">CWBCO1041</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+Informational message - The TCP/IP gethostbyname() function will
+be used to resolve the TCP/IP address. <br>
+<b>Recovery</b><br>
+If this is not desired, or if the time interval at which this
+happens needs to be changed, these settings can be changed.
+See <a href="#ServerConnProp">Server Connection Properties</a>
+for information on configuring the connection to the server.</p>
+
+<h1><a name="CWBCO1042">CWBCO1042</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The server configuration parameter is not correct for the reason
+code specified. <br>
+<b>Recovery</b><br>
+Verify that the configuration for this server is correct. The
+reason codes can be found in the header files in the Programmer's
+Toolkit. </p>
+
+<h1><a name="CWBCO1043">CWBCO1043</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The server object instance could not be created for the reason
+code specified. <br>
+<b>Recovery</b><br>
+Verify that the configuration for this server is correct. The
+reason codes can be found in the header files in the Programmer's
+Toolkit. </p>
+
+<h1><a name="CWBCO1044">CWBCO1044</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+Informational message - The remote TCP/IP address that will be
+used for this connection attempt. <br>
+<b>Recovery</b><br>
+See <a href="#ServerConnProp">Server Connection Properties</a>
+for information on configuring the connection to the server.<br>
+You may need to refer to this message if the connection attempt
+fails.</p>
+
+<h1><a name="CWBCO1045">CWBCO1045</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+Informational message - The local TCP/IP address that was used
+for this connection<br>
+<b>Recovery</b><br>
+You may need to refer to this message if the connection attempt
+fails.</p>
+
+<h1><a name="CWBCO1047">CWBCO1047</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The connection was initially established, but was disconnected by
+the server or server application before communications were
+completed.<br>
+<b>Recovery</b><br>
+Try the operation again. If the problem persists, have your
+systems administrator check the server to verify that TCP/IP and
+the host servers are running, and your connection is not
+restricted by an IP filter. See <a href="#StartHostServer">How to
+Start Host Socket Servers</a>.<br>
+Have your system administrator check the server application job
+logs and server subystems. See message <a href="#CWBCO1003">CWBCO1003</a>
+for the names of the server jobs and the default names of the
+subsystems.<br>
+This can also result from incorrectly configured routing on the
+server when multiple routes to and from the server are possible.
+The result in this case is that packets sent to the server are
+discarded because they are too large. When this happens, TCP/IP
+on the PC assumes that the connection has been ended by the
+server since it is not responding to the packets sent from the
+PC, and reports error 10054 or 8405. Have your systems
+administrator analyze the configuration of TCP/IP and associated
+routing, as well as the maximum frame size configured for each
+TCP/IP interface that may be reachable from the PC, and correct
+any inconsistencies or problems with the configuration, then try
+the operation again.</p>
+
+<h1><a name="CWBCO1048">CWBCO1048</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The address used for the server was found, but the connection to
+the server timed out.<br>
+<b>Recovery</b><br>
+Make sure TCP/IP has been started on that server, and that the
+host servers have been started. If this does not fix the problem,
+verify that the IP address used to attempt the connection is
+correct for the server. This address is logged in a previous
+message. <br>
+Verify TCP/IP address servers (Domain Name Servers) are
+configured correctly on this PC and have the correct address for
+this server. If the address is correct, check the HOSTS file on
+your computer for errors. If the IP address specified
+in the HOSTS file is incorrect for the server, correct it and try
+the operation again.<br>
+If a TCP/IP router of some kind exists on the network between the
+PC and the server, make sure the router is configured to allow
+connections to the iSeries Access host servers and to the Server
+Mapper on the server.</p>
+
+<h1><a name="CWBCO1049">CWBCO1049</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The server was contacted, but refused the connection request.<br>
+<b>Recovery</b><br>
+Make sure the host servers have been started on the server; see <a
+href="#StartHostServer">How to Start Host Socket Servers</a>.<br>
+If a TCP/IP router, firewall or gateway of some kind exists on
+the network between the PC and the server, make sure the router
+is configured to allow connections to the iSeries Access host
+servers and to the Server Mapper on the server. If message <a
+href="#CWBCO1022">CWBCO1022</a> was logged as well, this message
+indicates the port number that must be allowed through the router
+to perform the iSeries Access function being attempted.<br>
+<!-- NOSSL *************************************
+If you are using SSL to connect to the server, the connection
+attempt may have failed because a digital certificate has not
+been assigned to one or more host socket servers on that server.
+Have your system administrator check for that possibility.
+************************************* NO SSL --><!-- NOSSL *************************************
+<h1>
+<A NAME="CWBCO1050">CWBCO1050</A>     <a href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The server certificate is not trusted. This usually occurs when you have not
+downloaded the certificate authority for the server certificate to the PC key
+database or have the certificate authority marked as not trusted in the PC key
+database.<br>
+<b>Recovery</b><br>
+Use the IBM Key Management Utility on the PC to check that the appropriate
+certificate authorities are marked as trusted.<br>
+There are three ways to download the certificate authority:<br>
+* Use iSeries Navigator:<br>
+1 Open iSeries Navigator (<b>Start iSeries Access</b>
+<b>&gt; iSeries Navigator</b>).<br>
+2 Right-click the server and select <b>Properties</b>.<br>
+3 From the Secure Sockets tab, press <b>Download</b>.<br>
+* Use the iSeries Digital Certificate Manager to download the certificate
+authority to a PC web browser, export it from the browser, and then use the IBM
+Key Management Utility on the PC to import the certificate authority into the
+PC key database. </p>
+************************************* NO SSL --></p>
+
+<h1><a name="CWBCO1051">CWBCO1051</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+A user specified timeout occurred trying to connect to the
+server. A timeout can occur while querying the IP address or
+making the initial connection attempt the server.<br>
+<b>Recovery</b><br>
+Check the current configured timeout value for this server.
+If your Domain Name Server is on another network, you might want
+to consider changing your IP address lookup mode to be less
+frequent. See <a href="#ServerConnProp">Server Connection
+Properties</a> for information on changing the IP address and
+mode.</p>
+<!-- NOSSL *************************************
+<h1><A NAME="CWBCO1052">CWBCO1052</A>     <a href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The password is incorrect for the currently configured SSL key database, or you
+do not have file permissions to open the key database.<br>
+<b>Recovery</b><br>
+Re-type your password and try again. Passwords are case-sensitive.<br>
+Check the SSL key database name and password prompting mode by clicking
+<b>iSeries Access Properties</b> from the iSeries Access
+folder and clicking the <b>Secure Sockets</b> tab. <br>
+There are three prompting modes ( Windows logon, once per-Windows session, and
+everytime). If the prompt mode is set to Windows logon, then your Windows
+password must match the SSL key database password. If the prompt mode is set to
+once per-Window session or everytime, then the password will be prompted
+for.<br>
+You can change the password using the IBM Key Management utility. The default
+key database is CWBSSLDF.KDB with a password of "ca400" (lowercase).<br>
+If you have forgotten your password, use can use the IBM Key Management utility
+to create a new SSL key database with a new password. Update iSeries Access for
+Windows with the new SSL key database name and select the appropriate password
+prompting mode by clicking <b>iSeries Access Properties</b> from
+the iSeries Access folder and clicking the <b>Secure Sockets</b>
+tab.<br>
+
+<h1><A NAME="CWBCO1053">CWBCO1053</A>     <a href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+An error occurred during Java key database processing.<br>
+<b>Recovery</b><br>
+Make sure the "classes\com\ibm\as400\access" directory exists under the Common
+Documents directory.
+Try the operation using the IBM Key Management application.<br>
+You might find additional information on this error in <b>keyringdb.txt</b>,
+which is located in the iSeries Access Service folder.
+************************************* NO SSL -->
+<h1><a name="CWBCO1054">CWBCO1054</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+A user configurable time-out occurred during a send or receive
+attempt.<br>
+<b>Recovery</b><br>
+Check the network for possible configuration or routing errors.
+Adjust the time-out period.</p>
+<!-- NOSSL *************************************
+<h1><A NAME="CWBCO1055">CWBCO1055</A>     <a href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+Informational message - The server application specified is configured for SSL
+Client Authentication.<br>
+<b>Recovery</b><br>
+iSeries Access only supports SSL Client Authentication for the
+Telnet server application through the PC5250 Emulator component.<br>
+************************************* NO SSL -->
+<h1><a name="CWBCO1099">CWBCO1099</a> <a href="#Contents"><font
+size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+An internal error occurred in iSeries Access communications. This
+may be due to low PC system resources or may be a programming
+error.<br>
+<b>Recovery</b><br>
+Free some PC system resources by ending any unnecessary programs
+and by deleting any unnecessary files from your hard drive, then
+try the operation again. If the problem persists, shutdown and
+restart your pc. If the problem remains, contact IBM Support. </p>
+
+<h1><a name="ServerConnProp">Server Connection Properties</a> <a
+href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p>Connection properties default values for your
+connections are maintained through the user's INI file.
+You can view and change default values that will be used by your
+applications when connecting to the specified system.
+Unique default values for each system can be set, however
+these values may be overridden at the application level. </p>
+
+<p>Values can be set for: <br>
+Signon information - specifies what default user ID to use
+<!-- NOSSL *************************************
+<br>Security - specifies whether or not communication with the server is encrypted using Secure Sockets Layer (SSL)
+************************************* NO SSL --><br>
+Performance - specifies the properties of the
+connection for the PC that can affect performance </p>
+
+<h1><a name="StartHostServer">How to start iSeries Access servers</a>
+<a href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p>To start all of the host socket servers on the system,
+type the following command at the iSeries command prompt: <br>
+STRHOSTSVR SERVER(*ALL) <br>
+To start just the signon server on the system, type: <br>
+STRHOSTSVR SERVER(*SIGNON *SVRMAP) <br>
+To use the socket servers, the QUSER profile on the iSeries system
+must be enabled and the password must not be expired. One way to
+make sure that the QUSER profile is always enabled is to set the
+password with no expiration time value. To do this, type the
+following command at the iSeries prompt: <br>
+CHGUSRPRF USRPRF(QUSER) PASSWORD(*NONE) PWDEXP(*NO)
+STATUS(*ENABLED) PWDEXPITV(*NOMAX) <br>
+</p>
+
+<p>If you are having trouble starting the host socket servers,
+try the following: </p>
+
+<ol>
+    <li>Type STRHOSTSVR SERVER(*ALL) at the iSeries command
+        prompt. </li>
+    <li>If step 1 does not work, type ENDHOSTSVR SERVER(*ALL) to
+        end the host socket servers, then try step 1 again. </li>
+    <li>If step 2 does not work, type NETSTAT at the iSeries
+        command prompt. Then select option 3. Work with TCP/IP
+        connection status. Look for any jobs with TCP addresses
+        beside them. End those jobs with option 4, then try step
+        1 again. </li>
+</ol>
+
+<p>The various servers on the iSeries system have different
+timeout values that come into play when the PC goes down before
+the connection is disconnected. For example, in the case where
+your PC goes into a hang condition before you can disconnect all
+of your host server connections and data queues, you will have
+server jobs active on the system until they timeout. This
+timeout could be minutes, hours, or days, depending on the
+server. <br>
+Ending the host servers does not clean up the jobs running on the
+iSeries when the ENDHOSTSVR command is run on the iSeries. The good
+thing about not cleaning up jobs is that your host server
+connections and data queues will continue to work after the
+ENDHOSTSVR command is run. The downside to not cleaning up server
+jobs on the iSeries is that jobs that are still active prevent the
+server from starting when the STRHOSTSVR command is run on the
+iSeries. <br>
+When ending and restarting host servers on the iSeries, you should
+use the CWBPING command from a Client Access Express workstation
+to make sure the host servers actually start back up. If they do
+not start back up, use the NETSTAT command and end any active
+jobs with TCP/IP addresses next to them. </p>
+</body>
+</html>

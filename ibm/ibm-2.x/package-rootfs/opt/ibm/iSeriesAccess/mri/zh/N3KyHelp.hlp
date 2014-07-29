@@ -1,0 +1,334 @@
+//// ENGLISH_SOURCE_VERSION= 1.1 
+////This file contains the keyboard remapping program on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file is stored in locale specific ASCII (code page 819 for Latin1 languages). This help text is stored on the booting server as N3_5KeyH.
+
+////Help text format (this section is not displayed to IBM emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1. Do not translated (or change) anything in a comment line.
+//// 3. This help file contains help text for the 3270, and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator.   A comment line of four "/" characters followed by:
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+//// 3B.  "5250" indicates subsequent data is only displayed in 5250 on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in 3270, and 5250 on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+////  3G. Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters. The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Do not change the order of topics in this help text file.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+----"3270 键盘映射帮助"
+++++"一般信息"
+有关使用此帮助查看程序的信息，请参阅仿真器主帮助中的第一个主题（在“仿真器”窗口中选择“帮助”菜单栏选项）。
+
+此帮助信息描述可以如何使用键盘重新映射程序来更改仿真器会话中的键盘操作。
+
+注意：每次只能有一个键盘重新映射程序处于活动状态。
+
+++++"键盘映射文件选择"
+当 3270 会话启动时，3270 仿真器就会搜索该会话的键盘映射文件。键盘类型需要匹配；一个键盘映射文件用于一种类型的键盘（例如，PC 102 键键盘）。使用以下顺序；如果找到键盘映射文件，则将其用于 3270 会话：
+
+- 搜索 -KEYFILE 命名的键盘映射文件。
+
+- 搜索使用键盘重新映射程序创建的特定于会话的键盘映射文件。
+
+- 搜索使用键盘重新映射程序创建的缺省键盘映射文件。
+
+- 如果以上方法都不能找到键盘映射文件，则仿真器使用缺省键盘操作。
+
+////5250
+++++"输入／字段退出键"
+“其它首选项”可以更改“输入”和“字段退出”操作的位置。如果期望更改 Enter 键或右 Ctrl 键，则首先检查“其它首选项”中是否有期望的映射可用。为此，请查看仿真器菜单栏上的“选项”下拉菜单以了解“其它首选项”。
+
+对 Enter 键或右 Ctrl 键所作的任何键盘重新映射更改都会被“其它首选项”覆盖（如果没有将“输入／字段退出键”选项设置为缺省设置的话）。
+
+如果期望的映射没有出现在“其它首选项”中，则首先将“输入／字段退出键”选项设置为缺省设置，然后使用键盘重新映射程序来进行期望的更改。
+
+注意：“其它首选项”还可以修改“打印”操作的位置，从而覆盖 Print Screen 键的键盘重新映射更改。
+
+////3270
+++++"Enter 键"
+“其它首选项”和“IBM 3270 仿真器设置”程序可以更改“输入”操作的位置。如果期望更改 Enter 键或右 Ctrl 键，则首先检查“其它首选项”或“IBM 3270 仿真器设置”程序中是否有期望的映射可用。
+
+“其它首选项”的 Enter 键位置具有最高优先级。接着，使用“IBM 3270 仿真器设置”程序中的 Enter 键位置设置。如果将“其它首选项”的 Enter 键位置设置为缺省设置，并且将“IBM 3270 仿真器设置”程序的 Enter 键位置设置为缺省设置，则可使用键盘重新映射来修改 Enter 键和右 Ctrl 键操作。
+
+注意：“其它首选项”可以修改“本地打印”操作的位置。此设置将覆盖 Print Screen 键的任何键盘重新映射更改。
+
+////9999
+++++"窗口布局"
+“键盘重新映射”窗口包含图形键盘布局区域（顶部）、操作选择区域（左边）、键／操作区域（右边）和操作栏／消息区域（底部）。
+
+图形键盘：显示当前键盘的实际布局。单击一个键将在键／操作区域中显示映射至该键的操作。
+
+
+操作选择区域包含下列内容：
+
+1) “可用的操作列表”，它包含可用的操作。从此列表中选择的操作将成为当前操作。
+
+2) “字符列表”，它列示所有可用字符。选择的字符将成为当前操作。要选择字符，单击该字符即可。
+
+3) “操作帮助”按钮在一个操作帮助窗口中提供键盘操作定义。可以打印操作定义。
+
+////5250
+4) “无操作”按钮，它将当前操作设置为“无”。带有“无”操作的键序列工作起来就象是没有按下键序列一样。
+////3270
+4) “无操作”按钮，它将当前操作设置为“空操作”。带有“空操作”操作的键序列工作起来就象是没有按下键序列一样。
+////9999
+
+5) “定位”按钮，此按钮查找所有已映射至可用操作列表中的突出显示操作的键。找到的键将在图形键盘上突出显示，第一个键将成为键／操作区域中的当前键。
+
+注意：只有一个操作可以是当前操作。
+
+
+键／操作区域包含下列内容：
+
+1) “当前键”，它显示可以修改的键。“当前键”显示在键／操作区域或操作选择区域（这取决于键盘类型）的上半部分中。每次只能修改一个键。
+
+2) “修改键”按钮，它们是键盘重新映射程序识别的修改键组合。修改键按钮以“-> ”开头。单击修改键按钮将导致当前操作（位于可用操作列表中、字符列表中或没有操作）替换操作文本区域中的操作。
+
+3) “操作文本区域”，此区域位于每个修改键按钮右边，它显示映射至此修改键的当前键的操作。可以编辑此区域（请参阅“编辑操作文本区域”）。
+
+4) “确定”按钮，此按钮接受对当前键所作的更改。
+
+5) “取消”按钮，此按钮取消对当前键所作的更改。
+
+
+“操作栏”按钮提供了下列功能：
+
+1) 将键盘重新映射更改“保存”在键盘映射文件中。
+
+2) “删除”先前创建的键盘映射文件。
+
+3) “将更改应用于会话”，这将启动键盘重新映射程序。这允许在将更改保存至键盘映射文件之前对它们进行测试。
+
+4) “复原”（撤销）自从上次“应用”以来或自从启动键盘重新映射程序以来所作的更改。
+
+5) 从键盘重新映射程序中“退出”。
+
+6) “打印”打印键／修改键序列以及结果操作。
+
+7) “帮助”显示本帮助文本。
+
+消息区域：
+显示信息和错误消息。
+
+++++"入门"
+进行键盘重新映射更改的步骤如下：
+
+1) 从期望进行重新映射更改的仿真器会话中启动键盘重新映射程序。
+
+2) 在图形键盘上单击要更改的键。
+
+3) 现在，键／操作区域处于活动状态，选择的键是当前键。当前映射至各种修改键的键的操作出现在操作文本区域中。
+
+4) 在可用操作列表或字符列表中单击要映射至当前键的操作，或选择不执行操作。（注意：“简单键盘宏”主题说明了如何创建简单键盘宏。）
+
+5) 单击应该与操作相关联的修改键按钮。修改键的操作文本区域应该显示了期望的操作。如果期望对此键的多个修改键应用此操作，则单击那些期望的修改键。可以编辑操作文本区域；有关更多信息，请参阅“编辑操作文本区域”。
+
+6) 单击“确定”以接受对键所作的更改，或单击“取消”以回复为原始操作。
+
+7) 单击“将更改应用于会话”。
+
+8) 在仿真器会话中测试键盘重新映射更改；不要从键盘重新映射程序中退出。
+
+9) 在键盘重新映射程序中，可以进行进一步的键盘映射更改，如果有必要的话，可以“复原”。
+
+10) 在应用和测试所有键盘映射更改之后，保存更改。
+
+11) 退出键盘重新映射程序。
+
+++++"编辑操作文本区域"
+操作文本区域位于每个修改键按钮右边，此区域显示映射至此修改键的当前键的操作。可以使用键盘来更改操作文本区域。单击期望的操作文本区域并使用键盘来进行更改。单击“确定”以接受更改。
+
+更改后的操作的拼写必须正确，并且区分大小写。对于多个操作，必须使用一个空格来将各个操作分隔开。
+
+如果找到操作文本错误，则会显示一个警告对话框并突出显示有错误的操作。
+
+在操作文本区域中单击将使该区域成为活动区域。如果当相关联的操作文本区域处于活动状态时单击修改键按钮，就会把当前操作插入到操作文本区域中的光标位置处。如果单击修改键按钮，并且相关联的操作文本区域不处于活动状态，则当前操作将替换先前操作。
+
+//// Note: The translation of String() and Play() below should match the translated resource text for AllShare*string() and Keyxxx52*play() in the keyboard remapping resource file.
+Ctrl 键和 Alt + 数字小键盘 0 至 9 键不支持操作文本区域括号内的文本。对于这些键组合，String() 和 Play() 不支持文本。
+
+++++"应用键盘映射更改"
+“将更改应用于会话”按钮临时地将键盘重新映射更改应用于从中启动键盘重新映射程序的仿真器会话。然后，可以对更改进行测试。有关保存更改以供将来使用的信息，请参阅“保存键盘重新映射”。
+
+++++"保存键盘映射文件"
+“保存”按钮保存键盘重新映射更改以供将来使用。键盘重新映射更改保存在键盘映射文件中。您选择键盘重新映射更改的保存方式：作为用于所有会话的缺省键盘映射文件，或者作为仅用于从中启动键盘重新映射程序的会话的特定于会话的键盘映射文件。
+
+特定于会话的键盘映射文件允许在不同的 3270 会话中使用不同的键盘操作。特定于会话的键盘映射文件具有最高优先级，并且用于从中创建该键盘映射文件的特定会话（使用 3270 会话的会话号以及会话名）。
+
+缺省键盘映射文件具有次高优先级，并且用于所有没有特定于会话的键盘映射文件的会话。
+
+有关删除键盘映射文件的信息，请参阅“删除键盘映射文件”。
+
+++++"删除键盘映射文件"
+选择操作栏上的“删除”按钮以删除已创建的键盘映射文件。请选择任何要删除的键盘映射文件，然后选择“删除”按钮。
+
+++++"复原键盘映射"
+如果进行了不期望的键盘重新映射更改，则可以将键盘映射复原到：
+
+1) 在启动键盘重新映射程序时读取的原始键盘映射。
+
+2) 上次应用的状态；这是上次使用操作栏中的“应用”按钮对会话应用的映射。
+
+“复原”并不会保存或应用所复原的键映射。它复原键盘重新映射程序的转换。
+
+要复原缺省键盘映射的映射，请删除会话的特定于会话的键盘映射文件，然后重新启动该会话。
+
+++++"简单键盘宏"
+键盘宏是可以很方便地输入仿真器会话的击键序列。可以使用键盘重新映射程序来创建简单键盘宏。应该使用“录制”和“回放”功能来创建比较长的或比较复杂的键盘序列。请参阅主仿真器帮助文本中的“录制”和“回放”主题。
+
+创建简单的键盘宏：
+
+1) 在图形键盘上单击将要执行键盘宏的键。
+
+//// Note: The translation of String() below should match the translated resource text for AllShare*string() in the keyboard remapping resource file.
+2) 在“可用操作列表”中滚动到 String() 操作并单击 String()。
+
+3) 单击所选键的期望修改键按钮。
+
+4) 在键／操作区域中，在 String() 的括号之间单击。
+
+5) 输入双引号、键盘宏数据和双引号；例如，String("数据")。
+
+6) 单击“确定”以接受更改。
+
+7) 单击“将更改应用于会话”。
+
+8) 测试键盘宏；在仿真器会话中按下该键序列。如果您愿意的话，可以对键盘宏进行更改。单击“保存”。
+
+注意：可以将多个操作映射至一个键。为此，可以单击期望的操作文本区域并输入期望的操作序列。还可以单击期望的操作文本区域并单击修改键按钮以便从可用操作列表和字符列表插入操作序列。对于多个操作，必须使用一个空格来将各个操作分隔开。
+
+注意：如果您希望使用多个不存在于键／操作区域中的修改键组合来创建宏，则可使用“高级键盘重新映射”功能（请参阅“高级键盘重新映射”主题）。
+
+++++"回放文件"
+可以将回放文件映射至键序列。使用录制功能来录制回放文件（请参阅主仿真器帮助文本中的“录制”主题以获取有关录制的帮助。
+
+////Note: The translation of Play() below should match the translated resource text for Keyxxx52*play() in the keyboard remapping resource file.
+然后，在键盘重新映射中，选择用于启动回放文件的键。对键序列指定 Play() 操作。在键／操作区域中，在 Play() 的括号之间单击鼠标。在括号之间输入回放文件名。
+
+++++"无操作"
+要使键序列不执行任何工作，请在操作选择区域中单击“无操作”按钮，并单击所期望的键序列的修改键按钮。然后，通过“确定”按钮接受更改。
+
+////Note: The translation of Dead Key below should match the translated resource text for Keyxxx52*unmappable() in the keyboard remapping resource file.
+注意：由于死键由操作系统处理，所以操作文本区域中包含“死键”的键是不能映射的。
+
+////Note: The translation of Undefined below should match the translated resource text for Keyxxx52*undefined() in the keyboard remapping resource file.
+注意：操作文本区域包含“未定义”的键是可以映射的。
+
+++++"定位操作"
+要查找映射至某个操作的击键，请在可用操作列表中选择操作并在操作选择区域中单击“定位”按钮。
+
+所有映射至所找到的操作的键都会突出显示，找到的第一个键成为键／操作区域中的当前键。
+
+“无操作”、字符列表字符或键盘宏不允许进行定位。
+
+++++"字符列表"
+字符列表允许您访问可能无法从键盘访问的字符。
+
+对键序列指定字符：单击图形键盘上的将显示该字符的键。在字符列表中单击期望的字符。单击期望的修改键按钮。单击“确定”以接受更改并将更改应用于会话。
+
+将字符添加至键盘宏：单击图形键盘上的显示键盘宏的键。在字符列表中单击期望的字符。在键盘宏的操作文本区域中（在 String() 操作内），在应该插入所添加的字符的位置处单击（可使用光标左键和右键将光标移至正确的位置）。单击期望的修改键按钮。单击“确定”以接受更改并将更改应用于会话。
+
+++++"窗口管理器键"
+某些键是由“窗口管理器”程序处理的；例如，用于将窗口移至后台的键序列。不能使用仿真器键盘重新映射程序来将“窗口管理器”键用于键盘重新映射。
+
+////3270
+++++"光笔仿真"
+可以通过键序列或鼠标来进行光笔（选择字段）仿真。您使用键盘重新映射程序来定义键序列或鼠标。
+
+//// Note: The translation of PenSelectField() below should match the translated resource text for Keyxxx52*select-field() in the keyboard remapping resource file.
+键序列：在图形键盘上单击期望的键，并对期望的键序列指定 PenSelectField() 操作。
+
+////Note: Do not translate Alt<KeyPress>Insert: select-field() and Alt<Btn3Down>: select-field() below.
+鼠标：确定用于进行光笔仿真的鼠标序列；不要禁用有用的鼠标功能。按照上面描述的方式，可以很方便地对键序列临时指定 PenSelectField() 操作。请不要覆盖有用的键序列（例如，Alt-Insert 通常是可用的）。然后，使用“高级键盘重新映射”（有关更多信息，请参阅“高级键盘重新映射”帮助主题）来编辑该键序列，该键序列应该是列表中的第一个键序列。例如，将 Alt<KeyPress>Insert: select-field() 更改为 Alt<Btn3Down>: select-field()。在本例中，Alt + 鼠标右键将用于光笔仿真。
+////9999
+
+
+++++"不可显示转换"
+仅当使用“高级键盘重新映射”添加了转换，或者键盘映射文件是使用早期版本的键盘重新映射程序创建的时，才会发生不可显示转换。
+
+在“高级键盘重新映射”中（以及在早期版本的键盘重新映射程序中），允许数个修改键转换。这些修改键不显示在键／操作区域中。
+
+如果存在当前键的不可显示的转换，则消息区域将包含一条消息。只能使用“高级键盘重新映射”功能来查看、编辑或除去此转换。这些转换可以提供有用的功能；键盘重新映射程序不会修改这些转换。
+
+++++"打印键盘映射文件"
+可以通过从操作栏中选择“打印”按钮以及从打印对话框中选择打印选项来打印当前键盘映射文件。将列示键盘上的每个键／修改键序列以及结果操作。但是，不打印使用“高级键盘重新映射”创建的键序列。
+
+++++"高级键盘重新映射"
+警告：“高级键盘重新映射”有可能引起不期望的结果，并可能会导致重大的仿真器会话问题。如果发生这种情况，则通过更正键盘重新映射更改（修改并应用）或删除键盘映射文件来恢复。在删除键盘映射文件之后，必须退出并重新启动仿真器会话。
+
+“高级键盘重新映射”为有经验的用户提供了编辑与仿真器会话相关联的内部击键转换列表的机会。
+
+按住“Alt”键不放，然后按“a”键以启动“高级键盘重新映射”。
+
+“高级重新映射”窗口包含内部转换列表和下列四个按钮：
+
+1) “编辑”列表中的第一个所选转换。
+
+2) 在所选转换之前“插入”空白行。
+
+3) “除去”列表中的所有所选转换（在单击“除去”之前，请验证您是否希望除去所有所选转换）。
+
+4) 将“高级重新映射”窗口“关闭”。
+
+在“转换列表”中定位项：当单击图形键盘上的键时，所有映射至该键的转换都会在转换列表中变为突出显示。列表将自动调整为使第一个所选转换可见。
+
+要在转换列表中定位操作，请在主可用操作列表中选择操作并单击“定位”按钮。使用此操作的键将突出显示。
+
+转换优先顺序：转换必须具有正确的顺序。在查找与击键相匹配的转换时，是按照自顶向下的顺序检查转换列表的。将使用找到的第一个符合要求的项。具有最多修改键（最特定）的转换列表项位于具有较少修改键的转换列表项之前。
+
+例如：
+
+////5250
+////In the following two lines, only "must come before" should be translated.
+  Alt<KeyPress>Print: sysreq() 必须位于 <KeyPress>Print: print() 之前
+
+在按下 Alt 键的情况下，按下“打印”键时将选择“sysreq”（可以按住其它修改键）。按下“打印”键时将选择“print”（可以按住其它修改键）。如果 <KeyPress>Print: print() 位于 Alt<KeyPress>Print: sysreq() 之前，则由于将先处理 <KeyPress>Print: print()，所以永远不会处理 Alt<KeyPress>Print: sysreq()。
+////3270
+  Alt<KeyPress>Print: sysreq()  必须位于 <KeyPress>Print: pa1() 之前
+
+在按下 Alt 键的情况下，按下“打印”键时将选择“sysreq”（可以按住其它修改键）。按下“打印”键时将选择“pa1”（可以按住其它修改键）。如果 <KeyPress>Print: pa1() 位于 Alt<KeyPress>Print: sysreq() 之前，则由于将先处理 <KeyPress>Print: pa1()，所以永远不会处理 Alt<KeyPress>Print: sysreq()。
+////9999
+
+转换的结构：
+
+////In the following line, "<KeyPress>" should not be translated.
+  Modifier Modifier<KeyPress>Key: action() action()
+
+不需要修改键。支持多个修改键。需要一个操作。支持多个操作。
+
+“键盘重新映射”识别的修改键：
+
+////In the following list, the left column ("Any" through "Mod5") should not be translated. The information in parenthesis to the right should be translated.
+////5250
+Any      （与没有修改键相同）
+Shift    （换档）
+Lock     （大写锁定或换档锁定）
+Ctrl     （左 Ctrl 键）
+Alt      （alt）
+Mod2     （右 alt 键，Alt Gr）
+Mod3     （现在不使用）
+Mod4     （现在不使用）
+Mod5     （数字锁定）
+////3270
+Any      （与没有修改键相同）
+Shift    （换档）
+Lock     （大写锁定或换档锁定）
+Ctrl     （左 Ctrl 键）
+Alt      （alt）
+Mod2     （右 alt 键，图形 Alt）
+Mod3     （现在不使用）
+Mod4     （现在不使用）
+Mod5     （数字锁定）
+////9999
+
+键盘重新映射程序还识别位于修改键列表开头的互斥（!）指示。
+
+////5250
+////Do not translate "reset()" and "Ctrl" below.
+reset() 操作映射至左 Ctrl 键（不应该移动复位操作）。如果指定 Ctrl 修改键来选择操作，则在处理该操作之前，左 Ctrl 键将处理 reset() 操作。
+////9999
+
+////Do not translate "enter()", "newline()", and "Control_R" below.
+通常，对 Control_R 键指定 enter() 或 newline() 操作。

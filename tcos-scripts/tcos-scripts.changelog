@@ -1,4 +1,13 @@
-tcos-scripts (2.0-33) UNRELEASED; urgency=low
+tcos-scripts (2.0-34) unstable; urgency=low
+
+  * FIX: https://github.com/openthinclient/openthinclient-os-core/issues/14
+  * FIX: https://github.com/openthinclient/openthinclient-os-core/issues/13
+  * provide a none exitent mode with --addmode
+  * generate modeline according to manager settings if necessary
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Thu, 17 Jul 2014 01:04:29 +0200
+
+tcos-scripts (2.0-33) unstable; urgency=low
 
   * fixed a rare case where the keyboard device was not read properly 
 

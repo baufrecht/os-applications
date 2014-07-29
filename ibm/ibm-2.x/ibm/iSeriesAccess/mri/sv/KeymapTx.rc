@@ -1,0 +1,1648 @@
+!
+!
+!
+! This file contains the resource text strings for the IBM Network Station 3270, 5250, VTxxx 
+! emulators, in particular the keyboard remapping, keypad customize, and playback edit programs.
+
+! This resource file is stored in locale specific ASCII (code page 819 for Latin1 languages).
+! This resource file is stored on the booting server as N3_5KeyM.
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. Resource format: 
+!    - A resource line starts with one of the following strings:
+!      Keymap52* : for keymapper resources
+!      Keypad52* : for keypad customize resources
+!      Playedit* : for playback editor resources  
+!      Keyxxx52* : for resources shared by keymapper and keypad
+!      AllShare* : for resources shared by keymapper, keypad, and playback editor
+!    - Each string is followed by a resource name and a ":".  
+!		Do NOT make any changes to the text to the left of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+
+! ********************************************************************************
+! Keyboard Remapping Resources
+! ********************************************************************************
+!
+! In general, the following buttons should not be made much longer during translation.
+! Buttons have one to four words. Note: Testing is the only way to know for sure if all
+! buttons fit on the screen ok.  The emulators have a testing document that will be used
+! during testing; this will point out a problem if button text is too long. In many 
+! cases, buttons are presented side by side, where the total button text length cannot
+! increase significantly.
+Keymap52*key.labelString:  Aktuell tangent
+!
+Keymap52*title:  Anpassa tangentbord
+!
+Keymap52*iname5250:  5250 - Tangenter
+!
+Keymap52*iname3270:  3270 - Tangenter
+!
+Keymap52*inameNSTERM:  VT-emuleringstangenter
+!
+AllShare*fileSaveButton.labelString:  Spara
+!
+Keymap52*fileDeleteButton.labelString:  Ta bort
+!
+Keymap52*applyTranslationsButton.labelString:  Använd
+!
+AllShare*fileQuitButton.labelString:  Avsluta
+!
+AllShare*helpPush.labelString:  Hjälp
+!
+AllShare*lowMemMsgDialog.messageString:  Minnet räcker inte för att starta hjälpläsaren.
+!
+AllShare*quitDialog.dialogTitle:  Avsluta - Varning
+!
+! Note: \n causes a new line in the dialogue box and should not be translated.
+! You can move, add, or remove \n within this text string.
+Keymap52*invalidExt.value: Tangentbordsfilens filtyp är fel eller saknas. \nRätt filtyp har lagts till automatiskt. \nNytt filnamn och filtyp visas i meddelandefältet.
+!
+Keymap52*invalidExtOkButton.labelString:  OK
+!
+Keymap52*invalidFileName.value:  Du har skrivit ett ogiltigt tecken i filnamnet.
+!
+Keymap52*invalidFileNameOkbutton.labelString:  OK
+!
+Keymap52*noKeyCaps.value: Programmet för tangentbordsanpassning har inte uppdaterats med tangentbordstypen.\n Tangenttexten på det grafiska tangentbordet visas på engelska.
+!
+Keymap52*noKeyCapOkbutton.labelString:  OK
+!
+Keymap52*EBCMismatchText.value: Olika språk i emuleringssessionen (som anpassningsprogrammet startades från) och i IBM Network Station. Tecknen och strängarna som har \n skapats med den här funktionen kan orsaka oönskade resultat i emuleringssessionen.
+!
+Keymap52*mismatchOKbutton.labelString:  OK
+!
+Keymap52*poorResolutionMsgText.value:   Bildskärmens upplösning är lägre än 800x600. Tangentbordet kan inte anpassas på bildskärmar med lägre upplösning än 800x600.
+!
+Keymap52*keymapFailureCancelBtn.labelString:  Avbryt
+!
+Keymap52*saveDialog.dialogTitle:  Spara tangentbordsanpassning
+!
+Keymap52*saveBoxLabel*labelString:  Välj hur ändringar ska sparas:
+!
+Keymap52*saveBoxToggle1.labelString:  Spara som förinställning för alla sessioner
+!
+Keymap52*saveBoxToggleNsterm1.labelString:      Spara som standard för den här terminaltypen
+!
+Keymap52*saveBoxToggle2.labelString:  Spara enbart för den här sessionen
+!
+Keymap52*saveBoxToggle3.labelString:  Spara som en tangentbordsfil (endast för administratörer)
+!
+AllShare*saveBoxSaveBtn.labelString:  Spara
+!
+AllShare*saveBoxCancelBtn.labelString:  Avbryt
+!
+Keymap52*fileNameSaveBoxLabel.labelString:  Ange ett filnamn:
+!
+Keymap52*fileDeleteDialog.dialogTitle:  Ta bort tangentbordsfil
+!
+Keymap52*fileDeleteBoxLabel*labelString:  Välj fil(er) att ta bort:
+!
+KeyXXX52*fileDeleteBoxLabelAlt*labelString:  Det finns inga filer att ta bort.
+!
+KeyXXX52*fileDeleteBoxDeleteBtn.labelString:  Ta bort
+!
+KeyXXX52*fileDeleteBoxCancelBtn.labelString:  Avbryt
+!
+KeyXXX52*fileDeleteVerifyDialog.dialogTitle:  Bekräfta borttagning
+!
+KeyXXX52*fileDeleteVerifyDialog.okLabelString:  OK
+!
+KeyXXX52*fileDeleteVerifyDialog.cancelLabelString:  Avbryt
+
+! this cannot be much longer
+KeyXXX52*noundoDelete:  Borttagning av filer kan inte ångras. Vill du ta bort filen?
+!
+KeyXXX52*novalidDelete:  Inga filer markerade. Du kan inte välja Ta bort.
+!
+Keymap52*fileWarningDialog.dialogTitle:  Tangentbordsanpassning - Varning
+!
+AllShare*fileWarningDialog.okLabelString:  Ja
+!
+AllShare*fileWarningDialog.cancelLabelString:  Nej
+!
+AllShare*fileAlreadyExists:  Filen finns redan. Vill du skriva över den?
+!
+Keymap52*transTempApp:  Tangentbordsändringarna används tillfälligt i sessionen.
+!
+AllShare*nomakeDir:  Kan inte skapa katalog.
+!
+AllShare*nofilepathSave:  Kan inte fastställa sökväg.
+!
+Keymap52*transRxd:  Ursprunglig tangentbordsanpassning har tagits emot från emuleringssessionen.
+!
+Keymap52*saveTran:  Sparar tangentbordsfil...
+!
+Keymap52*savetoTranError:  Ett fel inträffade när tangentbordsfilen skulle sparas. Filen sparades inte.
+!
+Keymap52*savedtoTran:  	Tangentbordsanpassning sparad i:
+!
+Keymap52*quitDialog1:  Tangentbordsanpassningen har ändrats men inte använts eller sparats.
+!
+Keymap52*quit1Tog1:  Avsluta utan att använda eller spara ändringarna.
+!
+Keymap52*quit1Tog2:  Avsluta, men använd och spara ändringarna först.
+!
+Keymap52*quitDialog2:  Tangentbordsanpassningen har ändrats och använts men inte sparats.
+!
+Keymap52*quit2Tog1:  Avsluta utan att spara; ångra ändringar i tangentbordsanpassningen.
+!
+Keymap52*quit2Tog2:  Avsluta utan att spara men låt ändringarna gälla under sessionen.
+!
+Keymap52*quitDialog3:  Tangentbordsanpassningen har ändrats och sparats men inte använts.
+!
+Keymap52*quit3Tog1:  Avsluta utan att använda ändringarna.
+!
+Keymap52*quitTog3.labelString:  Avsluta, men använd först ändringarna i den här sessionen.
+!
+AllShare*quitDialog*quitTog4.labelString:  Avsluta, men spara först ändringarna.
+!
+AllShare*quitDialog*exitBox.labelString:  Avsluta
+!
+AllShare*quitDialog*cancelBox.labelString:  Avbryt
+!
+Keymap52*undoDialog.dialogTitle:  Återställ
+!
+Keymap52*undoDialog1.labelString:  Välj vilken tangentbordsanpassning som du vill återställa.
+!
+Keymap52*undoDialog*undoBox.labelString:  OK
+!
+Keymap52*undoDialog*cancelBox.labelString:  Avbryt
+!
+Keymap52*restoreWarning.dialogTitle:  Avsluta
+!
+Keymap52*restoreWarning.okLabelString:  OK
+
+! this cannot be made much longer during translation
+Keymap52*restoreWarning.messageString:  Tangentbordsanpassningen för sessionen har återställts till ursprungligt värde.
+!
+Keymap52*nonValidDialog.dialogTitle:  Varning
+!
+KeyXXX52*nonValidDialog.okLabelString:  OK
+!
+Keymap52*nonValidDialog.messageString:  En eller flera tangentfunktioner är ogiltiga.
+!
+Keymap52*reservedtrans.dialogTitle:  Varning
+!
+Keymap52*reservedtrans.okLabelString:  OK
+
+! this cannot be made much longer during translation
+Keymap52*reservedtrans.messageString:  Tangenttryckningar reserverade för fönsterhanteraren kan inte anpassas.
+!
+Keymap52*lastButton.labelString:  Återställ den tangentbordsanpassning som användes senast
+!
+Keymap52*origButton.labelString:  Återställ den ursprungliga tangentbordsanpassningen
+
+! this cannot be made much longer during translation
+Keymap52*lastRest:  Tangentbordsanpassningen har återställts till sessionens senaste värden.
+!
+Keymap52*origRest:  Tangentbordsanpassningen har återställts till ursprungligt värde.
+!
+Keymap52*noRest:  Inga återställningsalternativ har valts. Inga ändringar har gjorts.
+!
+Keymap52*fileDeleted:  Tangentbordsfilerna har tagits bort.
+
+! this resource has been left intentionally blank, do not translate.
+Keymap52*blank: 
+!
+Keymap52*basePb.labelString:  -> Bas
+!
+AllShare*changePb.labelString:  OK
+!
+AllShare*cancelPb.labelString:  Avbryt
+!
+AllShare*actionListLabel.labelString:  Tillgängliga funktioner:
+!
+AllShare*charListLabel.labelString:  Tecken:
+!
+AllShare*actionDef.labelString:  Funktionsdefinition:
+!
+AllShare*printActionDefTitle:  Tillgängliga funktionsdefinitioner
+!
+Keymap52*restorePB.labelString:  Återställ
+
+! this cannot be made any longer during translation.
+Keymap52*locatePB.labelString:  Sök
+
+! this cannot be made any longer during translation.
+Keymap52*nothingTB.labelString:  Ingen funktion
+!
+Keymap52*translistdialog.dialogTitle:  Avancerad tangentbordsanpassning
+!
+Keymap52*noRemPass:  Ogiltig bearbetning, passiva tangentanpassningar kan inte tas bort.
+!
+Keymap52*searchFailed:  Sökningen misslyckades. Det finns inga motsvarande funktioner i tangentbordsanpassningen.
+!
+Keymap52*searchSuccess:  Sökningen lyckades....
+!
+Keymap52*searchSemi:  Sökningen lyckades.... tangenten för den här funktionen är inte tillgänglig.
+!
+Keymap52*noSearchMsg:  Sökningen kan inte utföras eftersom ingen giltig funktion har valts.
+!
+Keymap52*nonStand:  Det finns minst en tolkning för den här tangenten som inte kan visas.
+!
+Keymap52*change.dialogTitle:  Tangentbordsanpassning - Varning
+!
+KeyXXX52*change.messageString:  Bekräfta eller ångra ändringarna för den aktuella tangenten innan du visar nästa.
+!
+KeyXXX52*change.okLabelString:  Fortsätt
+!
+Keymap52*editb.labelString:  Ändra
+!
+Keymap52*insertb.labelString:  Infoga
+!
+Keymap52*removeb.labelString:  Ta bort
+!
+Keymap52*closeb.labelString:  Stäng
+!
+Keymap52*editDialog.dialogTitle:  Ändra
+!
+Keymap52*editDialog*editLabel.labelString:  Ändra tolkningen nedan:
+!
+Keymap52*editDialog*okButton.labelString:  OK
+!
+Keymap52*editDialog*clearButton.labelString:  Rensa
+!
+Keymap52*editDialog*cancelButton.labelString:  Avbryt
+!
+Keymap52*Any:  -> Bas
+!
+Keymap52*Shift:  -> Skift
+!
+Keymap52*Lock:  -> Caps Lock
+!
+Keymap52*Lock122:  -> Skiftlås
+!
+Keymap52*Ctrl:  -> Vänster Ctrl
+!
+Keymap52*CtrlNsterm: -> Ctrl
+!
+Keymap52*Alt:  -> Alt
+!
+Keymap52*Mod2:  -> Alt(Gr)
+!
+Keymap52*Mod3:  -> APL/Super
+!
+Keymap52*Mod4:  -> Mod4
+!
+Keymap52*Mod5:  -> Num Lock
+!
+Keymap52*Shift_Alt:  -> Skift-Alt
+!
+Keymap52*cantdothat.dialogTitle:  Tangentbordsanpassning - Varning
+!
+Keymap52*cantdothat.messageString:  Bekräfta eller ångra ändringarna för den aktuella tangenten innan du väljer ett alternativ på funktionsraden.
+!
+KeyXXX52*cantdothat.okLabelString:  Fortsätt 
+!
+Keymap52*chooseApply:  Välj Använd om du vill att ändringarna ska fungera i sessionen.
+!
+Keymap52*transListLabel.labelString:  Tolkningslista:
+!
+Keymap52*seeHelpLabel.labelString:  Se Hjälp innan du gör några avancerade ändringar.
+!
+Keymap52*keyAction.labelString:  Tangent/Funktion
+!
+Keymap52*nomapmod:  Skifttangenter kan inte anpassas.
+!
+AllShare*toobig:  Bearbetningen har avbrutits. Den största längden för funktionen har överskridits.
+!
+Keymap52*currKeyLabel.labelString:  Aktuell tangent:
+!
+AllShare*printKeymap.labelString:  Skriv ut
+!
+AllShare*printDialogCancelButton.labelString:  Avbryt
+!
+AllShare*printDialogBoxLabel.labelString:  Välj utskriftsalternativ
+!
+AllShare*printDialogSelectPrinter.labelString:  Välj en skrivare:
+!
+AllShare*PrinterSelectServerDelineator:  @
+!
+AllShare*PrinterSelectLocalDesignator:  (Lokal)
+!
+AllShare*ActionHelpPrinted:  Hjälp för funktionsdefinitioner utskriven
+!
+AllShare*printDialogPrintInProgress.labelString:  Skriver ut...
+!
+AllShare*okLabelString:  OK
+!
+AllShare*cancelLabelString:  Avbryt
+!
+! Start Action list translations (to be shared by keypad customizer and keymapper).
+! 
+! Rules for translating actions:
+! 1) Action text (to the right of the ":") is translated
+! 2) All actions need to end in ()
+! 3) Action text may not contain spaces
+! 4) Action text may be separated by capitals or underscores (_)
+! 5) Because actions are cross-referenced, each translated action must be unique
+! 6) Action text should be a maximum of 29 characters, not counting the () characters
+!
+!    ValidActionText()
+!    InvalidActionText
+!    ValidActionText()
+!    Valid_Action_Text()
+!    Invalid Action Text()
+!
+!    Valid Unique action names:
+!    Keyxxx52*tab():  Tab()
+!    Keyxxx52*backtab():  BackTab()
+!    Keyxxx52*tabadvancefunction():  TabAdvance()
+!    Keyxxx52*tabfunction():  OfficeTabFunction()
+!
+!    Invalid action names, not unique:
+!    Keyxxx52*tab():  Tab()
+!    Keyxxx52*backtab():  Tab()
+!    Keyxxx52*tabadvancefunction():  Tab()
+!    Keyxxx52*tabfunction():  Tab()
+!
+! Each action is followed by an action definition (to the right of the ":") which is translated
+!
+Keyxxx52*nothing():  NoAction()
+AllShare*DEFnothing():  Den här funktionen gör ingenting och används till att visa en tom funktion.
+!
+Keyxxx52*ruleline():  RuleLine()
+AllShare*DEFruleline():  Ändrar status för visning av hjälplinje, mellan visas och visas inte.  Hjälplinjen gör det lättare att lokalisera markören. Med Diverse inställningar kan du aktivera (standardinställning) eller avaktivera funktionen och ändra typen av hjälplinje.
+!
+AllShare*string():  String()
+AllShare*DEFstring():  Visar ett tecken eller en teckensträng vid markörens position.  Formatet för funktionen är String("text"). Dubbla citattecken (") krävs, och "text" är tecknet eller tecken som visas. String() används för att skapa tangentbordsmakron.
+!
+Keyxxx52*play():  Play()
+AllShare*DEFplay():  Funktionen Play() visar uppspelningsfönstret där en uppspelningsfil kan startas.  Funktionen Play() kan även ha namnet på uppspelningsfilen som parameter (mellan parenteserna). Uppspelningsfilen startas automatiskt.
+!
+Keyxxx52*record():  Record()
+AllShare*DEFrecord():  Visar ett fönster där en inspelning kan startas.
+!
+AllShare*pause():  Paus()
+AllShare*DEFpause():  Gör en paus i uppspelningen eller inspelningen av en fil. Användaren startar uppspelningen eller inspelningen igen genom att välja Fortsätt.
+!
+AllShare*local-screen-print():  ScreenPrint()
+AllShare*DEFlocal-screen-print():  Visar ett fönster där utskriften av skärmbild kan startas.
+!
+Keyxxx52*print-screen-now():  PrintScreenNow()
+AllShare*DEFprint-screen-now():  Skriver ut aktuell skärmbild och använder de senast valda utskriftsalternativen och skrivaren.
+!
+AllShare*extended():  DisplayAttributes()
+AllShare*DEFextended():  Visar alla fältattribut på skärmen.
+!
+AllShare*up():  CursorUp()
+AllShare*DEFup():  Flyttar markören en markörposition uppåt.
+!
+AllShare*down():  CursorDown()
+AllShare*DEFdown():  Flyttar markören enmarkörposition nedåt.
+!
+AllShare*left():  CursorLeft()
+AllShare*DEFleft():  Flyttar markören en markörposition åt vänster.
+!
+AllShare*right():  CursorRight()
+AllShare*DEFright():  Flyttar markören en markörposition åt höger.
+!
+AllShare*fastleft():  FastCursorLeft()
+AllShare*DEFfastleft():  Flyttar markören tre markörpositioner åt vänster.
+!
+AllShare*fastright():  FastCursorRight()
+AllShare*DEFfastright():  Flyttar markören tre markörpositioner åt höger.
+!
+AllShare*newline():  Newline()
+AllShare*DEFnewline():  Flyttar markören till början av inmatningsfältet på nästa rad.
+!
+AllShare*home():  Home()
+AllShare*DEFhome():  Flyttar markören till utgångspositionen (vanligtvis den första fältpositionen på skärmen) och skickar ibland AID-koden Home till värdsystemet.
+!
+AllShare*tab():  Tab()
+AllShare*DEFtab():  Flyttar markören till nästa inmatningsfält.
+!
+AllShare*backtab():  BackTab()
+AllShare*DEFbacktab():  Om markören finns i ett inmatningsfälts första position eller i ett utskriftsområde flyttas musen till första positionen i det föregående inmatningsfält. Om markören befinner sig i ett inmatningsfält men inte i första positionen flyttas den till första positionen.
+!
+AllShare*end():  EndOfLine()
+AllShare*DEFend():  Flyttar markören till positionen efter det sista tecknet som inte är NULL eller mellanslag i ett inmatningsfält.
+!
+AllShare*tabadvancefunction():  TabAdvance()
+AllShare*DEFtabadvancefunction():  Flyttar markören till nästa logiska inmatningsfält.
+!
+AllShare*insert():  Insert()
+AllShare*DEFinsert():  Aktiverar insättningsläget.
+!
+AllShare*delete():  Delete()
+AllShare*DEFdelete():  Tar bort tecknet där markören är placerad.
+!
+AllShare*backspace():  Backspace()
+AllShare*DEFbackspace():  Flyttar markören en markörposition bakåt och tar bort bokstaven före markören. Med Diverse inställningar kan du aktivera eller avaktivera Backstegsborttagning av tecken.
+!
+AllShare*erase-eof():  ErasetoEnd()
+AllShare*DEFerase-eof():  Tar bort alla tecken från markörpositionen till slutet av fältet.
+!
+AllShare*erase-input():  EraseInputFields()
+AllShare*DEFerase-input():  Rensar alla inmatningsfält på skärmen.
+!
+AllShare*dup():  Dup()
+AllShare*DEFdup():  Fyller det aktiva fältet från markörens position till slutet av fältet med dupliceringstecknet.
+!
+AllShare*field-mark():  FieldMark()
+AllShare*DEFfield-mark():  Markerar ett fält med fältmärkestecknet.
+!
+AllShare*pf1():  PF1()
+AllShare*DEFpf1():  Utför funktionen som definierats för F1-tangenten.
+!
+AllShare*pf2():  PF2()
+AllShare*DEFpf2():  Utför funktionen som definierats för F2-tangenten.
+!
+AllShare*pf3():  PF3()
+AllShare*DEFpf3():  Utför funktionen som definierats för F3-tangenten.
+!
+AllShare*pf4():  PF4()
+AllShare*DEFpf4():  Utför funktionen som definierats för F4-tangenten.
+!
+AllShare*pf5():  PF5()
+AllShare*DEFpf5():  Utför funktionen som definierats för F5-tangenten.
+!
+AllShare*pf6():  PF6()
+AllShare*DEFpf6():  Utför funktionen som definierats för F6-tangenten.
+!
+AllShare*pf7():  PF7()
+AllShare*DEFpf7():  Utför funktionen som definierats för F7-tangenten.
+!
+AllShare*pf8():  PF8()
+AllShare*DEFpf8():  Utför funktionen som definierats för F8-tangenten.
+!
+AllShare*pf9():  PF9()
+AllShare*DEFpf9():  Utför funktionen som definierats för F5-tangenten.
+!
+AllShare*pf10():  PF10()
+AllShare*DEFpf10():  Utför funktionen som definierats för F10-tangenten.
+!
+AllShare*pf11():  PF11()
+AllShare*DEFpf11():  Utför funktionen som definierats för F11-tangenten.
+!
+AllShare*pf12():  PF12()
+AllShare*DEFpf12():  Utför funktionen som definierats för F12-tangenten.
+!
+AllShare*pf13():  PF13()
+AllShare*DEFpf13():  Utför funktionen som definierats för F13-tangenten.
+!
+AllShare*pf14():  PF14()
+AllShare*DEFpf14():  Utför funktionen som definierats för F14-tangenten.
+!
+AllShare*pf15():  PF15()
+AllShare*DEFpf15():  Utför funktionen som definierats för F15-tangenten.
+!
+AllShare*pf16():  PF16()
+AllShare*DEFpf16():  Utför funktionen som definierats för F16-tangenten.
+!
+AllShare*pf17():  PF17()
+AllShare*DEFpf17():  Utför funktionen som definierats för F17-tangenten.
+!
+AllShare*pf18():  PF18()
+AllShare*DEFpf18():  Utför funktionen som definierats för F18-tangenten.
+!
+AllShare*pf19():  PF19()
+AllShare*DEFpf19():  Utför funktionen som definierats för F19-tangenten.
+!
+AllShare*pf20():  PF20()
+AllShare*DEFpf20():  Utför funktionen som definierats för F20-tangenten.
+!
+AllShare*pf21():  PF21()
+AllShare*DEFpf21():  Utför funktionen som definierats för F21-tangenten.
+!
+AllShare*pf22():  PF22()
+AllShare*DEFpf22():  Utför funktionen som definierats för F22-tangenten.
+!
+AllShare*pf23():  PF23()
+AllShare*DEFpf23():  Utför funktionen som definierats för F23-tangenten.
+!
+AllShare*pf24():  PF24()
+AllShare*DEFpf24():  Utför funktionen som definierats för F24-tangenten.
+!
+AllShare*clear():  Clear()
+AllShare*DEFclear():  Skickar rensa AID-koden till värdsystemet.
+!
+AllShare*enter():  Enter()
+AllShare*DEFenter():  Utför Enter-funktionen för att ange indata.
+!
+AllShare*pa1():  PA1()
+AllShare*DEFpa1():  Skicka PA1 AID-koden till värdsystemet.
+!
+AllShare*pa2():  PA2()
+AllShare*DEFpa2():  Skicka PA2 AID-koden till värdsystemet.
+!
+AllShare*pa3():  PA3()
+AllShare*DEFpa3():  Skicka PA3 AID-koden till värdsystemet.
+!
+AllShare*sysreq():  SystemRequest()
+AllShare*DEFsysreq():  Skickar AID-koden System Request till värdsystemet.
+!
+AllShare*reset():  Reset()
+AllShare*DEFreset():  Återställer ett fel.
+!
+AllShare*hex-entry():  HexMode()
+AllShare*DEFhex-entry():  Ställer in läget för nästa två tangenttryckningar för att skapa ett EBCDIC-tecken. Tangenttryckningarna måste vara 0 till 9 eller a till f.
+!
+AllShare*hex():  Hex()
+AllShare*DEFhex():  Kräver ett två tecken långt flyttalsvärde som parameter (mellan parenteserna). De två tecken långa värdet (00 till ff) är en ASCII-teckentabell 819-tecken.
+!
+AllShare*cursor-select():  CursorSelect()
+AllShare*DEFcursor-select():  Väljer det fält där markören finns.
+!
+AllShare*attention():  Attention()
+AllShare*DEFattention():  Skickar Attention AID-koden till värdsystemet.
+!
+AllShare*print():  SystemPrint()
+AllShare*DEFprint():  Skickar Print AID-koden till värdsystemet.
+!
+AllShare*scroll_image_up():	ScrollImageUp()
+AllShare*DEFscroll_image_up():  Bläddrar uppåt i bilden som visas.
+!
+AllShare*scroll_image_down():	ScrollImageDown()
+AllShare*DEFscroll_image_down():  Bläddrar nedåt i bilden som visas.
+!
+AllShare*scroll_image_right():	ScrollImageRight()
+AllShare*DEFscroll_image_right():  Bläddrar åt höger i bilden som visas.
+!
+AllShare*scroll_image_left():	ScrollImageLeft()
+AllShare*DEFscroll_image_left():  Bläddrar åt vänster i bilden som visas.
+!
+AllShare*help():  SystemHelp()
+AllShare*DEFhelp():  Skickar AID-hjälpkoden till värdsystemet.
+!
+AllShare*rolldown():  PageUp()
+AllShare*DEFrolldown():  Bläddrar en skärmbild uppåt.
+!
+AllShare*rollup():  PageDown()
+AllShare*DEFrollup():  Bläddrar en skärmbild nedåt.
+!
+AllShare*fieldexit():  FieldExit()
+AllShare*DEFfieldexit():  Flyttar till början av nästa fält på skärmen.
+!
+AllShare*fieldplus():  FieldPlus()
+AllShare*DEFfieldplus():  Flyttar till början av nästa fält på skärmen.
+!
+AllShare*fieldminus():  FieldMinus()
+AllShare*DEFfieldminus():  Gör värdet i fältet negativt och fortsätter till nästa fält.
+!
+AllShare*testreq():  TestRequest()
+AllShare*DEFtestreq():  Skickar AID-koden Test Request till värdsystemet.
+!
+! Note: Office actions are used within the AS/400 OfficeVision editor.
+AllShare*tabfunction():  OfficeTabFunction()
+AllShare*DEFtabfunction():  Infogar ett tabbtecken vid markörpositionen i OV/400-redigeraren.
+!
+AllShare*textcarrierreturn():  OfficeCarrierReturn()
+AllShare*DEFtextcarrierreturn():  Infogar en radbrytning vid markörens aktuella position i OV/400-redigeraren.
+!
+AllShare*textrqtabfunction():  OfficeRequiredTabFunction()
+AllShare*DEFtextrqtabfunction():  Infogar en fast tabb vid markörens aktuella position i OV/400-redigeraren. Fasta tabbar definierar tillfälliga indrag som gäller tills ett stycke slutar (fast radbrytning).
+!
+AllShare*textunderscore():  OfficeStartUnderline()
+AllShare*DEFtextunderscore():  Startar understrykning vid markörens aktuella position i OV/400-redigeraren.
+!
+AllShare*textintensify():  OfficeStartBold()
+AllShare*DEFtextintensify():  Startar framhävd text vid markörens aktuella position i OV/400-redigeraren.
+!
+AllShare*textendattribute():  OfficeEndUnderlineOrBold()
+AllShare*DEFtextendattribute():  Avslutar du den aktiva understrykningen eller framhävningen i OV/400-redigeraren.
+!
+AllShare*textsymbolscmdprompt():  OfficeInsertSpecialCharacters()
+AllShare*DEFtextsymbolscmdprompt():  Visar en prompt i OV/400-redigeraren där tecken kan skrivas in som inte är tillgängliga från tangentbordet.
+!
+AllShare*textrqspace():  OfficeRequiredSpace()
+AllShare*DEFtextrqspace():  Infogar ett fast mellanslag vid markörens aktuella position i OV/400-redigeraren. Ett fast mellanslag visas som ett blankstegstecken. De två orden kommer alltid att stå på samma rad.
+!
+AllShare*texttopofpage():  OfficeTopOfPage()
+AllShare*DEFtexttopofpage():  Flyttar markören (och eventuellt också skärmbilden) längst upp på sidan som visas i OV/400-redigeraren.
+!
+AllShare*textbottomofpage():  OfficeBottomOfPage()
+AllShare*DEFtextbottomofpage():  Flyttar markören (och eventuellt också skärmbilden) längst ned på sidan som visas i OV/400-redigeraren.
+!
+AllShare*textbeginofline():  OfficeBeginningOfLine()
+AllShare*DEFtextbeginofline():  Flyttar markören till början av aktuell textrad i OV/400-redigeraren.
+!
+AllShare*textpageend():  OfficeInsertPageEnd()
+AllShare*DEFtextpageend():  Infogar ett sidslutstecken i OV/400-redigeraren, vilket startar en ny textsida.
+!
+AllShare*textstopcodefunction():  OfficeStopCodeInsert()
+AllShare*DEFtextstopcodefunction():  Visar en prompt i OV/400-redigeraren där en ny stoppkod kan definieras vid markörens aktuella position.
+!
+AllShare*textstopcodeadvance():  OfficeStopCodeAdvance()
+AllShare*DEFtextstopcodeadvance():  Flyttar markören till nästa stoppkod i dokumentet i OV/400-redigeraren.
+!
+AllShare*textaltd():  OfficeNextTextColumn()
+AllShare*DEFtextaltd():  Infogar kontrolltecknet som startar en ny textkolumn vid markörens position. Den här funktionen är endast aktiv när du redigerar flera textkolumner.
+!
+AllShare*textcent():  OfficeCenter()
+AllShare*DEFtextcent():  Centrerar textraden där markören är placerad i OV/400-redigeraren.
+!
+AllShare*textwordunderscore():  OfficeWordUnderscore()
+AllShare*DEFtextwordunderscore():  Infogar ett kontrolltecken för ordunderstrykning vid markörens aktuella position. Markören bör vara vid slutet av texten som ska understrykas, eftersom understrykningen sträcker sig från det aktuella ordets början till markörens position.
+!
+AllShare*texthalfindexup():  OfficeHalfIndexUp()
+AllShare*DEFtexthalfindexup():  Infogar ett kontrolltecken för halvt index upp (superscript) vid markörens aktuella position i OV/400-redigeraren. Ändringen gäller tills nästa nästa kontrolltecken för halvt index ned.
+!
+AllShare*texthalfindexdown():  OfficeHalfIndexDown()
+AllShare*DEFtexthalfindexdown():  Infogar ett kontrolltecken för halvt index ned (subscript) vid markörens aktuella position. Ändringen gäller tills nästa kontrolltecken för halvt index upp .
+!
+AllShare*displaytextsymb():  OfficeDisplaySymbols()
+AllShare*DEFdisplaytextsymb():  Visar kontrolltecknen som normalt inte är synliga i OV/400-redigeraren. Kontrolltecken är bl.a. tabb, fast tabb, radbrytning, fast radbrytning, fast mellanslag och sidslutstecken.
+!
+AllShare*kanji():  InsertSOandSI()
+AllShare*DEFkanji():  Infogar ett DBCS-tecknen SO (shift out) och SI (shift in) (används i japanska, koreanska och kinesiska).
+!
+AllShare*reverse():  ReverseCursor()
+AllShare*DEFreverse():  Vänder på markörriktningen i ett fält och väljer det motsatta språklagret för tangenttryckningar (används i arabiska och hebreiska).
+!
+AllShare*close():  CloseData()
+AllShare*DEFclose():  Stänger data i ett fält genom att ta bort inbäddade mellanslag och justerar data mot fältets logiska startpunkt (används i arabiska och hebreiska språk).
+!
+AllShare*base():  BaseShape()
+AllShare*DEFbase():  Aktiverar/avaktiverar arabisk teckenform (används i arabiska).
+!
+AllShare*charadvance():  CharacterAdvance()
+AllShare*DEFcharadvance():  Flyttar markören till den nästa inmatningspositionen på skärmen.
+!
+AllShare*displaySOSI():  DisplaySOandSI()
+AllShare*DEFdisplaySOSI():  Visar alla SO- och SI-tecken på skärmen (används i japanska, koreanska och kinesiska).
+!
+AllShare*reverse-scn():  ReverseScreen()
+AllShare*DEFreverse-scn():  Kastar om skärmvisningen (används för arabiska och hebreiska).
+!
+AllShare*EBChex():  Hexadecimal_EBCDIC()
+AllShare*DEFEBChex():  Aktiverar användning av EBCDIC-kodpunkter för datainmatning (för japanska, koreanska och kinesiska).
+!
+AllShare*AltView():  AlternateView()
+AllShare*DEFAltView():  Aktiverar visning av japansk data i en alternativ teckentabell.
+!
+Keyxxx52*noop():  NoAction()
+AllShare*DEFnoop():  Den här funktionen gör ingenting och används till att visa en tom funktion.
+!
+! There are no parentheses after Undefined, making this action different than other actions.
+Keyxxx52*undefined():  Odefinierad
+!
+AllShare*cursor-move():  MoveCursor()
+AllShare*DEFcursor-move():  Flyttar markören till en angiven position på skärmen.
+!
+AllShare*forward-word():  NextWord()
+AllShare*DEFforward-word():  Flyttar markören till början av nästa ord.
+!
+AllShare*backward-word():  PreviousWord()
+AllShare*DEFbackward-word():  Flyttar markören till början av föregående ord.
+!
+AllShare*spbackspace():  AlternateBackspace()
+AllShare*DEFspbackspace():  Utför en liknande funktion som BackSpace(). Tecknen till höger om markören flyttas endast om insättningsläge är valt.
+!
+AllShare*kill-word():  DeleteRemainderofWord()
+AllShare*DEFkill-word():  Tar bort tecknen från markörens position till slutet av ordet.
+!
+AllShare*backward-kill-word():  DeletePreviousWord()
+AllShare*DEFbackward-kill-word():  Tar bort föregående ord.
+!
+AllShare*cent():  Cent()
+AllShare*DEFcent():  Visar valutatecknet för cent vid markörens position.
+!
+AllShare*unlock():  UnlockKeyboard()
+AllShare*DEFunlock():  Låser upp tangentbordet så att indata kan skrivas in.
+!
+AllShare*selpen-attn():  SelectorPenAttention()
+AllShare*DEFselpen-attn():  Skickar AID-koden SelectorPenAttention till värdsystemet.
+!
+AllShare*select-field():  PenSelectField()
+AllShare*DEFselect-field():  Väljer ett fält som kan väljas.
+!
+AllShare*xh-attn():  AttentionAlternate()
+AllShare*DEFxh-attn():  Skickar AID-koden Alternate Attention till värdsystemet.
+!
+Keyxxx52*insert-selection:  Paste()
+Keyxxx52*DEFinsert-selection:  Klistrar in urklippets innehåll vid markörens position.
+!
+Keyxxx52*jump():  Jump()
+AllShare*DEFjump():  Hoppar till nästa session i sessionslistan. Om session 1 är den aktiva sessionen så blir session 2 den nästa aktiva sessionen.
+!
+Keyxxx52*jump-to-session():  JumpToSession()
+AllShare*DEFjump-to-session():  Hoppar till sessionen som angavs som parameter (mellan parenteserna). Om värdet 2 är givet som ett argument så kommer den andra sessionen att bli den aktiva sessionen.
+!
+Keyxxx52*delay():  Delay()
+AllShare*DEFdelay(): Lägger till en paus mellan funktioner när flera funktioner definieras för en tangentsekvens. Parametern (mellan parenteserna) är ett värde för fördröjningen uttryckt i tiondels sekunder (5 tiondelar är standardvärdet).
+!
+Keyxxx52*menu-bar-focus():  MenuBarFocus()
+AllShare*DEFmenu-bar-focus():  Ger tillgång till menyraden utan att musen används.
+!
+Keyxxx52*wider-font(): WiderFont()
+Keyxxx52*DEFwider-font(): Gör det aktuella teckensnittet bredare.
+!
+Keyxxx52*narrower-font(): ThinnerFont()
+Keyxxx52*DEFnarrower-font(): Gör det aktuella teckensnittet smalare.
+!
+Keyxxx52*taller-font(): TallerFont()
+Keyxxx52*DEFtaller-font(): Gör det aktuella teckensnittet längre.
+!
+Keyxxx52*shorter-font(): ShorterFont()
+Keyxxx52*DEFshorter-font(): Gör det aktuella teckensnittet kortare.
+!	
+! The following three key sequences should be translated; they may be used in the future for keyboard actions that we currently do not know about.
+Keyxxx52*key-seq1():  Tangentsekvens1()
+Keyxxx52*key-seq2():  Tangentsekvens2()
+Keyxxx52*key-seq3():  Tangentsekvens3()
+!
+! General dead key (the first key of a key sequence to create a dead key character, for example tilda in many languages) that is not remappable because dead keys are processed by the Network Station kernel.
+! There are no parentheses at the end of the following line.
+Keyxxx52*unmappable():  Dödtangent
+!
+AllShare*inserteuro():  Euro()
+AllShare*DEFinserteuro():  Infogar ett eurotecken vid markörens position.
+!
+! Action List Translations for NSTerm (VTxxx) 
+!
+Keymap52*vt-backspace(): VtBackspace()
+AllShare*DEFvt-backspace():  Flyttar markören en markörposition bakåt och tar bort tecknet som står där.
+!
+Keymap52*enterkey(): EnterKey()
+Keymap52*DEFenterkey():  Skickar ett radbrytningstecken till värden.
+!
+Keymap52*local-print-buffer(): LocalPrintBuffer()
+Keymap52*DEFlocal-print-buffer():  Visar utskriftsfönstret där utskrift av aktuellt innehåll i bläddringsbufferten kan startas.
+!
+Keymap52*local-print-screen(): LocalPrintScreen()
+Keymap52*DEFlocal-print-screen():  Visar ett fönster där utskrift av aktuell skärmbild kan startas.
+!
+Keymap52*cut-clipboard(): CutClipboard()
+Keymap52*DEFcut-clipboard():  Kopierar det markerade området av skärmen till urklipp och tar bort området från skärmen.
+!
+Keymap52*copy-clipboard(): CopyClipboard()
+Keymap52*DEFcopy-clipboard():  Kopierar det markerade området av skärmen till urklipp.
+!
+Keymap52*paste-clipboard(): PasteClipboard()
+Keymap52*DEFpaste-clipboard():  Kopierar data som lagrats i urklippsbufferten och klistrar in den vid markörens position på skärmen.
+!
+Keymap52*beginning-of-buffer(): BeginningOfBuffer()
+Keymap52*DEFbeginning-of-buffer(): Flyttar skärmbilden till början av bläddringsbufferten.
+!
+Keymap52*end-of-buffer(): EndOfBuffer()
+Keymap52*DEFend-of-buffer():  Bläddrar skärmbilden så att slutet av innehållet i aktuell buffert visas.
+!
+Keymap52*hard-reset(): HardReset()
+Keymap52*DEFhard-reset():  Återställer terminalen till standardläget, tar bort allt innehåll från skärmen och rensar eventuella markeringar.
+!
+Keymap52*soft-reset(): SoftReset()
+Keymap52*DEFsoft-reset():  Återställer terminalen till standardläget.
+!
+Keymap52*vt-break(): VtBreak()
+Keymap52*DEFvt-break(): Skickar en RS-232-brytsignal till värden.
+!
+Keymap52*vt-find(): VtFind()
+Keymap52*DEFvt-find(): Utför funktionen Find, om VT200-läge eller högre skickar DEC-kod (CSI 1~) till värden.
+!
+Keymap52*vt-ins(): VtInsert()
+Keymap52*DEFvt-ins(): Utför funktionen Insert Here, om VT200-läge eller högre skickar DEC-kod (CSI 2~) till värden.
+!
+Keymap52*vt-delete(): VtRemove()
+Keymap52*DEFvt-delete(): Utför funktionen Remove, om VT200-läge eller högre skickar DEC-kod (CSI 3~) till värden.
+!
+Keymap52*vt-select(): VtSelect()
+Keymap52*DEFvt-select(): Utför funktionen Select, om VT200-läge eller högre skickar DEC-kod (CSI 4~) till värden.      '
+!
+Keymap52*vt-prev-screen(): VtPreviousScreen()
+Keymap52*DEFvt-prev-screen(): Utför funktionen Previous Screen, om VT200-läge eller högre skickar DEC-kod (CSI 5~) till värden.
+!
+Keymap52*vt-next-screen(): VtNextScreen()
+Keymap52*DEFvt-next-screen(): Utför funktionen Next Screen, om VT200-läge eller högre skickar DEC-kod (CSI 6~) till värden.
+!
+Keymap52*vt-prev-page(): VtPreviousPage()
+Keymap52*DEFvt-prev-page(): Bläddrar 1 sida uppåt.
+!
+Keymap52*vt-next-page(): VtNextPage()
+Keymap52*DEFvt-next-page(): Bläddrar en sida nedåt.
+!
+Keymap52*vt-do(): VtDo()
+Keymap52*DEFvt-do(): Utför funktionen Do, om VT200-läge eller högre skickar DEC-kod (CSI 29~) till värden.
+!
+Keymap52*vt-help(): VtHelp()
+Keymap52*DEFvt-help(): Utför funktionen Help, om VT200-läge eller högre skickar DEC-kod (CSI 28~) till värden.      '
+!
+Keymap52*vt-next-line(): VtNextLine()
+Keymap52*DEFvt-next-line():  Bläddrar en rad nedåt.
+!
+Keymap52*vt-prev-line(): VtPreviousLine()
+Keymap52*DEFvt-prev-line(): Bläddrar en rad uppåt.
+!
+Keymap52*tty-interrupt(): TtyInterrupt()
+Keymap52*DEFtty-interrupt(): Skickar ett TTY Interrupt-tecken (inter = Ctrl-C) till värden.
+!
+Keymap52*tty-suspend(): TtySuspend()
+Keymap52*DEFtty-suspend(): Skickar ett TTY Suspend-tecken (susp = Ctrl-Z) till värden.
+!
+Keymap52*tty-start(): TtyStart()
+Keymap52*DEFtty-start(): Skickar ett TTY Start-tecken (start = Ctrl-Q) till värden.
+!
+Keymap52*tty-stop(): TtyStop()
+Keymap52*DEFtty-stop(): Skickar ett TTY stopp-tecken (stop = Ctrl-S) till värden.
+!
+Keymap52*delete-word(): TtyEraseWord()
+Keymap52*DEFdelete-word(): Skickar ett TTY ordraderingstecken (werase = Ctrl-W) till värden.
+!
+Keymap52*line-feed(): TtyLineFeed()
+Keymap52*DEFline-feed(): Skickar ett radmatningstecken (Ctrl-J) till värden.
+!
+Keymap52*cr-lf(): TtyCR_LF()
+Keymap52*DEFcr-lf(): Skickar både radbrytnings- och radmatningstecken (Ctrl-M Ctrl-J) till värden.
+!
+Keymap52*escape(): EscapeCharacter()
+Keymap52*DEFescape(): Skickar ett Escape-tecken (Ctrl-[) till värden.
+!
+Keymap52*udk-f1(): UDK_F1()
+Keymap52*DEFudk-f1():  Utför den DEC-användardefinierade tangentfunktionen för F1-tangenten.
+!
+Keymap52*udk-f2(): UDK_F2()
+Keymap52*DEFudk-f2():  Utför den DEC-användardefinierade tangentfunktionen för F2-tangenten.
+!
+Keymap52*udk-f3(): UDK_F3()
+Keymap52*DEFudk-f3():  Utför den DEC-användardefinierade tangentfunktionen för F3-tangenten.
+!
+Keymap52*udk-f4(): UDK_F4()
+Keymap52*DEFudk-f4():  Utför den DEC-användardefinierade tangentfunktionen för F4-tangenten.
+!
+Keymap52*udk-f5(): UDK_F5()
+Keymap52*DEFudk-f5():  Utför den DEC-användardefinierade tangentfunktionen för F5-tangenten.
+!
+Keymap52*udk-f6(): UDK_F6()
+Keymap52*DEFudk-f6():  Utför den DEC-användardefinierade tangentfunktionen för F6-tangenten.
+!
+Keymap52*udk-f7(): UDK_F7()
+Keymap52*DEFudk-f7():  Utför den DEC-användardefinierade tangentfunktionen för F7-tangenten.
+!
+Keymap52*udk-f8(): UDK_F8()
+Keymap52*DEFudk-f8():  Utför den DEC-användardefinierade tangentfunktionen för F8-tangenten.
+!
+Keymap52*udk-f9(): UDK_F9()
+Keymap52*DEFudk-f9():  Utför den DEC-användardefinierade tangentfunktionen för F9-tangenten.
+!
+Keymap52*udk-f10(): UDK_F10()
+Keymap52*DEFudk-f10():  Utför den DEC-användardefinierade tangentfunktionen för F10-tangenten.
+!
+Keymap52*udk-f11(): UDK_F11()
+Keymap52*DEFudk-f11():  Utför den DEC-användardefinierade tangentfunktionen för F11-tangenten.
+!
+Keymap52*udk-f12(): UDK_F12()
+Keymap52*DEFudk-f12():  Utför den DEC-användardefinierade tangentfunktionen för F12-tangenten.
+!
+Keymap52*udk-f13(): UDK_F13()
+Keymap52*DEFudk-f13():  Utför den DEC-användardefinierade tangentfunktionen för F13-tangenten.
+!
+Keymap52*udk-f14(): UDK_F14()
+Keymap52*DEFudk-f14():  Utför den DEC-användardefinierade tangentfunktionen för F14-tangenten.
+!
+Keymap52*udk-f15(): UDK_F15()
+Keymap52*DEFudk-f15():  Utför den DEC-användardefinierade tangentfunktionen för F15-tangenten.
+!
+Keymap52*udk-f16(): UDK_F16()
+Keymap52*DEFudk-f16():  Utför den DEC-användardefinierade tangentfunktionen för F16-tangenten.
+!
+Keymap52*udk-f17(): UDK_F17()
+Keymap52*DEFudk-f17():  Utför den DEC-användardefinierade tangentfunktionen för F17-tangenten.
+!
+Keymap52*udk-f18(): UDK_F18()
+Keymap52*DEFudk-f18():  Utför den DEC-användardefinierade tangentfunktionen för F18-tangenten.
+!
+Keymap52*udk-f19(): UDK_F19()
+Keymap52*DEFudk-f19():  Utför den DEC-användardefinierade tangentfunktionen för F19-tangenten.
+!
+Keymap52*udk-f20(): UDK_F20()
+Keymap52*DEFudk-f20():  Utför den DEC-användardefinierade tangentfunktionen för F20-tangenten.
+!
+Keymap52*udk-f21(): UDK_F21()
+Keymap52*DEFudk-f21():  Utför den DEC-användardefinierade tangentfunktionen för F21-tangenten.
+!
+Keymap52*udk-f22(): UDK_F22()
+Keymap52*DEFudk-f22():  Utför den DEC-användardefinierade tangentfunktionen för F22-tangenten.
+!
+Keymap52*udk-f23(): UDK_F23()
+Keymap52*DEFudk-f23():  Utför den DEC-användardefinierade tangentfunktionen för F23-tangenten.
+!
+Keymap52*udk-f24(): UDK_F24()
+Keymap52*DEFudk-f24():  Utför den DEC-användardefinierade tangentfunktionen för F24-tangenten.
+!
+Keymap52*udk-f25(): UDK_F25()
+Keymap52*DEFudk-f25():  Utför den DEC-användardefinierade tangentfunktionen för F25-tangenten.
+!
+Keymap52*udk-f26(): UDK_F26()
+Keymap52*DEFudk-f26():  Utför den DEC-användardefinierade tangentfunktionen för F26-tangenten.
+!
+Keymap52*udk-f27(): UDK_F27()
+Keymap52*DEFudk-f27():  Utför den DEC-användardefinierade tangentfunktionen för F27-tangenten.
+!
+Keymap52*udk-f28(): UDK_F28()
+Keymap52*DEFudk-f28():  Utför den DEC-användardefinierade tangentfunktionen för F28-tangenten.
+!
+Keymap52*udk-f29(): UDK_F29()
+Keymap52*DEFudk-f29():  Utför den DEC-användardefinierade tangentfunktionen för F29-tangenten.
+!
+Keymap52*udk-f30(): UDK_F30()
+Keymap52*DEFudk-f30():  Utför den DEC-användardefinierade tangentfunktionen för F30-tangenten.
+!
+Keymap52*udk-f31(): UDK_F31()
+Keymap52*DEFudk-f31():  Utför den DEC-användardefinierade tangentfunktionen för F31-tangenten.
+!
+Keymap52*udk-f32(): UDK_F32()
+Keymap52*DEFudk-f32():  Utför den DEC-användardefinierade tangentfunktionen för F32-tangenten.
+!
+Keymap52*udk-f33(): UDK_F33()
+Keymap52*DEFudk-f33():  Utför den DEC-användardefinierade tangentfunktionen för F33-tangenten.
+!
+Keymap52*udk-f34(): UDK_F34()
+Keymap52*DEFudk-f34():  Utför den DEC-användardefinierade tangentfunktionen för F34-tangenten.
+!
+Keymap52*udk-f35(): UDK_F35()
+Keymap52*DEFudk-f35():  Utför den DEC-användardefinierade tangentfunktionen för F35-tangenten.
+!
+Keymap52*x-f1(): F1()
+Keymap52*DEFx-f1():  Utför den definierade funktionen för F1-tangenten.
+!
+Keymap52*x-f2(): F2()
+Keymap52*DEFx-f2():  Utför den definierade funktionen för F2-tangenten.
+!
+Keymap52*x-f3(): F3()
+Keymap52*DEFx-f3():  Utför den definierade funktionen för F3-tangenten.
+!
+Keymap52*x-f4(): F4()
+Keymap52*DEFx-f4():  Utför den definierade funktionen för F4-tangenten.
+!
+Keymap52*x-f5(): F5()
+Keymap52*DEFx-f5():  Utför den definierade funktionen för F5-tangenten.
+!
+Keymap52*x-f6(): F6()
+Keymap52*DEFx-f6():  Utför den definierade funktionen för F6-tangenten.
+!
+Keymap52*x-f7(): F7()
+Keymap52*DEFx-f7():  Utför den definierade funktionen för F7-tangenten.
+!
+Keymap52*x-f8(): F8()
+Keymap52*DEFx-f8():  Utför den definierade funktionen för F8-tangenten.
+!
+Keymap52*x-f9(): F9()
+Keymap52*DEFx-f9():  Utför den definierade funktionen för F9-tangenten.
+!
+Keymap52*x-f10(): F10()
+Keymap52*DEFx-f10():  Utför den definierade funktionen för F10-tangenten.
+!
+Keymap52*x-f11(): F11()
+Keymap52*DEFx-f11():  Utför den definierade funktionen för F11-tangenten.
+!
+Keymap52*x-f12(): F12()
+Keymap52*DEFx-f12():  Utför den definierade funktionen för F12-tangenten.
+!
+Keymap52*x-f13(): F13()
+Keymap52*DEFx-f13():  Utför den definierade funktionen för F13-tangenten.
+!
+Keymap52*x-f14(): F14()
+Keymap52*DEFx-f14():  Utför den definierade funktionen för F14-tangenten.
+!
+Keymap52*x-f15(): F15()
+Keymap52*DEFx-f15():  Utför den definierade funktionen för F15-tangenten.
+!
+Keymap52*x-f16(): F16()
+Keymap52*DEFx-f16():  Utför den definierade funktionen för F16-tangenten.
+!
+Keymap52*x-f17(): F17()
+Keymap52*DEFx-f17():  Utför den definierade funktionen för F17-tangenten.
+!
+Keymap52*x-f18(): F18()
+Keymap52*DEFx-f18():  Utför den definierade funktionen för F18-tangenten.
+!
+Keymap52*x-f19(): F19()
+Keymap52*DEFx-f19():  Utför den definierade funktionen för F19-tangenten.
+!
+Keymap52*x-f20(): F20()
+Keymap52*DEFx-f20():  Utför den definierade funktionen för F20-tangenten.
+!
+Keymap52*x-f21(): F21()
+Keymap52*DEFx-f21():  Utför den definierade funktionen för F21-tangenten.
+!
+Keymap52*x-f22(): F22()
+Keymap52*DEFx-f22():  Utför den definierade funktionen för F22-tangenten.
+!
+Keymap52*x-f23(): F23()
+Keymap52*DEFx-f23():  Utför den definierade funktionen för F23-tangenten.
+!
+Keymap52*x-f24(): F24()
+Keymap52*DEFx-f24():  Utför den definierade funktionen för F24-tangenten.
+!
+Keymap52*x-f25(): F25()
+Keymap52*DEFx-f25():  Utför den definierade funktionen för F25-tangenten.
+!
+Keymap52*x-f26(): F26()
+Keymap52*DEFx-f26():  Utför den definierade funktionen för F26-tangenten.
+!
+Keymap52*x-f27(): F27()
+Keymap52*DEFx-f27():  Utför den definierade funktionen för F27-tangenten.
+!
+Keymap52*x-f28(): F28()
+Keymap52*DEFx-f28():  Utför den definierade funktionen för F28-tangenten.
+!
+Keymap52*x-f29(): F29()
+Keymap52*DEFx-f29():  Utför den definierade funktionen för F29-tangenten.
+!
+Keymap52*x-f30(): F30()
+Keymap52*DEFx-f30():  Utför den definierade funktionen för F30-tangenten.
+!
+Keymap52*x-f31(): F31()
+Keymap52*DEFx-f31():  Utför den definierade funktionen för F31-tangenten.
+!
+Keymap52*x-f32(): F32()
+Keymap52*DEFx-f32():  Utför den definierade funktionen för F32-tangenten.
+!
+Keymap52*x-f33(): F33()
+Keymap52*DEFx-f33():  Utför den definierade funktionen för F33-tangenten.
+!
+Keymap52*x-f34(): F34()
+Keymap52*DEFx-f34():  Utför den definierade funktionen för F34-tangenten.
+!
+Keymap52*x-f35(): F35()
+Keymap52*DEFx-f35():  Utför den definierade funktionen för F35-tangenten.
+!
+Keymap52*vt-f1(): VtPF1()
+Keymap52*DEFvt-f1():  Skickar teckenkoden (SS3 P) till programmet i alla lägen.
+!
+Keymap52*vt-f2(): VtPF2()
+Keymap52*DEFvt-f2(): Skickar teckenkoden (SS3 Q) till programmet i alla lägen.
+!
+Keymap52*vt-f3(): VtPF3()
+Keymap52*DEFvt-f3(): Skickar teckenkoden (SS3 R) till programmet i alla lägen.
+!
+Keymap52*vt-f4(): VtPF4()
+Keymap52*DEFvt-f4(): Skickar teckenkoden (SS3 S) till programmet i alla lägen.
+!
+Keymap52*x-print(): X_Print()
+Keymap52*DEFx-print(): Skickar ANSI-escape-sekvensen (Ctrl-[[209q) till värden.
+!
+Keymap52*x-scroll-lock(): X_ScrollLock()
+Keymap52*DEFx-scroll-lock(): Skickar ANSI-escape-sekvensen (Ctrl-[[209q) till värden.
+!
+Keymap52*x-pause(): X_Pause()
+Keymap52*DEFx-pause(): Skickar ANSI-escape-sekvensen för paustangenten (Ctrl-[[217q) till värden.
+!
+Keymap52*x-ins(): X_Insert()
+Keymap52*DEFx-ins(): Skickar ANSI-escape-sekvensen (Ctrl-[[139q) till värden.
+!
+Keymap52*x-delete(): X_Delete()
+Keymap52*DEFx-delete(): Skickar ANSI-escape-sekvensen (Ctrl-[[P) till värden.
+!
+Keymap52*x-home(): X_Home()
+Keymap52*DEFx-home(): Skickar ANSI-escape-sekvensen (Ctrl-[[H) till värden.
+!
+Keymap52*x-end(): X_End()
+Keymap52*DEFx-end(): Skickar ANSI-escape-sekvensen (Ctrl-[[146q) till värden.
+!
+Keymap52*x-page-up(): X_PageUp()
+Keymap52*DEFx-page-up(): Skickar ANSI-escape-sekvensen (Ctrl-[[150q) till värden.
+!
+Keymap52*x-page-down(): X_PageDown()
+Keymap52*DEFx-page-down(): Skickar ANSI-escape-sekvensen (Ctrl-[[154q) till värden.
+!
+Keymap52*kp-numlock(): KP_NumLock()
+Keymap52*DEFkp-numlock():  Aktiverar sifferlåset (NumLock).
+!
+Keymap52*kp-divide(): KP_Divide()
+Keymap52*DEFkp-divide():  Utför divideringsfunktionen som definierats för funktionstangentbordet.
+!
+Keymap52*kp-multiply(): KP_Multiply()
+Keymap52*DEFkp-multiply():  Utför multipliceringsfunktionen som definierats för funktionstangentbordet.
+!
+Keymap52*kp-subtract(): KP_Minus()
+Keymap52*DEFkp-subtract():  I numeriskt läge skickas minustecknet (-) till programmet. I programläge skickas teckenkoden SS3 l (ESC ? l) till programmet.
+!
+Keymap52*kp-7(): KP_7()
+Keymap52*DEFkp-7():  I numeriskt läge skickas siffran 7 till programmet. I programläge, skickas teckenkoden SS3 w (ESC ? w) till programmet.
+!
+Keymap52*kp-8(): KP_8()
+Keymap52*DEFkp-8():  I numeriskt läge skickas siffran 8 till programmet. I programläge, skickas teckenkoden SS3 x (ESC ? x) till programmet.
+!
+Keymap52*kp-9(): KP_9()
+Keymap52*DEFkp-9():  I numeriskt läge skickas siffran 9 till programmet. I programläge, skickas teckenkoden SS3 y (ESC ? y) till programmet.
+!
+Keymap52*kp-4(): KP_4()
+Keymap52*DEFkp-4():  I numeriskt läge skickas siffran 4 till programmet. I programläge, skickas teckenkoden SS3 t (ESC ? t) till programmet.
+!
+Keymap52*kp-5(): KP_5()
+Keymap52*DEFkp-5():  I numeriskt läge skickas siffran 5 till programmet. I programläge, skickas teckenkoden SS3 u (ESC ?u) till programmet.
+!
+Keymap52*kp-6(): KP_6()
+Keymap52*DEFkp-6():  I numeriskt läge skickas siffran 6 till programmet. I programläge, skickas teckenkoden SS3 v (ESC ? v) till programmet.
+!
+Keymap52*kp-add(): KP_Plus()
+Keymap52*DEFkp-add():  Utför adderingsfunktionen som definierats för funktionstangentbordet.
+!  
+Keymap52*kp-1(): KP_1()
+Keymap52*DEFkp-1():  I numeriskt läge skickas siffran 1 till programmet. I programläge, skickas teckenkoden SS3 q (ESC ? q) till programmet.
+!
+Keymap52*kp-2(): KP_2()
+Keymap52*DEFkp-2():  I numeriskt läge skickas siffran 2 till programmet. I programläge, skickas teckenkoden SS3 r (ESC ? r) till programmet.
+!
+Keymap52*kp-3(): KP_3()
+Keymap52*DEFkp-3():  I numeriskt läge skickas siffran 3 till programmet. I programläge, skickas teckenkoden SS3 s (ESC ? s) till programmet.
+!
+Keymap52*kp-0(): KP_0()
+Keymap52*DEFkp-0():  I numeriskt läge skickas siffran 0 till programmet. I programläge, skickas teckenkoden SS3 p (ESC ? p) till programmet.
+!
+Keymap52*kp-decimal(): KP_Decimal()
+Keymap52*DEFkp-decimal():  I numeriskt läge skickas decimaltecknet (.)  till programmet. I programläge, skickas teckenkoden SS3 n (ESC ? n) till programmet.
+!
+Keymap52*kp-enter(): KP_Enter()
+Keymap52*DEFkp-enter():  I numeriskt läge skickas Enter-funktionen till programmet. I programläge, skickas teckenkoden SS3 M (ESC ? M) till programmet.
+!
+Keymap52*kp-space(): KP_Space()
+Keymap52*DEFkp-space():  Skickar blanktecknet till programmet.
+!
+Keymap52*kp-tab(): KP_Tab()
+Keymap52*DEFkp-tab():  Skickar tabbtecknet till programmet.
+!
+Keymap52*kp-equal(): KP_Equal()
+Keymap52*DEFkp-equal():  Skickar likhetstecknet (=) till programmet.
+!
+Keymap52*kp-separator(): KP_Separator()
+Keymap52*DEFkp-separator():  Skickar avgränsningstecknet till programmet.
+!
+Playedit*btn1-press():  MouseBtn1Press()
+Playedit*DEFbtn1-press():  Funktion som utförs när musknapp 1 trycks ned.
+!
+Playedit*btn1-release():  MouseBtn1Release()
+Playedit*DEFbtn1-release():  Funktion som utförs när musknapp 1 släpps upp.
+!
+Playedit*btn2-press():  MouseBtn2Press()
+Playedit*DEFbtn2-press():  Funktion som utförs när musknapp 2 trycks ned.
+!
+Playedit*btn2-release():  MouseBtn2Release()
+Playedit*DEFbtn2-release():  Funktion som utförs när musknapp 2 släpps upp.
+!
+Playedit*btn3-press():  MouseBtn3Press()
+Playedit*DEFbtn3-press():  Funktion som utförs när musknapp 3 trycks ned.
+!
+Playedit*btn3-release():  MouseBtn3Release()
+Playedit*DEFbtn3-release():  Funktion som utförs när musknapp 3 släpps upp.
+!
+Playedit*shift-btn1-press():  MouseShiftBtn1Press()
+Playedit*DEFshift-btn1-press():  Funktion som utförs vid följande tangentsekvens: musknapp 1 och skifttangenten trycks ned.
+!
+Playedit*shift-btn1-release():  MouseShiftBtn1Release()
+Playedit*DEFshift-btn1-release():  Funktion som utförs vid följande tangentsekvens: musknapp 1 släpps upp samtidigt som skifttangenten hålls nedtryckt.
+!
+Playedit*shift-btn2-press():  MouseShiftBtn2Press()
+Playedit*DEFshift-btn2-press():  Funktion som utförs vid följande tangentsekvens: musknapp 2 och skifttangenten trycks ned.
+!
+Playedit*shift-btn2-release():  MouseShiftBtn2Release()
+Playedit*DEFshift-btn2-release():  Funktion som utförs vid följande tangentsekvens: musknapp 2 släpps upp samtidigt som skifttangenten hålls nedtryckt.
+!
+Playedit*shift-btn3-press():  MouseShiftBtn3Press()
+Playedit*DEFshift-btn3-press():  Funktion som utförs vid följande tangentsekvens: musknapp 3 och skifttangenten trycks ned.
+!
+Playedit*shift-btn3-release():  MouseShiftBtn3Release()
+Playedit*DEFshift-btn3-release():  Funktion som utförs vid följande tangentsekvens: musknapp 3 släpps upp samtidigt som skifttangenten hålls nedtryckt.
+!
+Playedit*btn1-double-press():  MouseBtn1DoublePress()
+Playedit*DEFbtn1-double-press():  Funktion som utförs vid dubbelklickning på musknapp 1.
+!
+Playedit*btn1-triple-press():  MouseBtn1TriplePress()
+Playedit*DEFbtn1-triple-press():  Funktion som utförs vid trippelklickning på musknapp 1.
+!
+Playedit*btn2-double-press():  MouseBtn2DoublePress()
+Playedit*DEFbtn2-double-press():  Funktion som utförs vid dubbelklickning på musknapp 2.
+!
+Playedit*btn2-triple-press():  MouseBtn2TriplePress()
+Playedit*DEFbtn2-triple-press():  Funktion som utförs vid trippelklickning på musknapp 2.
+!
+Playedit*btn3-double-press():  MouseBtn3DoublePress()
+Playedit*DEFbtn3-double-press():  Funktion som utförs vid dubbelklickning på musknapp 3.
+!
+Playedit*btn3-triple-press():  MouseBtn3TriplePress()
+Playedit*DEFbtn3-triple-press():  Funktion som utförs vid trippelklickning på musknapp 3.
+!
+Playedit*shift-btn1-double-press():  MouseShiftBtn1DoublePress()
+Playedit*DEFshift-btn1-double-press():  Funktion som utförs vid följande tangentsekvens: dubbelklickning på musknapp 1 och Skift.
+!
+Playedit*shift-btn1-triple-press():  MouseShiftBtn1TriplePress()
+Playedit*DEFshift-btn1-triple-press():  Funktion som utförs för följande tangentsekvens: trippelklickning på musknapp 1 och Skift.
+!
+Playedit*shift-btn2-double-press():  MouseShiftBtn2DoublePress()
+Playedit*DEFshift-btn2-double-press():  Funktion som utförs för följande tangentsekvens: dubbelklickning på musknapp 2 och Skift.
+!
+Playedit*shift-btn2-triple-press():  MouseShiftBtn2TriplePress()
+Playedit*DEFshift-btn2-triple-press():  Funktion för följande tangentsekvens: trippelklickning på musknapp 2 och Skift.
+!
+Playedit*shift-btn3-double-press():  MouseShiftBtn3DoublePress()
+Playedit*DEFshift-btn3-double-press():  Funktion som utförs för följande tangentsekvens: dubbelklickning på musknapp 3 och Skift.
+!
+Playedit*shift-btn3-triple-press():  MouseShiftBtn3TriplePress()
+Playedit*DEFshift-btn3-triple-press():  Funktion för följande tangentsekvens: trippelklickning på musknapp 3 och Skift.
+!
+AllShare*paste():  Paste()
+AllShare*DEFpaste():  Klistrar in urklippets innehåll vid markörens position.
+!
+AllShare*copy():  Copy()
+AllShare*DEFcopy():  Kopierar markerat skärminnehåll till urklippet.
+!
+AllShare*cut():  Cut()
+AllShare*DEFcut():  Tar bort markerat skärminnehåll.
+!
+Playedit*userid():  USERID()
+Playedit*DEFuserid():  Skriver aktuell användares användar-ID. Den här funktionen används för automatisk påloggning till emuleringssessioner.
+!
+Playedit*password():  PASSWORD()
+Playedit*DEFpassword():  Skriver aktuell användares lösenord. Den här funktionen används för automatisk påloggning till emuleringssessioner.
+!
+AllShare*adjust-copy-left():  AdjustCopyAreaLeft()
+AllShare*DEFadjust-copy-left():  Startar ett kopieringsområde på skärmen (om inte ett sådant redan startats) och justerar kopieringsområdet ett tecken till vänster om aktuell position.
+!
+AllShare*adjust-copy-right():  AdjustCopyAreaRight()
+AllShare*DEFadjust-copy-right():  Startar ett kopieringsområde på skärmen (om inte ett sådant redan startats) och justerar kopieringsområdet ett tecken till höger om aktuell position.
+!
+AllShare*adjust-copy-up():  AdjustCopyAreaUp()
+AllShare*DEFadjust-copy-up():  Startar ett kopieringsområde på skärmen (om inte ett sådant redan startas) och justerar kopieringsområdet en rad uppåt från aktuell position.
+!
+AllShare*adjust-copy-down():  AdjustCopyAreaDown()
+AllShare*DEFadjust-copy-down():  Startar ett kopieringsområde på skärmen (om ett inte sådant redan startats) och justerar kopieringsområdet en rad nedåt från aktuell position.
+!
+AllShare*adjust-copy-anchor-left():  AdjustCopyAreaAnchorLeft()
+AllShare*DEFadjust-copy-anchor-left():  Startar ett kopieringsområde på skärmen (om ett sådant redan inte startats) och justerar kopieringsområdet ett tecken åt höger medan den vänstra sidan inte justeras.
+!
+AllShare*adjust-copy-anchor-right():  AdjustCopyAreaAnchorRight()
+AllShare*DEFadjust-copy-anchor-right():  Startar ett kopieringsområdet på skärmen (om inte ett sådant redan startats) och justerar kopieringsområdet ett tecken åt vänster medan den högra sidan inte justeras.
+!
+AllShare*adjust-copy-anchor-up():  AdjustCopyAreaAnchorUp()
+AllShare*DEFadjust-copy-anchor-up():  Startar ett kopieringsområde på skärmen (om ett sådant inte redan startats) och justerar kopieringsområdet en rad nedåt medan kopieringsområdets övre kant inte justeras
+!
+AllShare*adjust-copy-anchor-down():  AdjustCopyAreaAnchorDown()
+AllShare*DEFadjust-copy-anchor-down():  Startar ett kopieringsområdet på skärmen (om ett sådant inte redan startats) och justerar kopieringsområdet en rad uppåt medan kopieringsområdets nedre kant inte justeras.
+!
+AllShare*toggle-default-copy-type():  ToggleDefaultCopyType()
+AllShare*DEFtoggle-default-copy-type():  Ställer in kopieringen som en blockkopiering eller en radkopiering.
+!
+Playedit*hex-string():  HexString()
+Playedit*DEFhex-string():  Gör det möjligt att skriva in data i hexadecimalt läge.
+!
+Playedit*graphics-hex-string():  GraphicsHexString()
+Playedit*DEFgraphics-hex-string():  Gör det möjligt att skriva in bilddata i EBCDIC-hexadecimalt läge.
+!
+Playedit*BIDItogglescrrev():  BIDIToggleScreenReverse()
+Playedit*DEFBIDItogglescrrev():  Aktiverar eller avaktiverar skärmläge med omvänd riktning (för arabiska och hebreiska).
+!
+Playedit*BIDItogglefieldrev():  BIDIToggleFieldReverse()
+Playedit*DEFBIDItogglefieldrev():  Aktiverar eller avaktiverar omvänd fältriktning (för arabiska och hebreiska).
+!
+Playedit*BIDItoggleautorev():  BIDIToggleAutoReverse()
+Playedit*DEFBIDItoggleautorev():  Aktiverar eller avaktiverar automatisk ändring av fältriktning (för arabiska och hebreiska).
+!
+Playedit*BIDIpush():  BIDIPush()
+Playedit*DEFBIDIpush():  Aktiverar push-läge (för arabiska och hebreiska).
+!
+Playedit*BIDIendpush():  BIDIEndPush()
+Playedit*DEFBIDIendpush():  Avaktiverar push-läge (för arabiska och hebreiska).
+!
+Playedit*BIDItoggleautopush():  BIDIToggleAutoPush()
+Playedit*DEFBIDItoggleautopush():  Ställer in att emuleringsprogrammet automatiskt ska gå över till push-läge när språket växlar mellan BIDI och engelska (för arabiska och hebreiska).
+!
+Playedit*BIDIsetshape():  BIDISetShape()
+Playedit*DEFBIDIsetshape():  Ställer in teckenformsläge för arabiska.
+!
+Playedit*BIDIfieldshape():  BIDIFieldShape()
+Playedit*DEFBIDIfieldshape():  Formaterar fältdata för arabiska.
+!
+Playedit*BIDItogglenumswap():  BIDIToggleNumericSwapping()
+Playedit*DEFBIDItogglenumswap():  Aktiverar eller avaktiverar arabisk/hindi-växling av talsystem för det arabiska språket.		
+!
+! End action names
+!
+!
+Keyxxx52*ERROR:  OGILTIG FUNKTION
+!
+Keymap52*managing_server_text.value:  Tangentbordsfilen kan inte sparas. Uppdatera administrationsservern till senaste versionen av IBM Network Station Manager.
+!
+Keymap52*managingBtn.labelString:  OK
+!
+Keymap52*general_fatal_error.value:  Fel i tangentbordsanpassningen. Programmet kommer att avslutas.
+!
+Keymap52*genfatalBtn.labelString:  AVSLUTA
+!
+Keymap52*general_nonfatal_text.value:  Fel i tangentbordsanpassningen.
+!
+Keymap52*gennonfatBtn.labelString:  OK
+!
+!
+!************************************************************************
+!
+!
+!                        Keypad Customizer Resources
+!
+!
+!************************************************************************
+Keypad52*title:  Anpassa funktionstangentbord
+
+Keypad52*iname5250:  5250 - Funktionstangentbord
+
+Keypad52*iname3270:  3270 - Funktionstangentbord
+
+Keypad52*keypadTitle.dialogTitle:  Funktionstangentbord
+
+!following resource left blank on purpose, do not translate.
+AllShare*blankLabel.labelString:     
+
+! initial popup dialog
+Keypad52*initialpopupDialoglist.labelString:  Välj en fil för funktionstangentbord:
+
+Keypad52*initialpopupDialogaltlabel.labelString:  Det finns inga filer för funktionstangentbord.
+
+Keypad52*initialpopupDialogOKbtn.labelString:  OK
+
+Keypad52*initialpopupDialogcancelbtn.labelString:  Avbryt
+
+Keypad52*initialpopupDialognewbtn.labelString:  Nytt funktionstangentbord
+
+!*************************************
+!**  Keypad Customizer Main Window  **
+!*************************************
+
+! In general, the following buttons should not be made much longer during translation.
+! Buttons have one to four words.
+
+Keypad52*keyAction.labelString:  Knappfunktion->
+
+Keypad52*fileDeleteButton.labelString:  Rensa knappen
+
+Keypad52*selectplayfile.labelString:  Välj uppspelningsfil
+
+Keypad52*changeSize.labelString:  Ändra funktionstangentbord
+
+Keypad52*keypadfileDelete.labelString:  Ta bort funktionstangentbord
+
+Keypad52*transRxing:  Ta emot information om aktuell anpassning av funktionstangenter från emuleringssessionen.
+
+Keypad52*transRxd:  Information om anpassning av funktionstangenter har tagits emot från emuleringssessionen.
+
+Keypad52*currKeypadLabel.labelString:  Aktuellt funktionstangentbord:
+
+Keypad52*currKeyLabel.labelString:  Knapptext:
+
+Keypad52*currActLabel.labelString:  Knappfunktion:
+
+!******************
+!**  Resolution  **
+!******************
+Keypad52*poorResolutionMsgText.value:   Bildskärmens upplösning är lägre än 800x600. Programmet kan inte användas med bildskärmar som har lägre upplösning än 800x600.
+
+Keypad52*keypadFailureCancelBtn.labelString:  Avbryt
+
+!**************
+!**  Saving  **
+!**************
+Keypad52*saveDialog.dialogTitle:  Spara funktionstangenter
+
+Keypad52*saveBoxLabel*labelString:  Spara fil för funktionstangenter som:
+
+Keypad52*saveTran:  Funktionstangentbordet har sparats...
+
+Keypad52*fileWarningDialog.dialogTitle:  Funktionstangentbord - Varning
+
+!**************
+!**  Delete  **
+!**************
+Keypad52*fileDeleteDialog.dialogTitle:  Ta bort funktionstangentbord
+
+Keypad52*fileDeleteBoxLabel.labelString:  Välj vilket funktionstangentbord du vill ta bort.
+
+Keypad52*fileDeleted:  Markerade filer för funktionstangentbord har tagits bort.
+
+!****************
+!**  Playback  **
+!****************
+Keypad52*invalidSelectionplay.messageString:  Ingenting är markerat.  Välj i listan eller välj Avbryt.
+
+Keypad52*invalidSelectionplay.okLabelString:  Fortsätt
+
+Keypad52*selectPlaybackFile.labelString:  Välj en uppspelningsfil
+
+Keypad52*userPlaybackFiles.labelString:  Användarens uppspelningsfiler
+
+Keypad52*defaultPlaybackFiles.labelString:  Förinställda uppspelningsfiler
+
+AllShare*okLabel.labelString:  OK
+
+!********************
+!**  Keypad Style  **
+!********************
+Keypad52*selectSizeTitle.dialogTitle:  Ändra funktionstangentbord
+
+Keypad52*selectKeypadSizeLabel.labelString:  Välj storlek för funktionstangentbord:
+
+Keypad52*selectKeypadStyle.labelString:  Visa funktionstangentbord som:
+
+Keypad52*popupStyleChoice.labelString:  Tangentfönster
+  
+Keypad52*menuStyleChoice.labelString:  Meny
+
+Keypad52*selectKeypadSizeRows.labelString:  Rader:
+
+Keypad52*selectKeypadSizeCols.labelString:  Kolumner:
+
+Keypad52*selectKeypadSizeTextLen.labelString:  Textlängd:
+
+Keypad52*changeKeypadSizeMessage:  Välj storlek för funktionstangentbord...
+
+Keypad52*newPb.labelString:  Nytt
+
+Keypad52*row_col_pulldownvalue.labelString:  -
+
+Keypad52*invalidSizeSelection.messageString:  Vald storlek är för liten för aktuellt funktionstangentbord.
+
+Keypad52*invalidSizeSelection.okLabelString:  Fortsätt  
+
+!***********************
+!**  Warning dialogs  **
+!***********************
+Keypad52*change.dialogTitle:  Funktionstangentbord - Varning
+
+Keypad52*unsaved.dialogTitle:  Funktionstangentbord - Varning
+
+Keypad52*unsaved.messageString:  Ändringarna av funktionstangentbordet har inte sparats.
+
+Keypad52*unsaved.okLabelString:  Fortsätt
+
+Keypad52*nochange.dialogTitle:  Funktionstangentbord - Varning
+
+! this cannot be made much longer during translation.
+Keypad52*nochange.messageString:  Bekräfta eller ångra den aktuella ändringen innan du gör fler ändringar.
+
+Keypad52*nochange.okLabelString:  Fortsätt
+
+Keypad52*cantdothat.dialogTitle:  Funktionstangentbord - Varning
+
+Keypad52*cantdothat.messageString:  Välj OK eller Avbryt innan du väljer ett annat alternativ.
+
+!nothing selected in first dialog box
+Keypad52*invalidSelectionwarn.messageString:  Ingenting är markerat. Välj i listan, välj Ny eller Avbryt.
+
+Keypad52*invalidSelectionwarn.okLabelString:  Fortsätt
+
+Keypad52*noaccessDir:  Det går inte att accessa katalog.
+
+Keypad52*selectKeypadButton.messageString:  Du måste välja en knapp först.
+
+Keypad52*generalError.dialogTitle:  Funktionstangentbord - Fel
+	
+Keypad52*generalError.messageString:  Ett fel uppstod.
+
+Keypad52*generalError.okLabelString:  OK
+
+Keypad52*emptyList:  Det finns ett fel i tolkningslistan. Den kan inte sparas eller användas.
+
+Keypad52*ErrorMsgFileNameChars.messageString:  Du har skrivit ett ogiltigt tecken i filnamnet.
+
+Keypad52*EBCMismatchText.value: Olika språk i emuleringssessionen (som programmet Anpassa funktionstangentbord startades från) och i IBM Network Station. Tecknen och strängarna som har skapats med den här funktionen kan ge oväntade resultat i emuleringssessionen.
+
+!************************
+!**  Various Messages  **
+!************************
+! help button pressed
+Keypad52*helpMessage:  Hjälpläsaren läses in...
+
+! after OK clicked
+Keypad52*chooseSave:  Spara alla ändringar med Spara.
+
+! after Cancel clicked
+Keypad52*chooseCancel:  Aktuella ändringar har ångrats.
+
+! original message when new keypad opens
+Keypad52*chooseNew:  Ändra nytt funktionstangentbord
+
+! button pressed in keypad
+Keypad52*continueedit:  Ändra aktuell knapp...
+
+! click button action -> with nothing selected
+Keypad52*noActionSelected:  Inget är markerat i funktionslistan eller teckenlistan.
+
+! swapping messages (next 2)
+Keypad52*swapinprogress:  Välj OK, Avbryt eller fortsätt att flytta knappar...
+
+Keypad52*swaprunninginfo:  Knappen flyttas...
+
+! following 3 messages for invalid keypad action
+Keypad52*nonValidDialog.dialogTitle:  Funktionstangentbord - Varning
+
+Keypad52*nonValidDialog.messageString:  Funktion(erna) för den här knappen är ogiltig(a).
+
+Keypad52*deleteKeypadMessage:  Välj vilket funktionstangentbord du vill ta bort...
+
+!***************
+!**  Exiting  **
+!***************
+Keypad52*quitDialog1:  Funktionstangentbordet har ändrats men inte sparats.
+
+Keypad52*quit1Tog1:  Avsluta utan att spara ändringarna.
+
+Keypad52*quit1Tog2:  Avsluta, men spara först ändringarna.
+
+!************************************************************************
+!
+!
+!                        Playback Editor Resources
+!
+!
+!************************************************************************
+Playedit*title:  Redigerare för uppspelningsfil
+
+Playedit*iname5250:  Redigerare för 5250-uppspelningsfil
+
+Playedit*iname3270:  Redigerare för 3270-uppspelningsfil
+
+Playedit*editorTitle.dialogTitle:  Redigerare för uppspelningsfil
+
+!****  Main Window
+Playedit*keyAction.labelString:  Infoga funktion->
+
+Playedit*deleteAction.labelString:  Ta bort funktion
+
+Playedit*insertAction.labelString:  Lägg till rad
+
+Playedit*editAction.labelString:  Ändra funktion
+
+Playedit*transRxing:  Tar emot information om redigerare för uppspelningsfil från emuleringssessionen.
+
+Playedit*transRxd:  Information om redigerare för uppspelningsfil har tagits emot från emuleringssession.
+
+Playedit*currFileLabel.labelString:  Aktiv uppspelningsfil:
+
+Playedit*currActLabel.labelString:  Aktiva funktioner för filuppspelning:
+
+!** Resolution
+Playedit*poorResolutionMsgText.value:  Bildskärmens upplösning är lägre än 800x600. Redigeraren för filuppspelning kan inte användas på bildskärmar med lägre upplösning än 800x600.
+
+!** Saving
+Playedit*saveDialog.dialogTitle:  Spara uppspelningsfil
+
+Playedit*saveBoxLabel*labelString:  Spara uppspelningsfil som:
+
+Playedit*saveTran:  Uppspelningsfil sparad...
+
+Playedit*fileWarningDialog.dialogTitle:  Redigerare för uppspelning - Varning
+
+!** Edit
+Playedit*editBoxLabel*labelString:  Ändra funktion:
+
+!** Warning Dialogs
+Playedit*PlaybackMsgFileNoOpen.value:  Det går inte att öppna uppspelningsfilen. Programmet avslutas.
+
+Playedit*PlaybackMsgFileNoRead.value:  Det går inte att läsa uppspelningsfilen. Programmet avslutas.
+
+Playedit*PlaybackMsgFileCorrupt.value:  Uppspelningsfilen är inte skapad med emuleringssessionen inspelningsprogram. Det går inte att öppna filen. Programmet avslutas.
+
+Playedit*noaccessDir:  Det går inte att accessa katalog.
+
+Playedit*selectInsertLocation.messageString:  Markera raden där den här funktionen ska fogas in.
+
+Playedit*ErrorMsgFileNameChars.messageString:  Du har skrivit ett ogiltigt tecken i filnamnet.
+
+Playedit*EBCMismatchText.value:  Emuleringssessionens språk vid anrop av Redigeraren för filuppspelning stämmer inte med valt språk för IBM Network Station. Tecknen och strängarna som har skapats med den här funktionen kan ge oväntade resultat i emuleringssessionen.
+	
+Playedit*nonValidDialog.messageString:  Funktion(er) är inte giltig(a).
+
+!** Messages
+Playedit*helpMessage:  Hjälpläsaren läses in...
+
+Playedit*chooseSave:  Spara alla ändringar med Spara.
+
+Playedit*chooseCancel:  Aktuella ändringar har ångrats.
+
+Playedit*noActionSelected.messageString:  Inget är markerat i funktionslistan eller teckenlistan.
+
+Playedit*nothingHighlightedDelete.messageString:  Ingenting är markerat för att tas bort.
+
+Playedit*nothingHighlightedInsert.messageString:  Markera position där infogningen ska ske.
+
+Playedit*nothingHighlightedEdit.messageString:  Ingenting är markerat för att redigeras.
+
+!** Exit
+Playedit*quitDialog1:  Uppspelningsfilen har ändrats men inte sparats
+
+Playedit*quit1Tog1:  Avsluta utan att spara ändringarna.
+
+Playedit*quit1Tog2:  Avsluta, men spara först ändringarna.
+
+!**************************************************
+!*
+!*        Printing translations 
+!*
+!*      Added by AJMEYER for V310.nc
+!*
+!**************************************************
+
+AllShare*printDialogPrinterTypeLabel.labelString:  Skrivartyp:
+
+AllShare*printDialogPrinterTypeMenu*postscript.labelString:  PostScript
+
+AllShare*printDialogPrinterTypeMenu*ascii.labelString:  ASCII
+
+AllShare*printDialogPrinterTypeMenu*pcl.labelString:  PCL
+
+AllShare*printDialogPrinterSelectControls_popup.title:   Välj skrivare
+
+AllShare*printSelectDialogOKButton.labelString:  OK
+
+AllShare*printSelectDialogCancelButton.labelString:  Avbryt

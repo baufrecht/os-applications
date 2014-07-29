@@ -1,0 +1,56 @@
+remote-connect (2.0-9) unstable; urgency=low
+
+  * fix: launcher calls x11vnc with -rfbauth now
+  * change: launcher uses now x11vnc -storepasswd
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Tue, 11 Mar 2014 16:56:50 +0100
+
+remote-connect (2.0-8) unstable; urgency=low
+
+  * fix: launcher calls x11vnc with -passfile now
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Tue, 11 Mar 2014 16:24:17 +0100
+
+remote-connect (2.0-7) unstable; urgency=low
+
+  * fix: handling password file, corrected path
+  * add: tcos/tightvncpasswd binary
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Tue, 11 Mar 2014 15:51:12 +0100
+
+remote-connect (2.0-6) unstable; urgency=low
+
+  * some cleanup
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 28 Feb 2014 18:23:21 +0100
+
+remote-connect (2.0-5) unstable; urgency=low
+
+  * change launcher
+      * get settings on the fly
+      * fix missing launcher object
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 28 Feb 2014 18:11:14 +0100
+
+remote-connect (2.0-3) unstable; urgency=low
+
+  * launcher:
+      * find a crazy way to kill zenity dialog on session close
+      * dual language
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 28 Feb 2014 16:13:53 +0100
+
+remote-connect (2.0-2) unstable; urgency=low
+
+  * launcher:
+      * implement password creation
+      * implement locking
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Sun, 23 Feb 2014 17:03:50 +0100
+
+remote-connect (2.0-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 17 Jan 2014 17:14:09 +0100
+

@@ -1,3 +1,9 @@
+printserver (2.0-4) unstable; urgency=low
+
+  * new: parallel port is implemented 
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Tue, 15 Jul 2014 20:19:39 +0200
+
 printserver (2.0-3) unstable; urgency=low
 
   * New: Added a new line to 60-new-persistent-printer.rules so that usbids will

@@ -1,0 +1,35 @@
+ibm (2.0-1.2-8) unstable; urgency=low
+
+  * changed displayname:
+      - the first 9 bytes of the clients hostname plus one byte for suffix
+        (counter 1-9) are used as display name
+      - keep in mind: the hostname is determinated on client side
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Mon, 28 Jul 2014 15:26:23 +0200
+
+ibm (2.0-1.2-7) unstable; urgency=low
+
+  * added support for locales (pre-defined and custom)
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Wed, 09 Jul 2014 15:40:35 +0200
+
+ibm (2.0-1.2-6) unstable; urgency=low
+
+  * FIX: changed handling of keyboard layout files in launcher and xml
+      - the program expects the keyboard layout files in ~/.iSeriesAccess/ibm_5250/K/
+      - no matter if you use absolut paths or not
+      - It also seems, that files must be named *.101 .
+      - All this has been implemented.
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Thu, 20 Mar 2014 21:19:38 +0100
+
+ibm (2.0-1.2-5) unstable; urgency=low
+
+  [ Joern Frenzel ]
+  * change launcher: better handling for manual keyfile
+  * add rcS.d/link_libxm to set link for libxm if not present
+
+  [ Steffen Hoenig ]
+  * removed exit call (cleaned the code elsewhere)
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 14 Mar 2014 17:17:31 +0100

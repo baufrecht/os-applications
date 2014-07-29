@@ -1,0 +1,94 @@
+#!/usr/bin/env python
+
+# Standard modules
+import os
+import base64
+import shutil
+import sys
+import tempfile
+
+# TCOS modules
+import pytcos.tcos as tcos
+
+s = tcos.System()
+ld= tcos.Ldap()
+l = tcos.Launcher()
+
+mac = s.getMac()
+ldap_url = s.getLdapUrl()
+client_dn = ld.getClientDn(mac, ldap_url)
+locations_dn = ld.getLocationsDn(client_dn, ldap_url)
+locations_entry = ld.getNismapentry(locations_dn, ldap_url)
+SysLang = locations_entry.get("Lang.lang", "en_US.UTF-8")
+
+PasswordType=  l.ENTRY.get('Settings.Password.Type', 'none')
+PasswordTypeValue = l.ENTRY.get('Settings.Password.PassTypeValue', '')
+
+PassFile = '/home/tcos/.x11vnc/passwd'
+lockFile = "/var/lock/remote-control.lock"
+
+# the password stuff
+#
+directory = os.path.dirname(PassFile)
+if not os.path.exists(directory):
+    os.makedirs(directory)
+
+passwdParam = ""
+if PasswordType != "none": 
+    if PasswordType == "plain":
+        #os.system('echo ' + PasswordTypeValue + ' | /opt/remote-connect/tcos/tightvncpasswd -f > ' + PassFile)
+        os.system('x11vnc -storepasswd ' + PasswordTypeValue + ' ' + PassFile)
+    elif PasswordType == "base64":
+        PassFileHandle = open(PassFile, "wb")
+        PassFileHandle.write(base64.b64decode(PasswordTypeValue));
+        PassFileHandle.close()
+    elif PasswordType == "file":
+        try:
+            shutil.copy2(PasswordTypeValue, PassFile)
+        except:
+            pass 
+    passwdParam = ' -rfbauth ' + PassFile        
+
+# here we go
+#
+tmpdir = tempfile.mkdtemp()
+tempFile = os.path.join(tmpdir, 'zenityPID')
+
+# a german system?
+if SysLang.count("de_"): 
+    while True:
+        ConnectionPermisson = l.ENTRY.get('Settings.ConnectionPermisson', 'ask')
+        showDisconnectDialog = l.ENTRY.get('Settings.showDisconnectDialog','yes')
+
+        VncCommand = 'x11vnc -ncache 10 ' + passwdParam + ' '
+        if ConnectionPermisson == "ask":
+            VncCommand += ' -accept "zenity --question --title \\"Remote Verbindungsversuch\\"  --text \\"Wollen Sie die Verbindung auf Ihren Bildschirm zulassen\\"" '
+        if showDisconnectDialog == "yes":
+            # bash for crazy people :-)
+            VncCommand += ' -afteraccept "(for progress in \$(seq 10 20 100); do sleep 1; echo \$progress; done | zenity --progress --title \\"Remote-Verbindung\\"  --no-cancel --ok-label \\"Remoteverbindung trennen\\" --text \\"Trennen Sie die Verbindung bitte erst nach Aufforderung.\\") & myPID=\$!; zenPID=\$(pgrep -P \$myPID | tail -n 1); echo \$zenPID > ' + tempFile  + ' ; (while \$(kill -0 \$zenPID); do sleep 1; done; killall -9 x11vnc) & exit 0 "'
+            VncCommand += ' -gone "kill -9 \$(cat ' + tempFile + '); killall -9 x11vnc; sleep 1; killall -9 x11vnc" '
+
+        VncCommand += ' &> /dev/null'
+        retrunCode = os.system(VncCommand)
+
+        # get new settings on the fly
+        l = tcos.Launcher()
+
+
+else :
+    while True:
+        ConnectionPermisson = l.ENTRY.get('Settings.ConnectionPermisson', 'ask')
+        showDisconnectDialog = l.ENTRY.get('Settings.showDisconnectDialog','yes')
+
+        VncCommand = 'x11vnc -ncache 10 ' + passwdParam + ' '
+        if ConnectionPermisson == "ask":
+            VncCommand += ' -accept "zenity --question --title \\"remote view request\\\"  --text \\"Allow a remote view request?\\"" '
+        if showDisconnectDialog == "yes":
+            VncCommand += ' -afteraccept "(for progress in \$(seq 10 20 100); do sleep 1; echo \$progress; done | zenity --progress --title \\"remote view connect\\"  --no-cancel --ok-label \\"disconnect remote view connect\\" --text \\"Please disconnect only after explicit request.\\") & myPID=\$!; zenPID=\$(pgrep -P \$myPID | tail -n 1); echo \$zenPID > ' + tempFile  + ' ; (while \$(kill -0 \$zenPID); do sleep 1; done; killall -9 x11vnc) & exit 0 "'
+            VncCommand += ' -gone "kill -9 \$(cat ' + tempFile + '); killall -9 x11vnc; sleep 1; killall -9 x11vnc" '
+
+        VncCommand += ' &> /dev/null'
+        retrunCode = os.system(VncCommand)
+
+        # get new settings on the fly
+        l = tcos.Launcher()

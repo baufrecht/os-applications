@@ -1,0 +1,103 @@
+//// ENGLISH_SOURCE_VERSION= 1.2 
+////This file contains the color mapping program on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file will be stored in locale specific ASCII (code page 819 for Latin1 languages). 
+
+////Help text format (this section is not displayed to IBM emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1.
+//// 3. This help file contains help text for the 3270 and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator. A comment line of four "/" characters followed by
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+//// 3B. "5250" indicates subsequent data is only displayed in 5250 on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in both 3270 and 5250 on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+//// 3D. Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters.  The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Do not change the order of topics in this help text file.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+
+----"3270 顏色對映說明"
+++++"一般資訊"
+如需使用這個說明檢視程式的資訊，請參閱主要模擬器說明的第一個主題 (選取「模擬器」視窗中的「說明」功能表列選項)。
+
+這個說明資訊說明如何使用「顏色對映」程式來變更 3270 模擬器階段作業的顏色。
+
+附註：一次只能啟動一個「顏色對映」程式。
+
+++++"顏色對映檔案選項"
+3270 階段作業開始時，3270 模擬器會搜尋階段作業的顏色對映檔案。將使用下列次序；如果找到顏色對映檔案，就會用於 3270 階段作業：
+
+- 搜尋您使用「顏色對映」程式所選取的階段作業特定顏色對映檔案。
+
+- 搜尋您使用「顏色對映」程式所選取的預設顏色對映檔案。
+
+- 如果找不到上述任一項，則 3270 模擬器會使用預設顏色 (黑色背景)。
+
+++++"視窗佈置"
+若為「基本顏色對映」，則「顏色對映」視窗具有顏色配置選項區域 (左側)、範例「協助程式」及 3270 階段作業視窗區域 (右下方)，以及動作列/訊息區域 (底端)。
+
+若為「進階顏色對映」，則「顏色對映」視窗具有建構選項區域 (左側)、顏色選項區域 (右上方)、範例「協助程式」及 3270 階段作業視窗區域 (右下方)，以及動作列/訊息區域 (底端)。
+
+「顏色選項區域」包含下列各項：
+
+1) 包含二十種顏色的多彩列，可作為選擇新顏色 (對映到建構之一) 的起始點。
+
+2) 紅色/綠色/藍色滑動器，可對新顏色 (對映到建構之一) 進行更細微的調整。
+
+3)「現行顏色」視窗，可顯示正由多彩列及紅色/綠色/藍色滑動器所修改的新顏色。
+
+4)「套用現行顏色」按鈕，可將顏色變更套用到範例「協助程式」及 3270 階段作業視窗區域。您必須先完成這個步驟，才能將變更套用到階段作業。
+
+
+「動作列」按鈕可提供下列功能：
+
+1) 在顏色對映檔案中「儲存」顏色對映變更。
+
+2)「刪除」先前建立的顏色對映檔案。
+
+3)「將變更套用到階段作業」(啟動「顏色對映」程式的階段作業)。這樣可以先測試變更，再將變更儲存到顏色對映檔案中。
+
+4)「結束」「顏色對映」程式。
+
+5)「說明」可顯示這個說明本文。
+
+訊息區域：
+可顯示資訊及錯誤訊息。
+
+++++"基本顏色對映"
+「基本顏色對映」選項可讓您選取這個 3270 階段作業的顏色配置 (顏色對映檔案)，或作為這個 3270 階段作業及未來的 3270 階段作業的預設值。
+
+「基本顏色對映」可提供五種標準顏色配置，加上您已建立的進階顏色配置。附註：五種標準顏色配置中的三種會為「協助程式」視窗使用相同的顏色 (例如這個 3270 說明視窗的顏色)。
+
+++++"進階顏色對映"
+「進階顏色對映」選項可讓您建立進階顏色配置 (顏色對映檔案)。您可以變更 3270 階段作業的不同元素 (建構) 的顏色。建議您先使用「基本顏色對映」選項，來選取最接近的顏色配置。然後再使用進階顏色對映」，進一步修改特定建構的顏色。
+
+////Note: Some IBM Thin Client models support up to 256 colors (using 1 Megabyte of Video RAM). After this limit is reached, false colors may produce confusing browser images. The five IBM basic color schemes match the colors used by the browser and Java. Advanced color schemes could use up to a maximum of 22 colors. The browser and Java allocate a color palette (for 256 color Thin Clients) using the following values for red, green, and blue: 0, 51, 102, 153, 204, and 255.
+
+若要變更建構的顏色，請先選取建構以查看它的現行顏色。如果您想大幅變更顏色，請按一下多彩列中的顏色，作為進一步變更的起始點。您可以調整紅色/綠色/藍色值。例如，您可以拖曳紅色值滑動器 (當滑鼠指標位於滑動器上時，按下主要滑鼠按鈕並移動滑鼠指標)，按一下滑動器旁邊或按一下「-」或「+」按鈕。紅色、綠色及藍色的值範圍為 0 到 255。然後，按一下「套用現行顏色」按鈕；這樣會更新右下方工作區域。
+
+右下方工作區域具有「協助程式」區域及 3270 區域。「協助程式」顏色會套用到 3270「線上說明」視窗、「雜項喜好設定」視窗、「記錄/播放」視窗、「鍵盤重新對映」視窗，以及「顏色對映」視窗 (重新啟動「顏色對映」視窗時)。3270 區域會顯示功能表列、有七種前景顏色的主要階段作業背景、按鈕、尺規線及狀態行。
+
+若要在現行階段作業期間嘗試顏色配置，請按一下「將變更套用到階段作業」按鈕。若要儲存「進階」顏色配置，請按一下「儲存」按鈕。您的顏色對映檔名將會新增到可在「基本顏色對映」選項中使用的顏色配置清單中。「基本顏色對映」選項可用來選取要套用到一或多個 3270 階段作業的顏色配置。附註：「顏色對映」程式可將進階顏色對映檔名限制為 32 個字元。
+
+您可以變更現有的進階顏色配置。使用「基本顏色對映」選項來選取進階顏色配置，並將配置套用到階段作業。然後就可以使用「進階顏色對映」選項來調整建構顏色。儲存顏色配置時，請輸入現有的進階顏色配置名稱。
+
+附註：「進階」選項不會防止您將前景文字顏色及背景顏色設為相同的顏色 (或幾乎相同的顏色)。如果出現這個狀況，就無法讀取前景文字。
+工作區域可以用來驗證能夠讀取所有前景顏色。
+
+++++"套用顏色對映變更"
+「將變更套用到階段作業」按鈕會暫時將顏色對映變更套用到啟動「顏色對映」程式的模擬器階段作業。然後就會測試您進行的變更。請參閱「儲存顏色對映檔案」，以取得儲存變更以供稍後使用的資訊。
+
+++++"儲存顏色對映檔案"
+「儲存」按鈕可儲存顏色對映變更以供稍後使用。您的顏色對映變更會儲存在顏色對映檔案中。儲存「進階」顏色配置時，您的顏色對映檔名將會新增到可在「基本顏色對映」選項中使用的顏色配置清單中。在「基本顏色對映」中，選取儲存顏色重新對映變更的方式：儲存為用於所有階段作業的預設顏色對映檔案，或是儲存為只用於啟動「顏色對映」程式之階段作業的階段作業特定顏色對映檔案。
+
+階段作業特定顏色對映檔案允許不同的 3270 階段作業有不同的顏色組合。階段作業特定顏色對映檔案具有最高優先順序，且用於建立顏色對映檔案的特定階段作業 (使用 3270 階段作業的階段作業號碼及階段作業名稱)。
+
+預設顏色對映檔案具有次高優先順序，且用於沒有階段作業特定顏色對映檔案的所有階段作業。
+
+請參閱「刪除顏色對映檔案」，以取得刪除顏色對映檔案的資訊。
+
+++++"刪除顏色對映檔案"
+按一下動作列上的「刪除」按鈕，以刪除已經建立的顏色對映檔案。按一下要刪除的任何顏色對映檔案，再按「刪除」按鈕。

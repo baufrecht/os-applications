@@ -1,0 +1,172 @@
+//// ENGLISH_SOURCE_VERSION= 1.2 
+////This file contains the pop-up keypad customization program on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file will be stored in locale specific ASCII (code page 819 for Latin1 languages). 
+
+////Help text format (this section is not displayed to IBM emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1.
+//// 3. This help file contains help text for the 3270 and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator. A comment line of four "/" characters followed by:
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+//// 3B. "5250" indicates subsequent data is only displayed in 5250 on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in both 3270 and 5250 on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+//// 3D. Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters.  The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Do not change the order of topics in this help text file.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+
+----"Pomoc pre prispôsobenie pomocnej klávesnice 3270"
+++++"V¹eobecné informácie"
+Informácie o pou¾ívaní tohto programu na prezeranie pomoci nájdete v hlavnej pomoci emulátora (vyberte voµbu ponukovej li¹ty "Pomoc" v okne emulátora).
+
+Tieto pomocné informácie opisujú spôsob vytvorenia a zmeny pomocných klávesníc. Pomocná klávesnica obsahuje tlaèidlá. Ka¾dé tlaèidlo pomocnej klávesnice má k sebe priradenú postupnos» klávesov alebo prehrávací súbor.
+
+Poznámka: Naraz mô¾e by» aktívny len jeden program prispôsobovania pomocnej klávesnice.
+
+++++"Rozmiestnenie okna"
+Okno prispôsobenia pomocnej klávesnice má výberovú oblas» akcií klávesnice (vµavo), pracovnú oblas» tlaèidiel pomocnej klávesnice (vpravo), oblas» s li¹tou akcií (dole) a oblas» správ (dole). Samostatné okno zobrazuje pomocnú klávesnicu, s ktorou aktuálne pracujete.
+
+Výberová oblas» akcií klávesnice obsahuje:
+
+1) "Zoznam dostupných akcií" uvádza dostupné akcie klávesnice. Akcia vybratá z tohto zoznamu sa stane aktuálnou akciou.
+
+2) "Zoznam znakov" uvádza v¹etky dostupné znaky. Vybratý znak sa stane aktuálnou akciou. Ak chcete vybra» znak, kliknite naò.
+
+3) Tlaèidlo "Pomoc pre akciu" poskytuje definície akcie klávesnice v okne pomoci k akciám. Definície akcií sa dajú vytlaèi».
+
+4) Tlaèidlo "Akcia tlaèidla ->" priradí aktuálnu akciu k tlaèidlu klávesnice v pracovnej oblasti tlaèidiel klávesnice.
+
+Poznámka: Aktuálnou akciou mô¾e by» len jedna akcia.
+
+
+Pracovná oblas» tlaèidiel klávesnice obsahuje:
+
+1) "Aktuálna klávesnica" zobrazuje klávesnicu, s ktorou pracujete. Ak sa jedná o novú klávesnicu, ktorú ste e¹te neulo¾ili, aktuálna klávesnica bude prázdna.
+
+2) "Text tlaèidiel aktuálnej klávesnice" je text, ktorý sa zobrazí na tlaèidle klávesnice. Kliknite na textovú oblas» tlaèidla, ak chcete prida» alebo zmeni» text tlaèidla pomocou klávesnice. Textová oblas» tlaèidla je obmedzená na 32 znakov. Poznámka: Musíte ma» vybraté tlaèidlo klávesnice (kliknite na tlaèidlo klávesnice v samostatnom okne prispôsobenia pomocnej klávesnice).
+
+3) "Akcia tlaèidla aktuálnej klávesnice" je akcia klávesnice alebo prehrávací súbor priradený k tlaèidlu klávesnice. Ak chcete priradi» akciu klávesnice k tlaèidlu klávesnice, kliknite na po¾adovanú akciu klávesnice a kliknite na "Akcia tlaèidla ->". Ak chcete priradi» prehrávací súbor k tlaèidlu klávesnice, kliknite na "Vybra» akciu prehrávacieho súboru", vyberte prehrávací súbor a kliknite na "OK". Mô¾ete kliknú» na akciu tlaèidla aktuálnej klávesnice, ak chcete zmeni» akciu tlaèidla pomocou klávesnice (napríklad prida» jednoduché klávesnicové makro alebo prida» iné akciu). Oblas» akcie tlaèidla je obmedzená na 100 znakov. Pozrite si tému Viacero akcií, kde nájdete informácie o pou¾ívaní viacerých akcií klávesníc pre tlaèidlo klávesnice.
+
+4) "Vyèisti» tlaèidlo klávesnice" vyèistí vybraté tlaèidlo klávesnice.
+
+5) "Vybra» akciu prehrávacieho súboru" zobrazí va¹e prehrávacie súbory na priradenie prehrávacieho súboru k tlaèidlu klávesnice.
+
+6) Tlaèidlo "OK" akceptuje zmeny vykonané v aktuálnom tlaèidle klávesnice.
+
+7) Tlaèidlo "Zru¹i»" zru¹í zmeny vykonané v aktuálnom tlaèidle klávesnice.
+
+
+Tlaèidlá li¹ty nástrojov poskytujú tieto funkcie:
+
+1) "Ulo¾i»" dovoµuje ulo¾i» va¹e zmeny pomocnej klávesnice v súbore klávesnice. Va¹im súborom pomocných klávesníc dávate názvy.
+
+2) "Vymaza» súbor pomocnej klávesnice" vám dovoµuje vymaza» súbory pomocnej klávesnice, ktoré ste predtým vytvorili.
+
+3) "Zmeni» ¹týl pomocnej klávesnice" vám dovoµuje zmeni» poèet riadkov a ståpcov v plávajúcej pomocnej klávesnici, zmeni» poèet znakov textu v texte tlaèidla pomocnej klávesnice a prepína» medzi plávajúcou a s»ahovacou pomocnou klávesnicou.
+
+4) "Ukonèi»" ukonèí program Prispôsobenie pomocnej klávesnice.
+
+5) "Pomoc" zobrazí tento pomocný text.
+
+
+Oblas» správ:
+Zobrazuje informaèné a chybové správy.
+
+Samostatné okno prispôsobenia pomocnej klávesnice zobrazuje va¹u aktuálnu pomocnú klávesnicu. Kliknite na tlaèidlo pomocnej klávesnice, ak chcete zmeni» text tlaèidla pomocnej klávesnice alebo akciu tlaèidla pomocnej klávesnice. Ak pracujete s plávajúcou pomocnou klávesnicou, okno sa zobrazí tak, ako bude zobrazené va¹e okno s plávajúcou pomocnou klávesnicou. Ak pracujete so s»ahovacou pomocnou klávesnicou, okno zobrazuje va¹e tlaèidlá pomocnej klávesnice. Tlaèidlá s»ahovacej pomocnej klávesnice sú dostupné cez hlavnú ponukovú li¹tu emulátora.
+
+++++"Zaèíname"
+Nasledujú kroky na vytvorenie a pou¾ívanie plávajúcich pomocných klávesníc (definujte jedno tlaèidlo pomocnej klávesnice s akciou klávesnice):
+
+////The note below was moved up from the end of this topic
+Poznámka: Téma Jednoduché klávesnicové makrá uvádza kroky na vytvorenie tlaèidla pomocnej klávesnice s jednoduchým klávesnicovým makrom (postupnos» stlaèení klávesov).
+
+1) Spustite program prispôsobovania pomocnej klávesnice z relácie emulátora (pravdepodobne je u¾ spustený).
+
+2) Vytvorte novú pomocnú klávesnicu (u¾ ste mo¾no vytvorili).
+
+3) Kliknite na tlaèidlo pomocnej klávesnice v samostatnom okne prispôsobenia pomocnej klávesnice (zvyèajne sa zaèína od µavého horného tlaèidla).
+
+4) Kliknite na akciu pomocnej klávesnice v zozname dostupných akcií.
+
+5) Kliknite na Akcia tlaèidla ->.
+
+6) Kliknite na textovú oblas» aktuálneho tlaèidla pomocnej klávesnice a napí¹te text pre tlaèidlo pomocnej klávesnice (zobrazí sa na tlaèidle pomocnej klávesnice).
+
+7) Kliknite na OK, aby ste akceptovali zmenu tlaèidla pomocnej klávesnice.
+
+8) Ulo¾te va¹u pomocnú klávesnicu tým a pomenujte súbor pomocnej klávesnice.
+
+9) Spustite plávajúcu pomocnú klávesnicu pomocou hlavného emulátora (Pomocná klávesnica...) a odskú¹ajte novú pomocnú klávesnicu.
+
+Mô¾ete zmeni» a znovu ulo¾i» súbor pomocnej klávesnice (napríklad prida» ïal¹ie tlaèidlá pomocnej klávesnice alebo zmeni» tlaèidlá pomocnej klávesnice).
+
+++++"©týl pomocnej klávesnice"
+Mô¾ete jednoducho zmeni» poèet riadkov a ståpcov v plávajúcej pomocnej klávesnici, zmeni» poèet znakov textu v texte tlaèidla pomocnej klávesnice (v¹etky tlaèidlá pomocnej klávesnice majú rovnakú veµkos») a prepnú» sa medzi plávajúcou a s»ahovacou pomocnou klávesnicou. Kliknite na "Zmeni» ¹týl pomocnej klávesnice", ak chcete zmeni» nieèo z uvedeného.
+
+++++"Plávajúca alebo s»ahovacia"
+Existujúcu pomocnú klávesnicu mô¾ete jednoducho zmeni» na plávajúcu klávesnicu alebo na s»ahovaciu pomocnú klávesnicu kliknutím na "Zmeni» ¹týl pomocnej klávesnice". Predvolene sa pou¾íva plávajúca pomocná klávesnica.
+
+Plávajúca pomocná klávesnica je samostatné okno s tlaèidlami pomocnej klávesnice, ktoré zadefinujete. Keï kliknete na tlaèidlo pomocnej klávesnice, priradená akcia (akcie klávesnice alebo prehrávací súbor) sa spracuje v relácii 3270, ktorá spustila okno plávajúcej pomocnej klávesnice. Vy urèujete, kedy sa zobrazí a kedy sa nezobrazí okno plávajúcej pomocnej klávesnice. Pre reláciu 3270 je mo¾né pou¾i» viacero okien plávajúcich pomocných klávesníc.  
+
+S»ahovacia pomocná klávesnica je prístupná cez ponukovú li¹tu hlavného emulátora. Ak máte s»ahovaciu pomocnú klávesnicu, na va¹u ponukovú li¹tu sa pridá ponuka Pomocná klávesnica. Keï kliknete na tlaèidlo s»ahovacej pomocnej klávesnice, v relácii 3270 sa spracuje priradená akcia.
+
+Ak máte viacero relácii 3270 s rovnakou klávesnicou, je mo¾né preferova» s»ahovaciu pomocnú klávesnicu. Plávajúce klávesnice by vy¾adovali samostatné okno plávajúcej klávesnice pre ka¾dú reláciu 3270.
+
+Plávajúce klávesnice sú lep¹ie v prípade, ak máte veµa tlaèidiel na klávesnici (10 a¾ 20 tlaèidiel pomocnej klávesnice, v závislosti od rozlí¹enia vá¹ho monitora) alebo máte rôzne pomocné klávesnice pre rôzne relácie 3270.
+
+Ak máte viacero s»ahovacích pomocných klávesníc, pred výberom tlaèidla s»ahovacej pomocnej klávesnice musíte vybra» s»ahovaciu pomocnú klávesnicu.
+
+Mô¾ete ma» plávajúce aj s»ahovacie pomocné klávesnice. Ak máte viacero pomocných klávesníc, mô¾ete zadefinova» pomocnú klávesnicu, ktorú pou¾íva viacero relácií ako s»ahovaciu pomocnú klávesnicu a zvy¹né pomocné klávesnice ako plávajúce pomocné klávesnice.
+
+Plávajúca pomocná klávesnica sa dá spusti» pri spustení relácie 3270. Pomocou programu Nastavovanie emulátora IBM 3270 mô¾ete urèi» plávajúcu pomocnú klávesnicu na spustenie: vyberte reláciu a kliknite na Pripojenie -> Upravi». Kliknite na Roz¹írené pripojenie 3270... a zadajte -KEYPAD, jednu medzeru a názov vá¹ho súboru pomocnej klávesnice (rozli¹uje veµkos» písmen) do poµa Iné parametre. -KEYPAD rozli¹uje veµkos» písmen. Ak názov vá¹ho súboru pomocnej klávesnice obsahuje medzery, názov súboru uzatvorte do úvodzoviek (napríklad -KEYPAD "názov súboru klávesnice").
+
+++++"Jednoduché klávesnicové makrá"
+Klávesnicové makrá vám dovoµujú jednoducho zadáva» postupnos» klávesov do va¹ej relácie 3270. Ak chcete vytvori» tlaèidlo klávesnice s jednoduchým klávesnicovým makrom:
+
+1) Spustite program prispôsobovania klávesnice z relácie emulátora (pravdepodobne je u¾ spustený) a vyberte súbor klávesnice, ktorý bude obsahova» va¹e klávesnicové makro (pravdepodobne u¾ existuje).
+
+2) Kliknite na tlaèidlo klávesnice v samostatnom okne klávesnice pre va¹e klávesnicové makro.
+
+//// Note: The translation of String() below should match the translated resource text for AllShare*string() in the keyboard remapping resource file.
+3) Kliknite na akciu klávesnice String() v zozname dostupných akcií.
+
+4) Kliknite na Akcia tlaèidla ->.
+
+5) Kliknite medzi zátvorky v String() v oblasti akcií tlaèidla aktuálnej klávesnice.
+
+6) Napí¹te dvojitú úvodzovku, znaky vá¹ho klávesnicového makra a dvojitú úvodzovku; napríklad String("znaky vá¹ho makra").
+
+7) Kliknite na textovú oblas» aktuálneho tlaèidla klávesnice a napí¹te text pre tlaèidlo klávesnice (zobrazí sa na tlaèidle klávesnice).
+
+8) Kliknite na OK, aby ste akceptovali zmenu tlaèidla klávesnice.
+
+9) Ulo¾te va¹u klávesnicu.
+
+10) Otestujte va¹e klávesnicové makro pomocou hlavného emulátora (pomocou plávajúcej alebo s»ahovacej pomocnej klávesnice).
+
+Ak chcete zmeni» pomocnú klávesnicu, mô¾ete ju zmeni» a znovu ulo¾i».
+
+Poznámka: Dlhé alebo zlo¾ité klávesnicové makro by ste mali vytvori» pomocou funkcie Zaznamena». K tlaèidlu pomocnej klávesnice je mo¾né priradi» prehrávací súbor. Pozrite si témy Zaznamena» a Prehra» v hlavnej pomoci emutátora.
+
+++++"Úprava textu a akcie tlaèidla"
+Text tlaèidla klávesnice a akcia tlaèidla klávesnice sa dá zmeni» pomocou klávesnice. Kliknite na po¾adovanú oblas» a zmeòte ju pomocou klávesnice. Ak chcete akceptova» zmeny, kliknite na tlaèidlo OK. Pozrite si tému Viacero akcií, kde nájdete informácie o definovaní viacerých akcií klávesníc pre tlaèidlo klávesnice.
+
+Zmenené akcie musia by» správne napísané a rozli¹ujú veµkos» písmen.
+
+++++"Viacero akcií"
+Oblas» akcií tlaèidla aktuálnej klávesnice je obmedzená na 100 znakov. Pre tlaèidlo klávesnice mô¾ete zada» viacero akcií klávesnice. Ak va¹e akcie klávesnice presahujú 100 znakov, zaznamenajte postupnos» klávesov do prehrávacieho súboru a zadajte prehrávací súbor ako akciu tlaèidla klávesnice (pozrite si témy pomoci hlavného emulátora pre Zaznamena» a Prehra», kde nájdete viac informácií o prehrávacích súboroch).
+
+Ak chcete zada» viacero akcií klávesnice pre tlaèidlo klávesnice, mô¾ete kliknú» na oblas» akcií tlaèidla aktuálnej klávesnice a napísa» po¾adované série akcií, oddelené jednou medzerou. Zmenené akcie musia by» správne napísané a rozli¹ujú veµkos» písmen. Mô¾ete tie¾ vlo¾i» akciu klávesnice do oblasti akcií tlaèidla klávesnice pomocou my¹i: kliknite na po¾adované miesto v oblasti akcií tlaèidla klávesnice, vyberte po¾adovanú akciu klávesnice na pridanie a kliknite na tlaèidlo Akcia tlaèidla ->.
+
+++++"Zoznam znakov"
+Zoznam znakov dovoµuje pristupova» k znakom, ktoré nemusia by» dostupné z klávesnice.
+
+Zadajte znak pre tlaèidlo klávesnice: Kliknite na po¾adované tlaèidlo klávesnice v samostatnom okne klávesnice. Kliknite na po¾adovaný znak v zozname znakov. Kliknite na Akcia tlaèidla ->. Kliknite na textovú oblas» aktuálneho tlaèidla klávesnice a napí¹te text pre tlaèidlo klávesnice (zobrazí sa na tlaèidle klávesnice). Kliknite na OK, aby ste akceptovali zmenu.
+
+Prida» znak do klávesnicového makra: Kliknite na tlaèidlo klávesnice, ktoré zobrazuje klávesnicové makro. Kliknite na po¾adovaný znak v zozname znakov. Kliknite v textovej oblasti akcie klávesnicového makra (v akcii String()) na mieste, kam sa má vlo¾i» pridávaný znak (kurzor presuniete na správne miesto pomocou kurzorových klávesov doµava a doprava). Kliknite na Akcia tlaèidla ->. Kliknite na OK, aby ste akceptovali zmenu.
+
+++++"Presun klávesov pomocnej klávesnice"
+Tlaèidlá plávajúcich pomocných klávesníc mô¾ete presúva». Kliknite pravým tlaèidlom my¹i na tlaèidlo pomocnej klávesnice, ktoré chcete presunú», presuòte ukazovateµ my¹i na nové miesto tlaèidla pomocnej klávesnice a kliknite µavým tlaèidlom my¹i. Ak u¾ nové miesto bolo definované ako tlaèidlo pomocnej klávesnice, tieto dve tlaèidlá sa vzájomne vymenia.

@@ -1,0 +1,335 @@
+//// ENGLISH_SOURCE_VERSION= 1.1
+////This file contains the keyboard remapping program on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file is stored in locale specific ASCII (code page 819 for Latin1 languages). This help text is stored on the booting server as N3_5KeyH.
+
+////Help text format (this section is not displayed to IBM emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1. Do not translated (or change) anything in a comment line.
+//// 3. This help file contains help text for the 3270, and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator.   A comment line of four "/" characters followed by:
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+//// 3B. "5250" indicates subsequent data is only displayed in 5250 on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in 3270, and 5250 on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+////  3G. Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters.  The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Do not change the order of topics in this help text file.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+----"Ayuda de correlación de teclado de 3270"
+++++"Información general"
+Para obtener información sobre la utilización de este programa de visualización de ayuda, consulte el primer tema de la ayuda principal del emulador (seleccione la opción "Ayuda" de la barra de menús en la ventana del emulador).
+
+Esta información de ayuda describe la manera en que se puede utilizar el programa de Cambio de correlación de teclado para cambiar las acciones de teclado dentro de las sesiones de emulador.
+
+Nota: Únicamente se puede activar un programa de Cambio de correlación de teclado al mismo tiempo. 
+
+++++"Selección de archivo de correlación de teclado"
+Durante el inicio de una sesión 3270, el emulador 3270 busca un archivo de correlación de teclado para la sesión. Es necesario que el tipo de teclado sea coincidente; para un tipo de teclado se utiliza un archivo de correlación de teclado (por ejemplo, un teclado de PC de 102 teclas). Se utiliza el orden siguiente; si se encuentra un archivo de correlación de teclado, se utiliza para la sesión 3270: 
+
+- Se busca un archivo de correlación de teclado denominado -KEYFILE.
+
+- Se busca un archivo de correlación de teclado específico de la sesión que el usuario haya creado utilizando el programa Cambio de correlación de teclado.
+
+- Se busca un archivo de correlación de teclado por omisión que el usuario haya creado utilizando el programa Cambio de correlación de teclado.
+
+- Si no se encuentra ninguno de los anteriores, el emulador utiliza las acciones de teclado por omisión. 
+
+////5250
+++++"Tecla Intro/Salida de campo"
+La opción Preferencias varias puede cambiar la localización de las acciones Intro y Salida de campo. Si se desea cambiar las tecla Intro o Control derecha, en primer lugar se tiene que comprobar si la correlación deseada está disponible en Preferencias varias. Para hacerlo, consulte Preferencias varias en el desplegable Opción de la barra de menús del emulador. 
+
+Cualquier cambio de correlación de teclado realizado para la tecla Intro o Control derecha lo anula "Preferencias varias" si la opción Tecla Intro/Salida de campo no está establecida en el valor por omisión.
+
+Si la correlación deseada no está disponible en Preferencias varias, establezca en primer lugar la opción Tecla Intro/Salida de campo en su valor por omisión y a continuación realice los cambios deseados utilizando el programa Cambio de correlación de teclado. 
+
+Nota: Preferencias varias también puede modificar la localización de la acción Imprimir, prevaleciendo sobre los cambios de correlación de teclado para la tecla Impr Pant. 
+
+////3270
+++++"Tecla Intro"
+Preferencias varias y el programa Configuración de emulador IBM 3270 pueden cambiar la localización de la acción Intro. Si se desea cambiar las tecla Intro o Control derecha, en primer lugar se tiene que comprobar si la correlación deseada está disponible en Preferencias varias o el programa Configuración de emulador IBM 3270. 
+
+La localización de la tecla Intro de Preferencias varias es la de prioridad más alta. Luego, se utiliza un valor de localización de tecla Intro del programa Configuración de emulador IBM 3270. Si la localización de la tecla Intro de Preferencias varias se establece en el valor por omisión y la localización de la tecla Intro del programa Configuración de emulador IBM 3270 se establece en el valor por omisión, es posible utilizar el cambio de correlación de teclado para para modificar las acciones de la tecla Intro y Control derecha. 
+
+Nota: Preferencias varias puede modificar la localización de la acción Impresión local. Esta valor prevalecerá sobre cualquier cambio de correlación de teclado para la tecla Impr Pant. 
+
+////9999
+++++"Diseño de la ventana"
+La ventana Cambio de correlación de teclado tiene un área (superior) de diseño de teclado gráfica, un área (izquierda) de selección de acciones, un área (derecha) de tecla/acción y un área (inferior) de barra de acciones/mensajes.
+
+Teclado gráfico: Muestra el diseño físico del teclado actual. La pulsación de una tecla muestra las acciones correlacionadas en el área de tecla/acción. 
+
+
+El Área de selección de acción contiene los siguientes elementos: 
+
+1) La "Lista de acciones disponibles" que contiene las acciones disponibles. Una acción que se seleccione de esta lista se convierte en la acción actual. 
+
+2) La "Lista de caracteres" que lista todos los caracteres disponibles. Un carácter seleccionado se convierte en la acción actual. Para seleccionar un carácter pulse sobre el mismo. 
+
+3) El botón "Ayuda de acción" proporciona definiciones de acción de teclado en una ventana de ayuda de acción. Las definiciones de acción se pueden imprimir. 
+
+////5250
+4) El botón "Sin acción" que establece la acción actual en "ninguna". Una secuencia de teclas con la acción "ninguna" funciona como si la secuencia de teclas no se pulsara.
+////3270
+4) El botón "Sin acción" que establece la acción actual en "ninguna". Una secuencia de teclas con la acción "ninguna" funciona como si la secuencia de teclas no se pulsara.
+////9999
+
+5) El botón "Localizar" que busca todas las teclas correlacionadas con la acción resaltada en la lista de acciones disponibles. Las teclas localizadas se resaltan en el teclado gráfico y la primera tecla se hace la tecla actual en el área tecla/acción. 
+
+Nota: Únicamente una acción puede ser la acción actual. 
+
+
+El Área de tecla/acción contiene los siguientes elementos:
+
+1) La "Tecla actual" que visualiza la tecla que se puede modificar. La "Tecla actual" se visualiza en la parte superior del área de tecla/acción o área de selección de acción (dependiente del tipo de teclado). Solamente se puede modificar una tecla cada vez. 
+
+2) Los botones "Modificador" que son combinaciones de modificador reconocidas por el programa Cambio de correlación de teclado. Los botones de modificador comienzan por "-> ". La pulsación de un botón de modificador provoca la acción actual (desde la lista de acciones disponibles, lista de caracteres o ninguna acción) para sustituir la acción del área de texto de acción. 
+
+3) El "Área de texto de acción" que está situada a la derecha de cada botón modificador y muestra la acción correlacionada con la tecla actual para este modificador. Este área se puede editar (consulte "Edición de un área de texto de acción").
+
+4) El botón "OK" que acepta los cambios realizados en la tecla actual. 
+
+5) El botón "Cancelar" que cancela los cambios realizados en la tecla actual.
+
+
+Los botones de la Barra de acciones proporcionan las funciones siguientes:
+
+1) "Guardar" cambios de correlación de teclado en un archivo de correlación de teclado. 
+
+2) "Suprimir" archivos de correlación de teclado que se han creado previamente.
+
+3) "Aplicar cambios a la sesión" que ha iniciado el programa Cambio de correlación de teclado. Esto permite probar los cambios antes de guardarlos en un archivo de correlación de teclado.
+
+4) "Restaurar" (deshace) los cambios que se hayan realizado desde el último "Aplicar" o desde que el programa Cambio de correlación de teclado se haya iniciado. 
+
+5) "Salir" del programa Cambio de configuración de teclado.
+
+6) "Imprimir" imprime las secuencias de tecla/modificador con las acciones resultantes.
+
+7) "Ayuda" visualiza este texto de ayuda.
+
+Área de mensajes:
+Visualiza mensajes de información y de error.
+
+++++"Cómo comenzar"
+A continuación se describen los pasos para realizar cambios de correlación de teclado:
+
+1) Inicie el programa Cambio de correlación de teclado desde la sesión de emulador en la que se deseen los cambios de correlación.
+
+2) Pulse la tecla a cambiar en el teclado gráfico.
+
+3) El área de tecla/acción esta ahora activa y la tecla seleccionada es la tecla actual. Las acciones actualmente correlacionadas con la tecla para varios modificadores aparecen en las áreas de texto de acción. 
+
+4) Pulse en una acción a correlacionar con la tecla actual de la lista de acciones disponibles, lista de caracteres o ninguna acción. (Nota: El tema Macros de teclado sencillas describe como crear una macro de teclado sencilla.)
+
+5) Pulse en el botón modificador con el que se deberá asociar esa acción. El área de texto de acción para el modificador deberá visualizar la acción deseada. Si se desea la acción en varios modificadores para esta tecla, pulse entonces en los modificadores deseados. El área de texto de acción se puede editar; consulte "Edición de áreas de texto de acción" para obtener más información.
+
+6) Pulse "OK" para aceptar los cambios en la tecla o "Cancelar" para devolver las acciones originales. 
+
+7) Pulse en "Aplicar cambios a sesión".
+
+8) Pruebe los cambios de correlación de teclado en la sesión del emulador; no salga del programa Cambio de correlación de teclado. 
+
+9) En el programa Cambio de correlación de teclado, puede realizar más cambios de correlación de teclado o "Restaurar" los valores si fuese necesario. 
+
+10) Después de que todos los cambios de correlación de teclado se hayan aplicado y probado, guarde los cambios. 
+
+11) Salga del programa Cambio de correlación de teclado. 
+
+++++"Edición de un área de texto de acción"
+Un  área de texto de acción está situada a la derecha de cada botón modificador y muestra la acción (o acciones) correlacionada con la tecla actual para este modificador. Las área de texto de acción se pueden cambiar utilizando el teclado. Pulse en el área de texto de acción deseada y cambie la utilización del teclado. Pulse "OK" para aceptar los cambios. 
+
+Las acciones cambiadas se deben escribir correctamente y son sensibles a las mayúsculas y minúsculas. Las acciones múltiples se deben separar mediante un espacio en blanco.
+
+Si se encuentra un error de texto de acción, se visualiza un diálogo de aviso y la acción con el error se resalta. 
+
+La pulsación en un área de texto la hace activa. Si se pulsa un botón modificador mientras el área de texto de la acción asociada está activa, la acción actual se inserta en el área de texto de acción, en la posición del cursor. Si se pulsa un botón modificador y el área de texto de la acción asociada no está activa, la acción actual sustituye la acción o acciones anteriores. 
+
+//// Note: The translation of String() and Play() below should match the translated resource text for AllShare*string() and Keyxxx52*play() in the keyboard remapping resource file.
+La tecla Control y las teclas Alt + números 0 al 9 del área numérica del teclado no soportan texto con paréntesis de área de texto de acción. Serie() y Reproducir() no soportan texto para estas combinaciones de tecla.
+
+++++"Aplicar cambios de correlación de teclado"
+El botón Aplicar cambios a sesión aplica temporalmente los cambios de correlación de teclado a la sesión de emulador en la que se ha iniciado el programa Cambio de correlación de teclado. Los cambios se pueden entonces probar. Consulte el apartado "Guardar cambios de correlación de teclado" para obtener información sobre cómo guardar los cambios para su utilización posterior. 
+
+++++"Guardar los archivos de correlación de teclado"
+El botón Guardar guarda los cambios de correlación de teclado para su posterior utilización. Los cambios de correlación de teclado se guardan en un archivo de correlación de teclado. El usuario selecciona la manera en que se guardan los cambios de correlación de teclado: como el archivo de correlación de teclado por omisión, que se utiliza para todas las sesiones, o como un archivo de correlación de teclado específico de sesión, utilizado solamente para la sesión desde la que se ha iniciado el programa Cambio de correlación de teclado. 
+
+Un archivo de correlación de teclado especifico de sesión permite distintas acciones de teclado en diferentes sesiones 3170. Un archivo de correlación de teclado específico de sesión tiene la prioridad más alta y se utiliza para la sesión específica en la que el archivo de correlación de teclado se ha creado (utilizando el número de sesión de la sesión 3270 y el nombre de sesión).
+
+Un archivo de correlación de teclado por omisión tiene la segunda prioridad más alta y se utiliza para todas las sesiones que no tienen un archivo de correlación de teclado específico de sesión. 
+
+Consulte el apartado "Suprimir archivos de correlación de teclado" para obtener información sobre la supresión de un archivo de correlación de teclado. 
+
+++++"Suprimir archivos de correlación de teclado"
+Seleccione el botón "Suprimir" en la barra de acciones para suprimir los archivos de correlación de teclado que se han creado. Seleccione cualquier archivo de correlación de teclado que se vaya a suprimir y luego pulse el botón de supresión. 
+
+++++"Restaurar la correlación de teclado"
+Si se han realizado cambios de correlación de teclado no deseables, la correlación de teclado se puede restaurar a:
+
+1) La correlación de teclado original que se ha leído cuando el programa Cambio de correlación de teclado se ha iniciado. 
+
+2) El estado de la última aplicación; esta es la última correlación que se ha aplicado a la sesión utilizando el botón Aplicar desde la barra de acciones. 
+
+Restaurar no guarda o aplica las correlaciones de teclado restauradas. Restaura las conversiones para el programa Cambio de correlación de teclado. 
+
+Para restaurar las correlaciones de un mapa de teclado por omisión, suprima el archivo de correlación de teclado especifico de la sesión para la sesión y vuelva a iniciar ésta.
+
+++++"Macros de teclado sencillas"
+Una macro de teclado es una secuencia de pulsaciones de teclas que el usuario puede entrar fácilmente en la sesión del emulador. Las macros de teclado sencillas se pueden crear utilizando el programa Cambio de correlación de teclado. Las secuencias de teclado largas o complejas deberán crearse utilizando la función Grabar y Reproducir. Consulte los temas Grabar y Reproducir del texto de ayuda del emulador principal. 
+
+Creación de una macro de teclado sencilla:
+
+1) Pulse la tecla en el teclado gráfico que vaya a ejecutar la macro de teclado. 
+
+//// Note: The translation of String() below should match the translated resource text for AllShare*string() in the keyboard remapping resource file.
+2) Desplácese a la acción Serie() de la Lista de acciones disponibles y pulse en Serie().
+
+3) Pulse en el botón de modificador deseado para la tecla seleccionada. 
+
+4) Pulse entre los paréntesis de Serie() en el área de tecla/acción.
+
+5) Escriba una comilla doble, los datos de la macro de teclado y otra comilla doble; por ejemplo, Serie("los datos").
+
+6) Pulse OK para aceptar los cambios. 
+
+7) Pulse en Aplicar cambios a sesión.
+
+8) Pruebe la macro de teclado; pulse la secuencia de teclas en la sesión del emulador. Puede cambiar la macro de teclado si lo desea. Pulse en Guardar. 
+
+Nota: Se pueden correlacionar múltiples acciones para una sola tecla. Para hacerlo, pulse en el área de texto de la acción deseada y escriba las series de acciones que quiera. También puede pulsar en el área de texto de la acción deseada y pulsar los botones modificadores para insertar las series de acciones de la lista de acciones y lista de caracteres disponibles. Las acciones múltiples se deben separar mediante un espacio en blanco.
+
+Nota: Si desea crear una macro utilizando múltiples combinaciones de modificadores que no estén disponibles en el área de tecla/acción, puede utilizar la función Cambio de correlación de teclado avanzado (consulte el tema Cambio de correlación de teclado avanzado).
+
+++++"Archivos de reproducción"
+Puede correlacionar un archivo de reproducción en una secuencia de teclas. Grabe un archivo de reproducción utilizando la función de grabación (consulte la ayuda para la grabación en el tema Grabar, en el texto de ayuda principal del emulador).
+
+////Note: The translation of Play() below should match the translated resource text for Keyxxx52*play() in the keyboard remapping resource file.
+A continuación, en el cambio de correlación de teclado, seleccione la tecla para iniciar el archivo de reproducción. Asigne la acción Reproducir() a la secuencia de teclas. Pulse con el ratón entre los paréntesis de Serie() en el área de tecla/acción. Escriba el nombre de archivo de reproducción entre los paréntesis. 
+
+++++"Sin acción"
+Para hacer que una secuencia de teclas no realice ninguna acción, pulse el botón "Sin acción" en el área de selección de acción y pulse el botón modificador para la secuencia de teclas deseada. A continuación, acepte los cambios con el botón "OK".
+
+////Note: The translation of Dead Key below should match the translated resource text for Keyxxx52*unmappable() in the keyboard remapping resource file.
+Nota: Un tecla con Tecla sin avance en el área de texto de acción no se podrá correlacionar porque el sistema operativo procesa teclas nulas. 
+
+////Note: The translation of Undefined below should match the translated resource text for Keyxxx52*undefined() in the keyboard remapping resource file.
+Nota: Una tecla con No definida en el área de texto de acción se puede correlacionar. 
+
+++++"Localizar acciones"
+Para buscar la pulsación, o pulsaciones, de tecla que están correlacionadas con una acción, seleccione la acción en la lista de acciones disponibles y pulse el botón Localizar en el área de selección de acción. 
+
+Todas las teclas correlacionadas con la acción localizada se resaltan y la primera tecla encontrada se convierte en la tecla actual el área tecla/acción.
+
+La localización no está permitida para elementos que no son una acción, carácter de lista de caracteres o macro de teclado. 
+
+++++"Lista de caracteres"
+La lista de caracteres permite acceder a los caracteres a los que no se puede acceder desde el teclado. 
+
+Especificar un carácter para una secuencia de teclas: Pulse en al tecla del teclado gráfico que visualizará el carácter. Pulse sobre el carácter deseado de la lista de caracteres. Pulse en el botón de modificador deseado. Pulse OK para aceptar el cambio y aplicarlo a la sesión. 
+
+Añadir un carácter a una macro de teclado: Pulse en la tecla del teclado gráfico que visualice la macro de teclado. Pulse sobre el carácter deseado de la lista de caracteres. Pulse en el área de texto de acción de la macro de teclado (con la acción Serie()), en la localización en la que se debe insertar el carácter añadido (las teclas de cursor a izquierda y a derecha pueden desplazar el cursor a la posición correcta). Pulse en el botón de modificador deseado. Pulse OK para aceptar el cambio y aplicarlo a la sesión. 
+
+++++"Teclas de Window Manager"
+El programa Window Manager procesa determinadas teclas; por ejemplo, la secuencia de teclas para mover una ventana y colocarla de fondo. Las teclas de Window Manager no están disponibles para el cambio de correlación de teclado utilizando el programa Cambio de correlación de teclado.
+
+////3270
+++++"Emulación de lápiz óptico"
+Se puede emular un lápiz óptico (seleccionando un campo) mediante una secuencia de teclas o el ratón. Puede definir la secuencia de teclas o el ratón utilizando el programa de cambio de correlación de teclado. 
+
+//// Note: The translation of PenSelectField() below should match the translated resource text for Keyxxx52*select-field() in the keyboard remapping resource file.
+Secuencia de teclas: Pulse la tecla deseada en el teclado gráfico y asigne la acción CampoSeleccionLapiz() a la secuencia de teclas deseada.
+
+////Note: Do not translate Alt<KeyPress>Insert: select-field() and Alt<Btn3Down>: select-field() below.
+Ratón: Determina la secuencia del ratón para emular el lápiz óptico; no inhabilite una función del ratón que sea útil. Puede resultar más fácil asignar temporalmente la acción CampoSeleccionLapiz() a una secuencia de teclas tal como se ha descrito anteriormente. No sobregrabe una secuencia de teclas útil (por ejemplo, Alt-Insert está normalmente disponible). A continuación, utilice Cambio de correlación de teclado avanzado (consulte el tema de ayuda Cambio de correlación de teclado avanzado para obtener más ayuda) para editar la secuencia de teclas, que deberá ser la primera secuencia de teclas de la lista. Por ejemplo, cambie Alt<KeyPress>Insert: select-field() por Alt<Btn3Down>: select-field(). En este caso, la tecla Alt más el botón derecho del ratón emularán el lápiz óptico.
+////9999
+
+++++"Conversiones no visualizables"
+Las conversiones no visualizables solamente se producen si se añaden conversiones utilizando Cambio de correlación de teclado avanzado o dispone de un archivo de correlación de teclado que se ha creado utilizando una versión anterior del programa Cambio de correlación de teclado. 
+
+En el Cambio de correlación de teclado avanzado (y la versión anterior del programa Cambio de correlación de teclado), se permiten varias conversiones de modificador. Esos modificadores no se visualizan en el área de tecla/acción. 
+
+Si existe una conversión para la tecla actual que no se puede visualizar, se presenta un mensaje en el área de mensajes. Esta conversión solamente se puede visualizar, editar o eliminar utilizando la función Cambio de correlación de teclado avanzado. Estas conversiones podrían proporcionar funciones útiles; el programa Cambio de correlación de teclado no modificará estas conversiones. 
+
+++++"Imprimir archivos de correlación de teclado"
+Se puede realizar la impresión del archivo de correlación de teclado actual seleccionando el botón "Imprimir" desde la barra de acciones y eligiendo las opciones de impresión desde el diálogo de impresión. Cada secuencia de tecla/modificador en el teclado se lista con la acción resultante. No obstante, las secuencias de teclas creadas utilizando la función Cambio de correlación de teclado avanzado no se imprimen. 
+
+++++"Cambio de correlación de teclado avanzado"
+Aviso: El Cambio de correlación de teclado avanzado tiene el potencial de producir resultados no deseados y podría causar problemas significativos en la sesión del emulador. Si esto ocurriese, realice la recuperación corrigiendo los cambios de correlación de teclado (modificar y aplicar) o suprimiendo el archivo de correlación de teclado. Después de suprimir el archivo de correlación de teclado se debe salir de la sesión del emulador y volver a iniciarla. 
+
+El Cambio de correlación de teclado avanzado proporciona a los usuarios experimentados la oportunidad de editar la lista de conversiones internas de pulsaciones de tecla asociada con la sesión del emulador. 
+
+Pulse y mantenga pulsada la tecla "Alt", a continuación pulse la tecla "a" para iniciar la función Cambio de correlación de teclado avanzado. 
+
+La ventana Cambio de correlación de teclado avanzado contiene la lista de conversiones internas y los cuatro botones siguientes: 
+
+1) "Editar" la primera conversión seleccionada de la lista.
+
+2) "Insertar" una línea en blanco antes de la conversión seleccionada. 
+
+3) "Eliminar" todas las conversiones seleccionadas de la lista (verifique que desea eliminar todas conversiones seleccionadas antes de pulsar Eliminar). 
+
+4) "Cerrar" la ventana Cambio de correlación de teclado avanzada.
+
+Localización de elementos en la Lista de conversión: Cuando se pulsa una tecla en el teclado gráfico, todas las conversiones correlacionadas con esa tecla se resaltan en la lista de conversiones. La lista se ajusta automáticamente para hacer visible la primera conversión seleccionada. 
+
+Para localizar una acción dentro de la lista de conversiones, seleccione la acción en la lista principal de acciones disponibles y pulse el botón localizar. Las teclas que utilizan esta acción se resaltan. 
+
+Precedencia de conversión: Las conversiones deben estar en el orden correcto. La lista de conversiones se inspecciona desde el inicio hacia abajo buscando una conversión que coincida con una pulsación de tecla. Se utiliza la primera entrada que se encuentra que cumple los requisitos. Las entradas de la lista de conversiones que tienen la más modificadores en ellas (más específicas) están situadas antes de aquellas con menos. 
+
+Por ejemplo: 
+
+////5250
+////In the following two lines, only "must come before" should be translated.
+  Alt<KeyPress>Print: sysreq() debe ir antes
+  <KeyPress>Print: print()
+
+"sysreq" se selecciona cuando se pulsa la tecla Imprimir y la tecla Alt se mantiene pulsada (otras teclas de modificador se pueden mantener pulsadas). "print" se selecciona cuando se pulsa la tecla Imprimir (otras teclas de modificador se pueden mantener pulsadas). Si <KeyPress>Print: print() estuviese antes de Alt<KeyPress>Print: sysreq(), Alt<KeyPress>Print: sysreq() no se procesaría nunca puesto que <KeyPress>Print: print() debería procesarse en primer lugar.
+////3270
+  Alt<KeyPress>Print: sysreq()  debe ir antes
+  <KeyPress>Print: pa1()
+
+"sysreq" se selecciona cuando se pulsa la tecla Imprimir y la tecla Alt se mantiene pulsada (otras teclas de modificador se pueden mantener pulsadas). "pa1" se selecciona cuando se pulsa la tecla Imprimir (otras teclas de modificador se pueden mantener pulsadas). Si <KeyPress>Print: pa1() estuviese antes de Alt<KeyPress>Print: sysreq(), Alt<KeyPress>Print: sysreq() no se procesaría nunca porque <KeyPress>Print: pa1() debería procesarse en primer lugar.
+////9999
+
+Estructura de conversiones:
+
+////In the following line, "<KeyPress>" should not be translated.
+  Modifier Modifier<KeyPress>Key: action() action()
+
+No se requiere ningún modificador. Se soportan múltiples modificadores. Se requiere una acción. Se soportan múltiples acciones. 
+
+Modificadores reconocidos por Cambio de correlación de teclado: 
+
+////In the following list, the left column ("Any" through "Mod5") should not be translated. The information in parenthesis to the right should be translated.
+////5250
+Any      (lo mismo que sin modificador)
+Shift    (desplazamiento)
+Lock     (bloqueo de mayúsculas o bloqueo de desplazamiento)
+Ctrl     (tecla Control izquierda)
+Alt      (alternativa)
+Mod2     (tecla Alt derecha, Alt Gráfica)
+Mod3     (no utilizado en este momento)
+Mod4     (no utilizado en este momento)
+Mod5     (Bloq_Num)
+////3270
+Any      (lo mismo que sin modificador)
+Shift    (desplazamiento)
+Lock     (bloqueo de mayúsculas o bloqueo de desplazamiento)
+Ctrl     (tecla Control izquierda)
+Alt      (alternativa)
+Mod2     (tecla Alt derecha, Alt Gráfica)
+Mod3     (no utilizado en este momento)
+Mod4     (no utilizado en este momento)
+Mod5     (Bloq_Num)
+////9999
+
+El programa Cambio de correlación de teclado también reconoce la indicación (!) exclusiva al principio de la lista de modificadores. 
+
+////5250
+////Do not translate "reset()" and "Ctrl" below.
+La acción reset() se correlaciona con la tecla Control izquierda (la acción de restauración no deberá moverse). Si especifica el modificador Ctrl para seleccionar una acción, la tecla Control izquierda procesará la acción reset() antes de que se procese la acción que haya especificado.
+////9999
+
+////Do not translate "enter()", "newline()", and "Control_R" below.
+La acción enter() o newline() está normalmente situada en la tecla Control_R.

@@ -1,0 +1,559 @@
+!
+!
+!
+! This file contains the resource text strings for the IBM Network Station 3270, 5250, and
+! VTxxx emulators, in particular the miscellaneous preferences program.
+
+! This resource file will be stored on all servers in locale specific ASCII (819 for Latin1
+! languages). 
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. This resource file contains text strings for the 3270 and 5250 emulators.  Much of
+!    the resource text is common to all emulators. Some is specific to one emulator.
+!    Miscpref = Resources used by both 3270 and 5250 emulators.
+!    Miscpr32 = Resources used by the 3270 emulator.
+!    Miscpr52 = Resources used by the 5250 emulator.
+!    MiscprVT = Resources used by the VT emulator.
+! 4. Resource format: 
+!    - A resource line starts with Miscpref*, Miscpr32*, Miscpr52*,or MiscprVT*, followed by 
+!      a resource name and a ":".  Do NOT make any changes to the text to the left
+!      of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+!******************************************************************************
+!************************ BEGIN DO NOT TRANSLATE ******************************
+!******************************************************************************
+!*   The first section of resources are are locale specific but               *
+!*   DO NOT REQUIRE TRANSLATION.                                              *
+!*                                                                            *
+!* This source file enables the resource section for Latin1 and Latin2.       *
+!*                                                                            *
+!* For ru_RU or Latin5 locales and DBCS locales                               *
+!*      1. Place a '!' as the first character in each line in the Latin1      *
+!*      and Latin2 section                                                    *
+!*      2. Remove the '!' character for each resource line in the apropriate  *
+!*      section that matches your locale.                                     *
+!*                                                                            *
+!* For example, ru_RU should place ! in front of all lines in the LATIN1      *
+!* section remove the ! from all lines in the LATIN5 section.                 *      
+!******************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN1 and LATIN2                ****************
+!**************************************************************************
+Miscpref*extra_Large_Font_List: -*-*-medium-r-normal-*-*-*-*-*-m-110-*-*
+Miscpref*large_Font_List:       -*-*-medium-r-normal-*-*-*-*-*-m-90-*-*
+Miscpref*medium_Font_List:      -*-*-medium-r-normal-*-*-*-*-*-m-70-*-*
+Miscpref*small_Font_List:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+!**************************************************************************
+!****************   END LATIN1 and LATIN2                  ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN5                           ****************
+!**************************************************************************
+!Miscpref*extra_Large_Font_List: -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*
+!Miscpref*large_Font_List:       -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!Miscpref*medium_Font_List:      -*-*-medium-r-normal-*-*-*-*-*-c-70-*-*
+!Miscpref*small_Font_List:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!**************************************************************************
+!****************   END   LATIN5                           ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (ja_JP ko_KR zh_CN)   ****************
+!**************************************************************************
+!Miscpref*extra_Large_Font_List: -*-*-medium-r-normal-*-24-*-*-*-c-*
+!Miscpref*large_Font_List:       -*-*-medium-r-normal-*-16-*-*-*-c-*
+!Miscpref*medium_Font_List:      -*-*-medium-r-normal-*-16-*-*-*-c-*
+!Miscpref*small_Font_List:       -*-*-medium-r-normal-*-16-*-*-*-c-*
+!**************************************************************************
+!****************   END DBCS (ja_JP ko_KR zh_CN)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (zh_TW)   ****************
+!**************************************************************************
+!Miscpref*extra_Large_Font_List: -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Miscpref*large_Font_List:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Miscpref*medium_Font_List:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Miscpref*small_Font_List:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!**************************************************************************
+!****************   END DBCS (zh_TW)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   END DO NOT TRANSLATE                   ****************
+!**************************************************************************
+
+!*******************************************************************
+!*******   Miscellaneous Preferences Resources           ***********
+!*******************************************************************
+Miscpr52*title:     5250 Miscellaneous Preferences
+
+Miscpr32*title:     3270 Miscellaneous Preferences
+
+MiscprVT*title:     VT Emulator Miscellaneous Preferences
+
+Miscpref*iconName:  Miscellaneous Preferences
+
+Miscpref*okLabelString: OK
+
+Miscpref*cancelLabelString: Cancel
+
+
+!***********************************************
+!**     Action Bar Area Resources             **
+!***********************************************
+Miscpref*saveButton.labelString: Save
+
+Miscpref*exitButton.labelString: Exit
+
+Miscpref*setDefaultsButton.labelString: Set Defaults
+
+Miscpref*helpButton.labelString: Help
+
+
+!*********************************************************
+!**     Preference Buttons Area Resources               **
+!**							**
+!*********************************************************
+Miscpref*preferencesListInstructions.labelString: Select a preference
+
+Miscpref*CursorStyleItem:                         Cursor Style
+
+Miscpr52*EnterKeyLocationItem:                    Enter/Field Exit Key
+
+Miscpr32*EnterKeyLocationItem:                    Enter Key
+	
+Miscpr52*AutomaticHelpItem:                       Automatic Help
+
+Miscpr52*BlueUnderscoreItem:                      Blue Underscore
+
+Miscpref*RowColumnIndicatorItem:                  Row Column Indicator
+
+Miscpref*DestructiveBackspaceItem:                Destructive Backspace
+
+Miscpref*RuleLineEnableItem:                      Rule Line Enable
+
+Miscpref*RuleLineStyleItem:                       Rule Line Style
+
+Miscpref*PasteStartLocationItem:                  Paste Start Location
+
+Miscpref*CursorBlinkItem:                         Cursor Blink
+
+Miscpr52*LargeScreenBehaviorItem:                 Large Screen Behavior
+
+Miscpref*PrintKeyLocationItem:                    Print Key
+
+Miscpr32*BracketItem:                             Bracket
+
+Miscpr32*AutomaticReconnectItem:                  Automatic Reconnect
+
+Miscpref*HotspotsItem:                            Hotspots
+
+Miscpref*TypeAheadItem:                           Keyboard Buffering
+
+Miscpr52*ErrorResetKeys:                          Error Reset Keys
+
+Miscpref*HotspotHighlight:                        Hotspot Highlighting
+
+Miscpref*DefaultCopyType:                         Default Copy Type
+
+Miscpref*TextType:                                Text Type
+
+Miscpref*TextOrientation:                         Text Orientation
+
+Miscpref*NumeralShape:                            Numeral Shape
+
+Miscpref*InsertMode:                              Insert Mode
+
+Miscpref*InputOnlyCursorMovement:                 Input Only Cursoring
+
+Miscpref*AudioAlarm:                              Audio Alarm
+
+MiscprVT*CursorBlinkItem:           Cursor Blink
+
+MiscprVT*ApplicationCursor:         Application Cursor Mode
+
+MiscprVT*ApplicationKeypad:         Application Keypad Mode
+
+MiscprVT*AutoLineFeed:              Auto Line Feed
+
+MiscprVT*AutoResize:                Auto Resize
+
+MiscprVT*AutoWrapAround:            Auto Wrap Around
+
+MiscprVT*ClearScreenWithBlanks:     Clear Screen With Blanks
+
+MiscprVT*ExitOnDisconnect:          Exit On Disconnect
+
+MiscprVT*JumpScroll:                Jump Scroll
+
+MiscprVT*MarginBell:                Margin Bell
+
+MiscprVT*MarginBellColumn:          Margin Bell Column
+
+MiscprVT*ReverseWrapAround:         Reverse Wrap Around
+
+MiscprVT*VisibleStatusLine:         Visible Status Line
+
+MiscprVT*VisualBell:                Visual Bell
+	
+!*************************************************************
+!**     Preference Text Area Resources (Explanation Box)    **
+!*************************************************************
+Miscpref*CursorStyleText.value: The possible cursor styles include underscore and block cursors.  The cursor style may be set to underscore always, block always or a combination of underscore and block depending on whether or not insert mode is set.
+
+MiscprVT*CursorStyleText.value: The cursor style may be set to underscore always or block always.
+
+MiscprVT*CursorBlinkText.value: Cursor blinking may be enabled or disabled. If the blinking cursor is enabled, it will only blink when the window has focus.
+
+MiscprVT*ApplicationCursorText.value: Cursor keys may be in application mode or cursor mode initially.  When in application mode, ANSI escape sequences are generated rather than standard cursor movements when the arrow keys are used.
+
+MiscprVT*ApplicationKeypadText.value: Keypad keys may be in application mode or numeric mode initially.  When in application mode, control functions are generated rather than numeric characters when the keypad is used.
+
+Miscpr52*EnterKeyLocationText.value: The keys for the enter, newline and field exit functions may be changed from their default mappings below. Various combinations of these functions on the Enter and Right Ctrl key are provided.
+
+Miscpr32*EnterKeyLocationText.value: The keys for the enter and newline functions may be changed from their default mappings below. Various combinations of these functions on the Enter and Right Ctrl key are provided.
+
+Miscpr52*AutomaticHelpText.value: The Help key can be automatically pressed as a result of a keyboard operator error.  An automatic Help key typically displays one line of first level help text explaining the operator error.  Disabling the automatic Help key causes the four digit operator error to be displayed. In that case, the user may still manually press the Help key to obtain first level help text.
+
+Miscpr52*BlueUnderscoreText.value: The default underscore color may be changed to blue.
+
+Miscpref*RowColumnIndicatorText.value: The row column indicator is the row and column of the cursor position displayed on the right side of the status line. The row column indicator may be displayed or not displayed. Note, if the cursor is not displayed, the row column indicator is also not displayed regardless of this setting.
+
+Miscpref*DestructiveBackspaceText.value: The backspace function can be destructive or non-destructive. If destructive, the backspace function erases data as the cursor is moved backwards through entry fields. If non-destructive, the backspace function does not erase data as the cursor is moved backwards through entry fields.
+
+Miscpref*RuleLineEnableText.value: The rule line helps display the location or former location of the cursor.  It can be completely disabled, enabled at all times, or controlled by the rule line key. When controlled by the rule line key, it may remain stationary or follow the cursor.
+
+Miscpref*RuleLineStyleText.value: When the rule line is displayed, it can take one of three forms: a horizontal line, a vertical line, or both horizontal and vertical lines.
+
+Miscpref*PasteStartLocationText.value: The paste operation associated with the shifted secondary mouse button press may be defined to occur at the cursor location or at the mouse pointer location. Note, this preference does not affect pasting from the pull down menu. Pull down menu paste is always done at the cursor location.
+
+Miscpr52*CursorBlinkText.value: Cursor blink may be enabled or disabled. When enabled, cursor blink is under application control. When disabled, the cursor never blinks.
+
+Miscpr32*CursorBlinkText.value: Cursor blink may be enabled or disabled. When enabled, the cursor always blinks. When disabled, the cursor never blinks.
+
+Miscpr52*LargeScreenBehaviorText.value: The 5250 emulator may be configured to automatically move the window and/or reduce the font size, if needed, when a large screen size is entered. This is done when the new window size will not fit on the screen at the current position and/or font size.
+
+Miscpr52*PrintKeyLocationText.value: Unless overridden by keyboard remapping, the default mapping for the Print key is the system print function while the Shifted Print key provides the local screen print function.  Some users may prefer the Print key to provide the local screen print function and the Shifted Print key to provide the system print function.
+
+Miscpr32*PrintKeyLocationText.value: Unless overridden by keyboard remapping, the default mapping for the Print key is the pa1 function while the Shifted Print key provides the local screen print function.  Some users may prefer the Print key to provide the local screen print function and the Shifted Print key to provide the pa1 function.
+
+Miscpr32*BracketText.value: Enabling the Bracket option allows conversion of the square bracket characters to be done correctly.
+
+Miscpr32*AutomaticReconnectText.value: The 3270 emulator window can either be removed from the screen or left on the screen when a user logs off. When left on the screen the emulator automatically attempts to reconnect to the host system.
+
+Miscpref*HotspotsText.value: Hotspots are screen positions that perform actions when the mouse pointer is clicked on them. For example, with the mouse pointer on 'PF1' or 'F1', and hotspots are enabled, a click is processed like the F1 key has been pressed. Hotspots may be disabled, enabled on the primary button single click, or enabled on the primary button double click. When hotspots are disabled or enabled on the primary button single click, the primary button double click is processed like the Enter key has been pressed.
+
+Miscpref*TypeAheadText.value: Keyboard buffering stores keystrokes that are typed while the keyboard is locked (input inhibited). These keys are later processed when the keyboard unlocks. Enabling keyboard buffering forces it to be on always. Disabling keyboard buffering forces it to be off always.
+
+Miscpr52*ErrorResetKeysText.value: The 5250 emulator keys to reset errors may be configured below. The reset key and a left mouse click on the error line always reset errors. In addition, users may select to have cursor movement keys (tab, newline, arrow, backspace) and other mouse clicks to also reset errors.
+
+Miscpref*HotspotHighlightText.value: The emulator may be configured to highlight hotspots. If hotspots are enabled and hotspot highlighting is also enabled, any hotspots on a screen are highlighted.
+
+Miscpref*DefaultCopyTypeText.value: The default copy type is the type of copy area associated with the single press and drag operation on the primary mouse button. It is also the copy type associated with the keyboard copy area marking. 
+
+Miscpref*TextTypeText.value:                                Text Type for Copy and Paste
+
+Miscpref*TextOrientationText.value: Text Orientation for Copy and Paste. Select the global text orientation or paragraph orientation of the external application to which you copy or from which you paste.
+
+Miscpref*NumeralShapeText.value: Numeral Shape for Copy and Paste. Select Nominal if the external application to which you copy or from which you paste works with European digits only. Select National if the application always works with Arabic-Indic digits. Select Contextual mode if the appearance of the digits depends on the segment in which they appear.
+
+Miscpr52*InsertModeText.value: Insert mode defaults off, and in addition to the insert key, it is automatically reset sometimes by applications and the reset key. This automatic reset of insert mode may be disabled, and it may be done with insert mode defaulting on or defaulting off.
+
+Miscpr32*InsertModeText.value: Insert mode defaults off, and in addition to the insert key, it is automatically reset by interaction with applications, like with the enter key, and sometimes by the reset key. This automatic reset of insert mode may be disabled, and it may be done with insert mode defaulting on or defaulting off.
+
+Miscpref*InputOnlyCursorMovementText.value: The arrow keys may be configured to move to input capable positions only. If chosen, the arrows keys always move the cursor to an input capable position. If such a position does not exist, the cursor moves to the first screen position.
+
+Miscpref*AudioAlarmText.value: The audio alarm may be enabled or disabled. When disabled, the audio alarm will never sound.
+
+MiscprVT*AutoLineFeedText.value: Automatic line feed may be enabled or disabled. When automatic line feed is enabled, the VT Emulator will perform a carriage return as well as a line feed when the line feed, vertical tab, or form feed character is sent by the application. In addition, any keys that generate a new line (such as the enter key) will send a carriage return and a line feed to the application. When disabled, only the line feed function will be performed when a line feed, vertical tab or form feed is received. When disabled and the enter key is pressed, only a line feed is sent to the application. 
+
+MiscprVT*AutoResizeText.value: Automatic resize can be enabled or disabled.
+
+MiscprVT*AutoWrapAroundText.value: Automatic wrap around mode may be enabled or disabled.  When enabled, the character that is typed after the cursor reaches the border of the screen automatically appears on the next line.  If automatic wrap around is disabled, then a character typed after the cursor reaches the border replaces the character at the end of the line.
+
+MiscprVT*ClearScreenWithBlanksText.value: The screen may be optionally cleared with blanks.
+
+MiscprVT*ExitOnDisconnectText.value: The terminal may be configured to end upon disconnect with the host.
+
+MiscprVT*JumpScrollText.value: The terminal may be configured to do jump scrolling. With jump scrolling, the screen may be scrolled more than one line at a time. This provides for faster screen updates when multiple lines of text are sent to the terminal. The maximum number of lines that may be jump scrolled is limited to the number of lines in the VT emulator window.
+
+MiscprVT*MarginBellText.value: The terminal may be configured to ring the bell when the user types at the right margin.
+
+MiscprVT*MarginBellColumnText.value: Specifiy the column for the margin bell.
+
+MiscprVT*ReverseWrapAroundText.value: Reverse wrap around may be enabled or disabled. Reverse wrap around allows the cursor to wrap from the first position of the line to the last column of the previous line, allowing the user to backspace to the previous line. Automatic wrap around must also be enabled for reverse wrap to work.
+
+MiscprVT*VisibleStatusLineText.value: The status line may be made visible or invisible. If the status line is made visible, a 25th line at the bottom of the VT emulator window is displayed.  This line may be used by applications to display status information.  When not in use by an application, a cursor row/column indicator is displayed.
+
+MiscprVT*VisualBellText.value: A visual bell (a screen flash) may be substituted for an audible bell.
+
+!*************************************************************
+!**     Preference Text Area Resources (Options area)       **
+!**							    **
+!*************************************************************
+
+Miscpref*PreferenceTextFormForCursorStyle*ToggleButton1.labelString: Underscore cursor
+
+Miscpref*PreferenceTextFormForCursorStyle*ToggleButton2.labelString: Block cursor
+
+Miscpref*PreferenceTextFormForCursorStyle*ToggleButton3.labelString: Block insert cursor, underscore replace cursor
+
+Miscpref*PreferenceTextFormForCursorStyle*ToggleButton4.labelString: Underscore insert cursor, block replace cursor
+
+Miscpref*PreferenceTextFormForEnterKeyLocation*ToggleButton1.labelString: Use the default Enter and Right Ctrl key mappings
+
+Miscpref*PreferenceTextFormForEnterKeyLocation*ToggleButton2.labelString: Enter key = enter, Right Ctrl = newline
+
+Miscpref*PreferenceTextFormForEnterKeyLocation*ToggleButton3.labelString: Enter key = newline, Right Ctrl = enter
+
+Miscpr52*PreferenceTextFormForEnterKeyLocation*ToggleButton4.labelString: Enter key = enter, Right Ctrl = field exit/newline
+
+Miscpr52*PreferenceTextFormForEnterKeyLocation*ToggleButton5.labelString: Enter key = field exit/newline, Right Ctrl = enter
+
+Miscpr52*PreferenceTextFormForAutomaticHelp*ToggleButton1.labelString: Enable automatic help key for operator errors
+
+Miscpr52*PreferenceTextFormForAutomaticHelp*ToggleButton2.labelString: Disable automatic help key for operator errors
+
+Miscpr52*PreferenceTextFormForBlueUnderscore*ToggleButton1.labelString: Enable blue underscore
+
+Miscpr52*PreferenceTextFormForBlueUnderscore*ToggleButton2.labelString: Disable blue underscore
+
+Miscpref*PreferenceTextFormForRowColumnIndicator*ToggleButton1.labelString: Display the row column indicator
+
+Miscpref*PreferenceTextFormForRowColumnIndicator*ToggleButton2.labelString: Do not display the row column indicator
+
+Miscpref*PreferenceTextFormForDestructiveBackspace*ToggleButton1.labelString: Enable destructive backspace
+
+Miscpref*PreferenceTextFormForDestructiveBackspace*ToggleButton2.labelString: Disable destructive backspace
+
+Miscpref*PreferenceTextFormForRuleLineEnable*ToggleButton1.labelString: Disable the rule line
+
+Miscpref*PreferenceTextFormForRuleLineEnable*ToggleButton2.labelString: Display the rule line at the cursor always
+
+Miscpref*PreferenceTextFormForRuleLineEnable*ToggleButton3.labelString: Enable the rule line key (not following the cursor)
+
+Miscpref*PreferenceTextFormForRuleLineEnable*ToggleButton4.labelString: Enable the rule line key (following the cursor)
+
+Miscpref*PreferenceTextFormForRuleLineStyle*ToggleButton1.labelString: Both horizontal and vertical rule lines
+
+Miscpref*PreferenceTextFormForRuleLineStyle*ToggleButton2.labelString: Horizontal rule line only
+
+Miscpref*PreferenceTextFormForRuleLineStyle*ToggleButton3.labelString: Vertical rule line only
+
+Miscpref*PreferenceTextFormForPasteStartLocation*ToggleButton1.labelString: Paste at cursor
+
+Miscpref*PreferenceTextFormForPasteStartLocation*ToggleButton2.labelString: Paste at mouse pointer
+
+Miscpref*PreferenceTextFormForCursorBlink*ToggleButton1.labelString: Disable cursor blink
+
+Miscpref*PreferenceTextFormForCursorBlink*ToggleButton2.labelString: Enable cursor blink
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton1.labelString: Do not move the window or reduce the font size
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton2.labelString: Move the window and, if needed, reduce the font size
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton3.labelString: Reduce the font size only
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton4.labelString: Use/Remember Large Screen Font
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton5.labelString: Reduce the font size and, if needed, move the window
+
+Miscpr52*PreferenceTextFormForPrintKeyLocation*ToggleButton1.labelString: Use the default mappings for the Print key
+
+Miscpr52*PreferenceTextFormForPrintKeyLocation*ToggleButton2.labelString: Print = system print, Shifted Print = local print
+
+Miscpr52*PreferenceTextFormForPrintKeyLocation*ToggleButton3.labelString: Print = local print, Shifted Print = system print
+
+Miscpr32*PreferenceTextFormForPrintKeyLocation*ToggleButton1.labelString: Use the default mappings for the Print key
+
+Miscpr32*PreferenceTextFormForPrintKeyLocation*ToggleButton2.labelString: Print = pa1, Shifted Print = local print
+
+Miscpr32*PreferenceTextFormForPrintKeyLocation*ToggleButton3.labelString: Print = local print, Shifted Print = pa1
+
+Miscpr32*PreferenceTextFormForBracket*ToggleButton1.labelString: Disable bracket conversion
+
+Miscpr32*PreferenceTextFormForBracket*ToggleButton2.labelString: Enable bracket conversion
+
+Miscpr32*PreferenceTextFormForAutomaticReconnect*ToggleButton1.labelString: Window is removed after logoff
+
+Miscpr32*PreferenceTextFormForAutomaticReconnect*ToggleButton2.labelString: Window remains after logoff
+
+Miscpref*PreferenceTextFormForHotspots*ToggleButton1.labelString: Disable hotspots
+
+Miscpref*PreferenceTextFormForHotspots*ToggleButton2.labelString: Enable hotspots on the primary button single click
+
+Miscpref*PreferenceTextFormForHotspots*ToggleButton3.labelString: Enable hotspots on the primary button double click
+
+Miscpref*PreferenceTextFormForTypeAhead*ToggleButton1.labelString: Disable keyboard buffering
+
+Miscpref*PreferenceTextFormForTypeAhead*ToggleButton2.labelString: Enable keyboard buffering
+
+Miscpr52*PreferenceTextFormForTypeAhead*ToggleButton3.labelString: Use the i5/OS host setting
+
+Miscpr52*PreferenceTextFormForErrorResetKeys*ToggleButton1.labelString: Reset key or left mouse button on the error line only
+
+Miscpr52*PreferenceTextFormForErrorResetKeys*ToggleButton2.labelString: Additionally, cursor movement keys and all mouse buttons
+
+Miscpr52*PreferenceTextFormForErrorResetKeys*ToggleButton3.labelString: Most keys and all mouse buttons
+
+Miscpref*PreferenceTextFormForHotspotHighlight*ToggleButton1.labelString: Disable hotspot highlighting
+
+Miscpref*PreferenceTextFormForHotspotHighlight*ToggleButton2.labelString: Enable hotspot highlighting
+
+Miscpref*PreferenceTextFormForDefaultCopyType*ToggleButton1.labelString: Linear copy
+
+Miscpref*PreferenceTextFormForDefaultCopyType*ToggleButton2.labelString: Block copy
+
+Miscpref*PreferenceTextFormForTextType*ToggleButton1.labelString:         Logical text
+
+Miscpref*PreferenceTextFormForTextType*ToggleButton2.labelString:         Visual text
+
+Miscpref*PreferenceTextFormForTextOrientation*ToggleButton1.labelString:  Left to Right
+
+Miscpref*PreferenceTextFormForTextOrientation*ToggleButton2.labelString:  Right to Left
+
+Miscpref*PreferenceTextFormForNumeralShape*ToggleButton1.labelString:     Nominal
+
+Miscpref*PreferenceTextFormForNumeralShape*ToggleButton2.labelString:     National
+
+Miscpref*PreferenceTextFormForNumeralShape*ToggleButton3.labelString:     Contextual
+
+Miscpref*PreferenceTextFormForInsertMode*ToggleButton1.labelString: Insert mode default off with automatic reset enabled
+
+Miscpref*PreferenceTextFormForInsertMode*ToggleButton2.labelString: Insert mode default off with automatic reset disabled
+
+Miscpref*PreferenceTextFormForInsertMode*ToggleButton3.labelString: Insert mode default on with automatic reset disabled
+
+Miscpref*PreferenceTextFormForInputOnlyCursorMovement*ToggleButton1.labelString: Disable input only cursor movement
+
+Miscpref*PreferenceTextFormForInputOnlyCursorMovement*ToggleButton2.labelString: Enable input only cursor movement
+
+Miscpref*PreferenceTextFormForAudioAlarm*ToggleButton1.labelString: Disable the audio alarm
+
+Miscpref*PreferenceTextFormForAudioAlarm*ToggleButton2.labelString: Enable the audio alarm
+
+MiscprVT*PreferenceTextFormForCursorBlink*ToggleButton1.labelString: Disable cursor blink
+
+MiscprVT*PreferenceTextFormForCursorBlink*ToggleButton2.labelString: Enable cursor blink
+
+MiscprVT*PreferenceTextFormForApplicationCursor*ToggleButton1.labelString: Disable application cursor mode
+
+MiscprVT*PreferenceTextFormForApplicationCursor*ToggleButton2.labelString: Enable application cursor mode
+
+MiscprVT*PreferenceTextFormForApplicationKeypad*ToggleButton1.labelString: Disable application keypad mode
+
+MiscprVT*PreferenceTextFormForApplicationKeypad*ToggleButton2.labelString: Enable application keypad mode
+
+MiscprVT*PreferenceTextFormForAutoLineFeed*ToggleButton1.labelString: Disable automatic line feed
+
+MiscprVT*PreferenceTextFormForAutoLineFeed*ToggleButton2.labelString: Enable automatic line feed
+
+MiscprVT*PreferenceTextFormForAutoResize*ToggleButton1.labelString: Disable automatic resize
+
+MiscprVT*PreferenceTextFormForAutoResize*ToggleButton2.labelString: Enable automatic resize
+
+MiscprVT*PreferenceTextFormForAutoWrapAround*ToggleButton1.labelString: Disable automatic wrap around
+
+MiscprVT*PreferenceTextFormForAutoWrapAround*ToggleButton2.labelString: Enable automatic wrap around
+
+MiscprVT*PreferenceTextFormForClearScreenWithBlanks*ToggleButton1.labelString: Disable clear screen with blanks
+
+MiscprVT*PreferenceTextFormForClearScreenWithBlanks*ToggleButton2.labelString: Enable clear screen with blanks
+
+MiscprVT*PreferenceTextFormForExitOnDisconnect*ToggleButton1.labelString: Disable exit on disconnect
+
+MiscprVT*PreferenceTextFormForExitOnDisconnect*ToggleButton2.labelString: Enable exit on disconnect
+
+MiscprVT*PreferenceTextFormForJumpScroll*ToggleButton1.labelString: Disable jump scrolling
+
+MiscprVT*PreferenceTextFormForJumpScroll*ToggleButton2.labelString: Enable jump scrolling
+
+MiscprVT*PreferenceTextFormForMarginBell*ToggleButton1.labelString: Disable the margin bell
+
+MiscprVT*PreferenceTextFormForMarginBell*ToggleButton2.labelString: Enable the margin bell
+
+MiscprVT*PreferenceTextFormForMarginBellColumn*textFieldLabel.labelString: Columns from end of row
+
+MiscprVT*PreferenceTextFormForReverseWrapAround*ToggleButton1.labelString: Disable reverse wrap around
+
+MiscprVT*PreferenceTextFormForReverseWrapAround*ToggleButton2.labelString: Enable reverse wrap around
+
+MiscprVT*PreferenceTextFormForVisibleStatusLine*ToggleButton1.labelString: Disable the status line
+
+MiscprVT*PreferenceTextFormForVisibleStatusLine*ToggleButton2.labelString: Enable the status line
+
+MiscprVT*PreferenceTextFormForVisualBell*ToggleButton1.labelString: Disable the visual bell
+
+MiscprVT*PreferenceTextFormForVisualBell*ToggleButton2.labelString: Enable the visual bell
+
+
+
+!**************************************
+!**   Messages at bottom of window   **
+!**************************************
+
+Miscpr52*MiscprefMsgHelpRequested:     Help requested from 5250 session.
+
+Miscpr32*MiscprefMsgHelpRequested:     Help requested from 3270 session.
+
+MiscprVT*MiscprefMsgHelpRequested:     Help requested from VT Emulator session.
+
+Miscpref*MiscprefMsgPreferenceApplied: Preference temporarily applied.
+
+Miscpref*MiscprefMsgPreferencesSaved:  Preferences saved.
+
+Miscpref*MiscprefMsgDefaultsApplied:   Default preferences temporarily applied.
+
+Miscpref*MiscprefMsgDefaultsNotSet:    Default preferences not set.
+
+Miscpref*MiscprefMsgNoAccess:          Unable to access directory.
+
+
+Miscpref*MiscprefMsgNoMake:            Unable to make directory.
+
+Miscpref*MiscprefMsgFileOpenError:     Error while saving:  Unable to open file.
+
+Miscpref*MiscprefMsgFileWriteError:    Error while saving:  Unable to write file.
+
+
+
+!********************************
+!**  Dialog Box Resources      **
+!********************************
+Miscpref*exitDialog.dialogTitle:              Exit Warning
+
+Miscpref*exitDialog.okLabelString:            Save
+
+Miscpref*exitDialog.cancelLabelString:        Do not save
+
+! this cannot be much longer
+Miscpref*exitDialog.messageString:            There are unsaved changes to the miscellaneous preferences.
+
+Miscpref*setDefaultsDialog.dialogTitle:       Set Defaults Warning
+
+Miscpref*setDefaultsDialog.okLabelString:     Yes
+
+Miscpref*setDefaultsDialog.cancelLabelString: No
+
+! this cannot be much longer
+Miscpref*setDefaultsDialog.messageString:     Do you really want to set all preferences to their default values?
+/*******************************************************************************
+**  saveDialog resource
+*******************************************************************************/
+MiscprVT*saveDialog.dialogTitle: Save Options
+
+MiscprVT*saveDialog*saveDialogTitle.labelString: Choose a save option.
+
+MiscprVT*saveDialog*saveChangedOnly.labelString: Save changed preferences only
+
+MiscprVT*saveDialog*saveAll.labelString: Save all preferences
+
+MiscprVT*saveDialog*saveButton.labelString: Save
+
+MiscprVT*saveDialog*cancelButton.labelString: Cancel

@@ -1,0 +1,103 @@
+//// ENGLISH_SOURCE_VERSION= 1.2 
+////This file contains the color mapping program on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file will be stored in locale specific ASCII (code page 819 for Latin1 languages).
+
+
+////Help text format (this section is not displayed to IBM emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1.
+//// 3. This help file contains help text for the 3270 and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator.   A comment line of four "/" characters followed by
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+//// 3B.  "5250" indicates subsequent data is only displayed in 5250 on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in both 3270 and 5250 on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+////  3D. Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters. The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Do not change the order of topics in this help text file.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+
+----"3270 颜色映射帮助"
+++++"一般信息"
+有关使用此帮助查看程序的信息，请参阅仿真器主帮助中的第一个主题（在“仿真器”窗口中选择“帮助”菜单栏选项）。
+
+此帮助信息描述可以如何使用颜色映射程序来更改 3270 仿真器会话的颜色。
+
+注意：每次只能有一个颜色映射程序处于活动状态。
+
+++++"颜色映射文件选择"
+当 3270 会话启动时，3270 仿真器就会搜索该会话的颜色映射文件。使用以下顺序；如果找到颜色映射文件，则将其用于 3270 会话：
+
+- 搜索您使用颜色映射程序选择的特定于会话的颜色映射文件。
+
+- 搜索您使用颜色映射程序选择的缺省颜色映射文件。
+
+- 如果上述两个颜色映射文件都找不到，则 3270 仿真器使用缺省颜色（黑色背景）。
+
+++++"窗口布局"
+对于“基本颜色映射”，“颜色映射”窗口包含颜色方案选择区域（左边）、样本“帮助”程序和 3270 会话窗口区域（右下角）以及操作栏／消息区域（底部）。
+
+对于“高级颜色映射”，“颜色映射”窗口包含构造选择区域（左边）、颜色选择区域（右上角）、样本“帮助”程序和 3270 会话窗口区域（右下角）以及操作栏／消息区域（底部）。
+
+颜色选择区域包含下列内容：
+
+1) 多色栏，它包含 20 种颜色，当选择映射到其中一个构造的新颜色时，可以从这些颜色开始。
+
+2) 红色／绿色／蓝色滑动器，它们对正在映射到其中一个构造的新颜色进行微调。
+
+3) “当前颜色”窗口，当多色栏和红色／绿色／蓝色滑动器正在修改颜色时，此窗口显示新颜色。
+
+4) “应用当前颜色”按钮，此按钮将颜色更改应用于样本“帮助”程序和 3270 会话窗口区域。必须先执行此操作，然后才能将更改应用于会话。
+
+
+“操作栏”按钮提供了下列功能：
+
+1) “保存”，将颜色映射更改保存在颜色映射文件中。
+
+2) “删除”，删除先前创建的颜色映射文件。
+
+3) “将更改应用于会话”（颜色映射程序由该会话启动）。这允许在将更改保存至颜色映射文件之前对它们进行测试。
+
+4) “退出”，从颜色映射程序中退出。
+
+5) “帮助”显示此帮助文本。
+
+消息区域：
+显示信息和错误消息。
+
+++++"基本颜色映射"
+“基本颜色映射”选项允许为此 3270 会话选择颜色方案（颜色映射文件），或者选择颜色方案来作为此 3270 会话以及将来的 3270 会话的缺省颜色方案。
+
+“基本颜色映射”提供了 5 个标准颜色方案以及您创建的高级颜色方案。注意：在 5 个标准颜色方案中，有 3 个将相同的颜色用于“帮助”程序窗口（例如，此 3270 帮助窗口的颜色）。
+
+++++"高级颜色映射"
+“高级颜色映射”选项允许您创建高级颜色方案（颜色映射文件）。3270 会话的各种元素（构造）的颜色都可以更改。建议您首先使用“基本颜色映射”选项来选择最接近的颜色方案。然后，使用“高级颜色映射”来进一步修改特定构造的颜色。
+
+////Note: Some IBM Thin Client models support up to 256 colors (using 1 Megabyte of Video RAM). After this limit is reached, false colors may produce confusing browser images. The five IBM basic color schemes match the colors used by the browser and Java. Advanced color schemes could use up to a maximum of 22 colors. The browser and Java allocate a color palette (for 256 color Thin Clients) using the following values for red, green, and blue: 0, 51, 102, 153, 204, and 255.
+
+要更改构造的颜色，首先请选择要查看其当前颜色的构造。如果您希望有效地更改颜色，请单击多色栏中的颜色来作为进一步更改的起点。可以调整红色／绿色／蓝色值。例如，可以拖动红色值滑动器（当鼠标指针位于滑动器上时按下鼠标主按键并移动鼠标指针），在滑动器旁单击，或单击“-”或“+”按钮。红色、绿色和蓝色值的范围是 0 到 255。然后，单击“应用当前颜色”按钮；工作区右下角将会更新。
+
+工作区右下角包含“帮助”程序区域和 3270 区域。“帮助”程序颜色将应用于 3270 的“联机帮助”窗口、“其它首选项”窗口、“录制／回放”窗口、“键盘重新映射”窗口和“颜色映射”窗口（在重新启动“颜色映射”窗口之后）。3270 区域显示了菜单栏、带有 7 种前景颜色的主会话背景、按钮、标尺线和状态行。
+
+要在当前会话期间尝试颜色方案，请单击“将更改应用于会话”按钮。要保存高级颜色方案，请单击“保存”按钮。颜色映射文件名将被添加到“基本颜色映射”选项中的颜色方案列表中。“基本颜色映射”选项用来选择要应用于一个或多个 3270 会话的颜色方案。注意：颜色映射程序将高级颜色映射文件名限制为不能超过 32 个字符。
+
+可以更改现有的高级颜色方案。使用“基本颜色映射”选项来选择高级颜色方案，然后将该方案应用于会话。然后，使用“高级颜色映射”选项来调整构造颜色。在保存颜色方案时，输入现有高级颜色方案的名称。
+
+注意：“高级”选项不会阻止您将文本前景色和背景色设置为相同的颜色（或接近相同的颜色）。如果发生这种情况，则前景文本将是不可读的。可以使用工作区域来验证是否所有前景颜色都可读。
+
+++++"应用颜色映射图更改"
+“将更改应用于会话”按钮临时地将颜色映射更改应用于启动颜色映射程序所在的仿真器会话。然后，可以对更改进行测试。有关保存更改以供将来使用的信息，请参阅“保存颜色映射文件”。
+
+++++"保存颜色映射文件"
+“保存”按钮保存颜色映射更改以供将来使用。颜色映射更改保存在颜色映射文件中。当保存高级颜色方案时，颜色映射文件名将被添加到“基本颜色映射”选项中的颜色方案列表。在“基本颜色映射”中，选择颜色重新映射更改的保存方式：作为用于所有会话的缺省颜色映射文件，或者作为仅用于从中启动颜色映射程序的会话的特定于会话的颜色映射文件。
+
+特定于会话的颜色映射文件允许在不同的 3270 会话中使用不同的颜色组合。特定于会话的颜色映射文件具有最高优先级，并且用于从中创建该颜色映射文件的特定会话（使用 3270 会话的会话号以及会话名）。
+
+缺省颜色映射文件具有次高优先级，并且用于所有不具有特定于会话的颜色映射文件的会话。
+
+有关删除颜色映射文件的信息，请参阅“删除颜色映射文件”。
+
+++++"删除颜色映射文件"
+单击操作栏上的“删除”按钮以删除已创建的颜色映射文件。请单击任何要删除的颜色映射文件，然后单击“删除”按钮。

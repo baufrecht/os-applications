@@ -41,11 +41,11 @@ except :
     print >>sys.stderr, 'WARNING: could not querry your grafic card connectors using xrandr. Better luck, next time.'
     sys.exit(1)
 
-
 connectorsToTurnOff = connectors.split('\n')
 
 xrandrTurnOffCmd = ''
 xrandrCmd = ''
+xrandrNewModeCmd = ''
 xrandrAddModeCmd = ''
 displayFound = False
 tcos_screenrc = '/home/tcos/.tcos_displayrc'
@@ -89,16 +89,30 @@ for device in devices_dn:
 
         f_screenrc = open(tcos_screenrc,"w")
         for Display in  ("firstscreen",  "secondscreen") :
-            connector = l.getNismapentry(device, ldap_url).get(Display + '.connect', 'DVI')
-            if Display == "firstscreen" : primary_screen = connector # keep primary Display in mind
+            mode = l.getNismapentry(device, ldap_url).get(Display + '.resolution', '1920x1080')
+            if Display == "firstscreen" : 
+                connector = primary_screen = l.getNismapentry(device, ldap_url).get(Display + '.connect', 'DVI')
+                # In case of the mode is not known by xrandr, we prepare a 'xrandr --nemode ...' here.
+                # But it will be triggered only if addmode fails. This hopefully helps with some DVI-VGA adapters
+                # eating the EDID information.
+                # We cover this case only for the first screen.
+                fallBackFrequency = l.getNismapentry(device, ldap_url).get('firstscreen.fallbackfrequency', '')
+                x,y = mode.split("x")
+                if fallBackFrequency != '':
+                    cvt_string = commands.getoutput("cvt " + x + " " + y + " " + fallBackFrequency + " | grep -v \\# |awk '{for(i=3;i<=NF;++i) printf(\"%s \",  $i) }'")
+                else: 
+                    # try reduced blanking (means 60 Hz) in case of doubt
+                    cvt_string = commands.getoutput("cvt -r " + x + " " + y + "| grep -v \\# |awk '{for(i=3;i<=NF;++i) printf(\"%s \",  $i) }'")
+                xrandrNewModeCmd += 'xrandr --newmode ' + mode + ' ' + cvt_string + ';' 
+
+            elif Display == "secondscreen" : 
+                connector = l.getNismapentry(device, ldap_url).get(Display + '.connect', 'NONE')
 
             if connector != "NONE":
-                mode = l.getNismapentry(device, ldap_url).get(Display + '.resolution', '1920x1080')
                 rotate = l.getNismapentry(device, ldap_url).get(Display + '.rotation', 'normal')
                 xrandrCmd +=  ' --output ' + connector + ' --mode ' + mode + ' --rotate ' + rotate 
                 
                 # handle rotation and send environment vars  to tcos_screenrc
-                x, y = mode.split('x')                
                 if rotate != "normal" and rotate != "inverted" : x,y = y,x # swap (flip) if display is rotated left or right
                 f_screenrc.write('export ' + Display + 'Width=' + x + '\n')
                 f_screenrc.write('export ' + Display + 'Heigth=' + y + '\n')
@@ -111,13 +125,36 @@ for device in devices_dn:
                 xrandrAddModeCmd +=  ' --addmode ' + connector + ' ' + mode
         f_screenrc.close()
 
+
 # trigger commands to system
 #
-exe = 'xrandr ' + xrandrTurnOffCmd + '; xrandr ' + xrandrAddModeCmd + '; xrandr ' + xrandrCmd 
+
+try: subprocess.check_call('xrandr ' + xrandrTurnOffCmd, shell=True)
+except subprocess.CalledProcessError :
+    print >>sys.stderr, "WARNING: xrandrTurnOffCmd failed." 
+    syslog.syslog("WARNING: xrandrTurnOffCmd failed.")
+    pass 
+
+try: subprocess.check_call('xrandr ' + xrandrAddModeCmd, shell=True)
+except subprocess.CalledProcessError :
+    print >>sys.stderr, "WARNING: xrandrAddModeCmd failed, trying xrandNewMode." 
+    syslog.syslog("WARNING: xrandrAddModeCmd failed, trying xrandNewMode.")
+    # If addmode fails, try to create it first.
+    try:
+        print "New mode: " +  xrandrNewModeCmd
+        subprocess.check_call(xrandrNewModeCmd, shell=True)
+        subprocess.check_call('xrandr ' + xrandrAddModeCmd, shell=True)
+    except subprocess.CalledProcessError :
+        print >>sys.stderr, "WARNING: xrandrAddModeCmd failed again. Even after --newmode." 
+        syslog.syslog("WARNING: xrandrAddModeCmd failed again.  Even after --newmode.")
+        pass 
+
+exe = 'xrandr ' + xrandrCmd
 syslog.syslog('INFO: ' + exe )        
-print 'INFO: ' + exe         
-try: retcode = subprocess.call(exe, shell=True)
-except OSError as e:
+print 'Resulting final command: ' + exe         
+
+try: subprocess.check_call(exe, shell=True)
+except subprocess.CalledProcessError :
     print >>sys.stderr, "WARNING: xrandr failed." 
     syslog.syslog("WARNING: xrandr failed.")
     sys.exit(1)
@@ -125,5 +162,4 @@ except OSError as e:
 # example
 # xrandr --addmode HDMI1 1920x1080
 # xrandr --output HDMI1 --primary --mode 1920x1080 --pos 1280x0 --rotate normal --output LVDS1 --off --output DP1 --off --output VGA1 --mode 1280x1024 --pos 0x56 --rotate normal
-
 

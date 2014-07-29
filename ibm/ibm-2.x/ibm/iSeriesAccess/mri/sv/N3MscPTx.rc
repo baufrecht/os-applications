@@ -1,0 +1,468 @@
+!
+!
+!
+! This file contains the resource text strings for the IBM Network Station 3270, 5250, and
+! VTxxx emulators, in particular the miscellaneous preferences program.
+
+! This resource file will be stored on all servers in locale specific ASCII (819 for Latin1
+! languages). This resource file is stored on the booting server as N3_5MscP.
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. This resource file contains text strings for the 3270 and 5250 emulators.  Much of
+!    the resource text is common to all emulators. Some is specific to one emulator.
+!    Miscpref = Resources used by both 3270 and 5250 emulators.
+!    Miscpr32 = Resources used by the 3270 emulator.
+!    Miscpr52 = Resources used by the 5250 emulator.
+!    MiscprVT = Resources used by the VT emulator.
+! 4. Resource format: 
+!    - A resource line starts with Miscpref*, Miscpr32*, Miscpr52*,or MiscprVT*, followed by 
+!      a resource name and a ":".  Do NOT make any changes to the text to the left
+!      of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+!*******************************************************************
+!*******   Miscellaneous Preferences Resources           ***********
+!*******************************************************************
+Miscpr52*title:     5250 - Diverse inställningar
+
+Miscpr32*title:     3270 - Diverse inställningar
+
+MiscprVT*title:     Diverse inställningar för VT Emulator
+
+Miscpref*iconName:  Diverse inställningar
+
+Miscpref*okLabelString: OK
+
+Miscpref*cancelLabelString: Avbryt
+
+
+!***********************************************
+!**     Action Bar Area Resources             **
+!***********************************************
+Miscpref*saveButton.labelString: Spara
+
+Miscpref*exitButton.labelString: Avsluta
+
+Miscpref*setDefaultsButton.labelString: Förinställningar
+
+Miscpref*helpButton.labelString: Hjälp
+
+
+!*********************************************************
+!**     Preference Buttons Area Resources               **
+!**							**
+!*********************************************************
+Miscpref*preferencesListInstructions.labelString: Välj en inställning
+
+Miscpref*CursorStyleItem:                         Markörtyp
+
+Miscpr52*EnterKeyLocationItem:                    Tangent för Enter/Avsluta fält
+
+Miscpr32*EnterKeyLocationItem:                    Enter
+	
+Miscpr52*AutomaticHelpItem:                       Automatisk hjälp
+
+Miscpr52*BlueUnderscoreItem:                      Blå understrykning
+
+Miscpref*RowColumnIndicatorItem:                  Rad- och kolumnindikator
+
+Miscpref*DestructiveBackspaceItem:                Raderande backsteg
+
+Miscpref*RuleLineEnableItem:                      Aktivera hjälplinje
+
+Miscpref*RuleLineStyleItem:                       Typ av hjälplinje
+
+Miscpref*PasteStartLocationItem:                  Startplacering för Klistra in
+
+Miscpref*CursorBlinkItem:                         Blinkande markör
+
+Miscpr52*LargeScreenBehaviorItem:                 Stor skärm
+
+Miscpref*PrintKeyLocationItem:                    Tangent för Skriv ut
+
+Miscpr32*BracketItem:                             Hakparentes
+
+Miscpr32*AutomaticReconnectItem:                  Automatisk återanslutning
+
+Miscpref*HotspotsItem:                            Aktiveringspunkter
+
+Miscpref*TypeAheadItem:                           Tangentbordsbuffring
+
+Miscpr52*ErrorResetKeys:                          Tangenter för felåterställning
+
+Miscpref*HotspotHighlight:                        Markering av aktiveringspunkter
+
+Miscpref*DefaultCopyType:                         Förinställd kopieringstyp
+
+Miscpref*InsertMode:                              Insättningsläge
+
+Miscpref*InputOnlyCursorMovement:                 Inmatning endast för markör
+
+Miscpref*AudioAlarm:                              Varningsljud
+
+MiscprVT*CursorBlinkItem:           Blinkande markör
+
+MiscprVT*ApplicationCursor:         Programläge för markör
+
+MiscprVT*ApplicationKeypad:         Programläge för funktionstangentbord
+
+MiscprVT*AutoLineFeed:              Automatisk radmatning
+
+MiscprVT*AutoResize:                Automatisk storleksändring
+
+MiscprVT*AutoWrapAround:            Automatiskt radbrytning
+
+MiscprVT*ClearScreenWithBlanks:     Rensa skärm med mellanslag
+
+MiscprVT*ExitOnDisconnect:          Avsluta vid nedkoppling
+
+MiscprVT*JumpScroll:                Snabb bläddring
+
+MiscprVT*MarginBell:                Marginalsignal
+
+MiscprVT*MarginBellColumn:          Kolumn för marginalsignal
+
+MiscprVT*ReverseWrapAround:         Omvänd radbrytning
+
+MiscprVT*VisibleStatusLine:         Synlig statusrad
+
+MiscprVT*VisualBell:                Visuell signal
+	
+!*************************************************************
+!**     Preference Text Area Resources (Explanation Box)    **
+!*************************************************************
+Miscpref*CursorStyleText.value: Markören kan visas på två sätt: blockmarkör eller understreck. Du kan välja att enbart använda understreck, block eller båda typerna beroende på om insättningsläget är aktiverat.
+
+MiscprVT*CursorStyleText.value: Markören kan ställas in för ständig understrykning eller block.
+
+MiscprVT*CursorBlinkText.value: Markörblinkning kan aktiveras eller avaktiveras. Om markörblinkning aktiveras, kommer markören endast att blinka när fönstret är i fokus.
+
+MiscprVT*ApplicationCursorText.value: Markörtangenter kan starta i programläge eller markörläge. I programläge genereras ANSI-escapesekvenser istället för vanliga flyttningar av markören när piltangenterna används.
+
+MiscprVT*ApplicationKeypadText.value: Tangentbordstangenter kan starta i programläge eller numeriskt läge. I programläget genereras kontrollfunktioner istället för numeriska tecken när funktionstangentbordet används.
+
+Miscpr52*EnterKeyLocationText.value: Tangenterna för funktionerna Enter, Ny rad (NewLine) och Avsluta fält (Field exit) kan ändras från de ursprungliga inställningarna nedan. Det finns flera olika kombinationer av de här funktionerna på tangenten Enter och den högra Ctrl-tangenten.
+
+Miscpr32*EnterKeyLocationText.value: Tangenterna för funktionerna Enter och Ny rad (NewLine) kan ändras från de ursprungliga inställningarna nedan. Det finns flera olika kombinationer av de här funktionerna på tangenten Enter och den högra Ctrl-tangenten.
+
+Miscpr52*AutomaticHelpText.value: Hjälptangenten kan aktiveras automatiskt om användaren ger en felaktig tangenttryckning. Då visas vanligen en rad med en förklaring till felet. Om du avaktiverar funktionen visas ett fyrsiffrigt felmeddelande. Användaren kan fortfarande visa hjälptexten manuellt genom att trycka på hjälptangenten.
+
+Miscpr52*BlueUnderscoreText.value: Standardfärgen för understrykning kan ändras till blått.
+
+Miscpref*RowColumnIndicatorText.value: Rad- och kolumnindikatorn till höger om statusraden visar markörens position. Du kan välja att visa indikatorn eller inte. Om markören inte syns visas heller inte indikatorn, oavsett den här inställningen.
+
+Miscpref*DestructiveBackspaceText.value: Backstegsfunktionen kan vara raderande eller icke-raderande. Om den är raderande tas tecken bort när markören backar i fältet. I annat fall tas inte något tecken bort.
+
+Miscpref*RuleLineEnableText.value: Hjälplinjen visar markörens aktuella eller tidigare position. Den kan vara helt avaktiverad, alltid aktiverad eller styrd av tangenten för hjälplinje. När den styrs av tangenten kan den vara förankrad eller följa markören.
+
+Miscpref*RuleLineStyleText.value: Hjälplinjen kan visas på tre sätt: som en vågrät linje, en lodrät linje eller som både vågräta och lodräta linjer.
+
+Miscpref*PasteStartLocationText.value: Om du klistrar in genom att hålla ned skift och klicka med musknapp 2 klistras objektet in där markören eller muspekaren står. Den här inställningen påverkar inte Klistra in på menyn Redigera. Med den funktionen klistras objekten alltid in vid markören.
+
+Miscpr52*CursorBlinkText.value: Blinkande markör kan vara aktiverad eller avaktiverad. Om den är aktiverad styr programmet markörens blinkning. Om den är avaktiverad blinkar markören aldrig.
+
+Miscpr32*CursorBlinkText.value: Blinkande markör kan vara aktiverad eller avaktiverad. Om den är aktiverad blinkar markören alltid. Om den är avaktiverad blinkar markören aldrig.
+
+Miscpr52*LargeScreenBehaviorText.value: 5250-emuleringen kan ställas in så att fönstret flyttas automatiskt och/eller teckenstorleken minskas om en stor skärmstorlek anges. Det här inträffar när fönstret med den nya storleken inte får plats på skärmen i aktuell position och/eller med aktuell teckenstorlek.
+
+Miscpr52*PrintKeyLocationText.value: Om den inte ersätts av en ny tangentbordsanpassning är standardanpassningen för tangenten Skriv ut systemutskrift medan Skift-Skriv ut ger lokal skärmutskrift. En del användare kanske hellre vill att tangenten Skriv ut ska ge lokal utskrift och att skift+Utskrift ska ge systemutskrift.
+
+Miscpr32*PrintKeyLocationText.value: Om den inte ersätts av en ny tangentbordsanpassning är standardinställningen för tangenten skift-Print PA1-funktionen, medan tangenten skift+Skriv ut ger lokal utskrift. En del användare kanske hellre vill att tangenten Skriv ut ska ge lokal utskrift och att skift+Skriv ut ska ge funktionen för PA1.
+
+Miscpr32*BracketText.value: Om du aktiverar det här alternativet konverteras hakparenteser korrekt.
+
+Miscpr32*AutomaticReconnectText.value: 3270-emuleringsfönstret kan tas bort från eller lämnas på skärmen när användaren loggar av. Om det lämnas på skärmen försöker emuleringsprogrammet automatiskt att återansluta till värdsystemet.
+
+Miscpref*HotspotsText.value: Aktiveringspunkter är skärmpositioner som är kopplade till funktioner som utförs när användaren klickar på dem med musen. Om alternativet är aktiverat och användaren t.ex. klickar på 'PF1' eller 'F1' så har det samma effekt som en tryckning på F1-tangenten. Aktiveringspunkter kan vara avaktiverade, aktiverade för enkel musklickning eller aktiverade för dubbelklickning.
+
+Miscpref*TypeAheadText.value: Med det här alternativet lagras tangenttryckningar som görs när tangentbordet är låst (indata förhindras). Tangenttryckningarna bearbetas senare när tangentbordet låses upp. Om du aktiverar tangentbordsbuffring är funktionen alltid aktiverad. Om du avaktiverar tangentbordsbuffring är funktionen alltid avaktiverad.
+
+Miscpr52*ErrorResetKeysText.value: 5250-emuleringens tangenter för att återställa fel kan konfigureras nedan. Fel kan alltid återställas med tangenten Reset och vänsterklickning på raden med felmeddelandet. Användare kan också återställa fel med tangenterna som flyttar markören (tabb, ny rad, pil, backsteg) och andra musklickningar.
+
+Miscpref*HotspotHighlightText.value: Emuleringen kan konfigureras så att aktiveringspunkter framhävs. Om alternativet Aktiveringspunkter har aktiverats och markering av aktiveringspunkter också har aktiverats är alla aktiveringspunkter på skärmen framhävda.
+
+Miscpref*DefaultCopyTypeText.value: Förvald kopieringstyp är den typ av kopieringsområde som kopplad till klicka och dra-funktionen för musknapp 1. Detta är också den kopieringstyp som är kopplad till markering av kopieringsområde via tangentbordet.
+
+Miscpr52*InsertModeText.value: Insättningsläge är avaktiverat som standard. Läget kan aktiveras med tangenten Insert och aktiveras dessutom ibland automatiskt av program och av återställningstangenten. Den här automatiska återställningen av läget kan avaktiveras, oavsett vad som väljs som standardläge.
+
+Miscpr32*InsertModeText.value: Insättningsläget är avaktiverat som standard. Läget kan aktiveras med tangenten Insert och aktiveras dessutom automatiskt av program, precis som tangenten Enter, och ibland av återställningstangenten. Den här automatiska återställningen av insättningsläge kan avaktiveras, oberoende av vilken standardinställning som valts.
+
+Miscpref*InputOnlyCursorMovementText.value: Piltangenterna kan konfigureras så att de flyttar markören endast till positioner där inmatning är möjlig. Om en sådan position inte finns, flyttar markören till den första positionen på skärmen. 
+
+Miscpref*AudioAlarmText.value: Varningsljud kan aktiveras eller avaktiveras. Varningsljudet hörs inte när det är avaktiverat.
+
+MiscprVT*AutoLineFeedText.value: Automatisk radmatning kan aktiveras eller avaktiveras. När den är aktiverad utför emuleringsprogrammet både en radbrytning och en radmatning när programmet skickar tecknet för radmatning, vertikal tabb eller blankettmatning. Alla tangenter som genererar en ny rad (t.ex. Enter) kommer dessutom att skicka en ratbrytning och en radmatning till programmet. När den är avaktiverad utförs endast radmatningen när ett tecken för radmatning, vertikal tabb eller blankettmatning tas emot. När den är avaktiverad och tangenten Enter trycks ned, skickas endast en radmatning till programmet.
+
+MiscprVT*AutoResizeText.value: Automatisk storleksändring kan aktiveras och avaktiveras.
+
+MiscprVT*AutoWrapAroundText.value: Automatisk radbrytning kan aktiveras eller avaktiveras. Om den är aktiverad flyttas nästa tecken som skrivs när markören nått skärmens kant automatiskt till nästa rad. Om den är avaktiverad ersätter det tecken som skrivs när markören nått skärmens kant tecknet i radens slut.
+
+MiscprVT*ClearScreenWithBlanksText.value: Skärmen kan rensas på mellanslag.
+
+MiscprVT*ExitOnDisconnectText.value: Terminalen kan konfigureras så att den avslutas när värden kopplas ned.
+
+MiscprVT*JumpScrollText.value: Terminalen kan konfigureras för snabb bläddring. Då bläddras skärmbilden fram mer än en rad i taget. Det gör att skärmuppdateringen går fortare. Det maximala antalet rader som kan bläddras på detta sätt är begränsat till antalet rader i terminalfönstret.
+
+MiscprVT*MarginBellText.value: Terminalen kan konfigureras så att en signal hörs när användaren har nått den högra marginalen under skrivning.
+
+MiscprVT*MarginBellColumnText.value: Ange kolumnen för marginalsignalen.
+
+MiscprVT*ReverseWrapAroundText.value: Omvänd radbrytning kan aktiveras och avaktiveras. Med omvänd radbrytning flyttas markören från radens första position till den sista kolumnen på föregående rad. Användaren kan alltså backstega till föregående rad. Automatisk radbrytning måste också vara aktiverad för att omvänd radbrytning ska fungera.
+
+MiscprVT*VisibleStatusLineText.value: Statusraden kan göras synlig eller osynlig. Om statusraden görs synlig, visas en tjugofemte rad längst ned i emuleringsfönstret. På den här raden kan program visa statusinformation. När inte ett program använder den, visas en rad/kolumnindikator för markören.
+
+MiscprVT*VisualBellText.value: En visuell signal (en skärmblinkning) kan ersätta en ljudsignal.
+
+!*************************************************************
+!**     Preference Text Area Resources (Options area)       **
+!**							    **
+!*************************************************************
+
+Miscpref*PreferenceTextFormForCursorStyle*ToggleButton1.labelString: Understrecksmarkör
+
+Miscpref*PreferenceTextFormForCursorStyle*ToggleButton2.labelString: Blockmarkör
+
+Miscpref*PreferenceTextFormForCursorStyle*ToggleButton3.labelString: Blockmarkör för insättning, understrecksmarkör för överskrivning
+
+Miscpref*PreferenceTextFormForCursorStyle*ToggleButton4.labelString: Understrecksmarkör för insättning, blockmarkör för överskrivning
+
+Miscpref*PreferenceTextFormForEnterKeyLocation*ToggleButton1.labelString: Använd förinställningarna för tangenterna Enter och höger Ctrl
+
+Miscpref*PreferenceTextFormForEnterKeyLocation*ToggleButton2.labelString: Enter = enter, höger Ctrl = ny rad
+
+Miscpref*PreferenceTextFormForEnterKeyLocation*ToggleButton3.labelString: Enter = ny rad, höger Ctrl = enter
+
+Miscpr52*PreferenceTextFormForEnterKeyLocation*ToggleButton4.labelString: Enter = enter, höger Ctrl = avsluta fält/ny rad
+
+Miscpr52*PreferenceTextFormForEnterKeyLocation*ToggleButton5.labelString: Enter = avsluta fält/ny rad, höger Ctrl = enter
+
+Miscpr52*PreferenceTextFormForAutomaticHelp*ToggleButton1.labelString: Aktivera automatisk hjälp vid användarfel
+
+Miscpr52*PreferenceTextFormForAutomaticHelp*ToggleButton2.labelString: Avaktivera automatisk hjälp vid användarfel
+
+Miscpr52*PreferenceTextFormForBlueUnderscore*ToggleButton1.labelString: Aktivera blå understrykning
+
+Miscpr52*PreferenceTextFormForBlueUnderscore*ToggleButton2.labelString: Avaktivera blå understrykning
+
+Miscpref*PreferenceTextFormForRowColumnIndicator*ToggleButton1.labelString: Visa rad- och kolumnindikatorn
+
+Miscpref*PreferenceTextFormForRowColumnIndicator*ToggleButton2.labelString: Visa inte rad- och kolumnindikatorn
+
+Miscpref*PreferenceTextFormForDestructiveBackspace*ToggleButton1.labelString: Aktivera raderande backsteg
+
+Miscpref*PreferenceTextFormForDestructiveBackspace*ToggleButton2.labelString: Avaktivera raderande backsteg
+
+Miscpref*PreferenceTextFormForRuleLineEnable*ToggleButton1.labelString: Aktivera hjälplinjen
+
+Miscpref*PreferenceTextFormForRuleLineEnable*ToggleButton2.labelString: Visa alltid hjälplinjen vid markören
+
+Miscpref*PreferenceTextFormForRuleLineEnable*ToggleButton3.labelString: Aktivera tangenten för hjälplinje (följ inte markören)
+
+Miscpref*PreferenceTextFormForRuleLineEnable*ToggleButton4.labelString: Aktivera tangenten för hjälplinje (följ markören)
+
+Miscpref*PreferenceTextFormForRuleLineStyle*ToggleButton1.labelString: Både vågräta och lodräta hjälplinjer
+
+Miscpref*PreferenceTextFormForRuleLineStyle*ToggleButton2.labelString: Bara vågrät hjälplinje
+
+Miscpref*PreferenceTextFormForRuleLineStyle*ToggleButton3.labelString: Bara lodrät hjälplinje
+
+Miscpref*PreferenceTextFormForPasteStartLocation*ToggleButton1.labelString: Klistra in vid markör
+
+Miscpref*PreferenceTextFormForPasteStartLocation*ToggleButton2.labelString: Klistra in vid muspekare
+
+Miscpref*PreferenceTextFormForCursorBlink*ToggleButton1.labelString: Avaktivera markörblinkning
+
+Miscpref*PreferenceTextFormForCursorBlink*ToggleButton2.labelString: Aktivera markörblinkning
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton1.labelString: Flytta inte fönstret och minska inte teckenstorleken
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton2.labelString: Flytta fönstret och minska teckenstorleken om det behövs
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton3.labelString: Minska bara teckenstorleken
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton4.labelString: Använd/kom ihåg stort skärmtypsnitt
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton5.labelString: Minska teckenstorleken och flytta fönstret om det behövs
+
+Miscpr52*PreferenceTextFormForPrintKeyLocation*ToggleButton1.labelString: Använd standardinställningen för tangenten Print
+
+Miscpr52*PreferenceTextFormForPrintKeyLocation*ToggleButton2.labelString: Print = systemutskrift, skift+Print = lokal utskrift
+
+Miscpr52*PreferenceTextFormForPrintKeyLocation*ToggleButton3.labelString: Print = lokal utskrift, skift+Print = systemutskrift
+
+Miscpr32*PreferenceTextFormForPrintKeyLocation*ToggleButton1.labelString: Använd standardinställningen för tangenten Print
+
+Miscpr32*PreferenceTextFormForPrintKeyLocation*ToggleButton2.labelString: Print = PA1, skift+Print = lokal utskrift
+
+Miscpr32*PreferenceTextFormForPrintKeyLocation*ToggleButton3.labelString: Print = lokal utskrift, skift+Print = PA1
+
+Miscpr32*PreferenceTextFormForBracket*ToggleButton1.labelString: Avaktivera konvertering av hakparenteser
+
+Miscpr32*PreferenceTextFormForBracket*ToggleButton2.labelString: Aktivera konvertering av hakparenteser
+
+Miscpr32*PreferenceTextFormForAutomaticReconnect*ToggleButton1.labelString: Fönster tas bort efter avloggning
+
+Miscpr32*PreferenceTextFormForAutomaticReconnect*ToggleButton2.labelString: Fönster tas inte bort efter avloggning
+
+Miscpref*PreferenceTextFormForHotspots*ToggleButton1.labelString: Avaktivera aktiveringspunkter
+
+Miscpref*PreferenceTextFormForHotspots*ToggleButton2.labelString: Aktivera aktiveringspunkter för klickning med musknapp 1
+
+Miscpref*PreferenceTextFormForHotspots*ToggleButton3.labelString: Aktivera aktiveringspunkter för dubbelklickning med musknapp 1
+
+Miscpref*PreferenceTextFormForTypeAhead*ToggleButton1.labelString: Avaktivera tangentbordsbuffring
+
+Miscpref*PreferenceTextFormForTypeAhead*ToggleButton2.labelString: Aktivera tangentbordsbuffring
+
+Miscpr52*PreferenceTextFormForTypeAhead*ToggleButton3.labelString: Använd AS/400-inställning
+
+Miscpr52*PreferenceTextFormForErrorResetKeys*ToggleButton1.labelString: Bara Reset eller vänster musknapp på raden med felmeddelandet
+
+Miscpr52*PreferenceTextFormForErrorResetKeys*ToggleButton2.labelString: Även tangenter för markörflyttning och alla musknappar
+
+Miscpr52*PreferenceTextFormForErrorResetKeys*ToggleButton3.labelString: De flesta tangenter och alla musknappar
+
+Miscpref*PreferenceTextFormForHotspotHighlight*ToggleButton1.labelString: Avaktivera framhävning av aktiveringspunkter
+
+Miscpref*PreferenceTextFormForHotspotHighlight*ToggleButton2.labelString: Aktivera framhävning av aktiveringspunkter
+
+Miscpref*PreferenceTextFormForDefaultCopyType*ToggleButton1.labelString: Radkopiering
+
+Miscpref*PreferenceTextFormForDefaultCopyType*ToggleButton2.labelString: Blockkopiering
+
+Miscpref*PreferenceTextFormForInsertMode*ToggleButton1.labelString: Insättningsläge avaktiverat som standard och automatisk återställning aktiverad
+
+Miscpref*PreferenceTextFormForInsertMode*ToggleButton2.labelString: Insättningsläge avaktiverat som standard och automatisk återställning avaktiverad
+
+Miscpref*PreferenceTextFormForInsertMode*ToggleButton3.labelString: Insättningsläge aktiverat som standard och automatisk återställning avaktiverad
+
+Miscpref*PreferenceTextFormForInputOnlyCursorMovement*ToggleButton1.labelString: Avaktivera markörflyttning för enbart inmatning
+
+Miscpref*PreferenceTextFormForInputOnlyCursorMovement*ToggleButton2.labelString: Aktivera markörflyttning för enbart inmatning
+
+Miscpref*PreferenceTextFormForAudioAlarm*ToggleButton1.labelString: Avaktivera varningsljudet
+
+Miscpref*PreferenceTextFormForAudioAlarm*ToggleButton2.labelString: Aktivera varningsljudet
+
+MiscprVT*PreferenceTextFormForCursorBlink*ToggleButton1.labelString: Avaktivera markörblinkning
+
+MiscprVT*PreferenceTextFormForCursorBlink*ToggleButton2.labelString: Aktivera markörblinkning
+
+MiscprVT*PreferenceTextFormForApplicationCursor*ToggleButton1.labelString: Avaktivera läge för programmarkör
+
+MiscprVT*PreferenceTextFormForApplicationCursor*ToggleButton2.labelString: Aktivera läge för programmarkör
+
+MiscprVT*PreferenceTextFormForApplicationKeypad*ToggleButton1.labelString: Avaktivera programläge för funktionstangentbord
+
+MiscprVT*PreferenceTextFormForApplicationKeypad*ToggleButton2.labelString: Aktivera programläge för funktionstangentbord
+
+MiscprVT*PreferenceTextFormForAutoLineFeed*ToggleButton1.labelString: Avaktivera automatisk radmatning
+
+MiscprVT*PreferenceTextFormForAutoLineFeed*ToggleButton2.labelString: Aktivera automatisk radmatning
+
+MiscprVT*PreferenceTextFormForAutoResize*ToggleButton1.labelString: Avaktivera automatisk storleksändring
+
+MiscprVT*PreferenceTextFormForAutoResize*ToggleButton2.labelString: Aktivera automatisk storleksändring
+
+MiscprVT*PreferenceTextFormForAutoWrapAround*ToggleButton1.labelString: Avaktivera automatisk radbrytning
+
+MiscprVT*PreferenceTextFormForAutoWrapAround*ToggleButton2.labelString: Aktivera automatisk radbrytning
+
+MiscprVT*PreferenceTextFormForClearScreenWithBlanks*ToggleButton1.labelString: Avaktivera rensa skärm från blanksteg
+
+MiscprVT*PreferenceTextFormForClearScreenWithBlanks*ToggleButton2.labelString: Aktivera rensa skärm från blanksteg
+
+MiscprVT*PreferenceTextFormForExitOnDisconnect*ToggleButton1.labelString: Avaktivera avsluta vid nedkoppling
+
+MiscprVT*PreferenceTextFormForExitOnDisconnect*ToggleButton2.labelString: Aktivera avsluta vid nedkoppling
+
+MiscprVT*PreferenceTextFormForJumpScroll*ToggleButton1.labelString: Avaktivera snabb bläddring
+
+MiscprVT*PreferenceTextFormForJumpScroll*ToggleButton2.labelString: Aktivera snabb bläddring
+
+MiscprVT*PreferenceTextFormForMarginBell*ToggleButton1.labelString: Avaktivera marginalsignal
+
+MiscprVT*PreferenceTextFormForMarginBell*ToggleButton2.labelString: Aktivera marginalsignal
+
+MiscprVT*PreferenceTextFormForMarginBellColumn*textFieldLabel.labelString: Kolumner från radslut
+
+MiscprVT*PreferenceTextFormForReverseWrapAround*ToggleButton1.labelString: Avaktivera omvänd radbrytning
+
+MiscprVT*PreferenceTextFormForReverseWrapAround*ToggleButton2.labelString: Aktivera omvänd radbrytning
+
+MiscprVT*PreferenceTextFormForVisibleStatusLine*ToggleButton1.labelString: Avaktivera statusraden
+
+MiscprVT*PreferenceTextFormForVisibleStatusLine*ToggleButton2.labelString: Aktivera statusraden
+
+MiscprVT*PreferenceTextFormForVisualBell*ToggleButton1.labelString: Avaktivera den visuella signalen
+
+MiscprVT*PreferenceTextFormForVisualBell*ToggleButton2.labelString: Aktivera den visuella signalen
+
+
+
+!**************************************
+!**   Messages at bottom of window   **
+!**************************************
+
+Miscpr52*MiscprefMsgHelpRequested:     Hjälp begärd från 5250-session.
+
+Miscpr32*MiscprefMsgHelpRequested:     Hjälp begärd från 3270-session.
+
+MiscprVT*MiscprefMsgHelpRequested:     Hjälp begärd från VT-session.
+
+Miscpref*MiscprefMsgPreferenceApplied: Inställningar används tillfälligt.
+
+Miscpref*MiscprefMsgPreferencesSaved:  Inställningar sparade.
+
+Miscpref*MiscprefMsgDefaultsApplied:   Förinställningar används tillfälligt.
+
+Miscpref*MiscprefMsgDefaultsNotSet:    Inga förinställningar gjorda.
+
+Miscpref*MiscprefMsgNoAccess:          Det går inte att accessa katalog.
+
+
+Miscpref*MiscprefMsgNoMake:            Det går inte att skapa katalog.
+
+Miscpref*MiscprefMsgFileOpenError:     Fel när filen skulle sparas:  Det går inte att öppna filen.
+
+Miscpref*MiscprefMsgFileWriteError:    Fel när filen skulle sparas:  Det går inte skriva filen.
+
+
+
+!********************************
+!**  Dialog Box Resources      **
+!********************************
+Miscpref*exitDialog.dialogTitle:              Avsluta - Varning
+
+Miscpref*exitDialog.okLabelString:            Spara
+
+Miscpref*exitDialog.cancelLabelString:        Spara inte
+
+! this cannot be much longer
+Miscpref*exitDialog.messageString:            Diverse inställningar har ändrats men inte sparats.
+
+Miscpref*setDefaultsDialog.dialogTitle:       Förinställningar - Varning
+
+Miscpref*setDefaultsDialog.okLabelString:     Ja
+
+Miscpref*setDefaultsDialog.cancelLabelString: Nej
+
+! this cannot be much longer
+Miscpref*setDefaultsDialog.messageString:     Vill du återställa alla värden till de förinställda?
+/*******************************************************************************
+**  saveDialog resource
+*******************************************************************************/
+MiscprVT*saveDialog.dialogTitle: Spara alternativ
+
+MiscprVT*saveDialog*saveDialogTitle.labelString: Välj ett sparalternativ.
+
+MiscprVT*saveDialog*saveChangedOnly.labelString: Spara endast ändrade inställningar
+
+MiscprVT*saveDialog*saveAll.labelString: Spara alla inställningar
+
+MiscprVT*saveDialog*saveButton.labelString: Spara
+
+MiscprVT*saveDialog*cancelButton.labelString: Avbryt
+

@@ -1,0 +1,1648 @@
+!
+!
+!
+! This file contains the resource text strings for the IBM Network Station 3270, 5250, VTxxx 
+! emulators, in particular the keyboard remapping, keypad customize, and playback edit programs.
+
+! This resource file is stored in locale specific ASCII (code page 819 for Latin1 languages).
+! This resource file is stored on the booting server as N3_5KeyM.
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. Resource format: 
+!    - A resource line starts with one of the following strings:
+!      Keymap52* : for keymapper resources
+!      Keypad52* : for keypad customize resources
+!      Playedit* : for playback editor resources  
+!      Keyxxx52* : for resources shared by keymapper and keypad
+!      AllShare* : for resources shared by keymapper, keypad, and playback editor
+!    - Each string is followed by a resource name and a ":".  
+!		Do NOT make any changes to the text to the left of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+
+! ********************************************************************************
+! Keyboard Remapping Resources
+! ********************************************************************************
+!
+! In general, the following buttons should not be made much longer during translation.
+! Buttons have one to four words. Note: Testing is the only way to know for sure if all
+! buttons fit on the screen ok.  The emulators have a testing document that will be used
+! during testing; this will point out a problem if button text is too long. In many 
+! cases, buttons are presented side by side, where the total button text length cannot
+! increase significantly.
+Keymap52*key.labelString:  Nykyinen n‰pp‰in
+!
+Keymap52*title:  N‰pp‰imistˆn uudelleenm‰‰ritys
+!
+Keymap52*iname5250:  5250-istunnon n‰pp‰imistˆm‰‰ritys
+!
+Keymap52*iname3270:  3270-istunnon n‰pp‰imistˆm‰‰ritys
+!
+Keymap52*inameNSTERM:  VT-istunnon n‰pp‰imistˆm‰‰ritys
+!
+AllShare*fileSaveButton.labelString:  Tallennus
+!
+Keymap52*fileDeleteButton.labelString:  Poisto
+!
+Keymap52*applyTranslationsButton.labelString:  Muutosten k‰yttˆ istunnossa
+!
+AllShare*fileQuitButton.labelString:  Lopetus
+!
+AllShare*helpPush.labelString:  Ohje
+!
+AllShare*lowMemMsgDialog.messageString:  Muisti ei riit‰ ohjeen katseluohjelman aloittamiseen.
+!
+AllShare*quitDialog.dialogTitle:  Lopetustoiminnon varoitus
+!
+! Note: \n causes a new line in the dialogue box and should not be translated.
+! You can move, add, or remove \n within this text string.
+Keymap52*invalidExt.value: N‰pp‰imistˆn m‰‰ritystiedoston tunniste on virheellinen tai sit‰ ei ole. \nJ‰rjestelm‰ on lis‰nnyt oikean tunnisteen. \nUusi tiedostonimi ja tunniste n‰kyy sanoma-alueella.
+!
+Keymap52*invalidExtOkButton.labelString:  OK
+!
+Keymap52*invalidFileName.value:  Kirjoitettua merkki‰ ei voi k‰ytt‰‰ tiedostonimess‰.
+!
+Keymap52*invalidFileNameOkbutton.labelString:  OK
+!
+Keymap52*noKeyCaps.value: N‰pp‰imistˆn uudelleenm‰‰ritysohjelmaa ei ole p‰ivitetty k‰ytˆss‰ olevalle n‰pp‰imistˆtyypille. Graafisen n‰pp‰imistˆn n‰pp‰inten teksti n‰kyy englanninkielisen‰.
+!
+Keymap52*noKeyCapOkbutton.labelString:  OK
+!
+Keymap52*EBCMismatchText.value: N‰pp‰imistˆn uudelleenm‰‰ritysohjelmaa kutsuneen emulointi-istunnon kieli ei vastaa IBM Network Station -j‰rjestelm‰n kielt‰. T‰ll‰ m‰‰ritysohjelmalla luotavat merkit ja merkkijonot saattavat aiheuttaa h‰iriˆit‰ emulointi-istunnossa.
+!
+Keymap52*mismatchOKbutton.labelString:  OK
+!
+Keymap52*poorResolutionMsgText.value:   N‰yttimen erotuskyky on pienempi kuin 800 x 600. N‰pp‰imistˆn uudelleenm‰‰ritys ei ole k‰ytˆss‰, jos n‰yttimen erotuskyky pienempi kuin 800 x 600.
+!
+Keymap52*keymapFailureCancelBtn.labelString:  Peruutus
+!
+Keymap52*saveDialog.dialogTitle:  N‰pp‰imistˆm‰‰rityksen tallennus
+!
+Keymap52*saveBoxLabel*labelString:  N‰pp‰imistˆm‰‰rityksen muutosten tallennustavan valinta:
+!
+Keymap52*saveBoxToggle1.labelString:  Tallennus kaikkien istuntojen oletusarvoksi
+!
+Keymap52*saveBoxToggleNsterm1.labelString:      Tallennus t‰m‰n p‰‰tetyypin oletusarvoksi
+!
+Keymap52*saveBoxToggle2.labelString:  Tallennus vain t‰t‰ istuntoa varten
+!
+Keymap52*saveBoxToggle3.labelString:  Tallennus nimettyn‰ n‰pp‰imistˆm‰‰ritystiedostona (vain p‰‰k‰ytt‰j‰)
+!
+AllShare*saveBoxSaveBtn.labelString:  Tallennus
+!
+AllShare*saveBoxCancelBtn.labelString:  Peruutus
+!
+Keymap52*fileNameSaveBoxLabel.labelString:  N‰pp‰imistˆm‰‰ritystiedoston nimi:
+!
+Keymap52*fileDeleteDialog.dialogTitle:  N‰pp‰imistˆm‰‰ritystiedoston poisto
+!
+Keymap52*fileDeleteBoxLabel*labelString:  Poistettavat tiedostot:
+!
+KeyXXX52*fileDeleteBoxLabelAlt*labelString:  Poistettavia tiedostoja ei ole
+!
+KeyXXX52*fileDeleteBoxDeleteBtn.labelString:  Poisto
+!
+KeyXXX52*fileDeleteBoxCancelBtn.labelString:  Peruutus
+!
+KeyXXX52*fileDeleteVerifyDialog.dialogTitle:  Poiston vahvistus 
+!
+KeyXXX52*fileDeleteVerifyDialog.okLabelString:  OK
+!
+KeyXXX52*fileDeleteVerifyDialog.cancelLabelString:  Peruutus
+
+! this cannot be much longer
+KeyXXX52*noundoDelete:  Tiedostojen poistoa ei voi kumota. Haluatko poistaa tiedostot?
+!
+KeyXXX52*novalidDelete:  Tiedostoja ei ole valittu. J‰rjestelm‰ ei voi toteuttaa poistoa.
+!
+Keymap52*fileWarningDialog.dialogTitle:  N‰pp‰imistˆm‰‰rityksen varoitus
+!
+AllShare*fileWarningDialog.okLabelString:  Kyll‰
+!
+AllShare*fileWarningDialog.cancelLabelString:  Ei
+!
+AllShare*fileAlreadyExists:  Tiedosto on jo olemassa. Haluatko varmasti korvata tiedoston?
+!
+Keymap52*transTempApp:  N‰pp‰imistˆm‰‰rityksen muutokset on otettu tilap‰isesti k‰yttˆˆn emulointi-istunnossa.
+!
+AllShare*nomakeDir:  Hakemiston luonti ei onnistu.
+!
+AllShare*nofilepathSave:  Tiedoston saantipolun m‰‰ritys ei onnistu.
+!
+Keymap52*transRxd:  Alkuper‰inen n‰pp‰imistˆm‰‰ritys on vastaanotettu emulointi-istunnosta.
+!
+Keymap52*saveTran:  N‰pp‰imistˆm‰‰ritystiedoston tallennus...
+!
+Keymap52*savetoTranError:  Virhe tallennettaessa n‰pp‰imistˆm‰‰ritystiedostoa. J‰rjestelm‰ ei tallenna tiedostoa.
+!
+Keymap52*savedtoTran:  	N‰pp‰imistˆm‰‰ritystiedoston tallennus tiedostoon:
+!
+Keymap52*quitDialog1:  N‰pp‰imistˆm‰‰rityst‰ on muutettu, mutta sit‰ ei ole otettu k‰yttˆˆn tai tallennettu.
+!
+Keymap52*quit1Tog1:  Lopetus ilman muutosten k‰yttˆˆnottoa tai tallennusta.
+!
+Keymap52*quit1Tog2:  Muutosten k‰yttˆˆnotto ja tallennus ennen lopetusta.
+!
+Keymap52*quitDialog2:  N‰pp‰imistˆm‰‰rityst‰ on muutettu ja se on otettu k‰yttˆˆn, mutta sit‰ ei ole tallennettu.
+!
+Keymap52*quit2Tog1:  Lopetus ilman tallennusta ja n‰pp‰imistˆm‰‰ritykseen tehtyjen muutosten kumous.
+!
+Keymap52*quit2Tog2:  Lopetus ilman tallennusta ja muutosten k‰yttˆ istunnossa tilap‰isesti.
+!
+Keymap52*quitDialog3:  N‰pp‰imistˆm‰‰rityst‰ on muutettu ja se on tallennettu, mutta sit‰ ei ole otettu k‰yttˆˆn.
+!
+Keymap52*quit3Tog1:  Lopetus ilman muutosten k‰yttˆˆnottoa.
+!
+Keymap52*quitTog3.labelString:  Muutosten k‰yttˆˆnotto t‰ss‰ istunnossa ennen lopetusta.
+!
+AllShare*quitDialog*quitTog4.labelString:  Muutosten tallennus ennen lopetusta.
+!
+AllShare*quitDialog*exitBox.labelString:  Lopetus
+!
+AllShare*quitDialog*cancelBox.labelString:  Peruutus
+!
+Keymap52*undoDialog.dialogTitle:  Palautus
+!
+Keymap52*undoDialog1.labelString:  Palautettavan n‰pp‰imistˆm‰‰rityksen tason valinta.
+!
+Keymap52*undoDialog*undoBox.labelString:  OK
+!
+Keymap52*undoDialog*cancelBox.labelString:  Peruutus
+!
+Keymap52*restoreWarning.dialogTitle:  Lopetustoiminnon sanoma
+!
+Keymap52*restoreWarning.okLabelString:  OK
+
+! this cannot be made much longer during translation
+Keymap52*restoreWarning.messageString:  T‰m‰n istunnon n‰pp‰imistˆm‰‰ritys on palautettu alkuper‰iseksi.
+!
+Keymap52*nonValidDialog.dialogTitle:  Varoitussanoma
+!
+KeyXXX52*nonValidDialog.okLabelString:  OK
+!
+Keymap52*nonValidDialog.messageString:  Yksi tai useita t‰m‰n n‰pp‰imen toiminnoista ei kelpaa.
+!
+Keymap52*reservedtrans.dialogTitle:  Varoitussanoma
+!
+Keymap52*reservedtrans.okLabelString:  OK
+
+! this cannot be made much longer during translation
+Keymap52*reservedtrans.messageString:  Ikkunan hallintaohjelman varaamia n‰pp‰ilysarjoja ei voi m‰‰ritt‰‰ uudelleen.
+!
+Keymap52*lastButton.labelString:  Edellisen n‰pp‰imistˆm‰‰rityksen palautus
+!
+Keymap52*origButton.labelString:  Alkuper‰isen n‰pp‰imistˆm‰‰rityksen palautus
+
+! this cannot be made much longer during translation
+Keymap52*lastRest:  N‰pp‰imistˆm‰‰ritys on palautettu istunnon edelliselle tasolle.
+!
+Keymap52*origRest:  N‰pp‰imistˆm‰‰ritys on palautettu alkuper‰iseksi.
+!
+Keymap52*noRest:  J‰rjestelm‰ ei toteuta muutoksia, koska palautusvalintoja ei ole tehty.
+!
+Keymap52*fileDeleted:  J‰rjestelm‰ on poistanut valitut n‰pp‰imistˆm‰‰ritystiedostot.
+
+! this resource has been left intentionally blank, do not translate.
+Keymap52*blank: 
+!
+Keymap52*basePb.labelString:  -> Perusn‰pp‰in
+!
+AllShare*changePb.labelString:  OK
+!
+AllShare*cancelPb.labelString:  Peruutus
+!
+AllShare*actionListLabel.labelString:  K‰ytett‰viss‰ olevat toiminnot:
+!
+AllShare*charListLabel.labelString:  Merkit:
+!
+AllShare*actionDef.labelString:  Toimintom‰‰ritys:
+!
+AllShare*printActionDefTitle:  K‰ytett‰viss‰ olevat toimintom‰‰ritykset
+!
+Keymap52*restorePB.labelString:  Palautus
+
+! this cannot be made any longer during translation.
+Keymap52*locatePB.labelString:  Paikannus
+
+! this cannot be made any longer during translation.
+Keymap52*nothingTB.labelString:  Ei toimintoa
+!
+Keymap52*translistdialog.dialogTitle:  N‰pp‰imistˆn lis‰m‰‰ritykset
+!
+Keymap52*noRemPass:  Virheellinen toiminto. Passiivisia n‰pp‰inm‰‰rityksi‰ ei voi poistaa.
+!
+Keymap52*searchFailed:  Paikannus ei onnistu. Vastaavia toimintoja ei lˆydy n‰pp‰imistˆm‰‰rityksest‰.
+!
+Keymap52*searchSuccess:  Paikannus on onnistunut...
+!
+Keymap52*searchSemi:  Paikannus on onnistunut. T‰m‰n toiminnon n‰pp‰in ei ole k‰ytett‰viss‰.
+!
+Keymap52*noSearchMsg:  J‰rjestelm‰ ei voi toteuttaa paikannusta, koska kelvollista toimintoa ei ole valittu.
+!
+Keymap52*nonStand:  T‰lle n‰pp‰imelle on ainakin yksi muunto, jota ei voi tuoda n‰kyviin.
+!
+Keymap52*change.dialogTitle:  N‰pp‰imistˆm‰‰rityksen varoitus
+!
+KeyXXX52*change.messageString:  Vahvista (OK) tai peruuta nykyisen n‰pp‰inm‰‰rityksen muutokset ennen seuraavan n‰pp‰imen tarkastelua.
+!
+KeyXXX52*change.okLabelString:  Jatko
+!
+Keymap52*editb.labelString:  Muokkaus
+!
+Keymap52*insertb.labelString:  Lis‰ys
+!
+Keymap52*removeb.labelString:  Poisto
+!
+Keymap52*closeb.labelString:  Sulkeminen
+!
+Keymap52*editDialog.dialogTitle:  Muokkaus
+!
+Keymap52*editDialog*editLabel.labelString:  Seuraavan muunnon muokkaus:
+!
+Keymap52*editDialog*okButton.labelString:  OK
+!
+Keymap52*editDialog*clearButton.labelString:  Tyhjennys
+!
+Keymap52*editDialog*cancelButton.labelString:  Peruutus
+!
+Keymap52*Any:  -> Perusn‰pp‰in
+!
+Keymap52*Shift:  -> Vaihto
+!
+Keymap52*Lock:  -> Caps Lock
+!
+Keymap52*Lock122:  -> Shift Lock
+!
+Keymap52*Ctrl:  -> Vasen Ctrl
+!
+Keymap52*CtrlNsterm: -> Ctrl
+!
+Keymap52*Alt:  -> Alt
+!
+Keymap52*Mod2:  -> Alt(Gr)
+!
+Keymap52*Mod3:  -> APL/Super
+!
+Keymap52*Mod4:  -> Mod4
+!
+Keymap52*Mod5:  -> Num Lock
+!
+Keymap52*Shift_Alt:  -> Vaihto+Alt
+!
+Keymap52*cantdothat.dialogTitle:  N‰pp‰imistˆm‰‰rityksen varoitus
+!
+Keymap52*cantdothat.messageString:  Vahvista (OK) tai peruuta nykyisen n‰pp‰inm‰‰rityksen muutokset ennen vaihtoehdon valintaa valikkorivilt‰.
+!
+KeyXXX52*cantdothat.okLabelString:  Jatko 
+!
+Keymap52*chooseApply:  Ota muutokset k‰yttˆˆn t‰ss‰ istunnossa valitsemalla K‰yttˆ-painike.
+!
+Keymap52*transListLabel.labelString:  Muuntoluettelo:
+!
+Keymap52*seeHelpLabel.labelString:  Katso lis‰tietoja ohjeesta ennen lis‰m‰‰ritysten muuttoa.
+!
+Keymap52*keyAction.labelString:  N‰pp‰in/Toiminto
+!
+Keymap52*nomapmod:  Tasonvaihton‰pp‰imi‰ ei voi m‰‰ritt‰‰ uudelleen.
+!
+AllShare*toobig:  J‰rjestelm‰ on peruuttanut toiminnon, koska toiminnon enimm‰ispituus on ylitetty.
+!
+Keymap52*currKeyLabel.labelString:  Nykyinen n‰pp‰in:
+!
+AllShare*printKeymap.labelString:  Tulostus
+!
+AllShare*printDialogCancelButton.labelString:  Peruutus
+!
+AllShare*printDialogBoxLabel.labelString:  Tulostusasetusten valinta
+!
+AllShare*printDialogSelectPrinter.labelString:  Kirjoittimen valinta:
+!
+AllShare*PrinterSelectServerDelineator:  @
+!
+AllShare*PrinterSelectLocalDesignator:  (paikallinen)
+!
+AllShare*ActionHelpPrinted:  Toimintojen ohjem‰‰ritelm‰t on tulostettu
+!
+AllShare*printDialogPrintInProgress.labelString:  Tulostus...
+!
+AllShare*okLabelString:  OK
+!
+AllShare*cancelLabelString:  Peruutus
+!
+! Start Action list translations (to be shared by keypad customizer and keymapper).
+! 
+! Rules for translating actions:
+! 1) Action text (to the right of the ":") is translated
+! 2) All actions need to end in ()
+! 3) Action text may not contain spaces
+! 4) Action text may be separated by capitals or underscores (_)
+! 5) Because actions are cross-referenced, each translated action must be unique
+! 6) Action text should be a maximum of 29 characters, not counting the () characters
+!
+!    ValidActionText()
+!    InvalidActionText
+!    ValidActionText()
+!    Valid_Action_Text()
+!    Invalid Action Text()
+!
+!    Valid Unique action names:
+!    Keyxxx52*tab():  Tab()
+!    Keyxxx52*backtab():  BackTab()
+!    Keyxxx52*tabadvancefunction():  TabAdvance()
+!    Keyxxx52*tabfunction():  OfficeTabFunction()
+!
+!    Invalid action names, not unique:
+!    Keyxxx52*tab():  Tab()
+!    Keyxxx52*backtab():  Tab()
+!    Keyxxx52*tabadvancefunction():  Tab()
+!    Keyxxx52*tabfunction():  Tab()
+!
+! Each action is followed by an action definition (to the right of the ":") which is translated
+!
+Keyxxx52*nothing():  Ei_toimintoa()
+AllShare*DEFnothing():  T‰t‰ toimintoa, joka ei tee mit‰‰n, k‰ytet‰‰n osoittamaan tyhj‰‰ toimintoa.
+!
+Keyxxx52*ruleline():  Kohdistusviiva()
+AllShare*DEFruleline():  Piilottaa kohdistusviivan tai tuo sen n‰kyviin. Kohdistinviivan avulla voidaan paikantaa kohdistin. Erilaiset oletusasetukset voivat ottaa kohdistusviivan k‰yttˆˆn (oletusarvo) tai poistaa sen k‰ytˆst‰ sek‰ muuttaa kohdistusviivan lajin.
+!
+AllShare*string():  Merkkijono()
+AllShare*DEFstring():  Tuo kohdistimen kohtaan merkin tai merkkijonon. Toiminnon esitysmuoto on Merkkijono("teksti"). Lainausmerkit (") ovat pakolliset ja 'teksti' on n‰ytett‰v‰ merkki tai merkkijono. Toimintoa Merkkijono() k‰ytet‰‰n n‰pp‰inmakrojen luontiin.
+!
+Keyxxx52*play():  Toisto()
+AllShare*DEFplay():  Tuo n‰yttˆˆn toistoikkunan, jolloin toistotiedosto voidaan aloittaa. Toisto()-toiminto tukee myˆs toistotiedoston nimen k‰yttˆ‰ parametrina (sulkeissa). M‰‰ritetty toistotiedosto alkaa t‰llˆin automaattisesti.
+!
+Keyxxx52*record():  Tallennus()
+AllShare*DEFrecord():  Tuo n‰yttˆˆn Tallennus-ikkunan, jonka avulla toistettava n‰pp‰ilysarja voidaan aloitta.
+!
+AllShare*pause():  Keskeytys()
+AllShare*DEFpause():  Keskeytt‰‰ toistotiedoston toiston tai toistotiedoston tallennuksen. K‰ytt‰j‰ voi jatkaa toistoa tai tallennusta valitsemalla Jatko-painikkeen.
+!
+AllShare*local-screen-print():  N‰ytˆn_tulostus()
+AllShare*DEFlocal-screen-print():  Tuo n‰yttˆˆn tulostusikkunan nykyisen n‰ytˆn tulostusta varten.
+!
+Keyxxx52*print-screen-now():  N‰ytˆn_tulostus_nyt()
+AllShare*DEFprint-screen-now():  Tulostaa nykyisen n‰ytˆn viimeisi‰ tulostusm‰‰rityksi‰ ja viimeksi k‰ytetty‰ kirjoitinta k‰ytt‰en.
+!
+AllShare*extended():  N‰ytˆn_m‰‰ritteet()
+AllShare*DEFextended():  Tuo n‰yttˆˆn kaikki kent‰n m‰‰ritteet.
+!
+AllShare*up():  Kohdistin_ylˆs()
+AllShare*DEFup():  Siirt‰‰ kohdistimen ylˆsp‰in yhden kohdistinpaikan verran.
+!
+AllShare*down():  Kohdistin_alas()
+AllShare*DEFdown():  Siirt‰‰ kohdistimen alasp‰in yhden kohdistinpaikan verran.
+!
+AllShare*left():  Kohdistin_vasemmalle()
+AllShare*DEFleft():  Siirt‰‰ kohdistimen vasemmalle yhden kohdistinpaikan verran.
+!
+AllShare*right():  Kohdistin_oikealle()
+AllShare*DEFright():  Siirt‰‰ kohdistimen oikealle yhden kohdistinpaikan verran.
+!
+AllShare*fastleft():  Kolme_merkki‰_vasemmalle()
+AllShare*DEFfastleft():  Siirt‰‰ kohdistinta vasemmalle kolmen merkkipaikan verran.
+!
+AllShare*fastright():  Kolme_merkki‰_oikealle()
+AllShare*DEFfastright():  Siirt‰‰ kohdistinta oikealle kolmen merkkipaikan verran.
+!
+AllShare*newline():  Seuraavan_rivin_alkuun()
+AllShare*DEFnewline():  Siirt‰‰ kohdistimen seuraavalla rivill‰ olevan kent‰n alkuun.
+!
+AllShare*home():  N‰ytˆn_alkuun()
+AllShare*DEFhome():  Siirt‰‰ kohdistimen alkuun (tavallisesti n‰ytˆn ensimm‰iseen kentt‰‰n) ja joskus l‰hett‰‰ Home-n‰pp‰intunnistekoodin p‰‰koneeseen.
+!
+AllShare*tab():  Sarkain()
+AllShare*DEFtab():  Siirt‰‰ kohdistimen seuraavaan kentt‰‰n.
+!
+AllShare*backtab():  Palautussarkain()
+AllShare*DEFbacktab():  Jos kohdistin on kent‰n tai syˆttˆalueen ensimm‰isess‰ merkkipaikassa, kohdistin siirtyy edellisen kent‰n ensimm‰iseen merkkipaikkaan. Jos kohdistin on kent‰n muussa kuin ensimm‰isess‰ merkkipaikassa, kohdistin siirtyy kent‰n ensimm‰iseen merkkipaikkaan.
+!
+AllShare*end():  Rivin_loppuun()
+AllShare*DEFend():  Siirt‰‰ kohdistimen kent‰n viimeisen merkin kohtaan, joka on muu kuin tyhj‰merkki.
+!
+AllShare*tabadvancefunction():  Sarkain_eteenp‰in()
+AllShare*DEFtabadvancefunction():  Siirt‰‰ kohdistimen seuraavaan loogiseen syˆttˆkentt‰‰n.
+!
+AllShare*insert():  Lis‰ys()
+AllShare*DEFinsert():  Ottaa lis‰ystilan k‰yttˆˆn.
+!
+AllShare*delete():  Poisto()
+AllShare*DEFdelete():  Poistaa merkin kohdistimen kohdalta.
+!
+AllShare*backspace():  Askelpalautin()
+AllShare*DEFbackspace():  Siirt‰‰ kohdistimen taaksep‰in yhden merkkipaikan verran ja poistaa kohdistinta edelt‰v‰n merkin. Muut asetukset -toiminnossa voidaan ottaa k‰yttˆˆn merkin poistava askelpalautin tai poistaa se k‰ytˆst‰.
+!
+AllShare*erase-eof():  Kent‰n_lopun_tyhjennys()
+AllShare*DEFerase-eof():  Poistaa kaikki merkit kohdistimen kohdalta kent‰n loppuun.
+!
+AllShare*erase-input():  Syˆttˆkenttien_tyhjennys()
+AllShare*DEFerase-input():  Tyhjent‰‰ kaikki n‰ytˆn syˆttˆkent‰t.
+!
+AllShare*dup():  Dup-kentt‰()
+AllShare*DEFdup():  T‰ytt‰‰ nykyisen kent‰n ylleviivatulla t‰hdell‰ kohdistimesta kent‰n loppuun asti.
+!
+AllShare*field-mark():  Kent‰n_alku()
+AllShare*DEFfield-mark():  Merkitsee kent‰n kent‰n alun merkill‰.
+!
+AllShare*pf1():  PF1()
+AllShare*DEFpf1():  Toteuttaa F1-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+AllShare*pf2():  PF2()
+AllShare*DEFpf2():  Toteuttaa F2-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+AllShare*pf3():  PF3()
+AllShare*DEFpf3():  Toteuttaa F3-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+AllShare*pf4():  PF4()
+AllShare*DEFpf4():  Toteuttaa F4-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+AllShare*pf5():  PF5()
+AllShare*DEFpf5():  Toteuttaa F5-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+AllShare*pf6():  PF6()
+AllShare*DEFpf6():  Toteuttaa F6-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+AllShare*pf7():  PF7()
+AllShare*DEFpf7():  Toteuttaa F7-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+AllShare*pf8():  PF8()
+AllShare*DEFpf8():  Toteuttaa F8-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+AllShare*pf9():  PF9()
+AllShare*DEFpf9():  Toteuttaa F9-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+AllShare*pf10():  PF10()
+AllShare*DEFpf10():  Toteuttaa F10-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+AllShare*pf11():  PF11()
+AllShare*DEFpf11():  Toteuttaa F11-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+AllShare*pf12():  PF12()
+AllShare*DEFpf12():  Toteuttaa F12-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+AllShare*pf13():  PF13()
+AllShare*DEFpf13():  Toteuttaa F13-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+AllShare*pf14():  PF14()
+AllShare*DEFpf14():  Toteuttaa F14-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+AllShare*pf15():  PF15()
+AllShare*DEFpf15():  Toteuttaa F15-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+AllShare*pf16():  PF16()
+AllShare*DEFpf16():  Toteuttaa F16-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+AllShare*pf17():  PF17()
+AllShare*DEFpf17():  Toteuttaa F17-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+AllShare*pf18():  PF18()
+AllShare*DEFpf18():  Toteuttaa F18-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+AllShare*pf19():  PF19()
+AllShare*DEFpf19():  Toteuttaa F19-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+AllShare*pf20():  PF20()
+AllShare*DEFpf20():  Toteuttaa F20-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+AllShare*pf21():  PF21()
+AllShare*DEFpf21():  Toteuttaa F21-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+AllShare*pf22():  PF22()
+AllShare*DEFpf22():  Toteuttaa F22-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+AllShare*pf23():  PF23()
+AllShare*DEFpf23():  Toteuttaa F23-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+AllShare*pf24():  PF24()
+AllShare*DEFpf24():  Toteuttaa F24-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+AllShare*clear():  N‰ytˆn_tyhjennys()
+AllShare*DEFclear():  L‰hett‰‰ tyhjennyksen n‰pp‰intunnistekoodin p‰‰koneeseen.
+!
+AllShare*enter():  Enter()
+AllShare*DEFenter():  Syˆtt‰‰ tiedot Enter-toiminnolla.
+!
+AllShare*pa1():  PA1()
+AllShare*DEFpa1():  L‰hett‰‰ PA1-n‰pp‰intunnistekoodin p‰‰koneeseen.
+!
+AllShare*pa2():  PA2()
+AllShare*DEFpa2():  L‰hett‰‰ PA2-n‰pp‰intunnistekoodin p‰‰koneeseen.
+!
+AllShare*pa3():  PA3()
+AllShare*DEFpa3():  L‰hett‰‰ PA3-n‰pp‰intunnistekoodin p‰‰koneeseen.
+!
+AllShare*sysreq():  J‰rjestelm‰pyyntˆ()
+AllShare*DEFsysreq():  L‰hett‰‰ j‰rjestelm‰pyynnˆn n‰pp‰intunnistekoodin p‰‰koneeseen.
+!
+AllShare*reset():  Palautus()
+AllShare*DEFreset():  Palauttaa virheen.
+!
+AllShare*hex-entry():  Heksadesimaalitila()
+AllShare*DEFhex-entry():  Asettaa EBCDIC-merkin luontitilan kahdelle seuraavalle n‰pp‰inpainallukselle. N‰pp‰inpainallusten on oltava jokin merkeist‰ 0 - 9 tai a - f.
+!
+AllShare*hex():  Heksadesimaaliluku()
+AllShare*DEFhex():  Edellytt‰‰ kaksimerkkist‰ koodia parametriksi (sulkeissa). Kaksimerkkinen arvo (00 - ff) on ASCII-koodisivun 819 merkki.
+!
+AllShare*cursor-select():  Valintakohdistin()
+AllShare*DEFcursor-select():  Valitsee kohdistimen sis‰lt‰v‰n kent‰n.
+!
+AllShare*attention():  Huomiotila()
+AllShare*DEFattention():  L‰hett‰‰ huomiotilan n‰pp‰intunnistekoodin p‰‰koneeseen.
+!
+AllShare*print():  J‰rjestelm‰tulostus()
+AllShare*DEFprint():  L‰hett‰‰ tulostuksen n‰pp‰intunnistekoodin p‰‰koneeseen.
+!
+AllShare*scroll_image_up():	Kuvan_vieritys_ylˆs()
+AllShare*DEFscroll_image_up():  Vieritt‰‰ katseltavaa kuvaa ylˆsp‰in.
+!
+AllShare*scroll_image_down():	Kuvan_vieritys_alas()
+AllShare*DEFscroll_image_down():  Vieritt‰‰ katseltavaa kuvaa alasp‰in.
+!
+AllShare*scroll_image_right():	Kuvan_vieritys_oikealle()
+AllShare*DEFscroll_image_right():  Vieritt‰‰ katseltavaa kuvaa oikealle.
+!
+AllShare*scroll_image_left():	Kuvan_vieritys_vasemmalle()
+AllShare*DEFscroll_image_left():  Vieritt‰‰ katseltavaa kuvaa vasemmalle.
+!
+AllShare*help():  J‰rjestelm‰n_ohje()
+AllShare*DEFhelp():  L‰hett‰‰ ohjeen n‰pp‰intunnistekoodin p‰‰koneeseen.
+!
+AllShare*rolldown():  Sivu_ylˆs()
+AllShare*DEFrolldown():  Siirt‰‰ nykyisen sivun yl‰puolella olevan sivun n‰kyviin.
+!
+AllShare*rollup():  Sivu_alas()
+AllShare*DEFrollup():  Siirt‰‰ nykyisen sivun alapuolella olevan sivun n‰kyviin.
+!
+AllShare*fieldexit():  Kent‰n_loppu()
+AllShare*DEFfieldexit():  Siirtyy n‰ytˆn seuraavan kent‰n alkuun.
+!
+AllShare*fieldplus():  Positiivinen_kentt‰()
+AllShare*DEFfieldplus():  Muuttaa kent‰ss‰ olevan arvon positiiviseksi ja siirtyy seuraavaan kentt‰‰n.
+!
+AllShare*fieldminus():  Negatiivinen_kentt‰()
+AllShare*DEFfieldminus():  Muuttaa kent‰ss‰ olevan arvon negatiiviseksi ja siirtyy seuraavaan kentt‰‰n.
+!
+AllShare*testreq():  Testipyyntˆ()
+AllShare*DEFtestreq():  L‰hett‰‰ testipyynnˆn n‰pp‰intunnistekoodin p‰‰koneeseen.
+!
+! Note: Office actions are used within the AS/400 OfficeVision editor.
+AllShare*tabfunction():  OV-ohjelmiston_sarkain()
+AllShare*DEFtabfunction():  Lis‰‰ OV/400-muokkaustoiminnossa sarkainmerkin kohdistimen kohtaan.
+!
+AllShare*textcarrierreturn():  OV_rivinvaihto()
+AllShare*DEFtextcarrierreturn():  Lis‰‰ OV/400-muokkaustoiminnossa rivinvaihdon kohdistimen kohtaan.
+!
+AllShare*textrqtabfunction():  OV_sisennyssarkain()
+AllShare*DEFtextrqtabfunction():  Lis‰‰ OV/400-muokkaustoiminnossa sisennyssarkaimen kohdistimen kohtaan. Sisennyssarkaimet m‰‰ritt‰v‰t tilap‰isen sisennyksen, joka pysyy voimassa, kunnes kappaleen loppumerkki (pakollinen rivinvaihto) lopettaa sen.
+!
+AllShare*textunderscore():  OV_alleviivauksen_alku()
+AllShare*DEFtextunderscore():  Aloittaa OV/400-muokkaustoiminnossa alleviivauksen kohdistimen kohdasta.
+!
+AllShare*textintensify():  OV_lihavoinnin_alku()
+AllShare*DEFtextintensify():  Aloittaa OV/400-muokkaustoiminnossa korostetun tekstin kohdistimen kohdasta.
+!
+AllShare*textendattribute():  OV_allev_lihav_loppu()
+AllShare*DEFtextendattribute():  Lopettaa OV/400-muokkaustoiminnossa aktiivisen alleviivauksen tai korostuksen.
+!
+AllShare*textsymbolscmdprompt():  OV_erikoismerkin_lis‰ys()
+AllShare*DEFtextsymbolscmdprompt():  Tuo OV/400-muokkaustoiminnossa esiin kehoten‰ytˆn, jonka avulla voidaan syˆtt‰‰ muita kuin n‰pp‰imistˆss‰ olevia symboleja.
+!
+AllShare*textrqspace():  OV_sanaside()
+AllShare*DEFtextrqspace():  Asettaa OV/400-muokkaustoiminnossa sanasiteen kohdistimen nykyiseen kohtaan. Sanaside n‰kyy v‰limerkkin‰, mutta se pit‰‰ v‰lill‰ erotetut sanat aina yhdess‰ samalla rivill‰.
+!
+AllShare*texttopofpage():  OV_sivun_yl‰reunaan()
+AllShare*DEFtexttopofpage():  Siirt‰‰ OV/400-muokkausohjelmassa kohdistimen (ja mahdollisesti sijoittaa n‰ytˆn uudelleen) nyt n‰kyv‰n sivun alkuun.
+!
+AllShare*textbottomofpage():  OV_sivun_alareunaan()
+AllShare*DEFtextbottomofpage():  Siirt‰‰ OV/400-muokkausohjelmassa kohdistimen (ja mahdollisesti sijoittaa n‰ytˆn uudelleen) nyt n‰kyv‰n sivun loppuun.
+!
+AllShare*textbeginofline():  OV_rivin_alkuun()
+AllShare*DEFtextbeginofline():  Siirt‰‰ OV/400-muokkaustoiminnossa kohdistimen nykyisen tekstirivin alkuun.
+!
+AllShare*textpageend():  OV_sivunvaihto()
+AllShare*DEFtextpageend():  Lis‰‰ OV/400-muokkaustoiminnossa sivun lopun merkin. T‰m‰ aloittaa uuden tekstisivun.
+!
+AllShare*textstopcodefunction():  OV_pys‰ytyskoodin_lis‰ys()
+AllShare*DEFtextstopcodefunction():  Tuo OV/400-muokkaustoiminnossa esiin kehoten‰ytˆn, jonka avulla voidaan m‰‰ritt‰‰ uusi pys‰ytyskoodi kohdistimen kohtaan.
+!
+AllShare*textstopcodeadvance():  OV_seuraava_pys‰ytyskoodi()
+AllShare*DEFtextstopcodeadvance():  Siirt‰‰ OV/400-muokkaustoiminnossa kohdistimen asiakirjan seuraavan pys‰ytyskoodin kohtaan.
+!
+AllShare*textaltd():  OV_seuraava_tekstisarake()
+AllShare*DEFtextaltd():  Lis‰‰ OV/400-muokkaustoiminnossa ohjausmerkin, joka aloittaa uuden tekstisarakkeen kohdistimen kohtaan. T‰m‰ toiminto on aktiivinen vain silloin, kun muokataan useita tekstisarakkeita.
+!
+AllShare*textcent():  OV_keskitys()
+AllShare*DEFtextcent():  Keskitt‰‰ OV/400-muokkaustoiminnossa kohdistimen sis‰lt‰v‰n tekstirivin.
+!
+AllShare*textwordunderscore():  OV_sanan_alleviivaus()
+AllShare*DEFtextwordunderscore():  Asettaa OV/400-muokkaustoiminnossa alleviivauksen ohjausmerkin kohdistimen nykyiseen kohtaan. Kohdistimen tulee olla alleviivattavan tekstin lopussa, sill‰ alleviivaus jatkuu nykyisest‰ sanasta kohdistimen kohtaan.
+!
+AllShare*texthalfindexup():  OV_puoli_rivi‰_ylˆs()
+AllShare*DEFtexthalfindexup():  Asettaa OV/400-muokkaustoiminnossa korotetun merkkijonon ohjausmerkin kohdistimen nykyiseen kohtaan. Korotettu merkkijono on aktiivinen seuraavaan lasketun merkkijonon ohjausmerkkiin asti.
+!
+AllShare*texthalfindexdown():  OV_puoli_rivi‰_alas()
+AllShare*DEFtexthalfindexdown():  Asettaa OV/400-muokkaustoiminnossa lasketun merkkijonon ohjausmerkin kohdistimen nykyiseen kohtaan. Laskettu merkkijono on aktiivinen seuraavaan korotetun merkkijonon ohjausmerkkiin asti.
+!
+AllShare*displaytextsymb():  OV_ohjausmerkkien_n‰yttˆ()
+AllShare*DEFdisplaytextsymb():  Tuo OV/400-muokkaustoiminnossa esiin ohjausmerkit, jotka eiv‰t tavallisesti ole n‰kyviss‰. Niit‰ ovat sarkaimen, sisennyssarkaimen, rivinvaihdon, pakollisen rivinvaihdon, sanasiteen ja sivun lopun merkit.
+!
+AllShare*kanji():  SO/SI-merkin_lis‰ys()
+AllShare*DEFkanji():  Lis‰‰ DBCS-merkistˆn SO/SI-merkin (k‰ytˆss‰ japanin, korean ja kiinan kieless‰).
+!
+AllShare*reverse():  K‰‰nteinen_kohdistin()
+AllShare*DEFreverse():  Muuttaa kohdistimen suunnan k‰‰nteiseksi kent‰ss‰ ja valitsee n‰pp‰ilysarjojen vastakkaisen suunnan (k‰ytˆss‰ arabiassa ja hepreassa).
+!
+AllShare*close():  Tietojen_tiivistys()
+AllShare*DEFclose():  Tiivist‰‰ kent‰n tiedot poistamalla sis‰llytetyt tyhj‰merkit ja siirt‰m‰ll‰ tietoja kent‰n loogista alkua kohti (k‰ytˆss‰ arabian ja heprean kieless‰).
+!
+AllShare*base():  Perusmuoto()
+AllShare*DEFbase():  Ottaa k‰yttˆˆn arabian kielen merkkimuodon ja poistaa sen k‰ytˆst‰ (k‰ytet‰‰n arabian kieless‰).
+!
+AllShare*charadvance():  Seuraava_merkki()
+AllShare*DEFcharadvance():  Siirt‰‰ kohdistimen seuraavaan syˆttˆkentt‰‰n n‰ytˆss‰.
+!
+AllShare*displaySOSI():  SO/SI-merkin_n‰yttˆ()
+AllShare*DEFdisplaySOSI():  Tuo n‰yttˆˆn kaikki SO/SI-merkit (k‰ytˆss‰ japanin, korean ja kiinan kieless‰).
+!
+AllShare*reverse-scn():  K‰‰nteisn‰yttˆ()
+AllShare*DEFreverse-scn():  Muuttaa n‰ytˆn kirjoitussuunnan (k‰ytet‰‰n arabian ja heprean kieless‰).
+!
+AllShare*EBChex():  EBCDIC_heksadesimaali()
+AllShare*DEFEBChex():  Sallii EBCDIC-koodien k‰ytˆn tietojen syˆtˆss‰ (k‰ytet‰‰n japanin, korean ja kiinan kieless‰).
+!
+AllShare*AltView():  Vaihtoehtoinen_katselutila()
+AllShare*DEFAltView():  Sallii japaninkielisten tietojen katselun vaihtoehtoista koodisivua k‰ytett‰ess‰.
+!
+Keyxxx52*noop():  Ei_toimintoa()
+AllShare*DEFnoop():  T‰t‰ toimintoa, joka ei tee mit‰‰n, k‰ytet‰‰n osoittamaan tyhj‰‰ toimintoa.
+!
+! There are no parentheses after Undefined, making this action different than other actions.
+Keyxxx52*undefined():  Ei_toimintoa
+!
+AllShare*cursor-move():  Kohdistimen_siirto()
+AllShare*DEFcursor-move():  Siirt‰‰ kohdistimen annettuun kuvaruudun kohtaan.
+!
+AllShare*forward-word():  Seuraava_sana()
+AllShare*DEFforward-word():  Siirt‰‰ kohdistimen seuraavan sanan alkuun.
+!
+AllShare*backward-word():  Edellinen_sana()
+AllShare*DEFbackward-word():  Siirt‰‰ kohdistimen edellisen sanan alkuun.
+!
+AllShare*spbackspace():  Vaihtoehtoinen_askelpalautin()
+AllShare*DEFspbackspace():  Tekee saman toiminnon kuin Askelpalautin(). Kohdistimen oikealla puolella olevat merkit siirtyv‰t vain silloin, kun lis‰ystila on k‰ytˆss‰.
+!
+AllShare*kill-word():  Sanan_lopun_poisto()
+AllShare*DEFkill-word():  Poistaa merkit kohdistimen kohdasta sanan loppuun.
+!
+AllShare*backward-kill-word():  Edellisen_sanan_poisto()
+AllShare*DEFbackward-kill-word():  Poistaa edellisen sanan merkit.
+!
+AllShare*cent():  Sentti()
+AllShare*DEFcent():  N‰ytt‰‰ sentin valuuttasymbolin kohdistimen kohdalla.
+!
+AllShare*unlock():  N‰pp‰imistˆn_vapautus()
+AllShare*DEFunlock():  Vapauttaa n‰pp‰imistˆn syˆttˆ‰ varten.
+!
+AllShare*selpen-attn():  Valintakyn‰n_ilmoitus()
+AllShare*DEFselpen-attn():  L‰hett‰‰ valintakyn‰n n‰pp‰intunnistekoodin p‰‰koneeseen.
+!
+AllShare*select-field():  Kent‰n_valinta_valokyn‰ll‰()
+AllShare*DEFselect-field():  Valitsee valittavissa olevan kent‰n.
+!
+AllShare*xh-attn():  Huomio_vaihtoehto()
+AllShare*DEFxh-attn():  L‰hett‰‰ vaihtoehtoisen huomiotilan n‰pp‰intunnistekoodin p‰‰koneeseen.
+!
+Keyxxx52*insert-selection:  Liitt‰minen()
+Keyxxx52*DEFinsert-selection:  Liitt‰‰ leikepˆyd‰n sis‰llˆn kohdistimen kohdalle.
+!
+Keyxxx52*jump():  Hyppy()
+AllShare*DEFjump():  Siirtyy istuntoluettelon seuraavaan istuntoon. Jos istunto 1 on aktiivinen istunto, istunnosta 2 tulee aktiivinen istunto.
+!
+Keyxxx52*jump-to-session():  Hyppy_istuntoon()
+AllShare*DEFjump-to-session():  Siirtyy (sulkeissa annetun) parametrin osoittamaan istuntoon. Jos argumenttina annetaan arvo 2, toisesta istunnosta tulee aktiivinen istunto.
+!
+Keyxxx52*delay():  Viipym‰()
+AllShare*DEFdelay(): Lis‰‰ tauon toimintojen v‰lille, kun yhteen n‰pp‰ilysarjaan m‰‰ritet‰‰n useita toimintoja n‰pp‰imistˆn uudelleenm‰‰rityksess‰ tai mukautuksessa. (Sulkeissa oleva) parametri on viipym‰n arvo sekunnin kymmenesosina (oletusarvo on 5 kymmenesosaa).
+!
+Keyxxx52*menu-bar-focus():  Valikkorivin_aktivointi()
+AllShare*DEFmenu-bar-focus():  Antaa ilman hiiren apua k‰yttˆˆn valikkorivin.
+!
+Keyxxx52*wider-font(): Laajempi_fontti()
+Keyxxx52*DEFwider-font(): Laajentaa nykyist‰ fonttia.
+!
+Keyxxx52*narrower-font(): Kapeampi_fontti()
+Keyxxx52*DEFnarrower-font(): Kaventaa nykyist‰ fonttia.
+!
+Keyxxx52*taller-font(): Korkeampi_fontti()
+Keyxxx52*DEFtaller-font(): Tekee nykyisest‰ fontista korkeamman.
+!
+Keyxxx52*shorter-font(): Matalampi_fontti()
+Keyxxx52*DEFshorter-font(): Tekee nykyisest‰ fontista matalamman.
+!	
+! The following three key sequences should be translated; they may be used in the future for keyboard actions that we currently do not know about.
+Keyxxx52*key-seq1():  N‰pp‰ilysarja1()
+Keyxxx52*key-seq2():  N‰pp‰ilysarja2()
+Keyxxx52*key-seq3():  N‰pp‰ilysarja3()
+!
+! General dead key (the first key of a key sequence to create a dead key character, for example tilda in many languages) that is not remappable because dead keys are processed by the Network Station kernel.
+! There are no parentheses at the end of the following line.
+Keyxxx52*unmappable():  Ei toimintoa
+!
+AllShare*inserteuro():  Euro()
+AllShare*DEFinserteuro():  Lis‰‰ euron valuuttasymbolin kohdistimen kohtaan.
+!
+! Action List Translations for NSTerm (VTxxx) 
+!
+Keymap52*vt-backspace(): VT_askelpalautin()
+AllShare*DEFvt-backspace():  Siirt‰‰ kohdistimen taaksep‰in yhden merkkipaikan verran ja poistaa kohdistinta edelt‰v‰n merkin.
+!
+Keymap52*enterkey(): Enter()
+Keymap52*DEFenterkey():  L‰hett‰‰ rivinvaihtomerkin p‰‰koneeseen.
+!
+Keymap52*local-print-buffer(): Paikallinen_puskurin_tulostus()
+Keymap52*DEFlocal-print-buffer():  Tuo n‰yttˆˆn tulostusikkunan vierityspuskurin nykyisen sis‰llˆn tulostusta varten.
+!
+Keymap52*local-print-screen(): Paikallinen_n‰ytˆn_tulostus()
+Keymap52*DEFlocal-print-screen():  Tuo n‰yttˆˆn tulostusikkunan nykyisen n‰ytˆn tulostusta varten.
+!
+Keymap52*cut-clipboard(): Leikkaus_leikepˆyd‰lle()
+Keymap52*DEFcut-clipboard():  Kopioi n‰yttˆˆn merkityn alueen leikepˆyt‰‰n ja poistaa alueen n‰ytˆst‰.
+!
+Keymap52*copy-clipboard(): Kopiointi_leikepˆyd‰lle()
+Keymap52*DEFcopy-clipboard():  Kopioi n‰yttˆˆn merkityn alueen leikepˆyd‰lle.
+!
+Keymap52*paste-clipboard(): Liitt‰minen_leikepˆyd‰st‰()
+Keymap52*DEFpaste-clipboard():  Kopioi leikepˆyt‰puskuriin tallennetut tiedot ja siirt‰‰ ne kohdistimen kohtaan n‰ytˆss‰.
+!
+Keymap52*beginning-of-buffer(): Puskurin_alkuun()
+Keymap52*DEFbeginning-of-buffer(): Tuo n‰yttˆˆn vierityspuskurin alun.
+!
+Keymap52*end-of-buffer(): Puskurin_loppuun()
+Keymap52*DEFend-of-buffer():  Vieritt‰‰ n‰yttˆ‰ niin, ett‰ nykyisen puskurin loppu tulee n‰kyviin.
+!
+Keymap52*hard-reset(): Laitteiston_nollaus()
+Keymap52*DEFhard-reset():  Palauttaa n‰yttˆp‰‰tteen oletustilaan, poistaa kuvaruudun sis‰llˆn ja tyhjent‰‰ mahdolliset valinnat.
+!
+Keymap52*soft-reset(): Ohjelmallinen_nollaus()
+Keymap52*DEFsoft-reset():  Palauttaa n‰yttˆp‰‰tteen oletustilaan.
+!
+Keymap52*vt-break(): VT_katko()
+Keymap52*DEFvt-break(): L‰hett‰‰ RS-232-katkosignaalin p‰‰koneeseen.
+!
+Keymap52*vt-find(): VT_haku()
+Keymap52*DEFvt-find(): Toteuttaa Haku-toiminnon, jos VT200 Mode -p‰‰telaji tai tehokkaampi l‰hett‰‰ DEC-koodin (CSI 1~) p‰‰koneeseen.
+!
+Keymap52*vt-ins(): VT_lis‰ys()
+Keymap52*DEFvt-ins(): Toteuttaa Lis‰‰ t‰h‰n -toiminnon, VT200 Mode -p‰‰telaji tai tehokkaampi l‰hett‰‰ DEC-koodin (CSI 2~) p‰‰koneeseen.
+!
+Keymap52*vt-delete(): VT_poisto()
+Keymap52*DEFvt-delete(): Toteuttaa Poisto-toiminnon, jos VT200 Mode -p‰‰telaji tai tehokkaampi l‰hett‰‰ DEC-koodin (CSI 3~) p‰‰koneeseen.
+!
+Keymap52*vt-select(): VT_valinta()
+Keymap52*DEFvt-select(): Toteuttaa Valinta-toiminnon, jos VT200 Mode -p‰‰telaji tai tehokkaampi l‰hett‰‰ DEC-koodin (CSI 4~) p‰‰koneeseen.
+!
+Keymap52*vt-prev-screen(): VT_edellinen_n‰yttˆ()
+Keymap52*DEFvt-prev-screen(): Toteuttaa Edellinen n‰yttˆ -toiminnon, jos VT200 Mode -p‰‰telaji tai tehokkaampi l‰hett‰‰ DEC-koodin (CSI 5~) p‰‰koneeseen.
+!
+Keymap52*vt-next-screen(): VT_seuraava_n‰yttˆ()
+Keymap52*DEFvt-next-screen(): Toteuttaa Seuraava n‰yttˆ -toiminnon, jos VT200 Mode -p‰‰telaji tai tehokkaampi l‰hett‰‰ DEC-koodin (CSI 6~) p‰‰koneeseen.
+!
+Keymap52*vt-prev-page(): VT_edellinen_sivu()
+Keymap52*DEFvt-prev-page(): Siirt‰‰ teksti‰ alasp‰in ja ikkunaa ylˆsp‰in yhden sivun verran.
+!
+Keymap52*vt-next-page(): VT_seuraava_sivu()
+Keymap52*DEFvt-next-page(): Siirt‰‰ teksti‰ ylˆsp‰in ja ikkunaa alasp‰in yhden sivun verran.
+!
+Keymap52*vt-do(): VT_Do()
+Keymap52*DEFvt-do(): Toteuttaa Do-toiminnon, jos VT200 Mode -p‰‰telaji tai tehokkaampi l‰hett‰‰ DEC-koodin (CSI 29~) p‰‰koneeseen.
+!
+Keymap52*vt-help(): VT_ohje()
+Keymap52*DEFvt-help(): Toteuttaa Ohje-toiminnon, jos VT200 Mode -p‰‰telaji tai tehokkaampi l‰hett‰‰ DEC-koodin (CSI 28~) p‰‰koneeseen.
+!
+Keymap52*vt-next-line(): VT_seuraava_rivi()
+Keymap52*DEFvt-next-line():  Siirt‰‰ teksti‰ ylˆsp‰in ja ikkunaa alasp‰in yhden rivin verran.
+!
+Keymap52*vt-prev-line(): VT_edellinen_rivi()
+Keymap52*DEFvt-prev-line(): Siirt‰‰ teksti‰ alasp‰in ja ikkunaa ylˆsp‰in yhden rivin verran.
+!
+Keymap52*tty-interrupt(): TTY_keskeytys()
+Keymap52*DEFtty-interrupt(): L‰hett‰‰ TTY-keskeytysmerkin (inter = Ctrl-C) p‰‰koneeseen.
+!
+Keymap52*tty-suspend(): TTY_lykk‰ys()
+Keymap52*DEFtty-suspend(): L‰hett‰‰ TTY-lykk‰ysmerkin (susp = Ctrl-Z) p‰‰koneeseen.
+!
+Keymap52*tty-start(): TTY_aloitus()
+Keymap52*DEFtty-start(): L‰hett‰‰ TTY-aloitusmerkin (start = Ctrl-Q) p‰‰koneeseen.
+!
+Keymap52*tty-stop(): TTY_lopetus()
+Keymap52*DEFtty-stop(): L‰hett‰‰ TTY-lopetusmerkin (stop = Ctrl-S) p‰‰koneeseen.
+!
+Keymap52*delete-word(): TTY_sanan_poisto()
+Keymap52*DEFdelete-word(): L‰hett‰‰ sanan poiston TTY-merkin (werase = Ctrl-W) p‰‰koneeseen.
+!
+Keymap52*line-feed(): TTY_rivinsiirto()
+Keymap52*DEFline-feed(): L‰hett‰‰ rivinsiirtomerkin (Ctrl-J) p‰‰koneeseen.
+!
+Keymap52*cr-lf(): TTY_rivinvaihto_ja_rivinsiirto()
+Keymap52*DEFcr-lf(): L‰hett‰‰ sek‰ rivinvaihto- ett‰ rivinsiirtomerkin (Ctrl-M Ctrl-J) p‰‰koneeseen.
+!
+Keymap52*escape(): Koodinvaihtomerkki()
+Keymap52*DEFescape(): L‰hett‰‰ koodinvaihtomerkin (Ctrl-[) p‰‰koneeseen.
+!
+Keymap52*udk-f1(): KMN_F1()
+Keymap52*DEFudk-f1():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F1 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f2(): KMN_F2()
+Keymap52*DEFudk-f2():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F2 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f3(): KMN_F3()
+Keymap52*DEFudk-f3():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F3 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f4(): KMN_F4()
+Keymap52*DEFudk-f4():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F4 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f5(): KMN_F5()
+Keymap52*DEFudk-f5():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F5 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f6(): KMN_F6
+Keymap52*DEFudk-f6():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F6 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f7(): KMN_F7()
+Keymap52*DEFudk-f7():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F7 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f8(): KMN_F8()
+Keymap52*DEFudk-f8():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F8 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f9(): KMN_F9()
+Keymap52*DEFudk-f9():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F9 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f10(): KMN_F10()
+Keymap52*DEFudk-f10():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F10 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f11(): KMN_F11()
+Keymap52*DEFudk-f11():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F11 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f12(): KMN_F12()
+Keymap52*DEFudk-f12():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F12 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f13(): KMN_F13()
+Keymap52*DEFudk-f13():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F13 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f14(): KMN_F14()
+Keymap52*DEFudk-f14():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F14 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f15(): KMN_F15()
+Keymap52*DEFudk-f15():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F15 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f16(): KMN_F16()
+Keymap52*DEFudk-f16():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F16 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f17(): KMN_F17()
+Keymap52*DEFudk-f17():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F17 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f18(): KMN_F18()
+Keymap52*DEFudk-f18():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F18 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f19(): KMN_F19
+Keymap52*DEFudk-f19():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F19 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f20(): KMN_F20()
+Keymap52*DEFudk-f20():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F20 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f21(): KMN_F21()
+Keymap52*DEFudk-f21():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F21 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f22(): KMN_F22()
+Keymap52*DEFudk-f22():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F22 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f23(): KMN_F23()
+Keymap52*DEFudk-f23():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F23 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f24(): KMN_F24()
+Keymap52*DEFudk-f24():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F24 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f25(): KMN_F25()
+Keymap52*DEFudk-f25():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F25 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f26(): KMN_F26()
+Keymap52*DEFudk-f26():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F26 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f27(): KMN_F27()
+Keymap52*DEFudk-f27():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F27 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f28(): KMN_F28
+Keymap52*DEFudk-f28():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F28 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f29(): KMN_F29()
+Keymap52*DEFudk-f29():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F29 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f30(): KMN_F30()
+Keymap52*DEFudk-f30():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F30 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f31(): KMN_F31()
+Keymap52*DEFudk-f31():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F31 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f32(): KMN_F32()
+Keymap52*DEFudk-f32():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F32 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f33(): KMN_F33()
+Keymap52*DEFudk-f33():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F33 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f34(): KMN_F34()
+Keymap52*DEFudk-f34():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F34 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*udk-f35(): KMN_F35()
+Keymap52*DEFudk-f35():  Toteuttaa k‰ytt‰j‰n n‰pp‰imeen F35 m‰‰ritt‰m‰n DEC-toiminnon.
+!
+Keymap52*x-f1(): F1()
+Keymap52*DEFx-f1():  Toteuttaa F1-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f2(): F2()
+Keymap52*DEFx-f2():  Toteuttaa F2-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f3(): F3()
+Keymap52*DEFx-f3():  Toteuttaa F3-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f4(): F4()
+Keymap52*DEFx-f4():  Toteuttaa F4-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f5(): F5()
+Keymap52*DEFx-f5():  Toteuttaa F5-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f6(): F6()
+Keymap52*DEFx-f6():  Toteuttaa F6-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f7(): F7()
+Keymap52*DEFx-f7():  Toteuttaa F7-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f8(): F8()
+Keymap52*DEFx-f8():  Toteuttaa F8-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f9(): F9()
+Keymap52*DEFx-f9():  Toteuttaa F9-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f10(): F10()
+Keymap52*DEFx-f10():  Toteuttaa F10-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f11(): F11()
+Keymap52*DEFx-f11():  Toteuttaa F11-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f12(): F12()
+Keymap52*DEFx-f12():  Toteuttaa F12-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f13(): F13()
+Keymap52*DEFx-f13():  Toteuttaa F13-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f14(): F14()
+Keymap52*DEFx-f14():  Toteuttaa F14-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f15(): F15()
+Keymap52*DEFx-f15():  Toteuttaa F15-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f16(): F16()
+Keymap52*DEFx-f16():  Toteuttaa F16-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f17(): F17()
+Keymap52*DEFx-f17():  Toteuttaa F17-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f18(): F18()
+Keymap52*DEFx-f18():  Toteuttaa F18-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f19(): F19()
+Keymap52*DEFx-f19():  Toteuttaa F19-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f20(): F20()
+Keymap52*DEFx-f20():  Toteuttaa F20-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f21(): F21()
+Keymap52*DEFx-f21():  Toteuttaa F21-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f22(): F22()
+Keymap52*DEFx-f22():  Toteuttaa F22-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f23(): F23()
+Keymap52*DEFx-f23():  Toteuttaa F23-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f24(): F24()
+Keymap52*DEFx-f24():  Toteuttaa F24-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f25(): F25()
+Keymap52*DEFx-f25():  Toteuttaa F25-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f26(): F26()
+Keymap52*DEFx-f26():  Toteuttaa F26-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f27(): F27()
+Keymap52*DEFx-f27():  Toteuttaa F27-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f28(): F28()
+Keymap52*DEFx-f28():  Toteuttaa F28-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f29(): F29()
+Keymap52*DEFx-f29():  Toteuttaa F29-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f30(): F30()
+Keymap52*DEFx-f30():  Toteuttaa F30-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f31(): F31()
+Keymap52*DEFx-f31():  Toteuttaa F31-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f32(): F32()
+Keymap52*DEFx-f32():  Toteuttaa F32-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f33(): F33()
+Keymap52*DEFx-f33():  Toteuttaa F33-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f34(): F34()
+Keymap52*DEFx-f34():  Toteuttaa F34-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*x-f35(): F35()
+Keymap52*DEFx-f35():  Toteuttaa F35-n‰pp‰imeen m‰‰ritetyn toiminnon.
+!
+Keymap52*vt-f1(): VTPF1()
+Keymap52*DEFvt-f1():  L‰hett‰‰ miss‰ tahansa tilassa merkkikoodin (SS3 P) sovellukselle.
+!
+Keymap52*vt-f2(): VTPF2()
+Keymap52*DEFvt-f2(): L‰hett‰‰ miss‰ tahansa tilassa merkkikoodin (SS3 Q) sovellukselle.
+!
+Keymap52*vt-f3(): VTPF3()
+Keymap52*DEFvt-f3(): L‰hett‰‰ miss‰ tahansa tilassa merkkikoodin (SS3 R) sovellukselle.
+!
+Keymap52*vt-f4(): VTPF4()
+Keymap52*DEFvt-f4(): L‰hett‰‰ miss‰ tahansa tilassa merkkikoodin (SS3 S) sovellukselle.
+!
+Keymap52*x-print(): X_tulostus()
+Keymap52*DEFx-print(): L‰hett‰‰ ANSI-ohjauskoodin (Ctrl-[[209q) p‰‰koneeseen.
+!
+Keymap52*x-scroll-lock(): X_ScrollLock()
+Keymap52*DEFx-scroll-lock(): L‰hett‰‰ ANSI-ohjauskoodin (Ctrl-[[213q) p‰‰koneeseen.
+!
+Keymap52*x-pause(): X_tauko()
+Keymap52*DEFx-pause(): L‰hett‰‰ ANSI-ohjauskoodin (Ctrl-[[217q) p‰‰koneeseen.
+!
+Keymap52*x-ins(): X_lis‰ys()
+Keymap52*DEFx-ins(): L‰hett‰‰ ANSI-ohjauskoodin (Ctrl-[[139q) p‰‰koneeseen.
+!
+Keymap52*x-delete(): X_poisto()
+Keymap52*DEFx-delete(): L‰hett‰‰ ANSI-ohjauskoodin (Ctrl-[[P) p‰‰koneeseen.
+!
+Keymap52*x-home(): X_Home()
+Keymap52*DEFx-home(): L‰hett‰‰ ANSI-ohjauskoodin (Ctrl-[[H) p‰‰koneeseen.
+!
+Keymap52*x-end(): X_End()
+Keymap52*DEFx-end(): L‰hett‰‰ ANSI-ohjauskoodin (Ctrl-[[146q) p‰‰koneeseen.
+!
+Keymap52*x-page-up(): X_PageUp()
+Keymap52*DEFx-page-up(): L‰hett‰‰ ANSI-ohjauskoodin (Ctrl-[[150q) p‰‰koneeseen.
+!
+Keymap52*x-page-down(): X_PageDown()
+Keymap52*DEFx-page-down(): L‰hett‰‰ ANSI-ohjauskoodin (Ctrl-[[154q) p‰‰koneeseen.
+!
+Keymap52*kp-numlock(): LN_NumLock()
+Keymap52*DEFkp-numlock():  Toteuttaa numeronlukitustoiminnon.
+!
+Keymap52*kp-divide(): LN_jako()
+Keymap52*DEFkp-divide():  Toteuttaa jakolaskutoiminnon lis‰n‰pp‰imistˆˆn tehdyn m‰‰rityksen mukaan.
+!
+Keymap52*kp-multiply(): LN_kerto()
+Keymap52*DEFkp-multiply():  Toteuttaa kertolaskuntoiminnon lis‰n‰pp‰imistˆˆn tehdyn m‰‰rityksen mukaan.
+!
+Keymap52*kp-subtract(): LN_miinus()
+Keymap52*DEFkp-subtract():  L‰hett‰‰ numerotilassa miinusmerkin (-) sovellukselle. L‰hett‰‰ sovellustilassa merkkikoodin SS3 l (ESC ? l) sovellukselle.
+!
+Keymap52*kp-7(): LN_7()
+Keymap52*DEFkp-7():  L‰hett‰‰ numerotilassa merkin 7 sovellukselle. L‰hett‰‰ sovellustilassa merkkikoodin SS3 w (ESC ? w) sovellukselle.
+!
+Keymap52*kp-8(): LN_8()
+Keymap52*DEFkp-8():  L‰hett‰‰ numerotilassa merkin 8 sovellukselle. L‰hett‰‰ sovellustilassa merkkikoodin SS3 x (ESC ? x) sovellukselle.
+!
+Keymap52*kp-9(): LN_9()
+Keymap52*DEFkp-9():  L‰hett‰‰ numerotilassa merkin 9 sovellukselle. L‰hett‰‰ sovellustilassa merkkikoodin SS3 y (ESC ? y) sovellukselle.
+!
+Keymap52*kp-4(): LN_4()
+Keymap52*DEFkp-4():  L‰hett‰‰ numerotilassa merkin 4 sovellukselle. L‰hett‰‰ sovellustilassa merkkikoodin SS3 t (ESC ? t) sovellukselle.
+!
+Keymap52*kp-5(): LN_5()
+Keymap52*DEFkp-5():  L‰hett‰‰ numerotilassa merkin 5 sovellukselle. L‰hett‰‰ sovellustilassa merkkikoodin SS3 u (ESC ?u) sovellukselle.
+!
+Keymap52*kp-6(): LN_6()
+Keymap52*DEFkp-6():  L‰hett‰‰ numerotilassa merkin 6 sovellukselle. L‰hett‰‰ sovellustilassa merkkikoodin SS3 v (ESC ? v) sovellukselle.
+!
+Keymap52*kp-add(): LN_Plus()
+Keymap52*DEFkp-add():  Toteuttaa lis‰ystoiminnon lis‰n‰pp‰imistˆˆn tehdyn m‰‰rityksen mukaan.
+!  
+Keymap52*kp-1(): LN_1()
+Keymap52*DEFkp-1():  L‰hett‰‰ numerotilassa merkin 1 sovellukselle. L‰hett‰‰ sovellustilassa merkkikoodin SS3 q (ESC ? q) sovellukselle.
+!
+Keymap52*kp-2(): LN_2()
+Keymap52*DEFkp-2():  L‰hett‰‰ numerotilassa merkin 2 sovellukselle. L‰hett‰‰ sovellustilassa merkkikoodin SS3 r (ESC ? r) sovellukselle.
+!
+Keymap52*kp-3(): LN_3()
+Keymap52*DEFkp-3():  L‰hett‰‰ numerotilassa merkin 3 sovellukselle. L‰hett‰‰ sovellustilassa merkkikoodin SS3 s (ESC ? s) sovellukselle.
+!
+Keymap52*kp-0(): LN_0()
+Keymap52*DEFkp-0():  L‰hett‰‰ numerotilassa merkin 0 sovellukselle. L‰hett‰‰ sovellustilassa merkkikoodin SS3 p (ESC ? p) sovellukselle.
+!
+Keymap52*kp-decimal(): LN_Desimaali()
+Keymap52*DEFkp-decimal():  L‰hett‰‰ numerotilassa desimaalimerkin (,) sovellukselle. L‰hett‰‰ sovellustilassa merkkikoodin SS3 n (ESC ? n) sovellukselle.
+!
+Keymap52*kp-enter(): LN_Enter()
+Keymap52*DEFkp-enter():  L‰hett‰‰ numerotilassa Enter-toiminnon sovellukselle. L‰hett‰‰ sovellustilassa merkkikoodin SS3 M (ESC ? M) sovellukselle.
+!
+Keymap52*kp-space(): LN_v‰li()
+Keymap52*DEFkp-space():  L‰hett‰‰ v‰limerkin sovellukselle.
+!
+Keymap52*kp-tab(): LN_sarkain()
+Keymap52*DEFkp-tab():  L‰hett‰‰ sarkainmerkin sovellukselle.
+!
+Keymap52*kp-equal(): LN_yht‰l‰isyysm()
+Keymap52*DEFkp-equal():  L‰hett‰‰ yht‰l‰isyysmerkin (=) sovellukselle.
+!
+Keymap52*kp-separator(): LN_erotin()
+Keymap52*DEFkp-separator():  L‰hett‰‰ erotinmerkin sovellukselle.
+!
+Playedit*btn1-press():  Hiiren_painikk1_pain()
+Playedit*DEFbtn1-press():  Hiiren ykkˆspainikkeen painamistoiminto.
+!
+Playedit*btn1-release():  Hiiren_painikk2_vap()
+Playedit*DEFbtn1-release():  Hiiren ykkˆspainikkeen vapautustoiminto.
+!
+Playedit*btn2-press():  Hiiren_painikk2_pain()
+Playedit*DEFbtn2-press():  Hiiren kakkospainikkeen painamistoiminto.
+!
+Playedit*btn2-release():  Hiiren_painikk2_vap()
+Playedit*DEFbtn2-release():  Hiiren kakkospainikkeen vapautustoiminto.
+!
+Playedit*btn3-press():  Hiiren_painikk2_pain()
+Playedit*DEFbtn3-press():  Hiiren kolmospainikkeen painamistoiminto.
+!
+Playedit*btn3-release():  Hiiren_painikk3_vap()
+Playedit*DEFbtn3-release():  Hiiren kolmospainikkeen vapautustoiminto.
+!
+Playedit*shift-btn1-press():  Vaihto_hiiren_painikk1_pain()
+Playedit*DEFshift-btn1-press():  N‰pp‰ilysarjatoiminto, jossa hiiren ykkˆspainiketta ja vaihto-ohjausn‰pp‰int‰ painetaan.
+!
+Playedit*shift-btn1-release():  Vaihto_hiiren_painikk1_vap()
+Playedit*DEFshift-btn1-release():  N‰pp‰ilysarjatoiminto, jossa hiiren ykkˆspainike vapautetaan vaihto-ohjausn‰pp‰int‰ painettaessa.
+!
+Playedit*shift-btn2-press():  Vaihto_hiiren_painikk2_vap()
+Playedit*DEFshift-btn2-press():  N‰pp‰ilysarjatoiminto, jossa hiiren kakkospainiketta ja vaihto-ohjausn‰pp‰int‰ painetaan.
+!
+Playedit*shift-btn2-release():  Vaihto_hiiren_painikk2_vap()
+Playedit*DEFshift-btn2-release():  N‰pp‰ilysarjatoiminto, jossa hiiren kakkospainike vapautetaan vaihto-ohjausn‰pp‰int‰ painettaessa.
+!
+Playedit*shift-btn3-press():  Vaihto_hiiren_painikk3_pain()
+Playedit*DEFshift-btn3-press():  N‰pp‰ilysarjatoiminto, jossa hiiren kolmospainiketta ja vaihto-ohjausn‰pp‰int‰ painetaan.
+!
+Playedit*shift-btn3-release():  Vaihto_hiiren_painikk3_vap()
+Playedit*DEFshift-btn3-release():  N‰pp‰ilysarjatoiminto, jossa hiiren kolmospainike vapautetaan vaihto-ohjausn‰pp‰int‰ painettaessa.
+!
+Playedit*btn1-double-press():  Hiiren_painikk1_kaksoispain()
+Playedit*DEFbtn1-double-press():  Hiiren ykkˆspainikkeen painaminen kahdesti.
+!
+Playedit*btn1-triple-press():  Hiiren_painikk_1_kolmoispain()
+Playedit*DEFbtn1-triple-press():  Hiiren ykkˆspainikkeen painaminen kolmesti.
+!
+Playedit*btn2-double-press():  Hiiren_painikk2_kaksoispain()
+Playedit*DEFbtn2-double-press():  Hiiren kakkospainikkeen painaminen kahdesti.
+!
+Playedit*btn2-triple-press():  Hiiren_painikk2_kolmoispain()
+Playedit*DEFbtn2-triple-press():  Hiiren kakkospainikkeen painaminen kolmesti.
+!
+Playedit*btn3-double-press():  Hiiren_painikk3_kaksoispain()
+Playedit*DEFbtn3-double-press():  Hiiren kolmospainikkeen painaminen kahdesti.
+!
+Playedit*btn3-triple-press():  Hiiren_painikk3_kolmoispain()
+Playedit*DEFbtn3-triple-press():  Hiiren kolmospainikkeen painaminen kolmesti.
+!
+Playedit*shift-btn1-double-press():  Vaihto_hiiren_painikk1_kaksoispain()
+Playedit*DEFshift-btn1-double-press():  N‰pp‰ilysarjatoiminto, jossa hiiren ykkˆspainiketta painetaan kahdesti samalla, kun vaihto-ohjausn‰pp‰int‰ pidet‰‰n painettuna.
+!
+Playedit*shift-btn1-triple-press():  Vaihto_hiiren_painikk1_kolmoispain()
+Playedit*DEFshift-btn1-triple-press():  N‰pp‰ilysarjatoiminto, jossa hiiren ykkˆspainiketta painetaan kolmesti samalla, kun vaihto-ohjausn‰pp‰int‰ pidet‰‰n painettuna.
+!
+Playedit*shift-btn2-double-press():  Vaihto_hiiren_painikk2_kaksoispain()
+Playedit*DEFshift-btn2-double-press():  N‰pp‰ilysarjatoiminto, jossa hiiren kakkospainiketta painetaan kahdesti samalla, kun vaihto-ohjausn‰pp‰int‰ pidet‰‰n painettuna.
+!
+Playedit*shift-btn2-triple-press():  Vaihto_hiiren_pain2_kolmoispain()
+Playedit*DEFshift-btn2-triple-press():  N‰pp‰ilysarjatoiminto, jossa hiiren kakkospainiketta painetaan kolmesti samalla, kun vaihto-ohjausn‰pp‰int‰ pidet‰‰n painettuna.
+!
+Playedit*shift-btn3-double-press():  Vaihto_hiiren_painikk3_kaksoispain()
+Playedit*DEFshift-btn3-double-press():  N‰pp‰ilysarjatoiminto, jossa hiiren kolmospainiketta painetaan kahdesti samalla, kun vaihto-ohjausn‰pp‰int‰ pidet‰‰n painettuna.
+!
+Playedit*shift-btn3-triple-press():  Vaihto_hiiren_painikk3_kolmoispain()
+Playedit*DEFshift-btn3-triple-press():  N‰pp‰ilysarjatoiminto, jossa hiiren kolmospainiketta painetaan kolmesti samalla, kun vaihto-ohjausn‰pp‰int‰ pidet‰‰n painettuna.
+!
+AllShare*paste():  Liitt‰minen()
+AllShare*DEFpaste():  Leikepˆyd‰n sis‰llˆn liitt‰minen kohdistimen kohtaan.
+!
+AllShare*copy():  Kopiointi()
+AllShare*DEFcopy():  N‰ytˆst‰ valitun alueen kopiointi leikepˆyd‰lle.
+!
+AllShare*cut():  Leikkaus()
+AllShare*DEFcut():  N‰ytˆst‰ valitun alueen poistotoiminto.
+!
+Playedit*userid():  K_TUNNUS()
+Playedit*DEFuserid():  Kirjoittaa nykyisen k‰ytt‰j‰n k‰ytt‰j‰tunnuksen. T‰t‰ toimintoa k‰ytet‰‰n emulointi-istuntojen automaattisessa sis‰‰nkirjauksessa.
+!
+Playedit*password():  TUNNUSSANA()
+Playedit*DEFpassword():  Kirjoittaa nykyisen k‰ytt‰j‰n tunnussanan. T‰t‰ toimintoa k‰ytet‰‰n emulointi-istuntojen automaattisessa sis‰‰nkirjauksessa.
+!
+AllShare*adjust-copy-left():  Kopiointialueen_s‰‰tˆ_vas()
+AllShare*DEFadjust-copy-left():  Aloittaa n‰ytˆss‰ kopiointialueen, ellei sit‰ ole jo aloitettu, ja s‰‰t‰‰ kopiointialueen sen nykyisest‰ paikasta vasemmalle merkkipaikan verran.
+!
+AllShare*adjust-copy-right():  Kopiointialueen_s‰‰tˆ_oik()
+AllShare*DEFadjust-copy-right():  Aloittaa n‰ytˆss‰ kopiointialueen, ellei sit‰ ole jo aloitettu, ja s‰‰t‰‰ kopiointialueen sen nykyisest‰ paikasta oikealle merkkipaikan verran.
+!
+AllShare*adjust-copy-up():  Kopiointialueen_s‰‰tˆ_ylˆs()
+AllShare*DEFadjust-copy-up():  Aloittaa n‰ytˆss‰ kopiointialueen, ellei sit‰ ole jo aloitettu, ja s‰‰t‰‰ kopiointialueen sen nykyisest‰ paikasta ylˆsp‰in rivin verran.
+!
+AllShare*adjust-copy-down():  Kopiointialueen_s‰‰tˆ_alas()
+AllShare*DEFadjust-copy-down():  Aloittaa n‰ytˆss‰ kopiointialueen, ellei sit‰ ole jo aloitettu, ja s‰‰t‰‰ kopiointialueen sen nykyisest‰ paikasta alasp‰in rivin verran.
+!
+AllShare*adjust-copy-anchor-left():  Kopiontial_s‰‰tˆ_vasen_pysyy()
+AllShare*DEFadjust-copy-anchor-left():  Aloittaa n‰ytˆss‰ kopiointialueen, ellei sit‰ ole jo aloitettu, ja s‰‰t‰‰ kopiointialueen sen nykyisest‰ paikasta oikealle merkkipaikan verran, mutta ei s‰‰d‰ kopiointialueen vasenta puolta.
+!
+AllShare*adjust-copy-anchor-right():  Kopiointial_s‰‰tˆ_oikea_pysyy()
+AllShare*DEFadjust-copy-anchor-right():  Aloittaa n‰ytˆss‰ kopiointialueen, ellei sit‰ ole jo aloitettu, ja s‰‰t‰‰ kopiointialueen sen nykyisest‰ paikasta vasemmalle merkkipaikan verran, mutta ei s‰‰d‰ kopiointialueen oikeaa puolta.
+!
+AllShare*adjust-copy-anchor-up():  Kopiointial_s‰‰tˆ_yl‰r_pysyy()
+AllShare*DEFadjust-copy-anchor-up():  Aloittaa n‰ytˆss‰ kopiointialueen, ellei sit‰ ole jo aloitettu, ja s‰‰t‰‰ kopiointialueen sen nykyisest‰ paikasta alasp‰in rivin verran, mutta ei s‰‰d‰ kopiointialueen yl‰reunaa.
+!
+AllShare*adjust-copy-anchor-down():  Kopiointial_s‰‰tˆ_alar_pysyy()
+AllShare*DEFadjust-copy-anchor-down():  Aloittaa n‰ytˆss‰ kopiointialueen, ellei sit‰ ole jo aloitettu, ja s‰‰t‰‰ kopiointialueen sen nykyisest‰ paikasta ylˆsp‰in rivin verran mutta ei s‰‰d‰ kopiointialueen alareunaa.
+!
+AllShare*toggle-default-copy-type():  Oletuskopiointilajin_vaihto()
+AllShare*DEFtoggle-default-copy-type():  Asettaa kopioinnin lajiksi joko jakson kopioinnin tai lineaarisen kopioinnin.
+!
+Playedit*hex-string():  Heksamerkkijono()
+Playedit*DEFhex-string():  Sallii tietojen syˆtˆn heksadesimaalitilassa.
+!
+Playedit*graphics-hex-string():  Grafiikan_heksamerkkijono()
+Playedit*DEFgraphics-hex-string():  Sallii grafiikkatietojen syˆtˆn heksadesimaalitilassa.
+!
+Playedit*BIDItogglescrrev():  BIDI_k‰‰nteisn‰yttˆ()
+Playedit*DEFBIDItogglescrrev():  Ottaa n‰ytˆn k‰‰nteiskirjoitustilan k‰yttˆˆn ja poistaa sen k‰ytˆst‰ (k‰ytet‰‰n arabian ja heprean kieless‰).
+!
+Playedit*BIDItogglefieldrev():  BIDI_k‰‰nteiskent_vaihto()
+Playedit*DEFBIDItogglefieldrev():  Ottaa kent‰n k‰‰nteiskirjoitustilan k‰yttˆˆn ja poistaa sen k‰ytˆst‰ (k‰ytet‰‰n arabian ja heprean kieless‰).
+!
+Playedit*BIDItoggleautorev():  BIDI_k‰‰nteistilan_autom_vaihto()
+Playedit*DEFBIDItoggleautorev():  Ottaa automaattisen kent‰n k‰‰nteiskirjoituksen k‰yttˆˆn ja poistaa sen k‰ytˆst‰ (k‰ytet‰‰n arabian ja heprean kieless‰).
+!
+Playedit*BIDIpush():  BIDI_tyˆntˆ()
+Playedit*DEFBIDIpush():  Ottaa tyˆntˆtilan k‰yttˆˆn (k‰ytet‰‰n arabian ja heprean kieless‰).
+!
+Playedit*BIDIendpush():  BIDI_tyˆntˆtilan_lopetus()
+Playedit*DEFBIDIendpush():  Poistaa tyˆntˆtilan k‰ytˆst‰ (k‰ytet‰‰n arabian ja heprean kieless‰).
+!
+Playedit*BIDItoggleautopush():  BIDI_tyˆntˆtilan_autom_vaihto()
+Playedit*DEFBIDItoggleautopush():  Asettaa emulointiohjelman siirtym‰‰n automaattisesti tyˆntˆtilaan, kun kieli vaihtuu kaksisuuntaisen kielen ja englannin v‰lill‰ (k‰ytet‰‰n arabian ja heprean kieless‰).
+!
+Playedit*BIDIsetshape():  BIDI_merkkimuodon_asetus()
+Playedit*DEFBIDIsetshape():  Asettaa arabian kielen merkkimuodon.
+!
+Playedit*BIDIfieldshape():  BIDI_kent‰n_muoto()
+Playedit*DEFBIDIfieldshape():  Muotoilee kent‰n tiedot arabian kielen mukaiseksi.
+!
+Playedit*BIDItogglenumswap():  BIDI_numeroj‰rjestelm‰n_vaihto()
+Playedit*DEFBIDItogglenumswap():  Ottaa arabian kielen arabialaisen ja hindinkielisen numeroj‰rjestelm‰n vaihdon k‰yttˆˆn ja poistaa sen k‰ytˆst‰.
+!
+! End action names
+!
+!
+Keyxxx52*ERROR:  VIRHEELLINEN TOIMINTO
+!
+Keymap52*managing_server_text.value:  T‰m‰n n‰pp‰imistˆm‰‰ritystiedoston tallennus ei onnistu. P‰ivit‰ hallintaj‰rjestelm‰‰n uusin IBM Network Station Manager -ohjelman laitos.
+!
+Keymap52*managingBtn.labelString:  OK
+!
+Keymap52*general_fatal_error.value:  Lis‰n‰pp‰imistˆn m‰‰ritystoiminnossa on ilmennyt virhe. J‰rjestelm‰ lopettaa ohjelman ajon.
+!
+Keymap52*genfatalBtn.labelString:  LOPETUS
+!
+Keymap52*general_nonfatal_text.value:  N‰pp‰imistˆn m‰‰ritystoiminnon virhe.
+!
+Keymap52*gennonfatBtn.labelString:  OK
+!
+!
+!************************************************************************
+!
+!
+!                        Keypad Customizer Resources
+!
+!
+!************************************************************************
+Keypad52*title:  Lis‰n‰pp‰imistˆn mukautus
+
+Keypad52*iname5250:  5250-istunnon lis‰n‰pp‰imistˆn mukautus
+
+Keypad52*iname3270:  3270-istunnon lis‰n‰pp‰imistˆn mukautus
+
+Keypad52*keypadTitle.dialogTitle:  Lis‰n‰pp‰imistˆ
+
+!following resource left blank on purpose, do not translate.
+AllShare*blankLabel.labelString:     
+
+! initial popup dialog
+Keypad52*initialpopupDialoglist.labelString:  Lis‰n‰pp‰imistˆtiedoston valinta:
+
+Keypad52*initialpopupDialogaltlabel.labelString:  Ei lis‰n‰pp‰imistˆtiedostoja.
+
+Keypad52*initialpopupDialogOKbtn.labelString:  OK
+
+Keypad52*initialpopupDialogcancelbtn.labelString:  Peruutus
+
+Keypad52*initialpopupDialognewbtn.labelString:  Uusi lis‰n‰pp‰imistˆ
+
+!*************************************
+!**  Keypad Customizer Main Window  **
+!*************************************
+
+! In general, the following buttons should not be made much longer during translation.
+! Buttons have one to four words.
+
+Keypad52*keyAction.labelString:  Painikkeen toiminto->
+
+Keypad52*fileDeleteButton.labelString:  Painikkeen tyhjennys
+
+Keypad52*selectplayfile.labelString:  Toistotiedoston toiminto
+
+Keypad52*changeSize.labelString:  Lis‰n‰pp‰imistˆn lajin muutto
+
+Keypad52*keypadfileDelete.labelString:  Lis‰n‰pp‰imistˆtiedoston poisto
+
+Keypad52*transRxing:  Nykyisen lis‰n‰pp‰imistˆn mukautustietojen nouto emulointi-istunnosta.
+
+Keypad52*transRxd:  Lis‰n‰pp‰imistˆn mukautustiedot on vastaanotettu emulointi-istunnosta.
+
+Keypad52*currKeypadLabel.labelString:  Nykyinen lis‰n‰pp‰imistˆ:
+
+Keypad52*currKeyLabel.labelString:  Nykyisen painikkeen teksti:
+
+Keypad52*currActLabel.labelString:  Nykyisen painikkeen toiminto:
+
+!******************
+!**  Resolution  **
+!******************
+Keypad52*poorResolutionMsgText.value:   N‰yttimen erotuskyky on pienempi kuin 800 x 600. Lis‰n‰pp‰imistˆn mukautus ei ole k‰ytˆss‰, jos n‰yttimen erotuskyky pienempi kuin 800 x 600.
+
+Keypad52*keypadFailureCancelBtn.labelString:  Peruutus
+
+!**************
+!**  Saving  **
+!**************
+Keypad52*saveDialog.dialogTitle:  Lis‰n‰pp‰imistˆn tallennus
+
+Keypad52*saveBoxLabel*labelString:  Lis‰n‰pp‰imistˆn tallennus nimell‰:
+
+Keypad52*saveTran:  Lis‰n‰pp‰imistˆtiedosto on tallennettu...
+
+Keypad52*fileWarningDialog.dialogTitle:  Lis‰n‰pp‰imistˆn varoitus
+
+!**************
+!**  Delete  **
+!**************
+Keypad52*fileDeleteDialog.dialogTitle:  Lis‰n‰pp‰imistˆtiedoston poisto
+
+Keypad52*fileDeleteBoxLabel.labelString:  Poistettavien lis‰n‰pp‰imistˆjen valinta:
+
+Keypad52*fileDeleted:  J‰rjestelm‰ on poistanut valitut lis‰n‰pp‰imistˆtiedostot.
+
+!****************
+!**  Playback  **
+!****************
+Keypad52*invalidSelectionplay.messageString:  Mit‰‰n ei ole valittu.  Valitse vaihtoehto luettelosta tai valitse Peruutus-painike.
+
+Keypad52*invalidSelectionplay.okLabelString:  Jatko
+
+Keypad52*selectPlaybackFile.labelString:  Toistotiedoston valinta
+
+Keypad52*userPlaybackFiles.labelString:  K‰ytt‰j‰n toistotiedostot
+
+Keypad52*defaultPlaybackFiles.labelString:  Oletustoistotiedostot
+
+AllShare*okLabel.labelString:  OK
+
+!********************
+!**  Keypad Style  **
+!********************
+Keypad52*selectSizeTitle.dialogTitle:  Lis‰n‰pp‰imistˆn laji
+
+Keypad52*selectKeypadSizeLabel.labelString:  Lis‰n‰pp‰imistˆn lajin valinta:
+
+Keypad52*selectKeypadStyle.labelString:  Lis‰n‰pp‰imistˆn laji:
+
+Keypad52*popupStyleChoice.labelString:  Kohon‰pp‰imistˆ
+  
+Keypad52*menuStyleChoice.labelString:  Valikkon‰pp‰imistˆ
+
+Keypad52*selectKeypadSizeRows.labelString:  Rivit:
+
+Keypad52*selectKeypadSizeCols.labelString:  Sarakkeet:
+
+Keypad52*selectKeypadSizeTextLen.labelString:  Tekstin pituus:
+
+Keypad52*changeKeypadSizeMessage:  Haluttu lis‰n‰pp‰imistˆn laji...
+
+Keypad52*newPb.labelString:  Uusi
+
+Keypad52*row_col_pulldownvalue.labelString:  - 
+
+Keypad52*invalidSizeSelection.messageString:  Valittu koko on liian pieni nykyiselle lis‰n‰pp‰imistˆlle.
+
+Keypad52*invalidSizeSelection.okLabelString:  Jatko
+
+!***********************
+!**  Warning dialogs  **
+!***********************
+Keypad52*change.dialogTitle:  Lis‰n‰pp‰imistˆn varoitus
+
+Keypad52*unsaved.dialogTitle:  Lis‰n‰pp‰imistˆn varoitus
+
+Keypad52*unsaved.messageString:  Lis‰n‰pp‰imistˆn muutoksia ei ole tallennettu.
+
+Keypad52*unsaved.okLabelString:  Jatko
+
+Keypad52*nochange.dialogTitle:  Lis‰n‰pp‰imistˆn varoitus
+
+! this cannot be made much longer during translation.
+Keypad52*nochange.messageString:  Vahvista tai peruuta nykyinen muutos ennen seuraavia muutoksia.
+
+Keypad52*nochange.okLabelString:  Jatko
+
+Keypad52*cantdothat.dialogTitle:  Lis‰n‰pp‰imistˆn varoitus
+
+Keypad52*cantdothat.messageString:  Vahvista tai peruuta muutokset ennen seuraavan asetuksen valintaa.
+
+!nothing selected in first dialog box
+Keypad52*invalidSelectionwarn.messageString:  Mit‰‰n ei ole valittu. Valitse vaihtoehto luettelosta tai napsauta Uusi- tai Peruutus-painiketta.
+
+Keypad52*invalidSelectionwarn.okLabelString:  Jatko
+
+Keypad52*noaccessDir:  Hakemiston k‰yttˆ ei onnistu.
+
+Keypad52*selectKeypadButton.messageString:  Lis‰n‰pp‰imistˆn painike on valittava ennen mukautuksen alkua.
+
+Keypad52*generalError.dialogTitle:  Lis‰n‰pp‰imistˆn virhe
+	
+Keypad52*generalError.messageString:  Toiminnon toteutuksen aikana on ilmennyt virhe.
+
+Keypad52*generalError.okLabelString:  OK
+
+Keypad52*emptyList:  Muuntoluettelossa on virhe. Luetteloa ei voi tallentaa tai ottaa k‰yttˆˆn.
+
+Keypad52*ErrorMsgFileNameChars.messageString:  Kirjoitettua merkki‰ ei voi k‰ytt‰‰ tiedostonimess‰.
+
+Keypad52*EBCMismatchText.value: Lis‰n‰pp‰imistˆn mukautusohjelmaa kutsuneen emulointi-istunnon kieli ei vastaa IBM Network Station -j‰rjestelm‰n kielt‰. T‰ll‰ sovelluksella luotavat merkit ja merkkijonot saattavat aiheuttaa odottamattomia ja ei-toivottuja tuloksia emulointi-istunnossa.
+
+!************************
+!**  Various Messages  **
+!************************
+! help button pressed
+Keypad52*helpMessage:  Ohjeen katseluohjelman lataus on meneill‰‰n...
+
+! after OK clicked
+Keypad52*chooseSave:  Tallenna muutokset valitsemalla Tallennus-painike.
+
+! after Cancel clicked
+Keypad52*chooseCancel:  J‰rjestelm‰ on kumonnut muutokset.
+
+! original message when new keypad opens
+Keypad52*chooseNew:  Uuden lis‰n‰pp‰imistˆn muokkaus
+
+! button pressed in keypad
+Keypad52*continueedit:  Nykyisen painikkeen muokkaus...
+
+! click button action -> with nothing selected
+Keypad52*noActionSelected:  Toiminto- tai merkkiluettelosta ei ole valittu yht‰‰n vaihtoehtoa.
+
+! swapping messages (next 2)
+Keypad52*swapinprogress:  Valitse OK- tai Peruutus-painike tai jatka lis‰n‰pp‰imistˆn painikkeiden siirtoa...
+
+Keypad52*swaprunninginfo:  Painikkeen siirto on meneill‰‰n...
+
+! following 3 messages for invalid keypad action
+Keypad52*nonValidDialog.dialogTitle:  Lis‰n‰pp‰imistˆn varoitussanoma
+
+Keypad52*nonValidDialog.messageString:  Painikkeen n‰pp‰imistˆtoiminnot eiv‰t kelpaa.
+
+Keypad52*deleteKeypadMessage:  Poistettavien lis‰n‰pp‰imistˆjen valinta...
+
+!***************
+!**  Exiting  **
+!***************
+Keypad52*quitDialog1:  Lis‰n‰pp‰imistˆ‰ on muutettu, mutta sit‰ ei ole tallennettu.
+
+Keypad52*quit1Tog1:  Lopetus ilman muutosten tallennusta.
+
+Keypad52*quit1Tog2:  Muutosten tallennus ennen lopetusta.
+
+!************************************************************************
+!
+!
+!                        Playback Editor Resources
+!
+!
+!************************************************************************
+Playedit*title:  Toistotiedoston muokkausohjelma
+
+Playedit*iname5250:  5250-istunnon toistotiedoston muokkausohjelma
+
+Playedit*iname3270:  3270-istunnon toistotiedoston muokkausohjelma
+
+Playedit*editorTitle.dialogTitle:  Toistotiedoston muokkausohjelma
+
+!****  Main Window
+Playedit*keyAction.labelString:  Toiminnon lis‰ys ->
+
+Playedit*deleteAction.labelString:  Toiminnon poisto
+
+Playedit*insertAction.labelString:  Rivin lis‰ys
+
+Playedit*editAction.labelString:  Toiminnon muokkaus
+
+Playedit*transRxing:  Toistotiedoston muokkausohjelman tietojen vastaanotto emulointi-istunnosta on meneill‰‰n.
+
+Playedit*transRxd:  Toistotiedoston muokkausohjelman tiedot on vastaanotettu emulointi-istunnosta.
+
+Playedit*currFileLabel.labelString:  Nykyinen toistotiedosto
+
+Playedit*currActLabel.labelString:  Nykyiset toistotiedoston toiminnot:
+
+!** Resolution
+Playedit*poorResolutionMsgText.value:  N‰yttimen erotuskyky on pienempi kuin 800 x 600. Toistotiedoston muokkausohjelma ei ole k‰ytˆss‰, jos n‰yttimen erotuskyky pienempi kuin 800 x 600.
+
+!** Saving
+Playedit*saveDialog.dialogTitle:  Toistotiedoston tallennus
+
+Playedit*saveBoxLabel*labelString:  Toistotiedoston tallennus nimell‰:
+
+Playedit*saveTran:  Toistotiedosto on tallennettu...
+
+Playedit*fileWarningDialog.dialogTitle:  Toistotiedoston muokkausohjelman varoitus
+
+!** Edit
+Playedit*editBoxLabel*labelString:  Toiminnon muokkaus:
+
+!** Warning Dialogs
+Playedit*PlaybackMsgFileNoOpen.value:  Toistotiedoston avaus ei onnistu. Sovelluksen sulkeminen on meneill‰‰n.
+
+Playedit*PlaybackMsgFileNoRead.value:  Toistotiedoston luku ei onnistu. Sovelluksen sulkeminen on meneill‰‰n.
+
+Playedit*PlaybackMsgFileCorrupt.value:  Emulointiohjelman tallennustoiminto ei ole luonut toistotiedostoa. Tiedoston avaus ei onnistu. Sovelluksen sulkeminen on meneill‰‰n.
+
+Playedit*noaccessDir:  Hakemiston k‰yttˆ ei onnistu.
+
+Playedit*selectInsertLocation.messageString:  Korosta rivi, johon t‰m‰ toiminto on lis‰tt‰v‰.
+
+Playedit*ErrorMsgFileNameChars.messageString:  Kirjoitettua merkki‰ ei voi k‰ytt‰‰ tiedostonimess‰.
+
+Playedit*EBCMismatchText.value:  Toistotiedoston muokkausohjelmaa kutsuneen emulointi-istunnon kieli ei vastaa IBM Network Station -verkkotietokoneen kielt‰. T‰ll‰ sovelluksella luotavat merkit ja merkkijonot saattavat aiheuttaa odottamattomia ja ei-toivottuja tuloksia emulointi-istunnossa.
+	
+Playedit*nonValidDialog.messageString:  Toiminnot eiv‰t kelpaa.
+
+!** Sanomat
+Playedit*helpMessage:  Ohjeen katseluohjelman lataus on meneill‰‰n...
+
+Playedit*chooseSave:  Tallenna muutokset valitsemalla Tallennus-painike.
+
+Playedit*chooseCancel:  J‰rjestelm‰ on kumonnut muutokset.
+
+Playedit*noActionSelected.messageString:  Toiminto- tai merkkiluettelosta ei ole valittu yht‰‰n vaihtoehtoa.
+
+Playedit*nothingHighlightedDelete.messageString:  Mit‰‰n ei ole valittu poistettavaksi.
+
+Playedit*nothingHighlightedInsert.messageString:  Korosta halutun lis‰yksen kohta.
+
+Playedit*nothingHighlightedEdit.messageString:  Mit‰‰n ei ole valittu muokattavaksi.
+
+!** Lopetus
+Playedit*quitDialog1:  Toistotiedostoa on muokattu, mutta sit‰ ei ole tallennettu.
+
+Playedit*quit1Tog1:  Lopetus ilman muutosten tallennusta.
+
+Playedit*quit1Tog2:  Muutosten tallennus ennen lopetusta.
+
+!**************************************************
+!*
+!*        Printing translations 
+!*
+!*      Added by AJMEYER for V310.nc
+!*
+!**************************************************
+
+AllShare*printDialogPrinterTypeLabel.labelString:  Kirjoittimen laji:
+
+AllShare*printDialogPrinterTypeMenu*postscript.labelString:  PostScript
+
+AllShare*printDialogPrinterTypeMenu*ascii.labelString:  ASCII
+
+AllShare*printDialogPrinterTypeMenu*pcl.labelString:  PCL
+
+AllShare*printDialogPrinterSelectControls_popup.title:   Kirjoittimen valinta
+
+AllShare*printSelectDialogOKButton.labelString:  OK
+
+AllShare*printSelectDialogCancelButton.labelString:  Peruutus

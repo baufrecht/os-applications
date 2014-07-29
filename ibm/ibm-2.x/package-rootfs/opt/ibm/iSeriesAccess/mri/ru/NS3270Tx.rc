@@ -1,0 +1,690 @@
+!
+!
+!
+! This file contains the resource text strings for the IBM Linux 3270 and 5250
+! emulators, in particular the main emulator windows.
+
+! This resource file will be stored on all servers in locale specific ASCII (819 for Latin1
+! languages). 
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. This resource file contains text strings for the 3270 and 5250 emulators.  Much of
+!    the resource text is common to both emulators. Some is specific to one emulator.
+!    IBM9999 = Resources used by both 3270 and 5250 emulators.
+!    IBM3270 = Resources used by the 3270 emulator.
+!    IBM5250 = Resources used by the 5250 emulator.
+! 4. Resource format: 
+!    - A resource line starts with IBM3270*, IBM5250*, or IBM9999*, followed by a resource name
+!      and a ":".  Do NOT make any changes to the text to the left of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+!******************************************************************************
+!************************ BEGIN DO NOT TRANSLATE ******************************
+!******************************************************************************
+!*   The first section of resources are are locale specific but               *
+!*   DO NOT REQUIRE TRANSLATION.                                              *
+!*                                                                            *
+!* This source file enables the resource section for Latin1 and Latin2.       *
+!*                                                                            *
+!* For ru_RU or Latin5 locales and DBCS locales                               *
+!*      1. Place a '!' as the first character in each line in the Latin1      *
+!*      and Latin2 section                                                    *
+!*      2. Remove the '!' character for each resource line in the apropriate  *
+!*      section that matches your locale.                                     *
+!*                                                                            *
+!* For example, ru_RU should place ! in front of all lines in the LATIN1      *
+!* section remove the ! from all lines in the LATIN5 section.                 *      
+!******************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN1 and LATIN2                ****************
+!**************************************************************************
+IBM9999*font_List:     -*-*-medium-r-normal-*-*-*-*-*-m-150-*-*;-*-*-medium-r-normal-*-*-*-*-*-m-110-*-*;-*-*-medium-r-normal-*-*-*-*-*-m-90-*-*;-*-*-medium-r-normal-*-*-*-*-*-m-70-*-*;-*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+IBM9999*largestFontList:     -*-*-medium-r-normal-*-*-*-*-*-m-150-*-*
+IBM9999*extraLargeFontList:  -*-*-medium-r-normal-*-*-*-*-*-m-110-*-*
+IBM9999*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-90-*-*
+IBM9999*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-70-*-*
+IBM9999*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+!**************************************************************************
+!****************   END LATIN1 and LATIN2                  ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN5                           ****************
+!**************************************************************************
+!IBM9999*font_List:     -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*;-*-*-medium-r-normal-*-*-*-*-*-c-90-*-*;-*-*-medium-r-normal-*-*-*-*-*-c-70-*-*;-*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!IBM9999*largestFontList:     -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*
+!IBM9999*extraLargeFontList:  -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*
+!IBM9999*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!IBM9999*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-70-*-*
+!IBM9999*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!**************************************************************************
+!****************   END   LATIN5                           ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (ja_JP ko_KR zh_CN)   ****************
+!**************************************************************************
+!IBM9999*font_List:            -*-*-medium-r-normal--24-*-*-*-c-*;-*-*-medium-r-normal--16-*-*-*-c-*
+!IBM9999*largestFontList:     -*-*-medium-r-normal--24-*-*-*-c-*
+!IBM9999*extraLargeFontList:  -*-*-medium-r-normal--24-*-*-*-c-*
+!IBM9999*largeFontList:       -*-*-medium-r-normal--16-*-*-*-c-*
+!IBM9999*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!IBM9999*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*
+!**************************************************************************
+!****************   END DBCS (ja_JP ko_KR zh_CN)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (zh_TW)   ****************
+!**************************************************************************
+!IBM9999*font_List:            -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*;-*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!IBM9999*largestFontList:     -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!IBM9999*extraLargeFontList:  -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!IBM9999*largeFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!IBM9999*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!IBM9999*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!**************************************************************************
+!****************   END DBCS (zh_TW)     ****************
+!**************************************************************************
+
+!uncomment the appropriate inputMethod
+!For LatinX (non DBCS locales) or locales without an input method.
+IBM5250*inputMethod:
+!
+! For ja_JP
+!IBM5250*inputMethod: kinput2
+!
+! For ko_KR 
+!IBM5250*inputMethod: Ami
+!
+!For zh_CN
+!IBM5250*inputMethod: xcin-zh_CN
+!
+!For zh_TW
+!IBM5250*inputMethod: xcin-zh_TW
+
+!**************************************************************************
+!****************   END DO NOT TRANSLATE                   ****************
+!**************************************************************************
+
+
+
+IBM5250*MainWindow.title: 5250
+IBM3270*MainWindow.title: 3270
+
+IBM5250*errorMsgDialog_popup.title: Ошибка 5250
+IBM3270*errorMsgDialog_popup.title: Ошибка 3270
+
+IBM5250*warningMsgDialog_popup.title: Информация 5250
+IBM3270*warningMsgDialog_popup.title: Информация 3270
+
+IBM5250*hostNameDialog_popup.title: Создать сеанс 5250
+IBM3270*hostNameDialog_popup.title: Создать сеанс 3270
+
+IBM5250*hostNameDialog.selectionLabelString: Введите новое имя хоста 5250.
+IBM3270*hostNameDialog.selectionLabelString: Введите новое имя хоста 3270.
+
+IBM5250*hostNameDialog.iconName: Создать сеанс 5250
+IBM3270*hostNameDialog.iconName: Создать сеанс 3270
+
+IBM5250*lowMemoryDialog_popup.title: Недостаточно памяти для 5250
+IBM3270*lowMemoryDialog_popup.title: Недостаточно памяти для 3270
+
+IBM5250*new5250Button.labelString: Создать 5250...
+
+IBM5250*quitButton.labelString: Выход из 5250
+IBM3270*quitButton.labelString: Выход из 3270
+
+IBM5250*localPrintControls_popup.title: Печать экрана 5250
+IBM3270*localPrintControls_popup.title: Печать экрана 3270
+
+
+!**************************************************************************************
+!** Resources in both 5250 and 3270 that do not need separate translations
+!**************************************************************************************
+
+!***********************
+!**  Various Dialogs  **
+!***********************
+IBM9999*lowMemoryDialog.messageString: Недостаточно памяти для выполнения операции.
+
+IBM9999*ErrorMsgMaxSessions: Сеанс недопустим. Превышено максимальное число сеансов.
+
+! -DISPLAY_NAME is not translated.
+IBM9999*ErrorMsgInvalidName: Неправильное определение параметра -DISPLAY_NAME.
+
+! \n in the following resource string allows text following \n to appear on a new line.
+! \n is not translated. You can move, add, or remove the \n as needed.
+IBM9999*ErrorMsgNameInUse: В параметре -DISPLAY_NAME указано имя, которое уже занято.\n\
+Системный администратор ограничил число сеансов.
+
+! BROWSER is not translated.
+IBM9999*ErrorMsgBrowserStart: Невозможно запустить браузер, так как переменная среды BROWSER не определена.
+
+IBM9999*ErrorMsgTelnetUndefined: В файле служб не определена служба Telnet...
+
+IBM9999*ErrorMsgUnknownHost: Неизвестный хост.
+
+IBM9999*ErrorMsgUnableToConnect: Не удалось установить соединение.
+
+IBM9999*ErrorMsgTelnetNegoFailed: Согласование Telnet не выполнено.
+
+IBM9999*ErrorMsgRetryButton: Повторить
+
+! \n in the following resource string allows text following \n to appear on a new line.
+IBM9999*ErrorMsgNoHostData: Разорвано соединение с хостом.\n\
+Попытайтесь снова запустить сеанс эмуляции.
+
+! \n in the following resource string allows text following \n to appear on a new line.
+IBM9999*ErrorMsgNoHostData2: Разорвано соединение с хостом.\n\
+Повторить запуск сеанса эмуляции?
+
+IBM9999*ErrorMsgFatalTelnetError: Возникла неустранимая ошибка Telnet.
+
+IBM9999*ErrorMsgColorMapActive: Приложение настройки цветов уже запущено в другом сеансе.
+
+IBM9999*ErrorMsgColorMapLowMemory: Недостаточно памяти для запуска программы настройки цветов.
+
+IBM9999*ErrorMsgKeyMapActive: Программа изменения раскладки уже запущена в другом сеансе.
+
+! this cannot be made much longer during translation.
+IBM9999*ErrorMsgKeypadActive:  Программа настройки доп. клавиатуры уже активна в другом сеансе.
+
+IBM9999*ErrorMsgKeyMapLowMemory: Недостаточно памяти для запуска программы изменения раскладки.
+
+IBM9999*ErrorMsgKeypadLowMemory:   Недостаточно памяти для запуска программы настройки доп. клавиатуры.
+
+IBM9999*ErrorMsgHelpViewLowMemory: Недостаточно памяти для запуска программы просмотра справки.
+
+IBM9999*ErrorMsgMiscellaneousLowMemory: Недостаточно памяти для открытия Различных параметров.
+
+! this cannot be made any longer during translation.
+IBM9999*ErrorMsgNSMServerDownLevel:   Ошибка записи. Сервер Администратора IBM Network Station устарел.
+
+IBM9999*ErrorMsgNoPrinters:           Не настроен ни один принтер. Обратитесь к администратору.
+
+! \n in the following resource string allows text following \n to appear on a new line.
+IBM9999*ErrorMsgNoKeypadSelected: Не выбран файл.\n\
+Выберите файл или нажмите Отмена.
+
+! \n in the following resource string allows text following \n to appear on a new line.
+IBM9999*ErrorMsgNoKeypads: Не найден ни один файл доп. клавиатуры. Выберите пункт\n\
+ 'Настроить доп. клавиатуру' в меню Опция для создания доп. клавиатуры.
+
+IBM9999*ErrorMsgTooManyKeypads: Может быть активно не более 10 доп. клавиатур.
+	
+IBM9999*ErrorMsgFileNameChars: Введен символ, недопустимый для имени файла.
+
+! \n in the following resource string allows text following \n to appear on a new line.
+IBM9999*WarningMsgColorNotAvailable: Некоторые цвета эмулятора недоступны.\n\
+Эти цвета изменены в сеансе.
+
+IBM9999*WarningMsgColorFileCorrupt: В файле цветов есть ошибка, установлены цвета по умолчанию.
+
+IBM9999*hostNameDialog*startupPlaybackChoice.labelString: Применять начальный файл макрокоманды
+
+! java ECL that is not supported yet but please translate
+IBM9999*runAppletDialog_popup.title: Аплет Java ECL
+
+! java ECL that is not supported yet but please translate
+IBM9999*runAppletDialog.selectionLabelString: Введите имя класса.
+
+! java ECL that is not supported yet but please translate
+IBM9999*runAppletDialog.iconName: Аплет Java ECL
+
+! java ECL that is not supported yet but please translate
+IBM9999*runAppletDialog: Введите имя класса.
+
+! java ECL that is not supported yet but please translate
+IBM9999*ErrorMsgUnableToRunApplet: Не удалось загрузить класс
+
+
+!*******************************
+!**  Menu items in emulators  **
+!*******************************
+IBM9999*cmdCascade.labelString: Команда
+
+IBM9999*editCascade.labelString: Изменить
+
+IBM9999*pasteButton.labelString: Вставить
+
+IBM9999*copyButton.labelString: Скопировать
+
+IBM9999*cutButton.labelString: Вырезать
+
+IBM9999*optCascade.labelString: Опция
+
+IBM9999*fontMenuCascade.labelString: Шрифты:
+
+IBM9999*pfkeysButton.labelString: Доп. клавиатура...
+
+IBM9999*keypadCascade.labelString: Доп. клавиатура
+
+IBM9999*customizeButton.labelString: Настроить доп. клавиатуру...
+
+IBM9999*recordButton.labelString: Запись...
+
+IBM9999*playbackButton.labelString: Воспроизведение...
+
+IBM9999*miscButton.labelString: Различные параметры...
+
+IBM9999*colormapButton.labelString: Настройка цветов...
+
+IBM9999*keymapButton.labelString: Изменение раскладки...
+
+! java ECL that is not supported yet but please translate
+IBM9999*runAppletButton.labelString: Запустить аплет...
+
+IBM9999*ctlCascade.labelString: Управление
+
+IBM9999*resetButton.labelString: Клавиша Reset
+
+IBM9999*sysreqButton.labelString: Клавиша System Request
+
+IBM9999*attentionButton.labelString: Клавиша Attention
+
+IBM9999*helpkeyButton.labelString: Клавиша Help
+
+IBM9999*enterkeyButton.labelString: Клавиша Enter
+
+IBM9999*prtCascade.labelString: Печать
+
+IBM9999*systemButton.labelString: Система
+
+IBM9999*localButton.labelString: Печать экрана...
+
+IBM9999*helpCascade.labelString: Справка
+
+! message on IBM5250 on status line, cannot be made any longer, you can remove some periods.
+IBM9999*msgWaitingMsg.labelString: Ожидающее сообщение
+
+IBM9999*cursorRowCol.labelString:  01/001
+
+IBM9999*okLabelString: OK
+
+IBM9999*cancelLabelString: Отмена
+
+!****************************
+!** Local Print Resources
+!****************************
+
+IBM9999*localPrintPrinterSelectButton.labelString: Выберите принтер:
+
+IBM9999*localPrintPrinterSelectControls_popup.title: Выбор принтера
+
+IBM9999*localPrintPrinterSelectServerDelineator: @
+
+IBM9999*localPrintPrinterSelectLocalDesignator: (Локальный)
+
+IBM9999*localPrintPDTLabel.labelString: Таблица определений принтера:
+
+IBM9999*localPrintOtherOptions.labelString: Другие опции печати:
+
+IBM9999*localPrintFormFeedLabel.labelString: Подача бумаги:
+
+IBM9999*localPrintFormFeedYesButton.labelString: Да
+
+IBM9999*localPrintFormFeedNoButton.labelString: Нет
+
+IBM9999*localPrintOrientationLabel.labelString: Ориентация:
+
+IBM9999*localPrintOrientationPortraitButton.labelString: Книжная
+
+IBM9999*localPrintOrientationLandscapeButton.labelString: Альбомная
+
+IBM9999*localPrintControls*startBtn.labelString: Печать
+
+IBM9999*localPrintControls*cancelBtn.labelString: Отмена
+
+IBM9999*localPrintControls*selectOptions.labelString: Выбрать опции печати
+
+IBM9999*localPrintControls*printing.labelString: Печать...
+
+IBM9999*PrintCommand.labelString: Команда печати
+
+
+!********************************************************
+!**                  Record Resources
+!**
+!** MAX:  Push buttons should not exceed 8 characters
+!********************************************************
+IBM9999*recordControl_popup.title: Управление записью
+
+IBM9999*recordControl*startBtn.labelString: Начать
+
+IBM9999*recordControl*cancelBtn.labelString: Отмена
+
+IBM9999*recordControl*pauseBtn.labelString: Пауза
+
+IBM9999*recordControl*stopBtn.labelString: Стоп
+
+IBM9999*recordControl*recordControlLabelRecording.labelString: Запись.
+
+IBM9999*recordControl*recordControlLabelPaused.labelString: Прерван.
+
+IBM9999*recordControl*recordControlKeysRemaingLabel.labelString: Осталось места:
+
+IBM9999*recordPauseControls_popup.title: Опции прекращения записи
+
+! this cannot be made much longer during translation. 
+IBM9999*recordPauseControls*recordPauseChoicesInstructions.labelString: Запись прервана. Выберите действие, которое\n\
+следует выполнить при воспроизведении:
+
+IBM9999*recordPauseControls*recordPauseRecordBtn.labelString: Приостановить воспроизведение
+
+IBM9999*recordPauseControls*recordPauseUseridBtn.labelString: Вставить ИД пользователя
+
+IBM9999*recordPauseControls*recordPausePasswordBtn.labelString: Вставить пароль
+
+IBM9999*recordPauseControls*recordPauseNoneBtn.labelString: Нет
+
+IBM9999*recordPauseControls*continueBtn.labelString:   Продолжить запись
+
+IBM9999*recordPauseControls*pauseStopBtn.labelString: Остановить запись
+
+IBM9999*recordFileControl_popup.title: Параметры сохранения файла макрокоманды
+
+IBM9999*recordFileControl*recordFileListLabel.labelString: Выберите файл для замены.
+
+IBM9999*recordFileControl*acceleratorBtn.labelString: Клавиша быстрого доступа
+
+IBM9999*recordFileControl*accButton0.labelString: Нет
+
+! Function keys for accelerators.
+IBM9999*recordFileControl*accButton1.labelString:  F1
+
+IBM9999*recordFileControl*accButton2.labelString:  F2
+
+IBM9999*recordFileControl*accButton3.labelString:  F3
+
+IBM9999*recordFileControl*accButton4.labelString:  F4
+
+IBM9999*recordFileControl*accButton5.labelString:  F5
+
+IBM9999*recordFileControl*accButton6.labelString:  F6
+
+IBM9999*recordFileControl*accButton7.labelString:  F7
+
+IBM9999*recordFileControl*accButton8.labelString:  F8
+
+IBM9999*recordFileControl*accButton9.labelString:  F9
+
+IBM9999*recordFileControl*accButton10.labelString:  F10
+
+IBM9999*recordFileControl*accButton11.labelString:  F11
+
+IBM9999*recordFileControl*accButton12.labelString:  F12
+
+IBM9999*recordFileControl*accButton13.labelString:  F13
+
+IBM9999*recordFileControl*accButton14.labelString:  F14
+
+IBM9999*recordFileControl*accButton15.labelString:  F15
+
+IBM9999*recordFileControl*accButton16.labelString:  F16
+
+IBM9999*recordFileControl*accButton17.labelString:  F17
+
+IBM9999*recordFileControl*accButton18.labelString:  F18
+
+IBM9999*recordFileControl*accButton19.labelString:  F19
+
+IBM9999*recordFileControl*accButton20.labelString:  F20
+
+IBM9999*recordFileControl*accButton21.labelString:  F21
+
+IBM9999*recordFileControl*accButton22.labelString:  F22
+
+IBM9999*recordFileControl*accButton23.labelString:  F23
+
+IBM9999*recordFileControl*accButton24.labelString:  F24
+
+IBM9999*recordFileControl*recordFileTextLabel.labelString: Введите имя нового файла макрокоманды.
+
+IBM9999*recordFileControl*saveBtn.labelString: Сохранить
+
+IBM9999*recordFileControl*doNotSaveBtn.labelString: Не сохранять
+
+IBM9999*recordFileControl*recordFileReplaceWarningDialog_popup.title: Предупреждение о замене файла макрокоманды
+
+IBM9999*recordFileControl*recordFileReplaceWarningDialog.messageString: Файл уже существует. Заменить его?
+
+IBM9999*recordFileControl*recordFileMsgDialog_popup.title: Сообщение об ошибке сохранения файла макрокоманды
+
+IBM9999*RecordFileMsgNoOpen: Невозможно открыть файл. Нажатия клавиш не сохранены.
+
+IBM9999*RecordFileMsgNoAccess: Каталог недоступен.
+
+IBM9999*RecordFileMsgNoMake: Не удалось создать каталог.
+
+
+!****************************
+!** Playback Resources
+!****************************
+IBM9999*playbackControl_popup.title: Параметры макрокоманды
+
+IBM9999*playbackControl*playbackControlLabelSelectFile.labelString: Выберите файл макрокоманды для воспроизведения.
+
+IBM9999*playbackControl*playbackFileListLabel.labelString: Файлы макрокоманд пользователя
+
+IBM9999*playbackControl*playbackDefaultFileListLabel.labelString: Файлы макрокоманд по умолчанию
+
+IBM9999*scaleBtn.titleString: Скорость воспроизведения
+
+IBM9999*playbackControl*startBtn.labelString: Начать
+
+IBM9999*playbackControl*cancelBtn.labelString: Отмена
+
+IBM9999*playbackControl*deleteBtn.labelString: Удалить
+
+IBM9999*playbackControl*editBtn.labelString: Изменить
+
+IBM9999*playbackControl*pauseBtn.labelString: Пауза
+
+IBM9999*playbackControl*continueBtn.labelString: Продолжить
+
+IBM9999*playbackControl*stopBtn.labelString: Стоп
+
+IBM9999*playbackControl*playbackControlLabelStopped.labelString: Остановлен.
+
+IBM9999*playbackControl*playbackControlLabelPlaying.labelString: Выполнение.
+
+IBM9999*playbackControl*playbackControlLabelPaused.labelString:  Прерван.
+
+IBM9999*playbackControl*playbackControlLabelDone.labelString: Выполнен.
+
+IBM9999*playbackControl*playbackKeysRemainingLabel.labelString:  Осталось данных:
+
+IBM9999*playbackControl*playbackDeleteWarningDialog_popup.title: Предупреждение об удалении макрокоманды
+
+IBM9999*playbackControl*playbackDeleteWarningDialog.messageString: Удалить выбранные файлы?
+
+IBM9999*playbackControl*playbackMsgDialog_popup.title: Сообщение об ошибке макрокоманды
+
+IBM9999*playbackControl*playbackPauseDialog_popup.title: Пауза воспроизведения
+
+IBM9999*playbackControl*playbackPauseDialog.okLabelString:        Продолжить
+
+IBM9999*playbackControl*playbackPauseDialog.cancelLabelString:    Стоп
+
+IBM9999*playbackPauseDialogMsg1: Воспроизведение прервано. Введите данные для продолжения.
+
+IBM9999*playbackPauseDialogMsg2: Воспроизведение прервано. Введите пароль для продолжения.
+
+IBM9999*playbackPauseDialogMsg3: Воспроизведение прервано пользователем.
+
+IBM9999*PlaybackMsgNoStartup: Начальный файл макрокоманды отсутствует в списке макрокоманд.
+
+IBM9999*PlaybackMsgFileNotInList:  Файл макрокоманды отсутствует в списке макрокоманд.
+
+IBM9999*PlaybackMsgFileCorrupt: Файл макрокоманды создан не с помощью опции Запись.
+
+IBM9999*PlaybackMsgFileNoRead: Невозможно прочитать файл макрокоманды. Макрокоманда не запущена.
+
+IBM9999*PlaybackMsgFileNoOpen: Невозможно открыть файл макрокоманды. Воспроизведение не начато.
+
+IBM9999*PlaybackMsgIncompatible:  Макрокоманда несовместима с текущим окном.
+
+IBM9999*PlaybackMsgPasswordLocation:  Невозможно вставить пароль в позицию курсора.
+
+
+!*****************************
+! Keypad Resources
+!*****************************
+IBM9999*keypadfilechangebox_popup.title:   Всплывающая клавиатура
+
+IBM9999*keypadfilechangeboxlabel.labelString:   Выберите файл дополнительной клавиатуры:
+
+IBM9999*userKeypads.labelString:  Дополнительные клавиатуры пользователя
+
+IBM9999*defaultKeypads.labelString:  Дополнительные клавиатуры по умолчанию
+
+IBM9999*cancelkeypad.labelString:   Отмена
+
+IBM9999*keypadOKbox.labelString:   OK
+
+!*****************************************************************************
+! This menubar resource is used for double byte languages, but DOES need to be
+! translated into all MRI languages (because users can have a different MRI
+! language than their emulator session language).
+!*****************************************************************************
+IBM9999*altviewButton.labelString:  Альтернативный просмотр
+
+!***********************************************************
+! The resources below are used to prompt the user to choose between two types 
+! of Japanese.  These resources should be translated into all languages.
+!***********************************************************
+IBM9999*hostNameDialog.helpLabelString:  Дополнительно
+IBM9999*katawidget.title:   Выбор японской кодовой страницы хоста
+IBM9999*labelw.labelString:  Выберите кодовую страницу хоста
+IBM9999*button_two.labelString:  Расширенная катакана (5026)
+IBM9999*button_one.labelString:  Расширенная латиница (5035)
+IBM9999*okw.labelString:  OK
+IBM9999*cancelw.labelString:  Отмена
+
+
+!***********************************
+!* Shared Emulator Print Resources *
+!***********************************
+
+IBM9999*localPrintPrintSelectionLabel.labelString:       Напечатать:
+
+IBM9999*localPrintPrintSelectionTextButton.labelString:  Текст
+
+IBM9999*localPrintPrintSelectionImageButton.labelString: Изображение
+
+IBM9999*localPrintImageColorSupportLabel.labelString: Цветная печать:
+
+IBM9999*localPrintImageColorSupportFalseButton.labelString: Нет
+
+IBM9999*localPrintImageColorSupportTrueButton.labelString: Да
+
+IBM9999*localPrintPageSizeMenuLabel.labelString:  Размер страницы:
+
+! The following are printer page sizes.
+IBM9999*localPrintPageSizeMenu*pageSize1.labelString:  Letter (8,5 x 11 дюймов)
+
+IBM9999*localPrintPageSizeMenu*pageSize2.labelString:  Legal (8,5 x 14 дюймов)
+
+IBM9999*localPrintPageSizeMenu*pageSize3.labelString:  A4 (210 x 297 мм)
+
+IBM9999*localPrintPageSizeMenu*pageSize4.labelString:  A5 (148 x 210 мм)
+
+IBM9999*localPrintPageSizeMenu*pageSize5.labelString:  B5 ISO (176 x 250 мм)
+
+IBM9999*localPrintPageSizeMenu*pageSize6.labelString:  B5 JIS (182 X 257 мм)
+
+IBM9999*localPrintPageSizeMenu*pageSize7.labelString:  Executive (7,25 x 10,5 дюймов)
+
+IBM9999*localPrintPageSizeMenu*pageSize8.labelString:  Statement (8,5 x 5,5 дюймов)
+
+IBM9999*localPrintDPIMenuLabel.labelString:  Разрешение (точек на дюйм):
+
+IBM9999*localPrintDPIMenu*DPI1.labelString:  75
+
+IBM9999*localPrintDPIMenu*DPI2.labelString:  100
+
+IBM9999*localPrintDPIMenu*DPI3.labelString:  150
+
+IBM9999*localPrintDPIMenu*DPI4.labelString:  200
+
+IBM9999*localPrintDPIMenu*DPI5.labelString:  300
+
+IBM9999*localPrintDPIMenu*DPI6.labelString:  600
+
+IBM9999*ErrorMsgBrowserLowMemory:  Недостаточно памяти для выполнения операции.
+
+IBM9999*userKeypads.labelString: Дополнительные клавиатуры пользователя
+
+IBM9999*defaultKeypads.labelString: Дополнительные клавиатуры по умолчанию
+
+IBM9999*playbackControl*playbackDeleteWarningDialog.cancelLabelString: Отмена
+
+IBM9999*playbackControl*playbackDeleteWarningDialog.okLabelString: OK
+
+!***********************************
+!**  Resources only used by 3270  **
+!***********************************
+! 'Command' menu
+IBM3270*sessMenuCascade.labelString: Создать сеанс 3270
+
+IBM3270*new_sessionButton.labelString: Создать сеанс 3270
+
+IBM3270*new_mod2Button.labelString: Создать сеанс 24x80
+
+IBM3270*new_mod3Button.labelString: Создать сеанс 32x80
+
+IBM3270*new_mod4Button.labelString: Создать сеанс 43x80
+
+IBM3270*new_mod5Button.labelString: Создать сеанс 27x132
+
+IBM3270*graphicsMsg.labelString: Графический
+
+IBM3270*font0Button.labelString: По умолчанию
+
+IBM3270*printTelnetFailure: Согласование\n\
+Telnet для печати не выполнено.
+
+!**************************************************
+!*
+!*        Printing translations 
+!*
+!*      Added by AJMEYER for V310.nc
+!*
+!**************************************************
+
+IBM9999*printDialogPrinterTypeLabel.labelString:  Тип принтера:
+
+IBM9999*printDialogPrinterTypeMenu*postscript.labelString:  PostScript
+
+IBM9999*printDialogPrinterTypeMenu*ascii.labelString:  ASCII
+
+IBM9999*printDialogPrinterTypeMenu*pcl.labelString:  PCL
+
+IBM9999*printDialogPrinterSelectControls_popup.title:   Выбор принтера
+
+IBM9999*printSelectDialogOKButton.labelString:  OK
+
+IBM9999*printSelectDialogCancelButton.labelString:  Отмена
+
+IBM9999*printDialogSelectPrinter.labelString: Выберите принтер:
+
+IBM9999*printDialogPrintCommandLabel.labelString: Команда печати:
+
+IBM5250*hostNameDialog*useridLabel.labelString: ИД пользователя:
+
+IBM5250*hostNameDialog*passwordLabel.labelString: Пароль:
+
+!**************************************************
+!*
+!*                ICU path  
+!*
+!*     
+!**************************************************
+
+
+IBM5250*ICUTablePath:  /usr/local/share/icu/3.4
+! ENGL1SH_VERS10N 1.8.2.1 DO NOT REMOVE OR CHANGE THIS LINE

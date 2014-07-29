@@ -1,0 +1,1746 @@
+!
+!
+!
+! This file contains the resource text strings for the IBM Network Station 3270, 5250, VTxxx
+! emulators, in particular the keyboard remapping, keypad customize, and playback edit programs.
+
+! This resource file is stored in locale specific ASCII (code page 819 for Latin1 languages).
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. Resource format:
+!    - A resource line starts with one of the following strings:
+!      Keymap52* : for keymapper resources
+!      Keypad52* : for keypad customize resources
+!      Playedit* : for playback editor resources
+!      Keyxxx52* : for resources shared by keymapper and keypad
+!      AllShare* : for resources shared by keymapper, keypad, and playback editor
+!    - Each string is followed by a resource name and a ":".
+!       Do NOT make any changes to the text to the left of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+
+!******************************************************************************
+!************************ BEGIN DO NOT TRANSLATE ******************************
+!******************************************************************************
+!*   The first section of resources are are locale specific but               *
+!*   DO NOT REQUIRE TRANSLATION.                                              *
+!*                                                                            *
+!* This source file enables the resource section for Latin1 and Latin2.       *
+!*                                                                            *
+!* For ru_RU or Latin5 locales and DBCS locales                               *
+!*      1. Place a '!' as the first character in each line in the Latin1      *
+!*      and Latin2 section                                                    *
+!*      2. Remove the '!' character for each resource line in the apropriate  *
+!*      section that matches your locale.                                     *
+!*                                                                            *
+!* For example, ru_RU should place ! in front of all lines in the LATIN1      *
+!* section remove the ! from all lines in the LATIN5 section.                 *
+!******************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN1 and LATIN2                ****************
+!**************************************************************************
+Keypad52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-110-*-*
+Keypad52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-90-*-*
+Keypad52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+Keymap52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-90-*-*
+Keymap52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-70-*-*
+Keymap52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+Playedit*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-90-*-*
+Playedit*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-70-*-*
+Playedit*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+!**************************************************************************
+!****************   END LATIN1 and LATIN2                  ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN5                           ****************
+!**************************************************************************
+!Keypad52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*
+!Keypad52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!Keypad52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!Keymap52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!Keymap52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-70-*-*
+!Keymap52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!Playedit*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!Playedit*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-70-*-*
+!Playedit*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!**************************************************************************
+!****************   END   LATIN5                           ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (ja_JP ko_KR zh_CN)   ****************
+!**************************************************************************
+!Keypad52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*
+!Keypad52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!Keypad52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*
+!Keymap52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*
+!Keymap52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!Keymap52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*
+!Playedit*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*
+!Playedit*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!Playedit*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*
+!**************************************************************************
+!****************   END DBCS (ja_JP ko_KR zh_CN)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (zh_TW)   ****************
+!**************************************************************************
+!Keypad52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Keypad52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Keypad52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Keymap52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Keymap52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Keymap52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Playedit*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Playedit*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Playedit*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!**************************************************************************
+!****************   END DBCS (zh_TW)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   END DO NOT TRANSLATE                   ****************
+!**************************************************************************
+
+
+! ********************************************************************************
+! Keyboard Remapping Resources
+! ********************************************************************************
+!
+! In general, the following buttons should not be made much longer during translation.
+! Buttons have one to four words. Note: Testing is the only way to know for sure if all
+! buttons fit on the screen ok.  The emulators have a testing document that will be used
+! during testing; this will point out a problem if button text is too long. In many
+! cases, buttons are presented side by side, where the total button text length cannot
+! increase significantly.
+Keymap52*key.labelString:  Current Key
+!
+Keymap52*title:  Keyboard Remapping
+!
+Keymap52*iname5250:  5250 Key Map
+!
+Keymap52*iname3270:  3270 Key Map
+!
+Keymap52*inameNSTERM:  VT Emulator Key Map
+!
+AllShare*fileSaveButton.labelString:  Save
+!
+Keymap52*fileDeleteButton.labelString:  Delete
+!
+Keymap52*applyTranslationsButton.labelString:  Apply Changes to Session
+!
+AllShare*fileQuitButton.labelString:  Exit
+!
+AllShare*helpPush.labelString:  Help
+!
+AllShare*lowMemMsgDialog.messageString:  Not enough memory to start Help Viewer.
+!
+AllShare*quitDialog.dialogTitle:  Exit Warning
+!
+! Note: \n causes a new line in the dialogue box and should not be translated.
+! You can move, add, or remove \n within this text string.
+Keymap52*invalidExt.value: The extension on the keymap file name was incorrect or missing. \nThe correct extension has been added automatically. \nPlease note the new file name and extension in the message area.
+!
+Keymap52*invalidExtOkButton.labelString:  OK
+!
+Keymap52*invalidFileName.value:  The character that you typed is not valid in a file name.
+!
+Keymap52*invalidFileNameOkbutton.labelString:  OK
+!
+Keymap52*noKeyCaps.value: The keyboard remapping program has not been updated for your keyboard type. The text for the keys on the graphical keyboard will be displayed in English.
+!
+Keymap52*noKeyCapOkbutton.labelString:  OK
+!
+Keymap52*EBCMismatchText.value: The language of the emulator session that invoked the Keyboard Remapping Program does not match the language of the IBM Network Station.  Characters and strings created with this remapper may cause undesirable results in the emulator session.
+!
+Keymap52*mismatchOKbutton.labelString:  OK
+!
+Keymap52*poorResolutionMsgText.value:   The resolution of your monitor is less than 800x600. Keyboard remapping is not supported on monitors with resolution less than 800x600.
+!
+Keymap52*keymapFailureCancelBtn.labelString:  Cancel
+!
+Keymap52*saveDialog.dialogTitle:  Save Keyboard Remapping
+!
+Keymap52*saveBoxLabel*labelString:  Select where to save keyboard remapping changes:
+!
+Keymap52*saveBoxToggle1.labelString:  Save as a default for all your sessions
+!
+Keymap52*saveBoxToggleNsterm1.labelString:      Save as a default for this Terminal type
+!
+Keymap52*saveBoxToggle2.labelString:  Save for this session only
+!
+Keymap52*saveBoxToggle3.labelString:  Save as a named key mapping file (administrator only)
+!
+AllShare*saveBoxSaveBtn.labelString:  Save
+!
+AllShare*saveBoxCancelBtn.labelString:  Cancel
+!
+Keymap52*fileNameSaveBoxLabel.labelString:  Enter a key mapping file name:
+!
+Keymap52*fileDeleteDialog.dialogTitle:  Delete Keyboard Remapping File
+!
+Keymap52*fileDeleteBoxLabel*labelString:  Select file(s) to delete:
+!
+KeyXXX52*fileDeleteBoxLabelAlt*labelString:  No files to delete
+!
+KeyXXX52*fileDeleteBoxDeleteBtn.labelString:  Delete
+!
+KeyXXX52*fileDeleteBoxCancelBtn.labelString:  Cancel
+!
+KeyXXX52*fileDeleteVerifyDialog.dialogTitle:  Delete Verify
+!
+KeyXXX52*fileDeleteVerifyDialog.okLabelString:  OK
+!
+KeyXXX52*fileDeleteVerifyDialog.cancelLabelString:  Cancel
+
+! this cannot be much longer
+KeyXXX52*noundoDelete:  Deleting files cannot be undone. Do you want to delete?
+!
+KeyXXX52*novalidDelete:  No files selected. Delete not valid.
+!
+Keymap52*fileWarningDialog.dialogTitle:  Key Mapping Warning
+!
+AllShare*fileWarningDialog.okLabelString:  Yes
+!
+AllShare*fileWarningDialog.cancelLabelString:  No
+!
+AllShare*fileAlreadyExists:  File already exists. OK to overwrite?
+!
+Keymap52*transTempApp:  Keyboard remapping changes temporarily applied to the session.
+!
+AllShare*nomakeDir:  Unable to make directory.
+!
+AllShare*nofilepathSave:  Unable to determine file path.
+!
+Keymap52*transRxd:  Original keyboard map received from emulator session.
+!
+Keymap52*saveTran:  Saving keyboard remapping file...
+!
+Keymap52*savetoTranError:  Error saving keyboard remapping file...file not saved.
+!
+Keymap52*savedtoTran:   Keyboard remapping file saved to:
+!
+Keymap52*quitDialog1:  Keyboard map has been modified but not applied or saved.
+!
+Keymap52*quit1Tog1:  Exit without applying or saving changes.
+!
+Keymap52*quit1Tog2:  Apply and Save changes before exiting.
+!
+Keymap52*quitDialog2:  Keyboard map has been modified and applied but not saved.
+!
+Keymap52*quit2Tog1:  Exit without saving, undo changes made to keyboard map.
+!
+Keymap52*quit2Tog2:  Exit without saving, leave changes temporarily applied to session.
+!
+Keymap52*quitDialog3:  Keyboard map has been modified and saved but not applied.
+!
+Keymap52*quit3Tog1:  Exit without applying changes.
+!
+Keymap52*quitTog3.labelString:  Apply changes to this session before exiting.
+!
+AllShare*quitDialog*quitTog4.labelString:  Save changes before exiting.
+!
+AllShare*quitDialog*exitBox.labelString:  Exit
+!
+AllShare*quitDialog*cancelBox.labelString:  Cancel
+!
+Keymap52*undoDialog.dialogTitle:  Restore Dialog
+!
+Keymap52*undoDialog1.labelString:  Select a keyboard mapping state to restore.
+!
+Keymap52*undoDialog*undoBox.labelString:  OK
+!
+Keymap52*undoDialog*cancelBox.labelString:  Cancel
+!
+Keymap52*restoreWarning.dialogTitle:  Exit Message
+!
+Keymap52*restoreWarning.okLabelString:  OK
+
+! this cannot be made much longer during translation
+Keymap52*restoreWarning.messageString:  Keyboard remapping for this session has been restored to its original value.
+!
+Keymap52*nonValidDialog.dialogTitle:  Warning Message
+!
+KeyXXX52*nonValidDialog.okLabelString:  OK
+!
+Keymap52*nonValidDialog.messageString:  One or more actions for this key are not valid.
+!
+Keymap52*reservedtrans.dialogTitle:  Warning Message
+!
+Keymap52*reservedtrans.okLabelString:  OK
+
+! this cannot be made much longer during translation
+Keymap52*reservedtrans.messageString:  Keystrokes reserved by the Window Manager cannot be remapped.
+!
+Keymap52*lastButton.labelString:  Restore keyboard map of last apply
+!
+Keymap52*origButton.labelString:  Restore original keyboard map
+
+! this cannot be made much longer during translation
+Keymap52*lastRest:  Keyboard remapping has been restored to the values that were last applied to session.
+!
+Keymap52*origRest:  Keyboard remapping has been restored to its original value.
+!
+Keymap52*noRest:  No restore options selected, no changes have been made.
+!
+Keymap52*fileDeleted:  Selected keyboard remapping file(s) deleted.
+
+! this resource has been left intentionally blank, do not translate.
+Keymap52*blank:
+!
+Keymap52*basePb.labelString:  -> Base
+!
+AllShare*changePb.labelString:  OK
+!
+AllShare*cancelPb.labelString:  Cancel
+!
+AllShare*actionHelp.labelString: Action Help
+!
+AllShare*actionListLabel.labelString:  Available Actions List:
+!
+AllShare*charListLabel.labelString:  Character List:
+!
+AllShare*actionDef.labelString:  Action Definition:
+!
+AllShare*printActionDefTitle:  Available Action Definitions
+!
+Keymap52*restorePB.labelString:  Restore
+
+! this cannot be made any longer during translation.
+Keymap52*locatePB.labelString:  Locate
+
+! this cannot be made any longer during translation.
+Keymap52*nothingTB.labelString:  No Action
+!
+Keymap52*translistdialog.dialogTitle:  Advanced Keyboard Remapping
+!
+Keymap52*noRemPass:  Invalid operation, passive keymappings cannot be removed.
+!
+Keymap52*searchFailed:  Locate failed, no matching actions found in keyboard map.
+!
+Keymap52*searchSuccess:  Locate successful....
+!
+Keymap52*searchSemi:  Locate successful... the key for this action is unavailable.
+!
+Keymap52*noSearchMsg:  Cannot perform locate, a valid action is not selected.
+!
+Keymap52*nonStand:  At least one translation exists for this key that cannot be displayed.
+!
+Keymap52*change.dialogTitle:  Key Mapping Warning
+!
+KeyXXX52*change.messageString:  OK or Cancel changes to the current key before viewing another.
+!
+KeyXXX52*change.okLabelString:  Continue
+!
+Keymap52*editb.labelString:  Edit
+!
+Keymap52*insertb.labelString:  Insert
+!
+Keymap52*removeb.labelString:  Remove
+!
+Keymap52*closeb.labelString:  Close
+!
+Keymap52*editDialog.dialogTitle:  Edit Dialog
+!
+Keymap52*editDialog*editLabel.labelString:  Edit the translation below:
+!
+Keymap52*editDialog*okButton.labelString:  OK
+!
+Keymap52*editDialog*clearButton.labelString:  Clear
+!
+Keymap52*editDialog*cancelButton.labelString:  Cancel
+!
+Keymap52*Any:  -> Base
+!
+Keymap52*Shift:  -> Shift
+!
+Keymap52*Lock:  -> Caps Lock
+!
+Keymap52*Lock122:  -> Shift Lock
+!
+Keymap52*Ctrl:  -> Left Ctrl
+!
+Keymap52*CtrlNsterm: -> Ctrl
+!
+Keymap52*Alt:  -> Alt
+!
+Keymap52*Mod2:  -> Alt(Gr)
+!
+Keymap52*Mod3:  -> APL/Super
+!
+Keymap52*Mod4:  -> Mod4
+!
+Keymap52*Mod5:  -> Num Lock
+!
+Keymap52*Shift_Alt:  -> Shift Alt
+!
+Keymap52*cantdothat.dialogTitle:  Key Mapping Warning
+!
+Keymap52*cantdothat.messageString:  OK or Cancel changes to the current key before selecting an option from the action bar.
+!
+KeyXXX52*cantdothat.okLabelString:  Continue
+!
+Keymap52*chooseApply:  Choose Apply to have changes take effect in session.
+!
+Keymap52*transListLabel.labelString:  Translation List:
+!
+Keymap52*seeHelpLabel.labelString:  See Help before making advanced changes.
+!
+Keymap52*keyAction.labelString:  Key/Action
+!
+Keymap52*nomapmod:  Modifiers cannot be remapped.
+!
+AllShare*toobig:  Operation cancelled, maximum action length exceeded.
+!
+Keymap52*currKeyLabel.labelString:  Current Key:
+!
+AllShare*printKeymap.labelString:  Print
+!
+AllShare*printDialogCancelButton.labelString:  Cancel
+!
+AllShare*printDialogBoxLabel.labelString:  Select print options
+!
+AllShare*printDialogPrintCommandLabel.labelString: Print Command:
+!
+AllShare*printDialogSelectPrinter.labelString:  Select a Printer:
+!
+AllShare*PrinterSelectServerDelineator:  @
+!
+AllShare*PrinterSelectLocalDesignator:  (Local)
+!
+AllShare*ActionHelpPrinted:  Action Help Definitions Printed
+!
+AllShare*printDialogPrintInProgress.labelString:  Printing...
+!
+AllShare*okLabelString:  OK
+!
+AllShare*cancelLabelString:  Cancel
+!
+! Start Action list translations (to be shared by keypad customizer and keymapper).
+!
+! Rules for translating actions:
+! 1) Action text (to the right of the ":") is translated
+! 2) All actions need to end in ()
+! 3) Action text may not contain spaces
+! 4) Action text may be separated by capitals or underscores (_)
+! 5) Because actions are cross-referenced, each translated action must be unique
+! 6) Action text should be a maximum of 29 characters, not counting the () characters
+!
+!    ValidActionText()
+!    InvalidActionText
+!    ValidActionText()
+!    Valid_Action_Text()
+!    Invalid Action Text()
+!
+!    Valid Unique action names:
+!    Keyxxx52*tab():  Tab()
+!    Keyxxx52*backtab():  BackTab()
+!    Keyxxx52*tabadvancefunction():  TabAdvance()
+!    Keyxxx52*tabfunction():  OfficeTabFunction()
+!
+!    Invalid action names, not unique:
+!    Keyxxx52*tab():  Tab()
+!    Keyxxx52*backtab():  Tab()
+!    Keyxxx52*tabadvancefunction():  Tab()
+!    Keyxxx52*tabfunction():  Tab()
+!
+! Each action is followed by an action definition (to the right of the ":") which is translated
+!
+Keyxxx52*nothing():  NoAction()
+AllShare*DEFnothing():  This action does nothing and is used to show an empty action.
+!
+Keyxxx52*ruleline():  RuleLine()
+AllShare*DEFruleline():  Changes the state of rule line display, between displayed and not displayed. The rule line can help locate the cursor. Miscellaneous Preferences can enable (the default) or disable the rule line function, and change rule line style.
+!
+AllShare*string():  String()
+AllShare*DEFstring():  Displays a character or string of characters at the cursor position. The format for the action is String("text"). Double quotes (") are required and the 'text' would be the character or characters displayed. String() is used to create keyboard macros.
+!
+Keyxxx52*play():  Play()
+AllShare*DEFplay():  The Play() action displays the playback window, so a playback file can be started. The Play() action also supports a playback file name as a parameter (between the parenthesis); the playback file is started automatically.
+!
+Keyxxx52*record():  Record()
+AllShare*DEFrecord():  Displays the Record window to start the recording of a playback sequence.
+!
+AllShare*pause():  Pause()
+AllShare*DEFpause():  Pauses the playing of a playback file or recording of a playback file. The user selects Continue to continue the playing or recording.
+!
+AllShare*local-screen-print():  ScreenPrint()
+AllShare*DEFlocal-screen-print():  Displays the print screen window for printing the current screen.
+!
+Keyxxx52*print-screen-now():  PrintScreenNow()
+AllShare*DEFprint-screen-now():  Prints the current screen using the last print options and the last printer that was used.
+!
+AllShare*extended():  DisplayAttributes()
+AllShare*DEFextended():  Displays all field attributes on the screen.
+!
+AllShare*up():  CursorUp()
+AllShare*DEFup():  Moves the cursor up one cursor position.
+!
+AllShare*down():  CursorDown()
+AllShare*DEFdown():  Moves the cursor down one cursor position.
+!
+AllShare*left():  CursorLeft()
+AllShare*DEFleft():  Moves the cursor left one cursor position.
+!
+AllShare*right():  CursorRight()
+AllShare*DEFright():  Moves the cursor right one cursor position.
+!
+AllShare*fastleft():  FastCursorLeft()
+AllShare*DEFfastleft():  Moves the cursor left three cursor positions.
+!
+AllShare*fastright():  FastCursorRight()
+AllShare*DEFfastright():  Moves the cursor right three cursor positions.
+!
+AllShare*newline():  Newline()
+AllShare*DEFnewline():  Moves the cursor to the beginning of the entry field on the next line.
+!
+AllShare*home():  Home()
+AllShare*DEFhome():  Moves the cursor to the home position (typically the first entry field position on the screen) and sometimes sends the Home AID code to the host system.
+!
+AllShare*tab():  Tab()
+AllShare*DEFtab():  Moves the cursor to the next entry field.
+!
+AllShare*backtab():  BackTab()
+AllShare*DEFbacktab():  If the cursor is in the first position of an entry field or in an output area, the cursor moves to the first position of the previous entry field. If the cursor is in an entry field and the not first position of the entry field, the cursor moves to the first position of the entry field.
+!
+AllShare*end():  EndOfLine()
+AllShare*DEFend():  Moves the cursor after the last non-null or non-blank character in an entry field.
+!
+AllShare*tabadvancefunction():  TabAdvance()
+AllShare*DEFtabadvancefunction():  Advances the cursor to the next logical entry field.
+!
+AllShare*insert():  Insert()
+AllShare*DEFinsert():  Sets the insert mode on.
+!
+AllShare*delete():  Delete()
+AllShare*DEFdelete():  Deletes (removes) the character at the cursor position.
+!
+AllShare*backspace():  Backspace()
+AllShare*DEFbackspace():  Moves the cursor back one cursor position and can delete the character before the cursor. Miscellaneous Preferences can enable or disable Backspace deleting of the character.
+!
+AllShare*erase-eof():  ErasetoEnd()
+AllShare*DEFerase-eof():  Removes all characters from the cursor position to the end of the field.
+!
+AllShare*erase-input():  EraseInputFields()
+AllShare*DEFerase-input():  Clears all input fields on the screen.
+!
+AllShare*dup():  Dup()
+AllShare*DEFdup():  Fills the current field with the dup character from the cursor to the end of the field.
+!
+AllShare*field-mark():  FieldMark()
+AllShare*DEFfield-mark():  Marks a field with the field mark character.
+!
+AllShare*pf1():  PF1()
+AllShare*DEFpf1():  Performs the defined action of the F1 key.
+!
+AllShare*pf2():  PF2()
+AllShare*DEFpf2():  Performs the defined action of the F2 key.
+!
+AllShare*pf3():  PF3()
+AllShare*DEFpf3():  Performs the defined action of the F3 key.
+!
+AllShare*pf4():  PF4()
+AllShare*DEFpf4():  Performs the defined action of the F4 key.
+!
+AllShare*pf5():  PF5()
+AllShare*DEFpf5():  Performs the defined action of the F5 key.
+!
+AllShare*pf6():  PF6()
+AllShare*DEFpf6():  Performs the defined action of the F6 key.
+!
+AllShare*pf7():  PF7()
+AllShare*DEFpf7():  Performs the defined action of the F7 key.
+!
+AllShare*pf8():  PF8()
+AllShare*DEFpf8():  Performs the defined action of the F8 key.
+!
+AllShare*pf9():  PF9()
+AllShare*DEFpf9():  Performs the defined action of the F9 key.
+!
+AllShare*pf10():  PF10()
+AllShare*DEFpf10():  Performs the defined action of the F10 key.
+!
+AllShare*pf11():  PF11()
+AllShare*DEFpf11():  Performs the defined action of the F11 key.
+!
+AllShare*pf12():  PF12()
+AllShare*DEFpf12():  Performs the defined action of the F12 key.
+!
+AllShare*pf13():  PF13()
+AllShare*DEFpf13():  Performs the defined action of the F13 key.
+!
+AllShare*pf14():  PF14()
+AllShare*DEFpf14():  Performs the defined action of the F14 key.
+!
+AllShare*pf15():  PF15()
+AllShare*DEFpf15():  Performs the defined action of the F15 key.
+!
+AllShare*pf16():  PF16()
+AllShare*DEFpf16():  Performs the defined action of the F16 key.
+!
+AllShare*pf17():  PF17()
+AllShare*DEFpf17():  Performs the defined action of the F17 key.
+!
+AllShare*pf18():  PF18()
+AllShare*DEFpf18():  Performs the defined action of the F18 key.
+!
+AllShare*pf19():  PF19()
+AllShare*DEFpf19():  Performs the defined action of the F19 key.
+!
+AllShare*pf20():  PF20()
+AllShare*DEFpf20():  Performs the defined action of the F20 key.
+!
+AllShare*pf21():  PF21()
+AllShare*DEFpf21():  Performs the defined action of the F21 key.
+!
+AllShare*pf22():  PF22()
+AllShare*DEFpf22():  Performs the defined action of the F22 key.
+!
+AllShare*pf23():  PF23()
+AllShare*DEFpf23():  Performs the defined action of the F23 key.
+!
+AllShare*pf24():  PF24()
+AllShare*DEFpf24():  Performs the defined action of the F24 key.
+!
+AllShare*clear():  Clear()
+AllShare*DEFclear():  Send the clear AID code to the host system.
+!
+AllShare*enter():  Enter()
+AllShare*DEFenter():  Performs the Enter action to enter input.
+!
+AllShare*pa1():  PA1()
+AllShare*DEFpa1():  Send the PA1 AID code to the host system.
+!
+AllShare*pa2():  PA2()
+AllShare*DEFpa2():  Send the PA2 AID code to the host system.
+!
+AllShare*pa3():  PA3()
+AllShare*DEFpa3():  Send the PA3 AID code to the host system.
+!
+AllShare*sysreq():  SystemRequest()
+AllShare*DEFsysreq():  Send the System Request AID to the host system.
+!
+AllShare*reset():  Reset()
+AllShare*DEFreset():  Resets an error.
+!
+AllShare*hex-entry():  HexMode()
+AllShare*DEFhex-entry():  Sets a mode for the next two keystrokes to create an EBCDIC character. The keystrokes must be 0 to 9 or a to f.
+!
+AllShare*hex():  Hex()
+AllShare*DEFhex():  Requires a two character code point value as a parameter (between the parenthesis). The two character value (00 to ff) is an ASCII code page 819 character.
+!
+AllShare*cursor-select():  CursorSelect()
+AllShare*DEFcursor-select():  Selects the field containing the cursor.
+!
+AllShare*attention():  Attention()
+AllShare*DEFattention():  Sends the Attention AID code to the host system.
+!
+AllShare*print():  SystemPrint()
+AllShare*DEFprint():  Send the Print AID code to the host system.
+!
+AllShare*scroll_image_up(): ScrollImageUp()
+AllShare*DEFscroll_image_up():  Scrolls up the image being viewed.
+!
+AllShare*scroll_image_down():   ScrollImageDown()
+AllShare*DEFscroll_image_down():  Scrolls down the image being viewed.
+!
+AllShare*scroll_image_right():  ScrollImageRight()
+AllShare*DEFscroll_image_right():  Scrolls right the image being viewed.
+!
+AllShare*scroll_image_left():   ScrollImageLeft()
+AllShare*DEFscroll_image_left():  Scrolls left the image being viewed.
+!
+AllShare*help():  SystemHelp()
+AllShare*DEFhelp():  Send the help AID code to the host system.
+!
+AllShare*rolldown():  PageUp()
+AllShare*DEFrolldown():  Moves the screen to the page above the current page.
+!
+AllShare*rollup():  PageDown()
+AllShare*DEFrollup():  Moves the screen to the page below the current page.
+!
+AllShare*fieldexit():  FieldExit()
+AllShare*DEFfieldexit():  Advances to the start of the next field on the screen.
+!
+AllShare*fieldplus():  FieldPlus()
+AllShare*DEFfieldplus():  Advances to the start of the next field on the screen.
+!
+AllShare*fieldminus():  FieldMinus()
+AllShare*DEFfieldminus():  Makes the value in the field negative and advances to the next field.
+!
+AllShare*testreq():  TestRequest()
+AllShare*DEFtestreq():  Sends the Test Request AID code to the host system.
+!
+! Note: Office actions are used within the AS/400 OfficeVision editor.
+AllShare*tabfunction():  OfficeTabFunction()
+AllShare*DEFtabfunction():  In the OV/400 editor, inserts a tab character at the cursor location.
+!
+AllShare*textcarrierreturn():  OfficeCarrierReturn()
+AllShare*DEFtextcarrierreturn():  In the OV/400 editor, place a carrier return at the current cursor location.
+!
+AllShare*textrqtabfunction():  OfficeRequiredTabFunction()
+AllShare*DEFtextrqtabfunction():  In the OV/400 editor, place a required tab at the current cursor location. Required tabs define temporary indentation that remains in effect until ended by a paragraph end (required carrier return).
+!
+AllShare*textunderscore():  OfficeStartUnderline()
+AllShare*DEFtextunderscore():  In the OV/400 editor, start underlining at the current cursor location.
+!
+AllShare*textintensify():  OfficeStartBold()
+AllShare*DEFtextintensify():  In the OV/400 editor, start intensified text at the current cursor location.
+!
+AllShare*textendattribute():  OfficeEndUnderlineOrBold()
+AllShare*DEFtextendattribute():  In the OV/400 editor, end the active underline or intensify effect.
+!
+AllShare*textsymbolscmdprompt():  OfficeInsertSpecialCharacters()
+AllShare*DEFtextsymbolscmdprompt():  In the OV/400 editor, display the prompt that allows input of symbols not available from the keyboard.
+!
+AllShare*textrqspace():  OfficeRequiredSpace()
+AllShare*DEFtextrqspace():  In the OV/400 editor, place a required space at the current cursor location. A required space appears as a space character, but will always keep the two words divided by this space together on the same line.
+!
+AllShare*texttopofpage():  OfficeTopOfPage()
+AllShare*DEFtexttopofpage():  In the OV/400 editor, move the cursor (and possibly reposition the screen) to the top of the currently displayed page.
+!
+AllShare*textbottomofpage():  OfficeBottomOfPage()
+AllShare*DEFtextbottomofpage():  In the OV/400 editor, move the cursor (and possibly reposition the screen) to the bottom of the currently displayed page.
+!
+AllShare*textbeginofline():  OfficeBeginningOfLine()
+AllShare*DEFtextbeginofline():  In the OV/400 editor, move the cursor to the beginning of the current text line.
+!
+AllShare*textpageend():  OfficeInsertPageEnd()
+AllShare*DEFtextpageend():  In the OV/400 editor, insert a page end character. This will start a new page of text.
+!
+AllShare*textstopcodefunction():  OfficeStopCodeInsert()
+AllShare*DEFtextstopcodefunction():  In the OV/400 editor, display the prompt that allows definition of a new stop code at the current cursor location.
+!
+AllShare*textstopcodeadvance():  OfficeStopCodeAdvance()
+AllShare*DEFtextstopcodeadvance():  In the OV/400 editor, move the cursor to the next stop code in the document.
+!
+AllShare*textaltd():  OfficeNextTextColumn()
+AllShare*DEFtextaltd():  In the OV/400 editor, insert the control that starts a new text column at the cursor location. This function is only active when editing multiple text columns.
+!
+AllShare*textcent():  OfficeCenter()
+AllShare*DEFtextcent():  In the OV/400 editor, center the line of text containing the cursor.
+!
+AllShare*textwordunderscore():  OfficeWordUnderscore()
+AllShare*DEFtextwordunderscore():  In the OV/400 editor, place a word underscore control at the current cursor location. This cursor should be at the end of the text to be underscored, the underline effect will extend from the start of the current word to the cursor location.
+!
+AllShare*texthalfindexup():  OfficeHalfIndexUp()
+AllShare*DEFtexthalfindexup():  In the OV/400 editor, place a half index up (superscript) control at the current cursor location. The half index up remains active until the next half index down control.
+!
+AllShare*texthalfindexdown():  OfficeHalfIndexDown()
+AllShare*DEFtexthalfindexdown():  In the OV/400 editor, place a half index down (subscript) control at the current cursor location. The half index down remains active until the next half index up control.
+!
+AllShare*displaytextsymb():  OfficeDisplaySymbols()
+AllShare*DEFdisplaytextsymb():  In the OV/400 editor, display the control characters that are normally not visible.  These include the tab, required tab, carrier return, required carrier return, required space, and page end characters.
+!
+AllShare*kanji():  InsertSOandSI()
+AllShare*DEFkanji():  Inserts a DBCS shift out and shift in character (used in Japanese, Korean, and Chinese languages).
+!
+!//@bd_GBR1 start
+AllShare*lklayer():  LatinLayer()
+AllShare*DEFlklayer():  Sets keyboard layer language to Latin.
+!
+AllShare*nklayer():  BidiLayer()
+AllShare*DEFnklayer():  Sets keyboard layer language to national (used in Arabic and Hebrew languages).
+!//@bd_GBR1 end
+! //@bd_GBR1 rename AllShare*reverse():  ReverseCursor()
+AllShare*reverse():  FieldReverse()
+AllShare*DEFreverse():  Reverses the cursor direction in a field and selects the opposite language layer for keystrokes (used in Arabic and Hebrew languages).
+!
+AllShare*close():  CloseBIDIData()
+AllShare*DEFclose():  Closes data in a field by removing imbedded blanks and shifting data towards the logical start of the field (used in Arabic and Hebrew languages).
+!
+AllShare*base():  BaseShape()
+AllShare*DEFbase():  Toggles Arabic shaping on and off (used in the Arabic language).
+!
+AllShare*charadvance():  CharacterAdvance()
+AllShare*DEFcharadvance():  Advances the cursor to the next input position on the screen.
+!
+AllShare*displaySOSI():  DisplaySOandSI()
+AllShare*DEFdisplaySOSI():  Displays all shift out and shift in characters on the screen (used in Japanese, Korean, and Chinese languages).
+!
+AllShare*reverse-scn():  ReverseScreen()
+AllShare*DEFreverse-scn():  Reverses the display of the screen (used for Arabic and Hebrew languages).
+!
+AllShare*EBChex():  EBCDICHexEntry()
+AllShare*DEFEBChex():  Allows use of EBCDIC code points to enter data (used for Japanese, Korean, and Chinese languages).
+!
+AllShare*AltView():  AlternateView()
+AllShare*DEFAltView():  Allows viewing of Japanese data in an alternate code page.
+!
+Keyxxx52*noop():  NoAction()
+AllShare*DEFnoop():  This action does nothing and is used to show an empty action.
+!
+! There are no parentheses after Undefined, making this action different than other actions.
+Keyxxx52*undefined():  Undefined
+!
+AllShare*cursor-move():  MoveCursor()
+AllShare*DEFcursor-move():  Moves the cursor to a specified screen position.
+!
+AllShare*forward-word():  NextWord()
+AllShare*DEFforward-word():  Moves the cursor to the beginning of the next word.
+!
+AllShare*backward-word():  PreviousWord()
+AllShare*DEFbackward-word():  Moves the cursor to the beginning of the previous word.
+!
+AllShare*spbackspace():  AlternateBackspace()
+AllShare*DEFspbackspace():  Performs a similar action as BackSpace(). The characters to the right of the cursor are only moved if insert mode is set on.
+!
+AllShare*kill-word():  DeleteRemainderofWord()
+AllShare*DEFkill-word():  Deletes the characters from the cursor to the end of the word.
+!
+AllShare*backward-kill-word():  DeletePreviousWord()
+AllShare*DEFbackward-kill-word():  Deletes the characters of the previous word.
+!
+AllShare*cent():  Cent()
+AllShare*DEFcent():  Displays the cent currency character at the cursor position.
+!
+AllShare*unlock():  UnlockKeyboard()
+AllShare*DEFunlock():  Unlocks the keyboard so input can be entered.
+!
+AllShare*selpen-attn():  SelectorPenAttention()
+AllShare*DEFselpen-attn():  Send the selector pen attention AID to the host system.
+!
+AllShare*select-field():  PenSelectField()
+AllShare*DEFselect-field():  Selects a selectable field.
+!
+AllShare*xh-attn():  AttentionAlternate()
+AllShare*DEFxh-attn():  Sends an Alternate Attention AID code to the host system.
+!
+Keyxxx52*insert-selection:  Paste()
+Keyxxx52*DEFinsert-selection:  Action for pasting the contents of the clipboard at the cursor position.
+!
+Keyxxx52*jump():  Jump()
+AllShare*DEFjump():  Action jumps to the next session in the session list. If session 1 is the active session, then session 2 will become the active session.
+!
+Keyxxx52*jump-to-session():  JumpToSession()
+AllShare*DEFjump-to-session():  Action jumps to the session given as a parameter (between the parentheses). If the value 2 is given as an argument, then the second session will become the active session.
+!
+Keyxxx52*delay():  Delay()
+AllShare*DEFdelay(): Adds a pause between actions when setting multiple actions to one key sequence in keyboard remapping or keypad customize. The parameter (between the parentheses) is a value in tenths of a second to delay (5 tenths is the default value).
+!
+Keyxxx52*menu-bar-focus():  MenuBarFocus()
+AllShare*DEFmenu-bar-focus():  Allows access to the menu bar without the use of the mouse.
+!
+Keyxxx52*wider-font(): WiderFont()
+Keyxxx52*DEFwider-font(): Makes the current font wider.
+!
+Keyxxx52*narrower-font(): ThinnerFont()
+Keyxxx52*DEFnarrower-font(): Makes the current font more narrow.
+!
+Keyxxx52*taller-font(): TallerFont()
+Keyxxx52*DEFtaller-font(): Makes the current font taller.
+!
+Keyxxx52*shorter-font(): ShorterFont()
+Keyxxx52*DEFshorter-font(): Makes the current font shorter.
+!
+! The following three key sequences should be translated; they may be used in the future for keyboard actions that we currently do not know about.
+Keyxxx52*key-seq1():  KeySequence1()
+Keyxxx52*key-seq2():  KeySequence2()
+Keyxxx52*key-seq3():  KeySequence3()
+!
+! General dead key (the first key of a key sequence to create a dead key character, for example tilda in many languages) that is not remappable because dead keys are processed by the Network Station kernel.
+! There are no parentheses at the end of the following line.
+Keyxxx52*unmappable():  Dead Key
+!
+AllShare*inserteuro():  Euro()
+AllShare*DEFinserteuro():  Inserts a Euro symbol at the cursor position.
+!
+! Action List Translations for NSTerm (VTxxx)
+!
+Keymap52*vt-backspace(): VtBackspace()
+AllShare*DEFvt-backspace():  Moves the cursor back one cursor position and deletes the character before the cursor.
+!
+Keymap52*enterkey(): EnterKey()
+Keymap52*DEFenterkey():  Sends a Carraige Return character to the host.
+!
+Keymap52*local-print-buffer(): LocalPrintBuffer()
+Keymap52*DEFlocal-print-buffer():  Displays the print screen window for printing the current contents of the scroll buffer.
+!
+Keymap52*local-print-screen(): LocalPrintScreen()
+Keymap52*DEFlocal-print-screen():  Displays the print screen window for printing the current screen.
+!
+Keymap52*cut-clipboard(): CutClipboard()
+Keymap52*DEFcut-clipboard():  Copies the marked region of the screen to the clipboard and removes the region from the screen.
+!
+Keymap52*copy-clipboard(): CopyClipboard()
+Keymap52*DEFcopy-clipboard():  Copies the marked region of the screen to the clipboard.
+!
+Keymap52*paste-clipboard(): PasteClipboard()
+Keymap52*DEFpaste-clipboard():  Copies the data stored in the clipboard buffer and transfers it to the cursor position on the screen.
+!
+Keymap52*beginning-of-buffer(): BeginningOfBuffer()
+Keymap52*DEFbeginning-of-buffer(): Moves the screen to the beginning of the scroll buffer.
+!
+Keymap52*end-of-buffer(): EndOfBuffer()
+Keymap52*DEFend-of-buffer():  Scrolls the screen so the end of the current buffer is displayed.
+!
+Keymap52*hard-reset(): HardReset()
+Keymap52*DEFhard-reset():  Resets the terminal to the default state, deletes all content from the screen, and clears any selections.
+!
+Keymap52*soft-reset(): SoftReset()
+Keymap52*DEFsoft-reset():  Resets the terminal to the default state.
+!
+Keymap52*vt-break(): VtBreak()
+Keymap52*DEFvt-break(): Sends a RS-232 break signal to the host.
+!
+Keymap52*vt-find(): VtFind()
+Keymap52*DEFvt-find(): Performs the Find function, if VT200 Mode or higher sends DEC code (CSI 1~) to the host.
+!
+Keymap52*vt-ins(): VtInsert()
+Keymap52*DEFvt-ins(): Performs the Insert Here function, if VT200 Mode or higher sends DEC code (CSI 2~) to the host.
+!
+Keymap52*vt-delete(): VtRemove()
+Keymap52*DEFvt-delete(): Performs the Remove function, if VT200 Mode or higher sends DEC code (CSI 3~) to the host.
+!
+Keymap52*vt-select(): VtSelect()
+Keymap52*DEFvt-select(): Performs the Select function, if VT200 Mode or higher sends DEC code (CSI 4~) to the host.
+!
+Keymap52*vt-prev-screen(): VtPreviousScreen()
+Keymap52*DEFvt-prev-screen(): Performs the Previous Screen function, if VT200 Mode or higher sends DEC code (CSI 5~) to the host.
+!
+Keymap52*vt-next-screen(): VtNextScreen()
+Keymap52*DEFvt-next-screen(): Performs the Next Screen function, if VT200 Mode or higher sends DEC code (CSI 6~) to the host.
+!
+Keymap52*vt-prev-page(): VtPreviousPage()
+Keymap52*DEFvt-prev-page(): Moves text down and window up by 1 page.
+!
+Keymap52*vt-next-page(): VtNextPage()
+Keymap52*DEFvt-next-page(): Moves text up and window down by 1 page.
+!
+Keymap52*vt-do(): VtDo()
+Keymap52*DEFvt-do(): Performs the Do function, if VT200 Mode or higher sends DEC code (CSI 29~) to the host.
+!
+Keymap52*vt-help(): VtHelp()
+Keymap52*DEFvt-help(): Performs the Help function, if VT200 Mode or higher sends DEC code (CSI 28~) to the host.
+!
+Keymap52*vt-next-line(): VtNextLine()
+Keymap52*DEFvt-next-line():  Moves text up and window down by 1 line.
+!
+Keymap52*vt-prev-line(): VtPreviousLine()
+Keymap52*DEFvt-prev-line(): Moves text down and window up by 1 line.
+!
+Keymap52*tty-interrupt(): TtyInterrupt()
+Keymap52*DEFtty-interrupt(): Sends a TTY Interrupt character (inter = Ctrl-C) to the host.
+!
+Keymap52*tty-suspend(): TtySuspend()
+Keymap52*DEFtty-suspend(): Sends a TTY Suspend character (susp = Ctrl-Z) to the host.
+!
+Keymap52*tty-start(): TtyStart()
+Keymap52*DEFtty-start(): Sends a TTY Start character (start = Ctrl-Q) to the host.
+!
+Keymap52*tty-stop(): TtyStop()
+Keymap52*DEFtty-stop(): Sends a TTY Stop character (stop = Ctrl-S) to the host.
+!
+Keymap52*delete-word(): TtyEraseWord()
+Keymap52*DEFdelete-word(): Sends a TTY Word Erase character (werase = Ctrl-W) to the host.
+!
+Keymap52*line-feed(): TtyLineFeed()
+Keymap52*DEFline-feed(): Sends a Line Feed Character (Ctrl-J) to the host.
+!
+Keymap52*cr-lf(): TtyCR_LF()
+Keymap52*DEFcr-lf(): Sends both Carriage Return and Line Feed characters (Ctrl-M Ctrl-J) to the host.
+!
+Keymap52*escape(): EscapeCharacter()
+Keymap52*DEFescape(): Sends a Escape character (Ctrl-[) to the host.
+!
+Keymap52*udk-f1(): UDK_F1()
+Keymap52*DEFudk-f1():  Performs the DEC User Defined Key action for the F1 key.
+!
+Keymap52*udk-f2(): UDK_F2()
+Keymap52*DEFudk-f2():  Performs the DEC User Defined Key action for the F2 key.
+!
+Keymap52*udk-f3(): UDK_F3()
+Keymap52*DEFudk-f3():  Performs the DEC User Defined Key action for the F3 key.
+!
+Keymap52*udk-f4(): UDK_F4()
+Keymap52*DEFudk-f4():  Performs the DEC User Defined Key action for the F4 key.
+!
+Keymap52*udk-f5(): UDK_F5()
+Keymap52*DEFudk-f5():  Performs the DEC User Defined Key action for the F5 key.
+!
+Keymap52*udk-f6(): UDK_F6()
+Keymap52*DEFudk-f6():  Performs the DEC User Defined Key action for the F6 key.
+!
+Keymap52*udk-f7(): UDK_F7()
+Keymap52*DEFudk-f7():  Performs the DEC User Defined Key action for the F7 key.
+!
+Keymap52*udk-f8(): UDK_F8()
+Keymap52*DEFudk-f8():  Performs the DEC User Defined Key action for the F8 key.
+!
+Keymap52*udk-f9(): UDK_F9()
+Keymap52*DEFudk-f9():  Performs the DEC User Defined Key action for the F9 key.
+!
+Keymap52*udk-f10(): UDK_F10()
+Keymap52*DEFudk-f10():  Performs the DEC User Defined Key action for the F10 key.
+!
+Keymap52*udk-f11(): UDK_F11()
+Keymap52*DEFudk-f11():  Performs the DEC User Defined Key action for the F11 key.
+!
+Keymap52*udk-f12(): UDK_F12()
+Keymap52*DEFudk-f12():  Performs the DEC User Defined Key action for the F12 key.
+!
+Keymap52*udk-f13(): UDK_F13()
+Keymap52*DEFudk-f13():  Performs the DEC User Defined Key action for the F13 key.
+!
+Keymap52*udk-f14(): UDK_F14()
+Keymap52*DEFudk-f14():  Performs the DEC User Defined Key action for the F14 key.
+!
+Keymap52*udk-f15(): UDK_F15()
+Keymap52*DEFudk-f15():  Performs the DEC User Defined Key action for the F15 key.
+!
+Keymap52*udk-f16(): UDK_F16()
+Keymap52*DEFudk-f16():  Performs the DEC User Defined Key action for the F16 key.
+!
+Keymap52*udk-f17(): UDK_F17()
+Keymap52*DEFudk-f17():  Performs the DEC User Defined Key action for the F17 key.
+!
+Keymap52*udk-f18(): UDK_F18()
+Keymap52*DEFudk-f18():  Performs the DEC User Defined Key action for the F18 key.
+!
+Keymap52*udk-f19(): UDK_F19()
+Keymap52*DEFudk-f19():  Performs the DEC User Defined Key action for the F19 key.
+!
+Keymap52*udk-f20(): UDK_F20()
+Keymap52*DEFudk-f20():  Performs the DEC User Defined Key action for the F20 key.
+!
+Keymap52*udk-f21(): UDK_F21()
+Keymap52*DEFudk-f21():  Performs the DEC User Defined Key action for the F21 key.
+!
+Keymap52*udk-f22(): UDK_F22()
+Keymap52*DEFudk-f22():  Performs the DEC User Defined Key action for the F22 key.
+!
+Keymap52*udk-f23(): UDK_F23()
+Keymap52*DEFudk-f23():  Performs the DEC User Defined Key action for the F23 key.
+!
+Keymap52*udk-f24(): UDK_F24()
+Keymap52*DEFudk-f24():  Performs the DEC User Defined Key action for the F24 key.
+!
+Keymap52*udk-f25(): UDK_F25()
+Keymap52*DEFudk-f25():  Performs the DEC User Defined Key action for the F25 key.
+!
+Keymap52*udk-f26(): UDK_F26()
+Keymap52*DEFudk-f26():  Performs the DEC User Defined Key action for the F26 key.
+!
+Keymap52*udk-f27(): UDK_F27()
+Keymap52*DEFudk-f27():  Performs the DEC User Defined Key action for the F27 key.
+!
+Keymap52*udk-f28(): UDK_F28()
+Keymap52*DEFudk-f28():  Performs the DEC User Defined Key action for the F28 key.
+!
+Keymap52*udk-f29(): UDK_F29()
+Keymap52*DEFudk-f29():  Performs the DEC User Defined Key action for the F29 key.
+!
+Keymap52*udk-f30(): UDK_F30()
+Keymap52*DEFudk-f30():  Performs the DEC User Defined Key action for the F30 key.
+!
+Keymap52*udk-f31(): UDK_F31()
+Keymap52*DEFudk-f31():  Performs the DEC User Defined Key action for the F31 key.
+!
+Keymap52*udk-f32(): UDK_F32()
+Keymap52*DEFudk-f32():  Performs the DEC User Defined Key action for the F32 key.
+!
+Keymap52*udk-f33(): UDK_F33()
+Keymap52*DEFudk-f33():  Performs the DEC User Defined Key action for the F33 key.
+!
+Keymap52*udk-f34(): UDK_F34()
+Keymap52*DEFudk-f34():  Performs the DEC User Defined Key action for the F34 key.
+!
+Keymap52*udk-f35(): UDK_F35()
+Keymap52*DEFudk-f35():  Performs the DEC User Defined Key action for the F35 key.
+!
+Keymap52*x-f1(): F1()
+Keymap52*DEFx-f1():  Performs the defined action of the F1 key.
+!
+Keymap52*x-f2(): F2()
+Keymap52*DEFx-f2():  Performs the defined action of the F2 key.
+!
+Keymap52*x-f3(): F3()
+Keymap52*DEFx-f3():  Performs the defined action of the F3 key.
+!
+Keymap52*x-f4(): F4()
+Keymap52*DEFx-f4():  Performs the defined action of the F4 key.
+!
+Keymap52*x-f5(): F5()
+Keymap52*DEFx-f5():  Performs the defined action of the F5 key.
+!
+Keymap52*x-f6(): F6()
+Keymap52*DEFx-f6():  Performs the defined action of the F6 key.
+!
+Keymap52*x-f7(): F7()
+Keymap52*DEFx-f7():  Performs the defined action of the F7 key.
+!
+Keymap52*x-f8(): F8()
+Keymap52*DEFx-f8():  Performs the defined action of the F8 key.
+!
+Keymap52*x-f9(): F9()
+Keymap52*DEFx-f9():  Performs the defined action of the F9 key.
+!
+Keymap52*x-f10(): F10()
+Keymap52*DEFx-f10():  Performs the defined action of the F10 key.
+!
+Keymap52*x-f11(): F11()
+Keymap52*DEFx-f11():  Performs the defined action of the F11 key.
+!
+Keymap52*x-f12(): F12()
+Keymap52*DEFx-f12():  Performs the defined action of the F12 key.
+!
+Keymap52*x-f13(): F13()
+Keymap52*DEFx-f13():  Performs the defined action of the F13 key.
+!
+Keymap52*x-f14(): F14()
+Keymap52*DEFx-f14():  Performs the defined action of the F14 key.
+!
+Keymap52*x-f15(): F15()
+Keymap52*DEFx-f15():  Performs the defined action of the F15 key.
+!
+Keymap52*x-f16(): F16()
+Keymap52*DEFx-f16():  Performs the defined action of the F16 key.
+!
+Keymap52*x-f17(): F17()
+Keymap52*DEFx-f17():  Performs the defined action of the F17 key.
+!
+Keymap52*x-f18(): F18()
+Keymap52*DEFx-f18():  Performs the defined action of the F18 key.
+!
+Keymap52*x-f19(): F19()
+Keymap52*DEFx-f19():  Performs the defined action of the F19 key.
+!
+Keymap52*x-f20(): F20()
+Keymap52*DEFx-f20():  Performs the defined action of the F20 key.
+!
+Keymap52*x-f21(): F21()
+Keymap52*DEFx-f21():  Performs the defined action of the F21 key.
+!
+Keymap52*x-f22(): F22()
+Keymap52*DEFx-f22():  Performs the defined action of the F22 key.
+!
+Keymap52*x-f23(): F23()
+Keymap52*DEFx-f23():  Performs the defined action of the F23 key.
+!
+Keymap52*x-f24(): F24()
+Keymap52*DEFx-f24():  Performs the defined action of the F24 key.
+!
+Keymap52*x-f25(): F25()
+Keymap52*DEFx-f25():  Performs the defined action of the F25 key.
+!
+Keymap52*x-f26(): F26()
+Keymap52*DEFx-f26():  Performs the defined action of the F26 key.
+!
+Keymap52*x-f27(): F27()
+Keymap52*DEFx-f27():  Performs the defined action of the F27 key.
+!
+Keymap52*x-f28(): F28()
+Keymap52*DEFx-f28():  Performs the defined action of the F28 key.
+!
+Keymap52*x-f29(): F29()
+Keymap52*DEFx-f29():  Performs the defined action of the F29 key.
+!
+Keymap52*x-f30(): F30()
+Keymap52*DEFx-f30():  Performs the defined action of the F30 key.
+!
+Keymap52*x-f31(): F31()
+Keymap52*DEFx-f31():  Performs the defined action of the F31 key.
+!
+Keymap52*x-f32(): F32()
+Keymap52*DEFx-f32():  Performs the defined action of the F32 key.
+!
+Keymap52*x-f33(): F33()
+Keymap52*DEFx-f33():  Performs the defined action of the F33 key.
+!
+Keymap52*x-f34(): F34()
+Keymap52*DEFx-f34():  Performs the defined action of the F34 key.
+!
+Keymap52*x-f35(): F35()
+Keymap52*DEFx-f35():  Performs the defined action of the F35 key.
+!
+Keymap52*vt-f1(): VtPF1()
+Keymap52*DEFvt-f1():  In any mode, sends the character code (SS3 P) to the application.
+!
+Keymap52*vt-f2(): VtPF2()
+Keymap52*DEFvt-f2(): In any mode, sends the character code (SS3 Q) to the application.
+!
+Keymap52*vt-f3(): VtPF3()
+Keymap52*DEFvt-f3(): In any mode, sends the character code (SS3 R) to the application.
+!
+Keymap52*vt-f4(): VtPF4()
+Keymap52*DEFvt-f4(): In any mode, sends the character code (SS3 S) to the application.
+!
+Keymap52*x-print(): X_Print()
+Keymap52*DEFx-print(): Sends the ANSI escape sequence (Ctrl-[[209q) to the host.
+!
+Keymap52*x-scroll-lock(): X_ScrollLock()
+Keymap52*DEFx-scroll-lock(): Sends the ANSI escape sequence (Ctrl-[[213q) to the host.
+!
+Keymap52*x-pause(): X_Pause()
+Keymap52*DEFx-pause(): Sends the ANSI escape sequence for the Pause key (Ctrl-[[217q) to the host.
+!
+Keymap52*x-ins(): X_Insert()
+Keymap52*DEFx-ins(): Sends the ANSI escape sequence (Ctrl-[[139q) to the host.
+!
+Keymap52*x-delete(): X_Delete()
+Keymap52*DEFx-delete(): Sends the ANSI escape sequence (Ctrl-[[P) to the host.
+!
+Keymap52*x-home(): X_Home()
+Keymap52*DEFx-home(): Sends the ANSI escape sequence (Ctrl-[[H) to the host.
+!
+Keymap52*x-end(): X_End()
+Keymap52*DEFx-end(): Sends the ANSI escape sequence (Ctrl-[[146q) to the host.
+!
+Keymap52*x-page-up(): X_PageUp()
+Keymap52*DEFx-page-up(): Sends the ANSI escape sequence (Ctrl-[[150q) to the host.
+!
+Keymap52*x-page-down(): X_PageDown()
+Keymap52*DEFx-page-down(): Sends the ANSI escape sequence (Ctrl-[[154q) to the host.
+!
+Keymap52*kp-numlock(): KP_NumLock()
+Keymap52*DEFkp-numlock():  Performs the Numeric Lock action.
+!
+Keymap52*kp-divide(): KP_Divide()
+Keymap52*DEFkp-divide():  Performs the divide function as defined on the keypad.
+!
+Keymap52*kp-multiply(): KP_Multiply()
+Keymap52*DEFkp-multiply():  Performs the multiply function as defined on the keypad.
+!
+Keymap52*kp-subtract(): KP_Minus()
+Keymap52*DEFkp-subtract():  In Numeric mode, sends the minus character (-) to the application. In Application Mode, sends the character code SS3 l (ESC ? l) to the application.
+!
+Keymap52*kp-7(): KP_7()
+Keymap52*DEFkp-7():  In Numeric mode, sends the character 7 to the application. In Application mode, sends the character code SS3 w (ESC ? w) to the application.
+!
+Keymap52*kp-8(): KP_8()
+Keymap52*DEFkp-8():  In Numeric mode, sends the character 8 to the application. In Application mode, sends the character code SS3 x (ESC ? x) to the application.
+!
+Keymap52*kp-9(): KP_9()
+Keymap52*DEFkp-9():  In Numeric mode, sends the character 9 to the application. In Application mode, sends the character code SS3 y (ESC ? y) to the application.
+!
+Keymap52*kp-4(): KP_4()
+Keymap52*DEFkp-4():  In Numeric mode, sends the character 4 to the application. In Application mode, sends the character code SS3 t (ESC ? t) to the application.
+!
+Keymap52*kp-5(): KP_5()
+Keymap52*DEFkp-5():  In Numeric mode, sends the character 5 to the application. In Application mode, sends the character code SS3 u (ESC ?u) to the application.
+!
+Keymap52*kp-6(): KP_6()
+Keymap52*DEFkp-6():  In Numeric mode, sends the character 6 to the application. In Application mode, sends the character code SS3 v (ESC ? v) to the application.
+!
+Keymap52*kp-add(): KP_Plus()
+Keymap52*DEFkp-add():  Performs the add function as defined on the keypad.
+!
+Keymap52*kp-1(): KP_1()
+Keymap52*DEFkp-1():  In Numeric mode, sends the character 1 to the application. In Application mode, sends the character code SS3 q (ESC ? q) to the application.
+!
+Keymap52*kp-2(): KP_2()
+Keymap52*DEFkp-2():  In Numeric mode, sends the character 2 to the application. In Application mode, sends the character code SS3 r (ESC ? r) to the application.
+!
+Keymap52*kp-3(): KP_3()
+Keymap52*DEFkp-3():  In Numeric mode, sends the character 3 to the application. In Application mode, sends the character code SS3 s (ESC ? s) to the application.
+!
+Keymap52*kp-0(): KP_0()
+Keymap52*DEFkp-0():  In Numeric mode, sends the character 0 to the application. In Application mode, sends the character code SS3 p (ESC ? p) to the application.
+!
+Keymap52*kp-decimal(): KP_Decimal()
+Keymap52*DEFkp-decimal():  In Numeric mode, sends the decimal (.) character to the application. In Application mode, sends the character code SS3 n (ESC ? n) to the application.
+!
+Keymap52*kp-enter(): KP_Enter()
+Keymap52*DEFkp-enter():  In Numeric mode, sends the enter function to the application. In Application mode, sends the character code SS3 M (ESC ? M) to the application.
+!
+Keymap52*kp-space(): KP_Space()
+Keymap52*DEFkp-space():  Sends the space character to the application.
+!
+Keymap52*kp-tab(): KP_Tab()
+Keymap52*DEFkp-tab():  Sends the tab character to the application.
+!
+Keymap52*kp-equal(): KP_Equal()
+Keymap52*DEFkp-equal():  Sends the equal (=) character to the application.
+!
+Keymap52*kp-separator(): KP_Separator()
+Keymap52*DEFkp-separator():  Sends the separator character to the application.
+!
+Playedit*btn1-press():  MouseBtn1Press()
+Playedit*DEFbtn1-press():  Action for the pressing of mouse button 1.
+!
+Playedit*btn1-release():  MouseBtn1Release()
+Playedit*DEFbtn1-release():  Action for the releasing of mouse button 1.
+!
+Playedit*btn2-press():  MouseBtn2Press()
+Playedit*DEFbtn2-press():  Action for the pressing of mouse button 2.
+!
+Playedit*btn2-release():  MouseBtn2Release()
+Playedit*DEFbtn2-release():  Action for the releasing of mouse button 2.
+!
+Playedit*btn3-press():  MouseBtn3Press()
+Playedit*DEFbtn3-press():  Action for the pressing of mouse button 3.
+!
+Playedit*btn3-release():  MouseBtn3Release()
+Playedit*DEFbtn3-release():  Action for the releasing of mouse button 3.
+!
+Playedit*shift-btn1-press():  MouseShiftBtn1Press()
+Playedit*DEFshift-btn1-press():  Action for the key sequence of pressing mouse button 1 and the Shift modifier.
+!
+Playedit*shift-btn1-release():  MouseShiftBtn1Release()
+Playedit*DEFshift-btn1-release():  Action for the key sequence of releasing mouse button 1 while pressing the Shift modifier.
+!
+Playedit*shift-btn2-press():  MouseShiftBtn2Press()
+Playedit*DEFshift-btn2-press():  Action for the key sequence of pressing mouse button 2 and the Shift modifier.
+!
+Playedit*shift-btn2-release():  MouseShiftBtn2Release()
+Playedit*DEFshift-btn2-release():  Action for the key sequence of releasing mouse button 2 while pressing the Shift modifier.
+!
+Playedit*shift-btn3-press():  MouseShiftBtn3Press()
+Playedit*DEFshift-btn3-press():  Action for the key sequence of pressing mouse button 3 and the Shift modifier.
+!
+Playedit*shift-btn3-release():  MouseShiftBtn3Release()
+Playedit*DEFshift-btn3-release():  Action for the key sequence of releasing mouse button 3 while pressing the Shift modifier.
+!
+Playedit*btn1-double-press():  MouseBtn1DoublePress()
+Playedit*DEFbtn1-double-press():  Action for the double pressing of mouse button 1.
+!
+Playedit*btn1-triple-press():  MouseBtn1TriplePress()
+Playedit*DEFbtn1-triple-press():  Action for the triple pressing of mouse button 1.
+!
+Playedit*btn2-double-press():  MouseBtn2DoublePress()
+Playedit*DEFbtn2-double-press():  Action for the double pressing of mouse button 2.
+!
+Playedit*btn2-triple-press():  MouseBtn2TriplePress()
+Playedit*DEFbtn2-triple-press():  Action for the triple pressing of mouse button 2.
+!
+Playedit*btn3-double-press():  MouseBtn3DoublePress()
+Playedit*DEFbtn3-double-press():  Action for the double pressing of mouse button 3.
+!
+Playedit*btn3-triple-press():  MouseBtn3TriplePress()
+Playedit*DEFbtn3-triple-press():  Action for the triple pressing of mouse button 3.
+!
+Playedit*shift-btn1-double-press():  MouseShiftBtn1DoublePress()
+Playedit*DEFshift-btn1-double-press():  Action for the key sequence of double pressing mouse button 1 and the Shift modifier.
+!
+Playedit*shift-btn1-triple-press():  MouseShiftBtn1TriplePress()
+Playedit*DEFshift-btn1-triple-press():  Action for the key sequence of triple pressing mouse button 1 and the Shift modifier.
+!
+Playedit*shift-btn2-double-press():  MouseShiftBtn2DoublePress()
+Playedit*DEFshift-btn2-double-press():  Action for the key sequence of double pressing mouse button 2 and the Shift modifier.
+!
+Playedit*shift-btn2-triple-press():  MouseShiftBtn2TriplePress()
+Playedit*DEFshift-btn2-triple-press():  Action for the key sequence of triple pressing mouse button 2 and the Shift modifier.
+!
+Playedit*shift-btn3-double-press():  MouseShiftBtn3DoublePress()
+Playedit*DEFshift-btn3-double-press():  Action for the key sequence of double pressing mouse button 3 and the Shift modifier.
+!
+Playedit*shift-btn3-triple-press():  MouseShiftBtn3TriplePress()
+Playedit*DEFshift-btn3-triple-press():  Action for the key sequence of triple pressing mouse button 3 and the Shift modifier.
+!
+AllShare*paste():  Paste()
+AllShare*DEFpaste():  Action for pasting the contents of the clipboard at the cursor position.
+!
+AllShare*copy():  Copy()
+AllShare*DEFcopy():  Action for copying the current screen selection to the clipboard.
+!
+AllShare*cut():  Cut()
+AllShare*DEFcut():  Action for removing the current screen selection.
+!
+Playedit*userid():  USERID()
+Playedit*DEFuserid():  Enters the user ID of the current user. This action is used for auto-logging into emulator sessions.
+!
+Playedit*password():  PASSWORD()
+Playedit*DEFpassword():  Enters the password of the current user. This action is used for auto-logging into emulator sessions.
+!
+AllShare*adjust-copy-left():  AdjustCopyAreaLeft()
+AllShare*DEFadjust-copy-left():  Starts a copy area on the screen if one is not started and adjusts the copy area one character to the left of its current position.
+!
+AllShare*adjust-copy-right():  AdjustCopyAreaRight()
+AllShare*DEFadjust-copy-right():  Starts a copy area on the screen if one is not started and adjusts the copy area one character to the right of its current position.
+!
+AllShare*adjust-copy-up():  AdjustCopyAreaUp()
+AllShare*DEFadjust-copy-up():  Starts a copy area on the screen if one is not started and adjusts the copy area one line up from its current position.
+!
+AllShare*adjust-copy-down():  AdjustCopyAreaDown()
+AllShare*DEFadjust-copy-down():  Starts a copy area on the screen if one is not started and adjusts the copy area one line down from its current position.
+!
+AllShare*adjust-copy-anchor-left():  AdjustCopyAreaAnchorLeft()
+AllShare*DEFadjust-copy-anchor-left():  Starts a copy area on the screen if one is not started and adjusts the copy area one character to the right while not adjusting the left side of the copy area.
+!
+AllShare*adjust-copy-anchor-right():  AdjustCopyAreaAnchorRight()
+AllShare*DEFadjust-copy-anchor-right():  Starts a copy area on the screen if one is not started and adjusts the copy area one character to the left while not adjusting the right side of the copy area.
+!
+AllShare*adjust-copy-anchor-up():  AdjustCopyAreaAnchorUp()
+AllShare*DEFadjust-copy-anchor-up():  Starts a copy area on the screen if one is not started and adjusts the copy area one line down while not adjusting the top of the copy area.
+!
+AllShare*adjust-copy-anchor-down():  AdjustCopyAreaAnchorDown()
+AllShare*DEFadjust-copy-anchor-down():  Starts a copy area on the screen if one is not started and adjusts the copy area one line up while not adjusting the bottom of the copy area.
+!
+AllShare*toggle-default-copy-type():  ToggleDefaultCopyType()
+AllShare*DEFtoggle-default-copy-type():  Sets the copy as either block copy or linear copy.
+!
+Playedit*hex-string():  HexString()
+Playedit*DEFhex-string():  Allows data to be entered in hexidecimal mode.
+!
+Playedit*graphics-hex-string():  GraphicsHexString()
+Playedit*DEFgraphics-hex-string():  Allows graphics data to be entered in EBCDIC hexidecimal mode.
+!
+Playedit*BIDItogglescrrev():  BIDIToggleScreenReverse()
+Playedit*DEFBIDItogglescrrev():  Turns reverse screen mode on or off (used for Arabic and Hebrew languages).
+!
+Playedit*BIDItogglefieldrev():  BIDIToggleFieldReverse()
+Playedit*DEFBIDItogglefieldrev():  Turns reverse field mode on or off (used for Arabic and Hebrew languages).
+!
+Playedit*BIDItoggleautorev():  BIDIToggleAutoReverse()
+Playedit*DEFBIDItoggleautorev():  Turns automatic field reversal on and off (used for Arabic and Hebrew languages).
+!
+Playedit*BIDIpush():  BIDIPush()
+Playedit*DEFBIDIpush():  Sets push mode on (used for Arabic and Hebrew languages).
+!
+Playedit*BIDIendpush():  BIDIEndPush()
+Playedit*DEFBIDIendpush():  Sets push mode off (used for Arabic and Hebrew languages).
+!
+Playedit*BIDItoggleautopush():  BIDIToggleAutoPush()
+Playedit*DEFBIDItoggleautopush():  Sets the emulator to automatically go into push mode when the language switches between BIDI and English (used for Arabic and Hebrew languages).
+!
+Playedit*BIDIsetshape():  BIDISetShape()
+Playedit*DEFBIDIsetshape():  Sets the shaping mode for the Arabic language.
+!
+Playedit*BIDIfieldshape():  BIDIFieldShape()
+Playedit*DEFBIDIfieldshape():  Shapes the data in a field for the Arabic language.
+!
+Playedit*BIDItogglenumswap():  BIDIToggleNumericSwapping()
+Playedit*DEFBIDItogglenumswap():  Turns Arabic/Hindi numeric swapping on and off for the Arabic language.
+!
+! End action names
+!
+!
+Keyxxx52*ERROR:  INVALID ACTION(S)
+!
+Keymap52*managing_server_text.value:  This keyboard remapping file cannot be saved.  Please update the managing server to the latest release of IBM Network Station Manager.
+!
+Keymap52*managingBtn.labelString:  OK
+!
+Keymap52*general_fatal_error.value:  An error has occurred in the Keyboard Remapper.  The program will be terminated.
+!
+Keymap52*genfatalBtn.labelString:  EXIT
+!
+Keymap52*general_nonfatal_text.value:  Keyboard Remapping Error.
+!
+Keymap52*gennonfatBtn.labelString:  OK
+!
+!
+!************************************************************************
+!
+!
+!                        Keypad Customizer Resources
+!
+!
+!************************************************************************
+Keypad52*title:  Keypad Customizer
+
+Keypad52*iname5250:  5250 Keypad Customizer
+
+Keypad52*iname3270:  3270 Keypad Customizer
+
+Keypad52*keypadTitle.dialogTitle:  Keypad
+
+!following resource left blank on purpose, do not translate.
+AllShare*blankLabel.labelString:
+
+! initial popup dialog
+Keypad52*initialpopupDialoglist.labelString:  Select a Keypad File:
+
+Keypad52*initialpopupDialogaltlabel.labelString:  No Keypad Files.
+
+Keypad52*initialpopupDialogOKbtn.labelString:  OK
+
+Keypad52*initialpopupDialogcancelbtn.labelString:  Cancel
+
+Keypad52*initialpopupDialognewbtn.labelString:  New Keypad
+
+!*************************************
+!**  Keypad Customizer Main Window  **
+!*************************************
+
+! In general, the following buttons should not be made much longer during translation.
+! Buttons have one to four words.
+
+Keypad52*keyAction.labelString:  Button Action->
+
+Keypad52*fileDeleteButton.labelString:  Clear Keypad Button
+
+Keypad52*selectplayfile.labelString:  Select Playback File Action
+
+Keypad52*changeSize.labelString:  Change Keypad Style
+
+Keypad52*keypadfileDelete.labelString:  Delete Keypad File
+
+Keypad52*transRxing:  Receiving current keypad customizer information from the emulator session.
+
+Keypad52*transRxd:  Keypad customizer information received from emulator session.
+
+Keypad52*currKeypadLabel.labelString:  Current Keypad:
+
+Keypad52*currKeyLabel.labelString:  Current Keypad Button Text:
+
+Keypad52*currActLabel.labelString:  Current Keypad Button Action:
+
+!******************
+!**  Resolution  **
+!******************
+Keypad52*poorResolutionMsgText.value:   The resolution of your monitor is less than 800x600. Keypad Customizer is not supported on monitors with resolution less than 800x600.
+
+Keypad52*keypadFailureCancelBtn.labelString:  Cancel
+
+!**************
+!**  Saving  **
+!**************
+Keypad52*saveDialog.dialogTitle:  Save Keypad
+
+Keypad52*saveBoxLabel*labelString:  Save Keypad File as:
+
+Keypad52*saveTran:  Keypad File Saved...
+
+Keypad52*fileWarningDialog.dialogTitle:  Keypad Warning
+
+!**************
+!**  Delete  **
+!**************
+Keypad52*fileDeleteDialog.dialogTitle:  Delete Keypad File
+
+Keypad52*fileDeleteBoxLabel.labelString:  Select keypad(s) to delete:
+
+Keypad52*fileDeleted:  Selected keypad file(s) deleted.
+
+!****************
+!**  Playback  **
+!****************
+Keypad52*invalidSelectionplay.messageString:  Nothing Selected.  Select from list or choose Cancel.
+
+Keypad52*invalidSelectionplay.okLabelString:  Continue
+
+Keypad52*selectPlaybackFile.labelString:  Select a Playback File
+
+Keypad52*userPlaybackFiles.labelString:  User Playback Files
+
+Keypad52*defaultPlaybackFiles.labelString:  Default Playback Files
+
+AllShare*okLabel.labelString:  OK
+
+!********************
+!**  Keypad Style  **
+!********************
+Keypad52*selectSizeTitle.dialogTitle:  Keypad Style
+
+Keypad52*selectKeypadSizeLabel.labelString:  Select Keypad Style:
+
+Keypad52*selectKeypadStyle.labelString:  Keypad Style:
+
+Keypad52*popupStyleChoice.labelString:  Pop-up Keypad
+
+Keypad52*menuStyleChoice.labelString:  Pull Down Keypad
+
+Keypad52*selectKeypadSizeRows.labelString:  Rows:
+
+Keypad52*selectKeypadSizeCols.labelString:  Columns:
+
+Keypad52*selectKeypadSizeTextLen.labelString:  Text Length:
+
+Keypad52*changeKeypadSizeMessage:  Select desired Keypad Style...
+
+Keypad52*newPb.labelString:  New
+
+Keypad52*row_col_pulldownvalue.labelString:  -
+
+Keypad52*invalidSizeSelection.messageString:  Selected Size is too small for the current Keypad.
+
+Keypad52*invalidSizeSelection.okLabelString:  Continue
+
+!***********************
+!**  Warning dialogs  **
+!***********************
+Keypad52*change.dialogTitle:  Keypad Warning
+
+Keypad52*unsaved.dialogTitle:  Keypad Warning
+
+Keypad52*unsaved.messageString:  Keypad Changes have not been saved.
+
+Keypad52*unsaved.okLabelString:  Continue
+
+Keypad52*nochange.dialogTitle:  Keypad Warning
+
+! this cannot be made much longer during translation.
+Keypad52*nochange.messageString:  OK or Cancel the current change before further changes are made.
+
+Keypad52*nochange.okLabelString:  Continue
+
+Keypad52*cantdothat.dialogTitle:  Keypad Warning
+
+Keypad52*cantdothat.messageString:  OK or Cancel changes before selecting another option.
+
+!nothing selected in first dialog box
+Keypad52*invalidSelectionwarn.messageString:  Nothing Selected. Select from list, choose New, or Cancel.
+
+Keypad52*invalidSelectionwarn.okLabelString:  Continue
+
+Keypad52*noaccessDir:  Unable to access directory.
+
+Keypad52*selectKeypadButton.messageString:  A keypad button must be selected before customization can begin.
+
+Keypad52*generalError.dialogTitle:  Keypad Error
+
+Keypad52*generalError.messageString:  An error occurred while performing action.
+
+Keypad52*generalError.okLabelString:  OK
+
+Keypad52*emptyList:  There is an error in the translation list, it cannot be saved or applied.
+
+Keypad52*ErrorMsgFileNameChars.messageString:  The character that you typed is not valid in a file name.
+
+Keypad52*EBCMismatchText.value: The language of the emulator session that invoked the Keypad Customizer Program does not match the language of the IBM Network Station.  Characters and strings created with this application may cause unexpected and/or undesired results in the emulator session.
+
+!************************
+!**  Various Messages  **
+!************************
+! help button pressed
+Keypad52*helpMessage:  Help Viewer is loading...
+
+! after OK clicked
+Keypad52*chooseSave:  Choose Save to save any changes.
+
+! after Cancel clicked
+Keypad52*chooseCancel:  Current changes undone.
+
+! original message when new keypad opens
+Keypad52*chooseNew:  Edit New Keypad
+
+! button pressed in keypad
+Keypad52*continueedit:  Edit current button...
+
+! click button action -> with nothing selected
+Keypad52*noActionSelected:  Nothing selected in Action list or Character list.
+
+! swapping messages (next 2)
+Keypad52*swapinprogress:  Choose OK, Cancel, or make other keypad button moves...
+
+Keypad52*swaprunninginfo:  Button move in progress...
+
+! following 3 messages for invalid keypad action
+Keypad52*nonValidDialog.dialogTitle:  Keypad Warning Message
+
+Keypad52*nonValidDialog.messageString:  Keypad action(s) for this button are not valid.
+
+Keypad52*deleteKeypadMessage:  Select keypad(s) to Delete...
+
+!***************
+!**  Exiting  **
+!***************
+Keypad52*quitDialog1:  Keypad has been modified but not saved.
+
+Keypad52*quit1Tog1:  Exit without saving changes.
+
+Keypad52*quit1Tog2:  Save changes before exiting.
+
+!************************************************************************
+!
+!
+!                        Playback Editor Resources
+!
+!
+!************************************************************************
+Playedit*title:  Playback File Editor
+
+Playedit*iname5250:  5250 Playback File Editor
+
+Playedit*iname3270:  3270 Playback File Editor
+
+Playedit*editorTitle.dialogTitle:  Playback File Editor
+
+!****  Main Window
+Playedit*keyAction.labelString:  Insert Action->
+
+Playedit*deleteAction.labelString:  Remove Action
+
+Playedit*insertAction.labelString:  Insert Line
+
+Playedit*editAction.labelString:  Edit Action
+
+Playedit*transRxing:  Receiving play file editor information from the emulator session.
+
+Playedit*transRxd:  Playback File Editor information received from emulator session.
+
+Playedit*currFileLabel.labelString:  Current Playback File:
+
+Playedit*currActLabel.labelString:  Current Playback File Actions:
+
+!** Resolution
+Playedit*poorResolutionMsgText.value:  The resolution of your monitor is less than 800x600. The Playback File Editor is not supported on monitors with resolution less than 800x600.
+
+!** Saving
+Playedit*saveDialog.dialogTitle:  Save Playback File
+
+Playedit*saveBoxLabel*labelString:  Save Playback File as:
+
+Playedit*saveTran:  Playback File Saved...
+
+Playedit*fileWarningDialog.dialogTitle:  Playback Editor Warning
+
+!** Edit
+Playedit*editBoxLabel*labelString:  Edit Action:
+
+!** Warning Dialogs
+Playedit*PlaybackMsgFileNoOpen.value:  Can not open playback file.  Exiting application.
+
+Playedit*PlaybackMsgFileNoRead.value:  Can not read playback file.  Exiting application.
+
+Playedit*PlaybackMsgFileCorrupt.value:  Playback file not created by emulator Record application. Can not open file.  Exiting application.
+
+Playedit*noaccessDir:  Unable to access directory.
+
+Playedit*selectInsertLocation.messageString:  Highlight line where this action is to be inserted.
+
+Playedit*ErrorMsgFileNameChars.messageString:  The character that you typed is not valid in a file name.
+
+Playedit*EBCMismatchText.value:  The language of the emulator session that invoked the Playback File Editor does not match the language of the IBM Network Station.  Characters and strings created with this application may cause unexpected and/or undesired results in the emulator session.
+
+Playedit*nonValidDialog.messageString:  Action(s) are not valid.
+
+!** Messages
+Playedit*helpMessage:  Help Viewer is loading...
+
+Playedit*chooseSave:  Choose Save to save any changes.
+
+Playedit*chooseCancel:  Current changes undone.
+
+Playedit*noActionSelected.messageString:  Nothing selected in Action list or Character list.
+
+Playedit*nothingHighlightedDelete.messageString:  Nothing selected for deletion.
+
+Playedit*nothingHighlightedInsert.messageString:  Highlight location of desired insertion.
+
+Playedit*nothingHighlightedEdit.messageString:  Nothing selected to edit.
+
+!** Exit
+Playedit*quitDialog1:  Playback file has been modified but not saved.
+
+Playedit*quit1Tog1:  Exit without saving changes.
+
+Playedit*quit1Tog2:  Save changes before exiting.
+
+!**************************************************
+!*
+!*        Printing translations
+!*
+!*      Added by AJMEYER for V310.nc
+!*
+!**************************************************
+
+AllShare*printDialogPrinterTypeLabel.labelString:  Printer Type:
+
+AllShare*printDialogPrinterTypeMenu*postscript.labelString:  PostScript
+
+AllShare*printDialogPrinterTypeMenu*ascii.labelString:  ASCII
+
+AllShare*printDialogPrinterTypeMenu*pcl.labelString:  PCL
+
+AllShare*printDialogPrinterSelectControls_popup.title:   Printer Selector
+
+AllShare*printSelectDialogOKButton.labelString:  OK
+
+AllShare*printSelectDialogCancelButton.labelString:  Cancel

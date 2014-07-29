@@ -1,0 +1,425 @@
+////This file is the on-line help for the IBM Emulator Setup Programs. 
+////This help text file will be stored in locale specific ASCII (code page 819 for Latin1 languages). 
+////Help text format:
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1.
+//// 3. This help file contains help text for the 3270 and 5250 emulator setup programs. There are some help text differences. The Network Station help viewer program will display the appropriate help text for the appropriate emulator. A comment line of four "/" characters followed by
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 setup on-line help.
+//// 3B. "5250" indicates subsequent data is only displayed in 5250 setup on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in both 3270 setup and 5250 setup on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters. The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Order of topics: The emulator help viewer program automatically orders topics in alphabetical order when displaying the topics. There are many topics in this main emulator help text file; alphabetical order should make it easier for users to find the topic that they are looking for.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed on the IBM Network Station).
+////About topic lengths (preceded by four "+" characters): The maximum characters in any topic should be about 38 characters. Exceeding 38 characters will cause the help viewer to display topics for most of the width of the help viewer window, instead of the main help text. You can abbreviate topic text as necessary.
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+////3252
+---- "Programme de configuration d'émulateur - Aide"
+////5250
+---- "Programme de configuration de l'émulateur 5250 - Aide"
+////3270
+---- "Programme de configuration de l'émulateur 3270 - Aide"
+////9999
+++++"Utilisation de l'afficheur d'aide"
+Cette section explique comment utiliser l'afficheur d'aide.
+
+Le panneau de gauche de la fenêtre d'aide contient la liste des sections d'aide. Vous pouvez faire défiler ces sections (si vous disposez d'une barre de défilement intermédiaire) à l'aide de la souris, de la touche de défilement de page suivante ou de page précédente (en plaçant le pointeur de la souris dans le panneau de gauche) ou encore de la touche de déplacement vers le haut (pour afficher le haut de la fenêtre) ou vers le bas (pour afficher le bas de la fenêtre).
+
+Si vous cliquez sur une section à l'aide du bouton gauche de la souris, sa description s'affiche dans le panneau de droite.
+
+Vous pouvez faire défiler la description affichée dans le panneau de droite à l'aide de la souris, de la touche de défilement de page suivante ou de page précédente, ou de la touche de déplacement vers le haut (pour afficher le haut de la fenêtre) ou vers le bas (pour afficher le bas de la fenêtre).
+
+Les boutons de recherche vous permettent de rechercher une chaîne de texte dans le texte d'aide. Vous pouvez utiliser des espaces et entrer le texte à rechercher en majuscules et/ou en minuscules.
+
+Cliquez sur les boutons Section suiv et Section préc pour recréer l'ordre des sections que vous avez déjà visualisées.
+
+Cliquez sur le bouton Impression pour imprimer le texte de la section d'aide affichée ou l'ensemble des sections d'aide (vous devez configurer une imprimante pour pouvoir imprimer le texte d'aide).
+
+Cliquez sur Sortie pour fermer la fenêtre d'aide.
+
+Si la résolution de votre moniteur est 1024x768 ou supérieure, le bouton Police permet de modifier la taille de police du texte d'aide affiché.
+++++"Généralités sur le programme de configuration"
+////MAI Used by help viewer to find this topic.
+Le programme Configuration d'émulateur vous permet de configurer et de lancer l'émulateur IBM. La fenêtre principale comporte deux zones : la barre de menus suivie de la ou des listes de connexions configurées. La barre de menus est constituée de quatre listes déroulantes : Connexion, Préférences, Options et Aide. Les listes de connexions configurées contiennent les connexions ayant été configurées (et non pas les connexions actives). Si deux listes de connexions apparaissent, la première est la liste Connexions utilisateur et la seconde, la liste Connexions par défaut. S'il n'existe aucune connexion par défaut, la liste Connexions par défaut n'est pas affichée. 
+
+Le menu déroulant Connexion vous permet de créer, d'éditer, de consulter, de copier et de supprimer des configurations de connexion d'émulateur. Il vous permet également de vous connecter à l'aide d'une configuration de connexion particulière. Les opérations d'édition, consultation, copie, connexion et suppression s'appliquent à la connexion sélectionnée dans une liste de connexions, sous la barre de menus. S'il n'existe aucune configuration de connexion ou si aucune n'est sélectionnée, seules les options Nouveau et Sortie du menu déroulant Connexion sont disponibles. Si une connexion est sélectionnée dans la liste Connexions par défaut, les options Edition et Suppression du menu déroulant Connexion ne sont pas disponibles. L'option Sortie vous permet de quitter le programme de configuration.
+
+Le menu déroulant, Préférences, de la barre de menus vous permet de configurer les préférences pour vos émulateurs. Les préférences s'appliquent à toutes les connexions d'émulateur et sont parfois remplacées par des options de configuration de connexion individuelles. Pour appliquer les préférences, vous devez arrêter et redémarrer TOUTES les sessions d'émulateur.
+
+Le menu déroulant, Options, de la barre de menus vous permet de modifier le fonctionnement du programme de configuration. Par exemple, vous pouvez ajouter un mot de passe au programme de configuration à l'aide de ce menu déroulant.
+
+Le menu déroulant, Aide, de la barre de menus fournit des informations sur le programme de configuration des émulateurs, permet d'afficher l'aide sur le programme de configuration ou sur l'émulateur-même.
+++++"Configuration du mot de passe du programme"
+////PAS Used by help viewer to find this topic.
+Le panneau Modification du mot de passe permet de créer, modifier ou supprimer le mot de passe  du programme de configuration. Pour accéder à ce panneau, sélectionnez Mot de passe dans le menu déroulant, Options, de la barre de menus.
+
+Pour modifier ou supprimer un mot de passe, vous devez d'abord entrer le mot de passe en cours.
+
+Pour créer ou modifier le mot de passe, vous devez entrer le nouveau mot de passe deux fois : la première dans la zone "Nouveau mot de passe" et la seconde, dans la zone "Confirmation du nouveau mot de passe". Notez que les mots de passe respectent la combinaison majuscules/minuscules, par conséquent, vérifiez que la touche de verrouillage des majuscules est correctement définie.
+
+Pour supprimer un mot de passe, effacez le mot de passe indiqué (n'entrez aucune valeur dans la zone "Nouveau mot de passe" ou "Confirmation du nouveau mot de passe".
+////3270
+++++"Connexion de l'émulateur 3270"
+////3CN Used by help viewer to find this topic.
+Le panneau Connexion de l'émulateur 3270 permet de créer, éditer ou consulter une configuration de connexion d'émulateur 3270. Pour accéder à ce panneau, sélectionnez Nouveau, Edition ou Survol dans le menu déroulant, Connexion, de la barre de menus.
+
+Description de la connexion :
+
+Il s'agit du nom ou de la description de la configuration de la connexion de l'émulateur 3270. Vous pouvez entrer n'importe quelle valeur dans cette zone, mais indiquez de préférence une description identifiant le système cible ou l'objet de cette connexion. Cette description est utilisée uniquement dans ce programme de configuration pour identifier la configuration de connexion dans la liste des connexions configurées. Elle n'est pas utilisée dans l'émulateur-même.
+
+Nom d'hôte S/390 ou Adresse IP :
+
+Il s'agit d'une zone facultative. Si vous laissez cette zone à blanc, une boîte de dialogue demandant un nom d'hôte ou une adresse IP (numérique) apparaît lors du lancement de l'émulateur 3270.
+
+Vous pouvez spécifier une configuration de connexion d'émulateur 3270 avancée pour cette connexion d'émulateur. Pour ce faire, appuyez sur le bouton Connexion 3270 avancée... à partir d'un panneau de connexion d'émulateur 3270.
+
+De nombreuses préférences d'émulateur 3270 sont globales (les préférences s'appliquent à toutes les sessions d'émulateur 3270) ; par exemple, l'activation ou la désactivation de la redéfinition du clavier de l'émulateur. Indiquez les préférences globales à l'aide du menu déroulant, Préférences, de la barre de menus ou appuyez sur le bouton Préférences 3270 globales..., à partir d'un panneau Connexion de l'émulateur 3270.
+++++" - Configuration avancée"
+////3AC Used by help viewer to find this topic.
+Paramètres de connexion d'émulateur 3270 avancée :
+
+Titre de la session :
+
+Cette valeur textuelle apparaîtra sous forme de titre de session d'émulateur. Le texte du titre par défaut est "3270". Cette valeur est facultative.
+
+Taille d'écran :
+
+Cette fonction permet de définir la taille (nombre de lignes et de colonnes) à utiliser pour la session 3270. Remarque : Une résolution d'écran de 1024x768 ou supérieure est généralement requise pour prendre en charge 27 lignes sur 132 colonnes. Une résolution d'écran de 800x600 ou supérieure est requise pour prendre en charge 43 lignes sur 80 colonnes. Les valeurs possibles sont&nbsp;:  24&nbsp;x&nbsp;80, 32&nbsp;x&nbsp;80, 43&nbsp;x&nbsp;80 et 27&nbsp;x&nbsp;132. La valeur par défaut est 32x80.
+
+Graphiques&nbsp;:
+
+La fonction Graphiques permet d'activer ou de désactiver l'affichage de graphiques dans la session 3270. L'affichage des graphiques n'est possible qu'avec la taille
+d'écran 32 par 80. Les valeurs possibles sont Désactivé ou Activé.
+
+TN3270E :
+
+Les valeurs possibles sont Désactivé ou Activé. La valeur par défaut est Activé. Lorsque vous choisissez Activé, l'émulateur 3270 négocie une session TN3270E (Telnet 3270 améliorée) avec le serveur ou, s'il ne peut pas négocier de session TN3270E, il utilise une session 3270 standard. Si vous choisissez Désactivé, vous ne pourrez pas établir de connexion de session TN3270E ; une session 3270 standard est utilisée.
+
+Port Telnet :
+
+Cette option permet d'indiquer le port TCP/IP du système S/390 qui sera utilisé pour l'ouverture de la session 3270. La valeur par défaut est 23. Les autres valeurs admises sont comprises entre 1 et 65535. Pour utiliser un numéro de port autre que celui par
+défaut, vous devez contacter l'administrateur du système S/390 distant ou du serveur Telnet et lui demander le numéro de port correct de cette machine.
+
+Taille et emplacement de fenêtre en pixels (facultatif) :
+
+Cette option vous permet d'indiquer la taille et l'emplacement initiaux de la fenêtre 3270. Les
+zones suivantes définissent la taille de la fenêtre (Largeur et
+Hauteur) ainsi que l'emplacement de la fenêtre à l'écran (Décalage
+horizontal, Décalage vertical et Angle de décalage):
+
+Plein écran :
+Lorsque cette case est cochée, la fenêtre 3270 utilise le mode plein écran.
+
+Largeur :
+Cette valeur détermine la largeur de la fenêtre (en pixels).
+
+Hauteur :
+Cette valeur détermine la hauteur de la fenêtre (en pixels).
+
+Décalage horizontal :
+Cette valeur détermine la distance horizontale à partir de
+l'angle de la fenêtre indiqué comme Angle de décalage
+(par exemple, Supérieur gauche)(en pixels). 
+
+Décalage vertical :
+Cette valeur détermine la distance verticale à partir de l'angle
+de la fenêtre indiqué comme Angle de décalage (par
+exemple, Supérieur gauche) (en pixels).
+
+Angle de décalage :
+Cette valeur détermine l'angle (supérieur gauche, supérieur
+droit, inférieur gauche ou inférieur droit) à partir duquel les
+valeurs des zones Décalage horizontal et Décalage vertical sont
+appliquées.
+
+ID utilisateur de l'émulateur :
+Cette valeur est utilisée dans l'émulateur pour indiquer l'ID utilisateur, si besoin est. Par exemple, si la connexion automatique de l'émulateur est utilisée, cette valeur permet d'indiquer l'ID utilisateur.
+
+Mot de passe de l'émulateur :
+Cette valeur est utilisée dans l'émulateur pour indiquer le mot de passe, si besoin est. Par exemple, si la connexion automatique de l'émulateur est utilisée, cette valeur permet d'indiquer le mot de passe. Le mot de passe est enregistré chiffré.
+
+Autres paramètres :
+Vous pouvez configurer des paramètres supplémentaires pour l'émulateur 3270. La description et les valeurs de ces paramètres figurent dans l'aide
+en ligne de l'émulateur 3270. Les autres paramètres tiennent compte de la distinction entre les majuscules et les minuscules.
+
+++++"Préférences 3270"
+////3PR Used by help viewer to find this topic.
+Les préférences 3270 vous permettent d'activer ou de désactiver les options d'émulateur. Les paramètres des préférences s'appliquent à toutes les sessions 3270. Pour appliquer les préférences, vous devez fermer et redémarrer toutes les sessions de l'émulateur 3270.
+
+Fonction de redéfinition du clavier :
+
+La fonction de redéfinition du clavier vous permet de redéfinir les touches, dans l'émulateur 3270. Vous pouvez accéder à cette fonction à partir du menu déroulant Option de l'émulateur. "Désactivé(e)" signifie que la
+fonction Redéfinition du clavier est visible mais que l'utilisateur ne peut pas la sélectionner (elle s'affiche en grisé). "Masqué(e)" signifie que la fonction Redéfinition du
+clavier n'apparaît pas dans le menu déroulant Option. L'aide en ligne de l'émulateur 3270 explique la redéfinition du clavier.
+
+Définition du bloc de touches&nbsp;:
+
+La fonction de définition du bloc de touches vous permet de créer et d'utiliser des touches personnalisées dans le bloc de touches. "Oui" vous permet de personnaliser des touches du bloc de touches. "Utilisation du bloc de touches uniquement" signifie que vous ne pouvez
+utiliser que les blocs de touches créés précédemment. Vous pouvez accéder à la personnalisation du bloc de touches à partir du menu déroulant Option de l'émulateur. L'aide en ligne de l'émulateur 3270 explique la personnalisation du bloc de touches.
+
+Enregistrement/exécution&nbsp;:
+
+La fonction Enregistrement/exécution vous permet d'enregistrer et d'exécuter ensuite des séquences de touches enregistrées, dans l'émulateur 3270. Vous pouvez accéder à cette fonction à partir du menu déroulant Option de l'émulateur. "Exécution uniquement" signifie que vous ne pouvez utiliser que les fichiers d'exécution créés précédemment. L'aide en ligne de l'émulateur 3270 explique la fonction d'enregistrement et d'exécution.
+
+Personnalisation des couleurs&nbsp;:
+
+La fonction de personnalisation des couleurs vous permet de modifier les couleurs de vos sessions 3270. Vous pouvez accéder à cette fonction à partir du menu déroulant Option de l'émulateur. La définition des couleurs "De base" vous permet de faire votre choix dans un ensemble de schéma de couleurs 3270. "Etendue" vous permet de créer vos propres schémas de couleurs 3270. L'aide en ligne de l'émulateur 3270 explique la définition des couleurs.
+
+Touche d'entrée&nbsp;:
+
+Cette fonction permet d'indiquer la touche à utiliser comme touche Entrée. La valeur par défaut est la touche Entrée. 
+
+Fichier bureau&nbsp;:
+
+Cette option permet de déterminer si l'émulateur 3270 enregistre et utilise les derniers emplacement et taille de police des fenêtres de l'émulateur 3270. Si vous sélectionnez les options "Oui" ou "Oui, mais lecture seule", l'émulateur 3270 utilise les emplacement et taille de police enregistrés lorsqu'un émulateur 3270 est lancé. Si vous sélectionnez "Oui", l'émulateur 3270 enregistre également les derniers emplacement et taille de police lorsque vous quittez une session d'émulateur 3270. Si vous sélectionnez "Non" pour le Fichier bureau, l'émulateur 3270 n'utilisera ni n'enregistrera les derniers emplacement et taille de police. Remarque : Si vous définissez l'emplacement et la taille initiaux de la fenêtre dans la configuration de la connexion, l'émulateur 3270 n'utilisera ni n'enregistrera les derniers emplacement et taille de police, quelle que soit la définition de ce paramètre.
+
+Menu Commande&nbsp;:
+
+Cette fonction permet d'activer ou de désactiver le menu Commande de la barre de menus 3270. "Oui" signifie que le menu Commande est disponible. Si le menu Commande est désactivé, vous ne pourrez pas accéder aux nouvelles sessions 3270 ni quitter une
+session 3270 à l'aide du menu Commande.
+
+Menu Edition&nbsp;:
+
+Cette option de menu permet d'activer ou de désactiver le menu Edition dans la barre de menus 3270 (copie, découpage et collage).
+
+Menu Option&nbsp;:
+
+Cette option de menu permet d'activer ou de désactiver le menu Option de la barre de menus 3270. Si le menu Option est désactivé, vous ne pourrez pas accéder aux options Polices, Personnalisation du clavier, Enregistrement/exécution,
+Préférences diverses (par exemple, le choix du style de curseur), Définition de couleurs ou Redéfinition du clavier.
+
+Menu Impression&nbsp;:
+
+Cette option de menu permet d'activer ou de désactiver le menu Impression de la barre de menus 3270 (permettant d'imprimer l'écran 3270). "Pas de menu, impression à partir du clavier uniquement" signifie que vous pouvez utiliser une séquence de touches d'impression pour imprimer l'écran 3270. Vous pouvez indiquer la séquence de touches d'impression dans les Préférences diverses et la redéfinition du clavier. Remarque : Vous devez configurer une imprimante pour pouvoir utiliser l'impression d'écran 3270.
+
+Menu Aide&nbsp;:
+
+Cette option de menu permet d'activer ou de désactiver le menu Aide de la barre de menus 3270 (permettant d'afficher l'aide en ligne de l'émulateur 3270).
+
+Préférences diverses :
+
+Cette option permet d'activer ou de désactiver les Préférences diverses 3270. Vous pouvez accéder à cette option à partir du menu déroulant Option de l'émulateur. Les Préférences diverses déterminent (dans une certaine mesure)
+l'apparence de votre écran 3270. Par exemple, vous pouvez sélectionner le style du curseur (trait ou bloc), demander ou non le
+clignotement du curseur ou encore activer ou non la règle.
+
+Menu Polices&nbsp;:
+
+Cette option de menu permet d'activer ou de désactiver le choix de polices dans le menu déroulant Option de l'émulateur 3270. Cette option vous permet également de préciser si l'utilisateur peut redimensionner ou déplacer la fenêtre de l'émulateur 3270.
+
+Fenêtre de nouvelle session&nbsp;:
+
+Cette option vous permet d'activer ou de désactiver le démarrage d'un autre émulateur 3270 sur un autre hôte S/390. Vous pouvez accéder à la fenêtre de la nouvelle session d'émulateur via le menu déroulant Commande de l'émulateur (si le menu Commande de la barre de menus est activé).
+
+ID utilisateur de l'émulateur :
+Cette valeur est utilisée dans l'émulateur pour indiquer l'ID utilisateur, si besoin est. Par exemple, si la connexion automatique de l'émulateur est utilisée, cette valeur permet d'indiquer l'ID utilisateur.
+
+Mot de passe de l'émulateur :
+Cette valeur est utilisée dans l'émulateur pour indiquer le mot de passe, si besoin est. Par exemple, si la connexion automatique de l'émulateur est utilisée, cette valeur permet d'indiquer le mot de passe. Le mot de passe est enregistré chiffré.
+
+Paramètres supplémentaires&nbsp;:
+
+Vous pouvez configurer des paramètres supplémentaires pour l'émulateur 3270. La description et les valeurs de ces paramètres figurent dans l'aide
+en ligne de l'émulateur 3270. Les paramètres supplémentaires tiennent compte de la distinction entre les majuscules et les minuscules.
+////5250
+++++"Connexion de l'émulateur 5250"
+////5CN Used by help viewer to find this topic.
+Le panneau Connexion de l'émulateur 5250 permet de créer ou d'éditer une configuration de connexion d'émulateur 5250. Pour accéder à ce panneau, sélectionnez Nouveau ou Edition dans le menu déroulant, Connexion, de la barre de menus.
+
+Description de la connexion :
+
+Il s'agit du nom ou de la description de la configuration de la connexion de l'émulateur 5250. Vous pouvez entrer n'importe quelle valeur dans cette zone, mais indiquez de préférence une description identifiant le système cible ou l'objet de cette connexion. Cette description est utilisée uniquement dans ce programme de configuration pour identifier la configuration de connexion dans la liste des connexions configurées. Elle n'est pas utilisée dans l'émulateur-même.
+
+Nom d'hôte i5/OS ou Adresse IP... :
+
+Il s'agit d'une zone facultative. Si vous laissez cette zone à blanc, une boîte de dialogue demandant un nom d'hôte ou une adresse IP (numérique) apparaît lors du lancement de l'émulateur 5250.
+
+Vous pouvez spécifier une configuration de connexion d'émulateur 5250 avancée pour cette connexion d'émulateur. Pour ce faire, appuyez sur le bouton Connexion 5250 avancée... à partir d'un panneau de connexion d'émulateur 5250.
+
+De nombreuses préférences d'émulateur 5250 sont globales (les préférences s'appliquent à toutes les sessions d'émulateur 5250) ; par exemple, l'activation ou la désactivation de la redéfinition du clavier de l'émulateur. Indiquez les préférences globales à l'aide du menu déroulant, Préférences, de la barre de menus ou appuyez sur le bouton Préférences 5250 globales..., à partir d'un panneau Connexion de l'émulateur 5250.
+++++" - Configuration avancée"
+////5AC Used by help viewer to find this topic.
+Paramètres de connexion d'émulateur 5250 avancée :
+
+Titre de la session :
+
+Cette valeur textuelle apparaîtra sous forme de titre de session. Le texte du titre par défaut est "5250".  Cette valeur est facultative.
+
+Nom d'écran:
+
+Cette valeur détermine le nom d'écran 5250. Cette valeur est facultative. Pour plus d'informations, voir la section Nom d'écran dans l'aide en ligne de l'émulateur 5250. 
+
+Taille et emplacement de fenêtre en pixels (facultatif) :
+
+Cette option vous permet d'indiquer la taille et l'emplacement initiaux de la fenêtre 5250. Les zones suivantes définissent la taille de la fenêtre (Largeur et
+Hauteur) ainsi que l'emplacement de la fenêtre à l'écran (Décalage
+horizontal, Décalage vertical et Angle de décalage)&nbsp;: 
+
+Plein écran :
+Lorsque cette case est cochée, la fenêtre 5250 utilise le mode plein écran. 
+
+Largeur :
+Cette valeur détermine la largeur de la fenêtre (en pixels).
+
+Hauteur :
+Cette valeur détermine la hauteur de la fenêtre (en pixels).
+
+Décalage horizontal :
+Cette valeur détermine la distance horizontale à partir de
+l'angle de la fenêtre indiqué comme Angle de décalage
+(par exemple, Supérieur gauche)(en pixels).
+
+Décalage vertical :
+Cette valeur détermine la distance verticale à partir de l'angle
+de la fenêtre indiqué comme Angle de décalage (par
+exemple, Supérieur gauche) (en pixels).
+
+Angle de décalage :
+Cette valeur détermine l'angle (supérieur gauche, supérieur
+droit, inférieur gauche ou inférieur droit) à partir duquel les
+valeurs des zones Décalage horizontal et Décalage vertical sont
+appliquées.
+
+ID utilisateur de l'émulateur :
+Cette valeur est utilisée dans l'émulateur pour indiquer l'ID utilisateur, si besoin est. Par exemple, si la connexion automatique de l'émulateur est utilisée, cette valeur permet d'indiquer l'ID utilisateur.
+
+Mot de passe de l'émulateur :
+Cette valeur est utilisée dans l'émulateur pour indiquer le mot de passe, si besoin est. Par exemple, si la connexion automatique de l'émulateur est utilisée, cette valeur permet d'indiquer le mot de passe. Le mot de passe est enregistré chiffré.
+
+Port Telnet :
+Indiquez le port Telnet sur lequel est défini votre serveur. Si vous n'indiquez aucune valeur, le port Telnet par défaut, 23, est pris en compte.
+
+Fichier de définition de touches :
+Indiquez le nom du fichier de définition de touches et son chemin complet.
+
+Fichier de bloc de touches :
+Indiquez le nom du fichier de bloc de touches et son chemin complet.
+
+Fichier SSL :
+Indiquez le nom du fichier SSL et son chemin complet.
+
+Autres paramètres :
+Vous pouvez configurer des paramètres supplémentaires pour l'émulateur 5250. La description et les valeurs de ces paramètres figurent dans l'aide
+en ligne de l'émulateur 5250. Les autres paramètres tiennent compte de la distinction entre les majuscules et les minuscules.
+
+++++"Préférences 5250"
+////5PR Used by help viewer to find this topic.
+Les préférences 5250 vous permettent d'activer ou de désactiver les options d'émulateur. Les paramètres des préférences s'appliquent à toutes les sessions 5250. Pour appliquer les préférences, vous devez fermer et redémarrer toutes les sessions de l'émulateur 5250.
+
+Fonction de redéfinition du clavier :
+
+La fonction de redéfinition du clavier vous permet de redéfinir les touches, dans l'émulateur 5250. Vous pouvez accéder à cette fonction à partir du menu déroulant Option de l'émulateur. "Désactivé(e)" signifie que la
+fonction Redéfinition du clavier est visible mais que l'utilisateur ne
+peut pas la sélectionner (elle s'affiche en grisé). "Masqué(e)" signifie que la fonction Redéfinition du
+clavier n'apparaît pas dans le menu déroulant Option. L'aide en ligne de l'émulateur 5250 explique la redéfinition du clavier.
+
+Définition du bloc de touches&nbsp;:
+
+La fonction de définition du bloc de touches vous permet de créer et d'utiliser des touches personnalisées dans le bloc de touches. "Oui" vous permet de personnaliser des touches du bloc de touches. "Utilisation du bloc de touches uniquement" signifie que vous ne pouvez
+utiliser que les blocs de touches créés précédemment. Vous pouvez accéder à la personnalisation du bloc de touches à partir du menu déroulant Option de l'émulateur. L'aide en ligne de l'émulateur 5250 explique la personnalisation du bloc de touches.
+
+Enregistrement/exécution&nbsp;:
+
+La fonction Enregistrement/exécution vous permet d'enregistrer et d'exécuter ensuite des séquences de touches enregistrées, dans l'émulateur 5250. Vous pouvez accéder à cette fonction à partir du menu déroulant Option de l'émulateur. "Exécution uniquement" signifie que vous ne pouvez utiliser que les fichiers d'exécution créés précédemment. L'aide en ligne de l'émulateur 5250 explique la fonction d'enregistrement et d'exécution.
+
+Personnalisation des couleurs&nbsp;:
+
+La fonction de personnalisation des couleurs vous permet de modifier les couleurs de vos sessions 5250. Vous pouvez accéder à cette fonction à partir du menu déroulant Option de l'émulateur. La définition des couleurs "De base" vous permet de faire votre choix dans un ensemble de schéma de couleurs 5250. "Etendue" vous permet de créer vos propres schémas de couleurs 5250. L'aide en ligne de l'émulateur 5250 explique la définition des couleurs.
+
+Paramètres arabes :
+Lorsque cette option est activée, chaque caractère LamAlef alloue de l'espace à la fin de la zone Arabe. Par défaut, cette option est désactivée. 
+
+132 colonnes :
+
+Si cette option est activée, la taille d'écran 27 lignes par 132 colonnes est autorisée. La plupart des écrans i5/OS sont au format 24 lignes sur 80 colonnes. Certains écrans i5/OS utilisent la taille 27 lignes par 132 colonnes si l'émulateur 5250 prend en charge cette taille d'écran. Une résolution d'écran de 1024x768 ou supérieure est généralement requise pour afficher 27 lignes sur 132 colonnes.
+
+Séparateurs de colonnes&nbsp;:
+
+Cette option permet d'activer ou de désactiver l'affichage de
+séparateurs de colonnes entre certains types de zones de saisie 5250. La valeur par
+défaut est Désactivé(e), ce qui signifie que les caractères de
+séparation n'apparaîtront pas entre les zones de saisie 5250.
+
+Fichier bureau&nbsp;:
+
+Cette option permet de déterminer si l'émulateur 5250 enregistre et utilise les derniers emplacement et taille de police des fenêtres de l'émulateur 5250. Si vous sélectionnez les options "Oui" ou "Oui, mais lecture seule", l'émulateur 5250 utilise les emplacement et taille de police enregistrés lorsqu'un émulateur 5250 est lancé. Si vous sélectionnez "Oui", l'émulateur 5250 enregistre également les derniers emplacement et taille de police lorsque vous quittez une session d'émulateur 5250. Si vous sélectionnez "Non" pour le Fichier bureau, l'émulateur 5250 n'utilisera ni n'enregistrera les derniers emplacement et taille de police. Remarque : Si vous définissez l'emplacement et la taille initiaux de la fenêtre dans la configuration de la connexion, l'émulateur 5250 n'utilisera ni n'enregistrera les derniers emplacement et taille de police, quelle que soit la définition de ce paramètre.
+
+Menu Commande&nbsp;:
+
+Cette option de menu permet d'activer ou de désactiver le menu Commande de la barre de menus 5250. "Oui" signifie que le menu Commande est disponible. Si le menu Commande est désactivé, vous ne pourrez pas accéder aux nouvelles sessions 5250 ni quitter une
+session 5250 à l'aide du menu Commande.
+
+Menu Edition&nbsp;:
+
+Cette option de menu permet d'activer ou de désactiver
+le menu Edition dans la barre de menus 5250 (copie, découpage et collage).
+
+Menu Option&nbsp;:
+
+Cette option de menu permet d'activer ou de désactiver le menu
+Option de la barre de menus 5250. Si le menu Option est désactivé, vous ne pourrez pas accéder aux options Polices, Personnalisation du clavier, Enregistrement/exécution,
+Préférences diverses (par exemple, le choix du style de curseur),
+Définition de couleurs ou Redéfinition du clavier.
+
+Menu Impression&nbsp;:
+
+Cette option de menu permet d'activer ou de désactiver le menu
+Impression de la barre de menus 5250 (permettant d'imprimer l'écran 5250). "Pas de menu, impression à partir du clavier uniquement" signifie que vous pouvez utiliser une séquence de touches d'impression pour imprimer l'écran 5250. Vous pouvez indiquer la séquence de touches d'impression dans les Préférences diverses et la redéfinition du clavier. Remarque : Vous devez configurer une imprimante pour pouvoir utiliser l'impression d'écran 5250.
+
+Menu Aide&nbsp;:
+
+Cette option de menu permet d'activer ou de désactiver le menu
+Aide de la barre de menus 5250 (permettant d'afficher l'aide en ligne de l'émulateur 5250).
+
+Menu Contrôle&nbsp;:
+
+Cette option de menu permet d'activer ou de désactiver le menu Commande de la barre de menus 5250. Lorsque vous sélectionnez une touche dans le menu
+Commande, vous obtenez le même résultat que si vous aviez appuyé sur cette touche à partir du
+clavier.
+
+Préférences diverses :
+
+Cette option permet d'activer ou de désactiver les Préférences diverses 5250. Vous pouvez accéder à cette option à partir du menu déroulant Option de l'émulateur. Les Préférences diverses déterminent (dans une certaine mesure)
+l'apparence de votre écran 5250. Par exemple, vous pouvez sélectionner le style du curseur (trait ou bloc), demander ou non le
+clignotement du curseur ou encore activer ou non la règle.
+
+Menu Polices&nbsp;:
+
+Cette option de menu permet d'activer ou de désactiver le choix de polices dans le menu déroulant Option de l'émulateur 5250. Cette option vous permet également de préciser si l'utilisateur peut redimensionner ou déplacer la fenêtre de l'émulateur 5250.
+
+Fenêtre de nouvelle session&nbsp;:
+
+Cette option vous permet d'activer ou de désactiver le démarrage d'un autre émulateur 5250 sur un autre hôte i5/OS. Vous pouvez accéder à la fenêtre de la nouvelle session d'émulateur via le menu déroulant Commande de l'émulateur (si le menu Commande de la barre de menus est activé).
+
+Point repère de navigateur: 
+
+Cette option vous permet d'activer ou désactiver la reconnaissance d'un point repère d'URL et le lancement d'un navigateur.  Si cette option est activée et que vous cliquez sur un point repère d'URL correct, la commande indiquée dans la variable d'environnement système $BROWSER est appelée et l'URL est transmise sous forme de paramètre.  Vous devez définir la variable système $BROWSER par le nom qualifié complet ou un nom figurant dans la variable système $PATH et permettant d'accéder au navigateur que vous souhaitez utiliser.  Si la variable d'environnement $BROWSER est introuvable ou incorrecte, aucun navigateur n'est démarré. 
+
+
+ID utilisateur de l'émulateur :
+Cette valeur est utilisée dans l'émulateur pour indiquer l'ID utilisateur, si besoin est. Par exemple, si la connexion automatique de l'émulateur est utilisée, cette valeur permet d'indiquer l'ID utilisateur.
+
+Mot de passe de l'émulateur :
+Cette valeur est utilisée dans l'émulateur pour indiquer le mot de passe, si besoin est. Par exemple, si la connexion automatique de l'émulateur est utilisée, cette valeur permet d'indiquer le mot de passe. Le mot de passe est enregistré chiffré.
+
+Paramètres supplémentaires&nbsp;:
+
+Vous pouvez configurer des paramètres supplémentaires pour l'émulateur 5250. La description et les valeurs de ces paramètres figurent dans l'aide
+en ligne de l'émulateur 5250. Les paramètres supplémentaires tiennent compte de la distinction entre les majuscules et les minuscules.
+////9999
+++++"Connexions par défaut"
+Pour créer ou modifier des connexions d'émulateur par défaut, lancez le programme de configuration d'émulateur et sélectionnez "Connexion--> Nouveau..."
+ou sélectionnez une connexion déjà définie, puis cliquez sur "Connexion-->Edition..."  Les connexions sont sauvegardées dans les préférences d'émulateur de l'utilisateur, dans le répertoire $HOME/.iSeriesAccess/ibm_5250/.  Une fois sauvegardées, ces connexions deviennent des connexions par défaut pour cet utilisateur.  
+++++"Définitions de couleurs par défaut"
+Pour créer ou modifier des définitions de couleurs d'émulateur par défaut, lancez une session d'émulateur à partir du programme de configuration d'émulateur et sélectionnez "Option--> Définition des couleurs...".  Notez que vous devez activer la préférence d'émulateur 'Personnalisation des couleurs' à partir de l'outil de modification de définition des couleurs du programme de configuration d'émulateur. Les définitions de couleurs créées ou modifiées sont enregistrées dans le fichier de préférences de l'utilisateur, dans le répertoire $HOME/.iSeriesAccess/ibm_5250/.
+++++"Définitions du clavier par défaut"
+Pour créer ou modifier des définitions de clavier d'émulateur par défaut, lancez une session d'émulateur et sélectionnez "Option--> Redéfinition du clavier...". Notez que vous devez activer la préférence d'émulateur 'Redéfinition du clavier' à partir de l'outil de modification de la définition du clavier du programme de configuration d'émulateur. Les définitions du clavier créées ou modifiées sont enregistrées dans le fichier de préférences de l'utilisateur, dans le répertoire $HOME/.iSeriesAccess/ibm_5250/.
+++++"Blocs de touches par défaut"
+Pour créer ou modifier des blocs de touches d'émulateur par défaut, lancez une session d'émulateur à partir du programme de configuration d'émulateur et sélectionnez "Option--> Personnalisation du bloc de touches...".  Notez que vous devez définir par 'Oui' la préférence d'émulateur 'Définition du bloc de touches' à partir de l'outil de modification du bloc de touches du programme de configuration d'émulateur. Les blocs de touches créés ou modifiés en mode de prévisualisation sont enregistrés dans le fichier de préférences de l'utilisateur, dans le répertoire $HOME/.iSeriesAccess/ibm_5250/.
+++++"Préférences diverses par défaut"
+Pour modifier les Préférences diverses d'émulateur par défaut, lancez une session d'émulateur à partir du programme de configuration d'émulateur et sélectionnez "Option--> Préférences diverses...". Notez que vous devez définir par 'Oui' la préférence d'émulateur d'utilisation des 'Préférences diverses', à partir de l'outil de modification des Préférences diverses du programme de configuration d'émulateur. Les Préférences diverses modifiées en mode de prévisualisation sont enregistrées dans le fichier de préférences de l'utilisateur, dans le répertoire $HOME/.iSeriesAccess/ibm_5250/.
+++++"Fichiers d'exécution par défaut"
+Pour créer ou modifier des fichiers d'exécution d'émulateur par défaut, lancez une session d'émulateur et sélectionnez "Option--> Enregistrement...".  Notez que vous devez activer la préférence d'émulateur 'Enregistrement/Exécution' à partir de l'outil de modification des fichiers d'exécution du programme de configuration d'émulateur. Les fichiers d'exécution créés ou modifiés sont enregistrés dans le fichier de préférences de l'utilisateur, dans le répertoire $HOME/.iSeriesAccess/ibm_5250/.
+++++"Préférences par défaut"
+Pour créer, visualiser ou modifier les préférences d'émulateur par défaut, lancez le programme de configuration d'émulateur. Les préférences sont sauvegardées dans les préférences d'émulateur  de l'utilisateur, dans le répertoire $HOME/.iSeriesAccess/ibm_5250/ et deviennent les préférences par défaut de cet utilisateur.
+//// ENGL1SH_VERS10N 1.5.2.1 DO NOT REMOVE OR CHANGE THIS LINE

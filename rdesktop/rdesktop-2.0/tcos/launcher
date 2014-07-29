@@ -1,0 +1,137 @@
+#!/usr/bin/env python
+
+# standard modules
+import os
+import time
+
+# TCOS modules
+import pytcos.tcos as tcos
+
+l = tcos.Launcher()
+u = tcos.Util()
+
+parameter = l.ENTRY.get('Application.Parameter', '')
+
+depth = l.ENTRY.get('Application.Window.Depth', '__auto__')
+if depth != '__auto__':
+	parameter += ' -a ' + depth
+
+#if l.ENTRY.get('General.Fullscreen', 'Yes') == 'Yes':
+#	dims = u.getFullscreenDimensions()
+#	if dims != '' and parameter.find("-A") == -1:
+#		parameter += ' -D -g' + dims
+#elif parameter.find("-A") == -1 and parameter.find("-f") == -1:
+#	parameter += ' -g ' + l.ENTRY.get('Application.Window.Width', '800') + 'x' + l.ENTRY.get('Application.Window.Height', '600')
+
+
+# the WindowType
+#
+WindowType = l.ENTRY.get('Application.Window.WindowType', 'fullscreen')
+if WindowType == 'fullscreen':
+	parameter += ' -f ' 
+elif WindowType == 'save-taskbar':
+	# get dims 
+	dims = u.getFullscreenDimensions()
+	parameter += ' -D -g' + dims + ' '
+elif WindowType == 'manual':
+	parameter += ' -g ' + l.ENTRY.get('Application.Window.Width', '800') + 'x' + l.ENTRY.get('Application.Window.Height', '600') + ' '
+
+# WindowType can also get value "none"
+# this is for SeamlessRDP mode
+
+
+if l.ENTRY.get('Application.Connection.Numlock', 'True') != 'False':
+	parameter += ' -N '
+
+if l.ENTRY.get('Application.Connection.Audio', 'False') == 'True':
+	parameter += ' -r sound:local '
+
+if l.ENTRY.get('Application.Connection.Media', 'False') == 'True':
+        parameter += ' -r disk:media=/media '
+
+if l.ENTRY.get('Application.Connection.Compression', 'False') == 'True':
+        parameter += ' -z '
+
+if l.ENTRY.get('Application.Connection.BitmapUpdates', 'False') == 'True':
+        parameter += ' -b '
+
+
+## seriel 
+# 
+if l.ENTRY.get('Application.Connection.Com1', 'False') == 'True':
+	parameter += ' -r comport:COM1=/dev/ttyS0'
+if l.ENTRY.get('Application.Connection.Com2', 'False') == 'True':
+	parameter += ' -r comport:COM2=/dev/ttyS1'
+
+## parallel
+#
+if l.ENTRY.get('Application.Connection.LPT1', 'False') == 'True':
+	parameter += ' -r lptport:LPT1=/dev/lp0'
+if l.ENTRY.get('Application.Connection.LPT2', 'False') == 'True':
+	parameter += ' -r lptport:LPT2=/dev/lp1'
+
+
+domain = l.ENTRY.get('Application.Account.Domain', '')
+if domain != '':
+	parameter += ' -d ' + domain
+
+"""
+sso_type = l.ENTRY.get('General.ActivateSSO', 'No')
+tcos_username = os.getenv('USER')
+# FIXME: check for autologin instead of USER==tcos
+if sso_type == 'Yes' and tcos_username != "tcos" and tcos_username != None:
+	tcostoken = os.getenv('TCOS_TOKEN')
+	if tcostoken != None:
+		parameter += ' -u ' + tcos_username
+		try:
+			if os.path.isfile('/opt/sso-tcos/bin/sso-tcos-auth'):
+				auth = os.popen('/opt/sso-tcos/bin/sso-tcos-auth')
+				password = auth.read()
+				auth.close()
+				if password != "":
+					parameter += ' -p ' + u.shellQuote(password)
+		except:
+			pass
+else: """
+username = l.ENTRY.get('Application.Account.User', '')
+if username != '':
+	parameter += ' -u ' + username
+elif os.getenv('USER') == "tcos":
+	parameter += ' -u ""'
+
+password = l.ENTRY.get('Application.Account.Password', '')
+if password != '':
+	parameter += ' -p ' + u.shellQuote(password)
+
+# own color map if screen palette based
+if u.getScreenDepth() == '8':
+	parameter += ' -C'
+	
+exit_action = l.ENTRY.get('General.ExitAction', '')
+start_deferral = int(l.ENTRY.get('General.StartDeferral', 0))
+if start_deferral != 0 :
+        time.sleep(start_deferral)
+
+# have the possibility to use more then one server
+# if the first one fails, it will use the second one
+#
+server_list = l.ENTRY.get('Application.Server', 'tserver').split()
+while True:
+        for i in range(len(server_list)):
+                cmdline = ['/usr/bin/rdesktop',
+                           parameter.strip(),
+                           server_list[i]]
+		print ' '.join(cmdline)
+                returncode = os.system(' '.join(cmdline)) >> 8
+                if (returncode >= 0 and returncode <= 4) or returncode == 62:
+                        break
+        if exit_action != 'Restart':
+                break
+	
+if exit_action == 'Logout':
+	os.system("tcos-logout")
+elif exit_action == 'Reboot':
+	os.system("tcos-reboot")
+elif exit_action == 'Shutdown':
+	os.system("tcos-shutdown")
+

@@ -1,0 +1,467 @@
+!
+!
+!
+! This file contains the resource text strings for the IBM Network Station 3270, 5250, and
+! VTxxx emulators, in particular the miscellaneous preferences program.
+
+! This resource file will be stored on all servers in locale specific ASCII (819 for Latin1
+! languages). This resource file is stored on the booting server as N3_5MscP.
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. This resource file contains text strings for the 3270 and 5250 emulators.  Much of
+!    the resource text is common to all emulators. Some is specific to one emulator.
+!    Miscpref = Resources used by both 3270 and 5250 emulators.
+!    Miscpr32 = Resources used by the 3270 emulator.
+!    Miscpr52 = Resources used by the 5250 emulator.
+!    MiscprVT = Resources used by the VT emulator.
+! 4. Resource format: 
+!    - A resource line starts with Miscpref*, Miscpr32*, Miscpr52*,or MiscprVT*, followed by 
+!      a resource name and a ":".  Do NOT make any changes to the text to the left
+!      of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+!*******************************************************************
+!*******   Miscellaneous Preferences Resources              ***********
+!*******************************************************************
+Miscpr52*title:     Preferências Diversas de 5250
+
+Miscpr32*title:     Preferências Diversas de 3270
+
+MiscprVT*title:     Preferências Diversas do Emulador VT
+
+Miscpref*iconName:  Preferências Diversas
+
+Miscpref*okLabelString: OK
+
+Miscpref*cancelLabelString: Cancelar
+
+
+!***********************************************
+!**     Action Bar Area Resources             **
+!***********************************************
+Miscpref*saveButton.labelString: Guardar
+
+Miscpref*exitButton.labelString: Sair
+
+Miscpref*setDefaultsButton.labelString: Definir Valores Assumidos
+
+Miscpref*helpButton.labelString: Ajuda
+
+
+!*********************************************************
+!**     Preference Buttons Area Resources               **
+!**							**
+!*********************************************************
+Miscpref*preferencesListInstructions.labelString: Seleccione uma preferência
+
+Miscpref*CursorStyleItem:                         Estilo do Cursor
+
+Miscpr52*EnterKeyLocationItem:                    Tecla Enter/Saída de Campo
+
+Miscpr32*EnterKeyLocationItem:                    Tecla Enter
+	
+Miscpr52*AutomaticHelpItem:                       Ajuda Automática
+
+Miscpr52*BlueUnderscoreItem:                      Sublinhado Azul
+
+Miscpref*RowColumnIndicatorItem:                  Indicador Linha/Coluna
+
+Miscpref*DestructiveBackspaceItem:                Retrocesso Destrutivo
+
+Miscpref*RuleLineEnableItem:                      Activar Linha de Régua
+
+Miscpref*RuleLineStyleItem:                       Estilo da Linha da Régua
+
+Miscpref*PasteStartLocationItem:                  Localização de Início de Colar
+
+Miscpref*CursorBlinkItem:                         Cursor a Piscar
+
+Miscpr52*LargeScreenBehaviorItem:                 Comportamento com Ecrã Grande
+
+Miscpref*PrintKeyLocationItem:                    Tecla de Impressão
+
+Miscpr32*BracketItem:                             Parênteses recto
+
+Miscpr32*AutomaticReconnectItem:                  Reposição Automática da Ligação
+
+Miscpref*HotspotsItem:                            Pontos Activos
+
+Miscpref*TypeAheadItem:                           Buffer de Teclado
+
+Miscpr52*ErrorResetKeys:                          Teclas de Reposição de Erro
+
+Miscpref*HotspotHighlight:                        Evidência de Hotspot
+
+Miscpref*DefaultCopyType:                         Tipo de Cópia Assumida
+
+Miscpref*InsertMode:                              Modo de Inserção
+
+Miscpref*InputOnlyCursorMovement:                 Cursor Apenas de Entrada
+
+Miscpref*AudioAlarm:                              Alarme Áudio
+
+MiscprVT*CursorBlinkItem:           Cursor a Piscar
+
+MiscprVT*ApplicationCursor:         Modo de Cursor da Aplicação
+
+MiscprVT*ApplicationKeypad:         Modo de Teclado Auxiliar da Aplicação
+
+MiscprVT*AutoLineFeed:              Mudança de Linha Automática
+
+MiscprVT*AutoResize:                Redimensionamento Automático
+
+MiscprVT*AutoWrapAround:            Transposição Automática
+
+MiscprVT*ClearScreenWithBlanks:     Limpar Ecrã com Brancos
+
+MiscprVT*ExitOnDisconnect:          Sair ao Desligar
+
+MiscprVT*JumpScroll:                Salto de Página
+
+MiscprVT*MarginBell:                Aviso de Margem
+
+MiscprVT*MarginBellColumn:          Coluna do Aviso de Margem
+
+MiscprVT*ReverseWrapAround:         Transposição Inversa
+
+MiscprVT*VisibleStatusLine:         Linha de Estado Visível
+
+MiscprVT*VisualBell:                Aviso Visual
+	
+!*************************************************************
+!**     Preference Text Area Resources (Explanation Box)    **
+!*************************************************************
+Miscpref*CursorStyleText.value: Os possíveis estilos de cursor incluem cursores sublinhados e em forma de bloco.  O estilo do cursor pode ser sempre definido como sublinhado, sempre como bloco ou como uma combinação de sublinhado e bloco dependendo ou não do modo de inserção estar activo.
+
+MiscprVT*CursorStyleText.value: O estilo do cursor pode ser definido sempre para sublinhado ou para bloco.
+
+MiscprVT*CursorBlinkText.value: A intermitência do cursor pode ser activada ou desactivada.  Se for activada, o cursor irá apenas piscar quando a janela estiver activa.
+
+MiscprVT*ApplicationCursorText.value: As teclas de cursor podem estar inicialmente em modo de aplicação ou em modo de cursor. Quando as teclas das setas são usadas em modo de aplicação, são geradas sequências de alteração de controlo ANSI em vez de se usarem movimentos padrão de cursor.
+
+MiscprVT*ApplicationKeypadText.value: As teclas de cursor podem estar inicialmente em modo de aplicação ou em modo numérico. Quando o teclado numérico é usado em modo de aplicação, são geradas funções de controlo em vez de caracteres numéricos.
+
+Miscpr52*EnterKeyLocationText.value: As teclas das funções Enter, nova linha e saída de campo podem ser alteradas a partir das suas definições iniciais enunciadas abaixo. São fornecidas várias combinações dessas funções na tecla Enter e de Ctrl direito.
+
+Miscpr32*EnterKeyLocationText.value: As teclas das funções Enter e nova linha podem ser alteradas a partir das suas definições iniciais enunciadas abaixo. São fornecidas várias combinações dessas funções na tecla Enter e de Ctrl direito.
+
+Miscpr52*AutomaticHelpText.value: A tecla de Ajuda pode ser pressionada automaticamente como consequência de um erro de teclado por parte do operador.  Tipicamente uma tecla de Ajuda automática apresenta uma linha de texto de ajuda de primeiro nível a explicar esse erro de operador. Ao desactivar a tecla de Ajuda automática será apresentado o erro de operador de quatro dígitos. Nesse caso, o utilizador pode ainda pressionar a tecla de Ajuda manualmente para obter texto de ajuda de primeiro nível.
+
+Miscpr52*BlueUnderscoreText.value: A cor assumida do sublinhado pode ser alterada para azul.
+
+Miscpref*RowColumnIndicatorText.value: O indicador de linha/coluna apresenta a linha e a coluna correspondentes à posição do cursor, e está localizado no lado direito da linha de estado. O indicador de linha/coluna pode ser apresentado ou ocultado. Note que, no caso do cursor não estar apresentado, o indicador de linha/coluna também não é apresentado, independentemente desta definição.
+
+Miscpref*DestructiveBackspaceText.value: A função de retrocesso pode ser destrutiva ou não-destrutiva. No caso de ser destrutiva, a função de retrocesso apaga os dados à medida que o cursor se movimenta para trás ao longo dos campos de entrada de dados. No caso de ser não-destrutiva, a função de retrocesso não apaga os dados à medida que o cursor se movimenta para trás ao longo dos campos de entrada de dados.
+
+Miscpref*RuleLineEnableText.value: A linha de régua mostra a localização, ou localização anterior, do cursor. Pode ser completamente desactivada, activada permanentemente, ou controlada pela tecla de linha de régua. Quando controlada pela linha de régua, pode permanecer estacionária ou pode seguir o cursor.
+
+Miscpref*RuleLineStyleText.value: Quando a linha de régua é apresentada, pode tomar uma de três formas: a de uma linha horizontal, a de uma linha vertical, ou de duas linhas sendo uma horizontal e outra vertical.
+
+Miscpref*PasteStartLocationText.value: A operação de colar associada à pressão do segundo botão do rato simultaneamente com a tecla Shift pode ser definida por forma a ocorrer na posição do cursor ou na posição do ponteiro do rato. Note que esta preferência não afecta a operação de colagem originada a partir do menu pendente. Este último tipo de colagem efectuada a partir do menu pendente é processada na posição do cursor.
+
+Miscpr52*CursorBlinkText.value: A intermitência do cursor pode ser activada ou desactivada.  Quando activada a intermitência do cursor está sob controlo aplicacional.  Quando desactivada, o cursor nunca pisca.
+
+Miscpr32*CursorBlinkText.value: A intermitência do cursor pode ser activada ou desactivada.  Quando activada, o cursor pisca sempre. Quando desactivada, o cursor nunca pisca.
+
+Miscpr52*LargeScreenBehaviorText.value: O emulador 5250 pode ser configurado para mover automaticamente a janela e/ou reduzir o tamanho de fonte em caso de necessidade, quando é introduzido um ecrã de tamanho grande. Isto é feito quando um novo tamanho de janela não cabe no ecrã na posição actual e/ou com o tamanho de fonte corrente.
+
+Miscpr52*PrintKeyLocationText.value: A não ser que seja substituída por redefinição do teclado, a definição da tecla de Impressão (Print) corresponde à função de impressão de sistema, enquanto que a tecla de Impressão (Print) conjuntamente com Shift proporciona a função de impressão local do ecrã. Alguns utilizadores podem preferir a tecla de Impressão (Print) para proporcionar a função de impressão local do ecrã, e a tecla de Impressão (Print) conjuntamente com Shift para proporcionar a função de impressão de sistema.
+
+Miscpr32*PrintKeyLocationText.value: A não ser que seja substituída por redefinição do teclado, a definição da tecla de Impressão (Print) é a função pa1, enquanto que a tecla de Impressão (Print) conjuntamente com Shift corresponde à função de impressão local do ecrã.  Alguns utilizadores podem preferir a tecla de Impressão (Print) para proporcionar a função de impressão local do ecrã, e a tecla de Impressão (Print) conjuntamente com Shift para proporcionar a função pa1.
+
+Miscpr32*BracketText.value: Ao activar a opção de parênteses recto passa a ser permitida a conversão correcta dos caracteres de parênteses recto.
+
+Miscpr32*AutomaticReconnectText.value: A janela do emulador 3270 pode ser removida ou deixada no ecrã quando um utilizador termina a sessão. Quando deixada no ecrã o emulador tenta automaticamente voltar a ligar ao sistema central.
+
+Miscpref*HotspotsText.value: Os pontos activos são posições de ecrã que executam determinadas acções quando é feito clique com o ponteiro do rato sobre eles. Por exemplo, com o ponteiro do rato sobre 'PF1' ou 'F1', e com os pontos activos ligados, um clique é processado como se a tecla F1 tivesse sido pressionada. Os pontos activos podem estar desligados, serem ligados ao clique do botão principal do rato, ou serem ligados ao duplo clique do botão principal do rato.
+
+Miscpref*TypeAheadText.value: O buffer de teclado permite armazenar os batimentos de teclas que são efectuados enquanto o teclado está bloqueado (inibição de entrada). Estas teclas são processadas mais tarde quando o teclado desbloqueia. A activação do buffer de teclado força a que esteja sempre activo. A desactivação do buffer de teclado força a que esteja sempre inactivo.
+
+Miscpr52*ErrorResetKeysText.value: As teclas do emulador 5250 para recuperar erros podem ser configuradas abaixo. A tecla reset e um clique com o botão esquerdo do rato sobre a linha do erro permite sempre a reposição após o erro. Além disso, os utilizadores podem também optar por terem teclas de movimento de cursor (tabulação, novalinha, setas, retrocesso) e outros cliques de rato para a reposição após erros.
+
+Miscpref*HotspotHighlightText.value: O emulador pode ser configurado para realçar os hotspots. Se os hotspots estiverem activos e se a evidência de hotspots estiver também activa, quaisquer hotspots do ecrã são evidenciados.
+
+Miscpref*DefaultCopyTypeText.value: O tipo de cópia assumido corresponde ao tipo de área de cópia associado à operação de pressionar e arrastar do botão principal do rato. É também o tipo de cópia associado à marcação de área de cópia do teclado.
+
+Miscpr52*InsertModeText.value: O modo de inserção assumido é desactivado; para além da tecla de inserção que o pode alterar, é por vezes reposto automaticamente por aplicações e pela tecla de reposição. Esta reposição automática do modo de inserção pode ser desactivada, o que poderá ser conseguido com o modo de inserção assumido como activo ou desactivado. 
+Miscpr32*InsertModeText.value: O modo de inserção assumido é desactivado; para além da tecla de inserção que o pode alterar, é reposto automaticamente por interacção com aplicações, tal como com a tecla enter, e por vezes pela tecla de reposição. Esta reposição automática do modo de inserção pode ser desactivada, o que poderá ser conseguido com o modo de inserção assumido como activo ou desactivado.
+
+Miscpref*InputOnlyCursorMovementText.value: As teclas de seta podem ser configuradas por forma a mover o cursor apenas para posições com capacidade de entrada de dados. Se tal for a opção, então as teclas de seta irão sempre mover o cursor para posições com capacidade de entrada de dados. Se tais posições não existirem, o cursor desloca-se para a primeira posição no ecrã.
+
+Miscpref*AudioAlarmText.value: O alarme áudio pode ser activado ou desactivado. Quando está desactivado, o alarme áudio nunca é emitido.
+
+MiscprVT*AutoLineFeedText.value: A mudança de linha automática pode ser activada ou desactivada. Quando está activada, o Emulador VT executa um retorno à margem e uma mudança de linha quando um carácter de mudança de linha, tabulação vertical ou avanço de página é enviado pela aplicação.  Para além disso, quaisquer teclas que gerem uma nova linha (tal como a tecla enter) enviarão um retorno à margem e uma mudança de linha para a aplicação.  Quando está desactivada, só será executada a função salto de linha quando é recebida uma mudança de linha, tabulação vertical ou avanço de página.  Quando está desactivada e quando a tecla enter é premida, só é enviada uma mudança de linha para a aplicação.
+
+MiscprVT*AutoResizeText.value: O redimensionamento automático pode estar activado ou desactivado.
+
+MiscprVT*AutoWrapAroundText.value: O modo de translineação automático pode ser activado ou desactivado. Quando este modo é activado, o carácter que for introduzido após o cursor atingir o limite do ecrã, irá aparecer automaticamente na linha seguinte. Se a translineação automática for desactivada, então um carácter que seja introduzido após o cursor ter atingido o limite do ecrã, irá substituir o carácter no fim da linha.
+
+MiscprVT*ClearScreenWithBlanksText.value: O ecrã pode ser opcionalmente limpo com espaços em branco.
+
+MiscprVT*ExitOnDisconnectText.value: O terminal pode ser configurado para terminar ao desligar-se do sistema central.
+
+MiscprVT*JumpScrollText.value: O terminal pode ser configurado para avançar rapidamente. Com o avanço rápido, o ecrã pode ser movimentado mais do que uma linha de cada vez. Esta acção fornece actualizações de ecrã mais rápidas quando são enviadas para o ecrã várias linhas de texto. O número máximo de linhas que podem avançar rapidamente está limitado pelo número de linhas da janela do emulador VT.
+
+MiscprVT*MarginBellText.value: O terminal pode ser configurado para emitir um aviso sonoro quando o utilizador escrever na margem direita.
+
+MiscprVT*MarginBellColumnText.value: Especifique a coluna para o sinal sonoro de margem.
+
+MiscprVT*ReverseWrapAroundText.value: A translineação inversa pode ser activada ou desactivada. A translineação inversa permite que o cursor passe da primeira posição da linha para a última coluna da linha anterior, permitindo ao utilizador retroceder à linha anterior. A translineação automática também de estar activada para que a translineação inversa possa trabalhar.
+
+MiscprVT*VisibleStatusLineText.value: A linha de estado pode estar visível ou invisível. Se a linha de estado estiver visível, é visualizada uma 25ª linha no fundo da janela do emulador VT. Esta linha pode ser usada pelas aplicações para mostrar informação de estado. Quando não estiver a ser usada por uma aplicação, esta linha apresenta um indicador de linha/coluna.
+
+MiscprVT*VisualBellText.value: Um aviso visual (uma intermitência de ecrã) pode ser substituído por um aviso audível.
+
+!*************************************************************
+!**     Preference Text Area Resources (Options area)       **
+!**							                                                  **
+!*************************************************************
+
+Miscpref*PreferenceTextFormForCursorStyle*ToggleButton1.labelString: Cursor sublinhado
+
+Miscpref*PreferenceTextFormForCursorStyle*ToggleButton2.labelString: Cursor de bloco
+
+Miscpref*PreferenceTextFormForCursorStyle*ToggleButton3.labelString: Cursor de inserção em bloco, cursor de substituição sublinhado
+
+Miscpref*PreferenceTextFormForCursorStyle*ToggleButton4.labelString: Cursor de inserção sublinhado, cursor de substituição em bloco
+
+Miscpref*PreferenceTextFormForEnterKeyLocation*ToggleButton1.labelString: Utilizar as definições de teclas assumidas para Enter e Right Ctrl
+
+Miscpref*PreferenceTextFormForEnterKeyLocation*ToggleButton2.labelString: Tecla Enter = enter, Ctrl Direito = nova linha
+
+Miscpref*PreferenceTextFormForEnterKeyLocation*ToggleButton3.labelString: Tecla Enter = nova linha, Ctrl Direito = enter
+
+Miscpr52*PreferenceTextFormForEnterKeyLocation*ToggleButton4.labelString: Tecla Enter = enter, Ctrl Direito = saída de campo/nova linha
+
+Miscpr52*PreferenceTextFormForEnterKeyLocation*ToggleButton5.labelString: Tecla Enter = saída de campo/nova linha, Ctrl Direito = enter
+
+Miscpr52*PreferenceTextFormForAutomaticHelp*ToggleButton1.labelString: Activar a tecla de ajuda automática para erros do operador
+
+Miscpr52*PreferenceTextFormForAutomaticHelp*ToggleButton2.labelString: Desactivar a tecla de ajuda automática para erros do operador
+
+Miscpr52*PreferenceTextFormForBlueUnderscore*ToggleButton1.labelString: Activar sublinhado azul
+
+Miscpr52*PreferenceTextFormForBlueUnderscore*ToggleButton2.labelString: Desactivar sublinhado azul
+
+Miscpref*PreferenceTextFormForRowColumnIndicator*ToggleButton1.labelString: Mostrar indicador de linha e coluna
+
+Miscpref*PreferenceTextFormForRowColumnIndicator*ToggleButton2.labelString: Não mostrar indicador de linha e coluna
+
+Miscpref*PreferenceTextFormForDestructiveBackspace*ToggleButton1.labelString: Activar retrocesso destrutivo
+
+Miscpref*PreferenceTextFormForDestructiveBackspace*ToggleButton2.labelString: Desactivar retrocesso destrutivo
+
+Miscpref*PreferenceTextFormForRuleLineEnable*ToggleButton1.labelString: Desactivar linha de régua
+
+Miscpref*PreferenceTextFormForRuleLineEnable*ToggleButton2.labelString: Mostrar sempre a linha de régua na posição do cursor
+
+Miscpref*PreferenceTextFormForRuleLineEnable*ToggleButton3.labelString: Activar a tecla de linha de régua (sem seguir o cursor)
+
+Miscpref*PreferenceTextFormForRuleLineEnable*ToggleButton4.labelString: Activar a tecla de linha de régua (seguindo o cursor)
+
+Miscpref*PreferenceTextFormForRuleLineStyle*ToggleButton1.labelString: Linhas de régua horizontal e vertical simultâneas
+
+Miscpref*PreferenceTextFormForRuleLineStyle*ToggleButton2.labelString: Apenas linha de régua horizontal
+
+Miscpref*PreferenceTextFormForRuleLineStyle*ToggleButton3.labelString: Apenas linha de régua vertical
+
+Miscpref*PreferenceTextFormForPasteStartLocation*ToggleButton1.labelString: Colar na posição do cursor
+
+Miscpref*PreferenceTextFormForPasteStartLocation*ToggleButton2.labelString: Colar na posição do rato
+
+Miscpref*PreferenceTextFormForCursorBlink*ToggleButton1.labelString: Desactivar intermitência do cursor
+
+Miscpref*PreferenceTextFormForCursorBlink*ToggleButton2.labelString: Activar intermitência do cursor
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton1.labelString: Não mover a janela nem reduzir o tamanho da fonte
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton2.labelString: Mover a janela e, se necessário, reduzir o tamanho da fonte
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton3.labelString: Reduzir apenas o tamanho da fonte
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton4.labelString:  Usar/Memorizar Fonte de Ecrã Grande
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton5.labelString: Reduzir o tamanho da fonte e, se necessário, mover a janela
+
+Miscpr52*PreferenceTextFormForPrintKeyLocation*ToggleButton1.labelString: Usar as definições assumidas da tecla de Impressão (Print)
+
+Miscpr52*PreferenceTextFormForPrintKeyLocation*ToggleButton2.labelString: Print = impressão de sistema, Print com Shift = impressão local
+
+Miscpr52*PreferenceTextFormForPrintKeyLocation*ToggleButton3.labelString: Print = impressão local, Print com Shift = impressão de sistema
+
+Miscpr32*PreferenceTextFormForPrintKeyLocation*ToggleButton1.labelString: Usar as definições assumidas da tecla de Impressão (Print)
+
+Miscpr32*PreferenceTextFormForPrintKeyLocation*ToggleButton2.labelString: Print = pa1, Print com Shift = impressão local
+
+Miscpr32*PreferenceTextFormForPrintKeyLocation*ToggleButton3.labelString: Print = impressão local, Print com Shift = pa1
+
+Miscpr32*PreferenceTextFormForBracket*ToggleButton1.labelString: Desactivar conversão de parênteses rectos
+
+Miscpr32*PreferenceTextFormForBracket*ToggleButton2.labelString: Activar conversão de parênteses rectos
+
+Miscpr32*PreferenceTextFormForAutomaticReconnect*ToggleButton1.labelString: A janela é removida depois de terminar sessão
+
+Miscpr32*PreferenceTextFormForAutomaticReconnect*ToggleButton2.labelString: A janela permanece depois de terminar sessão
+
+Miscpref*PreferenceTextFormForHotspots*ToggleButton1.labelString: Desactivar hotspots
+
+Miscpref*PreferenceTextFormForHotspots*ToggleButton2.labelString: Activar hotspots com um clique do botão principal do rato
+
+Miscpref*PreferenceTextFormForHotspots*ToggleButton3.labelString: Activar hotspots com um duplo clique do botão principal do rato
+
+Miscpref*PreferenceTextFormForTypeAhead*ToggleButton1.labelString: Desactivar buffer do teclado
+
+Miscpref*PreferenceTextFormForTypeAhead*ToggleButton2.labelString: Activar buffer do teclado
+
+Miscpr52*PreferenceTextFormForTypeAhead*ToggleButton3.labelString: Usar a definição de AS/400
+
+Miscpr52*PreferenceTextFormForErrorResetKeys*ToggleButton1.labelString: Tecla de reset ou botão esquerdo do rato apenas na linha de erro.
+
+Miscpr52*PreferenceTextFormForErrorResetKeys*ToggleButton2.labelString: Adicionalmente, as teclas de movimento do cursor e todos os botões do rato
+
+Miscpr52*PreferenceTextFormForErrorResetKeys*ToggleButton3.labelString: A maior parte das teclas e todos os botões do rato
+
+Miscpref*PreferenceTextFormForHotspotHighlight*ToggleButton1.labelString: Desactivar realce dos hotspots
+
+Miscpref*PreferenceTextFormForHotspotHighlight*ToggleButton2.labelString: Activar realce dos hotspots
+
+Miscpref*PreferenceTextFormForDefaultCopyType*ToggleButton1.labelString: Cópia linear
+
+Miscpref*PreferenceTextFormForDefaultCopyType*ToggleButton2.labelString: Cópia em bloco
+
+Miscpref*PreferenceTextFormForInsertMode*ToggleButton1.labelString: Modo de inserção assumido desactivado com reposição automática activa
+
+Miscpref*PreferenceTextFormForInsertMode*ToggleButton2.labelString: Modo de inserção assumido desactivado com reposição automática desactivada
+
+Miscpref*PreferenceTextFormForInsertMode*ToggleButton3.labelString: Modo de inserção assumido activado com reposição automática desactivada
+
+Miscpref*PreferenceTextFormForInputOnlyCursorMovement*ToggleButton1.labelString:  Desactivar movimento do cursor apenas para entrada de dados
+
+Miscpref*PreferenceTextFormForInputOnlyCursorMovement*ToggleButton2.labelString: Activar movimento do cursor apenas para entrada de dados
+
+Miscpref*PreferenceTextFormForAudioAlarm*ToggleButton1.labelString: Desactivar alarme áudio
+
+Miscpref*PreferenceTextFormForAudioAlarm*ToggleButton2.labelString: Activar alarme áudio
+
+MiscprVT*PreferenceTextFormForCursorBlink*ToggleButton1.labelString: Desactivar intermitência do cursor
+
+MiscprVT*PreferenceTextFormForCursorBlink*ToggleButton2.labelString: Activar intermitência do cursor
+
+MiscprVT*PreferenceTextFormForApplicationCursor*ToggleButton1.labelString: Desactivar modo de cursor de aplicação
+
+MiscprVT*PreferenceTextFormForApplicationCursor*ToggleButton2.labelString: Activar modo de cursor de aplicação
+
+MiscprVT*PreferenceTextFormForApplicationKeypad*ToggleButton1.labelString: Desactivar modo de teclado auxiliar da aplicação
+
+MiscprVT*PreferenceTextFormForApplicationKeypad*ToggleButton2.labelString: Activar modo de teclado auxiliar da aplicação
+
+MiscprVT*PreferenceTextFormForAutoLineFeed*ToggleButton1.labelString: Desactivar mudança de linha automática
+
+MiscprVT*PreferenceTextFormForAutoLineFeed*ToggleButton2.labelString: Activar mudança de linha automática
+
+MiscprVT*PreferenceTextFormForAutoResize*ToggleButton1.labelString: Desactivar redimensionamento automático
+
+MiscprVT*PreferenceTextFormForAutoResize*ToggleButton2.labelString: Activar redimensionamento automático
+
+MiscprVT*PreferenceTextFormForAutoWrapAround*ToggleButton1.labelString: Desactivar translineação automática
+
+MiscprVT*PreferenceTextFormForAutoWrapAround*ToggleButton2.labelString: Activar translineação automática
+
+MiscprVT*PreferenceTextFormForClearScreenWithBlanks*ToggleButton1.labelString: Desactivar limpeza de ecrã com espaços em branco
+
+MiscprVT*PreferenceTextFormForClearScreenWithBlanks*ToggleButton2.labelString: Activar limpeza de ecrã com espaços em branco
+
+MiscprVT*PreferenceTextFormForExitOnDisconnect*ToggleButton1.labelString: Desactivar sair ao desligar
+
+MiscprVT*PreferenceTextFormForExitOnDisconnect*ToggleButton2.labelString: Activar sair ao desligar
+
+MiscprVT*PreferenceTextFormForJumpScroll*ToggleButton1.labelString: Desactivar avanço rápido
+
+MiscprVT*PreferenceTextFormForJumpScroll*ToggleButton2.labelString: Activar avanço rápido
+
+MiscprVT*PreferenceTextFormForMarginBell*ToggleButton1.labelString: Desactivar aviso de margem
+
+MiscprVT*PreferenceTextFormForMarginBell*ToggleButton2.labelString: Activar aviso de margem
+
+MiscprVT*PreferenceTextFormForMarginBellColumn*textFieldLabel.labelString: Colunas a partir do fim da linha
+
+MiscprVT*PreferenceTextFormForReverseWrapAround*ToggleButton1.labelString: Desactivar translineação inversa
+
+MiscprVT*PreferenceTextFormForReverseWrapAround*ToggleButton2.labelString: Activar translineação inversa
+
+MiscprVT*PreferenceTextFormForVisibleStatusLine*ToggleButton1.labelString: Desactivar linha de estado
+
+MiscprVT*PreferenceTextFormForVisibleStatusLine*ToggleButton2.labelString: Activar linha de estado
+
+MiscprVT*PreferenceTextFormForVisualBell*ToggleButton1.labelString: Desactivar o aviso visual
+
+MiscprVT*PreferenceTextFormForVisualBell*ToggleButton2.labelString: Activar o aviso visual
+
+
+
+!**************************************
+!**   Messages at bottom of window   **
+!**************************************
+
+Miscpr52*MiscprefMsgHelpRequested:     Ajuda pedida na sessão de 5250.
+
+Miscpr32*MiscprefMsgHelpRequested:     Ajuda pedida na sessão de 3270.
+
+MiscprVT*MiscprefMsgHelpRequested:     Ajuda pedida na sessão de Emulador VT.
+
+Miscpref*MiscprefMsgPreferenceApplied: Preferência temporariamente aplicada.
+
+Miscpref*MiscprefMsgPreferencesSaved:  Preferências guardadas.
+
+Miscpref*MiscprefMsgDefaultsApplied:   Preferências assumidas temporariamente aplicadas.
+
+Miscpref*MiscprefMsgDefaultsNotSet:    Preferências assumidas não definidas.
+
+Miscpref*MiscprefMsgNoAccess:          Impossível aceder ao directório.
+
+
+Miscpref*MiscprefMsgNoMake:            Impossível criar directório.
+
+Miscpref*MiscprefMsgFileOpenError:     Erro ao guardar:  Impossível abrir o ficheiro.
+
+Miscpref*MiscprefMsgFileWriteError:    Erro ao guardar:  Impossível escrever no ficheiro.
+
+
+
+!********************************
+!**  Dialog Box Resources      **
+!********************************
+Miscpref*exitDialog.dialogTitle:              Aviso de Saída
+
+Miscpref*exitDialog.okLabelString:            Guardar
+
+Miscpref*exitDialog.cancelLabelString:        Não guardar
+
+! this cannot be much longer
+Miscpref*exitDialog.messageString:            Existem alterações às preferências diversas não guardadas.
+
+Miscpref*setDefaultsDialog.dialogTitle:       Aviso de Definição de Valores Assumidos
+
+Miscpref*setDefaultsDialog.okLabelString:     Sim
+
+Miscpref*setDefaultsDialog.cancelLabelString: Não
+
+! this cannot be much longer
+Miscpref*setDefaultsDialog.messageString:     Pretende realmente definir todas as preferências para os valores assumidos?
+/*******************************************************************************
+**  saveDialog resource
+*******************************************************************************/
+MiscprVT*saveDialog.dialogTitle: Opções de Guardar
+
+MiscprVT*saveDialog*saveDialogTitle.labelString: Seleccione uma opção de guardar.
+
+MiscprVT*saveDialog*saveChangedOnly.labelString: Guardar apenas preferências alteradas
+
+MiscprVT*saveDialog*saveAll.labelString: Guardar todas as preferências
+
+MiscprVT*saveDialog*saveButton.labelString: Guardar
+
+MiscprVT*saveDialog*cancelButton.labelString: Cancelar
+

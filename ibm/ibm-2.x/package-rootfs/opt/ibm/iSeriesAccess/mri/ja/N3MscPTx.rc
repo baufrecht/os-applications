@@ -1,0 +1,560 @@
+!
+!
+!
+! This file contains the resource text strings for the IBM Network Station 3270, 5250, and
+! VTxxx emulators, in particular the miscellaneous preferences program.
+
+! This resource file will be stored on all servers in locale specific ASCII (819 for Latin1
+! languages). 
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. This resource file contains text strings for the 3270 and 5250 emulators.  Much of
+!    the resource text is common to all emulators. Some is specific to one emulator.
+!    Miscpref = Resources used by both 3270 and 5250 emulators.
+!    Miscpr32 = Resources used by the 3270 emulator.
+!    Miscpr52 = Resources used by the 5250 emulator.
+!    MiscprVT = Resources used by the VT emulator.
+! 4. Resource format: 
+!    - A resource line starts with Miscpref*, Miscpr32*, Miscpr52*,or MiscprVT*, followed by 
+!      a resource name and a ":".  Do NOT make any changes to the text to the left
+!      of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+!******************************************************************************
+!************************ BEGIN DO NOT TRANSLATE ******************************
+!******************************************************************************
+!*   The first section of resources are are locale specific but               *
+!*   DO NOT REQUIRE TRANSLATION.                                              *
+!*                                                                            *
+!* This source file enables the resource section for Latin1 and Latin2.       *
+!*                                                                            *
+!* For ru_RU or Latin5 locales and DBCS locales                               *
+!*      1. Place a '!' as the first character in each line in the Latin1      *
+!*      and Latin2 section                                                    *
+!*      2. Remove the '!' character for each resource line in the apropriate  *
+!*      section that matches your locale.                                     *
+!*                                                                            *
+!* For example, ru_RU should place ! in front of all lines in the LATIN1      *
+!* section remove the ! from all lines in the LATIN5 section.                 *      
+!******************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN1 and LATIN2                ****************
+!**************************************************************************
+Miscpref*extra_Large_Font_List: -*-*-medium-r-normal-*-*-*-*-*-m-110-*-*
+Miscpref*large_Font_List:       -*-*-medium-r-normal-*-*-*-*-*-m-90-*-*
+Miscpref*medium_Font_List:      -*-*-medium-r-normal-*-*-*-*-*-m-70-*-*
+Miscpref*small_Font_List:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+!**************************************************************************
+!****************   END LATIN1 and LATIN2                  ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN5                           ****************
+!**************************************************************************
+!Miscpref*extra_Large_Font_List: -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*
+!Miscpref*large_Font_List:       -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!Miscpref*medium_Font_List:      -*-*-medium-r-normal-*-*-*-*-*-c-70-*-*
+!Miscpref*small_Font_List:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!**************************************************************************
+!****************   END   LATIN5                           ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (ja_JP ko_KR zh_CN)   ****************
+!**************************************************************************
+!Miscpref*extra_Large_Font_List: -*-*-medium-r-normal-*-24-*-*-*-c-*
+!Miscpref*large_Font_List:       -*-*-medium-r-normal-*-16-*-*-*-c-*
+!Miscpref*medium_Font_List:      -*-*-medium-r-normal-*-16-*-*-*-c-*
+!Miscpref*small_Font_List:       -*-*-medium-r-normal-*-16-*-*-*-c-*
+!**************************************************************************
+!****************   END DBCS (ja_JP ko_KR zh_CN)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (zh_TW)   ****************
+!**************************************************************************
+!Miscpref*extra_Large_Font_List: -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Miscpref*large_Font_List:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Miscpref*medium_Font_List:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Miscpref*small_Font_List:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!**************************************************************************
+!****************   END DBCS (zh_TW)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   END DO NOT TRANSLATE                   ****************
+!**************************************************************************
+
+!*******************************************************************
+!*******   Miscellaneous Preferences Resources           ***********
+!*******************************************************************
+Miscpr52*title:     5250 の各種設定の変更
+
+Miscpr32*title:     3270 の各種設定の変更
+
+MiscprVT*title:     VT Emulator の各種設定の変更
+
+Miscpref*iconName:  各種設定の変更
+
+Miscpref*okLabelString: 了解
+
+Miscpref*cancelLabelString: 取消
+
+
+!***********************************************
+!**     Action Bar Area Resources             **
+!***********************************************
+Miscpref*saveButton.labelString: 保管
+
+Miscpref*exitButton.labelString: 終了
+
+Miscpref*setDefaultsButton.labelString: デフォルトの設定
+
+Miscpref*helpButton.labelString: ヘルプ
+
+
+!*********************************************************
+!**     Preference Buttons Area Resources               **
+!**							**
+!*********************************************************
+Miscpref*preferencesListInstructions.labelString: 設定の変更の選択
+
+Miscpref*CursorStyleItem:                         カーソルの形式
+
+Miscpr52*EnterKeyLocationItem:                    Enter (実行)／フィールド・エグジット・キー
+
+Miscpr32*EnterKeyLocationItem:                    Enter キー
+	
+Miscpr52*AutomaticHelpItem:                       自動ヘルプ
+
+Miscpr52*BlueUnderscoreItem:                      青の下線
+
+Miscpref*RowColumnIndicatorItem:                  行／カラム・インディケーター
+
+Miscpref*DestructiveBackspaceItem:                復元できない後退
+
+Miscpref*RuleLineEnableItem:                      けい線を使用可能にする
+
+Miscpref*RuleLineStyleItem:                       けい線スタイル
+
+Miscpref*PasteStartLocationItem:                  貼り付け開始位置
+
+Miscpref*CursorBlinkItem:                         カーソル明滅
+
+Miscpr52*LargeScreenBehaviorItem:                 ラージ画面の動作
+
+Miscpref*PrintKeyLocationItem:                    印刷キー
+
+Miscpr32*BracketItem:                             大括弧
+
+Miscpr32*AutomaticReconnectItem:                  自動再接続
+
+Miscpref*HotspotsItem:                            ホット・スポット
+
+Miscpref*TypeAheadItem:                           キーボード・バッファリング
+
+Miscpr52*ErrorResetKeys:                          エラー・リセット・キー
+
+Miscpref*HotspotHighlight:                        ホット・スポット強調表示
+
+Miscpref*DefaultCopyType:                         デフォルトのコピー・タイプ
+
+Miscpref*TextType:                                テキスト・タイプ
+
+Miscpref*TextOrientation:                         テキスト方向
+
+Miscpref*NumeralShape:                            数表示形状
+
+Miscpref*InsertMode:                              挿入モード
+
+Miscpref*InputOnlyCursorMovement:                 入力専用カーソル設定
+
+Miscpref*AudioAlarm:                              音声アラーム
+
+MiscprVT*CursorBlinkItem:           カーソル明滅
+
+MiscprVT*ApplicationCursor:         アプリケーション・カーソル・モード
+
+MiscprVT*ApplicationKeypad:         アプリケーション・キーパッド・モード
+
+MiscprVT*AutoLineFeed:              自動改行
+
+MiscprVT*AutoResize:                自動サイズ変更
+
+MiscprVT*AutoWrapAround:            自動循環
+
+MiscprVT*ClearScreenWithBlanks:     画面をブランクで消去
+
+MiscprVT*ExitOnDisconnect:          切断時に終了
+
+MiscprVT*JumpScroll:                高速画面移動
+
+MiscprVT*MarginBell:                マージン・ベル
+
+MiscprVT*MarginBellColumn:          マージン・ベル・カラム
+
+MiscprVT*ReverseWrapAround:         逆循環
+
+MiscprVT*VisibleStatusLine:         可視状況表示行
+
+MiscprVT*VisualBell:                可視ベル
+	
+!*************************************************************
+!**     Preference Text Area Resources (Explanation Box)    **
+!*************************************************************
+Miscpref*CursorStyleText.value: 可能なカーソルの形式には、下線およびブロック・カーソルがあります。  カーソルの形式は、「常時下線」に設定したり、「常時ブロック」に設定したり、あるいは挿入モードが設定されるかどうかによって下線とブロックの組み合わせとすることができます。
+
+MiscprVT*CursorStyleText.value: カーソルの形式は、「常時下線」または「常時ブロック」に設定することができます。
+
+MiscprVT*CursorBlinkText.value: カーソル明滅は、使用可能または使用不可とすることができます。 明滅カーソルが使用可能である場合には、カーソルは、ウィンドウにフォーカスがある時にのみ明滅します。
+
+MiscprVT*ApplicationCursorText.value: カーソル移動キーは、最初にアプリケーション・モードまたはカーソル・モードとすることができます。  アプリケーション・モードの時には、矢印キーが使用されると、標準カーソル移動ではなく、ANSI エスケープ・シーケンスが生成されます。
+
+MiscprVT*ApplicationKeypadText.value: キーパッド・キーは、最初にアプリケーション・モードまたは数字モードとすることができます。  アプリケーション・モードの時には、キーパッドが使用されると、数字ではなく、制御機能が生成されます。
+
+Miscpr52*EnterKeyLocationText.value: 入力、改行、およびフィールド・エグジット機能のためのキーは、それらの以下のデフォルト・マッピングから変更することができます。 Enter (実行) および右 Ctrl キーでこれらの機能の各種の組み合わせが提供されます。
+
+Miscpr32*EnterKeyLocationText.value: 入力および改行機能のためのキーは、それらの以下のデフォルト・マッピングから変更することができます。 Enter (実行) および右 Ctrl キーでこれらの機能の各種の組み合わせが提供されます。
+
+Miscpr52*AutomaticHelpText.value: ヘルプ・キーは、キーボード・オペレーター・エラーの結果として自動的に押されるようにすることができます。  自動ヘルプ・キーでは、通常、オペレーター・エラーを説明する 1 行の第 1 レベル・ヘルプ・テキストが表示されます。  自動ヘルプ・キーを使用不可にすると、4 桁のオペレーター・エラーが表示されます。 その場合であってもなお、ユーザーがヘルプ・キーを手操作で押すことによって、第 1 レベル・ヘルプ・テキストを表示することができます。
+
+Miscpr52*BlueUnderscoreText.value: デフォルトの下線カラーは青に変更することができます。
+
+Miscpref*RowColumnIndicatorText.value: 行／カラム・インディケーターは、状況表示行の右側に表示されるカーソル位置の行およびカラムです。 行／カラム・インディケーターは、表示したりしなかったりすることができます。 カーソルが表示されない場合には、この設定とは無関係に、行／カラム・インディケーターも表示されないことに注意してください。
+
+Miscpref*DestructiveBackspaceText.value: 後退機能は、復元できない後退または復元できる後退とすることができます。 復元できない場合には、カーソルが入力フィールドを逆方向に移動するにつれ、後退機能によってデータが消去されます。 復元できる場合には、カーソルが入力フィールドを逆方向に移動しても、後退機能によってデータが消去されることはありません。
+
+Miscpref*RuleLineEnableText.value: けい線は、カーソルの位置またはその以前の位置の表示に役立ちます。  これは、完全に使用不可としたり、常時使用可能としたり、あるいはけい線キーによって制御することができます。 けい線キーによって制御される場合には、定常位置に留めたり、カーソルに追随させることができます。
+
+Miscpref*RuleLineStyleText.value: けい線を表示する場合には、水平線、垂直線、または水平線と垂直線の 3 つのフォームにすることができます。
+
+Miscpref*PasteStartLocationText.value: シフトされた第 2 マウス・ボタンを押すことと関連した貼り付け操作は、カーソル位置またはマウス・ポインター位置で行われるように定義することができます。 この設定の変更は、プルダウン・メニューからの貼り付けには影響しないことに注意してください。 プルダウン・メニューの貼り付けは、常にカーソル位置で行われます。
+
+Miscpr52*CursorBlinkText.value: カーソル明滅は、使用可能または使用不可とすることができます。 使用可能にした場合には、カーソル明滅はアプリケーションによって制御されます。 使用不可にした場合には、カーソルは明滅しません。
+
+Miscpr32*CursorBlinkText.value: カーソル明滅は、使用可能または使用不可とすることができます。 使用可能にした場合には、カーソルが常に明滅します。 使用不可にした場合には、カーソルは明滅しません。
+
+Miscpr52*LargeScreenBehaviorText.value: 5250 エミュレーターは、ラージ画面サイズに入ったときに、必要に応じて自動的にウィンドウを移動させるか、フォント・サイズを小さくするか、あるいはその両方が行われるように構成することができます。 これは、新規ウィンドウ・サイズが現在位置またはフォント・サイズ (あるいはその両方) では画面に入りきれなくなる場合に行われます。
+
+Miscpr52*PrintKeyLocationText.value: キーボード再マップによって上書きされていなければ、印刷キーのデフォルトのマッピングは、システム印刷機能であり、これに対し、シフトされた印刷キーでは、ローカル画面印刷機能が提供されます。  ユーザーによっては、印刷キーでローカル画面印刷機能が提供され、シフトされた印刷キーでシステム印刷機能が提供されるようにしたい場合があります。
+
+Miscpr32*PrintKeyLocationText.value: キーボード再マップによって上書きされていなければ、印刷キーのデフォルトのマッピングは、pa1 機能であり、これに対し、シフトされた印刷キーでは、ローカル画面印刷機能が提供されます。  ユーザーによっては、印刷キーでローカル画面印刷機能が提供され、シフトされた印刷キーで pa1 機能が提供されるようにすることができます。
+
+Miscpr32*BracketText.value: 大括弧オプションを使用可能にすると、かぎ大括弧文字の変換を正しく実行することができます。
+
+Miscpr32*AutomaticReconnectText.value: 3270 エミュレーター・ウィンドウは、ユーザーがログオフしたときに、画面から除去したり、画面上に残すことができます。 画面に残した場合には、エミュレーターは自動的にホスト・システムに再接続しようとします。
+
+Miscpref*HotspotsText.value: ホット・スポットは、マウス・ポインターによってクリックしたときにアクションが実行される画面上の位置です。 たとえば、マウス・ポインターを 'PF1' または 'F1' に置き、ホット・スポットが使用可能であれば、それをクリックすることが F1 キーを押したのと同じに処理されます。 ホット・スポットは、使用不可にしておき、第 1 ボタンの 1 回のクリックで使用可能にしたり、または第 2 ボタンのダブルクリックで使用可能にすることができます。 ホット・スポットを使用不可、または第 1 ボタンの 1 回のクリックで使用可能にした場合、第 1 ボタンをダブルクリックすると Enter キーを押すのと同じように処理されます。
+
+Miscpref*TypeAheadText.value: キーボード・バッファリングでは、キーボードがロックされている (入力禁止にされている) 間に入力されたキー・ストロークが保管されます。 これらのキーは、後からキーボードがアンロックされたときに処理されます。 キーボード・バッファリングを使用可能にすると、この処理が常時オンになるように強制されます。 キーボード・バッファリングを使用不可にすると、この処理が常時オフになるように強制されます。
+
+Miscpr52*ErrorResetKeysText.value: エラーをリセットするための 5250 エミュレーター・キーは、次のように構成することができます。 エラーのある行でリセット・キーまたは左マウスをクリックすることで、常時エラーがリセットされます。 さらに、ユーザーはカーソル移動キー (タブ、改行、矢印、後退) およびその他のマウスのクリックでもエラーがリセットされるように選択することができます。
+
+Miscpref*HotspotHighlightText.value: エミュレーターはホット・スポットを強調表示するように構成することができます。 ホット・スポットが使用可能でホット・スポットの強調表示も使用可能である場合には、画面上のいずれのホット・スポットも強調表示されます。
+
+Miscpref*DefaultCopyTypeText.value: デフォルトのコピー・タイプは、第 1 マウス・ボタンでの 1 回のプッシュ・ドラッグ操作に関連したコピー域のタイプです。 これは、キーボード・コピー域のマーキングに関連したコピー・タイプでもあります。 
+
+Miscpref*TextTypeText.value:                                コピー・アンド・ペーストのテキスト・タイプ
+
+Miscpref*TextOrientationText.value: コピー・アンド・ペーストのテキスト方向。コピー元またはペースト先の外部アプリケーションのグローバル・テキスト方向またはパラグラフ方向を選択してください。
+
+Miscpref*NumeralShapeText.value: コピー・アンド・ペーストの数表示形状。コピー元またはペースト先の外部アプリケーションがヨーロッパ式数字のみ扱うものの場合は「公称」を選択してください。アプリケーションが常にアラブ・インド数字を扱う場合は「国際」を選択してください。数字の外観が文脈に依存する場合は「コンテキスト」モードを選択してください。
+
+Miscpr52*InsertModeText.value: 挿入モードのデフォルトはオフであり、Insert (挿入) キーに加えて、時にアプリケーションおよびリセット・キーによって自動的にリセットされる場合があります。 この挿入モードの自動リセットは、使用不可になっている場合があり、これは、挿入モードのデフォルトをオンまたはオフに設定することによって、行うことができます。
+
+Miscpr32*InsertModeText.value: 挿入モードのデフォルトはオフであり、Insert (挿入) キーに加えて、時に Enter キーなどアプリケーションとの対話およびリセット・キーによって自動的にリセットされます。 この挿入モードの自動リセットは、使用不可になっている場合があり、これは、挿入モードのデフォルトをオンまたはオフに設定することによって、行うことができます。
+
+Miscpref*InputOnlyCursorMovementText.value: 矢印キーは、入力可能位置にのみ移動するように構成することができます。 選択した場合には、矢印キーは常時カーソルを入力可能位置に移動します。 そうした位置が存在しない場合には、カーソルは画面の最初の位置に移動します。
+
+Miscpref*AudioAlarmText.value: 音声アラームは、使用可能または使用不可とすることができます。 使用不可の時には、音声アラームは鳴りません。
+
+MiscprVT*AutoLineFeedText.value: 自動改行は、使用可能または使用不可とすることができます。 自動改行が使用可能になっている時に、アプリケーションが改行、垂直タブ、または用紙送り文字を送ると、VT エミュレーターが復帰を実行します。 さらに、改行を生成するすべてのキー (Enter キーなど) によって復帰および改行がアプリケーションに送られることになります。 使用不可になっている時に、改行、垂直タブ、または用紙送りを受け取ると、改行機能だけが実行されます。 使用不可になっていて、Enter キーが押されると、改行だけがアプリケーションに送られます。 
+
+MiscprVT*AutoResizeText.value: 自動サイズ変更は、使用可能または使用不可とすることができます。
+
+MiscprVT*AutoWrapAroundText.value: 自動循環モードは、使用可能または使用不可とすることができます。  使用可能な時には、カーソルが画面のボーダーに達した後に入力された文字は、自動的に次の行に現われます。  自動循環が使用不可の場合には、カーソルが画面のボーダーに達した後に入力された文字は、行の終わりの文字に置き換わります。
+
+MiscprVT*ClearScreenWithBlanksText.value: 画面は、任意にブランクで消去することができます。
+
+MiscprVT*ExitOnDisconnectText.value: 端末は、ホストからの切断時に終了するように構成することができます。
+
+MiscprVT*JumpScrollText.value: 端末は、高速画面移動を行うように構成することができます。 高速画面移動では、画面は、一度に複数行スクロールすることができます。 これにより、複数行のテキストが端末に送られる時に、画面の更新がより早くなります。 高速画面移動を行える最大行数は、VT エミュレーター・ウィンドウの行数に制限されています。
+
+MiscprVT*MarginBellText.value: 端末は、ユーザーが右マージンに入力を行った時にベルを鳴らすように構成することができます。
+
+MiscprVT*MarginBellColumnText.value: マージン・ベルのカラムを指定してください。
+
+MiscprVT*ReverseWrapAroundText.value: 逆循環を使用可能または使用不可にすることができます。 逆循環によって、カーソルを行の最初の位置から前の行の最後のカラムに循環させ、ユーザーが前の行に戻れるようにすることができます。 逆循環を機能させるには、自動循環も使用可能にしなければなりません。
+
+MiscprVT*VisibleStatusLineText.value: 状況表示行を目に見えるようにするか、目に見えないようにすることができます。 状況表示行を目に見えるようにした場合には、VT エミュレーター・ウィンドウの一番下に 25 行目が表示されます。  この行は、状況に関する情報を表示するためにアプリケーションで使用することができます。  アプリケーションで使用中でない時には、カーソル行/カラム・インディケーターが表示されます。
+
+MiscprVT*VisualBellText.value: 音によるベルの代わりに可視ベル (画面明滅) を使用することができます。
+
+!*************************************************************
+!**     Preference Text Area Resources (Options area)       **
+!**							    **
+!*************************************************************
+
+Miscpref*PreferenceTextFormForCursorStyle*ToggleButton1.labelString: 下線カーソル
+
+Miscpref*PreferenceTextFormForCursorStyle*ToggleButton2.labelString: ブロック・カーソル
+
+Miscpref*PreferenceTextFormForCursorStyle*ToggleButton3.labelString: ブロック (挿入時) カーソル、下線 (置換時) カーソル
+
+Miscpref*PreferenceTextFormForCursorStyle*ToggleButton4.labelString: 下線 (挿入時) カーソル、ブロック (置換時) カーソル
+
+Miscpref*PreferenceTextFormForEnterKeyLocation*ToggleButton1.labelString: デフォルトの Enter および右 Ctrl キー・マッピング
+
+Miscpref*PreferenceTextFormForEnterKeyLocation*ToggleButton2.labelString: Enter キー = 入力、右 Ctrl = 改行
+
+Miscpref*PreferenceTextFormForEnterKeyLocation*ToggleButton3.labelString: Enter キー = 改行、右 Ctrl = 入力
+
+Miscpr52*PreferenceTextFormForEnterKeyLocation*ToggleButton4.labelString: Enter キー = 入力、右 Ctrl = フィールド・エグジット／改行
+
+Miscpr52*PreferenceTextFormForEnterKeyLocation*ToggleButton5.labelString: Enter キー = フィールド・エグジット／改行、右 Ctrl = 入力
+
+Miscpr52*PreferenceTextFormForAutomaticHelp*ToggleButton1.labelString: オペレーター・エラーの場合に自動ヘルプ・キーを使用可能にします
+
+Miscpr52*PreferenceTextFormForAutomaticHelp*ToggleButton2.labelString: オペレーター・エラーの場合に自動ヘルプ・キーを使用不可にします
+
+Miscpr52*PreferenceTextFormForBlueUnderscore*ToggleButton1.labelString: 青の下線を使用可能にします
+
+Miscpr52*PreferenceTextFormForBlueUnderscore*ToggleButton2.labelString: 青の下線を使用不可にします
+
+Miscpref*PreferenceTextFormForRowColumnIndicator*ToggleButton1.labelString: 行／カラム・インディケーターを表示します
+
+Miscpref*PreferenceTextFormForRowColumnIndicator*ToggleButton2.labelString: 行／カラム・インディケーターは表示しません
+
+Miscpref*PreferenceTextFormForDestructiveBackspace*ToggleButton1.labelString: 復元できない後退を使用可能にします
+
+Miscpref*PreferenceTextFormForDestructiveBackspace*ToggleButton2.labelString: 復元できない後退を使用不可にします
+
+Miscpref*PreferenceTextFormForRuleLineEnable*ToggleButton1.labelString: けい線を使用可能にします
+
+Miscpref*PreferenceTextFormForRuleLineEnable*ToggleButton2.labelString: カーソルとともに常時けい線を表示します
+
+Miscpref*PreferenceTextFormForRuleLineEnable*ToggleButton3.labelString: けい線キーを使用可能にします (カーソルには追随しません)
+
+Miscpref*PreferenceTextFormForRuleLineEnable*ToggleButton4.labelString: けい線キーを使用可能にします (カーソルに追随します)
+
+Miscpref*PreferenceTextFormForRuleLineStyle*ToggleButton1.labelString: 水平けい線と垂直けい線の両方
+
+Miscpref*PreferenceTextFormForRuleLineStyle*ToggleButton2.labelString: 水平けい線のみ
+
+Miscpref*PreferenceTextFormForRuleLineStyle*ToggleButton3.labelString: 垂直けい線のみ
+
+Miscpref*PreferenceTextFormForPasteStartLocation*ToggleButton1.labelString: カーソル位置で貼り付けます
+
+Miscpref*PreferenceTextFormForPasteStartLocation*ToggleButton2.labelString: マウス・ポインター位置で貼り付けます
+
+Miscpref*PreferenceTextFormForCursorBlink*ToggleButton1.labelString: カーソル明滅を使用不可にします
+
+Miscpref*PreferenceTextFormForCursorBlink*ToggleButton2.labelString: カーソル明滅を使用可能にします
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton1.labelString: ウィンドウの移動またはフォント・サイズの縮小はしません
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton2.labelString: ウィンドウの移動、および必要に応じてフォント・サイズを縮小します
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton3.labelString: フォント・サイズの縮小のみ
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton4.labelString: ラージ画面フォントを使用/記憶します
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton5.labelString: フォント・サイズの縮小、および必要に応じてウィンドウを移動します
+
+Miscpr52*PreferenceTextFormForPrintKeyLocation*ToggleButton1.labelString: 印刷キーに対するデフォルトのマッピングを使用します
+
+Miscpr52*PreferenceTextFormForPrintKeyLocation*ToggleButton2.labelString: 印刷 = システム印刷、シフトされた印刷 = ローカル印刷
+
+Miscpr52*PreferenceTextFormForPrintKeyLocation*ToggleButton3.labelString: 印刷 = ローカル印刷、シフトされた印刷 = システム印刷
+
+Miscpr32*PreferenceTextFormForPrintKeyLocation*ToggleButton1.labelString: 印刷キーに対するデフォルトのマッピングを使用します
+
+Miscpr32*PreferenceTextFormForPrintKeyLocation*ToggleButton2.labelString: 印刷 = pa1、シフトされた印刷 = ローカル印刷
+
+Miscpr32*PreferenceTextFormForPrintKeyLocation*ToggleButton3.labelString: 印刷 = ローカル印刷、シフトされた印刷 = pa1
+
+Miscpr32*PreferenceTextFormForBracket*ToggleButton1.labelString: 大括弧の変換を使用不可にします
+
+Miscpr32*PreferenceTextFormForBracket*ToggleButton2.labelString: 大括弧の変換を使用可能にします
+
+Miscpr32*PreferenceTextFormForAutomaticReconnect*ToggleButton1.labelString: ログオフの後にウィンドウは除去されます
+
+Miscpr32*PreferenceTextFormForAutomaticReconnect*ToggleButton2.labelString: ログオフの後もウィンドウは残されます
+
+Miscpref*PreferenceTextFormForHotspots*ToggleButton1.labelString: ホット・スポットを使用不可にします
+
+Miscpref*PreferenceTextFormForHotspots*ToggleButton2.labelString: 第 1 ボタンの 1 回のクリックでホット・スポットを使用可能にします
+
+Miscpref*PreferenceTextFormForHotspots*ToggleButton3.labelString: 第 1 ボタンのダブルクリックでホット・スポットを使用可能にします
+
+Miscpref*PreferenceTextFormForTypeAhead*ToggleButton1.labelString: キーボード・バッファリングを使用不可にします
+
+Miscpref*PreferenceTextFormForTypeAhead*ToggleButton2.labelString: キーボード・バッファリングを使用可能にします
+
+Miscpr52*PreferenceTextFormForTypeAhead*ToggleButton3.labelString: i5/OS ホストの設定を使用します
+
+Miscpr52*PreferenceTextFormForErrorResetKeys*ToggleButton1.labelString: エラーのある行の上だけでのリセット・キーまたは左マウス・ボタン
+
+Miscpr52*PreferenceTextFormForErrorResetKeys*ToggleButton2.labelString: さらに、カーソル移動キーまたはすべてマウス・ボタン
+
+Miscpr52*PreferenceTextFormForErrorResetKeys*ToggleButton3.labelString: ほとんどのキーおよびすべてのマウス・ボタン
+
+Miscpref*PreferenceTextFormForHotspotHighlight*ToggleButton1.labelString: ホット・スポット強調表示を使用不可にします
+
+Miscpref*PreferenceTextFormForHotspotHighlight*ToggleButton2.labelString: ホット・スポット強調表示を使用可能にします
+
+Miscpref*PreferenceTextFormForDefaultCopyType*ToggleButton1.labelString: リニア・コピー
+
+Miscpref*PreferenceTextFormForDefaultCopyType*ToggleButton2.labelString: ブロック・コピー
+
+Miscpref*PreferenceTextFormForTextType*ToggleButton1.labelString:         論理テキスト
+
+Miscpref*PreferenceTextFormForTextType*ToggleButton2.labelString:         可視テキスト
+
+Miscpref*PreferenceTextFormForTextOrientation*ToggleButton1.labelString:  左から右
+
+Miscpref*PreferenceTextFormForTextOrientation*ToggleButton2.labelString:  右から左
+
+Miscpref*PreferenceTextFormForNumeralShape*ToggleButton1.labelString:     公称
+
+Miscpref*PreferenceTextFormForNumeralShape*ToggleButton2.labelString:     国際
+
+Miscpref*PreferenceTextFormForNumeralShape*ToggleButton3.labelString:     コンテキスト
+
+Miscpref*PreferenceTextFormForInsertMode*ToggleButton1.labelString: 自動リセットを使用可能にして挿入モードのデフォルトをオフに設定します
+
+Miscpref*PreferenceTextFormForInsertMode*ToggleButton2.labelString: 自動リセットを使用不可にして挿入モードのデフォルトをオフに設定します
+
+Miscpref*PreferenceTextFormForInsertMode*ToggleButton3.labelString: 自動リセットを使用不可にして挿入モードのデフォルトをオンに設定します
+
+Miscpref*PreferenceTextFormForInputOnlyCursorMovement*ToggleButton1.labelString: 入力専用カーソル移動を使用不可にします
+
+Miscpref*PreferenceTextFormForInputOnlyCursorMovement*ToggleButton2.labelString: 入力専用カーソル移動を使用可能にします
+
+Miscpref*PreferenceTextFormForAudioAlarm*ToggleButton1.labelString: 音声アラームを使用不可にします
+
+Miscpref*PreferenceTextFormForAudioAlarm*ToggleButton2.labelString: 音声アラームを使用可能にします
+
+MiscprVT*PreferenceTextFormForCursorBlink*ToggleButton1.labelString: カーソル明滅を使用不可にします
+
+MiscprVT*PreferenceTextFormForCursorBlink*ToggleButton2.labelString: カーソル明滅を使用可能にします
+
+MiscprVT*PreferenceTextFormForApplicationCursor*ToggleButton1.labelString: アプリケーション・カーソル・モードを使用不可にします
+
+MiscprVT*PreferenceTextFormForApplicationCursor*ToggleButton2.labelString: アプリケーション・カーソル・モードを使用可能にします
+
+MiscprVT*PreferenceTextFormForApplicationKeypad*ToggleButton1.labelString: アプリケーション・キーパッド・モードを使用不可にします
+
+MiscprVT*PreferenceTextFormForApplicationKeypad*ToggleButton2.labelString: アプリケーション・キーパッド・モードを使用可能にします
+
+MiscprVT*PreferenceTextFormForAutoLineFeed*ToggleButton1.labelString: 自動改行を使用不可にします
+
+MiscprVT*PreferenceTextFormForAutoLineFeed*ToggleButton2.labelString: 自動改行を使用可能にします
+
+MiscprVT*PreferenceTextFormForAutoResize*ToggleButton1.labelString: 自動サイズ変更を使用不可にします
+
+MiscprVT*PreferenceTextFormForAutoResize*ToggleButton2.labelString: 自動サイズ変更を使用可能にします
+
+MiscprVT*PreferenceTextFormForAutoWrapAround*ToggleButton1.labelString: 自動循環を使用不可にします
+
+MiscprVT*PreferenceTextFormForAutoWrapAround*ToggleButton2.labelString: 自動循環を使用可能にします
+
+MiscprVT*PreferenceTextFormForClearScreenWithBlanks*ToggleButton1.labelString: ブランクによる画面消去を使用不可にします
+
+MiscprVT*PreferenceTextFormForClearScreenWithBlanks*ToggleButton2.labelString: ブランクによる画面消去を使用可能にします
+
+MiscprVT*PreferenceTextFormForExitOnDisconnect*ToggleButton1.labelString: 切断時に終了を使用不可にします
+
+MiscprVT*PreferenceTextFormForExitOnDisconnect*ToggleButton2.labelString: 切断時に終了を使用可能にします
+
+MiscprVT*PreferenceTextFormForJumpScroll*ToggleButton1.labelString: 高速画面移動を使用不可にします
+
+MiscprVT*PreferenceTextFormForJumpScroll*ToggleButton2.labelString: 高速画面移動を使用可能にします
+
+MiscprVT*PreferenceTextFormForMarginBell*ToggleButton1.labelString: マージン・ベルを使用不可にします
+
+MiscprVT*PreferenceTextFormForMarginBell*ToggleButton2.labelString: マージン・ベルを使用可能にします
+
+MiscprVT*PreferenceTextFormForMarginBellColumn*textFieldLabel.labelString: 行の終わりからのカラム数
+
+MiscprVT*PreferenceTextFormForReverseWrapAround*ToggleButton1.labelString: 逆循環を使用不可にします
+
+MiscprVT*PreferenceTextFormForReverseWrapAround*ToggleButton2.labelString: 逆循環を使用可能にします
+
+MiscprVT*PreferenceTextFormForVisibleStatusLine*ToggleButton1.labelString: 状況表示行を使用不可にします
+
+MiscprVT*PreferenceTextFormForVisibleStatusLine*ToggleButton2.labelString: 状況表示行を使用可能にします
+
+MiscprVT*PreferenceTextFormForVisualBell*ToggleButton1.labelString: 可視ベルを使用不可にします
+
+MiscprVT*PreferenceTextFormForVisualBell*ToggleButton2.labelString: 可視ベルを使用可能にします
+
+
+
+!**************************************
+!**   Messages at bottom of window   **
+!**************************************
+
+Miscpr52*MiscprefMsgHelpRequested:     5250 セッションからヘルプが要求されました。
+
+Miscpr32*MiscprefMsgHelpRequested:     3270 セッションからヘルプが要求されました。
+
+MiscprVT*MiscprefMsgHelpRequested:     VT Emulator セッションからヘルプが要求されました。
+
+Miscpref*MiscprefMsgPreferenceApplied: 設定の変更が一時的に適用されました。
+
+Miscpref*MiscprefMsgPreferencesSaved:  設定の変更が保管されました。
+
+Miscpref*MiscprefMsgDefaultsApplied:   デフォルトの設定の変更が一時的に適用されました。
+
+Miscpref*MiscprefMsgDefaultsNotSet:    デフォルトの設定の変更は設定されていません。
+
+Miscpref*MiscprefMsgNoAccess:          ディレクトリーにアクセスすることができません。
+
+
+Miscpref*MiscprefMsgNoMake:            ディレクトリーを作成することができません。
+
+Miscpref*MiscprefMsgFileOpenError:     保管中のエラー:  ファイルをオープンすることができません。
+
+Miscpref*MiscprefMsgFileWriteError:    保管中のエラー:  ファイルに書き込むことができません。
+
+
+
+!********************************
+!**  Dialog Box Resources      **
+!********************************
+Miscpref*exitDialog.dialogTitle:              終了の警告
+
+Miscpref*exitDialog.okLabelString:            保管
+
+Miscpref*exitDialog.cancelLabelString:        保管しない
+
+! this cannot be much longer
+Miscpref*exitDialog.messageString:            各種設定の変更に対する保管されていない変更があります。
+
+Miscpref*setDefaultsDialog.dialogTitle:       デフォルトの警告の設定
+
+Miscpref*setDefaultsDialog.okLabelString:     はい
+
+Miscpref*setDefaultsDialog.cancelLabelString: いいえ
+
+! this cannot be much longer
+Miscpref*setDefaultsDialog.messageString:     すべての設定の変更をデフォルト値に戻してもよろしいですか？
+/*******************************************************************************
+**  saveDialog resource
+*******************************************************************************/
+MiscprVT*saveDialog.dialogTitle: 保管オプション
+
+MiscprVT*saveDialog*saveDialogTitle.labelString: 保管オプションを選択してください。
+
+MiscprVT*saveDialog*saveChangedOnly.labelString: 変更された設定の変更のみを保管
+
+MiscprVT*saveDialog*saveAll.labelString: すべての設定の変更を保管
+
+MiscprVT*saveDialog*saveButton.labelString: 保管
+
+MiscprVT*saveDialog*cancelButton.labelString: 取消
+! ENGL1SH_VERS10N 1.4.2.1 DO NOT REMOVE OR CHANGE THIS LINE

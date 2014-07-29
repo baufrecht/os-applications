@@ -1,0 +1,38 @@
+////This file contains the pop-up keypad customization program on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file will be stored in locale specific ASCII (code page 819 for Latin1 languages). ////Help text format (this section is not displayed to IBM emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1.
+//// 3. This help file contains help text for the 3270 and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator. A comment line of four "/" characters followed by:
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+//// 3B. "5250" indicates subsequent data is only displayed in 5250 on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in both 3270 and 5250 on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+////  3D. Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters.  The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Do not change the order of topics in this help text file.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.----"3270 鍵台自行設定說明"
+++++"一般資訊"
+如需使用這個說明檢視程式的資訊，請參閱主要模擬器說明的第一個主題 (選取模擬器視窗中的「說明」功能表列選項)。這個說明資訊說明如何建立及變更鍵台。鍵台具有鍵台按鈕。每個鍵台按鈕都有與按鈕相關的鍵順序或播放檔案。附註：一次只能啟動一個鍵台自行設定程式。++++"視窗佈置"
+鍵台自行設定視窗具有鍵盤動作選項區域 (左側)、鍵台按鈕工作區域 (右側)、動作列區域 (底端) 及訊息區域 (底端)。個別視窗可顯示您目前使用的鍵台。「鍵盤動作選項區域」包含下列各項：
+
+1)「可用的動作清單」就是可用的鍵盤動作。在這個清單中選取的動作會成為現行動作。2)「字元清單」會列出所有可用的字元。已選取的字元會成為現行動作。若要選取字元，請按一下字元。3)「動作說明」按鈕可在動作說明視窗中，提供鍵盤動作定義。您可以列印動作定義。4)「按鈕動作 ->」按鈕可讓現行動作與鍵台按鈕工作區域中的鍵台按鈕產生關聯。附註：只有一個動作可以成為現行動作。「鍵台按鈕工作區域」包含下列各項：
+
+1)「現行鍵台」可顯示您正在使用的鍵台。如果這是新鍵台，而您尚未儲存鍵台，現行鍵台就會是空白的。2)「現行鍵台按鈕文字」就是出現在鍵台按鈕上的文字。按一下按鈕文字區域，以使用鍵台新增或變更按鈕文字。按鈕文字區域限制為 32 個字元。附註：您必須選取鍵台按鈕 (按一下個別鍵台自訂程式視窗中的鍵台按鈕)。3)「現行鍵台按鈕動作」就是鍵盤動作或與鍵台按鈕相關的播放檔案。若要將鍵盤動作指定給鍵台按鈕，請按一下想要的鍵盤動作，再按「按鈕動作 ->」。若要將播放檔案指定給鍵台按鈕，請選取「選取播放檔案動作」，選取播放檔案，並按一下「確定」。您可以按一下現行鍵台按鈕動作區域，以使用鍵盤變更按鈕動作 (例如新增到簡易鍵盤巨集或新增另一個動作)。按鈕動作區域限制為大約 100 個字元。請參閱「多重動作」主題，以取得使用鍵台按鈕的多重鍵盤動作的資訊。4)「清除鍵台按鈕」可清除已選取的鍵台按鈕。5)「選取播放檔案動作」可列出播放檔案，讓播放檔案與鍵台按鈕產生關聯。6)「確定」按鈕可接受對於現行鍵台按鈕所進行的變更。7)「取消」按鈕可取消對於現行鍵台按鈕所進行的變更。「動作列」按鈕可提供下列功能：
+1)「儲存」可在鍵台檔案中儲存鍵台變更。您可以為鍵台檔案命名。2)「刪除鍵台檔案」可讓您刪除先前建立的鍵台檔案。3)「變更鍵台樣式」可讓您變更蹦現鍵台中的列數及欄數、變更鍵台按鈕文字中的文字字元數目，以及在蹦現與下拉鍵台之間切換。4)「結束」可結束「鍵台自行設定程式」。5)「說明」可顯示這個說明本文。訊息區域：
+可顯示資訊及錯誤訊息。個別鍵台自訂程式視窗可顯示您的現行鍵台。按一下鍵台按鈕，以變更鍵台按鈕文字或鍵台按鈕動作。如果您使用蹦現鍵台，則視窗會顯示蹦現鍵台視窗的顯示方式。如果您使用下拉鍵台，則視窗會顯示鍵台按鈕。您可以透過主要模擬器功能表列，來使用下拉鍵台按鈕。
+
+++++"入門"
+建立及使用蹦現鍵台的步驟如下 (利用鍵盤動作來定義鍵台按鈕)。////The note below was moved up from the end of this topic
+附註：「簡易鍵盤巨集」主題會列出利用簡易鍵盤巨集 (按鍵動作順序) 來建立鍵台按鈕的步驟。1) 從模擬器階段作業啟動鍵台自行設定程式 (或許已經完成)。2) 建立新鍵台 (可能已經完成)。3) 按一下個別鍵台自訂程式視窗中的鍵台按鈕 (通常從左上按鈕開始)。4) 按一下「可用的動作」清單中的鍵盤動作。5) 按一下「按鈕動作 ->」。6) 按一下現行鍵台按鈕文字區域，並鍵入鍵台按鈕文字 (會出現在鍵台按鈕上)。7) 按一下「確定」以接受鍵台按鈕變更。8) 儲存鍵台，將鍵台檔名給予鍵台。9) 使用主要模擬器來啟動蹦現鍵台 (「鍵台...」)，並嘗試新鍵台。您可以變更及重新儲存鍵台檔案 (例如，新增其他鍵台按鈕或變更鍵台按鈕)。++++"鍵台樣式"
+您可以輕鬆地變更蹦現鍵台中的列數及欄數、變更鍵台按鈕文字中的文字字元數目 (所有鍵台按鈕的大小都相同)，以及在蹦現與下拉鍵台之間切換。按一下「變更鍵台樣式」，即可變更上述任一項。++++"蹦現或下拉"
+您可以按一下「變更鍵台樣式」，輕鬆地將現有的鍵台變更為蹦現鍵台或下拉鍵台。蹦現鍵台為預設值。蹦現鍵台就是具有您定義的鍵台按鈕的個別視窗。當您按一下鍵台按鈕時，就會在啟動蹦現鍵台視窗的 3270 階段作業中，處理相關的動作 (鍵盤動作或播放檔案)。您可決定顯示及不顯示蹦現鍵台視窗的時間。3270 階段作業可以使用多重蹦現鍵台視窗。使用主要模擬器功能表列，可存取下拉鍵台。如果您具有下拉鍵台，則「鍵台」功能表列選項就會新增到您的功能表列中。當您按一下下拉鍵台按鈕時，就會在 3270 階段作業中，處理相關的動作。如果您利用相同鍵台來使用多重 3270 階段作業，則最好是使用下拉鍵台。蹦現鍵台要求每個 3270 階段作業具有個別蹦現鍵台視窗。如果您的鍵台有許多鍵台按鈕 (10 到 20 個鍵台按鈕，根據您的監視器解析度而定)，或是有不同 3270 階段作業的不同鍵台，則蹦現鍵台就會是比較好的選擇。如果您有多重下拉鍵台，則必須先選取鍵台，再選取下拉鍵台按鈕。您可以同時擁有蹦現鍵台及下拉鍵台。如果您有多重鍵台，則可以考慮定義由多重階段作業作為下拉鍵台的鍵台，並將剩餘鍵台作為蹦現鍵台。啟動 3270 階段作業時，就會啟動蹦現鍵台。您可以使用「IBM 3270 模擬器安裝程式」，來指定要啟動的蹦現鍵台：選取階段作業，並按一下「連線 -> 編輯」。按一下「進階 3270 連線...」，並在「其他參數」中，輸入 -KEYPAD、一個空格及 (區分大小寫) 鍵台檔名。-KEYPAD 有區分大小寫。如果您的鍵台檔名包含任何空格，請使用雙引號來含括檔名 (例如 -KEYPAD "鍵台檔名")。++++"簡易鍵盤巨集"
+鍵盤巨集可讓您輕鬆地將一連串字元鍵入 3270 階段作業。您可以用簡易鍵盤巨集來建立鍵台按鈕，如下所示：
+
+1)從模擬器階段作業啟動鍵台自行設定程式 (或許已經完成)，並選取將具有鍵盤巨集的鍵台檔案 (或許已經完成)。
+2) 為鍵盤巨集按一下個別鍵台視窗中的鍵台按鈕。////Note: The translation of String() below should match the translated resource text for AllShare*string() in the keyboard remapping resource file.
+3) 按一下「可用的動作」清單中的 String() 鍵盤動作。4) 按一下「按鈕動作 ->」。5) 按一下現行鍵台按鈕動作區域中的 String() 的括弧之間。6) 鍵入雙引號、您的鍵盤巨集字元及雙引號；例如 String("您的巨集字元")。7) 按一下現行鍵台按鈕文字區域，並鍵入鍵台按鈕文字 (會出現在鍵台按鈕上)。8) 按一下「確定」以接受鍵台按鈕變更。9) 儲存鍵台。10) 使用主要模擬器來測試鍵台鍵盤巨集 (蹦現鍵台或下拉鍵台)。如果您想變更鍵台，則可以變更及重新儲存鍵台。附註：您應該使用「記錄」特性來建立較長或複雜的鍵盤巨集。播放檔案可以與鍵台按鈕產生關聯。請參閱主要模擬器「說明本文」中的「記錄」及「播放」主題。++++"編輯按鈕文字及動作"
+使用鍵盤可以變更鍵台按鈕文字及鍵台按鈕動作。按一下想要的區域，並使用鍵盤來變更。按一下「確定」以接受變更。請參閱「多重動作」主題，以取得針對鍵台按鈕定義多重鍵盤動作的資訊。變更的動作必須正確拼寫，且有區分大小寫。++++"多重動作"
+現行鍵台按鈕動作區域限制為大約 100 個字元。您可以為鍵台按鈕指定多重鍵盤動作。如果鍵盤動作會超過 100 個字元，則可將鍵順序記錄到播放檔案中，並將播放檔案指定為鍵台按鈕動作 (請參閱主要模擬器說明本文主題「記錄」及「播放」，以取得播放檔案的詳細資訊)。若要指定鍵台按鈕上的多重鍵盤動作，請按一下現行鍵台按鈕動作區域，並鍵入想要的一系列動作 (以單一空格來分隔)。變更的動作必須正確拼寫，且有區分大小寫。您也可以使用滑鼠，將鍵盤動作插入鍵台按鈕動作區域：按一下鍵台按鈕動作區域中想要的位置，選取想要新增的鍵盤動作，並按一下「按鈕動作 ->」按鈕。++++"字元清單"
+字元清單容許存取可能無法從鍵盤存取的字元。指定鍵台按鈕的字元：在個別鍵台視窗中，按一下想要的鍵台按鈕。在字元清單中，按一下想要的字元。按一下「按鈕動作 ->」。按一下現行鍵台按鈕文字區域，並鍵入鍵台按鈕文字 (會出現在鍵台按鈕上)。按一下「確定」以接受變更。將字元新增到鍵盤巨集：按一下顯示鍵盤巨集的鍵台按鈕。在字元清單中，按一下想要的字元。按一下鍵盤巨集的現行鍵台按鈕動作區域 (在 String() 動作內) 中，應該插入新增字元的位置 (游標左移及右移鍵可以將游標移到正確的位置)。按一下「按鈕動作 ->」。按一下「確定」以接受變更。++++"移動鍵台按鈕"
+您可以移動蹦現鍵台按鈕。在要移動的鍵台按鈕上，按一下滑鼠右鍵，將滑鼠指標移到新的鍵台按鈕位置，並按一下滑鼠左鍵。如果新位置已經定義為鍵台按鈕，則會切換這兩個鍵台按鈕。
+//// ENGL1SH_VERS10N 1.2 DO NOT REMOVE OR CHANGE THIS LINE

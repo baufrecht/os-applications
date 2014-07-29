@@ -4,13 +4,13 @@
 	<label lang="en" value="Display" />
 
 	<entry name="xrandrcmd" value="">
-		<label lang="de" value="eigener xrandr Befehl (hat Vorang)" />
+		<label lang="de" value="Eigener xrandr Befehl (hat Vorrang)" />
 		<label lang="en" value="xrandr command (has precedency)" />
 	</entry>
 
 	<group name="firstscreen">
-	  <label lang="en" value="settings for first screen" />
-	  <label lang="de" value="Einstellungen für erstes Display" />
+	  <label lang="en" value="Settings for first screen (tooltipps on mouse over)"/>
+	  <label lang="de" value="Einstellungen für erstes Display (Tooltipps bei Mouse-Over)"/>
 	  <choice name="connect" value="DVI">
 	    <label lang="de" value="verbunden an" />
 	    <label lang="en" value="connected to" />
@@ -38,6 +38,7 @@
 	    <option name="HDMI-1" value="HDMI-1" />                                                                                                                                             
 	    <option name="HDMI-2" value="HDMI-2" />                                                                                                                                             
  	    <option name="VGA" value="VGA" />                                                                                                                                                   
+ 	    <option name="VGA0" value="VGA" />                                                                                                                                                   
 	    <option name="VGA1" value="VGA1" />                                                                                                                                               
 	    <option name="VGA2" value="VGA2" />                                                                                                                                               
  	    <option name="VGA-0" value="VGA-0" />                                                                                                                                                   
@@ -55,6 +56,11 @@
 	    <option name="LVDS-0" value="LVDS-0" />
 	    <option name="LVDS-1" value="LVDS-1" />
 	    <option name="LVDS-2" value="LVD-2" />
+
+	    <option name="DisplayPort-0" value="DisplayPort-0" />
+	    <option name="DisplayPort-1" value="DisplayPort-1" />
+	    <option name="DisplayPort-2" value="DisplayPort-1" />
+
 	    <option name="DP-0" value="DP-0" />
 	    <option name="DP-1" value="DP-1" />
 	    <option name="DP-2" value="DP-2" />
@@ -80,6 +86,7 @@
 	    <option name="1280x1024" value="1280x1024" />
 	    <option name="1440x900" value="1440x900" />
 	    <option name="1600x1200" value="1600x1200" />
+	    <option name="1600x900" value="1600x900" />
 	    <option name="1680x1050" value="1680x1050" />
 	    <option name="1920x1080" value="1920x1080" />
 	    <option name="1920x1200" value="1920x1200" />
@@ -105,10 +112,26 @@
 	      <label lang="de" value="kopfüber" />
 	    </option>
 	  </choice>
+	  <entry name="fallbackfrequency" value="">
+	    <label lang="de" value="Bildfrequnz an DVI-VGA Adapter"/>
+	    <label lang="en" value="frequency when DVI-VGA adapter is used"/>
+                 <tip lang="de" value="&lt;html&gt;
+		    Hinweis: An VGA-DVI-Adaptern wird häufig keine saubere&lt;br&gt;
+		    EDID-Information übergeben. In diesem Fall müssen Sie die&lt;br&gt;
+		    vom Display oder Monitor benötigte Frequenz hier einstellen.
+                  &lt;/html&gt;"/>
+                 <tip lang="en" value="&lt;html&gt;
+                    Hint: With the use of DVI-VGA adapters, suitable EDID-Information &lt;br&gt;
+		    could get lost. Set the frequency the display needs here by hand.
+                 &lt;/html&gt;"/>
+	  </entry>
 	</group>
+
+	<!-- ############################################################## -->
+
 	<group name="secondscreen">
-	  <label lang="en" value="settings for second screen" />
-	  <label lang="de" value="Einstellungen für zweites Display" />
+	  <label lang="en" value="settings for second screen (tooltipps on mouse over)"/>
+	  <label lang="de" value="Einstellungen für zweites Display (Tooltipps bei Mouse-Over)"/>
 	  <choice name="connect" value="disabled">
 	    <label lang="de" value="verbunden an" />
 	    <label lang="en" value="connected to" />
@@ -132,6 +155,7 @@
 	    <option name="HDMI-1" value="HDMI-1" />                                                                                                                                             
 	    <option name="HDMI-2" value="HDMI-2" />                                                                                                                                             
  	    <option name="VGA" value="VGA" />                                                                                                                                                   
+ 	    <option name="VGA0" value="VGA" />                                                                                                                                                   
 	    <option name="VGA1" value="VGA1" />                                                                                                                                               
 	    <option name="VGA2" value="VGA2" />                                                                                                                                               
  	    <option name="VGA-0" value="VGA-0" />                                                                                                                                                   
@@ -149,6 +173,11 @@
 	    <option name="LVDS-0" value="LVDS-0" />
 	    <option name="LVDS-1" value="LVDS-1" />
 	    <option name="LVDS-2" value="LVD-2" />
+
+	    <option name="DisplayPort-0" value="DisplayPort-0" />
+	    <option name="DisplayPort-1" value="DisplayPort-1" />
+	    <option name="DisplayPort-2" value="DisplayPort-1" />
+
 	    <option name="DP-0" value="DP-0" />
 	    <option name="DP-1" value="DP-1" />
 	    <option name="DP-2" value="DP-2" />
@@ -174,6 +203,7 @@
 	    <option name="1280x1024" value="1280x1024" />
 	    <option name="1440x900" value="1440x900" />
 	    <option name="1600x1200" value="1600x1200" />
+	    <option name="1600x900" value="1600x900" />
 	    <option name="1680x1050" value="1680x1050" />
 	    <option name="1920x1080" value="1920x1080" />
 	    <option name="1920x1200" value="1920x1200" />
@@ -182,19 +212,19 @@
 	    <label lang="de" value="Positionierung" />
 	    <label lang="en" value="positioning" />
 	    <option value="--right-of">
-	      <label lang="de" value="rechts von erstem display" />
+	      <label lang="de" value="rechts von erstem Display" />
 	      <label lang="en" value="right of first display" />
 	    </option>
 	    <option value="--left-of">
-	      <label lang="de" value="links von erstem display" />
+	      <label lang="de" value="links von erstem Display" />
 	      <label lang="en" value="left of first display" />
 	    </option>
 	    <option value="--above">
-	      <label lang="de" value="über erstem Display" />
+	      <label lang="de" value="über dem erstem Display" />
 	      <label lang="en" value="above first display" />
 	    </option>
 	    <option value="--below">
-	      <label lang="de" value="unter erstem Display" />
+	      <label lang="de" value="unter dem erstem Display" />
 	      <label lang="en" value="below first display" />
 	    </option>
 	  </choice>

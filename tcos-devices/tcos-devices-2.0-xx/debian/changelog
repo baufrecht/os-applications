@@ -1,3 +1,24 @@
+tcos-devices (2.0-16) unstable; urgency=low
+
+  * add VGA0 as choice option for display connectors
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Mon, 21 Jul 2014 14:44:55 +0200
+
+tcos-devices (2.0-15) unstable; urgency=low
+
+  * FIX: https://github.com/openthinclient/openthinclient-os-core/issues/14
+  * have a input filed for frequency
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Wed, 16 Jul 2014 17:13:22 +0200
+
+tcos-devices (2.0-14) unstable; urgency=low
+
+  * UPDATE devices.xml
+      - added connector name DisplayPort-X
+      - added resolution 1600x900
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 04 Jul 2014 08:47:10 +0200
+
 tcos-devices (2.0-13) unstable; urgency=low
 
   * this update tries to fix some versioning issues

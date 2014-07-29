@@ -1,0 +1,172 @@
+//// ENGLISH_SOURCE_VERSION= 1.2 
+////This file contains the pop-up keypad customization program on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file will be stored in locale specific ASCII (code page 819 for Latin1 languages). 
+
+////Help text format (this section is not displayed to IBM emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1.
+//// 3. This help file contains help text for the 3270 and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator. A comment line of four "/" characters followed by:
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+//// 3B. "5250" indicates subsequent data is only displayed in 5250 on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in both 3270 and 5250 on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+////  3D. Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters.  The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Do not change the order of topics in this help text file.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+
+----"Personnalisation de blocs de touches 3270 - Aide"
+++++"Informations générales"
+Pour plus de détails sur l'utilisation du programme d'affichage de l'aide, reportez-vous à la première section de l'aide principale de l'émulateur (sélectionnez le menu "Aide" dans la fenêtre de l'émulateur).
+
+Ces informations décrivent comment créer et modifier des blocs de touches. Un bloc de touches comporte des boutons. Chaque bouton de bloc de touches est associé à une séquence de touches ou à un fichier de macros.
+
+Remarque : Vous ne pouvez activer qu'un seul programme de personnalisation de blocs de touches à la fois.
+
+++++"Présentation de la fenêtre"
+La fenêtre de personnalisation de blocs de touches comprend une zone de sélection d'action du clavier (à gauche), une zone de travail pour les boutons de bloc de touches (à droite), une barre de sélection et une zone de messages (partie inférieure). Une fenêtre distincte affiche le bloc de touches que vous êtes en train de définir ou modifier.
+
+La zone de sélection d'action du clavier comprend :
+
+1) La "Liste des actions disponibles", qui répertorie les actions du clavier disponibles. L'action sélectionnée dans la liste devient l'action en cours.
+
+2) La "Liste des caractères", qui répertorie les caractères disponibles. Le caractère sélectionné dans la liste devient l'action en cours. Pour sélectionner un caractère, cliquez sur celui-ci.
+
+3) Le bouton "Aide Action" affiche la fenêtre d'aide qui fournit des définitions d'action de clavier. Les définitions d'action peuvent être imprimées.
+
+4) Le bouton "Action du bouton ->" associe l'action en cours avec le bouton de bloc de touches dans la zone de travail relative aux boutons de bloc de touches.
+
+Remarque : Il ne peut y avoir qu'une seule action en cours.
+
+
+La zone de travail relative aux boutons de bloc de touches comprend:
+
+1) La zone "Bloc de touches en cours", qui affiche le nom du fichier de bloc de touches sur lequel vous travaillez. S'il s'agit d'un nouveau bloc de touches que vous n'avez pas encore sauvegardé, la zone Bloc de touches en cours sera à blanc.
+
+2) La zone "Texte du bouton en cours", qui contient le texte qui apparaît sur le bouton de bloc de touches. Cliquez dans cette zone pour ajouter ou modifier l'intitulé du bouton à l'aide du clavier. La zone de texte du bouton est limitée à 32 caractères. Remarque : Vous devez avoir sélectionné un bouton de bloc de touches (pour cela, cliquez sur un bouton de bloc de touches dans la fenêtre de personnalisation de bloc de touches distincte).
+
+3) La zone "Action du bouton en cours", qui contient l'action de clavier ou le nom du fichier de macros associé au bouton de bloc de touches. Pour affecter une action à un bouton de bloc de touches, cliquez sur l'action de clavier voulue, puis sur "Action du bouton->". Pour affecter un fichier de macros au bouton de bloc de touches, cliquez sur "Sélection du fichier de macros", sélectionnez un fichier de macros et cliquez sur "OK". Vous pouvez cliquer dans la zone Action du bouton en cours pour changer l'action du bouton à l'aide du clavier (par exemple, pour ajouter une macro de clavier simple ou une autre action). Cette zone est limitée à 100 caractères. Pour plus de détails sur l'utilisation de plusieurs actions de clavier pour un bouton de bloc de touches, reportez-vous à la section Actions multiples.
+
+4) Le bouton "Suppression du bouton en cours", qui supprime le bouton de bloc de touches sélectionné.
+
+5) Le bouton "Sélection du fichier de macros", qui vous permet d'afficher vos fichiers de macros afin d'en associer un au bouton de bloc de touches.
+
+6) Le bouton "OK", qui valide les modifications apportées au bouton de bloc de touches en cours.
+
+7) Le bouton "Annulation", qui annule les modifications apportées au bouton de bloc de touches en cours.
+
+
+Les boutons de la barre de sélection fournissent les fonctions suivantes :
+
+1) "Sauvegarde" permet de sauvegarder les modifications de bloc de touches dans un fichier de bloc de touches. Vous nommez vos fichiers de blocs de touches.
+
+2) "Suppr fichier bloc de touches" permet de supprimer les fichiers de blocs de touches que vous avez précédemment créés.
+
+3) "Changt style bloc de touches" permet de changer le nombre de lignes et de colonnes dans un bloc de touches en incrustation, de changer le nombre de caractères du texte du bouton de bloc de touches et de passer d'un bloc de touches en incrustation à un bloc de touches déroulant ou inversement.
+
+4) "Sortie" permet de quitter le programme de personnalisation de bloc de touches.
+
+5) "Aide" permet d'afficher ce texte d'aide.
+
+
+Zone de message :
+Affiche des messages d'information et d'erreur.
+
+Une fenêtre de personnalisation de blocs de touches distincte affiche votre bloc de touches en cours. Cliquez sur un bouton de bloc de touches pour en modifier le texte ou changer les actions qui lui sont associées. Si vous modifiez un bloc de touches en incrustation, la fenêtre montre comment votre fenêtre de bloc de touches en incrustation sera affichée. Si vous modifiez un bloc de touches déroulant, la fenêtre affiche les boutons du bloc de touches. Les boutons des blocs de touches déroulants sont disponibles via la barre de menus de la fenêtre principale de l'émulateur.
+ 
+++++"Initiation"
+Pour créer et utiliser un bloc de touches en incrustation (définir un bouton de bloc de touches associé à une action de clavier), procédez comme suit :
+
+////The note below was moved up from the end of this topic
+Remarque : La section Macros de clavier simples contient la procédure à suivre pour créer un bouton de bloc de touches avec une macro de clavier simple (une séquence de touches).
+
+1) Démarrez le programme de personnalisation de blocs de touches à partir d'une session d'émulation (c'est probablement déjà fait).
+
+2) Créez un nouveau bloc de touches (il est possible que ce soit déjà fait).
+
+3) Cliquez sur un bouton de bloc de touches dans la fenêtre "Bloc de touches" distincte (en commençant généralement par le bouton supérieur gauche).
+
+4) Cliquez sur une action de clavier dans la liste des actions disponibles.
+
+5) Cliquez sur le bouton Action du bouton->.
+
+6) Cliquez dans la zone Texte du bouton en cours et tapez votre texte (il apparaîtra sur le bouton de bloc de touches).
+
+7) Cliquez sur OK pour accepter la modification du bouton de bloc de touches.
+
+8) Sauvegardez votre bloc de touches en lui affectant un nom de fichier de bloc de touches.
+
+9) Activez le bloc de touches en incrustation à partir de la fenêtre principale de l'émulateur (option Bloc de touches...) et essayez le nouveau bloc de touches.
+
+Vous pouvez modifier et resauvegarder le fichier de bloc de touches (par exemple, pour ajouter ou modifier des boutons de bloc de touches).
+
+++++"Style du bloc de touches"
+Vous pouvez aisément changer le nombre de lignes et de colonnes d'un bloc de touches en incrustation, changer le nombre de caractères du texte des boutons de bloc de touches (tous les boutons de bloc de touches ont la même taille), et passer d'un bloc de touches en incrustation à un bloc de touches déroulant ou inversement. Cliquez sur "Changt style bloc de touches" pour effectuer un de ces changements.
+
+++++"En incrustation ou déroulant"
+Vous pouvez aisément changer un bloc de touches en incrustation en bloc de touches déroulant ou inversement en cliquant sur le bouton "Changt style bloc de touches". Par défaut, les blocs de touches sont en incrustation.
+
+Un bloc de touches en incrustation est une fenêtre distincte qui contient des boutons de bloc de touches que vous définissez. Lorsque vous cliquez sur un bouton de bloc de touches, l'action associée (action de clavier ou fichier de macros) est exécutée dans la session 3270 qui a ouvert la fenêtre de bloc de touches en incrustation. Vous pouvez décider d'afficher la fenêtre de bloc de touches en incrustation et de la refermer à tout moment. Vous pouvez utiliser plusieurs fenêtres de blocs de touches en incrustation dans une session 3270.  
+
+Un bloc de touches déroulant est accessible à partir de la barre de menus de la fenêtre principale de l'émulateur. Si vous avez un bloc de touches déroulant, le menu Bloc de touches est ajouté à votre barre de menus. Lorsque vous cliquez sur un bouton de bloc de touches déroulant, l'action associée est exécutée dans la session 3270.
+
+Si vous utilisez plusieurs sessions 3270 avec le même bloc de touches, il est préférable d'utiliser un bloc de touches déroulant. Des blocs de touches en incrustation nécessiteraient une fenêtre de bloc de touches distincte pour chaque session 3270.
+
+Les blocs de touches en incrustation sont préférables si un bloc de touches comporte de nombreux boutons (10 à 20 boutons de bloc de touches, selon la résolution d'écran) ou si vous utilisez des blocs de touches différents dans des sessions 3270 différentes.
+
+Si vous avez plusieurs blocs de touches déroulants, vous devez sélectionner le bloc de touches voulu avant de sélectionner un bouton de bloc de touches déroulant.
+
+Vous pouvez avoir à la fois des blocs de touches en incrustation et des blocs de touches déroulants. Si vous avez plusieurs blocs de touches, vous pouvez envisager de définir un bloc de touches à utiliser comme bloc de touches déroulant dans plusieurs sessions, et les autres blocs de touches comme blocs de touches en incrustation.
+
+Un bloc de touches en incrustation peut être activé à l'ouverture de la session 3270. Vous pouvez utiliser le programme Configuration de l'émulateur IBM 3270 pour lancer un bloc de touches en incrustation : sélectionnez la session et cliquez sur Connexion-> Edition. Cliquez sur Connexion 3270 avancée..., puis entrez -KEYPAD suivi d'un espace et du nom de votre fichier de bloc de touches (en respectant les majuscules et les minuscules) dans la zone Autres paramètres. Le paramètre - KEYPAD tient compte de la distinction entre les majuscules et les minuscules. Si le nom du fichier de bloc de touches comprend des espaces, encadrez-le de guillemets doubles (par exemple, -KEYPAD "nom du fichier").
+
+++++"Macros de clavier simples"
+Les macros de clavier vous permettent de taper facilement une séquence de caractères dans votre session 3270. Pour créer un bouton de bloc de touches avec une macro de clavier simple, procédez comme suit :
+
+1) Démarrez le programme de personnalisation de blocs de touches à partir d'une session d'émulation (c'est probablement déjà fait) et sélectionnez le fichier de bloc de touches qui contiendra votre macro de clavier (c'est probablement déjà fait aussi).
+
+2) Dans la fenêtre de bloc de touches distincte, cliquez sur le bouton de bloc de touches à associer à votre macro de clavier.
+
+////Note: The translation of String() below should match the translated resource text for AllShare*string() in the keyboard remapping resource file.
+3) Cliquez sur l'action de clavier Chaîne() dans la liste des actions disponibles.
+
+4) Cliquez sur le bouton Action du bouton->.
+
+5) Cliquez entre les parenthèses de l'action Chaîne() dans la zone Action du bouton en cours.
+
+6) Tapez les caractères de votre macro de clavier entre guillemets, par exemple, Chaîne("caractères de votre macro").
+
+7) Cliquez dans la zone Texte du bouton en cours et tapez votre texte (il apparaîtra sur le bouton de bloc de touches).
+
+8) Cliquez sur OK pour accepter la modification du bouton de bloc de touches.
+
+9) Sauvegardez votre bloc de touches.
+
+10) Testez votre macro de clavier à l'aide de la fenêtre principale de l'émulateur (bloc de touches en incrustation ou déroulant).
+
+Si vous le souhaitez, vous pouvez modifier votre bloc de touches et le resauvegarder.
+
+Remarque : Pour créer une macro de clavier longue ou complexe, il est préférable d'utiliser la fonction d'enregistrement. Un fichier de macros peut être associé à un bouton de bloc de touches. Pour plus de détails, reportez-vous aux sections Enregistrement et Exécution dans l'aide principale de l'émulateur.
+
+++++"Modification de l'action et du texte du bouton"
+L'action et le texte du bouton de bloc de touches peuvent être modifiés à partir du clavier. Cliquez sur la zone voulue et modifiez-la à partir du clavier. Cliquez sur OK pour accepter les modifications. Pour plus de détails sur la définition de plusieurs actions de clavier pour un bouton de bloc de touches, reportez-vous à la section Actions multiples.
+
+Les actions modifiées doivent être tapées correctement ; veillez à respecter les minuscules/majuscules.
+
+++++"Actions multiples"
+La zone Action du bouton en cours est limitée à 100 caractères. Vous pouvez définir plusieurs actions de clavier pour un bouton de bloc de touches. Si vos actions de clavier comportent plus de 100 caractères, enregistrez la séquence de touches dans un fichier de macros et indiquez ce dernier comme action du bouton de bloc de touches (pour plus de détails sur les fichiers de macros, reportez-vous aux sections Enregistrement et Exécution de l'aide principale de l'émulateur).
+
+Pour définir plusieurs actions de clavier pour un bouton de bloc de touches, vous pouvez cliquez sur la zone Action du bouton en cours et taper la série d'actions voulues en séparant ces dernières par un seul espace. Les actions modifiées doivent être tapées correctement ; veillez à respecter les minuscules/majuscules. Vous pouvez également insérer une action de clavier dans la zone Action du bouton en cours à l'aide de la souris. Pour cela, cliquez à l'emplacement voulu dans cette zone, sélectionnez l'action de clavier à ajouter et cliquez sur le bouton Action du bouton->.
+
+++++"Liste des caractères"
+La liste des caractères permet d'accéder aux caractères inaccessibles depuis le clavier.
+
+Association d'un caractère à un bouton de bloc de touches : cliquez sur le bouton de bloc de touches choisi dans la fenêtre de bloc de touches distincte. Cliquez sur le caractère choisi dans la liste des caractères. Cliquez sur Action du bouton->. Cliquez dans la zone de texte du bouton en cours et tapez votre texte (il apparaîtra sur le bouton de bloc de touches). Cliquez sur OK pour accepter les modifications.
+
+Ajout d'un caractère à une macro de clavier : cliquez sur le bouton de bloc de touches qui affiche la macro de clavier. Cliquez sur le caractère choisi dans la liste des caractères. Cliquez dans la zone d'action du bouton actif de la macro de clavier (dans l'action Chaîne()), à l'emplacement auquel le caractère ajouté doit être inséré (les touches curseur gauche et curseur droit permettent de déplacer le curseur jusqu'à l'emplacement voulu). Cliquez sur Action du bouton->. Cliquez sur OK pour accepter les modifications.
+
+++++"Déplacement des boutons de bloc de touches"
+Vous pouvez déplacer les boutons de bloc de touches en incrustation. Cliquez sur le bouton de bloc de touches à déplacer à l'aide du bouton droit de la souris, placez le pointeur de la souris sur le nouvel emplacement voulu et cliquez sur cet emplacement à l'aide du bouton gauche de la souris. Si le nouvel emplacement était déjà occupé par un autre bouton de bloc de touches, les deux emplacements sont inversés.

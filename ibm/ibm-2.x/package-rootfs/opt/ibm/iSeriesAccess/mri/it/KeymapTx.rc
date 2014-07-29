@@ -1,0 +1,1749 @@
+!
+!
+!
+! This file contains the resource text strings for the IBM Network Station 3270, 5250, VTxxx
+! emulators, in particular the keyboard remapping, keypad customize, and playback edit programs.
+
+! This resource file is stored in locale specific ASCII (code page 819 for Latin1 languages).
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. Resource format:
+!    - A resource line starts with one of the following strings:
+!      Keymap52* : for keymapper resources
+!      Keypad52* : for keypad customize resources
+!      Playedit* : for playback editor resources
+!      Keyxxx52* : for resources shared by keymapper and keypad
+!      AllShare* : for resources shared by keymapper, keypad, and playback editor
+!    - Each string is followed by a resource name and a ":".
+!       Do NOT make any changes to the text to the left of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+
+!******************************************************************************
+!************************ BEGIN DO NOT TRANSLATE ******************************
+!******************************************************************************
+!*   The first section of resources are are locale specific but               *
+!*   DO NOT REQUIRE TRANSLATION.                                              *
+!*                                                                            *
+!* This source file enables the resource section for Latin1 and Latin2.       *
+!*                                                                            *
+!* For ru_RU or Latin5 locales and DBCS locales                               *
+!*      1. Place a '!' as the first character in each line in the Latin1      *
+!*      and Latin2 section                                                    *
+!*      2. Remove the '!' character for each resource line in the apropriate  *
+!*      section that matches your locale.                                     *
+!*                                                                            *
+!* For example, ru_RU should place ! in front of all lines in the LATIN1      *
+!* section remove the ! from all lines in the LATIN5 section.                 *
+!******************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN1 and LATIN2                ****************
+!**************************************************************************
+Keypad52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-110-*-*
+Keypad52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-90-*-*
+Keypad52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+Keymap52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-90-*-*
+Keymap52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-70-*-*
+Keymap52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+Playedit*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-90-*-*
+Playedit*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-70-*-*
+Playedit*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+!**************************************************************************
+!****************   END LATIN1 and LATIN2                  ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN5                           ****************
+!**************************************************************************
+!Keypad52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*
+!Keypad52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!Keypad52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!Keymap52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!Keymap52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-70-*-*
+!Keymap52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!Playedit*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!Playedit*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-70-*-*
+!Playedit*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!**************************************************************************
+!****************   END   LATIN5                           ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (ja_JP ko_KR zh_CN)   ****************
+!**************************************************************************
+!Keypad52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*
+!Keypad52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!Keypad52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*
+!Keymap52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*
+!Keymap52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!Keymap52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*
+!Playedit*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*
+!Playedit*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!Playedit*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*
+!**************************************************************************
+!****************   END DBCS (ja_JP ko_KR zh_CN)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (zh_TW)   ****************
+!**************************************************************************
+!Keypad52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Keypad52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Keypad52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Keymap52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Keymap52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Keymap52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Playedit*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Playedit*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Playedit*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!**************************************************************************
+!****************   END DBCS (zh_TW)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   END DO NOT TRANSLATE                   ****************
+!**************************************************************************
+
+
+! ********************************************************************************
+! Keyboard Remapping Resources
+! ********************************************************************************
+!
+! In general, the following buttons should not be made much longer during translation.
+! Buttons have one to four words. Note: Testing is the only way to know for sure if all
+! buttons fit on the screen ok.  The emulators have a testing document that will be used
+! during testing; this will point out a problem if button text is too long. In many
+! cases, buttons are presented side by side, where the total button text length cannot
+! increase significantly.
+Keymap52*key.labelString:  Chiave corrente
+!
+Keymap52*title:  Riassociazione tastiera
+!
+Keymap52*iname5250:  Associazione chiave 5250
+!
+Keymap52*iname3270:  Associazione chiave 3270
+!
+Keymap52*inameNSTERM:  Associazione chiave emulator VT
+!
+AllShare*fileSaveButton.labelString:  Salva
+!
+Keymap52*fileDeleteButton.labelString:  Elimina
+!
+Keymap52*applyTranslationsButton.labelString:  Applica modifiche alla sessione
+!
+AllShare*fileQuitButton.labelString:  Esci
+!
+AllShare*helpPush.labelString:  Guida
+!
+AllShare*lowMemMsgDialog.messageString:  Memoria insufficiente per avviare Help Viewer.
+!
+AllShare*quitDialog.dialogTitle:  Avvertenza di uscita
+!
+! Note: \n causes a new line in the dialogue box and should not be translated.
+! You can move, add, or remove \n within this text string.
+Keymap52*invalidExt.value: L'estensione del nome file keymap non è corretta o è mancante. \n\
+L'estensione corretta è stata aggiunta automaticamente. \n\
+Notare il nuovo nome file e l'estensione nell'area del messaggio.
+!
+Keymap52*invalidExtOkButton.labelString:  OK
+!
+Keymap52*invalidFileName.value:  Il carattere immesso non è valido in un nome file.
+!
+Keymap52*invalidFileNameOkbutton.labelString:  OK
+!
+Keymap52*noKeyCaps.value: Il programma di riassociazione della tastiera non è stato aggiornato per il tipo di tastiera. Il testo per chiavi della tastiera grafica verranno visualizzate in Inglese.
+!
+Keymap52*noKeyCapOkbutton.labelString:  OK
+!
+Keymap52*EBCMismatchText.value: La lingua della sessione dell'emulator che ha richiamato il Programma di riassociazione della tastiera non corrisponde alla lingua di IBM Network Station.  I caratteri e le stringhe create con questo programma di riassociazione potrebbe causare risultati non desiderati nella sessione dell'emulatore.
+!
+Keymap52*mismatchOKbutton.labelString:  OK
+!
+Keymap52*poorResolutionMsgText.value:   La risoluzione del monitor è inferiore a 800x600. La riassociazione della tastiera non è supportata sui monitor con risoluzione minore di 800x600.
+!
+Keymap52*keymapFailureCancelBtn.labelString:  Annulla
+!
+Keymap52*saveDialog.dialogTitle:  Salvare riassociazione tastiera
+!
+Keymap52*saveBoxLabel*labelString:  Selezionare dove salvare le modifiche di riassociazione della tastiera:
+!
+Keymap52*saveBoxToggle1.labelString:  Salvare come predefinito per tutte le sessioni
+!
+Keymap52*saveBoxToggleNsterm1.labelString:      Salvare come predefinito per questo tipo di terminale
+!
+Keymap52*saveBoxToggle2.labelString:  Salvare solo per questa sessione
+!
+Keymap52*saveBoxToggle3.labelString:  Salvare come file di associazione tasto denominato (solo administrator)
+!
+AllShare*saveBoxSaveBtn.labelString:  Salva
+!
+AllShare*saveBoxCancelBtn.labelString:  Annulla
+!
+Keymap52*fileNameSaveBoxLabel.labelString:  Immettere un nome file di associazione tasti:
+!
+Keymap52*fileDeleteDialog.dialogTitle:  Eliminare file di riassociazione tastiera
+!
+Keymap52*fileDeleteBoxLabel*labelString:  Selezione file da eliminare:
+!
+KeyXXX52*fileDeleteBoxLabelAlt*labelString:  Nessun file da eliminare
+!
+KeyXXX52*fileDeleteBoxDeleteBtn.labelString:  Elimina
+!
+KeyXXX52*fileDeleteBoxCancelBtn.labelString:  Annulla
+!
+KeyXXX52*fileDeleteVerifyDialog.dialogTitle:  Elimina verifica
+!
+KeyXXX52*fileDeleteVerifyDialog.okLabelString:  OK
+!
+KeyXXX52*fileDeleteVerifyDialog.cancelLabelString:  Annulla
+
+! this cannot be much longer
+KeyXXX52*noundoDelete:  L'eliminazione dei file non può essere annullata. Si desidera eliminare?
+!
+KeyXXX52*novalidDelete:  Nessun file selezionato. L'eliminazione non è valida.
+!
+Keymap52*fileWarningDialog.dialogTitle:  Avvertimento associazione tasto
+!
+AllShare*fileWarningDialog.okLabelString:  Sì
+!
+AllShare*fileWarningDialog.cancelLabelString:  No
+!
+AllShare*fileAlreadyExists:  File già esistente. Si desidera sostituirlo?
+!
+Keymap52*transTempApp:  Modifiche temporanee di riassociazione tastiera applicate alla sessione.
+!
+AllShare*nomakeDir:  Impossibile creare la directory.
+!
+AllShare*nofilepathSave:  Impossibile determinare il percorso del file.
+!
+Keymap52*transRxd:  Associazione tastiera originale ricevuta dalla sessione emulator.
+!
+Keymap52*saveTran:  Salvataggio in corso del file di reimpostazione della tastiera...
+!
+Keymap52*savetoTranError:  Errore nel salvataggio del file di riassociazione della tastiera... file non salvato.
+!
+Keymap52*savedtoTran:   File di reimpostazione della tastiera salvato in:
+!
+Keymap52*quitDialog1:  L'associazione tastiera è stata modificata ma non applicata o salvata.
+!
+Keymap52*quit1Tog1:  Uscire senza applicare o salvare le modifiche.
+!
+Keymap52*quit1Tog2:  Applicare e salvare le modifiche prima di uscire.
+!
+Keymap52*quitDialog2:  L'associazione tastiera è stata modificata e applicata ma non salvata.
+!
+Keymap52*quit2Tog1:  Uscire senza salvare, annullare le modifiche eseguite all'associazione della tastiera.
+!
+Keymap52*quit2Tog2:  Uscire senza salvare, lasciare le modifiche temporaneamente applicate alla sessione.
+!
+Keymap52*quitDialog3:  L'associazione di tastiera è stata modificata e salvata ma non applicata.
+!
+Keymap52*quit3Tog1:  Uscire senza applicare le modifiche.
+!
+Keymap52*quitTog3.labelString:  Applicare le modifica a questa sessione prima di uscire.
+!
+AllShare*quitDialog*quitTog4.labelString:  Salvare le modifiche prima di uscire.
+!
+AllShare*quitDialog*exitBox.labelString:  Esci
+!
+AllShare*quitDialog*cancelBox.labelString:  Annulla
+!
+Keymap52*undoDialog.dialogTitle:  Ripristinare la finestra di dialogo
+!
+Keymap52*undoDialog1.labelString:  Selezionare uno stato di impostazione della tastiera da ripristinare.
+!
+Keymap52*undoDialog*undoBox.labelString:  OK
+!
+Keymap52*undoDialog*cancelBox.labelString:  Annulla
+!
+Keymap52*restoreWarning.dialogTitle:  Messaggio di uscita
+!
+Keymap52*restoreWarning.okLabelString:  OK
+
+! this cannot be made much longer during translation
+Keymap52*restoreWarning.messageString:  La riassociazione della tastiera per questa sessione è stata ripristinata al suo valore originale.
+!
+Keymap52*nonValidDialog.dialogTitle:  Messaggio di avvertenza
+!
+KeyXXX52*nonValidDialog.okLabelString:  OK
+!
+Keymap52*nonValidDialog.messageString:  Una o più azioni per questa chiave non sono valide.
+!
+Keymap52*reservedtrans.dialogTitle:  Messaggio di avvertenza
+!
+Keymap52*reservedtrans.okLabelString:  OK
+
+! this cannot be made much longer during translation
+Keymap52*reservedtrans.messageString:  Impossibile riassociare le battute di tasti riservate da Window Manager.
+!
+Keymap52*lastButton.labelString:  Ripristina associazione tastiera dell'ultima applicazione
+!
+Keymap52*origButton.labelString:  Ripristina associazione tastiera originale
+
+! this cannot be made much longer during translation
+Keymap52*lastRest:  La riassociazione tastiera è stata ripristinata ai valori applicati alla tastiera l'ultima volta.
+!
+Keymap52*origRest:  La riassociazione della tastiera è stata ripristinata al valore originale.
+!
+Keymap52*noRest:  Nessuna opzione di ripristino selezionata, non è stata effettuata alcuna modifica.
+!
+Keymap52*fileDeleted:  File di riassociazione tastiera selezionato eliminato.
+
+! this resource has been left intentionally blank, do not translate.
+Keymap52*blank:
+!
+Keymap52*basePb.labelString:  -> Base
+!
+AllShare*changePb.labelString:  OK
+!
+AllShare*cancelPb.labelString:  Annulla
+!
+AllShare*actionHelp.labelString: Guida Azioni
+!
+AllShare*actionListLabel.labelString:  Elenco azioni disponibili:
+!
+AllShare*charListLabel.labelString:  Elenco caratteri:
+!
+AllShare*actionDef.labelString:  Definizione azione:
+!
+AllShare*printActionDefTitle:  Definizioni azione disponibili
+!
+Keymap52*restorePB.labelString:  Ripristina
+
+! this cannot be made any longer during translation.
+Keymap52*locatePB.labelString:  Posiziona
+
+! this cannot be made any longer during translation.
+Keymap52*nothingTB.labelString:  Nessuna azione
+!
+Keymap52*translistdialog.dialogTitle:  Riassociazione tastiera avanzata
+!
+Keymap52*noRemPass:  Operazione non valida, impossibile eliminare le associazioni tasti passive.
+!
+Keymap52*searchFailed:  Posizionamento non riuscito, nessuna azione di corrispondenza rilevata nell'associazione tastiera.
+!
+Keymap52*searchSuccess:  Posizionamento corretto...
+!
+Keymap52*searchSemi:  Posizionamento corretto... la chiave per questa azione non è disponibile.
+!
+Keymap52*noSearchMsg:  Impossibile eseguire il posizionamento, non è stata selezionata un'azione valida.
+!
+Keymap52*nonStand:  Esiste almeno una traduzione di questa chiave che non può essere visualizzata.
+!
+Keymap52*change.dialogTitle:  Avvertimento associazione tasto
+!
+KeyXXX52*change.messageString:  OK o Annulla cambia alla chiave corrente prima di visualizzarne un'altra.
+!
+KeyXXX52*change.okLabelString:  Continua
+!
+Keymap52*editb.labelString:  Modifica
+!
+Keymap52*insertb.labelString:  Inserisci
+!
+Keymap52*removeb.labelString:  Elimina
+!
+Keymap52*closeb.labelString:  Chiudi
+!
+Keymap52*editDialog.dialogTitle:  Modifica finestra di dialogo
+!
+Keymap52*editDialog*editLabel.labelString:  Modifica la traduzione di seguito riportata:
+!
+Keymap52*editDialog*okButton.labelString:  OK
+!
+Keymap52*editDialog*clearButton.labelString:  Ripulisci
+!
+Keymap52*editDialog*cancelButton.labelString:  Annulla
+!
+Keymap52*Any:  -> Base
+!
+Keymap52*Shift:  -> Shift
+!
+Keymap52*Lock:  -> Bloc Maiusc
+!
+Keymap52*Lock122:  -> Maiusc Bloc
+!
+Keymap52*Ctrl:  -> Sinistra Ctrl
+!
+Keymap52*CtrlNsterm: -> Ctrl
+!
+Keymap52*Alt:  -> Alt
+!
+Keymap52*Mod2:  -> Alt(Gr)
+!
+Keymap52*Mod3:  -> APL/Super
+!
+Keymap52*Mod4:  -> Mod4
+!
+Keymap52*Mod5:  -> Bloc Num
+!
+Keymap52*Shift_Alt:  -> Maiusc Alt
+!
+Keymap52*cantdothat.dialogTitle:  Avvertimento associazione tasto
+!
+Keymap52*cantdothat.messageString:  OK o Annulla cambia alla chiave corrente prima di selezionare un'opzione dalla barra delle azioni.
+!
+KeyXXX52*cantdothat.okLabelString:  Continua
+!
+Keymap52*chooseApply:  Scegliere Applica affinché le modifica diventino effettive nella sessione.
+!
+Keymap52*transListLabel.labelString:  Elenco traduzione:
+!
+Keymap52*seeHelpLabel.labelString:  Vedere la Guida prima di eseguire modifiche avanzate.
+!
+Keymap52*keyAction.labelString:  Chiave/Azione
+!
+Keymap52*nomapmod:  Impossibile riassociare i modificatori.
+!
+AllShare*toobig:  Operazione annullata, superata la lunghezza di azione massima.
+!
+Keymap52*currKeyLabel.labelString:  Chiave corrente:
+!
+AllShare*printKeymap.labelString:  Stampa
+!
+AllShare*printDialogCancelButton.labelString:  Annulla
+!
+AllShare*printDialogBoxLabel.labelString:  Seleziona opzioni di stampa
+!
+AllShare*printDialogPrintCommandLabel.labelString: Comando di stampa:
+!
+AllShare*printDialogSelectPrinter.labelString:  Seleziona una stampante:
+!
+AllShare*PrinterSelectServerDelineator:  @
+!
+AllShare*PrinterSelectLocalDesignator:  (Locale)
+!
+AllShare*ActionHelpPrinted:  Definizioni guida azione stampate
+!
+AllShare*printDialogPrintInProgress.labelString:  Stampa in corso...
+!
+AllShare*okLabelString:  OK
+!
+AllShare*cancelLabelString:  Annulla
+!
+! Start Action list translations (to be shared by keypad customizer and keymapper).
+!
+! Rules for translating actions:
+! 1) Action text (to the right of the ":") is translated
+! 2) All actions need to end in ()
+! 3) Action text may not contain spaces
+! 4) Action text may be separated by capitals or underscores (_)
+! 5) Because actions are cross-referenced, each translated action must be unique
+! 6) Action text should be a maximum of 29 characters, not counting the () characters
+!
+!    ValidActionText()
+!    InvalidActionText
+!    ValidActionText()
+!    Valid_Action_Text()
+!    Invalid Action Text()
+!
+!    Valid Unique action names:
+!    Keyxxx52*tab():  Tab()
+!    Keyxxx52*backtab():  BackTab()
+!    Keyxxx52*tabadvancefunction():  TabAdvance()
+!    Keyxxx52*tabfunction():  OfficeTabFunction()
+!
+!    Invalid action names, not unique:
+!    Keyxxx52*tab():  Tab()
+!    Keyxxx52*backtab():  Tab()
+!    Keyxxx52*tabadvancefunction():  Tab()
+!    Keyxxx52*tabfunction():  Tab()
+!
+! Each action is followed by an action definition (to the right of the ":") which is translated
+!
+Keyxxx52*nothing():  NoAction()
+AllShare*DEFnothing():  Questa azione non fa nulla ed è utilizzata per mostrare un'azione vuota.
+!
+Keyxxx52*ruleline():  RuleLine()
+AllShare*DEFruleline():  Modifica lo stato della visualizzazione della riga delle regole tra visualizzato e non visualizzato. La riga delle regole può aiutare a posizionare il cursore. Le Preferenze miste possono abilitare (il predefinito) o disabilitare la funzione della riga delle regole e modificare lo stile della riga delle regole.
+!
+AllShare*string():  String()
+AllShare*DEFstring():  Visualizza un carattere o una stringa di caratteri nella posizione del cursore. Il formato per l'azione è String("text"). I doppi apici (") sono obbligatori e 'text' sarà il carattere o i caratteri visualizzati. String() viene utilizzate per creare le macro della tastiera.
+!
+Keyxxx52*play():  Play()
+AllShare*DEFplay():  L'azione Play() visualizza la finestra di riproduzione, in questo modo è possibile avviare un file di riproduzione. L'azione Play() supporta anche un nome file di riproduzione come un parametro (tra parentesi); il file riproduzione viene avviato automaticamente.
+!
+Keyxxx52*record():  Record()
+AllShare*DEFrecord():  Visualizza la finestra di registrazione per avviare la registrazione di una sequenza di riproduzione.
+!
+AllShare*pause():  Pause()
+AllShare*DEFpause():  Sospende l'esecuzione o la registrazione di un file di riproduzione. L'utente seleziona Continua per continuare l'esecuzione o la registrazione.
+!
+AllShare*local-screen-print():  ScreenPrint()
+AllShare*DEFlocal-screen-print():  Visualizza la finestra dello schermo di stampa per stampare lo schermo corrente.
+!
+Keyxxx52*print-screen-now():  PrintScreenNow()
+AllShare*DEFprint-screen-now():  Stampa lo schermo corrente utilizzando le ultime opzioni di stampa e l'ultima stampante utilizzata.
+!
+AllShare*extended():  DisplayAttributes()
+AllShare*DEFextended():  Visualizza tutti gli attributi dei campi nello schermo.
+!
+AllShare*up():  CursorUp()
+AllShare*DEFup():  Sposta il cursore di una posizione in alto.
+!
+AllShare*down():  CursorDown()
+AllShare*DEFdown():  Sposta il cursore di una posizione in basso.
+!
+AllShare*left():  CursorLeft()
+AllShare*DEFleft():  Sposta il cursore di una posizione a sinistra.
+!
+AllShare*right():  CursorRight()
+AllShare*DEFright():  Sposta il cursore di una posizione a destra.
+!
+AllShare*fastleft():  FastCursorLeft()
+AllShare*DEFfastleft():  Sposta il cursore di tre posizioni a sinistra.
+!
+AllShare*fastright():  FastCursorRight()
+AllShare*DEFfastright():  Sposta il cursore di tre posizioni a destra.
+!
+AllShare*newline():  Newline()
+AllShare*DEFnewline():  Sposta il cursore all'inizio del campo di immissione sulla riga successiva.
+!
+AllShare*home():  Home()
+AllShare*DEFhome():  Sposta il cursore nella posizione principale (tipicamente la prima posizione del campo di immissione sullo schermo) e a volte invia il codice Home AID al sistema host.
+!
+AllShare*tab():  Tab()
+AllShare*DEFtab():  Sposta il cursore nel campo di immissione successivo.
+!
+AllShare*backtab():  BackTab()
+AllShare*DEFbacktab():  Se il cursore si trova nella prima posizione di un campo di immissione o in un'area di emissione, il cursore si sposta alla prima posizione del campo di immissione precedente. Se il cursore si trova in un campo di immissione e non nella prima posizione del campo di immissione, il cursore si sposta nella prima posizione del campo di immissione.
+!
+AllShare*end():  EndOfLine()
+AllShare*DEFend():  Sposta il cursore dopo l'ultimo carattere diverso da null e non vuoto in un campo di immissione.
+!
+AllShare*tabadvancefunction():  TabAdvance()
+AllShare*DEFtabadvancefunction():  Avanza il cursore al campo di emissione logica successivo.
+!
+AllShare*insert():  Insert()
+AllShare*DEFinsert():  Attiva la modalità di inserimento.
+!
+AllShare*delete():  Delete()
+AllShare*DEFdelete():  Elimina (elimina) il carattere nella posizione del cursore.
+!
+AllShare*backspace():  Backspace()
+AllShare*DEFbackspace():  Sposta il cursore indietro di una posizione e può eliminare il carattere prima del cursore. Le preferenze miste possono abilitare o disabilitare la cancellazione all'indietro del carattere.
+!
+AllShare*erase-eof():  ErasetoEnd()
+AllShare*DEFerase-eof():  Elimina tutti i caratteri dalla posizione del cursore alla fine del campo.
+!
+AllShare*erase-input():  EraseInputFields()
+AllShare*DEFerase-input():  Elimina tutti i campi di immissione nel pannello.
+!
+AllShare*dup():  Dup()
+AllShare*DEFdup():  Riempie il campo corrente con il carattere dup dal cursore alla fine del campo.
+!
+AllShare*field-mark():  FieldMark()
+AllShare*DEFfield-mark():  Segna un campo con il carattere di segno del campo.
+!
+AllShare*pf1():  PF1()
+AllShare*DEFpf1():  Esegue l'azione definita del tasto F1.
+!
+AllShare*pf2():  PF2()
+AllShare*DEFpf2():  Esegue l'azione definita del tasto F2.
+!
+AllShare*pf3():  PF3()
+AllShare*DEFpf3():  Esegue l'azione definita del tasto F3.
+!
+AllShare*pf4():  PF4()
+AllShare*DEFpf4():  Esegue l'azione definita del tasto F4.
+!
+AllShare*pf5():  PF5()
+AllShare*DEFpf5():  Esegue l'azione definita del tasto F5.
+!
+AllShare*pf6():  PF6()
+AllShare*DEFpf6():  Esegue l'azione definita del tasto F6.
+!
+AllShare*pf7():  PF7()
+AllShare*DEFpf7():  Esegue l'azione definita del tasto F7.
+!
+AllShare*pf8():  PF8()
+AllShare*DEFpf8():  Esegue l'azione definita del tasto F8.
+!
+AllShare*pf9():  PF9()
+AllShare*DEFpf9():  Esegue l'azione definita del tasto F9.
+!
+AllShare*pf10():  PF10()
+AllShare*DEFpf10():  Esegue l'azione definita del tasto F10.
+!
+AllShare*pf11():  PF11()
+AllShare*DEFpf11():  Esegue l'azione definita del tasto F11.
+!
+AllShare*pf12():  PF12()
+AllShare*DEFpf12():  Esegue l'azione definita del tasto F12.
+!
+AllShare*pf13():  PF13()
+AllShare*DEFpf13():  Esegue l'azione definita del tasto F13.
+!
+AllShare*pf14():  PF14()
+AllShare*DEFpf14():  Esegue l'azione definita del tasto F14.
+!
+AllShare*pf15():  PF15()
+AllShare*DEFpf15():  Esegue l'azione definita del tasto F15.
+!
+AllShare*pf16():  PF16()
+AllShare*DEFpf16():  Esegue l'azione definita del tasto F16.
+!
+AllShare*pf17():  PF17()
+AllShare*DEFpf17():  Esegue l'azione definita del tasto F17.
+!
+AllShare*pf18():  PF18()
+AllShare*DEFpf18():  Esegue l'azione definita del tasto F18.
+!
+AllShare*pf19():  PF19()
+AllShare*DEFpf19():  Esegue l'azione definita del tasto F19.
+!
+AllShare*pf20():  PF20()
+AllShare*DEFpf20():  Esegue l'azione definita del tasto F20.
+!
+AllShare*pf21():  PF21()
+AllShare*DEFpf21():  Esegue l'azione definita del tasto F21.
+!
+AllShare*pf22():  PF22()
+AllShare*DEFpf22():  Esegue l'azione definita del tasto F22.
+!
+AllShare*pf23():  PF23()
+AllShare*DEFpf23():  Esegue l'azione definita del tasto F23.
+!
+AllShare*pf24():  PF24()
+AllShare*DEFpf24():  Esegue l'azione definita del tasto F24.
+!
+AllShare*clear():  Clear()
+AllShare*DEFclear():  Invia il codice AID di annullamento al sistema host.
+!
+AllShare*enter():  Enter()
+AllShare*DEFenter():  Esegue l'azione di immissione dell'input.
+!
+AllShare*pa1():  PA1()
+AllShare*DEFpa1():  Invia il codice AID di PA1 al sistema host.
+!
+AllShare*pa2():  PA2()
+AllShare*DEFpa2():  Invia il codice AID di PA2 al sistema host.
+!
+AllShare*pa3():  PA3()
+AllShare*DEFpa3():  Invia il codice AID di PA3 al sistema host.
+!
+AllShare*sysreq():  SystemRequest()
+AllShare*DEFsysreq():  Invia l'AID della richiesta di sistema al sistema host.
+!
+AllShare*reset():  Reset()
+AllShare*DEFreset():  Reimposta un errore.
+!
+AllShare*hex-entry():  HexMode()
+AllShare*DEFhex-entry():  Imposta un modo per le due battute di tasti successive per creare un carattere EBCDIC. Le battute di tasti devono essere da 0 a 9 o da a fino a f.
+!
+AllShare*hex():  Hex()
+AllShare*DEFhex():  Richiede un valore di punto di codice come parametro (tra parentesi). Il valore di due caratteri (00 a ff) è un carattere di code page 819 ASCII.
+!
+AllShare*cursor-select():  CursorSelect()
+AllShare*DEFcursor-select():  Seleziona il campo che contiene il cursore.
+!
+AllShare*attention():  Attention()
+AllShare*DEFattention():  Invia il codice AID di attenzione al sistema host.
+!
+AllShare*print():  SystemPrint()
+AllShare*DEFprint():  Invia il codice AID di stampa al sistema host.
+!
+AllShare*scroll_image_up(): ScrollImageUp()
+AllShare*DEFscroll_image_up():  Scorre in alto l'immagine visualizzata.
+!
+AllShare*scroll_image_down():   ScrollImageDown()
+AllShare*DEFscroll_image_down():  Scorre in basso l'immagine visualizzata.
+!
+AllShare*scroll_image_right():  ScrollImageRight()
+AllShare*DEFscroll_image_right():  Scorre a destra l'immagine visualizzata.
+!
+AllShare*scroll_image_left():   ScrollImageLeft()
+AllShare*DEFscroll_image_left():  Scorre a sinistra l'immagine visualizzata.
+!
+AllShare*help():  SystemHelp()
+AllShare*DEFhelp():  Invia il codice AID di guida al sistema host.
+!
+AllShare*rolldown():  PageUp()
+AllShare*DEFrolldown():  Sposta lo schermo nella pagina precedente alla pagina corrente.
+!
+AllShare*rollup():  PageDown()
+AllShare*DEFrollup():  Sposta lo schermo nella pagina sottostante alla pagina corrente.
+!
+AllShare*fieldexit():  FieldExit()
+AllShare*DEFfieldexit():  Avanza all'avvio del campo successivo sullo schermo.
+!
+AllShare*fieldplus():  FieldPlus()
+AllShare*DEFfieldplus():  Avanza all'avvio del campo successivo sullo schermo.
+!
+AllShare*fieldminus():  FieldMinus()
+AllShare*DEFfieldminus():  Rende il valore nel campo negativo e avanza al campo successivo.
+!
+AllShare*testreq():  TestRequest()
+AllShare*DEFtestreq():  Invia il codice AID di richiesta di verifica al sistema host.
+!
+! Note: Office actions are used within the AS/400 OfficeVision editor.
+AllShare*tabfunction():  OfficeTabFunction()
+AllShare*DEFtabfunction():  Nell'editor OV/400, inserisce un carattere di spaziatura nella posizione del cursore.
+!
+AllShare*textcarrierreturn():  OfficeCarrierReturn()
+AllShare*DEFtextcarrierreturn():  Nell'editor OV/400, inserisce un carattere di ritorno a capo nella posizione corrente del cursore.
+!
+AllShare*textrqtabfunction():  OfficeRequiredTabFunction()
+AllShare*DEFtextrqtabfunction():  Nell'editor OV/400, inserisce una spaziatura richiesta nella posizione corrente del cursore. Le spaziature richieste definiscono rientranze temporanee che restano effettive fino a che terminano con la fine di un paragrafo (ritorno a capo obbligatorio).
+!
+AllShare*textunderscore():  OfficeStartUnderline()
+AllShare*DEFtextunderscore():  Nell'editor OV/400, avviare la sottolineatura nella posizione del cursore corrente.
+!
+AllShare*textintensify():  OfficeStartBold()
+AllShare*DEFtextintensify():  Nell'editor OV/400, avviare testo intensificato nella posizione del cursore corrente.
+!
+AllShare*textendattribute():  OfficeEndUnderlineOrBold()
+AllShare*DEFtextendattribute():  Nell'editor OV/400, terminare la sottolineature attiva o intensificare l'effetto.
+!
+AllShare*textsymbolscmdprompt():  OfficeInsertSpecialCharacters()
+AllShare*DEFtextsymbolscmdprompt():  Nell'editor OV/400, visualizzare la richiesta che consente l'immissione di simboli non disponibili dalla tastiera.
+!
+AllShare*textrqspace():  OfficeRequiredSpace()
+AllShare*DEFtextrqspace():  Nell'editor OV/400, posizionare uno spazio obbligatorio nella posizione corrente del cursore. Uno spazio obbligatorio appare come carattere dello spazio, ma mantiene sempre le due parole separate da uno spazio insieme sulla stessa riga.
+!
+AllShare*texttopofpage():  OfficeTopOfPage()
+AllShare*DEFtexttopofpage():  Nell'editor OV/400, spostare il cursore (e possibilmente riposizionare il pannello) in alto nella pagina al momento visualizzata.
+!
+AllShare*textbottomofpage():  OfficeBottomOfPage()
+AllShare*DEFtextbottomofpage():  Nell'editor OV/400, spostare il cursore (e possibilmente riposizionare il pannello) in basso nella pagina al momento visualizzata.
+!
+AllShare*textbeginofline():  OfficeBeginningOfLine()
+AllShare*DEFtextbeginofline():  Nell'editor OV/400, spostare il cursore all'inizio della riga di testo corrente.
+!
+AllShare*textpageend():  OfficeInsertPageEnd()
+AllShare*DEFtextpageend():  Nell'editor OV/400, inserire un carattere di fine pagina. Questa operazione avvia una pagina di testo.
+!
+AllShare*textstopcodefunction():  OfficeStopCodeInsert()
+AllShare*DEFtextstopcodefunction():  Nell'editor OV/400, visualizzare la richiesta che consente la definizione di un nuovo codice di arresto nella posizione corrente del cursore.
+!
+AllShare*textstopcodeadvance():  OfficeStopCodeAdvance()
+AllShare*DEFtextstopcodeadvance():  Nell'editor OV/400, spostare il cursore nel codice di arresto successivo nel documento.
+!
+AllShare*textaltd():  OfficeNextTextColumn()
+AllShare*DEFtextaltd():  Nell'editor OV/400, inserire il controllo che avvia una nuova colonna di testo nella posizione del cursore. Questa funzione è solo attiva quando si modificano più colonne di testo.
+!
+AllShare*textcent():  OfficeCenter()
+AllShare*DEFtextcent():  Nell'editore OV/400, centrare la riga del testo contenente il cursore.
+!
+AllShare*textwordunderscore():  OfficeWordUnderscore()
+AllShare*DEFtextwordunderscore():  Nell'editor OV/400, posizionare un controllo di sottolineatura della parola nella posizione corrente del cursore. Questo cursore dovrebbe essere alla fine del testo da sottolineare, l'effetto di sottolineatura influenza dall'inizio della parola corrente alla posizione del cursore.
+!
+AllShare*texthalfindexup():  OfficeHalfIndexUp()
+AllShare*DEFtexthalfindexup():  Nell'editor OV/400, posizionare un controllo mezzo indice in alto (superscript) nella posizione corrente del cursore. Il mezzo indice in alto rimane attivo fino al successivo controllo mezzo indice in basso.
+!
+AllShare*texthalfindexdown():  OfficeHalfIndexDown()
+AllShare*DEFtexthalfindexdown():  Nel revisore OV/400, posizionare un controllo mezzo indice in basso (subscript) nella posizione corrente del cursore. Il mezzo indice in basso rimane attivo fino al successivo controllo mezzo indice in alto.
+!
+AllShare*displaytextsymb():  OfficeDisplaySymbols()
+AllShare*DEFdisplaytextsymb():  Nell'editor OV/400, visualizzare i caratteri di controlli che sono normalmente non visibili.  Questi includono la scheda, la scheda obbligatoria, ritorno a capo, ritorno a capo obbligatorio, spazio obbligatorio e caratteri di fine pagina.
+!
+AllShare*kanji():  InsertSOandSI()
+AllShare*DEFkanji():  Inserisce un carattere DBCS di spostamento in fuori e in dentro (utilizzato in Giapponese, Coreano e Cinese).
+!
+!//@bd_GBR1 start
+AllShare*lklayer():  LatinLayer()
+AllShare*DEFlklayer():  Imposta la lingua della tastiera su Latino.
+!
+AllShare*nklayer():  BidiLayer()
+AllShare*DEFnklayer():  Imposta la lingua della tastiera su nazionale (utilizzato in Arabo ed Ebreo).
+!//@bd_GBR1 end
+! //@bd_GBR1 rename AllShare*reverse():  ReverseCursor()
+AllShare*reverse():  FieldReverse()
+AllShare*DEFreverse():  Inverte la direzione del cursore in un campo e seleziona la lingua opposta per le battute di tastiera (utilizzate in Arabo ed Ebreo).
+!
+AllShare*close():  CloseBIDIData()
+AllShare*DEFclose():  Chiude i dati in un campo eliminando gli spazi vuoti integrati e i dati di spostamento verso l'avvio logico del campo (utilizzato in Arabo ed Ebreo).
+!
+AllShare*base():  BaseShape()
+AllShare*DEFbase():  Attiva e disattiva le forme arabe (utilizzate nella lingua araba).
+!
+AllShare*charadvance():  CharacterAdvance()
+AllShare*DEFcharadvance():  Avanza il cursore alla posizione di immissione successiva nello schermo.
+!
+AllShare*displaySOSI():  DisplaySOandSI()
+AllShare*DEFdisplaySOSI():  Visualizza tutti i caratteri sposta avanti e indietro sul pannello (utilizzato in Giapponese, Coreano e Cinese).
+!
+AllShare*reverse-scn():  ReverseScreen()
+AllShare*DEFreverse-scn():  Inverte la visualizzazione dello schermo (utilizzato per Arabo ed Ebreo).
+!
+AllShare*EBChex():  EBCDICHexEntry()
+AllShare*DEFEBChex():  Consente l'utilizzo dei punti di codice EBCDIC per immettere dati (utilizzato per Giapponese, Coreano e Cinese).
+!
+AllShare*AltView():  AlternateView()
+AllShare*DEFAltView():  Consente la visualizzazione dei dati Giapponesi in una codepage alternativa.
+!
+Keyxxx52*noop():  NoAction()
+AllShare*DEFnoop():  Questa azione non fa nulla ed è utilizzata per mostrare un'azione vuota.
+!
+! There are no parentheses after Undefined, making this action different than other actions.
+Keyxxx52*undefined():  Non definito
+!
+AllShare*cursor-move():  MoveCursor()
+AllShare*DEFcursor-move():  Sposta il cursore un una posizione di schermo specificata.
+!
+AllShare*forward-word():  NextWord()
+AllShare*DEFforward-word():  Sposta il cursore all'inizio della parola successiva.
+!
+AllShare*backward-word():  PreviousWord()
+AllShare*DEFbackward-word():  Sposta il cursore all'inizio della parola precedente.
+!
+AllShare*spbackspace():  AlternateBackspace()
+AllShare*DEFspbackspace():  Esegue un'azione simile a BackSpace(). I caratteri alla destra del cursore sono solo spostati se è impostata la modalità di inserimento.
+!
+AllShare*kill-word():  DeleteRemainderofWord()
+AllShare*DEFkill-word():  Elimina i caratteri dal cursore alla fine della parola.
+!
+AllShare*backward-kill-word():  DeletePreviousWord()
+AllShare*DEFbackward-kill-word():  Elimina i caratteri della parola precedente.
+!
+AllShare*cent():  Cent()
+AllShare*DEFcent():  Visualizza il carattere di valuta di cent nella posizione del cursore.
+!
+AllShare*unlock():  UnlockKeyboard()
+AllShare*DEFunlock():  Sblocca la tastiera in modo da poter eseguire un'immissione.
+!
+AllShare*selpen-attn():  SelectorPenAttention()
+AllShare*DEFselpen-attn():  Invia l'AID di attenzione della penna del selettore al sistema host.
+!
+AllShare*select-field():  PenSelectField()
+AllShare*DEFselect-field():  Seleziona un campo selezionabile.
+!
+AllShare*xh-attn():  AttentionAlternate()
+AllShare*DEFxh-attn():  Invia un codice AID di attenzione alternativo al sistema host.
+!
+Keyxxx52*insert-selection:  Paste()
+Keyxxx52*DEFinsert-selection:  Azione per incollare i contenuti della lavagna alla posizione del cursore.
+!
+Keyxxx52*jump():  Jump()
+AllShare*DEFjump():  Azione che passa alla sessione successiva nell'elenco della sessione. Se la sessione 1 si trova nella sessione attiva, allora la sessione 2 diventerà la sessione attiva.
+!
+Keyxxx52*jump-to-session():  JumpToSession()
+AllShare*DEFjump-to-session():  Azione che salta alla sessione data come parametro (tra parentesi). Se il valore 2 è dato come argomento, allora la seconde sessione diventa la sessione attiva.
+!
+Keyxxx52*delay():  Delay()
+AllShare*DEFdelay(): Aggiunge una pausa tra le azioni quando si impostano più azioni ad una sequenza chiave nella riassociazione della tastiera o nella personalizzazione del tastierino numerico. Il parametro (tra parentesi) è un valore in decimi di secondo per il ritardo (5 decimi è un valore predefinito).
+!
+Keyxxx52*menu-bar-focus():  MenuBarFocus()
+AllShare*DEFmenu-bar-focus():  consente l'accesso alla barra dei menu senza utilizzare il mouse.
+!
+Keyxxx52*wider-font(): WiderFont()
+Keyxxx52*DEFwider-font(): Rende il font corrente più grande.
+!
+Keyxxx52*narrower-font(): ThinnerFont()
+Keyxxx52*DEFnarrower-font(): Rende il font corrente più piccolo.
+!
+Keyxxx52*taller-font(): TallerFont()
+Keyxxx52*DEFtaller-font(): Rende il font corrente più allungato.
+!
+Keyxxx52*shorter-font(): ShorterFont()
+Keyxxx52*DEFshorter-font(): Rende il font corrente più accorciato.
+!
+! The following three key sequences should be translated; they may be used in the future for keyboard actions that we currently do not know about.
+Keyxxx52*key-seq1():  KeySequence1()
+Keyxxx52*key-seq2():  KeySequence2()
+Keyxxx52*key-seq3():  KeySequence3()
+!
+! General dead key (the first key of a key sequence to create a dead key character, for example tilda in many languages) that is not remappable because dead keys are processed by the Network Station kernel.
+! There are no parentheses at the end of the following line.
+Keyxxx52*unmappable():  Tasti inattivo
+!
+AllShare*inserteuro():  Euro()
+AllShare*DEFinserteuro():  Inserisce il simbolo dell'Euro nella posizione del cursore.
+!
+! Action List Translations for NSTerm (VTxxx)
+!
+Keymap52*vt-backspace(): VtBackspace()
+AllShare*DEFvt-backspace():  Sposta il cursore indietro di una posizione ed elimina il carattere prima del cursore.
+!
+Keymap52*enterkey(): EnterKey()
+Keymap52*DEFenterkey():  Invia un carattere di ritorno a capo all'host.
+!
+Keymap52*local-print-buffer(): LocalPrintBuffer()
+Keymap52*DEFlocal-print-buffer():  Visualizza la finestra dello schermo di stampa per stampare i contenuti correnti del buffer di scorrimento.
+!
+Keymap52*local-print-screen(): LocalPrintScreen()
+Keymap52*DEFlocal-print-screen():  Visualizza la finestra dello schermo di stampa per stampare lo schermo corrente.
+!
+Keymap52*cut-clipboard(): CutClipboard()
+Keymap52*DEFcut-clipboard():  Copia la regione segnata dello schermo nella lavagna e rimuove la regione dallo schermo.
+!
+Keymap52*copy-clipboard(): CopyClipboard()
+Keymap52*DEFcopy-clipboard():  Copia la regione segnata dello schermo nella lavagna.
+!
+Keymap52*paste-clipboard(): PasteClipboard()
+Keymap52*DEFpaste-clipboard():  Copia i dati memorizzati nel buffer della lavagna e li trasferisce nella posizione del cursore sullo schermo.
+!
+Keymap52*beginning-of-buffer(): BeginningOfBuffer()
+Keymap52*DEFbeginning-of-buffer(): Sposta lo schermo all'inizio del buffer di scorrimento.
+!
+Keymap52*end-of-buffer(): EndOfBuffer()
+Keymap52*DEFend-of-buffer():  Scorre lo schermo in modo che venga visualizzata la fine del buffer corrente.
+!
+Keymap52*hard-reset(): HardReset()
+Keymap52*DEFhard-reset():  Reimposta il terminale sullo stato predefinito, elimina tutti i contenuti dallo schermo e annulla le selezioni.
+!
+Keymap52*soft-reset(): SoftReset()
+Keymap52*DEFsoft-reset():  Reimposta il terminale nello stato predefinito.
+!
+Keymap52*vt-break(): VtBreak()
+Keymap52*DEFvt-break(): Invia un segnale di interruzione RS-232 all'host.
+!
+Keymap52*vt-find(): VtFind()
+Keymap52*DEFvt-find(): Esegue la funzione di Ricerca, se la modalità VT200 o superiore invia il codice DEC (CSI 1~) all'host.
+!
+Keymap52*vt-ins(): VtInsert()
+Keymap52*DEFvt-ins(): Esegue la funzione Inserisci qui, se la modalità VT200 o superiore invia il codice DEC (CSI 2~) all'host.
+!
+Keymap52*vt-delete(): VtRemove()
+Keymap52*DEFvt-delete(): Esegue la funzione di Rimozione, se la modalità VT200 o superiore invia il codice DEC (CSI 3~) all'host.
+!
+Keymap52*vt-select(): VtSelect()
+Keymap52*DEFvt-select(): Esegue la funzione di Selezione, se la modalità VT200 o superiore invia il codice DEC (CSI 4~) all'host.
+!
+Keymap52*vt-prev-screen(): VtPreviousScreen()
+Keymap52*DEFvt-prev-screen(): Esegue la funzione Schermo precedente, se la modalità VT200 o superiore invia il codice DEC (CSI 5~) all'host.
+!
+Keymap52*vt-next-screen(): VtNextScreen()
+Keymap52*DEFvt-next-screen(): Esegue la funzione Schermo successivo, se la modalità VT200 o superiore invia il codice DEC (CSI 6~) all'host.
+!
+Keymap52*vt-prev-page(): VtPreviousPage()
+Keymap52*DEFvt-prev-page(): Sposta il testo in baso e la finestra in alto di 1 pagina.
+!
+Keymap52*vt-next-page(): VtNextPage()
+Keymap52*DEFvt-next-page(): Sposta il testo in alto e la finestra in basso di 1 pagina.
+!
+Keymap52*vt-do(): VtDo()
+Keymap52*DEFvt-do(): Esegue la funzione Esegui, se la modalità VT200 o superiore invia il codice DEC (CSI 29~) all'host.
+!
+Keymap52*vt-help(): VtHelp()
+Keymap52*DEFvt-help(): Esegue la funzione di guida, se la modalità VT200 o superiore invia il codice DEC (CSI 28~) all'host.
+!
+Keymap52*vt-next-line(): VtNextLine()
+Keymap52*DEFvt-next-line():  Sposta il testo in alto e la finestra in basso di 1 riga.
+!
+Keymap52*vt-prev-line(): VtPreviousLine()
+Keymap52*DEFvt-prev-line(): Sposta il testo in baso e la finestra in alto di 1 riga.
+!
+Keymap52*tty-interrupt(): TtyInterrupt()
+Keymap52*DEFtty-interrupt(): Invia un carattere di interruzione TTY (inter = Ctrl-C) all'host.
+!
+Keymap52*tty-suspend(): TtySuspend()
+Keymap52*DEFtty-suspend(): Invia un carattere di sospensione TTY (susp = Ctrl-Z) all'host.
+!
+Keymap52*tty-start(): TtyStart()
+Keymap52*DEFtty-start(): Invia un carattere di Avvio TTY (start = Ctrl-Q) all'host.
+!
+Keymap52*tty-stop(): TtyStop()
+Keymap52*DEFtty-stop(): Invia un carattere di arresto TTY (stop = Ctrl-S) all'host.
+!
+Keymap52*delete-word(): TtyEraseWord()
+Keymap52*DEFdelete-word(): Invia un carattere di eliminazione parola TTY (werase = Ctrl-W) all'host.
+!
+Keymap52*line-feed(): TtyLineFeed()
+Keymap52*DEFline-feed(): Invia un carattere di alimentazione riga (Ctrl-J) all'host.
+!
+Keymap52*cr-lf(): TtyCR_LF()
+Keymap52*DEFcr-lf(): Invia entrambi i caratteri di ritorno a capo e alimentazione riga (Ctrl-M Ctrl-J) all'host.
+!
+Keymap52*escape(): EscapeCharacter()
+Keymap52*DEFescape(): Invia un carattere Escape (Ctrl-[) all'host.
+!
+Keymap52*udk-f1(): UDK_F1()
+Keymap52*DEFudk-f1():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F1.
+!
+Keymap52*udk-f2(): UDK_F2()
+Keymap52*DEFudk-f2():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F2.
+!
+Keymap52*udk-f3(): UDK_F3()
+Keymap52*DEFudk-f3():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F3.
+!
+Keymap52*udk-f4(): UDK_F4()
+Keymap52*DEFudk-f4():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F4.
+!
+Keymap52*udk-f5(): UDK_F5()
+Keymap52*DEFudk-f5():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F5.
+!
+Keymap52*udk-f6(): UDK_F6()
+Keymap52*DEFudk-f6():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F6.
+!
+Keymap52*udk-f7(): UDK_F7()
+Keymap52*DEFudk-f7():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F7.
+!
+Keymap52*udk-f8(): UDK_F8()
+Keymap52*DEFudk-f8():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F8.
+!
+Keymap52*udk-f9(): UDK_F9()
+Keymap52*DEFudk-f9():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F9.
+!
+Keymap52*udk-f10(): UDK_F10()
+Keymap52*DEFudk-f10():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F10.
+!
+Keymap52*udk-f11(): UDK_F11()
+Keymap52*DEFudk-f11():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F11.
+!
+Keymap52*udk-f12(): UDK_F12()
+Keymap52*DEFudk-f12():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F12.
+!
+Keymap52*udk-f13(): UDK_F13()
+Keymap52*DEFudk-f13():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F13.
+!
+Keymap52*udk-f14(): UDK_F14()
+Keymap52*DEFudk-f14():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F14.
+!
+Keymap52*udk-f15(): UDK_F15()
+Keymap52*DEFudk-f15():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F15.
+!
+Keymap52*udk-f16(): UDK_F16()
+Keymap52*DEFudk-f16():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F16.
+!
+Keymap52*udk-f17(): UDK_F17()
+Keymap52*DEFudk-f17():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F17.
+!
+Keymap52*udk-f18(): UDK_F18()
+Keymap52*DEFudk-f18():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F18.
+!
+Keymap52*udk-f19(): UDK_F19()
+Keymap52*DEFudk-f19():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F19.
+!
+Keymap52*udk-f20(): UDK_F20()
+Keymap52*DEFudk-f20():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F20.
+!
+Keymap52*udk-f21(): UDK_F21()
+Keymap52*DEFudk-f21():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F21.
+!
+Keymap52*udk-f22(): UDK_F22()
+Keymap52*DEFudk-f22():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F22.
+!
+Keymap52*udk-f23(): UDK_F23()
+Keymap52*DEFudk-f23():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F23.
+!
+Keymap52*udk-f24(): UDK_F24()
+Keymap52*DEFudk-f24():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F24.
+!
+Keymap52*udk-f25(): UDK_F25()
+Keymap52*DEFudk-f25():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F25.
+!
+Keymap52*udk-f26(): UDK_F26()
+Keymap52*DEFudk-f26():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F26.
+!
+Keymap52*udk-f27(): UDK_F27()
+Keymap52*DEFudk-f27():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F27.
+!
+Keymap52*udk-f28(): UDK_F28()
+Keymap52*DEFudk-f28():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F28.
+!
+Keymap52*udk-f29(): UDK_F29()
+Keymap52*DEFudk-f29():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F29.
+!
+Keymap52*udk-f30(): UDK_F30()
+Keymap52*DEFudk-f30():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F30.
+!
+Keymap52*udk-f31(): UDK_F31()
+Keymap52*DEFudk-f31():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F31.
+!
+Keymap52*udk-f32(): UDK_F32()
+Keymap52*DEFudk-f32():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F32.
+!
+Keymap52*udk-f33(): UDK_F33()
+Keymap52*DEFudk-f33():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F33.
+!
+Keymap52*udk-f34(): UDK_F34()
+Keymap52*DEFudk-f34():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F34.
+!
+Keymap52*udk-f35(): UDK_F35()
+Keymap52*DEFudk-f35():  Esegue l'azione Tasto definito dall'utente DEC per il tasto F35.
+!
+Keymap52*x-f1(): F1()
+Keymap52*DEFx-f1():  Esegue l'azione definita del tasto F1.
+!
+Keymap52*x-f2(): F2()
+Keymap52*DEFx-f2():  Esegue l'azione definita del tasto F2.
+!
+Keymap52*x-f3(): F3()
+Keymap52*DEFx-f3():  Esegue l'azione definita del tasto F3.
+!
+Keymap52*x-f4(): F4()
+Keymap52*DEFx-f4():  Esegue l'azione definita del tasto F4.
+!
+Keymap52*x-f5(): F5()
+Keymap52*DEFx-f5():  Esegue l'azione definita del tasto F5.
+!
+Keymap52*x-f6(): F6()
+Keymap52*DEFx-f6():  Esegue l'azione definita del tasto F6.
+!
+Keymap52*x-f7(): F7()
+Keymap52*DEFx-f7():  Esegue l'azione definita del tasto F7.
+!
+Keymap52*x-f8(): F8()
+Keymap52*DEFx-f8():  Esegue l'azione definita del tasto F8.
+!
+Keymap52*x-f9(): F9()
+Keymap52*DEFx-f9():  Esegue l'azione definita del tasto F9.
+!
+Keymap52*x-f10(): F10()
+Keymap52*DEFx-f10():  Esegue l'azione definita del tasto F10.
+!
+Keymap52*x-f11(): F11()
+Keymap52*DEFx-f11():  Esegue l'azione definita del tasto F11.
+!
+Keymap52*x-f12(): F12()
+Keymap52*DEFx-f12():  Esegue l'azione definita del tasto F12.
+!
+Keymap52*x-f13(): F13()
+Keymap52*DEFx-f13():  Esegue l'azione definita del tasto F13.
+!
+Keymap52*x-f14(): F14()
+Keymap52*DEFx-f14():  Esegue l'azione definita del tasto F14.
+!
+Keymap52*x-f15(): F15()
+Keymap52*DEFx-f15():  Esegue l'azione definita del tasto F15.
+!
+Keymap52*x-f16(): F16()
+Keymap52*DEFx-f16():  Esegue l'azione definita del tasto F16.
+!
+Keymap52*x-f17(): F17()
+Keymap52*DEFx-f17():  Esegue l'azione definita del tasto F17.
+!
+Keymap52*x-f18(): F18()
+Keymap52*DEFx-f18():  Esegue l'azione definita del tasto F18.
+!
+Keymap52*x-f19(): F19()
+Keymap52*DEFx-f19():  Esegue l'azione definita del tasto F19.
+!
+Keymap52*x-f20(): F20()
+Keymap52*DEFx-f20():  Esegue l'azione definita del tasto F20.
+!
+Keymap52*x-f21(): F21()
+Keymap52*DEFx-f21():  Esegue l'azione definita del tasto F21.
+!
+Keymap52*x-f22(): F22()
+Keymap52*DEFx-f22():  Esegue l'azione definita del tasto F22.
+!
+Keymap52*x-f23(): F23()
+Keymap52*DEFx-f23():  Esegue l'azione definita del tasto F23.
+!
+Keymap52*x-f24(): F24()
+Keymap52*DEFx-f24():  Esegue l'azione definita del tasto F24.
+!
+Keymap52*x-f25(): F25()
+Keymap52*DEFx-f25():  Esegue l'azione definita del tasto F25.
+!
+Keymap52*x-f26(): F26()
+Keymap52*DEFx-f26():  Esegue l'azione definita del tasto F26.
+!
+Keymap52*x-f27(): F27()
+Keymap52*DEFx-f27():  Esegue l'azione definita del tasto F27.
+!
+Keymap52*x-f28(): F28()
+Keymap52*DEFx-f28():  Esegue l'azione definita del tasto F28.
+!
+Keymap52*x-f29(): F29()
+Keymap52*DEFx-f29():  Esegue l'azione definita del tasto F29.
+!
+Keymap52*x-f30(): F30()
+Keymap52*DEFx-f30():  Esegue l'azione definita del tasto F30.
+!
+Keymap52*x-f31(): F31()
+Keymap52*DEFx-f31():  Esegue l'azione definita del tasto F31.
+!
+Keymap52*x-f32(): F32()
+Keymap52*DEFx-f32():  Esegue l'azione definita del tasto F32.
+!
+Keymap52*x-f33(): F33()
+Keymap52*DEFx-f33():  Esegue l'azione definita del tasto F33.
+!
+Keymap52*x-f34(): F34()
+Keymap52*DEFx-f34():  Esegue l'azione definita del tasto F34.
+!
+Keymap52*x-f35(): F35()
+Keymap52*DEFx-f35():  Esegue l'azione definita del tasto F35.
+!
+Keymap52*vt-f1(): VtPF1()
+Keymap52*DEFvt-f1():  In tutte le modalità, invia il codice del carattere (SS3 P) all'applicazione.
+!
+Keymap52*vt-f2(): VtPF2()
+Keymap52*DEFvt-f2(): In tutte le modalità, invia il codice del carattere (SS3 Q) all'applicazione.
+!
+Keymap52*vt-f3(): VtPF3()
+Keymap52*DEFvt-f3(): In tutte le modalità, invia il codice del carattere (SS3 R) all'applicazione.
+!
+Keymap52*vt-f4(): VtPF4()
+Keymap52*DEFvt-f4(): In tutte le modalità, invia il codice del carattere (SS3 S) all'applicazione.
+!
+Keymap52*x-print(): X_Print()
+Keymap52*DEFx-print(): Invia la sequenza escape ANSI (Ctrl-[[209q) all'host.
+!
+Keymap52*x-scroll-lock(): X_ScrollLock()
+Keymap52*DEFx-scroll-lock(): Invia la sequenza escape ANSI (Ctrl-[[213q) all'host.
+!
+Keymap52*x-pause(): X_Pause()
+Keymap52*DEFx-pause(): Invia la sequenza escape ANSI per il tasto di Pausa (Ctrl-[[217q) all'host.
+!
+Keymap52*x-ins(): X_Insert()
+Keymap52*DEFx-ins(): Invia la sequenza escape ANSI (Ctrl-[[139q) all'host.
+!
+Keymap52*x-delete(): X_Delete()
+Keymap52*DEFx-delete(): Invia la sequenza escape ANSI (Ctrl-[[P) all'host.
+!
+Keymap52*x-home(): X_Home()
+Keymap52*DEFx-home(): Invia la sequenza escape ANSI (Ctrl-[[H) all'host.
+!
+Keymap52*x-end(): X_End()
+Keymap52*DEFx-end(): Invia la sequenza escape ANSI (Ctrl-[[146q) all'host.
+!
+Keymap52*x-page-up(): X_PageUp()
+Keymap52*DEFx-page-up(): Invia la sequenza escape ANSI (Ctrl-[[150q) all'host.
+!
+Keymap52*x-page-down(): X_PageDown()
+Keymap52*DEFx-page-down(): Invia la sequenza escape ANSI (Ctrl-[[154q) all'host.
+!
+Keymap52*kp-numlock(): KP_NumLock()
+Keymap52*DEFkp-numlock():  Esegue l'azione di Blocco numerico.
+!
+Keymap52*kp-divide(): KP_Divide()
+Keymap52*DEFkp-divide():  Esegue la funzione di divisione come definita sul tastierino numerico.
+!
+Keymap52*kp-multiply(): KP_Multiply()
+Keymap52*DEFkp-multiply():  Esegue la funzione di moltiplicazione come definita sul tastierino numerico.
+!
+Keymap52*kp-subtract(): KP_Minus()
+Keymap52*DEFkp-subtract():  In modalità numerica, invia il carattere meno (-) all'applicazione. In modalità Applicazione, invia il codice del carattere SS3 1 (ESC ? l) all'applicazione.
+!
+Keymap52*kp-7(): KP_7()
+Keymap52*DEFkp-7():  In modalità numerica, invia il carattere 7 all'applicazione. In modalità Applicazione, invia il codice del carattere SS3 w (ESC ? w) all'applicazione.
+!
+Keymap52*kp-8(): KP_8()
+Keymap52*DEFkp-8():  In modalità numerica, invia il carattere 8 all'applicazione. In modalità Applicazione, invia il codice del carattere SS3 x (ESC ? x) all'applicazione.
+!
+Keymap52*kp-9(): KP_9()
+Keymap52*DEFkp-9():  In modalità numerica, invia il carattere 9 all'applicazione. In modalità Applicazione, invia il codice del carattere SS3 y (ESC ? y) all'applicazione.
+!
+Keymap52*kp-4(): KP_4()
+Keymap52*DEFkp-4():  In modalità numerica, invia il carattere 4 all'applicazione. In modalità Applicazione, invia il codice del carattere SS3 t (ESC ? t) all'applicazione.
+!
+Keymap52*kp-5(): KP_5()
+Keymap52*DEFkp-5():  In modalità numerica, invia il carattere 5 all'applicazione. In modalità applicazione, invia il codice del carattere (SS3 u) all'applicazione.
+!
+Keymap52*kp-6(): KP_6()
+Keymap52*DEFkp-6():  In modalità numerica, invia il carattere 6 all'applicazione. In modalità Applicazione, invia il codice del carattere SS3 v (ESC ? v) all'applicazione.
+!
+Keymap52*kp-add(): KP_Plus()
+Keymap52*DEFkp-add():  Esegue la funzione di addizione come definita sul tastierino numerico.
+!
+Keymap52*kp-1(): KP_1()
+Keymap52*DEFkp-1():  In modalità numerica, invia il carattere 1 all'applicazione. In modalità Applicazione, invia il codice del carattere SS3 q (ESC ? q) all'applicazione.
+!
+Keymap52*kp-2(): KP_2()
+Keymap52*DEFkp-2():  In modalità numerica, invia il carattere 2 all'applicazione. In modalità Applicazione, invia il codice del carattere SS3 r (ESC ? r) all'applicazione.
+!
+Keymap52*kp-3(): KP_3()
+Keymap52*DEFkp-3():  In modalità numerica, invia il carattere 3 all'applicazione. In modalità Applicazione, invia il codice del carattere SS3 s (ESC ? s) all'applicazione.
+!
+Keymap52*kp-0(): KP_0()
+Keymap52*DEFkp-0():  In modalità numerica, invia il carattere 0 all'applicazione. In modalità Applicazione, invia il codice del carattere SS3 p (ESC ? p) all'applicazione.
+!
+Keymap52*kp-decimal(): KP_Decimal()
+Keymap52*DEFkp-decimal():  In modalità numerica, invia il carattere decimale (.) all'applicazione. In modalità Applicazione, invia il codice del carattere SS3 n (ESC ? n) all'applicazione.
+!
+Keymap52*kp-enter(): KP_Enter()
+Keymap52*DEFkp-enter():  In modalità numerica, invia la funzione di invio all'applicazione. In modalità Applicazione, invia il codice del carattere SS3 M (ESC ? M) all'applicazione.
+!
+Keymap52*kp-space(): KP_Space()
+Keymap52*DEFkp-space():  Invia il carattere dello spazio all'applicazione.
+!
+Keymap52*kp-tab(): KP_Tab()
+Keymap52*DEFkp-tab():  Invia il carattere della scheda all'applicazione.
+!
+Keymap52*kp-equal(): KP_Equal()
+Keymap52*DEFkp-equal():  Invia il carattere uguale (=) all'applicazione.
+!
+Keymap52*kp-separator(): KP_Separator()
+Keymap52*DEFkp-separator():  Invia il carattere del separatore all'applicazione.
+!
+Playedit*btn1-press():  MouseBtn1Press()
+Playedit*DEFbtn1-press():  Azione per premere il pulsante 1 del mouse.
+!
+Playedit*btn1-release():  MouseBtn1Release()
+Playedit*DEFbtn1-release():  Azione per la rilascio del pulsante 1 del mouse.
+!
+Playedit*btn2-press():  MouseBtn2Press()
+Playedit*DEFbtn2-press():  Azione per premere il pulsante 2 del mouse.
+!
+Playedit*btn2-release():  MouseBtn2Release()
+Playedit*DEFbtn2-release():  Azione per la rilascio del pulsante 2 del mouse.
+!
+Playedit*btn3-press():  MouseBtn3Press()
+Playedit*DEFbtn3-press():  Azione per premere il pulsante 3 del mouse.
+!
+Playedit*btn3-release():  MouseBtn3Release()
+Playedit*DEFbtn3-release():  Azione per la rilascio del pulsante 3 del mouse.
+!
+Playedit*shift-btn1-press():  MouseShiftBtn1Press()
+Playedit*DEFshift-btn1-press():  Azione per la sequenza dei tasti del pulsante 1 del mouse e il modificatore Maiusc.
+!
+Playedit*shift-btn1-release():  MouseShiftBtn1Release()
+Playedit*DEFshift-btn1-release():  Azione per la sequenza dei tasti del rilascio del pulsante 1 del mouse mentre si preme il modificatore Maiusc.
+!
+Playedit*shift-btn2-press():  MouseShiftBtn2Press()
+Playedit*DEFshift-btn2-press():  Azione per la sequenza dei tasti del pulsante 2 del mouse e il modificatore Maiusc.
+!
+Playedit*shift-btn2-release():  MouseShiftBtn2Release()
+Playedit*DEFshift-btn2-release():  Azione per la sequenza dei tasti del rilascio del pulsante 2 del mouse mentre si preme il modificatore Maiusc.
+!
+Playedit*shift-btn3-press():  MouseShiftBtn3Press()
+Playedit*DEFshift-btn3-press():  Azione per la sequenza dei tasti del pulsante 3 del mouse e il modificatore Maiusc.
+!
+Playedit*shift-btn3-release():  MouseShiftBtn3Release()
+Playedit*DEFshift-btn3-release():  Azione per la sequenza dei tasti del rilascio del pulsante 3 del mouse mentre si preme il modificatore Maiusc.
+!
+Playedit*btn1-double-press():  MouseBtn1DoublePress()
+Playedit*DEFbtn1-double-press():  Azione per premere il pulsante 1 del mouse due volte.
+!
+Playedit*btn1-triple-press():  MouseBtn1TriplePress()
+Playedit*DEFbtn1-triple-press():  Azione per premere il pulsante 1 del mouse tre volte.
+!
+Playedit*btn2-double-press():  MouseBtn2DoublePress()
+Playedit*DEFbtn2-double-press():  Azione per premere il pulsante 2 del mouse due volte.
+!
+Playedit*btn2-triple-press():  MouseBtn2TriplePress()
+Playedit*DEFbtn2-triple-press():  Azione per premere il pulsante 2 del mouse tre volte.
+!
+Playedit*btn3-double-press():  MouseBtn3DoublePress()
+Playedit*DEFbtn3-double-press():  Azione per premere il pulsante 3 del mouse due volte.
+!
+Playedit*btn3-triple-press():  MouseBtn3TriplePress()
+Playedit*DEFbtn3-triple-press():  Azione per premere il pulsante 3 del mouse tre volte.
+!
+Playedit*shift-btn1-double-press():  MouseShiftBtn1DoublePress()
+Playedit*DEFshift-btn1-double-press():  Azione per la sequenza dei tasti del pulsante 1 del mouse premuto due volte e il modificatore Maiusc.
+!
+Playedit*shift-btn1-triple-press():  MouseShiftBtn1TriplePress()
+Playedit*DEFshift-btn1-triple-press():  Azione per la sequenza dei tasti del pulsante 1 del mouse premuto tre volte e il modificatore Maiusc.
+!
+Playedit*shift-btn2-double-press():  MouseShiftBtn2DoublePress()
+Playedit*DEFshift-btn2-double-press():  Azione per la sequenza dei tasti del pulsante 2 del mouse premuto due volte e il modificatore Maiusc.
+!
+Playedit*shift-btn2-triple-press():  MouseShiftBtn2TriplePress()
+Playedit*DEFshift-btn2-triple-press():  Azione per la sequenza dei tasti del pulsante 2 del mouse premuto tre volte e il modificatore Maiusc.
+!
+Playedit*shift-btn3-double-press():  MouseShiftBtn3DoublePress()
+Playedit*DEFshift-btn3-double-press():  Azione per la sequenza dei tasti del pulsante 3 del mouse premuto due volte e il modificatore Maiusc.
+!
+Playedit*shift-btn3-triple-press():  MouseShiftBtn3TriplePress()
+Playedit*DEFshift-btn3-triple-press():  Azione per la sequenza dei tasti del pulsante 3 del mouse premuto tre volte e il modificatore Maiusc.
+!
+AllShare*paste():  Paste()
+AllShare*DEFpaste():  Azione per incollare i contenuti della lavagna alla posizione del cursore.
+!
+AllShare*copy():  Copy()
+AllShare*DEFcopy():  Azione per copiare la selezione delle schermo corrente sulla lavagna.
+!
+AllShare*cut():  Cut()
+AllShare*DEFcut():  Azione per rimuovere la selezione delle schermo corrente.
+!
+Playedit*userid():  USERID()
+Playedit*DEFuserid():  Immette l'ID utente dell'utente corrente. Questa azione viene utilizzata per la connessione automatica nelle sessioni dell'emulator.
+!
+Playedit*password():  PASSWORD()
+Playedit*DEFpassword():  Immettere la password dell'utente corrente. Questa azione viene utilizzata per la connessione automatica nelle sessioni dell'emulator.
+!
+AllShare*adjust-copy-left():  AdjustCopyAreaLeft()
+AllShare*DEFadjust-copy-left():  Avvia un'area di copia sullo schermo se non ne viene avviato uno e regola l'area di copia un carattere a sinistra rispetto alla posizione corrente.
+!
+AllShare*adjust-copy-right():  AdjustCopyAreaRight()
+AllShare*DEFadjust-copy-right():  Avvia un'area di copia sullo schermo se non ne viene avviato uno e regola l'area di copia un carattere a destra rispetto alla posizione corrente.
+!
+AllShare*adjust-copy-up():  AdjustCopyAreaUp()
+AllShare*DEFadjust-copy-up():  Avvia un'area di copia sullo schermo se non ne viene avviato uno e regola l'area di copia una riga in alto rispetto alla posizione corrente.
+!
+AllShare*adjust-copy-down():  AdjustCopyAreaDown()
+AllShare*DEFadjust-copy-down():  Avvia un'area di copia sullo schermo se non ne viene avviato uno e regola l'area di copia una riga in basso rispetto alla posizione corrente.
+!
+AllShare*adjust-copy-anchor-left():  AdjustCopyAreaAnchorLeft()
+AllShare*DEFadjust-copy-anchor-left():  Avvia un'area di copia sullo schermo se non ne viene avviato uno e regola l'area di copia un carattere a destra mentre non regola alla sinistra dell'area di copia.
+!
+AllShare*adjust-copy-anchor-right():  AdjustCopyAreaAnchorRight()
+AllShare*DEFadjust-copy-anchor-right():  Avvia un'area di copia sullo schermo se non ne viene avviato uno e regola l'area di copia un carattere a sinistra mentre non regola alla destra dell'area di copia.
+!
+AllShare*adjust-copy-anchor-up():  AdjustCopyAreaAnchorUp()
+AllShare*DEFadjust-copy-anchor-up():  Avvia un'area di copia sullo schermo se non ne viene avviato uno e regola l'area di copia una riga in basso mentre non regola la parte superiore dell'area di copia.
+!
+AllShare*adjust-copy-anchor-down():  AdjustCopyAreaAnchorDown()
+AllShare*DEFadjust-copy-anchor-down():  Avvia un'area di copia sullo schermo se non ne viene avviato uno e regola l'area di copia una riga in alto mentre non regola la parte inferiore dell'area di copia.
+!
+AllShare*toggle-default-copy-type():  ToggleDefaultCopyType()
+AllShare*DEFtoggle-default-copy-type():  Imposta la copia come copia di blocco o lineare.
+!
+Playedit*hex-string():  HexString()
+Playedit*DEFhex-string():  Consente ai dati di essere immessi in modalità esadecimale.
+!
+Playedit*graphics-hex-string():  GraphicsHexString()
+Playedit*DEFgraphics-hex-string():  Consente ai dati di disegno di essere immessi in modalità esadecimale.
+!
+Playedit*BIDItogglescrrev():  BIDIToggleScreenReverse()
+Playedit*DEFBIDItogglescrrev():  Attiva o disattiva l'inversione della visualizzazione dello schermo (utilizzato per Arabo ed Ebreo).
+!
+Playedit*BIDItogglefieldrev():  BIDIToggleFieldReverse()
+Playedit*DEFBIDItogglefieldrev():  Attiva o disattiva l'inversione della visualizzazione del campo (utilizzato per Arabo ed Ebreo).
+!
+Playedit*BIDItoggleautorev():  BIDIToggleAutoReverse()
+Playedit*DEFBIDItoggleautorev():  Attiva o disattiva l'inversione automatica del campo (utilizzato per Arabo ed Ebreo).
+!
+Playedit*BIDIpush():  BIDIPush()
+Playedit*DEFBIDIpush():  Attiva la modalità di spinta (utilizzato per Arabo ed Ebreo).
+!
+Playedit*BIDIendpush():  BIDIEndPush()
+Playedit*DEFBIDIendpush():  Disattiva la modalità di spinta (utilizzato per Arabo ed Ebreo).
+!
+Playedit*BIDItoggleautopush():  BIDIToggleAutoPush()
+Playedit*DEFBIDItoggleautopush():  Imposta l'emulator a posizionarsi automaticamente in modalità di spinta quando la lingua passa da BIDI a Inglese (utilizzato per Arabo ed Ebreo).
+!
+Playedit*BIDIsetshape():  BIDISetShape()
+Playedit*DEFBIDIsetshape():  Imposta la modalità di formazione per l'Arabo.
+!
+Playedit*BIDIfieldshape():  BIDIFieldShape()
+Playedit*DEFBIDIfieldshape():  Forma i dati in un campo per l'Arabo.
+!
+Playedit*BIDItogglenumswap():  BIDIToggleNumericSwapping()
+Playedit*DEFBIDItogglenumswap():  Attiva e disattiva il passaggio numerico Arabo/Hindi per l'Arabo.
+!
+! End action names
+!
+!
+Keyxxx52*ERROR:  AZIONI NON VALIDE
+!
+Keymap52*managing_server_text.value:  Non è possibile salvare questo file di riassociazione tastiera.  Aggiornare il server di gestione all'ultimo rilascio di IBM Network Station Manager.
+!
+Keymap52*managingBtn.labelString:  OK
+!
+Keymap52*general_fatal_error.value:  Si è verificato un errore nel Programma di riassociazione della tastiera.  Il programma verrà terminato.
+!
+Keymap52*genfatalBtn.labelString:  ESCI
+!
+Keymap52*general_nonfatal_text.value:  Errore di riassociazione tastiera.
+!
+Keymap52*gennonfatBtn.labelString:  OK
+!
+!
+!************************************************************************
+!
+!
+!                        Keypad Customizer Resources
+!
+!
+!************************************************************************
+Keypad52*title:  Programma di personalizzazione tastiera
+
+Keypad52*iname5250:  Programma di personalizzazione 5250
+
+Keypad52*iname3270:  Programma di personalizzazione 3270
+
+Keypad52*keypadTitle.dialogTitle:  Tastierino numerico
+
+!following resource left blank on purpose, do not translate.
+AllShare*blankLabel.labelString:
+
+! initial popup dialog
+Keypad52*initialpopupDialoglist.labelString:  Selezionare un file del tastierino numerico:
+
+Keypad52*initialpopupDialogaltlabel.labelString:  Nessun file tastierino numerico.
+
+Keypad52*initialpopupDialogOKbtn.labelString:  OK
+
+Keypad52*initialpopupDialogcancelbtn.labelString:  Annulla
+
+Keypad52*initialpopupDialognewbtn.labelString:  Nuovo tastierino numerico
+
+!*************************************
+!**  Keypad Customizer Main Window  **
+!*************************************
+
+! In general, the following buttons should not be made much longer during translation.
+! Buttons have one to four words.
+
+Keypad52*keyAction.labelString:  Azione pulsante->
+
+Keypad52*fileDeleteButton.labelString:  Annulla pulsante tastierino numerico
+
+Keypad52*selectplayfile.labelString:  Seleziona azione file di riproduzione
+
+Keypad52*changeSize.labelString:  Modifica stile tastierino numerico
+
+Keypad52*keypadfileDelete.labelString:  Elimina file tastierino numerico
+
+Keypad52*transRxing:  Ricezione informazioni programma di personalizzazione tastierino numerico corrente dalla sessione emulator.
+
+Keypad52*transRxd:  Informazioni programma di personalizzazione tastierino numerico ricevute dalla sessione emulator.
+
+Keypad52*currKeypadLabel.labelString:  Tastierino numerico corrente:
+
+Keypad52*currKeyLabel.labelString:  Testo pulsante tastierino numerico corrente:
+
+Keypad52*currActLabel.labelString:  Azione pulsante tastierino numerico corrente:
+
+!******************
+!**  Resolution  **
+!******************
+Keypad52*poorResolutionMsgText.value:   La risoluzione del monitor è inferiore a 800x600. Il programma di personalizzazione del tastierino numerico non è supportata sui monitor con risoluzione minore di 800x600.
+
+Keypad52*keypadFailureCancelBtn.labelString:  Annulla
+
+!**************
+!**  Saving  **
+!**************
+Keypad52*saveDialog.dialogTitle:  Salva tastierino numerico
+
+Keypad52*saveBoxLabel*labelString:  Salva file tastierino numerico con nome:
+
+Keypad52*saveTran:  File tastierino numerico salvato...
+
+Keypad52*fileWarningDialog.dialogTitle:  Avviso tastierino numerico
+
+!**************
+!**  Delete  **
+!**************
+Keypad52*fileDeleteDialog.dialogTitle:  Elimina file tastierino numerico
+
+Keypad52*fileDeleteBoxLabel.labelString:  Selezione tastierino numerico da eliminare:
+
+Keypad52*fileDeleted:  File tastierino numerico selezionato eliminato.
+
+!****************
+!**  Playback  **
+!****************
+Keypad52*invalidSelectionplay.messageString:  Nessuna selezione.  Selezionare dall'elenco o selezionare Annulla.
+
+Keypad52*invalidSelectionplay.okLabelString:  Continua
+
+Keypad52*selectPlaybackFile.labelString:  Selezionare un file di riproduzione:
+
+Keypad52*userPlaybackFiles.labelString:  File riproduzione utente
+
+Keypad52*defaultPlaybackFiles.labelString:  File riproduzione predefinito
+
+AllShare*okLabel.labelString:  OK
+
+!********************
+!**  Keypad Style  **
+!********************
+Keypad52*selectSizeTitle.dialogTitle:  Stile tastierino numerico
+
+Keypad52*selectKeypadSizeLabel.labelString:  Selezionare stile tastierino numerico:
+
+Keypad52*selectKeypadStyle.labelString:  Stile tastierino numerico:
+
+Keypad52*popupStyleChoice.labelString:  Tastierino numerico a comparsa
+
+Keypad52*menuStyleChoice.labelString:  Tastierino numerico a discesa
+
+Keypad52*selectKeypadSizeRows.labelString:  Righe:
+
+Keypad52*selectKeypadSizeCols.labelString:  Colonne:
+
+Keypad52*selectKeypadSizeTextLen.labelString:  Lunghezza testo:
+
+Keypad52*changeKeypadSizeMessage:  Selezionare stile tastierino numerico desiderato...
+
+Keypad52*newPb.labelString:  Nuovo
+
+Keypad52*row_col_pulldownvalue.labelString:  -
+
+Keypad52*invalidSizeSelection.messageString:  La dimensione selezionata è troppo piccola per il tastierino numerico corrente.
+
+Keypad52*invalidSizeSelection.okLabelString:  Continua
+
+!***********************
+!**  Warning dialogs  **
+!***********************
+Keypad52*change.dialogTitle:  Avviso tastierino numerico
+
+Keypad52*unsaved.dialogTitle:  Avviso tastierino numerico
+
+Keypad52*unsaved.messageString:  Le modifiche del tastierino numerico non sono state salvate.
+
+Keypad52*unsaved.okLabelString:  Continua
+
+Keypad52*nochange.dialogTitle:  Avviso tastierino numerico
+
+! this cannot be made much longer during translation.
+Keypad52*nochange.messageString:  OK o Annulla la modifica corrente prima di eseguire ulteriori modifiche.
+
+Keypad52*nochange.okLabelString:  Continua
+
+Keypad52*cantdothat.dialogTitle:  Avviso tastierino numerico
+
+Keypad52*cantdothat.messageString:  OK o Annulla modifiche prima di selezionare un'altra opzione.
+
+!nothing selected in first dialog box
+Keypad52*invalidSelectionwarn.messageString:  Nessuna selezione. Selezionare dall'elenco, selezionare Nuovo o Annulla.
+
+Keypad52*invalidSelectionwarn.okLabelString:  Continua
+
+Keypad52*noaccessDir:  Impossibile accedere alla directory.
+
+Keypad52*selectKeypadButton.messageString:  E' necessario selezionare un pulsante del tastierino numerico prima che la personalizzazione possa iniziare.
+
+Keypad52*generalError.dialogTitle:  Errore tastierino numerico
+
+Keypad52*generalError.messageString:  Si è verificato un errore durante l'esecuzione di un'azione.
+
+Keypad52*generalError.okLabelString:  OK
+
+Keypad52*emptyList:  Si è verificato un errore nell'elenco di traduzione, non può essere salvato o applicato.
+
+Keypad52*ErrorMsgFileNameChars.messageString:  Il carattere immesso non è valido in un nome file.
+
+Keypad52*EBCMismatchText.value: La lingua della sessione dell'emulator che ha richiamato il Programma di personalizzazione del tastierino numerico non corrisponde alla lingua di IBM Network Station.  I caratteri e le stringhe create con questa applicazione potrebbe causare risultati non desiderati nella sessione dell'emulatore.
+
+!************************
+!**  Various Messages  **
+!************************
+! help button pressed
+Keypad52*helpMessage:  Caricamento del programma di visualizzazione della guida in corso ...
+
+! after OK clicked
+Keypad52*chooseSave:  Selezionare Salva per salvare le modifiche.
+
+! after Cancel clicked
+Keypad52*chooseCancel:  Annullate modifiche correnti.
+
+! original message when new keypad opens
+Keypad52*chooseNew:  Modifica nuovo tastierino numerico
+
+! button pressed in keypad
+Keypad52*continueedit:  Modifica pulsante corrente...
+
+! click button action -> with nothing selected
+Keypad52*noActionSelected:  Nessuna selezione nell'elenco delle Azioni o dei Caratteri.
+
+! swapping messages (next 2)
+Keypad52*swapinprogress:  Selezionare OK, Annulla, o eseguire altri spostamenti pulsante tastierino numerico...
+
+Keypad52*swaprunninginfo:  Spostamento pulsante in corso...
+
+! following 3 messages for invalid keypad action
+Keypad52*nonValidDialog.dialogTitle:  Messaggio di avvio del tastierino numerico
+
+Keypad52*nonValidDialog.messageString:  Le azioni del tastierino numerico per questo pulsante non sono valide.
+
+Keypad52*deleteKeypadMessage:  Selezionare tastierini numerici da Eliminare...
+
+!***************
+!**  Exiting  **
+!***************
+Keypad52*quitDialog1:  Il tastierino numerico è stato modificato ma non salvato.
+
+Keypad52*quit1Tog1:  Esci senza salvare le modifiche.
+
+Keypad52*quit1Tog2:  Salvare le modifiche prima di uscire.
+
+!************************************************************************
+!
+!
+!                        Playback Editor Resources
+!
+!
+!************************************************************************
+Playedit*title:  Editor del file di riproduzione
+
+Playedit*iname5250:  Editor del file di riproduzione 5250
+
+Playedit*iname3270:  Editor del file di riproduzione 3270
+
+Playedit*editorTitle.dialogTitle:  Editor del file di riproduzione
+
+!****  Main Window
+Playedit*keyAction.labelString:  Inserisci azione->
+
+Playedit*deleteAction.labelString:  Rimuovi azione
+
+Playedit*insertAction.labelString:  Inserisci riga
+
+Playedit*editAction.labelString:  Modifica azione
+
+Playedit*transRxing:  Ricezione informazioni editor del file di riproduzione dalla sessione emulator.
+
+Playedit*transRxd:  Informazioni dell'editor del file di riproduzione ricevute dalla sessione emulator.
+
+Playedit*currFileLabel.labelString:  File di riproduzione corrente:
+
+Playedit*currActLabel.labelString:  Azioni file di riproduzione corrente:
+
+!** Resolution
+Playedit*poorResolutionMsgText.value:  La risoluzione del monitor è inferiore a 800x600. L'editor del file di riproduzione non è supportato sui monitor con risoluzione minore di 800x600.
+
+!** Saving
+Playedit*saveDialog.dialogTitle:  Salva file di riproduzione
+
+Playedit*saveBoxLabel*labelString:  Salva file di riproduzione con nome:
+
+Playedit*saveTran:  File di riproduzione salvato...
+
+Playedit*fileWarningDialog.dialogTitle:  Avviso editor di riproduzione
+
+!** Edit
+Playedit*editBoxLabel*labelString:  Azione di modifica:
+
+!** Warning Dialogs
+Playedit*PlaybackMsgFileNoOpen.value:  Impossibile aprire file di riproduzione.  Uscita dall'applicazione.
+
+Playedit*PlaybackMsgFileNoRead.value:  Impossibile leggere il file di riproduzione.  Uscita dall'applicazione.
+
+Playedit*PlaybackMsgFileCorrupt.value:  Il file di riproduzione non creato da un'applicazione di registrazione dell'emulator. Impossibile aprire file.  Uscita dall'applicazione.
+
+Playedit*noaccessDir:  Impossibile accedere alla directory.
+
+Playedit*selectInsertLocation.messageString:  Evidenzia riga dove va inserita questa azione.
+
+Playedit*ErrorMsgFileNameChars.messageString:  Il carattere immesso non è valido in un nome file.
+
+Playedit*EBCMismatchText.value:  La lingua della sessione dell'emulator che ha richiamato l'editor del file di riproduzione non corrisponde alla lingua di IBM Network Station.  I caratteri e le stringhe create con questa applicazione potrebbe causare risultati non desiderati nella sessione dell'emulatore.
+
+Playedit*nonValidDialog.messageString:  Le azioni {0} non sono valide.
+
+!** Messages
+Playedit*helpMessage:  Caricamento del programma di visualizzazione della guida in corso ...
+
+Playedit*chooseSave:  Selezionare Salva per salvare le modifiche.
+
+Playedit*chooseCancel:  Annullate modifiche correnti.
+
+Playedit*noActionSelected.messageString:  Nessuna selezione nell'elenco delle Azioni o dei Caratteri.
+
+Playedit*nothingHighlightedDelete.messageString:  Nessuna selezione per l'eliminazione.
+
+Playedit*nothingHighlightedInsert.messageString:  Evidenzia posizione dell'inserimento desiderato.
+
+Playedit*nothingHighlightedEdit.messageString:  Nessuna selezione da modificare.
+
+!** Exit
+Playedit*quitDialog1:  Il file di riproduzione è stato modificato ma non salvato.
+
+Playedit*quit1Tog1:  Esci senza salvare le modifiche.
+
+Playedit*quit1Tog2:  Salvare le modifiche prima di uscire.
+
+!**************************************************
+!*
+!*        Printing translations
+!*
+!*      Added by AJMEYER for V310.nc
+!*
+!**************************************************
+
+AllShare*printDialogPrinterTypeLabel.labelString:  Tipo di stampante:
+
+AllShare*printDialogPrinterTypeMenu*postscript.labelString:  PostScript
+
+AllShare*printDialogPrinterTypeMenu*ascii.labelString:  ASCII
+
+AllShare*printDialogPrinterTypeMenu*pcl.labelString:  PCL
+
+AllShare*printDialogPrinterSelectControls_popup.title:   Selettore stampante
+
+AllShare*printSelectDialogOKButton.labelString:  OK
+
+AllShare*printSelectDialogCancelButton.labelString:  Annulla
+! ENGL1SH_VERS10N 1.6.2.2 DO NOT REMOVE OR CHANGE THIS LINE

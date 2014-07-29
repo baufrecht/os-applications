@@ -1,0 +1,334 @@
+//// ENGLISH_SOURCE_VERSION= 1.1 
+////This file contains the keyboard remapping program on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file is stored in locale specific ASCII (code page 819 for Latin1 languages). This help text is stored on the booting server as N3_5KeyH.
+
+////Help text format (this section is not displayed to IBM emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1. Do not translated (or change) anything in a comment line.
+//// 3. This help file contains help text for the 3270, and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator.   A comment line of four "/" characters followed by:
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+//// 3B. "5250" indicates subsequent data is only displayed in 5250 on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in 3270, and 5250 on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+////  3G. Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters.  The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Do not change the order of topics in this help text file.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+----"Guida di impostazione della tastiera 3270"
+++++"Informazioni generali"
+Per informazioni sull'utilizzo di questo programma di visualizzazione della guida, consultare il primo argomento nella finestra principale dell'emulatore (selezionare "Guida" nella barra dei menu nella finestra dell'emulatore).
+
+Queste informazioni descrivono in che modo utilizzare il programma di reimpostazione della tastiera per modificare le azioni della tastiera con le sessioni dell'emulatore 3270.
+
+Nota: E' possibile attivare un solo programma di reimpostazione della tastiera per volta.
+
+++++"Selezione File di impostazione della tastiera"
+All'inizio della sessione 3270, l'emulatore 3270 ricerca un file di di impostazione per la sessione. Il tipo di tastiera deve corrispondere; un file di impostazione della tastiera viene utilizzato per un tipo di tastiera (ad esempio, una tastiera PC 102). Viene utilizzato il seguente ordine: se viene rilevato un file di impostazione della tastiera viene utilizzato per la sessione 3270:
+
+- Ricercare un file di impostazione della tastiera -KEYFILE.
+
+- Cercare un file di impostazione della tastiera specifico creato utilizzando il programma di reimpostazione della tastiera.
+
+- Cercare un file di impostazione della tastiera predefinito creato utilizzando il programma di reimpostazione della tastiera.
+
+- Se non ne viene rilevato nessuno, l'emulatore utilizza le azioni predefinite della tastiera.
+
+////5250
+++++"Tasto Invio/Esci"
+Le preferenze possono modificare l'ubicazione delle azioni Invio ed Esci. Per modificare il tasto Control destro o il tasto Invio, controllare prima se l'associazione desiderata è disponibile nelle Preferenze. Per eseguire tale operazione, consultare l'elenco a discesa Opzioni nella barra dei menu dell'emulatore per le Preferenze.
+
+Ogni modifica di reimpostazione della tastiera ai tasti Invio o Control destro vengono sovrascritti dalle "Preferenze" se l'opzione Invio/Esci non è impostata sui valori predefiniti.
+
+Se l'associazione desiderata non è disponibile nelle Preferenze, impostare prima l'opzione Invio/Esci sui valori predefiniti e, quindi, effettuare le modifiche desiderate utilizzando il programma di reimpostazione della tastiera.
+
+Nota: le Preferenze possono anche modificare l'ubicazione dell'azione Stampa, sovrascrivendo le modifiche di reimpostazione della tastiera al tasto Stamp. 
+
+////3270
+++++"Tasto Invio"
+Le Preferenze e il programma per l'impostazione dell'emulatore IBM 3270 possono modificare l'ubicazione dell'azione Invio. Per modificare il tasto Control destro o il tasto Invio, controllare prima se l'associazione desiderata è disponibile nelle Preferenze o il programma per l'impostazione dell'emulatore IBM 3270.
+
+L'ubicazione del tasto Invio delle Preferenze è la priorità più alta. Successivamente, viene utilizzata l'impostazione dell'ubicazione del tasto nel programma per l'impostazione dell'emulatore IBM 3270. Se l'ubicazione del tasto Invio delle Preferenze è impostata sui valori predefiniti e l'ubicazione del tasto Invio nel programma per l'impostazione dell'emulatore IBM 3270 è impostata sui valori predefiniti, la reimpostazione della tastiera può essere utilizzata per modificare il tasto Invio e le azioni del tasto Control destro.
+
+Nota: le Preferenze possono anche modificare l'ubicazione dell'azione Stampa locale. Questa impostazione sovrascrive ogni modifica di reimpostazione della tastiera per il tasto Stamp. 
+
+////9999
+++++"Layout della finestra"
+La finestra di Reimpostazione della tastiera dispone di un'area di layout di tastiera grafico (in alto), un'area di selezione azione (a sinistra), un'area di azione/tasto (a destra) ed un'area barra/messaggi azione (in basso).
+
+Tastiera grafica: mostra il layout fisico della tastiera corrente. Facendo clic sul tasto vengono visualizzate le azioni associate a quel tasto nell'area tasto/azione. 
+
+
+L'area di selezione delle azioni contiene quanto segue:
+
+1) L'elenco di azioni disponibili che contiene le azioni  disponibili. Le azioni selezionate in questo elenco diventano le azioni correnti.
+
+2) L'elenco di caratteri che contiene tutti i caratteri disponibili. Un carattere selezionato diventa l'azione corrente. Per selezionare un carattere, fare clic su di esso.
+
+3) Il pulsante "Guida Azioni" contiene le definizioni delle azioni della tastiera in una finestra di guida delle azioni. Le definizioni delle azioni possono essere stampate.
+
+////5250
+4) Il pulsante "Nessuna azione" che imposta l'azione corrente su "nessuna". Una sequenza tasti con funzioni di azione "nessuna" come se la sequenza tasti non venisse premuta.
+////3270
+4) Il pulsante "Nessuna azione" che imposta l'azione corrente su "noop". Una sequenza tasti con funzioni di azione "noop" come se la sequenza tasti non venisse premuta.
+////9999
+
+5) Il pulsante "Individua" che rileva tutti i tasti associati all'azione evidenziata nell'elenco di azioni disponibili. I tasti individuati sono evidenziati nella tastiera grafica e il primo tasto funziona come tasto corrente nell'area tasto/azione.
+
+Nota: una sola azione può essere quella corrente.
+
+
+L'area tasto/azione contiene quanto segue:
+
+1) Il "Tasto corrente" che visualizza il tasto che è possibile modificare. Il "Tasto corrente" viene visualizzato nella parte superiore dell'area tasto/azione o nell'area di selezione dell'azione (in base al tipo di tastiera). E' possibile modificare solo un tasto per volta.
+
+2) I pulsanti "Modificatore" che rappresentano le combinazioni di modificatori riconosciuti dal programma di reimpostazione della tastiera. I pulsanti modificatori cominciano con "-> ". Facendo clic su un pulsante modificatore, l'azione corrente (dall'elenco di azioni disponibili, dall'elenco caratteri o nessuna azione) sostituisce l'azione nell'area di testo dell'azione.
+
+3) L'"Area azione di testo" che è ubicata a destra di ciascun pulsante modificatore, visualizza l'azione associata al tasto corrente per questo modificatore. Tale area può essere modificata (consultare "Modifica di un'area testo dell'azione").
+
+4) Il pulsante "OK", mediante il quale vengono accettate le modifiche apportate al tasto corrente.
+
+5) Il tasto "Annulla" che annulla le modifiche apportate al l tasto corrente.
+
+
+I pulsanti della barra delle applicazioni contengono le seguenti funzioni:
+
+1) "Salva" le modifiche di reimpostazione alla tastiera nel file di impostazione della tastiera.
+
+2) "Elimina" i file di reimpostazione della creati precedentemente.
+
+3) "Applica le modifiche alla sessione" che avvia il programma di reimpostazione della tastiera. Ciò consente la verifica delle modifiche prima di salvarle in un file di impostazione della tastiera.
+
+4) "Ripristina" (annulla) le modifiche effettuate dall'ultimo "Applica" o da quando è stato avviato il programma di reimpostazione della tastiera.
+
+5) "Esci" dal programma di reimpostazione della tastiera.
+
+6) "Stampa" stampa le sequenze tasti/modificatori con le azioni conseguenti.
+
+7) "Guida" visualizza la guida.
+
+Area dei messaggi: contiene i messaggi di informazioni e di errore.
+
+++++"Introduzione"
+Di seguito sono riportate le fasi per le modifiche alla reimpostazione della tastiera:
+
+1) Avviare il programma di reimpostazione della tastiera dalla sessione emulatore in cui effettuare le modifiche di reimpostazione.
+
+2) Fare clic sul tasto da modificare nella tastiera grafica.
+
+3) L'area tasto/azione è attiva e il tasto selezionato è il tasto corrente. Le azioni attualmente associate al tasto per i vari modificatori appaiono nelle aree testo dell'azione.
+
+4) Fare clic su un'azione da associare al tasto corrente dall'elenco di azioni disponibili, dall'elenco caratteri o nessuna azione. (Nota: l'argomento Macro semplici della tastiera spiega come creare una macro semplice della tastiera).
+
+5) Fare clic su pulsante modificatore a cui associare l'azione. L'area di testo per il modificatore visualizza l'azione desiderata. Se si desidera applicare l'azione su più modificatori per questo tasto, fare clic sui modificatori desiderati. L'area testo dell'azione può essere modificata; consultare "Modifica delle aree testo dell'azione" per ulteriori informazioni.
+
+6) Fare clic su "OK" per accettare le modifiche al tasto o su "Annulla" per tornare alle azioni originali.
+
+7) Fare clic su "Applica modifiche alla sessione".
+
+8) Verificare le modifiche di reimpostazione della tastiera nella sessione dell'emulatore; non uscire dal programma di reimpostazione della tastiera.
+
+9) Nel programma di reimpostazione della tastiera, è possibile effettuare ulteriori modifiche o premere "Ripristina" se necessario.
+
+10) Dopo aver applicato e verificato tutte le modifiche di reimpostazione della tastiera, salvare le modifiche. 
+
+11) Uscire dal programma di reimpostazione della tastiera.
+
+++++"Modifica di un'area testo dell'azione"
+Un'area di testo azione è ubicata a destra di ciascun pulsante modificatore, visualizza l'azione (o le azioni) associata al tasto corrente per questo modificatore. Le aree testo dell'azione possono essere modificate utilizzando la tastiera. Fare clic nell'area testo dell'azione desiderata e effettuare le modifiche utilizzando la tastiera. Fare clic su "OK" per accettare le modifiche.
+
+Le azioni modificate devono essere immesse correttamente in quanto sono sensibili al maiuscolo/minuscolo. Più azioni possono essere separate da un singolo spazio.
+
+Se viene rilevato un errore di testo azione, viene visualizzata una finestra di avvertenza e l'azione non corretta viene evidenziata.
+
+Fare clic nell'area testo dell'azione per renderla attiva. Se un pulsante modificatore viene selezionato quando l'area testo dell'azione è attiva, l'azione corrente viene inserita in tale area nel punto in cui si trova il cursore. Se un pulsante modificatore viene selezionato quando l'area testo dell'azione non è attiva, l'azione corrente sostituisce l'azione o le azioni precedenti.
+
+////Nota: la traduzione di String() e Play() di seguito deve corrispondere al testo risorsa tradotto per  AllShare*string() e Keyxxx52*play() nel file di risorsa di reimpostazione della tastiera.
+Il tasto Ctrl e Alt + i tasti del tastierino numerico da 0 a 9 non supportano il testo nelle parentesi dell'area testo dell'azione. String() e Play() non supportano il testo per tali combinazioni di tasti.
+
+++++"Applicazione delle modifiche all'impostazione della tastiera"
+Il pulsante Applica modifiche alla sessione applica temporaneamente le modifiche all'impostazione della tastiera alla sessione dell'emulatore quando viene avviato il programma di reimpostazione della tastiera. E' possibile controllare le modifiche. Consultare "Salvataggio dei file di reimpostazione della tastiera" per informazioni su come salvare le modifiche per l'uso successivo.
+
+++++"Salvataggio dei file di reimpostazione della tastiera"
+Il pulsante Salva salva le modifiche di reimpostazione della tastiera per l'uso successivo. Le modifiche vengono salvate in un file di impostazione della tastiera. Selezionare come sono state salvate le modifiche di reimpostazione della tastiera: come file di impostazione della tastiera predefinito utilizzato per tutte le sessioni o come file di impostazione della tastiera specifico della sessione utilizzato solo per la sessione da cui è stato  avviato il programma di reimpostazione della tastiera.
+
+Un file di impostazione della tastiera specifico della sessione consente l'esecuzione di azioni  diverse in diverse sessioni 3270. Un file di impostazione della tastiera specifico della sessione ha la priorità più alta e viene utilizzato per la sessione specifica in cui il file di impostazione della tastiera è stato creato (utilizzando il numero della sessione della sessione 3270 e il nome della sessione).
+
+Un file di impostazione della tastiera predefinito ha la seconda priorità più alta e e viene utilizzato per tutte le sessioni che non dispongono di un file di impostazione della tastiera specifico della sessione. 
+
+Consultare "Eliminazione dei file di impostazione della tastiera" per informazioni sull'eliminazione di un file di impostazione della tastiera.
+
+++++"Eliminazione dei file di impostazione della tastiera"
+Fare clic sul pulsante "Elimina" nella barra delle azioni per eliminare i file di impostazione della tastiera creati. Selezionare ogni file di impostazione della tastiera da eliminare e premere il pulsante di eliminazione.
+
+++++"Ripristino dell'impostazione della tastiera"
+Se sono state effettuate delle modifiche non desiderate di reimpostazione della tastiera, è possibile ripristinare l'impostazione della tastiera:
+
+1) L'impostazione della tastiera originale letta all'avvio del programma di Reimpostazione della tastiera.
+
+2) Lo stato dell'ultima applicazione; è l'associazione applicata più di recente alla sessione mediante il pulsante Applica dalla barra delle azioni.
+
+Il ripristino non salva o applica le associazioni tasti ripristinate. Esso ripristina le conversioni per il programma di reimpostazione della tastiera.
+
+Per ripristinare le associazioni di un'impostazione della tastiera predefinite, eliminare il file di programma di impostazione della tastiera specifico per la sessione e riavviare la sessione.
+
+++++"Macro semplici della tastiera"
+Una macro della tastiera è una sequenza tasti che è possibile immettere nella sessione dell'emulatore. Le Macro semplici della tastiera possono essere create mediante il programma di reimpostazione della tastiera. Le sequenze della tastiera lunghe o complesse possono essere create utilizzando la funzione Registra e Riproduci. Consultare gli argomenti sulla registrazione e la riproduzione nella guida dell'emulatore principale.
+
+Creazione di una macro semplice della tastiera:
+
+1) Fare clic sul tasto nella tastiera grafica che eseguirà le macro della tastiera.
+
+////Nota: la traduzione di String() di seguito deve corrispondere al testo risorsa tradotto per  AllShare*string() nel file di risorsa di reimpostazione della tastiera.
+2) Fare scorrere l'elenco Azioni disponibili fino all'azione String() e fare clic su String().
+
+3) Fare clic sul pulsante modificatore desiderato per il tasto selezionato.
+
+4) Fare clic tra le parentesi di String() nell'area Tasto/Azione.
+
+5) Immettere un doppio apice, i dato macro della tastiera e un doppio apice; ad esempio String("dati propri").
+
+6) Fare clic su OK per accettare le modifiche.
+
+7) Fare clic su Applica modifiche alla sessione.
+
+8) Verificare le macro della tastiera; premere la sequenza tasti nella sessione dell'emulatore. E' possibile modificare le macro della tastiera. Fare clic su Salva.
+
+Nota: E' possibile associare più azioni ad un singolo tasto. Per fare ciò, fare clic nell'area testo dell'azione desiderata ed immettere le azioni desiderate. E' inoltre possibile fare clic sull'area testo dell'azione desiderata e fare clic sui pulsanti modificatori per inserire le azioni dall'elenco di azioni disponibili e dall'elenco dei caratteri. Più azioni possono essere separate da un singolo spazio.
+
+Nota: per creare una macro utilizzando più combinazioni di modificatori non disponibili nell'area testo/azione, utilizzare la funzione Reimpostazione della tastiera avanzata (consultare l'argomento Reimpostazione della tastiera avanzata).
+
+++++"File di riproduzione"
+E' possibile associare un file di riproduzione ad una sequenza tasti. Registrare un file di riproduzione utilizzando la funzione apposita (consultare l'argomento Registrazione nella guida principale).
+
+////Nota: la traduzione di Play() di seguito deve corrispondere al testo risorsa tradotto per  Keyxxx52*play() nel file di risorsa di reimpostazione della tastiera.
+Successivamente, nella reimpostazione della tastiera, selezionare il tasto per avviare il file di riproduzione. Assegnare l'azione Play() alla sequenza tasti. 4) Fare clic con il mouse tra le parentesi di Play() nell'area Tasto/Azione. Immettere il nome del file di riproduzione tra le parentesi.
+
+++++"Nessuna azione"
+Per rendere inattiva una sequenza tasti, fare clic sul pulsante "Nessuna azione" nell'area di selezione dell'azione e fare clic sul pulsante modificatore per la sequenza tasti desiderata. Quindi, accettare le modifiche selezionando il pulsante "OK".
+
+////Note: The translation of Dead Key below should match the translated resource text for Keyxxx52*unmappable() in the keyboard remapping resource file.
+Nota: un tasto con Tasto inattivo nell'area testo dell'azione non può essere associato in quanto il sistema operativo non elabora i tasti inattivi.
+
+////Note: The translation of Undefined below should match the translated resource text for Keyxxx52*undefined() in the keyboard remapping resource file.
+Nota: un tasto Non definito nell'area testo dell'azione non può essere associato.
+
+++++"Individuazione delle azioni"
+Per individuare le sequenze tasti associate all'azione, selezionare l'azione nell'elenco delle azioni disponibili e fare clic sul pulsante Individua nell'area di selezione dell'azione.
+
+Tutti i tasti associati all'azione individuata sono evidenziati e il primo tasto individuato diviene il tasto corrente nell'area tasto/azione.
+
+L'individuazione non è consentita per Nessuna azione, i caratteri dell'elenco dei caratteri o le macro della tastiera.
+
+++++"Elenco dei caratteri"
+L'elenco dei caratteri consente l'accesso ai caratteri a cui non è possibile accedere dalla tastiera.
+
+Specificare un carattere per una sequenza tasti: fare clic sul tasto nella tastiera grafica che visualizza il carattere. Fare clic sul carattere desiderato nell'elenco. Fare clic sul pulsante modificatore desiderato. Fare clic su OK per accettare la modifica ed applicare tale modifica alla sessione.
+
+Aggiungere un carattere alla macro della tastiera: fare clic sul tasto nella tastiera grafica che visualizza la macro della tastiera. Fare clic sul carattere desiderato nell'elenco. Fare clic nell'area testo dell'azione della macro della tastiera (nell'azione String()), nel punto in cui inserire i caratteri da aggiungere (i tasti cursore di destra e sinistra consentono di spostare il cursore nell'ubicazione corrente). Fare clic sul pulsante modificatore desiderato. Fare clic su OK per accettare la modifica ed applicare tale modifica alla sessione.
+
+++++"Tasti Window Manager"
+Alcuni tasti sono elaborati dal programma Window Manager; ad esempio, la sequenza tasti per spostare una finestra nello sfondo. I tasti Window Manager non sono disponibili per la reimpostazione della tastiera utilizzando il programma di reimpostazione della tastiera dell'emulatore.
+
+////3270
+++++"Emulazione penna ottica"
+E' possibile emulare una penna ottica (selezionando un campo) mediante la sequenza tasti o il mouse. Definire la sequenza tasti o il mouse utilizzando il programma di reimpostazione della tastiera.
+
+//// Note: The translation of PenSelectField() below should match the translated resource text for Keyxxx52*select-field() in the keyboard remapping resource file.
+Sequenza tasti: fare clic sul tasto desiderato nella tastiera grafica ed assegnare l'azione PenSelectField() alla sequenza tasti desiderata.
+
+////Note: Do not translate Alt<KeyPress>Insert: select-field() and Alt<Btn3Down>: select-field() below.
+Mouse: determinare la sequenza del mouse per emulare la penna ottica; non disabilitare una funzione del mouse utile. E' più semplice assegnare temporaneamente l'azione PenSelectField() ad  una sequenza tasti come descritto in precedenza. Non sovrascrivere una sequenza tasti utilie (a d esempio Alt-Insert è solitamente disponibile). Quindi, utilizzare la Reimpostazione della tastiera avanzata (consultare l'argomento della guida Reimpostazione della tastiera avanzata per ulteriori informazioni) per modificare la sequenza tasti, che di solito è la prima sequenza tasti nell'elenco. Ad esempio, modificare Alt<KeyPress>Insert: select-field() in Alt<Btn3Down>: select-field(). In questo caso, Alt più il tasto destro del mouse emula la penna ottica.
+////9999 
+
+++++"Conversioni non visualizzabili"
+Le Conversioni non visualizzabili si verificano solo se vengono aggiunte delle conversioni mediante la Reimpostazione della tastiera avanzata o se si dispone di un file di impostazione della tastiera creato con una versione precedente del programma di Reimpostazione della tastiera.
+
+In Reimpostazione della tastiera avanzata (e nella versione precedente del programma di Reimpostazione della tastiera), sono consentite più conversioni del modificatore. Tali modificatori non sono visualizzati nell'area tasto/azione.
+
+Se esiste una conversione per il tasto corrente che non è possibile visualizzare, viene emesso un messaggio nell'area dei messaggi. Questa conversione può essere solo visualizzata, modificata o  rimossa utilizzando la funzione Reimpostazione della tastiera avanzata. Tali conversioni forniscono una funzione utile; il programma di Reimpostazione della tastiera non modifica queste conversioni. 
+
+++++"Stampa dei file di impostazione della tastiera"
+E' possibile eseguire la stampa dei file di impostazione della tastiera selezionando il pulsante "Stampa" dalla barra delle azioni e selezionando le opzioni di stampa dalla finestra di stampa. Ogni sequenza tasti/modificatore viene elencata nell'azione prodotta. In ogni caso, le sequenze tasti create con la funzione Reimpostazione della tastiera avanzata non vengono stampate.
+
+++++"Reimpostazione della tastiera avanzata"
+Avvertenza: la Reimpostazione della tastiera avanzata può produrre risultati indesiderati e provocare problemi significativi alla sessione dell'emulatore. Se ciò si verifica, ripristinare correggendo le modifiche di reimpostazione della tastiera (modifica ed applica) o eliminando il file di impostazione della tastiera. E' necessario uscire dalla sessione dell'emulatore e riavviarla dopo l'eliminazione del file di impostazione della tastiera.
+
+La Reimpostazione della tastiera avanzata fornisce agli utenti esperti la possibilità di modificare l'elenco di conversione sequenza tasti associato alla sessione emulatore.
+
+Tenere premuto il tasto "Alt", quindi premere il tasto "a" per avviare la Reimpostazione della tastiera avanzata.
+
+La finestra di Reimpostazione della tastiera avanzata contiene l'elenco di conversione interno e i seguenti quattro pulsanti:
+
+1) "Modifica" la prima conversione selezionata nell'elenco.
+
+2) "Inserisci" una riga vuota prima della conversione selezionata.
+
+3) "Elimina" tutte le conversioni selezionate nell'elenco (accertarsi di voler eliminare tutte le conversioni selezionate prima di fare clic su Elimina).
+
+4) "Chiudi" la finestra Reimpostazione della tastiera avanzata.
+
+Individuazione delle voci nell'elenco delle conversioni: selezionando un tasto nella tastiera grafica, tutte le traduzioni associate a quel tasto vengono evidenziate nell'elenco delle conversioni. L'elenco viene corretto automaticamente per visualizzare la prima conversione selezionata.
+
+Per individuare un'azione nell'elenco delle conversioni, selezionare l'azione nell'elenco di azioni principale e fare clic sul pulsante Individua. I tasti che utilizzano questa azione sono evidenziati.
+
+Precedenza di conversione: le conversioni devono essere nell'ordine corretto. L'elenco delle conversioni viene controllato dall'inizio alla fine per ricercare la conversione che corrisponde alla sequenza tasti. La prima voce rilevata che corrisponde ai requisiti, verrà utilizzata. Le voci dell'elenco delle conversioni che dispongono del più alto numero di modificatori (più specifici) vengono collocate prima delle voci con il numero più basso.
+
+Ad esempio:
+
+////5250
+////In the following two lines, only "must come before" should be translated.
+  Alt<KeyPress>Print: sysreq() deve precedere
+  <KeyPress>Print: print()
+
+"sysreq" viene selezionato quando viene premuto il tasto Stampa e il tasto Alt (E' possibile tenere premuti altri tasti modificatori). "print" viene selezionato quando viene premuto il tasto Stampa (E' possibile tenere premuti altri tasti modificatori). Se <KeyPress>Print: print() precedono Alt<KeyPress>Print: sysreq(), Alt<KeyPress>Print: sysreq() non verrà elaborato in quanto <KeyPress>Print: print() verrà elaborato prima.
+////3270
+  Alt<KeyPress>Print: sysreq()  deve precedere
+  <KeyPress>Print: pa1()
+
+"sysreq" viene selezionato quando viene premuto il tasto Stampa e il tasto Alt (E' possibile tenere premuti altri tasti modificatori). "pa1" viene selezionato quando viene premuto il tasto Stampa (E' possibile tenere premuti altri tasti modificatori). Se <KeyPress>Print: pa1() precedono Alt<KeyPress>Print: sysreq(), Alt<KeyPress>Print: sysreq() non verrà elaborato in quanto <KeyPress>Print: pa1() verrà elaborato prima.
+////9999
+
+Struttura delle conversioni:
+
+////In the following line, "<KeyPress>" should not be translated.
+  Modificatore Modifier<KeyPress>Key: action() action()
+
+Nessun modificatore richiesto. Sono supportati più modificatori. E' richiesta un'azione. Sono supportate più azioni.
+
+I modificatori sono riconosciuti dal programma di reimpostazione della tastiera.
+
+////In the following list, the left column ("Any" through "Mod5") should not be translated. The information in parenthesis to the right should be translated.
+////5250
+Any      (corrisponde a nessun modificatore)
+Shift    (Maiusc)
+Lock     (Bloc maiusc)
+Ctrl     (tasto Ctrl sinistro)
+Alt      (alt)
+Mod2     (tasto alt destro, Alt Gr)
+Mod3     (non utilizzato adesso)
+Mod4     (non utilizzato adesso)
+Mod5     (Num_lock)
+////3270
+Any      (corrisponde a nessun modificatore)
+Shift    (Maiusc)
+Lock     (Bloc maiusc)
+Ctrl     (tasto Ctrl sinistro)
+Alt      (alt)
+Mod2     (tasto alt destro, Alt Gr)
+Mod3     (non utilizzato adesso)
+Mod4     (non utilizzato adesso)
+Mod5     (Num_lock)
+////9999
+
+Il programma di reimpostazione della tastiera riconosce anche la definizione esclusiva (!) all'inizio dell'elenco dei modificatori.
+
+////5250
+////Do not translate "reset()" and "Ctrl" below.
+L'azione reset() è associata al tasto control sinistro (l'azione reimposta non deve essere sposata). Se viene specificato il modificatore Ctrl per selezionare un'azione, il tasto Control sinistro elabora l'azione reset() prima di elaborare l'azione.
+////9999
+
+////Do not translate "enter()", "newline()", and "Control_R" below.
+L'azione enter() o newline() è collocata solitamente nel tasto Control_R.

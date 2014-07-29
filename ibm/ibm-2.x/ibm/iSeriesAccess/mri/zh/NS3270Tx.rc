@@ -1,0 +1,687 @@
+!
+!
+!
+! This file contains the resource text strings for the IBM Linux 3270 and 5250
+! emulators, in particular the main emulator windows.
+
+! This resource file will be stored on all servers in locale specific ASCII (819 for Latin1
+! languages). 
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. This resource file contains text strings for the 3270 and 5250 emulators.  Much of
+!    the resource text is common to both emulators. Some is specific to one emulator.
+!    IBM9999 = Resources used by both 3270 and 5250 emulators.
+!    IBM3270 = Resources used by the 3270 emulator.
+!    IBM5250 = Resources used by the 5250 emulator.
+! 4. Resource format: 
+!    - A resource line starts with IBM3270*, IBM5250*, or IBM9999*, followed by a resource name
+!      and a ":".  Do NOT make any changes to the text to the left of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+!******************************************************************************
+!************************ BEGIN DO NOT TRANSLATE ******************************
+!******************************************************************************
+!*   The first section of resources are are locale specific but               *
+!*   DO NOT REQUIRE TRANSLATION.                                              *
+!*                                                                            *
+!* This source file enables the resource section for Latin1 and Latin2.       *
+!*                                                                            *
+!* For ru_RU or Latin5 locales and DBCS locales                               *
+!*      1. Place a '!' as the first character in each line in the Latin1      *
+!*      and Latin2 section                                                    *
+!*      2. Remove the '!' character for each resource line in the apropriate  *
+!*      section that matches your locale.                                     *
+!*                                                                            *
+!* For example, ru_RU should place ! in front of all lines in the LATIN1      *
+!* section remove the ! from all lines in the LATIN5 section.                 *      
+!******************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN1 and LATIN2                ****************
+!**************************************************************************
+IBM9999*font_List:     -*-*-medium-r-normal-*-*-*-*-*-m-150-*-*;-*-*-medium-r-normal-*-*-*-*-*-m-110-*-*;-*-*-medium-r-normal-*-*-*-*-*-m-90-*-*;-*-*-medium-r-normal-*-*-*-*-*-m-70-*-*;-*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+IBM9999*largestFontList:     -*-*-medium-r-normal-*-*-*-*-*-m-150-*-*
+IBM9999*extraLargeFontList:  -*-*-medium-r-normal-*-*-*-*-*-m-110-*-*
+IBM9999*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-90-*-*
+IBM9999*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-70-*-*
+IBM9999*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+!**************************************************************************
+!****************   END LATIN1 and LATIN2                  ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN5                           ****************
+!**************************************************************************
+!IBM9999*font_List:     -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*;-*-*-medium-r-normal-*-*-*-*-*-c-90-*-*;-*-*-medium-r-normal-*-*-*-*-*-c-70-*-*;-*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!IBM9999*largestFontList:     -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*
+!IBM9999*extraLargeFontList:  -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*
+!IBM9999*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!IBM9999*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-70-*-*
+!IBM9999*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!**************************************************************************
+!****************   END   LATIN5                           ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (ja_JP ko_KR zh_CN)   ****************
+!**************************************************************************
+!IBM9999*font_List:            -*-*-medium-r-normal--24-*-*-*-c-*;-*-*-medium-r-normal--16-*-*-*-c-*
+!IBM9999*largestFontList:     -*-*-medium-r-normal--24-*-*-*-c-*
+!IBM9999*extraLargeFontList:  -*-*-medium-r-normal--24-*-*-*-c-*
+!IBM9999*largeFontList:       -*-*-medium-r-normal--16-*-*-*-c-*
+!IBM9999*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!IBM9999*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*
+!**************************************************************************
+!****************   END DBCS (ja_JP ko_KR zh_CN)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (zh_TW)   ****************
+!**************************************************************************
+!IBM9999*font_List:            -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*;-*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!IBM9999*largestFontList:     -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!IBM9999*extraLargeFontList:  -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!IBM9999*largeFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!IBM9999*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!IBM9999*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!**************************************************************************
+!****************   END DBCS (zh_TW)     ****************
+!**************************************************************************
+
+!uncomment the appropriate inputMethod
+!For LatinX (non DBCS locales) or locales without an input method.
+IBM5250*inputMethod:
+!
+! For ja_JP
+!IBM5250*inputMethod: kinput2
+!
+! For ko_KR 
+!IBM5250*inputMethod: Ami
+!
+!For zh_CN
+!IBM5250*inputMethod: xcin-zh_CN
+!
+!For zh_TW
+!IBM5250*inputMethod: xcin-zh_TW
+
+!**************************************************************************
+!****************   END DO NOT TRANSLATE                   ****************
+!**************************************************************************
+
+
+
+IBM5250*MainWindow.title: 5250
+IBM3270*MainWindow.title: 3270
+
+IBM5250*errorMsgDialog_popup.title: 5250 错误
+IBM3270*errorMsgDialog_popup.title: 3270 错误
+
+IBM5250*warningMsgDialog_popup.title: 5250 信息
+IBM3270*warningMsgDialog_popup.title: 3270 信息
+
+IBM5250*hostNameDialog_popup.title: 新建 5250 会话
+IBM3270*hostNameDialog_popup.title: 新建 3270 会话
+
+IBM5250*hostNameDialog.selectionLabelString: 输入新的 5250 主机名。
+IBM3270*hostNameDialog.selectionLabelString: 输入新的 3270 主机名。
+
+IBM5250*hostNameDialog.iconName: 新建 5250 会话
+IBM3270*hostNameDialog.iconName: 新建 3270 会话
+
+IBM5250*lowMemoryDialog_popup.title: 5250 内存不足
+IBM3270*lowMemoryDialog_popup.title: 3270 内存不足
+
+IBM5250*new5250Button.labelString: 新建 5250...
+
+IBM5250*quitButton.labelString: 退出 5250
+IBM3270*quitButton.labelString: 退出 3270
+
+IBM5250*localPrintControls_popup.title: 5250 屏幕打印
+IBM3270*localPrintControls_popup.title: 3270 屏幕打印
+
+
+!**************************************************************************************
+!** Resources in both 5250 and 3270 that do not need separate translations
+!**************************************************************************************
+
+!***********************
+!**  Various Dialogs  **
+!***********************
+IBM9999*lowMemoryDialog.messageString: 没有足够的内存，无法完成操作。
+
+IBM9999*ErrorMsgMaxSessions: 会话不被允许。已超过最大会话数。
+
+! -DISPLAY_NAME is not translated.
+IBM9999*ErrorMsgInvalidName: -DISPLAY_NAME 参数的说明无效。
+
+! \n in the following resource string allows text following \n to appear on a new line.
+! \n is not translated. You can move, add, or remove the \n as needed.
+IBM9999*ErrorMsgNameInUse: 对 -DISPLAY_NAME 参数指定的名称已在使用中。\n\
+系统管理员对会话数作了限制。
+
+! BROWSER is not translated.
+IBM9999*ErrorMsgBrowserStart: 未定义 BROWSER 环境变量，无法启动浏览器。
+
+IBM9999*ErrorMsgTelnetUndefined: 没有在服务文件中定义 Telnet...
+
+IBM9999*ErrorMsgUnknownHost: 主机是未知的。
+
+IBM9999*ErrorMsgUnableToConnect: 无法启动连接。
+
+IBM9999*ErrorMsgTelnetNegoFailed: Telnet 协商失败。
+
+IBM9999*ErrorMsgRetryButton: 重试
+
+! \n in the following resource string allows text following \n to appear on a new line.
+IBM9999*ErrorMsgNoHostData: 丢失与主机的连接。\n\
+尝试重新启动仿真器会话。
+
+! \n in the following resource string allows text following \n to appear on a new line.
+IBM9999*ErrorMsgNoHostData2: 丢失与主机的连接。\n\
+重试启动仿真器会话吗？
+
+IBM9999*ErrorMsgFatalTelnetError: 发生致命的 Telnet 错误。
+
+IBM9999*ErrorMsgColorMapActive: 颜色映射图应用程序已经在另一个会话中活动。
+
+IBM9999*ErrorMsgColorMapLowMemory: 没有足够的内存来启动“颜色映射”。
+
+IBM9999*ErrorMsgKeyMapActive: 键映射应用程序已经在另一个会话中活动。
+
+! this cannot be made much longer during translation.
+IBM9999*ErrorMsgKeypadActive:  小键盘定制应用程序已经在另一个会话中活动。
+
+IBM9999*ErrorMsgKeyMapLowMemory: 没有足够的内存来启动“键盘重新映射”。
+
+IBM9999*ErrorMsgKeypadLowMemory:   没有足够的内存来启动“小键盘定制程序”。
+
+IBM9999*ErrorMsgHelpViewLowMemory: 没有足够的内存来启动“帮助查看器”。
+
+IBM9999*ErrorMsgMiscellaneousLowMemory: 没有足够的内存来启动“其他首选项”。
+
+! this cannot be made any longer during translation.
+IBM9999*ErrorMsgNSMServerDownLevel:   无法录制。IBM Network Station Manager 服务器的级别不够高。
+
+IBM9999*ErrorMsgNoPrinters:           未配置打印机。请与系统管理员联系。
+
+! \n in the following resource string allows text following \n to appear on a new line.
+IBM9999*ErrorMsgNoKeypadSelected: 未选择文件。\n\
+请选择文件，或者选择“取消”。
+
+! \n in the following resource string allows text following \n to appear on a new line.
+IBM9999*ErrorMsgNoKeypads: 找不到小键盘文件。从“选项”菜单中\n\
+选择“定制小键盘...”选项以创建用户小键盘。
+
+IBM9999*ErrorMsgTooManyKeypads: 在任何时候，最多只能有 10 个活动小键盘。
+	
+IBM9999*ErrorMsgFileNameChars: 您输入的字符在文件名中是无效的。
+
+! \n in the following resource string allows text following \n to appear on a new line.
+IBM9999*WarningMsgColorNotAvailable: 某些仿真器颜色不可用。\n\
+已经为会话调整了这些颜色。
+
+IBM9999*WarningMsgColorFileCorrupt: 存在颜色文件错误，已使用缺省颜色。
+
+IBM9999*hostNameDialog*startupPlaybackChoice.labelString: 使用启动回放文件
+
+! java ECL that is not supported yet but please translate
+IBM9999*runAppletDialog_popup.title: ECL Java applet
+
+! java ECL that is not supported yet but please translate
+IBM9999*runAppletDialog.selectionLabelString: 输入类名。
+
+! java ECL that is not supported yet but please translate
+IBM9999*runAppletDialog.iconName: ECL Java applet
+
+! java ECL that is not supported yet but please translate
+IBM9999*runAppletDialog: 输入类名。
+
+! java ECL that is not supported yet but please translate
+IBM9999*ErrorMsgUnableToRunApplet: 无法装入类
+
+
+!*******************************
+!**  Menu items in emulators  **
+!*******************************
+IBM9999*cmdCascade.labelString: 命令
+
+IBM9999*editCascade.labelString: 编辑
+
+IBM9999*pasteButton.labelString: 粘贴
+
+IBM9999*copyButton.labelString: 复制
+
+IBM9999*cutButton.labelString: 剪切
+
+IBM9999*optCascade.labelString: 选项
+
+IBM9999*fontMenuCascade.labelString: 字体
+
+IBM9999*pfkeysButton.labelString: 小键盘...
+
+IBM9999*keypadCascade.labelString: 小键盘
+
+IBM9999*customizeButton.labelString: 定制小键盘...
+
+IBM9999*recordButton.labelString: 录制...
+
+IBM9999*playbackButton.labelString: 回放...
+
+IBM9999*miscButton.labelString: 其他首选项...
+
+IBM9999*colormapButton.labelString: 颜色映射...
+
+IBM9999*keymapButton.labelString: 键盘重新映射...
+
+! java ECL that is not supported yet but please translate
+IBM9999*runAppletButton.labelString: 运行 applet...
+
+IBM9999*ctlCascade.labelString: 控制
+
+IBM9999*resetButton.labelString: 复位键
+
+IBM9999*sysreqButton.labelString: 系统请求键
+
+IBM9999*attentionButton.labelString: 辅助操作请求键
+
+IBM9999*helpkeyButton.labelString: 帮助键
+
+IBM9999*enterkeyButton.labelString: Enter 键
+
+IBM9999*prtCascade.labelString: 打印
+
+IBM9999*systemButton.labelString: 系统
+
+IBM9999*localButton.labelString: 屏幕打印...
+
+IBM9999*helpCascade.labelString: 帮助
+
+! message on IBM5250 on status line, cannot be made any longer, you can remove some periods.
+IBM9999*msgWaitingMsg.labelString: 消息等待.....
+
+IBM9999*cursorRowCol.labelString:  01/001
+
+IBM9999*okLabelString: 确定
+
+IBM9999*cancelLabelString: 取消
+
+!****************************
+!** Local Print Resources
+!****************************
+
+IBM9999*localPrintPrinterSelectButton.labelString: 选择打印机：
+
+IBM9999*localPrintPrinterSelectControls_popup.title: 打印机选择器
+
+IBM9999*localPrintPrinterSelectServerDelineator: @
+
+IBM9999*localPrintPrinterSelectLocalDesignator: （本地）
+
+IBM9999*localPrintPDTLabel.labelString: 打印机定义表：
+
+IBM9999*localPrintOtherOptions.labelString: 其他打印选项：
+
+IBM9999*localPrintFormFeedLabel.labelString: 换页：
+
+IBM9999*localPrintFormFeedYesButton.labelString: 是
+IBM9999*localPrintFormFeedNoButton.labelString: 否
+
+IBM9999*localPrintOrientationLabel.labelString: 方向：
+IBM9999*localPrintOrientationPortraitButton.labelString: 纵向
+
+IBM9999*localPrintOrientationLandscapeButton.labelString: 横向
+
+IBM9999*localPrintControls*startBtn.labelString: 打印
+
+IBM9999*localPrintControls*cancelBtn.labelString: 取消
+
+IBM9999*localPrintControls*selectOptions.labelString: 选择打印选项
+
+IBM9999*localPrintControls*printing.labelString: 正在打印...
+
+IBM9999*PrintCommand.labelString: 打印命令
+
+
+!********************************************************
+!**                  Record Resources
+!**
+!** MAX:  Push buttons should not exceed 8 characters
+!********************************************************
+IBM9999*recordControl_popup.title: 录制控制
+
+IBM9999*recordControl*startBtn.labelString: 启动
+
+IBM9999*recordControl*cancelBtn.labelString: 取消
+
+IBM9999*recordControl*pauseBtn.labelString: 暂停
+
+IBM9999*recordControl*stopBtn.labelString: 停止
+
+IBM9999*recordControl*recordControlLabelRecording.labelString: 正在录制。
+
+IBM9999*recordControl*recordControlLabelPaused.labelString: 已暂停。
+
+IBM9999*recordControl*recordControlKeysRemaingLabel.labelString: 剩余空间：
+
+IBM9999*recordPauseControls_popup.title: 录制暂停选项
+
+! this cannot be made much longer during translation. 
+IBM9999*recordPauseControls*recordPauseChoicesInstructions.labelString: 录制已暂停。选择要在回放期间\n\
+执行的选项：
+
+IBM9999*recordPauseControls*recordPauseRecordBtn.labelString: 在此处暂停回放
+
+IBM9999*recordPauseControls*recordPauseUseridBtn.labelString: 在此处插入用户标识
+
+IBM9999*recordPauseControls*recordPausePasswordBtn.labelString: 在此处插入密码
+
+IBM9999*recordPauseControls*recordPauseNoneBtn.labelString: 无
+
+IBM9999*recordPauseControls*continueBtn.labelString:   继续录制
+
+IBM9999*recordPauseControls*pauseStopBtn.labelString: 停止录制
+
+IBM9999*recordFileControl_popup.title: 回放文件保存控制
+
+IBM9999*recordFileControl*recordFileListLabel.labelString: 选择要替换的回放文件。
+
+IBM9999*recordFileControl*acceleratorBtn.labelString: 指定可选加速键
+
+IBM9999*recordFileControl*accButton0.labelString: 无
+
+! Function keys for accelerators.
+IBM9999*recordFileControl*accButton1.labelString:  F1
+
+IBM9999*recordFileControl*accButton2.labelString:  F2
+
+IBM9999*recordFileControl*accButton3.labelString:  F3
+
+IBM9999*recordFileControl*accButton4.labelString:  F4
+
+IBM9999*recordFileControl*accButton5.labelString:  F5
+
+IBM9999*recordFileControl*accButton6.labelString:  F6
+
+IBM9999*recordFileControl*accButton7.labelString:  F7
+
+IBM9999*recordFileControl*accButton8.labelString:  F8
+
+IBM9999*recordFileControl*accButton9.labelString:  F9
+
+IBM9999*recordFileControl*accButton10.labelString:  F10
+
+IBM9999*recordFileControl*accButton11.labelString:  F11
+
+IBM9999*recordFileControl*accButton12.labelString:  F12
+
+IBM9999*recordFileControl*accButton13.labelString:  F13
+
+IBM9999*recordFileControl*accButton14.labelString:  F14
+
+IBM9999*recordFileControl*accButton15.labelString:  F15
+
+IBM9999*recordFileControl*accButton16.labelString:  F16
+
+IBM9999*recordFileControl*accButton17.labelString:  F17
+
+IBM9999*recordFileControl*accButton18.labelString:  F18
+
+IBM9999*recordFileControl*accButton19.labelString:  F19
+
+IBM9999*recordFileControl*accButton20.labelString:  F20
+
+IBM9999*recordFileControl*accButton21.labelString:  F21
+
+IBM9999*recordFileControl*accButton22.labelString:  F22
+
+IBM9999*recordFileControl*accButton23.labelString:  F23
+
+IBM9999*recordFileControl*accButton24.labelString:  F24
+
+IBM9999*recordFileControl*recordFileTextLabel.labelString: 输入新的回放文件名。
+
+IBM9999*recordFileControl*saveBtn.labelString: 保存
+
+IBM9999*recordFileControl*doNotSaveBtn.labelString: 不保存
+
+IBM9999*recordFileControl*recordFileReplaceWarningDialog_popup.title: 回放文件替换警告
+
+IBM9999*recordFileControl*recordFileReplaceWarningDialog.messageString: 文件已存在。确定要覆盖吗？
+
+IBM9999*recordFileControl*recordFileMsgDialog_popup.title: 回放文件保存错误消息
+
+IBM9999*RecordFileMsgNoOpen: 无法打开文件。尚未保存击键。
+
+IBM9999*RecordFileMsgNoAccess: 无法访问目录。
+
+IBM9999*RecordFileMsgNoMake: 无法创建目录。
+
+
+!****************************
+!** Playback Resources
+!****************************
+IBM9999*playbackControl_popup.title: 回放控制
+
+IBM9999*playbackControl*playbackControlLabelSelectFile.labelString: 选择要播放的回放文件。
+
+IBM9999*playbackControl*playbackFileListLabel.labelString: 用户回放文件
+
+IBM9999*playbackControl*playbackDefaultFileListLabel.labelString: 缺省回放文件
+
+IBM9999*scaleBtn.titleString: 回放速率
+
+IBM9999*playbackControl*startBtn.labelString: 启动
+
+IBM9999*playbackControl*cancelBtn.labelString: 取消
+
+IBM9999*playbackControl*deleteBtn.labelString: 删除
+
+IBM9999*playbackControl*editBtn.labelString: 编辑
+
+IBM9999*playbackControl*pauseBtn.labelString: 暂停
+
+IBM9999*playbackControl*continueBtn.labelString: 继续
+
+IBM9999*playbackControl*stopBtn.labelString: 停止
+
+IBM9999*playbackControl*playbackControlLabelStopped.labelString: 已停止。
+
+IBM9999*playbackControl*playbackControlLabelPlaying.labelString: 正在播放。
+
+IBM9999*playbackControl*playbackControlLabelPaused.labelString:  已暂停。
+
+IBM9999*playbackControl*playbackControlLabelDone.labelString: 已完成。
+
+IBM9999*playbackControl*playbackKeysRemainingLabel.labelString:  剩余数据：
+
+IBM9999*playbackControl*playbackDeleteWarningDialog_popup.title: 回放删除警告
+
+IBM9999*playbackControl*playbackDeleteWarningDialog.messageString: 确定要删除所选文件吗？
+
+IBM9999*playbackControl*playbackMsgDialog_popup.title: 回放错误消息
+
+IBM9999*playbackControl*playbackPauseDialog_popup.title: 回放暂停
+
+IBM9999*playbackControl*playbackPauseDialog.okLabelString:        继续
+
+IBM9999*playbackControl*playbackPauseDialog.cancelLabelString:    停止
+
+IBM9999*playbackPauseDialogMsg1: 回放已暂停。输入数据并继续。
+
+IBM9999*playbackPauseDialogMsg2: 回放已暂停。输入密码并继续。
+
+IBM9999*playbackPauseDialogMsg3: 回放被用户暂停。
+
+IBM9999*PlaybackMsgNoStartup: 启动回放文件不在回放列表中。
+
+IBM9999*PlaybackMsgFileNotInList:  回放文件不在回放列表中。
+
+IBM9999*PlaybackMsgFileCorrupt: 回放文件不是由“录制”创建的。
+
+IBM9999*PlaybackMsgFileNoRead: 无法读取键回放文件。无法启动回放。
+
+IBM9999*PlaybackMsgFileNoOpen: 无法打开回放文件。无法启动回放。
+
+IBM9999*PlaybackMsgIncompatible:  回放文件与当前屏幕不兼容。
+
+IBM9999*PlaybackMsgPasswordLocation:  不能在光标位置处播放密码。
+
+
+!*****************************
+! Keypad Resources
+!*****************************
+IBM9999*keypadfilechangebox_popup.title:   弹出小键盘
+
+IBM9999*keypadfilechangeboxlabel.labelString:   选择小键盘文件：
+
+IBM9999*userKeypads.labelString:  用户小键盘
+
+IBM9999*defaultKeypads.labelString:  缺省小键盘
+
+IBM9999*cancelkeypad.labelString:   取消
+
+IBM9999*keypadOKbox.labelString:   确定
+
+!*****************************************************************************
+! This menubar resource is used for double byte languages, but DOES need to be
+! translated into all MRI languages (because users can have a different MRI
+! language than their emulator session language).
+!*****************************************************************************
+IBM9999*altviewButton.labelString:  备用视图
+
+!***********************************************************
+! The resources below are used to prompt the user to choose between two types 
+! of Japanese.  These resources should be translated into all languages.
+!***********************************************************
+IBM9999*hostNameDialog.helpLabelString:  高级...
+IBM9999*katawidget.title:   日语主机代码页选择
+IBM9999*labelw.labelString:  选择主机代码页
+IBM9999*button_two.labelString:  扩展片假名（5026）
+IBM9999*button_one.labelString:  扩展拉丁语（5035）
+IBM9999*okw.labelString:  确定
+IBM9999*cancelw.labelString:  取消
+
+
+!***********************************
+!* Shared Emulator Print Resources *
+!***********************************
+
+IBM9999*localPrintPrintSelectionLabel.labelString:       打印选择：
+
+IBM9999*localPrintPrintSelectionTextButton.labelString:  文本
+
+IBM9999*localPrintPrintSelectionImageButton.labelString: 图像
+
+IBM9999*localPrintImageColorSupportLabel.labelString: 彩色打印：
+
+IBM9999*localPrintImageColorSupportFalseButton.labelString: 否
+
+IBM9999*localPrintImageColorSupportTrueButton.labelString: 是
+IBM9999*localPrintPageSizeMenuLabel.labelString:  页大小：
+
+! The following are printer page sizes.
+IBM9999*localPrintPageSizeMenu*pageSize1.labelString:  Letter (8.5 x 11 英寸)
+
+IBM9999*localPrintPageSizeMenu*pageSize2.labelString:  Legal (8.5 x 14 英寸)
+
+IBM9999*localPrintPageSizeMenu*pageSize3.labelString:  A4（210 x 297 毫米）
+
+IBM9999*localPrintPageSizeMenu*pageSize4.labelString:  A5（148 x 210 毫米）
+
+IBM9999*localPrintPageSizeMenu*pageSize5.labelString:  B5 ISO（176 x 250 毫米）
+
+IBM9999*localPrintPageSizeMenu*pageSize6.labelString:  B5 JIS（182 X 257 毫米）
+
+IBM9999*localPrintPageSizeMenu*pageSize7.labelString:  Executive (7.25 x 10.5 英寸)
+
+IBM9999*localPrintPageSizeMenu*pageSize8.labelString:  Statement (8.5 x 5.5 英寸)
+
+IBM9999*localPrintDPIMenuLabel.labelString:  分辨率（dpi）：
+
+IBM9999*localPrintDPIMenu*DPI1.labelString:  75
+
+IBM9999*localPrintDPIMenu*DPI2.labelString:  100
+
+IBM9999*localPrintDPIMenu*DPI3.labelString:  150
+
+IBM9999*localPrintDPIMenu*DPI4.labelString:  200
+
+IBM9999*localPrintDPIMenu*DPI5.labelString:  300
+
+IBM9999*localPrintDPIMenu*DPI6.labelString:  600
+
+IBM9999*ErrorMsgBrowserLowMemory:  没有足够的内存，无法完成操作。
+
+IBM9999*userKeypads.labelString: 用户小键盘
+
+IBM9999*defaultKeypads.labelString: 缺省小键盘
+
+IBM9999*playbackControl*playbackDeleteWarningDialog.cancelLabelString: 取消
+
+IBM9999*playbackControl*playbackDeleteWarningDialog.okLabelString: 确定
+
+!***********************************
+!**  Resources only used by 3270  **
+!***********************************
+! 'Command' menu
+IBM3270*sessMenuCascade.labelString: 新建 3270 会话
+
+IBM3270*new_sessionButton.labelString: 新建 3270 会话
+
+IBM3270*new_mod2Button.labelString: 新建 24x80 会话
+
+IBM3270*new_mod3Button.labelString: 新建 32x80 会话
+
+IBM3270*new_mod4Button.labelString: 新建 43x80 会话
+
+IBM3270*new_mod5Button.labelString: 新建 27x132 会话
+
+IBM3270*graphicsMsg.labelString: 图形
+
+IBM3270*font0Button.labelString: 缺省
+
+IBM3270*printTelnetFailure: 打印\n\
+Telnet 协商已失败。
+
+!**************************************************
+!*
+!*        Printing translations 
+!*
+!*      Added by AJMEYER for V310.nc
+!*
+!**************************************************
+
+IBM9999*printDialogPrinterTypeLabel.labelString:  打印机类型：
+
+IBM9999*printDialogPrinterTypeMenu*postscript.labelString:  PostScript
+
+IBM9999*printDialogPrinterTypeMenu*ascii.labelString:  ASCII
+
+IBM9999*printDialogPrinterTypeMenu*pcl.labelString:  PCL
+
+IBM9999*printDialogPrinterSelectControls_popup.title:   打印机选择器
+
+IBM9999*printSelectDialogOKButton.labelString:  确定
+
+IBM9999*printSelectDialogCancelButton.labelString:  取消
+
+IBM9999*printDialogSelectPrinter.labelString: 选择打印机：
+
+IBM9999*printDialogPrintCommandLabel.labelString: 打印命令：
+
+IBM5250*hostNameDialog*useridLabel.labelString: 用户标识：
+
+IBM5250*hostNameDialog*passwordLabel.labelString: 密码：
+
+!**************************************************
+!*
+!*                ICU path  
+!*
+!*     
+!**************************************************
+
+
+IBM5250*ICUTablePath:  /usr/local/share/icu/3.4
+! ENGL1SH_VERS10N 1.8.2.1 DO NOT REMOVE OR CHANGE THIS LINE

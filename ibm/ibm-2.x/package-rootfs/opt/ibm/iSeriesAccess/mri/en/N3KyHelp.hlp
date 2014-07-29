@@ -1,0 +1,334 @@
+////This file contains the keyboard remapping program on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file is stored in locale specific ASCII (code page 819 for Latin1 languages). This help text is stored on the booting server as N3_5KeyH.
+
+////Help text format (this section is not displayed to IBM emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1. Do not translated (or change) anything in a comment line.
+//// 3. This help file contains help text for the 3270, and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator.   A comment line of four "/" characters followed by:
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+//// 3B. "5250" indicates subsequent data is only displayed in 5250 on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in 3270, and 5250 on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+////  3G. Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters.  The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Do not change the order of topics in this help text file.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+----"3270 Keyboard Mapping Help"
+++++"General Information"
+For information on using this help viewing program, see the first topic in the main emulator help (select the "Help" menu bar choice in the emulator window).
+
+This help information describes how the Keyboard Remapping program can be used to change keyboard actions within your emulator sessions.
+
+Note: Only one Keyboard Remapping program can be active at a time.
+
+++++"Keyboard Mapping File Selection"
+At the start of a 3270 session, the 3270 emulator searches for a keyboard mapping file for the session. The keyboard type needs to match; a keyboard mapping file is used for one type of keyboard  (for example, a PC 102 key keyboard). The following order is used; if a keyboard mapping file is found, it is used for the 3270 session:
+
+- Search for a -KEYFILE named keyboard mapping file.
+
+- Search for a session specific keyboard mapping file that you created using the Keyboard Remapping program.
+
+- Search for a default keyboard mapping file that you created using the Keyboard Remapping program.
+
+- If none of the above is found, the emulator uses default keyboard actions.
+
+////5250
+++++"Enter/Field Exit Key"
+Miscellaneous Preferences can change the location of the Enter and Field Exit actions. If Enter key or right Control key changes are desired, first check if the desired mapping is available in Miscellaneous Preferences. To do this, see the Option pulldown on the emulator menu bar for Miscellaneous Preferences.
+
+Any keyboard remapping changes made to the Enter or right Control key are overridden by "Miscellaneous Preferences" if the Enter/Field Exit Key option is not set to the default.
+
+If the desired mapping is not available in Miscellaneous Preferences, first set the Enter/Field Exit Key option to the default and then make the desired changes using the Keyboard Remapping program.
+
+Note: Miscellaneous Preferences can also modify the location of the Print action, overriding keyboard remapping changes for the Print Screen key. 
+
+////3270
+++++"Enter Key"
+Miscellaneous Preferences and the IBM 3270 Emulator Setup program can change the location of the Enter action. If Enter key or right Control key changes are desired, first check if the desired mapping is available in Miscellaneous Preferences or the IBM 3270 Emulator Setup program.
+
+Miscellaneous Preferences Enter key location is the highest priority. Then, an Enter key location setting in IBM 3270 Emulator Setup program is used. If Miscellaneous Preferences Enter key location is set to the default and the IBM 3270 Emulator Setup program Enter key location is set to the default, then keyboard remapping can be used to modify the Enter key and right Control key actions.
+
+Note: Miscellaneous Preferences can modify the location of the Local Print action. This setting will override any keyboard remapping changes for the Print Screen key. 
+
+////9999
+++++"Window Layout"
+The Keyboard Remapping window has a graphical keyboard layout area (top), an actions selection area (left), a key/action area (right), and an action bar/message area (bottom).
+
+Graphical Keyboard: Shows the physical layout of the current keyboard. Clicking on a key displays the actions mapped to that key in the key/action area. 
+
+
+The Action Selection Area contains the following:
+
+1) The "Available Actions List" which contains available actions. An action selected from this list becomes the current action.
+
+2) The "Character List" which lists all available characters. A selected character becomes the current action. To select a character, click on the character.
+
+3) The "Action Help" button provides keyboard action definitions in an action help window. The action definitions can be printed.
+
+////5250
+4) The "No Action" button which sets the current action to "nothing". A key sequence with the "nothing" action functions as if the key sequence was not pressed.
+////3270
+4) The "No Action" button which sets the current action to "noop". A key sequence with the "noop" action functions as if the key sequence was not pressed.
+////9999
+
+5) The "Locate" button which finds all keys mapped to the highlighted action in the available actions list. Located keys are highlighted on the graphical keyboard and the first key is made the current key in the key/action area.
+
+Note: Only one action may be the current action.
+
+
+The Key/Action Area contains the following:
+
+1) The "Current Key" which displays the key which can be modified. The "Current Key" is displayed in the upper portion of the key/action area or action selection area (dependent on the keyboard type). Only one key can be modified at a time.
+
+2) The "Modifier" buttons which are the modifier combinations recognized by the Keyboard Remapping program. Modifier buttons start with "-> ". Clicking a modifier button causes the current action (from the available actions list, character list, or no action) to replace the action in the action text area.
+
+3) The "Action Text Area" which is located to the right of each modifier button and displays the action mapped to the current key for this modifier. This area can be edited (see "Editing An Action Text Area").
+
+4) The "OK" button which accepts changes made to the current key.
+
+5) The "Cancel" button which cancels changes made to current key.
+
+
+Action Bar buttons provide the following functions:
+
+1) "Save" keyboard remapping changes in a keyboard mapping file.
+
+2) "Delete" keyboard mapping files that were previously created.
+
+3) "Apply Changes to the Session" that started the Keyboard Remapping program. This allows testing of changes before saving them in a keyboard mapping file.
+
+4) "Restore" (undo) changes that have been made since the last "Apply" or since the Keyboard Remapping program was started.
+
+5) "Exit" from the Keyboard Remapping program.
+
+6) "Print" prints the key/modifier sequences with the resulting actions.
+
+7) "Help" displays this help text.
+
+Message Area: 
+Displays information and error messages.
+
+++++"Getting Started"
+Below are steps for making keyboard remapping changes:
+
+1) Start the Keyboard Remapping program from the emulator session where remapping changes are desired.
+
+2) Click the key to be changed on the graphical keyboard.
+
+3) The key/action area is now active and the selected key is the current key. The actions currently mapped to the key for various modifiers appear in the action text areas.
+
+4) Click an action to map to the current key from the available actions list, character list, or no action. (Note: The Simple Keyboard Macros topic explains how to create a simple keyboard macro.)
+
+5) Click on the modifier button that the action should be associated with. The action text area for the modifier should display the desired action. If the action is desired on multiple modifiers for this key, then click on the desired modifiers. The action text area can be edited; see "Editing Action Text Areas" for more information.
+
+6) Click "OK" to accept the changes to the key or "Cancel" to bring back the original actions.
+
+7) Click "Apply Changes to Session".
+
+8) Test the keyboard remapping changes in the emulator session; do not exit from the Keyboard Remapping program.
+
+9) In the Keyboard Remapping program, you can make further keyboard mapping changes or "Restore" if necessary.
+
+10) After all keyboard mapping changes have been applied and tested, save the changes. 
+
+11) Exit the Keyboard Remapping program.
+
+++++"Editing An Action Text Area"
+An action text area is located to the right of each modifier button and displays the action (or actions) mapped to the current key for this modifier. Action text areas can be changed using the keyboard. Click on the desired action text area and change using the keyboard. Click "OK" to accept changes.
+
+Changed actions must be spelled correctly and are case sensitive. Multiple actions must be separated by a single space.
+
+If an action text error is found, a warning dialogue is displayed and the action in error is highlighted.
+
+Clicking in an action text area makes it active. If a modifier button is clicked while the associated action text area is active, the current action is inserted into the action text area at the cursor location. If a modifier button is clicked and the associated action text area is not active, the current action replaces the previous action or actions.
+
+//// Note: The translation of String() and Play() below should match the translated resource text for AllShare*string() and Keyxxx52*play() in the keyboard remapping resource file.
+The Ctrl key and Alt + numeric keypad 0 through 9 keys do not support text within action text area parentheses. String() and Play() do not support text for these key combinations.
+
+++++"Applying Keyboard Map Changes"
+The Apply Changes to Session button temporarily applies your keyboard remapping changes to the emulator session where the Keyboard Remapping program was started. Your changes can then be tested. See "Saving Keyboard Remapping" for information on saving your changes for later use.
+
+++++"Saving Keyboard Mapping Files"
+The Save button saves your keyboard remapping changes for later use. Your keyboard remapping changes are saved in a keyboard mapping file. You select how your keyboard remapping changes are saved: as the default keyboard mapping file which is used for all your sessions or as a session specific keyboard mapping file used only for the session from where the Keyboard Remapping program was started.
+
+A session specific keyboard mapping file allows different keyboard actions in different 3270 sessions. A session specific keyboard mapping file has the highest priority and is used for the specific session where the keyboard mapping file was created (using the session number of the 3270 session and the session name).
+
+A default keyboard mapping file has the second highest priority and is used for all sessions that do not have a session specific keyboard mapping file. 
+
+See "Deleting Keyboard Mapping Files" for information on deleting a keyboard mapping file.
+
+++++"Deleting Keyboard Mapping Files"
+Select the "Delete" button on the action bar to delete keyboard mapping files that have been created. Select any keyboard mapping files that are to be deleted and then select the delete button.
+
+++++"Restoring Keyboard Map"
+If undesirable keyboard remapping changes have been made, the keyboard map can be restored to:
+
+1) The original keyboard map that was read when the Keyboard Remapping program was started.
+
+2) The state of last apply; this is the mapping that was last applied to the session using the Apply button from the action bar.
+
+Restore does not Save or Apply the restored key mappings. It restores the translations for the Keyboard Remapping program.
+
+To restore the mappings of a default keyboard map, delete the session specific keyboard mapping file for the session and restart the session.
+
+++++"Simple Keyboard Macros"
+A keyboard macro is a keystroke sequence which you can easily enter into your emulator session. Simple keyboard macros can be created using the Keyboard Remapping program. Long or complex keyboard sequences should be created using the Record and Playback feature. See the Record and Playback topics in the main emulator Help text.
+
+Creating a simple keyboard macro:
+
+1) Click the key on the graphical keyboard that will execute your keyboard macro.
+
+//// Note: The translation of String() below should match the translated resource text for AllShare*string() in the keyboard remapping resource file.
+2) Scroll to the String() action in the Available Actions List and click on String().
+
+3) Click the desired modifier button for your selected key.
+
+4) Click between the parentheses of String() in the Key/Action Area.
+
+5) Type a double quote, your keyboard macro data, and a double quote; for example, String("your data").
+
+6) Click OK to accept your changes.
+
+7) Click Apply Changes to Session.
+
+8) Test your keyboard macro; press the key sequence in the emulator session. You can change you keyboard macro if you wish. Click Save.
+
+Note: Multiple actions may be mapped to a single key. To do this, you can click on the desired action text area and type the desired series of actions. You can also click on the desired action text area and click the modifier buttons to insert the series of actions from the available actions list and character list. Multiple actions must be separated by a single space.
+
+Note: If you wish to create a macro using multiple modifier combinations that are not available in the key/action area, the Advanced Keyboard Remapping feature may be used (see the Advanced Keyboard Remapping topic).
+
+++++"Playback Files"
+You can map a playback file to a key sequence. Record a playback file using the record feature (see the Record topic in the main emulator Help text for recording help).
+
+////Note: The translation of Play() below should match the translated resource text for Keyxxx52*play() in the keyboard remapping resource file.
+Then, in keyboard remapping, select the key to start the playback file. Assign the Play() action to your key sequence. Click the mouse between the parentheses of Play() in the Key/Action Area. Enter the playback file name between the parentheses.
+
+++++"No Action"
+To make a key sequence do nothing, click the "No Action" button in the action selection area and click the modifier button for the desired key sequence. Then accept the changes with the "OK" button.
+
+////Note: The translation of Dead Key below should match the translated resource text for Keyxxx52*unmappable() in the keyboard remapping resource file.
+Note: A key with Dead Key in the action text area cannot be mapped because the operating system processes dead keys.
+
+////Note: The translation of Undefined below should match the translated resource text for Keyxxx52*undefined() in the keyboard remapping resource file.
+Note: A key with Undefined in the action text area can be mapped.
+
+++++"Locating Actions"
+To find the keystroke(s) that are mapped to an action, select the action in the available actions list and click the Locate button in the action selection area.
+
+All keys mapped to the located action are highlighted and the first key located becomes the current key in the key/action area.
+
+Locate is not allowed for no action, character list character(s), or keyboard macro.
+
+++++"Character List"
+The character list allows access to characters which may not be accessible from the keyboard.
+
+Specify a character for a key sequence: Click on the key on the graphical keyboard that will display the character. Click on the desired character in the character list. Click on the desired modifier button. Click OK to accept the change and apply the change to the session.
+
+Add a character to a keyboard macro: Click on the key on the graphical keyboard that displays the keyboard macro. Click on the desired character in the character list. Click in the action text area of the keyboard macro (within the String() action), at the location where the added character should be inserted (the cursor left and right keys can move the cursor to the correct location). Click the desired modifier button. Click OK to accept the change and apply the change to the session.
+
+++++"Window Manager Keys"
+Certain keys are processed by the Window Manager program; for example, the key sequence to move a window to the background. Window Manager keys are not available for keyboard remapping using the emulator Keyboard Remapping program.
+
+////3270
+++++"Light Pen Emulation"
+A light pen (selecting a field) can be emulated by a key sequence or the mouse. You define the key sequence or mouse using the keyboard remapping program.
+
+//// Note: The translation of PenSelectField() below should match the translated resource text for Keyxxx52*select-field() in the keyboard remapping resource file.
+Key sequence: Click the desired key on the graphical keyboard and assign the PenSelectField() action to the desired key sequence.
+
+////Note: Do not translate Alt<KeyPress>Insert: select-field() and Alt<Btn3Down>: select-field() below.
+Mouse: Determine the mouse sequence to emulate the light pen; do not disable a useful mouse function. It may be easiest to temporarily assign the PenSelectField() action to a key sequence as described above. Do not overwrite a useful key sequence (for example, Alt-Insert is typically available). Then, use Advanced Keyboard Remapping (see Advanced Keyboard Remapping help topic for more information) to edit the key sequence, which should be the first key sequence in the list. For example, change Alt<KeyPress>Insert: select-field() to Alt<Btn3Down>: select-field(). In this case, Alt plus the right mouse button will emulate the light pen.
+////9999 
+
+++++"Non-displayable Translations"
+Non-displayable translations only occur if you added translations using Advanced Keyboard Remapping or you have a keyboard mapping file that was created using an earlier version of the Keyboard Remapping program.
+
+In Advanced Keyboard Remapping (and the earlier version of Keyboard Remapping program), several modifier translations are allowed. These modifiers are not displayed in the key/action area.
+
+If a translation exists for the current key that cannot be displayed, a message is presented in the message area. This translation can only be viewed, edited, or removed using the Advanced Keyboard Remapping feature. These translations could provide useful function; the Keyboard Remapping program will not modify these translations. 
+
+++++"Printing Keyboard Mapping Files"
+Printing of the current keyboard mapping file can be done by selecting the "Print" button from the action bar and choosing the print options from the print dialogue. Each key/modifier sequence on the keyboard is listed with the resulting action. However, key sequences created using Advanced Keyboard Remapping are not printed.
+
+++++"Advanced Keyboard Remapping"
+Warning: Advanced Keyboard Remapping has the potential to produce undesirable results and could cause significant emulator session problems. If this occurs, recover by correcting the keyboard remapping changes (modify and apply) or deleting the keyboard mapping file. The emulator session must be exited and restarted after deleting the keyboard mapping file.
+
+Advanced Keyboard Remapping provides experienced users the opportunity to edit the internal keystroke translation list associated with the emulator session.
+
+Press and hold the "Alt" key, then press the "a" key to start Advanced Keyboard Remapping.
+
+The Advanced Remapping window contains the internal translation list and the following four buttons:
+
+1) "Edit" the first selected translation in the list.
+
+2) "Insert" a blank line before the selected translation.
+
+3) "Remove" all selected translations in the list (verify that you wish to remove all selected translations before clicking Remove).
+
+4) "Close" the Advanced Remapping window.
+
+Locating items in the Translation List: When a key is clicked on the graphical keyboard, all translations mapped to that key become highlighted in the translation list. The list is automatically adjusted to make the first selected translation visible.
+
+To locate an action within the translation list, select the action in the main available actions list and click the locate button. The keys using this action are highlighted.
+
+Translation Precedence: Translations must be in the correct order. The translation list is inspected from the top down looking for a translation that matches a keystroke. The first entry that is found which meets the requirements is used. The translation list entries that have the most modifiers on them (most specific) are placed before those with less.
+
+For example:
+
+////5250
+////In the following two lines, only "must come before" should be translated.
+  Alt<KeyPress>Print: sysreq() must come before 
+  <KeyPress>Print: print()
+
+"sysreq" is selected when the Print key is pressed and the Alt key is held (other modifier keys could be held down). "print" is selected when the Print key is pressed (other modifier keys could be held down). If <KeyPress>Print: print() were before Alt<KeyPress>Print: sysreq(), the Alt<KeyPress>Print: sysreq() would never be processed because <KeyPress>Print: print() would be processed first.
+////3270
+  Alt<KeyPress>Print: sysreq()  must come before
+  <KeyPress>Print: pa1()
+
+"sysreq" is selected when the Print key is pressed and the Alt key is held (other modifier keys could be held down). "pa1" is selected when the Print key is pressed (other modifier keys could be held down). If <KeyPress>Print: pa1() were before Alt<KeyPress>Print: sysreq(), the Alt<KeyPress>Print: sysreq() would never be processed because <KeyPress>Print: pa1() would be processed first.
+////9999
+
+Structure of translations:
+
+////In the following line, "<KeyPress>" should not be translated.
+  Modifier Modifier<KeyPress>Key: action() action()
+
+No modifier is required. Multiple modifiers are supported. One action is required. Multiple actions are supported.
+
+Modifiers recognized by Keyboard Remapping:
+
+////In the following list, the left column ("Any" through "Mod5") should not be translated. The information in parenthesis to the right should be translated.
+////5250
+Any      (the same as no modifier)
+Shift    (shift)
+Lock     (caps lock or shift lock)
+Ctrl     (left Ctrl key)
+Alt      (alt)
+Mod2     (right alt key, Alt Graphical)
+Mod3     (not used at this time)
+Mod4     (not used at this time)
+Mod5     (Num_lock)
+////3270
+Any      (the same as no modifier)
+Shift    (shift)
+Lock     (caps lock or shift lock)
+Ctrl     (left Ctrl key)
+Alt      (alt)
+Mod2     (right alt key, Alt Graphical)
+Mod3     (not used at this time)
+Mod4     (not used at this time)
+Mod5     (Num_lock)
+////9999
+
+The Keyboard Remapping program also recognizes the exclusive (!) designation at the beginning of a modifier list.
+
+////5250
+////Do not translate "reset()" and "Ctrl" below.
+The reset() action is mapped to the left control key (the reset action should not be moved). If you specify the Ctrl modifier to select an action, the left Control key will process the reset() action before your action is processed.
+////9999
+
+////Do not translate "enter()", "newline()", and "Control_R" below.
+The enter() or newline() action is typically placed on the Control_R key.

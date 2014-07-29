@@ -7,23 +7,23 @@
         <label lang="de" value="Generelle Einstellungen"/>
         <choice name="Autostart" value="No">
             <label lang="en" value="Autostart"/>
-            <label lang="de" value="autostart"/>
+            <label lang="de" value="Autostart"/>
             <option name="yes" value="Yes">
-                <label lang="en" value="yes"/>
-                <label lang="de" value="ja"/>
+                <label lang="en" value="Yes"/>
+                <label lang="de" value="Ja"/>
             </option>
             <option name="no" value="No">
-                <label lang="en" value="no"/>
-                <label lang="de" value="nein"/>
+                <label lang="en" value="No"/>
+                <label lang="de" value="Nein"/>
             </option>
         </choice>
         <entry name="custom_icon" value="">
-            <label value="benutzerdefiniertes Symbol" lang="de"/>
-            <label value="custom icon" lang="en"/>
+            <label value="Benutzerdefiniertes Symbol" lang="de"/>
+            <label value="Custom icon" lang="en"/>
         </entry>
         <choice name="ExitAction" value="">
             <label lang="en" value="On application exit"/>
-            <label lang="de" value="Nach beenden der Anwendung"/>
+            <label lang="de" value="Nach Beenden der Anwendung"/>
             <option name="Do nothing" value="">
                 <label lang="en" value="Do nothing"/>
                 <label lang="de" value="Nichts machen"/>
@@ -37,12 +37,12 @@
                 <label lang="de" value="Benutzer abmelden"/>
             </option>
             <option name="Reboot device" value="Reboot">
-                <label lang="en" value="Reboot thin client"/>
-                <label lang="de" value="Thin Client neustarten"/>
+                <label lang="en" value="Reboot thinclient"/>
+                <label lang="de" value="ThinClient neustarten"/>
             </option>
             <option name="Shutdown device" value="Shutdown">
-                <label lang="en" value="Shutdown thin client"/>
-                <label lang="de" value="Thin Client ausschalten"/>
+                <label lang="en" value="Shutdown thinclient"/>
+                <label lang="de" value="ThinClient ausschalten"/>
             </option>
         </choice>
     </group>
@@ -54,8 +54,8 @@
             <label lang="en" value="server address"/>
         </entry>
         <entry name="Port">
-            <label lang="de" value="alternativer Port"/>
-            <label lang="en" value="alternative port"/>
+            <label lang="de" value="Alternativer Port"/>
+            <label lang="en" value="Alternative port"/>
         </entry>
         <group name="Window">
             <label lang="de" value="Fenster"/>
@@ -64,12 +64,12 @@
                 <label lang="de" value="Multimonitor (hat Vorrang, verdeckt alles)"/>
                 <label lang="en" value="multi monitor (takes precedenece, covers all)"/>
                 <option name="yes" value="yes">
-                    <label lang="de" value="ja"/>
-                    <label lang="en" value="yes"/>
+                    <label lang="de" value="Ja"/>
+                    <label lang="en" value="Yes"/>
                 </option>
                 <option name="no" value="no">
-                    <label lang="de" value="nein"/>
-                    <label lang="en" value="no"/>
+                    <label lang="de" value="Nein"/>
+                    <label lang="en" value="No"/>
                 </option>
             </choice>
             <choice name="WindowType" value="fullscreen_primary_TB">
@@ -77,23 +77,23 @@
                 <label lang="en" value="Screen size"/>
                 <option value="fullscreen_primary_TB">
                     <label lang="de" value="Vollbild Primärdisplay, erhalte Taskleiste"/>
-                    <label lang="en" value="fullscreen primary display, keep taskbar"/>
+                    <label lang="en" value="Fullscreen primary display, keep taskbar"/>
                 </option>
                 <option value="fullscreen_primary">
                     <label lang="de" value="Vollbild Primärdisplay, verdecke Taskleiste"/>
-                    <label lang="en" value="full primary display, cover taskbar"/>
+                    <label lang="en" value="Fullscreen primary display, cover taskbar"/>
                 </option>
                 <option value="fullscreen_secondary">
                     <label lang="de" value="Vollbild Sekundärdisplay"/>
-                    <label lang="en" value="fullscreen secondary display"/>
+                    <label lang="en" value="Fullscreen secondary display"/>
                 </option>
                 <option value="manual">
                     <label lang="de" value="Grösseangabe aus folgender Zeile"/>
-                    <label lang="en" value="custom size from next line"/>
+                    <label lang="en" value="Custom size from next line"/>
                 </option>
                 <option value="none">
-                    <label lang="de" value="keine Grösse erzwingen"/>
-                    <label lang="en" value="do not force a size"/>
+                    <label lang="de" value="Keine Grösse erzwingen"/>
+                    <label lang="en" value="Do not force a size"/>
                 </option>
             </choice>
             <entry name="Width" value="800">
@@ -119,63 +119,63 @@
         </group>
         <group name="ConnectionParameters">
             <label lang="de" value="Verbindungsparameter"/>
-            <label lang="en" value="connection parameter"/>
+            <label lang="en" value="Connection parameter"/>
             <entry name="Parameter">
-                <label lang="de" value="manuelle Startparameter"/>
-                <label lang="en" value="manual start parameters"/>
+                <label lang="de" value="Manuelle Startparameter"/>
+                <label lang="en" value="Manual start parameters"/>
             </entry>
             <choice name="ProtocolSecurity" value="rdp">
                 <label lang="de" value="Sicherheitsprotokoll"/>
-                <label lang="en" value="protocol security"/>
+                <label lang="en" value="Protocol security"/>
                 <option name="RDP" value="rdp"/>
                 <option name="NLA" value="nla"/>
             </choice>
             <choice name="redirectClipboard" value="yes">
                 <label lang="de" value="Clipboard übertragen"/>
-                <label lang="en" value="redirect clipboard"/>
+                <label lang="en" value="Redirect clipboard"/>
                 <option name="yes" value="yes">
-                    <label lang="de" value="ja"/>
-                    <label lang="en" value="yes"/>
+                    <label lang="de" value="Ja"/>
+                    <label lang="en" value="Yes"/>
                 </option>
                 <option name="no" value="no">
-                    <label lang="de" value="nein"/>
-                    <label lang="en" value="no"/>
+                    <label lang="de" value="Nein"/>
+                    <label lang="en" value="No"/>
                 </option>
             </choice>
             <choice name="AudioMode" value="no">
                 <label lang="de" value="Soundausgabe übertragen (beta)"/>
-                <label lang="en" value="redirect sound output (beta)"/>
+                <label lang="en" value="Redirect sound output (beta)"/>
                 <option name="yes" value="yes">
-                    <label lang="de" value="ja"/>
-                    <label lang="en" value="yes"/>
+                    <label lang="de" value="Ja"/>
+                    <label lang="en" value="Yes"/>
                 </option>
                 <option name="no" value="no">
-                    <label lang="de" value="nein"/>
-                    <label lang="en" value="no"/>
+                    <label lang="de" value="Nein"/>
+                    <label lang="en" value="No"/>
                 </option>
             </choice>
             <choice name="Mic" value="no">
                 <label lang="de" value="Soundeingabe übertragen (beta)"/>
-                <label lang="en" value="redirect sound input (beta)"/>
+                <label lang="en" value="Redirect sound input (beta)"/>
                 <option name="yes" value="yes">
-                    <label lang="de" value="ja"/>
-                    <label lang="en" value="yes"/>
+                    <label lang="de" value="Ja"/>
+                    <label lang="en" value="Yes"/>
                 </option>
                 <option name="no" value="no">
-                    <label lang="de" value="nein"/>
-                    <label lang="en" value="no"/>
+                    <label lang="de" value="Nein"/>
+                    <label lang="en" value="No"/>
                 </option>
             </choice>
             <choice name="smoothFonts" value="yes">
 	      <label lang="de" value="Schriften glätten"/>
-	      <label lang="en" value="smooth fonts"/>
+	      <label lang="en" value="Smooth fonts"/>
 	      <option name="yes" value="yes">
-		<label lang="de" value="ja"/>
-		<label lang="en" value="yes"/>
+		<label lang="de" value="Ja"/>
+		<label lang="en" value="Yes"/>
 	      </option>
 	      <option name="no" value="no">
-		<label lang="de" value="nein"/>
-		<label lang="en" value="no"/>
+		<label lang="de" value="Nein"/>
+		<label lang="en" value="No"/>
 	      </option>
 	  </choice>
           <choice name="GDIrendering" value="hw">
@@ -183,11 +183,11 @@
 	    <label lang="en" value="GDI rendering"/>
 	    <option value="hw">
 	      <label lang="de" value="Hardware"/>
-	      <label lang="en" value="hardware"/>
+	      <label lang="en" value="Hardware"/>
 	    </option>
 	    <option value="sw">
 	      <label lang="de" value="Software"/>
-	      <label lang="en" value="software"/>
+	      <label lang="en" value="Software"/>
 	    </option>
 	    <option value="none">
 	      <label lang="de" value="keine"/>
@@ -196,14 +196,14 @@
 	  </choice>
           <choice name="remoteFX" value="no">
 	    <label lang="de" value="Remote-FX nutzen"/>
-	    <label lang="en" value="use Remote-FX"/>
+	    <label lang="en" value="Use Remote-FX"/>
 	    <option name="yes" value="yes">
-	      <label lang="de" value="ja"/>
-	      <label lang="en" value="yes"/>
+	      <label lang="de" value="Ja"/>
+	      <label lang="en" value="Yes"/>
 	    </option>
 	    <option name="no" value="no">
-	      <label lang="de" value="nein"/>
-	      <label lang="en" value="no"/>
+	      <label lang="de" value="Nein"/>
+	      <label lang="en" value="No"/>
 	    </option>
 	  </choice>
           <!--choice name="" value="no">
@@ -232,7 +232,7 @@
 		</choice-->
             <choice name="KeyboardLayout" value="0x00020409">
                 <label lang="de" value="Tastatur Layout"/>
-                <label lang="en" value="keyboard layout"/>
+                <label lang="en" value="Keyboard layout"/>
                 <option name="UnitedStates-International" value="0x00020409"/>
                 <option name="Arabic(101)" value="0x00000401"/>
                 <option name="Bulgarian" value="0x00000402"/>
@@ -392,26 +392,26 @@
 		</choice-->
             <choice name="redirectMedia" value="no">
                 <label lang="de" value="USB Datenträger verbinden"/>
-                <label lang="en" value="connect USB storage devices"/>
+                <label lang="en" value="Connect USB storage devices"/>
                 <option name="yes" value="yes">
-                    <label lang="de" value="ja"/>
-                    <label lang="en" value="yes"/>
+                    <label lang="de" value="Ja"/>
+                    <label lang="en" value="Yes"/>
                 </option>
                 <option name="no" value="no">
-                    <label lang="de" value="nein"/>
-                    <label lang="en" value="no"/>
+                    <label lang="de" value="Nein"/>
+                    <label lang="en" value="No"/>
                 </option>
             </choice>
             <choice name="redirectSmartcard" value="no">
                 <label lang="de" value="Smartcard verbinden"/>
-                <label lang="en" value="connect smartcards"/>
+                <label lang="en" value="Connect smartcards"/>
                 <option name="yes" value="yes">
-                    <label lang="de" value="ja"/>
-                    <label lang="en" value="yes"/>
+                    <label lang="de" value="Ja"/>
+                    <label lang="en" value="Yes"/>
                 </option>
                 <option name="no" value="no">
-                    <label lang="de" value="nein"/>
-                    <label lang="en" value="no"/>
+                    <label lang="de" value="Nein"/>
+                    <label lang="en" value="No"/>
                 </option>
             </choice>
             <!--entry name="USB_Description" value="media">

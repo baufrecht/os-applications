@@ -1,0 +1,381 @@
+! ENGLISH_SOURCE_VERSION= 1.4.1.2 
+!
+!
+!
+! This file contains the resource text strings for the IBM Network Station 3270 and 5250
+! emulators, in particular the color mapping program.
+
+! This resource file will be stored on all servers in locale specific ASCII (819 for Latin1
+! languages). 
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. Resource format: 
+!    - A resource line starts with ColorMap* followed by a resource name
+!      and a ":".  Do NOT make any changes to the text to the left of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+!******************************************************************************
+!************************ BEGIN DO NOT TRANSLATE ******************************
+!******************************************************************************
+!*   The first section of resources are are locale specific but               *
+!*   DO NOT REQUIRE TRANSLATION.                                              *
+!*                                                                            *
+!* This source file enables the resource section for Latin1 and Latin2.       *
+!*                                                                            *
+!* For ru_RU or Latin5 locales and DBCS locales                               *
+!*      1. Place a '!' as the first character in each line in the Latin1      *
+!*      and Latin2 section                                                    *
+!*      2. Remove the '!' character for each resource line in the apropriate  *
+!*      section that matches your locale.                                     *
+!*                                                                            *
+!* For example, ru_RU should place ! in front of all lines in the LATIN1      *
+!* section remove the ! from all lines in the LATIN5 section.                 *      
+!******************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN1 and LATIN2                ****************
+!**************************************************************************
+ColorMap*extraLargeFontList: -*-*-medium-r-normal-*-*-*-*-*-m-110-*-*
+ColorMap*largeFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-90-*-*
+ColorMap*mediumFontList:     -*-*-medium-r-normal-*-*-*-*-*-m-70-*-*
+ColorMap*smallFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+!**************************************************************************
+!****************   END LATIN1 and LATIN2                  ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN5                           ****************
+!**************************************************************************
+!ColorMap*extraLargeFontList: -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*
+!ColorMap*largeFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!ColorMap*mediumFontList:     -*-*-medium-r-normal-*-*-*-*-*-c-70-*-*
+!ColorMap*smallFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!**************************************************************************
+!****************   END   LATIN5                           ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (ja_JP ko_KR zh_CN)   ****************
+!**************************************************************************
+!ColorMap*extraLargeFontList: -*-*-medium-r-normal--24-*-*-*-c-*
+!ColorMap*largeFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!ColorMap*mediumFontList:     -*-*-medium-r-normal--16-*-*-*-c-*
+!ColorMap*smallFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!**************************************************************************
+!****************   END DBCS (ja_JP ko_KR zh_CN)     ****************
+!**************************************************************************
+!**************************************************************************
+!****************   BEGIN DBCS (zh_TW)   ****************
+!**************************************************************************
+!ColorMap*extraLargeFontList: -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!ColorMap*largeFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!ColorMap*mediumFontList:     -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!ColorMap*smallFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!**************************************************************************
+!****************   END DBCS (zh_TW)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   END DO NOT TRANSLATE                   ****************
+!**************************************************************************
+
+ColorMap*title: 			Mapovanie farieb
+
+! icons
+ColorMap*iname3270:                     Mapa farieb 3270
+ColorMap*iname5250:                     Mapa farieb 5250
+
+
+ColorMap*corrupt:               Súbor farieb je po¹kodený
+
+ColorMap*lowMemMsgDialog.messageString:  Nedostatok pamäte na spustenie Prezeraèa pomoci
+
+ColorMap*okLabelString: OK
+
+ColorMap*cancelLabelString: Zru¹i»
+
+!*******************************************************************************
+!**     Preferences area resources (top of window)                            **
+!*******************************************************************************
+ColorMap*modeInstructions.labelString:  Vyberte funkciu mapovania farieb:
+
+ColorMap*Basic.labelString:             Základné
+
+ColorMap*Advanced.labelString:          Roz¹írené
+
+
+!*************************************************************
+!**   Basic and advanced action bar area resources          **
+!*************************************************************
+ColorMap*actionForm.saveButton.labelString:  	Ulo¾i»
+
+ColorMap*actionForm.deleteButton.labelString:   Odstráni»
+
+ColorMap*actionForm.applyButton.labelString:    Pou¾i» zmeny pre aktuálnu reláciu
+
+ColorMap*actionForm.quitButton.labelString:     Ukonèi»
+
+ColorMap*actionForm.helpButton.labelString:     Pomoc
+
+
+!************************************************
+!**  Basic and advanced color savebox          **
+!************************************************
+ColorMap*saveBoxLabel.labelString:         Vyberte voµbu ulo¾enia:
+
+ColorMap*saveBoxToggle1.labelString:       Ulo¾i» ako predvolené pre v¹etky va¹e relácie
+
+ColorMap*saveBoxToggle2.labelString:       Ulo¾i» len pre túto reláciu
+
+ColorMap*saveBoxSaveBtn.labelString:  	   Ulo¾i»
+
+ColorMap*saveBoxCancelBtn.labelString:     Zru¹i»
+
+ColorMap*advancedSaveBoxLabel.labelString: Zadajte názov roz¹íreného súboru farieb:
+
+! Characters in file names must be 819 (ISO8859-1)
+ColorMap*invalidFileName.value:            Zadali ste znak, ktorý názov súboru nemô¾e obsahova».
+
+ColorMap*invalidFileNameOkbutton.labelString:  OK
+
+!****************************************
+!**  Overwrite existing file dialog    **
+!****************************************
+ColorMap*fileWarningDialog.dialogTitle:        Upozornenie pre mapovanie farieb
+
+ColorMap*fileWarningDialog.messageString:      Súbor u¾ existuje. Chcete ho prepísa»?
+
+ColorMap*fileWarningDialog.okLabelString:      Áno
+
+ColorMap*fileWarningDialog.cancelLabelString:  Nie
+
+
+
+!***************************************
+!**  Basic color work area            **
+!***************************************
+ColorMap*basicListLabel.labelString:        Vyberte farebnú schému:
+
+! The following two resource lines are a late addition to the color mapping resource file (March 12, 1998).  These indicate color map files that came from a system level or user created color map files.
+ColorMap*systemLabel:                       Systém:
+
+ColorMap*userLabel:                         U¾ívateµ:
+
+ColorMap*ibmBlack:                          IBM: Èierne pozadie
+
+ColorMap*ibmDarkGrey:                       IBM: Tmavosivé pozadie
+
+ColorMap*ibmLightGrey:                      IBM: Svetlosivé pozadie
+
+ColorMap*ibmLight:                          IBM: Svetlé pozadie
+
+ColorMap*ibmLightBlue:                      IBM: Svetlomodré pozadie
+
+
+
+!******************************************
+!**  Advanced color work area            **
+!******************************************
+ColorMap*advancedListLabel.labelString:     Vyberte menenú kon¹trukciu:
+
+! The following 22 *adv type resources are limited in size; they should not exceed 28 characters.
+ColorMap*advMenuBarBack:                    Pozadie ponukovej li¹ty
+
+ColorMap*advMenuBarFore:                    Popredie ponukovej li¹ty
+
+ColorMap*advMainSess:                       Pozadie hlavnej relácie
+
+ColorMap*advPushbut:                        Pozadie tlaèidiel
+
+ColorMap*advBlue:                           Modrý text
+
+ColorMap*advGreen:                          Zelený text
+
+ColorMap*advPink:                           Ru¾ový text
+
+ColorMap*advRed:                            Èervený text
+
+ColorMap*advTurq:                           Tyrkysový text
+
+ColorMap*advWhite:                          Biely text
+
+ColorMap*advYellow:                         ®ltý text
+
+ColorMap*advCursor:                         Kurzor
+
+ColorMap*advMouse:                          Ukazovateµ my¹i
+
+ColorMap*advRule:                           Vodiaca èiara
+
+ColorMap*advStatLineBack:                   Pozadie stavového riadka
+
+ColorMap*advStatLineFore:                   Popredie stavového riadka
+
+ColorMap*advMonoImageBack:                  Monochromatický obrázok pozadia
+
+ColorMap*advMonoImageFore:                  Monochromatický obrázok popredia
+
+! Note: foreground color used for assist program windows
+ColorMap*advAssistFore:                     Popredie programu Asistent
+
+! Note: button background for assist program windows
+ColorMap*advAssistForm:                     Tlaèidlo programu Asistent
+
+! Note: main background color for assist program windows
+ColorMap*advAssistPrimary:                  Farba programu Asistent
+
+! Note: entry area background color for assist program windows
+ColorMap*advAssistEntry:                    Vstupné polo¾ky programu Asistent
+
+
+ColorMap*red.titleString:                   Èervená 
+
+ColorMap*green.titleString:                 Zelená
+
+ColorMap*blue.titleString:                  Modrá 
+
+ColorMap*currentColorLabel.labelString:     Aktuálna farba
+
+ColorMap*applyCurrentColor.labelString:     Pou¾i» aktuálnu farbu
+
+
+!************************************
+!**  Delete file dialog            **
+!************************************
+ColorMap*deleteDialog.deleteBoxDeleteBtn.labelString:  Odstráni»
+
+ColorMap*deleteDialog.deleteBoxCancelBtn.labelString:  Zru¹i»
+
+! title of delete dialog
+ColorMap*deleteDialog.dialogTitle:                     Vymaza» mapovací súbor farieb
+
+ColorMap*deleteDialog.deleteBoxLabel.labelString:      Vyberte súbory na vymazanie:
+
+ColorMap*deleteDialog.deleteBoxLabelAlt.labelString:   ®iadne súbory na vymazanie.
+
+! message at bottom of primary window
+ColorMap*selectedDeleted:                              Vybraté mapovacie súbory farieb boli vymazané.
+
+
+!*****************************************************
+!**  Delete file verification dialog box            **
+!*****************************************************
+ColorMap*deleteVerifyDialog.dialogTitle:        Overenie vymazania
+
+ColorMap*deleteVerifyDialog.okLabelString:      OK
+
+ColorMap*deleteVerifyDialog.cancelLabelString:  Zru¹i»
+
+! this cannot be much longer
+ColorMap*noUndoDelete:                          Vymazanie súborov sa nedá vráti» spä». Chcete pokraèova»?
+
+ColorMap*noFilesDelete:                         Nie sú vybraté ¾iadne súbory. Vymazanie je neplatné.
+
+
+!****************************************************
+!**  Emulator preference in construct list         **
+!**						   **
+!**  MAX:  text should be less than 15 characters  **
+!****************************************************
+ColorMap*emuPrefMenuLabel.labelString:       Ponuková li¹ta
+
+ColorMap*emuPrefBlueText.labelString:        Modrý text
+
+ColorMap*emuPrefGreenText.labelString:       Zelený text
+
+ColorMap*emuPrefPinkText.labelString:        Ru¾ový text
+
+ColorMap*emuPrefRedText.labelString:         Èervený text
+
+ColorMap*emuPrefTurquoiseText.labelString:   Tyrkysový text
+
+ColorMap*emuPrefWhiteText.labelString:       Biely text
+
+ColorMap*emuPrefYellowText.labelString:      ®ltý text
+
+ColorMap*emuPrefPbBackground.labelString:    Tlaèidlo
+
+ColorMap*emuPrefStatusLine.labelString:      Stavový riadok
+
+ColorMap*groupBoxLabel.labelString:          Program Asistent
+
+ColorMap*entryAreaLabel.labelString:         Vstupná oblas»
+
+ColorMap*helperFormLabel.labelString:        Tlaèidlo
+
+
+!**************************
+!**  Error dialog boxes  **
+!**************************
+ColorMap*noColorCellsMsgText.value: Nedali na vyhradi» prostriedky farieb, potrebné pre spustenie programu Mapovanie farieb. Zatvorte aplikáciu, ktorá pou¾íva veµa farieb a zopakujte to.
+
+ColorMap*setColorMsgText.value:      Nie v¹etky farby sa pou¾ili pre reláciu emulátora. Správne farby sa pri kliknutí na Ulo¾i» ulo¾ia.
+
+ColorMap*setColorFailureCancelBtn.labelString:        Zru¹i»
+
+ColorMap*invalidColor:   Nasledujúce farby popredia a pozadia sú si navzájom veµmi podobné: 
+
+
+!**********************************
+!**  General Error dialog boxes  **
+!**********************************
+ColorMap*noAdvanced.value:            Nedajú sa vyhradi» prostriedky farieb, potrebné na poskytnutie mapovania v¹etkých farieb.
+
+ColorMap*noAdvancedOkbutton.labelString:  OK
+
+
+!*******************************************************************************
+!**  quitDialog resources                                                     **
+!*******************************************************************************
+ColorMap*quitDialog.dialogTitle:           Upozornenie pri ukonèení
+
+ColorMap*quitDialog1:                      Farby v emulátore boli upravené, ale nie sú pou¾ité ani ulo¾ené.
+
+ColorMap*quitDialog2:                      Farby v emulátore boli upravené a pou¾ité, ale nie sú ulo¾ené.
+
+ColorMap*quitDialog3:                      Farby v emulátore boli upravené a ulo¾ené, ale nie sú pou¾ité.
+
+ColorMap*quitDialog*exitBox.labelString:   Ukonèi»
+
+ColorMap*quitDialog*cancelBox.labelString: Zru¹i»
+
+ColorMap*quit1Tog1:                        Ukonèi» bez pou¾itia alebo ulo¾enia zmien.
+
+ColorMap*quit2Tog1:                        Ukonèi» bez ulo¾enia zmien.
+
+ColorMap*quitDialog*quitTog2.labelString:  Pred ukonèením pou¾i» a ulo¾i» zmeny.
+
+ColorMap*quit3Tog1:                        Ukonèi» bez pou¾itia zmien.
+
+ColorMap*quitTog3.labelString:             Pred ukonèením pou¾i» zmeny pre túto reláciu.
+
+ColorMap*quitDialog*quitTog4.labelString:  Pred ukonèením ulo¾i» zmeny.
+
+
+!*******************************************************************************
+!**  Informational Messages                                                   **
+!*******************************************************************************
+ColorMap*InfoMsgColorsSaved:    Farby ulo¾ené do súboru: 
+
+ColorMap*tempApp:               Farby boli doèasne pou¾ité pre reláciu emulátora.
+
+ColorMap*notLoaded:             Súbor farieb sa nedá naèíta». Skontrolujte, èi súbor stále existuje.
+
+ColorMap*errorLoad:             Formát súboru farieb bol nesprávny.
+
+
+! this resource should contain one black space character; do not translate.
+ColorMap*blank:  
+
+ColorMap*chooseApply:           Vyberte Pou¾i», aby farby nadobudli úèinnos» v aktuálnej relácii.
+
+ColorMap*noAccessDir:           Nedá sa pristúpi» k adresáru.
+
+! this cannot be made any longer during translation
+ColorMap*noOpenFile:            Nedá sa otvori» mapovací súbor farieb: 
+
+ColorMap*noMakeDir:             Nedá sa vytvori» adresár.
+
+ColorMap*noDeterminePath:       Nedá sa urèi» cesta k súboru.

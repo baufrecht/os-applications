@@ -1,8 +1,15 @@
-tcos-libs (2.0-10) UNRELEASED; urgency=low
+tcos-libs (2.0-11) unstable; urgency=low
+
+  * fix a bug in screen dimension handling, type conversion was missing
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Mon, 14 Jul 2014 18:15:08 +0200
+
+tcos-libs (2.0-10) unstable; urgency=low
 
   * NEW: debug.py for embedding 
+  * FIX: adapted the behaviour of UserGroups as we did in 2.0-9 for Users
 
- -- Steffen Hoenig <s.hoenig@openthinclient.com>  Wed, 28 May 2014 19:01:20 +0200
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Thu, 03 Jul 2014 18:51:06 +0200
 
 tcos-libs (2.0-9) unstable; urgency=low
 

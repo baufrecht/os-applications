@@ -1,0 +1,171 @@
+//// ENGLISH_SOURCE_VERSION= 1.2 
+////This file contains the pop-up keypad customization program on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file will be stored in locale specific ASCII (code page 819 for Latin1 languages). 
+
+////Help text format (this section is not displayed to IBM emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1.
+//// 3. This help file contains help text for the 3270 and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator. A comment line of four "/" characters followed by:
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+//// 3B. "5250" indicates subsequent data is only displayed in 5250 on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in both 3270 and 5250 on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+////  3D. Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters.  The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Do not change the order of topics in this help text file.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+
+----"3270 - Hilfe zur Tastenblockanpassung"
+++++"Allgemeine Informationen"
+Informationen zur Verwendung dieser Hilfeanzeige finden Sie im ersten Abschnitt der Haupthilfe zum Emulator. (Wählen Sie hierzu die Menüauswahl "Hilfe" im Emulatorfenster aus.)
+
+In diesem Hilfetext finden Sie Informationen zum Erstellen und Ändern von Tastenblöcken. Ein Tastenblock verfügt über Tastenblocktasten. Jeder Tastenblocktaste ist eine Tastenkombination oder eine Wiedergabedatei zugeordnet.
+
+Anmerkung: Es kann jeweils immer nur ein Programm zur Tastenblockanpassung aktiv sein.
+
+++++"Fensterlayout"
+Das Fenster zur Tastenblockanpassung enthält einen Bereich zur Auswahl von Tastaturaktionen (links), einen Arbeitsbereich für Tastenblocktasten (rechts), eine Aktionsleiste (unten) und einen Nachrichtenbereich (unten). Ein weiteres Fenster zeigt den Tastenblock an, den Sie gerade bearbeiten.
+
+Der Bereich zur Auswahl von Tastaturaktionen enthält folgende Elemente:
+
+1) Die "Liste verfügbarer Aktionen" enthält die verfügbaren Tastaturaktionen. Eine aus der Liste ausgewählte Aktion wird zur aktuellen Aktion.
+
+2) Die "Zeichenliste" enthält alle verfügbaren Zeichen. Ein ausgewähltes Zeichen wird zur aktuellen Aktion. Klicken Sie auf ein Zeichen, um es auszuwählen.
+
+3) Die Schaltfläche "Aktionshilfe" bietet Definitionen für Tastaturaktionen in einem Aktionshilfefenster. Sie können die Aktionsdefinitionen drucken.
+
+4) Die Schaltfläche "Tastenaktion->" ordnet die aktuelle Aktion der jeweiligen Taste im Arbeitsbereich für die Tastenblocktasten zu.
+
+Anmerkung: Es kann immer nur eine Aktion die aktuelle Aktion sein.
+
+
+Der Arbeitsbereich mit den Tastenblocktasten enthält folgende Elemente:
+
+1) Über "Aktueller Tastenblock" wird der Tastenblock angezeigt, den Sie gerade bearbeiten. Handelt es sich dabei um einen neuen Tastenblock und wurde er noch nicht gespeichert, ist die aktuelle Tastatur leer.
+
+2) Bei "Aktueller Text für Tastenblocktaste" handelt es sich um den Text, der auf der Tastenblocktaste angezeigt wird. Klicken Sie in den Bereich für den Tastentext, um über die Tastatur Text hinzuzufügen oder zu ändern. Der Bereich für den Tastentext ist auf 32 Zeichen begrenzt. Anmerkung: Sie müssen eine Tastenblocktaste ausgewählt haben. (Klicken Sie hierzu auf eine Tastenblocktaste in dem Fenster zur Tastaturanpassung.)
+
+3) Bei "Aktuelle Aktion für Tastenblocktaste" handelt es sich um die jeweils zugeordneten Tastaturaktionen oder um die Wiedergabedatei. Klicken Sie zum Zuordnen einer Tastaturaktion zu einer Tastenblocktaste auf die gewünschte Tastaturaktion, und klicken Sie dann auf "Tastenaktion->". Um der Tastenblocktaste eine Wiedergabedatei zuzuordnen, klicken Sie auf "Aktion für Wiedergabedatei auswählen", wählen Sie eine Wiedergabedatei aus, und klicken Sie auf "OK". Sie können in den Aktionsbereich für die aktuelle Tastenblocktaste klicken, um die Tastenaktion über die Tastatur zu ändern (z. B. zum Hinzufügen eines einfachen Tastaturmakros oder einer weiteren Aktion). Der Bereich für die Tastenaktionen ist auf etwa 100 Zeichen begrenzt. Im Abschnitt "Mehrere Aktionen" finden Sie Informationen zur Verwendung mehrerer Tastaturaktionen für eine Tastenblocktaste.
+
+4) Über "Tastenblocktaste löschen" wird die ausgewählte Tastenblocktaste gelöscht.
+
+5) Unter "Aktion für Wiedergabedatei auswählen" sind die Wiedergabedateien aufgeführt, die Sie der Tastenblocktaste zuordnen können.
+
+6) Über die Schaltfläche "OK" können Sie Änderungen akzeptieren, die an der aktuellen Tastenblocktaste vorgenommen wurden.
+
+7) Über die Schaltfläche "Abbrechen" werden an der aktuellen Tastenblocktaste vorgenommene Änderungen verworfen.
+
+
+Die Schaltflächen der Aktionsleiste bieten die folgenden Funktionen:
+
+1) Über "Speichern" können Sie die Tastenblockänderungen in einer Tastenblockdatei speichern. Sie benennen die Tastenblockdateien selbst.
+
+2) Über "Tastenblockdatei löschen" können Sie Tastenblockdateien löschen, die Sie zuvor erstellt haben.
+
+3) Über "Tastenblockdarstellung ändern" können Sie die Anzahl der Zeilen und Spalten in einem Dialogfenstertastenblock und die Anzahl der Textzeichen im Tastentext ändern und zwischen einem Dialogfenstertastenblock und einem Pulldown-Tastenblock wechseln. 
+
+4) Über "Verlassen" können Sie das Programm zur Tastenblockanpassung verlassen.
+
+3) Über "Hilfe" können Sie diesen Hilfetext anzeigen.
+
+
+Nachrichtenbereich: Zeigt Informations- und Fehlernachrichten an.
+
+In einem eigenen Fenster zur Tastenblock-Anpassung wird der aktuelle Tastenblock angezeigt. Klicken Sie auf eine Tastenblocktaste, um den Tastentext oder die Tastenaktion(en) zu ändern. Wenn Sie einen Dialogfenstertastenblock bearbeiten, zeigt das Fenster die spätere Darstellung Ihres Dialogfenstertastenblocks. Wenn Sie einen Pulldown-Tastenblock bearbeiten, werden Ihre Tastenblocktasten im Fenster dargestellt. Die Tasten von Pulldown-Tastenblöcken sind über die Hauptmenüleiste des Emulators verfügbar.
+
+++++"Erste Schritte"
+Im Folgenden finden Sie Anweisungen zur Erstellung und Verwendung eines Dialogfenstertastenblocks (zum Zuordnen einer Tastenblocktaste zu einer Tastaturaktion).
+
+////The note below was moved up from the end of this topic
+Anmerkung: Im Abschnitt "Einfache Tastaturmakros" finden Sie Anweisungen zum Erstellen einer Tastenblocktaste mit einem einfachen Tastaturmakro (eine Tastenkombination).
+
+1) Starten Sie das Programm zur Tastenblockanpassung von einer Emulationssitzung aus (vermutlich bereits erfolgt).
+
+2) Erstellen Sie einen neuen Tastenblock (falls noch nicht erfolgt).
+
+3) Klicken Sie auf eine Tastenblocktaste im Fenster mit dem Programm zur Tastenblockanpassung (normalerweise mit der oberen linken Taste beginnend).
+
+4) Klicken Sie auf eine Tastaturaktion in der Liste der verfügbaren Aktionen.
+
+5) Klicken Sie auf "Tastenaktion->".
+
+6) Klicken Sie in den Textbereich für die aktuelle Tastenblocktaste, und geben Sie den Text für die Taste ein (er erscheint auf der Tastenblocktaste).
+
+7) Klicken Sie auf "OK", um die Änderung der Tastenblocktaste zu akzeptieren.
+
+8) Speichern Sie den Tastenblock, und benennen Sie die Tastenblockdatei.
+
+9) Starten Sie den Dialogfenstertastenblock mit Hilfe des Hauptemulators (Tastenblock...), und testen Sie den neuen Tastenblock.
+
+Sie können die Tastenblockdatei ändern und erneut speichern. (Sie können z. B. zusätzliche Tasten hinzufügen oder Tasten ändern.)
+
+++++"Tastenblockdarstellung"
+Sie können die Anzahl der Zeilen und Spalten in einem Dialogfenstertastenblock und die Anzahl der Textzeichen im Tastentext ändern (alle Tastenblocktasten haben die gleiche Größe) und zwischen einem Dialogfenstertastenblock und einem Pulldown-Tastenblock wechseln. Klicken Sie auf "Tastenblockdarstellung ändern", um eine der genannten Änderungen durchzuführen.
+
+++++"Dialogfenster- oder Pulldown-Tastenblock"
+Sie können einen vorhandenen Tastenblocks einfach von einem Dialogfenstertastenblock oder Pulldown-Tastenblock in die jeweils andere Darstellung ändern, indem Sie auf "Tastenblockdarstellung ändern" klicken. Die Standardeinstellung ist der Dialogfenstertastenblock.
+
+Ein Dialogfenstertastenblock wird in einem eigenen Fenster mit Tastenblocktasten angezeigt, die Sie definieren können. Wenn Sie auf eine Tastenblocktaste klicken, wird die zugeordnete Aktion (Tastaturaktionen oder Wiedergabedatei) in der 3270-Sitzung verarbeitet, in der das Fenster mit dem Dialogfenstertastenblock geöffnet wurde. Sie entscheiden, ob der Dialogfenstertastenblock angezeigt wird oder nicht. Für eine 3270-Sitzung können mehrere Fenster mit Dialogfenstertastenblöcken verwendet werden.  
+
+Auf den Pulldown-Tastenblock können Sie über die Hauptmenüleiste des Emulators zugreifen. Wenn Sie einen Pulldown-Tastenblock verwenden, wird die Menüauswahl "Tastenblock" zu Ihrer Menüleiste hinzugefügt. Wenn Sie auf eine Taste im Pulldown-Tastenblock klicken, wird die entsprechende Aktion in der 3270-Sitzung ausgeführt.
+
+Wenn Sie für mehrere 3270-Sitzungen denselben Tastenblock verwenden, sollten Sie einen Pulldown-Tastenblock verwenden. Für Dialogfenstertastenblöcke ist für jede 3270-Sitzung ein eigenes Fenster nötig.
+
+Dialogfenstertastenblöcke sind zu bevorzugen, wenn Sie einen Tastenblock mit vielen Tasten (10 bis 20 Tastenblocktasten, je nach Bildschirmauflösung) verwenden oder wenn Sie für verschiedene 3270-Sitzungen unterschiedliche Tastenblöcke verwenden.
+
+Wenn Sie bereits über mehrere Pulldown-Tastenblöcke verfügen, müssen Sie zunächst den Tastenblock auswählen, bevor Sie eine Taste des Pulldown-Tastenblocks auswählen können.
+
+Sie können sowohl Dialogfenstertastenblöcke als auch Pulldown-Tastenblöcke verwenden. Wenn Sie über mehrere Tastenblöcke verfügen, sollten Sie einen Tastenblock definieren, der von mehreren Sitzungen als Pulldown-Tastenblock verwendet wird, und die übrigen Tastenblöcke als Dialogfenstertastenblöcke verwenden.
+
+Ein Dialogfenstertastenblock kann beim Starten einer 3270-Sitzung gestartet werden. Sie können das Konfigurationsprogramm des IBM 3270-Emulators verwenden, um einen bestimmten Dialogfenstertastenblock anzugeben, der gestartet werden soll: Wählen Sie die Sitzung aus, und klicken Sie auf "Verbindung-> Bearbeiten". Klicken Sie auf "Erweiterte 3270-Verbindung...", und geben Sie "-KEYPAD", eine Leerstelle und (unter Beachtung der Groß-/Kleinschreibung) den Namen Ihrer Tastenblockdatei unter "Weitere Parameter" ein. Bei "-KEYPAD" muss die Groß-/Kleinschreibung beachtet werden. Wenn der Name der Tastenblockdatei Leerzeichen enthält, verwenden Sie doppelte Anführungszeichen für den Dateinamen (z. B. -KEYPAD "Name der Tastenblockdatei").
+
+++++"Einfache Tastaturmakros"
+Über Tastaturmakros können Sie einfach eine Zeichenfolge in Ihre 3270-Sitzung eingeben. Sie können eine Tastenblocktaste mit einem einfachen Tastaturmakro erstellen; gehen Sie hierzu wie folgt vor:
+
+1) Starten Sie, falls noch nicht geschehen, aus einer Emulationssitzung das Programm zur Tastenblockanpassung, und wählen Sie, falls noch nicht geschehen, die Tastenblockdatei aus, für die Sie das Tastaturmakro verwenden möchten.
+
+2) Klicken Sie zum Aufrufen des Tastaturmakros auf die Tastenblocktaste im Fenster mit dem Tastenblock.
+
+////Note: The translation of String() below should match the translated resource text for AllShare*string() in the keyboard remapping resource file.
+3) Klicken Sie auf die Tastaturaktion "String()" in der Liste der verfügbaren Aktionen.
+
+4) Klicken Sie auf "Tastenaktion->".
+
+5) Klicken Sie zwischen die Klammern von "String()" im Aktionsbereich der aktuellen Tastenblocktaste.
+
+6) Geben Sie ein doppeltes Anführungszeichen, die Zeichen des Tastaturmakros und ein weiteres doppeltes Anführungszeichen ein (z. B. "String("Ihre Makrozeichen")".
+
+7) Klicken Sie in den Textbereich für die aktuelle Tastenblocktaste, und geben Sie den Text für die Taste ein (er erscheint auf der Tastenblocktaste).
+
+8) Klicken Sie auf "OK", um die Änderung der Tastenblocktaste zu akzeptieren.
+
+9) Speichern Sie den Tastenblock.
+
+10) Testen Sie das Tastaturmakro Ihres Tastenblocks über den Hauptemulator (Dialogfenster- oder Pulldown-Tastenblock).
+
+Sie können den Tastenblock ändern und erneut speichern, wenn Sie Änderungen vornehmen möchten.
+
+Anmerkung: Für die Erstellung langer oder komplexer Tastaturmakros sollten Sie die Aufzeichnungsfunktion verwenden. Sie können einer Tastenblocktaste eine Wiedergabedatei zuordnen. Weitere Informationen finden Sie in den Abschnitten zur Aufzeichnung und Wiedergabe in der Haupthilfe des Emulators.
+
+++++"Tastentext und -aktionen bearbeiten"
+Texte und Aktionen für Tastenblocktasten können über die Tastatur geändert werden. Klicken Sie in den gewünschten Bereich, und nehmen Sie die Änderung mit Hilfe der Tastatur vor. Klicken Sie auf "OK", um die Änderungen zu akzeptieren. Im Abschnitt "Mehrere Aktionen" finden Sie Informationen zur Definition mehrerer Tastaturaktionen für eine Tastenblocktaste.
+
+Die geänderten Aktionen müssen richtig und unter Beachtung von Groß-/Kleinschreibung geschrieben werden.
+
+++++"Mehrere Aktionen"
+Der Aktionsbereich für die aktuelle Tastenblocktaste ist auf etwa 100 Zeichen begrenzt. Sie können mehrere Tastaturaktionen für eine Tastenblocktaste angeben. Wenn die Tastaturaktionen eine Länge von 100 Zeichen überschreiten, müssen Sie die Tastenkombination in einer Wiedergabedatei aufzeichnen und diese Datei als Tastenblocktastenaktion angeben (weitere Informationen zu Wiedergabedateien finden Sie in der Hauptemulatorhilfe in den Abschnitten zur Aufzeichnung und zur Wiedergabe).
+
+Um mehrere Tastaturaktionen für eine Tastenblocktaste anzugeben, klicken Sie in den Aktionsbereich der aktuellen Tastenblocktaste, und geben Sie die gewünschten Aktionen durch eine einfache Leerstelle getrennt ein. Die geänderten Aktionen müssen richtig und unter Beachtung von Groß-/Kleinschreibung geschrieben werden. Sie können auch die Maus verwenden, um eine Tastaturaktion in den Aktionsbereich der Tastenblocktaste einzugeben: Klicken Sie auf die gewünschte Position im Aktionsbereich der Tastenblocktaste, wählen Sie die Tastaturaktion aus, die Sie hinzufügen möchten, und klicken Sie dann auf die Schaltfläche "Tastenaktion->".
+
+++++"Zeichenliste"
+Die Zeichenliste ermöglicht den Zugriff auf Zeichen, auf die Sie möglicherweise nicht über die Tastatur zugreifen können.
+
+Geben Sie ein Zeichen für eine Tastenblocktaste an: Klicken Sie im Fenster mit dem Tastenblock auf die gewünschte Tastenblocktaste. Klicken Sie in der Zeichenliste auf das gewünschte Zeichen. Klicken Sie auf "Tastenaktion->". Klicken Sie in den Textbereich für die aktuelle Tastenblocktaste, und geben Sie den Text für die Taste ein (er erscheint auf der Tastenblocktaste). Klicken Sie auf "OK", um die Änderung zu akzeptieren. 
+
+Fügen Sie einem Tastaturmakro ein Zeichen hinzu: Klicken Sie auf die Tastenblocktaste, die das Tastaturmakro anzeigt. Klicken Sie in der Zeichenliste auf das gewünschte Zeichen. Klicken Sie im aktuellen Aktionsbereich für die Tastenblocktaste des Tastaturmakros (innerhalb der Aktion "String()") auf die Position, an der das Zeichen hinzugefügt werden soll (mit der linken und der rechten Cursortaste können Sie den Cursor an die gewünschte Position bewegen). Klicken Sie auf "Tastenaktion->". Klicken Sie auf "OK", um die Änderung zu akzeptieren. 
+
+++++"Tastenblocktasten verschieben"
+Sie können Tastenblocktasten verschieben, indem Sie mit der rechten Maustaste auf die gewünschte Tastenblocktaste klicken, den Mauszeiger zur neuen Tastenposition bewegen und dann auf die linke Maustaste klicken. Wenn die neue Position bereits als Tastenblocktaste definiert wurde, werden die beiden Tasten vertauscht.

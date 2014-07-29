@@ -1,0 +1,373 @@
+////This file is the on-line help for the IBM Emulator Setup Programs. 
+////This help text file will be stored in locale specific ASCII (code page 819 for Latin1 languages). 
+////Help text format:
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1.
+//// 3. This help file contains help text for the 3270 and 5250 emulator setup programs. There are some help text differences. The Network Station help viewer program will display the appropriate help text for the appropriate emulator. A comment line of four "/" characters followed by
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 setup on-line help.
+//// 3B. "5250" indicates subsequent data is only displayed in 5250 setup on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in both 3270 setup and 5250 setup on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters. The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Order of topics: The emulator help viewer program automatically orders topics in alphabetical order when displaying the topics. There are many topics in this main emulator help text file; alphabetical order should make it easier for users to find the topic that they are looking for.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed on the IBM Network Station).
+////About topic lengths (preceded by four "+" characters): The maximum characters in any topic should be about 38 characters. Exceeding 38 characters will cause the help viewer to display topics for most of the width of the help viewer window, instead of the main help text. You can abbreviate topic text as necessary.
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+////3252
+---- "Emulator Setup Program Help"
+////5250
+---- "5250 Emulator Setup Program Help"
+////3270
+---- "3270 Emulator Setup Program Help"
+////9999
+++++"Using the Help Viewer"
+This topic explains how to use this help viewer.
+
+The left panel of the help window contains a list of help topics. These topics can be scrolled (if there is a middle scroll bar) using the mouse, the Page Up key or Page Down key (with the mouse pointer in the left panel), the Cursor Up key (at the top of the window) or Cursor Down key (at the bottom of the window).
+
+Pointing to a topic with the mouse pointer and pushing the primary mouse button (usually the left button) puts a description of the selected topic in the right panel.
+
+The description in the right panel can be scrolled using the mouse, Page Up key, Page Down key, Cursor Up key (at the top of the window) or Cursor Down key (at the bottom of the window).
+
+The search buttons allow you to search for a text string within the help text. A search text string can contain blanks and is not case sensitive.
+
+Click the Next Topic and Prev Topic buttons to recreate the order of topics you have already seen.
+
+Click the Print button to print the help text topic being viewed or all help text topics (a printer must be configured prior to printing the help text).
+
+Click the Exit button to remove the help window.
+
+If your monitor resolution is 1024x768 or higher, a Font button allows you to change the font size while viewing help.
+++++"Setup Program Overview"
+////MAI Used by help viewer to find this topic.
+The Emulator Setup Program is used to configure and launch your IBM emulator. The main window consists of two areas: the menu bar and the configured connections list or lists below it. The menu bar consist of 4 pull-down lists: Connection, Preferences, Options and Help. The configured connections lists contain connections that have been configured (not connections that are active). If there are 2 lists of connections, the first list is the 'User Connections' list and the second list is the 'Default Connections' list. If there are no default connections, the 'Default Connections' list does not appear.
+
+Use the Connection pull-down to create, edit, browse, copy and remove emulator connection configurations. Also use the Connection pull-down to connect using a particular connection configuration. The edit, browse, copy, connect and remove operations apply to the currently selected connection in a connections list below the menu bar. If there are no connection configurations, or one is not selected, only the New and Exit Connection pull-down operations are available. If a connection is selected from the 'Default Connections' list, the Edit and Remove Connection pull-down operations are not available. Use the Exit choice to exit the Setup Program.
+
+Use the Preferences menu bar pull-down to configure preferences for your emulators. Preferences apply to all emulator connections, and may sometimes be overridden by individual connection configuration options. In order for preferences to take effect, you must stop and restart ALL emulator sessions.
+
+Use the Options menu bar pull-down for changing the operation of the Setup Program itself. For instance, to add a Setup Program password, use this pull-down.
+
+Use the Help menu bar pull-down to learn about the Emulator Setup Program, to bring up Emulator Setup Program help or to view help for the emulator itself.
+++++"Setup Program Password"
+////PAS Used by help viewer to find this topic.
+The Change Password panel is used to create, change or remove the Setup Program password. To get to this panel, select Password from the Options menu bar pull-down.
+
+To change or remove a password, you must first enter the current password.
+
+To create or change the password, the new password must be entered twice: first in the "New password" field, and in the "Confirm new password" field. Note, passwords are case-sensitive, so make sure Caps Lock is in the correct state.
+
+To remove a password, change the password to blank (don't enter anything in the "New password" or the "Confirm new password" field.
+////3270
+++++"3270 Emulator Connection"
+////3CN Used by help viewer to find this topic.
+The 3270 emulator connection panel is used to create, edit or browse a 3270 emulator connection configuration. To get to this panel, select New, Edit or Browse from the Connection menu bar pull-down.
+
+Connection Description:
+
+This is a name or description of the 3270 emulator connection configuration. Anything can be entered in this field, but something which identifies the target system or the purpose of this connection is usually the most helpful. The only place this description is used is in this Setup Program to identify the connection configuration in the configured connections list. It is not used in the emulator itself.
+
+S/390 Host Name or IP Address:
+
+This is an optional field. If left blank, a dialog asking for host name or (numeric) IP address will appear when the 3270 emulator is started.
+
+Advanced 3270 emulator connection configuration can be specified for this emulator connection. Do that by pressing the Advanced 3270 Connection... button from a 3270 Emulator Connection panel.
+
+Many 3270 emulator preferences are global (the preferences apply to all 3270 emulator sessions); for example, enabling or disabling emulator keyboard re-mapping. Specify global preferences using the Preferences menu bar pull-down, or press the Global 3270 Preferences... button from a 3270 Emulator Connection panel.
+++++" - Advanced configuration"
+////3AC Used by help viewer to find this topic.
+Advanced 3270 Emulator Connection Parameters:
+
+Session Title:
+
+This text value will appear as the emulator session title. The default title text is "3270". This value is optional.
+
+Screen size:
+
+This option sets the size (number of rows and columns) that you want your 3270 session to use. Note: A monitor resolution of 1024x768 or larger is typically required in order to support 27 rows by 132 columns. A monitor resolution of 800x600 or larger is required to support 43 rows by 80 columns. Possible values are: 24 by 80, 32 by 80, 43 by 80, and 27 by 132. The default value is 32 by 80.
+
+Graphics:
+
+The Graphics option allows you to enable or disable the capability of the 3270 session to display graphics. Graphics is only available with a 32 by 80 screen size. Possible values are: Enabled or Disabled.
+
+TN3270E:
+
+Possible values are: Enabled or Disabled. The default value is Enabled. Choosing Enabled causes the 3270 emulator to negotiate a TN3270E session (enhanced Telnet 3270) with the server or if unable to negotiate TN3270E, to use a standard 3270 session. Choosing Disabled will not allow a TN3270E session connection to be established; a standard 3270 session is used.
+
+Telnet Port:
+
+This option specifies which TCP/IP port on a System/390 is used to establish a 3270 session. The default is 23. Other valid values range from 1 through 65535. To use a port number other than the default, you should contact the system administrator of the remote System/390 or Telnet server for the correct port number for that machine.
+
+Window size and location in pixels (optional):
+
+This option allows you to specify the initial size and location of the 3270 window. The following fields define the size of the window (Width and Height) and the window's position on the monitor (Horizontal and Vertical offset and Corner to offset from):
+
+Full screen:
+Checking this box enables the 3270 window to use the whole screen.
+
+Width:
+This value determines the horizontal width of the window (in pixels).
+
+Height:
+This value determines the vertical height of the window (in pixels).
+
+Horizontal offset:
+This value determines the horizontal distance from whatever corner is specified as the Corner to offset value (for example, Upper left) (in pixels). 
+
+Vertical offset:
+This value determines the vertical distance from whatever corner is specified as the Corner to offset value (for example, Upper left) (in pixels).
+
+Corner to offset:
+This value determines from which corner (upper left, upper right, lower left, or lower right) the values from the Horizontal and Vertical offset fields are applied.
+
+Emulator User ID:
+This value is used in the emulator for user ID whenever needed. For example, if emulator auto-login is used, this value is used for the user ID.
+
+Emulator Password:
+This value is used in the emulator for password whenever needed. For example, if emulator auto-login is used, this value is used for the password. The password is stored encoded.
+
+Other Parameters:
+You can configure additional parameters for the 3270 Emulator. The parameter descriptions and their values can be found in the 3270 Emulator online Help text. Other Parameters are case sensitive.
+
+++++"3270 Preferences"
+////3PR Used by help viewer to find this topic.
+3270 Preferences allow emulator options to be available or not. Preference settings apply to all 3270 sessions. To have preferences take effect, all 3270 emulator sessions must be closed and restarted.
+
+Key re-mapping capability:
+
+Keyboard re-mapping allows you to re-map keys in the 3270 emulator. Keyboard re-mapping is available through the emulator Option pull-down. "Disabled" means the user can see the Keyboard Re-mapping selection but cannot select it (grayed out). "Hidden" means the user will not see the Keyboard Re-mapping selection in the Options pull-down. 3270 emulator online help explains keyboard re-mapping.
+
+Keypad capability:
+
+Keypad capability allows you to create and use customized keypad buttons. "Yes" allows you to customize keypad buttons. "Keypad use only" means that you can only use keypads created previously. Keypad customization is available through the emulator Option pull-down. 3270 emulator online help explains keypad customization.
+
+Record/Playback capability:
+
+Record/Playback allow you to record and later playback recorded key sequences in the 3270 emulator. Record and playback are available through the emulator Option pull-down. "Playback only" means that you can only use playback files created previously. 3270 emulator online help explains record and playback.
+
+Color customization capability:
+
+Color customization allows you to modify colors within your 3270 sessions. Color mapping is available through the emulator Option menu pull-down. "Basic" color mapping allows you to select from a set of 3270 color schemes. "Advanced" allows you to create your own 3270 color schemes. 3270 emulator online help explains color mapping.
+
+Key for Enter function:
+
+The Key for Enter option specifies the key you want to use as the Enter key. The default is the Enter key. 
+
+Desktop file:
+
+This option determines if the 3270 emulator stores and uses the last location and font size of 3270 emulator windows. If "Yes" or "Yes, but read only" is selected, the 3270 emulator will use the stored location and font size when a 3270 emulator is started. If "Yes" is selected, it will also store the last location and font size when a 3270 emulator is exited. If "No" is selected for Desktop file, the 3270 emulator will not use or store the last location and font size. Note: If initial window location and size is set in the connection configuration, the 3270 emulator will not use or store the last location and font size-- regardless of this setting.
+
+Command menu:
+
+The Command menu option allows you to enable or disable the 3270 menu bar Command choice. "Yes" means the Command choice is available. If the Command choice is disabled, you will not have access to new 3270 sessions or be able to exit a 3270 session using the Command choice.
+
+Edit menu:
+
+The Edit menu option allows you to enable or disable the Edit choice on the 3270 menu bar (copy, cut, and paste).
+
+Option menu:
+
+The Option menu option allows you to enable or disable the 3270 menu bar Option choice. If the Option choice is disabled, you will not have access to Fonts selection, Keypad Customization, Record/Playback selections, Miscellaneous Preferences (for example, cursor style selection), Color Mapping, or Keyboard Re-mapping.
+
+Print menu:
+
+The Print menu option allows you to enable or disable the 3270 menu bar Print choice (to print the 3270 screen). "No menu, keyboard print only" means you can use a print key sequence to print the 3270 screen. Miscellaneous Preferences and keyboard re-mapping can specify the print key sequence. Note: A printer must be configured before 3270 screen print can be used.
+
+Help menu:
+
+The Help menu option allows you to enable or disable the 3270 menu bar Help choice (displays 3270 emulator online help).
+
+Miscellaneous Preferences:
+
+The Miscellaneous Preferences option allows you to enable or disable 3270 Miscellaneous Preferences. Miscellaneous Preferences is available through the emulator Option pull-down. Miscellaneous Preferences determines (to some extent) the look and feel of your 3270 display screen. For example, you can select cursor style (underscore or block), cursor blink (or not to blink), and the use of rule lines.
+
+Font menu list:
+
+The Font menu list option allows you to enable or disable the Fonts choice in the 3270 emulator Option pull-down. This option also specifies if the user can resize or move the 3270 emulator window.
+
+New session window:
+
+The New session window option allows you to enable or disable starting another 3270 emulator to a different S/390 host. The emulator new session window is available through the emulator Command pull-down (providing the Command menu bar choice is enabled).
+
+Emulator User ID:
+This value is used in the emulator for user ID whenever needed. For example, if emulator auto-login is used, this value is used for the user ID.
+
+Emulator Password:
+This value is used in the emulator for password whenever needed. For example, if emulator auto-login is used, this value is used for the password. The password is stored encoded.
+
+Additional parameters:
+
+You can configure additional parameters for the 3270 emulator. Parameter descriptions and their values can be found in the 3270 emulator online help. Additional parameters are case sensitive.
+////5250
+++++"5250 Emulator Connection"
+////5CN Used by help viewer to find this topic.
+The 5250 emulator connection panel is used to create or edit a 5250 emulator connection configuration. To get to this panel, select New or Edit from the Connection menu bar pull-down.
+
+Connection Description:
+
+This is a name or description of the 5250 emulator connection configuration. Anything can be entered in this field, but something which identifies the target system or the purpose of this connection is usually the most helpful. The only place this description is used is in this Setup Program to identify the connection configuration in the configured connections list. It is not used in the emulator itself.
+
+i5/OS Host Name or IP Address...:
+
+This is an optional field. If left blank, a dialog asking for host name or (numeric) IP address will appear when the 5250 emulator is started.
+
+Advanced 5250 emulator connection configuration can be specified for this emulator connection. Do that by pressing the Advanced 5250 Connection... button from a 5250 Emulator Connection panel.
+
+Many 5250 emulator preferences are global (the preferences apply to all 5250 emulator sessions); for example, enabling or disabling emulator keyboard re-mapping. Specify global preferences using the Preferences menu bar pull-down, or press the Global 5250 Preferences... button from a 5250 Emulator Connection panel.
+++++" - Advanced configuration"
+////5AC Used by help viewer to find this topic.
+Advanced 5250 Emulator Connection Parameters:
+
+Session Title:
+
+This text value will appear as the session title. The default title text is "5250".  This value is optional.
+
+Display Name:
+
+This value determines the 5250 display name. This value is optional. See the Display Name topic in 5250 emulator online help for more information. 
+
+Window size and location in pixels (optional):
+
+This option allows you to specify the initial size and location of the 5250 window. The following fields define the size of the window (Width and Height) and the window's position on the monitor (Horizontal and Vertical offset and Corner to offset from): 
+
+Full screen:
+Checking this box enables the 5250 window to use the whole screen. 
+
+Width:
+This value determines the horizontal width of the window (in pixels).
+
+Height:
+This value determines the vertical height of the window (in pixels).
+
+Horizontal offset:
+This value determines the horizontal distance from whatever corner is specified as the Corner to offset value (for example, Upper left) (in pixels).
+
+Vertical offset:
+This value determines the vertical distance from whatever corner is specified as the Corner to offset value (for example, Upper left) (in pixels).
+
+Corner to offset:
+This value determines from which corner (upper left, upper right, lower left, or lower right) the values from the Horizontal and Vertical offset fields are applied.
+
+Emulator User ID:
+This value is used in the emulator for user ID whenever needed. For example, if emulator auto-login is used, this value is used for the user ID.
+
+Emulator Password:
+This value is used in the emulator for password whenever needed. For example, if emulator auto-login is used, this value is used for the password. The password is stored encoded.
+
+Telnet Port:
+Specify the telnet port that for you server's telnet port is set to. Blank means the default telnet port, which is 23.
+
+Keymap Filename:
+Specify the keymap file name along with the full path to that file.
+
+Keypad Filename:
+Specify the keypad file name along with the full path to that file.
+
+SSL Filename:
+Specify the SSL file name along with the full path to that file.
+
+Other Parameters:
+You can configure additional parameters for the 5250 Emulator. The parameter descriptions and their values can be found in the 5250 Emulator online Help text. Other Parameters are case sensitive.
+
+++++"5250 Preferences"
+////5PR Used by help viewer to find this topic.
+5250 Preferences allow emulator options to be available or not. Preference settings apply to all 5250 sessions. To have preferences take effect, all 5250 emulator sessions must be closed and restarted.
+
+Key re-mapping capability:
+
+Keyboard re-mapping allows you to re-map keys in the 5250 emulator. Keyboard re-mapping is available through the emulator Option pull-down. "Disabled" means the user can see the Keyboard Re-mapping selection but cannot select it (grayed out). "Hidden" means the user will not see the Keyboard Re-mapping selection in the Options pull-down. 5250 emulator online help explains keyboard re-mapping.
+
+Keypad capability:
+
+Keypad capability allows you to create and use customized keypad buttons. "Yes" allows you to customize keypad buttons. "Keypad use only" means that you can only use keypads created previously. Keypad customization is available through the emulator Option pull-down. 5250 emulator online help explains keypad customization.
+
+Record/Playback capability:
+
+Record/Playback allow you to record and later playback recorded key sequences in the 5250 emulator. Record and playback are available through the emulator Option pull-down. "Playback only" means that you can only use playback files created previously. 5250 emulator online help explains Record and Playback.
+
+Color customization capability:
+
+Color customization allows you to modify colors within your 5250 sessions. Color mapping is available through the emulator Option menu pull-down. "Basic" color mapping allows you to select from a set of 5250 color schemes. "Advanced" allows you to create your own 5250 color schemes. 5250 emulator online help explains color mapping.
+
+Arabic Paramaters:
+This option is to protect the LamAlef character at the Implicit file on iSeries systems. When this option is On, each LamAlef will allocate space at the end of the Arabic field. The default is Off.
+
+132 Columns:
+
+If enabled, the 27 rows by 132 columns screen size will be allowed. Most i5/OS screens are 24 rows by 80 columns. Some i5/OS screens use 27 rows by 132 columns if the 5250 emulator supports this screen size. In general, a monitor resolution of 1024x768 or higher is required in order to display 27 rows by 132 columns.
+
+Column separators:
+
+The Column separators option enables or disables displaying column separators within certain types of 5250 entry fields. The default is Disabled, meaning separator characters will not appear in 5250 entry fields.
+
+Desktop file:
+
+This option determines if the 5250 emulator stores and uses the last location and font size of 5250 emulator windows. If "Yes" or "Yes, but read only" is selected, the 5250 emulator will use the stored location and font size when a 5250 emulator is started. If "Yes" is selected, it will also store the last location and font size when a 5250 emulator is exited. If "No" is selected for Desktop file, the 5250 emulator will not use or store the last location and font size. Note: If initial window location and size is set in the connection configuration, the 5250 emulator will not use or store the last location and font size-- regardless of this setting.
+
+Command menu:
+
+The Command menu option allows you to enable or disable the 5250 menu bar Command choice. "Yes" means the Command choice is available. If the Command choice is disabled, you will not have access to new 5250 sessions or be able to exit a 5250 session using the Command choice.
+
+Edit menu:
+
+The Edit menu option allows you to enable or disable the Edit choice on the 5250 menu bar (copy, cut, and paste).
+
+Option menu:
+
+The Option menu option allows you to enable or disable the 5250 menu bar Option choice. If the Option choice is disabled, you will not have access to Fonts selection, Keypad Customization, Record/Playback selections, Miscellaneous Preferences (for example, cursor style selection), Color Mapping, or Keyboard Re-mapping.
+
+Print menu:
+
+The Print menu option allows you to enable or disable the 5250 menu bar Print choice (to print the 5250 screen). "No menu, keyboard print only" means you can use a print key sequence to print the 5250 screen. Miscellaneous preferences and keyboard re-mapping can specify the print key sequence. Note: A printer must be configured before 5250 screen print can be used.
+
+Help menu:
+
+The Help menu option allows you to enable or disable the 5250 menu bar Help choice (displays 5250 emulator online help).
+
+Control menu:
+
+The Control menu option allows you to enable or disable the 5250 menu bar Control choice. Selecting a key within the Control pull-down performs the same function as if you pressed the key on your keyboard.
+
+Miscellaneous Preferences:
+
+The Miscellaneous Preferences option allows you to enable or disable 5250 Miscellaneous Preferences. Miscellaneous Preferences is available through the emulator Option pull-down. Miscellaneous Preferences determines (to some extent) the look and feel of your 5250 display screen. For example, you can select cursor style (underscore or block), cursor blink (or not to blink), and the use of rule lines.
+
+Font menu list:
+
+The Font menu list option allows you to enable or disable the Fonts choice in the 5250 emulator Option pull-down. This option also specifies if the user can resize or move the 5250 emulator window.
+
+New session window:
+
+The New session window option allows you to enable or disable starting another 5250 emulator to a different i5/OS host. The emulator new session window is available through the emulator Command pull-down (providing the Command menu bar choice is enabled).
+
+Browser hotspot: 
+
+The Browser hotspot option allows you to enable or disable recognizing a URL hotspot and starting a browser.  When the option is enabled and a user clicks on a valid URL hotspot, the command specified in the system environment variable $BROWSER is called with the URL passed as a parameter.  The system variable $BROWSER needs to be defined with the fully qualified name or a name found in the system $PATH to the browser that is to be used.  If the environment variable $BROWSER is not found or is not valid, a browser will not be started. 
+
+
+Emulator User ID:
+This value is used in the emulator for user ID whenever needed. For example, if emulator auto-login is used, this value is used for the user ID.
+
+Emulator Password:
+This value is used in the emulator for password whenever needed. For example, if emulator auto-login is used, this value is used for the password. The password is stored encoded.
+
+Additional parameters:
+
+You can configure additional parameters for the 5250 emulator. Parameter descriptions and their values can be found in the 5250 emulator online help. Additional parameters are case sensitive.
+////9999
+++++"Default Connections"
+To create or modify default emulator connections, start the Emulator Setup Program and select "Connection--> New..." or select an already defined connection and then "Connection-->Edit..."  Connections are saved to the user's emulator preferences in the $HOME/.iSeriesAccess/ibm_5250/ directory.  When saved the connections become default connections for that user.  
+++++"Default Color Maps"
+To create or modify default emulator color maps, start an emulator session from the Emulator Setup Program and select "Option-> Color Mapping..."  Note, the 'Color customization capability' emulator preference must be 'Enabled' from the Emulator Setup tool for color map modification. Color maps which are created or modified are saved in the user's preference file in the $HOME/.iSeriesAccess/ibm_5250/ directory.
+++++"Default Keyboard Maps"
+To create or modify default emulator keyboard maps, start an emulator session and select "Option-> Keyboard Re-mapping..." Note, the 'Keyboard re-mapping capability' emulator preference must be 'Enabled' from the Emulator Setup tool for keyboard map modification. Keyboard maps which are created or modified are saved in the user's preference file in the $HOME/.iSeriesAccess/ibm_5250/ directory.
+++++"Default Keypads"
+To create or modify default emulator keypads, start an emulator session from the Emulator Setup Program and select "Option-> Customize Keypad..."  Note, the 'Keypad capability' emulator preference must be set to 'Yes' from the Emulator Setup tool for keypad modification. Keypads which are created or modified in preview mode and saved in the user's preference file in the $HOME/.iSeriesAccess/ibm_5250/ directory.
+++++"Default Miscellaneous Preferences"
+To modify default emulator Miscellaneous Preferences, start an emulator session from the Emulator Setup Program and select "Option-> Miscellaneous Preferences..." Note, the 'Miscellaneous Preferences' use capability emulator preference must be set to 'Yes' from the Emulator Setup tool for Miscellaneous Preference modification. Miscellaneous Preferences which are modified in preview mode are saved in the user's preference file in the  $HOME/.iSeriesAccess/ibm_5250/ directory.
+++++"Default Playback Files"
+To create or modify default emulator playback files, start an emulator session and select "Option-> Record..."  Note, the 'Record/Playback capability' emulator preference must be 'Enabled' from the Emulator Setup tool for playback file modification. Playback files which are created or modified are saved in the user's preference file in the  $HOME/.iSeriesAccess/ibm_5250/ directory.
+++++"Default Preferences"
+To create, view or modify default emulator preferences, start the Emulator Setup Program. Preferences are saved to the user's emulator preferences in the $HOME/.iSeriesAccess/ibm_5250/ directory, and become default preferences for that user.

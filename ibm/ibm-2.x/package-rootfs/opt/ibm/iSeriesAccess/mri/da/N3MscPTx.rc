@@ -1,0 +1,468 @@
+!
+!
+!
+! This file contains the resource text strings for the IBM Network Station 3270, 5250, and
+! VTxxx emulators, in particular the miscellaneous preferences program.
+
+! This resource file will be stored on all servers in locale specific ASCII (819 for Latin1
+! languages). This resource file is stored on the booting server as N3_5MscP.
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. This resource file contains text strings for the 3270 and 5250 emulators.  Much of
+!    the resource text is common to all emulators. Some is specific to one emulator.
+!    Miscpref = Resources used by both 3270 and 5250 emulators.
+!    Miscpr32 = Resources used by the 3270 emulator.
+!    Miscpr52 = Resources used by the 5250 emulator.
+!    MiscprVT = Resources used by the VT emulator.
+! 4. Resource format: 
+!    - A resource line starts with Miscpref*, Miscpr32*, Miscpr52*,or MiscprVT*, followed by 
+!      a resource name and a ":".  Do NOT make any changes to the text to the left
+!      of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+!*******************************************************************
+!*******   Miscellaneous Preferences Resources           ***********
+!*******************************************************************
+Miscpr52*title:     Diverse indstillinger til 5250
+
+Miscpr32*title:     Diverse indstillinger til 3270
+
+MiscprVT*title:     Diverse indstillinger til VT-emulering
+
+Miscpref*iconName:  Diverse indstillinger
+
+Miscpref*okLabelString: OK
+
+Miscpref*cancelLabelString: Annullér
+
+
+!***********************************************
+!**     Action Bar Area Resources             **
+!***********************************************
+Miscpref*saveButton.labelString: Gem
+
+Miscpref*exitButton.labelString: Afslut
+
+Miscpref*setDefaultsButton.labelString: standardværdier
+
+Miscpref*helpButton.labelString: Hjælp
+
+
+!*********************************************************
+!**     Preference Buttons Area Resources               **
+!**							**
+!*********************************************************
+Miscpref*preferencesListInstructions.labelString: Vælg en indstilling
+
+Miscpref*CursorStyleItem:                         Markørtype
+
+Miscpr52*EnterKeyLocationItem:                    Enter/Field Exit-tasten
+
+Miscpr32*EnterKeyLocationItem:                    Enter-tast
+	
+Miscpr52*AutomaticHelpItem:                       Automatisk hjælp
+
+Miscpr52*BlueUnderscoreItem:                      Blå understregning
+
+Miscpref*RowColumnIndicatorItem:                  Række-/kolonne-indikator
+
+Miscpref*DestructiveBackspaceItem:                Slettende baktast
+
+Miscpref*RuleLineEnableItem:                      Aktivér lineal
+
+Miscpref*RuleLineStyleItem:                       Linealtype
+
+Miscpref*PasteStartLocationItem:                  Startplacering for Klistre
+
+Miscpref*CursorBlinkItem:                         Markørblink
+
+Miscpr52*LargeScreenBehaviorItem:                 Storskærmsattributter
+
+Miscpref*PrintKeyLocationItem:                    Print-tast
+
+Miscpr32*BracketItem:                             Kantet parentes
+
+Miscpr32*AutomaticReconnectItem:                  Opret forbindelse igen automatisk
+
+Miscpref*HotspotsItem:                            Hotspot
+
+Miscpref*TypeAheadItem:                           Tastaturbuffer
+
+Miscpr52*ErrorResetKeys:                          Reset-taster
+
+Miscpref*HotspotHighlight:                        Hotspot-fremhævning
+
+Miscpref*DefaultCopyType:                         Standardkopieringstype
+
+Miscpref*InsertMode:                              Indsættetilstand
+
+Miscpref*InputOnlyCursorMovement:                 Markørbevægelse kun ved input
+
+Miscpref*AudioAlarm:                              Lydalarm
+
+MiscprVT*CursorBlinkItem:           Markørblink
+
+MiscprVT*ApplicationCursor:         Programmarkørtilstand
+
+MiscprVT*ApplicationKeypad:         Programtastgruppetilstand
+
+MiscprVT*AutoLineFeed:              Automatisk linieskift
+
+MiscprVT*AutoResize:                Automatisk tilpasning af størrelse
+
+MiscprVT*AutoWrapAround:            Automatisk tekstomløb
+
+MiscprVT*ClearScreenWithBlanks:     Ryd skærmbillede med blanktegn
+
+MiscprVT*ExitOnDisconnect:          Afslut ved afbrydelse
+
+MiscprVT*JumpScroll:                Blad flere linier frem
+
+MiscprVT*MarginBell:                Marginsignal
+
+MiscprVT*MarginBellColumn:          Marginsignalkolonne
+
+MiscprVT*ReverseWrapAround:         Omvendt tekstomløb
+
+MiscprVT*VisibleStatusLine:         Synlig statuslinie
+
+MiscprVT*VisualBell:                Synligt signal
+	
+!*************************************************************
+!**     Preference Text Area Resources (Explanation Box)    **
+!*************************************************************
+Miscpref*CursorStyleText.value: Tilgængelige markørtyper er understregning og blokmarkør. Markørtypen kan være altid understregning, altid blokmarkør eller en kombination af understregning og blokmarkør afhængigt af, om indsættetilstand er aktiv.
+
+MiscprVT*CursorStyleText.value: Markørtypen kan sættes til altid understregning eller altid blok.
+
+MiscprVT*CursorBlinkText.value: Markørblink kan være aktiveret eller deaktiveret. Hvis markørblink er aktiveret, blinker markøren kun, når vinduet er i fokus.
+
+MiscprVT*ApplicationCursorText.value: Markørtasterne kan være i programtilstand eller markørtilstand. Hvis de er i programtilstand, genereres ANSI escape-koder i stedet for standardmarkørbevægelser, når piltasterne benyttes.
+
+MiscprVT*ApplicationKeypadText.value: Tastgruppetaster kan være i programtilstand eller numerisk tilstand. Hvis de er i programtilstand, genereres kontrolfunktioner i stedet for numeriske tegn, når tastgruppen benyttes.
+
+Miscpr52*EnterKeyLocationText.value: Tasterne til Enter, Ny linie og Field Exit kan ændres i forhold til standarddefinitionerne herunder. Der er flere kombinationer af funktionerne for Enter- og højre Ctrl-tast.
+
+Miscpr32*EnterKeyLocationText.value: Tasterne til Enter og Ny linie kan ændres i forhold til standarddefinitionerne herunder. Der er flere kombinationer af funktionerne for Enter- og højre Ctrl-tast.
+
+Miscpr52*AutomaticHelpText.value: Help-tasten kan automatisk blive aktiveret som følge af en fejl ved tastaturinput. En automatisk Help-tast viser typisk en linie med hjælpetekst på første niveau, som forklarer inputfejlen. Hvis den automatiske Help-tast ikke er aktiveret, vises en inputfejl med fire tal. I dette tilfælde kan brugeren selv trykke på Help-tasten for at få hjælp på første niveau.
+
+Miscpr52*BlueUnderscoreText.value: Standardfarven for understregning kan ændres til blå.
+
+Miscpref*RowColumnIndicatorText.value: Række-/kolonne-indikatoren er den række og kolonne, hvor markøren er placeret, hvilket vises i højre side af statuslinien.  Række-/kolonne-indikatoren kan slås til og fra. Hvis markøren imidlertid ikke vises, vises række-/kolonne-indikatoren heller ikke, uanset hvad der er indstillet.
+
+Miscpref*DestructiveBackspaceText.value: Baktasten kan være slettende eller ikke-slettende. En slettende baktast sletter dataene, efterhånden som markøren flytter baglæns i inputfeltet. En ikke-slettende baktast sletter ikke dataene.
+
+Miscpref*RuleLineEnableText.value: Linealen bruges til at få vist markørens placering eller tidligere placering. Den kan enten være konstant aktiveret eller deaktiveret, eller den kan kontrolleres af linealtasten. Når linealtasten kontrollerer linealen, kan den være stationær eller følge markøren.
+
+Miscpref*RuleLineStyleText.value: Den viste lineal kan have en af tre former: en vandret linie, en lodret linie eller en vandret og en lodret linie, som krydser hinanden.
+
+Miscpref*PasteStartLocationText.value: Klistrefunktionen (Skift+anden museknap trykket ned) kan defineres, så funktionen udføres ved markørens position eller ved positionen for musens pilmarkør. Denne indstilling har ingen indflydelse på Klistrefunktionen på menuen. Klistrefunktionen fra menuen bruger altid markørens placering.
+
+Miscpr52*CursorBlinkText.value: Markørblink kan være aktiveret eller deaktiveret. Når markørblink er aktiveret, er det under programkontrol.  Når det er deaktiveret, blinker markøren aldrig.
+
+Miscpr32*CursorBlinkText.value: Markørblink kan være aktiveret eller deaktiveret. Når markørblink er aktiveret, blinker markøren hele tiden. Når det er deaktiveret, blinker markøren aldrig.
+
+Miscpr52*LargeScreenBehaviorText.value: 5250-emuleringsprogrammet kan konfigureres til automatisk at flytte vinduet og/eller formindske fontstørrelsen, hvis det er nødvendigt, når der skiftes til en storskærmsstørrelse. Dette gøres, når den nye vinduesstørrelse ikke passer til skærmen på den aktuelle position og/eller med fontstørrelsen.
+
+Miscpr52*PrintKeyLocationText.value: Standard for Print-tast er systemets udskrivningsfunktion, mens Skift+Print-tasten bruges til den lokale skærmprintfunktion, medmindre dette er tilsidesat af Omdefinition af taster.  Nogle brugere foretrækker, at Print-tasten skal fungere som skærmprinttast, mens Skift+Print-tasten skal fungere som systemets udskrivningsfunktion.
+
+Miscpr32*PrintKeyLocationText.value: Standard for Print-tast er PA1-funktionen, mens Skift+Print-tasten bruges til den lokale skærmprintfunktion, medmindre dette er tilsidesat af Omdefinition af taster.  Nogle brugere foretrækker, at Print-tasten skal fungere som skærmprinttast, mens Skift+Print-tasten skal fungere som PA1.
+
+Miscpr32*BracketText.value: Aktivering af parentesfunktionen gør det muligt at konvertere kantede parenteser rigtigt.
+
+Miscpr32*AutomaticReconnectText.value: 3270-emuleringsvinduet kan fjernes fra eller forblive på skærmen, når en bruger logger af. Når vinduet forbliver på skærmen, forsøger emuleringsprogrammet automatisk at etablere forbindelsen til værtssystemet.
+
+Miscpref*HotspotsText.value: Hotspot er skærmpositioner, der udfører en funktion, når der klikkes på dem med musen. Med musens pilmarkør på 'PF1' eller 'F1', og hvis hotspot er aktiveret, vil et klik f.eks. blive udført, som om der var trykket på F1. Hotspot kan være deaktiveret, aktiveret ved et enkelt klik på den primære museknap eller være aktiveret ved et dobbelt klik på den primære museknap.
+
+Miscpref*TypeAheadText.value: Tastaturbufferen gemmer tastanslag, der er indtastet, mens tastaturet er låst (input forbudt). Tasterne behandles senere, når tastaturet låses op igen. Aktivering af tastaturbufferen gør, at den altid er aktiv. Deaktivering gør, at den aldrig er aktiv.
+
+Miscpr52*ErrorResetKeysText.value: 5250-emuleringstasterne til reset kan konfigureres herunder. Reset-tasten og klik på venstre musetast på meddelelseslinien nulstiller altid fejl. Endvidere kan brugere vælge at få markørtasterne (tabulatortasten, ny linie-tasten, piltaster og baktasten) og klik på andre musetaster til at nulstille fejl.
+
+Miscpref*HotspotHighlightText.value: Emuleringsprogrammet kan konfigureres til at fremhæve hotspot. Når hotspot er aktiveret, og fremhævning af hotspot også er aktiv, fremhæves alle hotspot på skærmen.
+
+Miscpref*DefaultCopyTypeText.value: Standardkopieringstypen er den type kopieringsområde, der er forbundet med en enkelt tryk og træk-funktion med museknap 1. Det er også den kopieringstype, der er forbundet med markering af et kopieringsområde vha. tastasturet.
+
+Miscpr52*InsertModeText.value: Indsættetilstand er som standard deaktiveret. Den genindstilles vha. Insert-tasten og nogle gange også automatisk af programmerne og med Reset-tasten. Den automatiske genindstilling af indsættetilstanden kan deaktiveres. Det gøres ved at sætte standardværdien til aktiveret eller deaktiveret.
+
+Miscpr32*InsertModeText.value: Indsættetilstand er som standard deaktiveret. Den genindstilles med Insert-tasten og også automatisk via interaktion med programmer ligesom Enter-tasten. Den kan også nogle gange genindstilles med Reset-tasten. Den automatiske genindstilling af indsættetilstanden kan deaktiveres. Det gøres ved at sætte standardværdien til aktiveret eller deaktiveret.
+
+Miscpref*InputOnlyCursorMovementText.value: Piltasterne kan konfigureres, så de kun kan flyttes til positioner, hvor der kan indtastes input. Så vil piltasterne altid flytte markøren til en position, hvor der kan indtastes input. Hvis en sådan position ikke findes, flytter markøren til den første skærmposition.
+
+Miscpref*AudioAlarmText.value: Lydalarmen kan være aktiveret eller deaktiveret. Hvis lydalarmen er deaktiveret, høres den aldrig.
+
+MiscprVT*AutoLineFeedText.value: Automatisk linieskift kan være aktiveret eller deaktiveret. Når automatisk linieskift er aktiveret, udføres retur i samme linie og linieskift, når programmet sender et tegn for linieskift, lodret tabulering eller sideskift. Desuden sender de taster, der laver en ny linie, f.eks. Enter-tasten, en retur i samme linie og et linieskift til programmet. Hvis funktionen er deaktiveret, udføres kun et linieskift, når der modtages et linieskift, en lodret tabulering eller et sideskift. Hvis funktionen er deaktiveret, og der trykkes på Enter, sendes kun et linieskift til programmet.
+
+MiscprVT*AutoResizeText.value: Automatisk tilpasning af størrelse kan være aktiveret eller deaktiveret.
+
+MiscprVT*AutoWrapAroundText.value: Automatisk tekstomløb kan være aktiveret eller deaktiveret. Hvis funktionen er aktiveret, vises det tegn, som indtastes, efter markøren når skærmbilledets kant, automatisk på næste linie. Hvis automatisk tekstomløb er deaktiveret, erstatter det tegn, der indtastes, efter markøren har nået skærmbilledets kant, tegnet i slutningen af linien.
+
+MiscprVT*ClearScreenWithBlanksText.value: Skærmbilledet kan ryddes med blanktegn.
+
+MiscprVT*ExitOnDisconnectText.value: Terminalen kan konfigureres, så den afsluttes, når forbindelsen til værtssystemet afbrydes.
+
+MiscprVT*JumpScrollText.value: Terminalen kan konfigureres, så der blades flere linier frem. Skærmbilledet flytter så flere linier frem ad gangen. Det giver hurtigere opdatering af skærmbilleder, når der sendes flere tekstlinier til terminalen. Det maksimale antal linier, der kan blades frem, er begrænset til antallet af linier i VT-emuleringsvinduet.
+
+MiscprVT*MarginBellText.value: Terminalen kan konfigureres, så der lyder et signal, når brugeren skriver ud over den højre margin.
+
+MiscprVT*MarginBellColumnText.value: Angiv kolonnen for marginsignalet.
+
+MiscprVT*ReverseWrapAroundText.value: Omvendt tekstomløb kan være aktiveret eller deaktiveret. Med omvendt tekstomløb flytter markøren fra den første position i linien til den sidste kolonne i den forrige linie, sådan at brugeren kan rykke tilbage til den forrige linie. Automatisk tekstomløb skal være aktiveret, for at omvendt tekstomløb virker.
+
+MiscprVT*VisibleStatusLineText.value: Statuslinien kan være synlig eller ikke-synlig. Hvis du vælger, at statuslinien skal være synlig, vises linie nr. 25 nederst i VT-emuleringsvinduet. Her kan programmet vise statusoplysninger.  Hvis programmet ikke anvender linien, vises en markørindikator for rækker og kolonner.
+
+MiscprVT*VisualBellText.value: Du kan vælge et visuelt signal (skærmblink) i stedet for et lydsignal.
+
+!*************************************************************
+!**     Preference Text Area Resources (Options area)       **
+!**							    **
+!*************************************************************
+
+Miscpref*PreferenceTextFormForCursorStyle*ToggleButton1.labelString:  Understregningsmarkør
+
+Miscpref*PreferenceTextFormForCursorStyle*ToggleButton2.labelString: Blokmarkør
+
+Miscpref*PreferenceTextFormForCursorStyle*ToggleButton3.labelString: Blokmarkør i indsættetilstand. Understregningsmarkør i erstattetilstand
+
+Miscpref*PreferenceTextFormForCursorStyle*ToggleButton4.labelString:  Understregningsmarkør i indsættetilstand. Blokmarkør i erstattetilstand
+
+Miscpref*PreferenceTextFormForEnterKeyLocation*ToggleButton1.labelString: Brug standarddefinitioner for Enter og højre Ctrl-tast
+
+Miscpref*PreferenceTextFormForEnterKeyLocation*ToggleButton2.labelString: Enter = Enter, højre Ctrl-tast = Ny linie
+
+Miscpref*PreferenceTextFormForEnterKeyLocation*ToggleButton3.labelString: Enter = Ny linie, højre Ctrl-tast = Enter
+
+Miscpr52*PreferenceTextFormForEnterKeyLocation*ToggleButton4.labelString: Enter = Enter, højre Ctrl-tast = Field Exit/Ny linie
+
+Miscpr52*PreferenceTextFormForEnterKeyLocation*ToggleButton5.labelString: Enter = Field Exit/Ny linie, højre Ctrl-tast = Enter
+
+Miscpr52*PreferenceTextFormForAutomaticHelp*ToggleButton1.labelString: Aktivér automatisk Help-tast i forbindelse med brugerfejl
+
+Miscpr52*PreferenceTextFormForAutomaticHelp*ToggleButton2.labelString:  Deaktivér automatisk Help-tast i forbindelse med brugerfejl
+
+Miscpr52*PreferenceTextFormForBlueUnderscore*ToggleButton1.labelString: Aktivér blå understregning
+
+Miscpr52*PreferenceTextFormForBlueUnderscore*ToggleButton2.labelString:  Deaktivér blå understregning
+
+Miscpref*PreferenceTextFormForRowColumnIndicator*ToggleButton1.labelString: Vis række-/kolonne-indikator
+
+Miscpref*PreferenceTextFormForRowColumnIndicator*ToggleButton2.labelString: Vis ikke række-/kolonne-indikator
+
+Miscpref*PreferenceTextFormForDestructiveBackspace*ToggleButton1.labelString:  Aktivér slettende baktast
+
+Miscpref*PreferenceTextFormForDestructiveBackspace*ToggleButton2.labelString:  Deaktivér slettende baktast
+
+Miscpref*PreferenceTextFormForRuleLineEnable*ToggleButton1.labelString:  Deaktivér lineal
+
+Miscpref*PreferenceTextFormForRuleLineEnable*ToggleButton2.labelString: Vis altid lineal på markørposition
+
+Miscpref*PreferenceTextFormForRuleLineEnable*ToggleButton3.labelString: Aktivér lineal (følg ikke markør)
+
+Miscpref*PreferenceTextFormForRuleLineEnable*ToggleButton4.labelString: Aktivér lineal (følg markør)
+
+Miscpref*PreferenceTextFormForRuleLineStyle*ToggleButton1.labelString: Både vandret og lodret lineal
+
+Miscpref*PreferenceTextFormForRuleLineStyle*ToggleButton2.labelString: Kun vandret lineal
+
+Miscpref*PreferenceTextFormForRuleLineStyle*ToggleButton3.labelString: Kun lodret lineal
+
+Miscpref*PreferenceTextFormForPasteStartLocation*ToggleButton1.labelString:  Klistre på markørposition
+
+Miscpref*PreferenceTextFormForPasteStartLocation*ToggleButton2.labelString:  Klistre på musens pilmarkørs position
+
+Miscpref*PreferenceTextFormForCursorBlink*ToggleButton1.labelString: Deaktivér markørblink
+
+Miscpref*PreferenceTextFormForCursorBlink*ToggleButton2.labelString: Aktivér markørblink
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton1.labelString:  Flyt ikke vinduet, og formindsk ikke fontstørrelsen
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton2.labelString:  Flyt vinduet, og hvis nødvendigt, formindsk fontstørrelsen
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton3.labelString:  Formindsk kun fontstørrelsen
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton4.labelString:  Anvend/husk stor skærmfont
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton5.labelString:  Formindsk fontstørrelsen, og hvis nødvendigt, flyt vinduet
+
+Miscpr52*PreferenceTextFormForPrintKeyLocation*ToggleButton1.labelString: Brug standarddefinitionerne for Print-tasten
+
+Miscpr52*PreferenceTextFormForPrintKeyLocation*ToggleButton2.labelString: Print = systemprint, Skift+Print = lokalt print
+
+Miscpr52*PreferenceTextFormForPrintKeyLocation*ToggleButton3.labelString: Print = lokalt print, Skift+Print = systemprint
+
+Miscpr32*PreferenceTextFormForPrintKeyLocation*ToggleButton1.labelString: Brug standarddefinitionerne for Print-tasten
+
+Miscpr32*PreferenceTextFormForPrintKeyLocation*ToggleButton2.labelString: Print = PA1, Skift+Print = lokalt print
+
+Miscpr32*PreferenceTextFormForPrintKeyLocation*ToggleButton3.labelString: Print = lokalt print, Skift+Print = PA1
+
+Miscpr32*PreferenceTextFormForBracket*ToggleButton1.labelString: Deaktivér konvertering af kantede parenteser
+
+Miscpr32*PreferenceTextFormForBracket*ToggleButton2.labelString: Aktivér konvertering af kantede parenteser
+
+Miscpr32*PreferenceTextFormForAutomaticReconnect*ToggleButton1.labelString:  Vinduet fjernes, når der logges af
+
+Miscpr32*PreferenceTextFormForAutomaticReconnect*ToggleButton2.labelString:  Vinduet fjernes ikke, når der logges af
+
+Miscpref*PreferenceTextFormForHotspots*ToggleButton1.labelString: Deaktivér hotspot
+
+Miscpref*PreferenceTextFormForHotspots*ToggleButton2.labelString: Aktivér hotspot ved et enkelt tryk på primær knap
+
+Miscpref*PreferenceTextFormForHotspots*ToggleButton3.labelString: Aktivér hotspot ved dobbelt tryk på primær knap
+
+Miscpref*PreferenceTextFormForTypeAhead*ToggleButton1.labelString: Deaktivér tastaturbuffer
+
+Miscpref*PreferenceTextFormForTypeAhead*ToggleButton2.labelString: Aktivér tastaturbuffer
+
+Miscpr52*PreferenceTextFormForTypeAhead*ToggleButton3.labelString: Brug AS/400-indstillingerne
+
+Miscpr52*PreferenceTextFormForErrorResetKeys*ToggleButton1.labelString: Kun Reset-tast eller venstre musetast på meddelelseslinien
+
+Miscpr52*PreferenceTextFormForErrorResetKeys*ToggleButton2.labelString:  Også markørtaster og alle museknapper
+
+Miscpr52*PreferenceTextFormForErrorResetKeys*ToggleButton3.labelString: De fleste taster og alle museknapper
+
+Miscpref*PreferenceTextFormForHotspotHighlight*ToggleButton1.labelString:  Deaktivér fremhævning af hotspot
+
+Miscpref*PreferenceTextFormForHotspotHighlight*ToggleButton2.labelString:  Aktivér fremhævning af hotspot
+
+Miscpref*PreferenceTextFormForDefaultCopyType*ToggleButton1.labelString: Lineær kopi
+
+Miscpref*PreferenceTextFormForDefaultCopyType*ToggleButton2.labelString:  Blokkopi
+
+Miscpref*PreferenceTextFormForInsertMode*ToggleButton1.labelString:  Indsættetilstand deaktiveret med automatisk reset aktiveret.
+
+Miscpref*PreferenceTextFormForInsertMode*ToggleButton2.labelString:  Indsættetilstand deaktiveret med automatisk reset deaktiveret.
+
+Miscpref*PreferenceTextFormForInsertMode*ToggleButton3.labelString:  Indsættetilstand aktiveret med automatisk reset deaktiveret.
+
+Miscpref*PreferenceTextFormForInputOnlyCursorMovement*ToggleButton1.labelString:  Deaktivér Markørbevægelse kun ved input
+
+Miscpref*PreferenceTextFormForInputOnlyCursorMovement*ToggleButton2.labelString:  Aktivér Markørbevægelse kun ved input
+
+Miscpref*PreferenceTextFormForAudioAlarm*ToggleButton1.labelString: Deaktivér lydalarm
+
+Miscpref*PreferenceTextFormForAudioAlarm*ToggleButton2.labelString: Aktivér lydalarm
+
+MiscprVT*PreferenceTextFormForCursorBlink*ToggleButton1.labelString: Deaktivér markørblink
+
+MiscprVT*PreferenceTextFormForCursorBlink*ToggleButton2.labelString: Aktivér markørblink
+
+MiscprVT*PreferenceTextFormForApplicationCursor*ToggleButton1.labelString:  Deaktivér programmarkørtilstand
+
+MiscprVT*PreferenceTextFormForApplicationCursor*ToggleButton2.labelString:  Aktivér programmarkørtilstand
+
+MiscprVT*PreferenceTextFormForApplicationKeypad*ToggleButton1.labelString:  Deaktivér programtastgruppetilstand
+
+MiscprVT*PreferenceTextFormForApplicationKeypad*ToggleButton2.labelString:  Aktivér programtastgruppetilstand
+
+MiscprVT*PreferenceTextFormForAutoLineFeed*ToggleButton1.labelString: Deaktivér automatisk linieskift
+
+MiscprVT*PreferenceTextFormForAutoLineFeed*ToggleButton2.labelString: Aktivér automatisk linieskift
+
+MiscprVT*PreferenceTextFormForAutoResize*ToggleButton1.labelString: Deaktivér automatisk tilpasning af størrelse
+
+MiscprVT*PreferenceTextFormForAutoResize*ToggleButton2.labelString: Aktivér automatisk tilpasning af størrelse
+
+MiscprVT*PreferenceTextFormForAutoWrapAround*ToggleButton1.labelString:  Deaktivér automatisk tekstomløb
+
+MiscprVT*PreferenceTextFormForAutoWrapAround*ToggleButton2.labelString: Aktivér automatisk tekstomløb
+
+MiscprVT*PreferenceTextFormForClearScreenWithBlanks*ToggleButton1.labelString:  Deaktivér rydning af skærmbillede med blanktegn
+
+MiscprVT*PreferenceTextFormForClearScreenWithBlanks*ToggleButton2.labelString:  Aktivér rydning af skærmbillede med blanktegn
+
+MiscprVT*PreferenceTextFormForExitOnDisconnect*ToggleButton1.labelString:  Deaktivér afslutning ved afbrydelse
+
+MiscprVT*PreferenceTextFormForExitOnDisconnect*ToggleButton2.labelString:  Aktivér afslutning ved afbrydelse
+
+MiscprVT*PreferenceTextFormForJumpScroll*ToggleButton1.labelString: Deaktivér Blad flere linier frem
+
+MiscprVT*PreferenceTextFormForJumpScroll*ToggleButton2.labelString: Aktivér Blad flere linier frem
+
+MiscprVT*PreferenceTextFormForMarginBell*ToggleButton1.labelString: Deaktivér marginsignal
+
+MiscprVT*PreferenceTextFormForMarginBell*ToggleButton2.labelString: Aktivér marginsignal
+
+MiscprVT*PreferenceTextFormForMarginBellColumn*textFieldLabel.labelString:  Kolonner fra slutningen af rækken
+
+MiscprVT*PreferenceTextFormForReverseWrapAround*ToggleButton1.labelString:  Deaktivér omvendt tekstomløb
+
+MiscprVT*PreferenceTextFormForReverseWrapAround*ToggleButton2.labelString:  Aktivér omvendt tekstomløb
+
+MiscprVT*PreferenceTextFormForVisibleStatusLine*ToggleButton1.labelString:  Deaktivér statuslinien
+
+MiscprVT*PreferenceTextFormForVisibleStatusLine*ToggleButton2.labelString:  Aktivér statuslinien
+
+MiscprVT*PreferenceTextFormForVisualBell*ToggleButton1.labelString: Deaktivér synligt signal
+
+MiscprVT*PreferenceTextFormForVisualBell*ToggleButton2.labelString: Aktivér synligt signal
+
+
+
+!**************************************
+!**   Messages at bottom of window   **
+!**************************************
+
+Miscpr52*MiscprefMsgHelpRequested:     Der er valgt hjælp fra 5250-session.
+
+Miscpr32*MiscprefMsgHelpRequested:     Der er valgt hjælp fra 3270-session.
+
+MiscprVT*MiscprefMsgHelpRequested:     Der er valgt hjælp fra VT-emuleringssession.
+
+Miscpref*MiscprefMsgPreferenceApplied: Indstilling er midlertidigt aktiveret.
+
+Miscpref*MiscprefMsgPreferencesSaved:  Indstillinger er gemt.
+
+Miscpref*MiscprefMsgDefaultsApplied:   Standardindstillinger er midlertidigt aktiveret.
+
+Miscpref*MiscprefMsgDefaultsNotSet:    Der er ikke angivet standardindstillinger.
+
+Miscpref*MiscprefMsgNoAccess:          Kan ikke få adgang til bibliotek.
+
+
+Miscpref*MiscprefMsgNoMake:            Kan ikke oprette bibliotek.
+
+Miscpref*MiscprefMsgFileOpenError:     Kan ikke gemme, fordi fil ikke kan åbnes.
+
+Miscpref*MiscprefMsgFileWriteError:    Kan ikke gemme, fordi der ikke kan skrives til fil.
+
+
+
+!********************************
+!**  Dialog Box Resources      **
+!********************************
+Miscpref*exitDialog.dialogTitle:              Afslut advarsel
+
+Miscpref*exitDialog.okLabelString:            Gem
+
+Miscpref*exitDialog.cancelLabelString:        Gem ikke
+
+! this cannot be much longer
+Miscpref*exitDialog.messageString:            Der er ændringer til diverse indstillinger, som ikke er gemt.
+
+Miscpref*setDefaultsDialog.dialogTitle:       Advarsel ved angivelse af standardværdier
+
+Miscpref*setDefaultsDialog.okLabelString:     Ja
+
+Miscpref*setDefaultsDialog.cancelLabelString: Nej
+
+! this cannot be much longer
+Miscpref*setDefaultsDialog.messageString:     Vil du bruge standardværdierne til alle indstillinger?
+/*******************************************************************************
+**  saveDialog resource
+*******************************************************************************/
+MiscprVT*saveDialog.dialogTitle: Lagringsmuligheder
+
+MiscprVT*saveDialog*saveDialogTitle.labelString: Angiv et valg for at gemme.
+
+MiscprVT*saveDialog*saveChangedOnly.labelString: Gem kun ændrede indstillinger
+
+MiscprVT*saveDialog*saveAll.labelString: Gem alle indstillinger
+
+MiscprVT*saveDialog*saveButton.labelString: Gem
+
+MiscprVT*saveDialog*cancelButton.labelString: Annullér
+

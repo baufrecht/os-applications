@@ -1,0 +1,346 @@
+//// ENGLISH_SOURCE_VERSION= 1.1 
+////This file contains the keyboard remapping program on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file is stored in locale specific ASCII (code page 819 for Latin1 languages). This help text is stored on the booting server as N3_5KeyH.
+
+////Help text format (this section is not displayed to IBM emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1. Do not translated (or change) anything in a comment line.
+//// 3. This help file contains help text for the 3270, and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator. A comment line of four "/" characters followed by:
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+////  3B. "5250" indicates subsequent data is only displayed in 5250 on-line help.
+////  3C. "9999" indicates subsequent data is displayed in 3270, and 5250 on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+////  3G. Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters.  The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Do not change the order of topics in this help text file.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+----Help bij "3270-toetsenbordindeling -"
+++++"Algemene informatie"
+Zie voor informatie over het gebruik van deze Help-informatie het eerste onderwerp van de Help-informatie van de Hoofdemulator (kies de optie "Help" op de menubalk in het emulatiescherm). 
+
+In deze Help-informatie leest u hoe u het toetsenbordprogramma kunt gebruiken voor het aanpassen van de toetsfuncties binnen uw emulatiesessies.
+
+Opmerking: Er kan slechts één toetsenbordprogramma per sessie actief zijn.
+
+++++"Bestand selecteren voor toetsenbordindeling"
+Bij het begin van elke 3270-sessie zoekt de 3270-emulator naar een toetsenbordbestand voor de sessie. Het type toetsenbord moet overeenkomen; er wordt één toetsenbordbestand per type toetsenbord gebruikt (bijvoorbeeld een PC-toetsenbord met 102 toetsen). Als er een toetsenbordbestand wordt gevonden, wordt het voor gebruikt voor de 3270-sessie. Er wordt achtereenvolgens: 
+
+- gezocht naar een toetsenbordbestand met de naam -KEYFILE. 
+
+- gezocht naar een voor de sessie specifiek toetsenbordbestand dat u hebt gemaakt met het toetsenbordprogramma.
+
+- gezocht naar een standaard toetsenbordbestand dat u hebt gemaakt met het toetsenbordprogramma.
+
+- gebruik gemaakt van de ingebouwde toetsenbordfuncties voor deze 3270-sessie, als geen van bovenstaande mogelijkheden aanwezig is.
+
+
+////5250
+++++"Enter-/Verlaat Veld-toets"
+In Diverse voorkeuren kunt u de locatie van de Enter- en de Verlaat Veld-toets wijzigen. Als u aan de Enter-toets of de rechter Control-toets een andere functie wilt toewijzen, moet u eerst nagaan of de gewenste functie beschikbaar is in Diverse voorkeuren. Dit doet u door in de emulator te klikken op Opties in de menubalk van Diverse voorkeuren. 
+
+Alle wijzigingen van de toetsenbordindeling die u maakt voor de Enter-toets en de rechter Control-toets worden vervangen door de waarden in "Diverse voorkeuren", indien voor de optie Enter-/Verlaat Veld-toets niet de standaardinstelling is gekozen. 
+
+Als de gewenste functie niet beschikbaar is in Diverse voorkeuren, stelt u eerst de optie Enter-/Verlaat Veld-toets in op de standaardwaarde en geeft u daarna de gewenste functie op met behulp van het toetsenbordprogramma.
+
+Opmerking: In Diverse voorkeuren kan ook de locatie van de afdrukfunctie worden gewijzigd. Functies die al eerder met het toetsenbordprogramma zijn toegewezen aan de Schermafdruktoets worden hierdoor vervangen.
+
+
+////3270
+++++"Enter-toets"
+Met Diverse voorkeuren en Configuratie IBM 3270-emulator kan de plaats van de Enter-functie worden gewijzigd. Als u aan de Enter-toets of de rechter Control-toets een andere functie wilt toewijzen, moet u eerst nagaan of de gewenste functie beschikbaar is in Diverse Voorkeuren of in het programma Configuratie IBM 3270-emulator. 
+
+De plaats van de Enter-functie in Diverse Voorkeuren is bepalend. Daarna wordt de instelling voor de Enter-functie in het programma Configuratie IBM 3270-emulator gebruikt. 
+Als de instelling voor de Enter-functie in Diverse Voorkeuren en in Configuratie IBM 3270-emulator is ingesteld op de standaardwaarde, kan de functie van de Enter-toets en de rechter Ctrl-toets met behulp van de toetsenbordindeling worden gewijzigd. 
+
+Opmerking: In Diverse voorkeuren kan de locatie van de toets voor de functie Lokaal afdrukken worden gewijzigd. Deze instelling vervangt alle andere functies die zijn ingesteld voor de Schermafdruktoets.
+
+////9999
+++++"Vensterindeling"
+Bovenin het venster Toetsindeling wijzigen bevindt zich een grafische weergave van de toetsenbordindeling, links bevindt zich een venster met toetsfuncties, rechts een toets/actieveld en onderin bevindt zich een knoppenbalk en balk voor berichten.
+
+In het afgebeelde toetsenbord wordt de fysieke indeling van het actuele toetsenbord afgebeeld. Door op een toets te klikken worden de functies die aan die toets zijn toegewezen afgebeeld in het deelvenster Toets/actie. 
+
+
+In het deelvenster met toetsdefinities vindt u de volgende items:
+
+
+1) De "Lijst van beschikbare acties" met de beschikbare acties. De actie die u hier selecteert wordt de actieve actie. 
+
+2) De "Lijst van tekens" bevat alle beschikbare tekens. Het geselecteerde teken wordt de huidige actie. Om een teken te selecteren, klikt u erop.
+
+3) De knop "Help bij acties" biedt definities van toetsenbordacties in een Help-venster. U kunt de actiedefinities afdrukken.
+
+////5250
+4) De knop "Ongedefinieerd" waarmee de huidige functie wordt ingesteld op "GeenFunctie". Bij een toetsaanslag met de "niets"-functie gebeurt er helemaal niets.
+////3270
+4) De knop "Ongedefinieerd" waarmee de huidige functie wordt ingesteld op "GeenFunctie". Een dergelijke toets heeft hetzelfde resultaat als wanneer u geen toets indrukt.
+////9999
+
+5) De knop "Zoeken" waarmee alle toetsen kunnen worden gevonden die zijn toegewezen aan de geaccentueerde actie in de lijst met beschikbare acties.
+Gevonden toetsen worden geaccentueerd weergegeven op het grafische toetsenbord en de eerste toets wordt de huidige toets in het toets/actieveld.
+
+Opmerking: Maar één actie kan de huidige actie zijn. 
+
+
+Het veld Toets/actie bevat de volgende items:
+
+1) De "Huidige toets" waar de te wijzigen toets wordt afgebeeld. De "Huidige toets" wordt afgebeeld boven in het veld Toets/actie of in het toetsdefinitieveld (afhankelijk van het type toetsenbord). Er kan slechts een toets tegelijk worden gewijzigd.
+
+2) De "combinatietoets"-knoppen die de combinaties met bijvoorbeeld de Alt- en Shift-toetsen weergeven die zijn ingesteld door het toetsenbordprogramma. Combinatietoetsknoppen beginnen met "-> ". Als u op de knop van een combinatietoets klikt, wordt de actie in het toetsdefinitieveld vervangen door de actieve actie (uit de lijst met beschikbare acties, de tekenlijst of Ongedefinieerd). 
+
+3) Het toetsdefinitieveld bevindt zich rechts van elke knop voor een combinatietoets. Hierin wordt de actie beschreven die voor deze combinatietoets is toegewezen aan de huidige toets. U kunt de tekst in dit veld bewerken (zie "Toetsdefinitieveld bewerken").
+
+4) De knop "OK" waarmee u de wijzigingen voor de huidige toets vastlegt.
+
+5) De knop "Annuleren" waarmee u aangebrachte wijzigingen kunt annuleren. 
+
+
+De knoppen van de actiebalk bieden de volgende functies: 
+
+1) "Opslaan" van wijzigingen van de toetsenbordindeling in een toetsenbordbestand.
+
+2) "Wissen" van toetsenbordbestanden die eerder zijn gemaakt.
+
+3) "Wijzigingen aanbrengen voor sessie" waarin het toetsenbordprogramma is gestart. Hiermee kunt u wijzigingen testen voordat u deze opslaat in een toetsenbordbestand.
+
+4) "Herstellen" (ongedaan maken) van wijzigingen die zijn gemaakt sinds de laatste keer dat "Toepassen" is gekozen of sinds het toetsenbordprogramma is gestart.
+
+5) "Afsluiten" van het toetsenbordprogramma.
+
+6) "Afdrukken" van toets/combinatietoets met de bijbehorende acties.
+
+7) "Help" voor het oproepen van Help-informatie.
+
+Berichtengebied:
+Voor het afbeelden van status- en foutberichten.
+
+++++"Aan de slag"
+U kunt de toetsenbordindeling als volgt wijzigen:
+
+
+1) Start het toetsenbordprogramma in de emulatiesessie waarin u de wijzigingen wilt aanbrengen.
+
+2) Klik op het grafische toetsenbord op de toets die u wilt wijzigen.
+
+3) Het veld Toets/actie is nu actief en de geselecteerde toets is de actieve toets. De functies die zijn toegewezen aan de verschillende combinatietoetsen verschijnen in de toetsdefinitievelden.
+
+4) Kies een functie die aan de huidige toets moet worden toegewezen uit de Lijst van beschikbare acties of de tekenlijst, of kies Ongedefinieerd. (Opmerking: In het onderwerp Eenvoudige toetsenbordmacro's wordt uitgelegd hoe u een toetsenbordmacro maakt. 
+
+5) Klik op de knop van de combinatietoets waaraan de actie moet worden toegewezen. De gewenste actie wordt afgebeeld in het definitieveld bij de combinatietoets. Als de actie voor meer dan een combinatietoets gewenst is voor deze toets, klik dan op de gewenste combinatietoetsen. U kunt de acties in het toetsdefinitieveld bewerken; meer informatie hierover vindt u bij "Toetsdefinitieveld bewerken".
+
+6) Als u op "OK" klikt, worden de wijzigingen voor de toets vastgelegd; drukt u op "Annuleren", dan worden de oorspronkelijke instellingen hersteld.
+
+7) Klik op "Wijzigingen aanbrengen voor sessie".
+
+8) Test de wijzigingen van de toetsenbordindeling in de emulatiesessie; sluit het toetsenbordprogramma nog niet af.
+
+9) In het toetsenbordprogramma kunt u doorgaan met het aanbrengen of indien nodig ongedaan maken van wijzigingen.
+
+10) Nadat u alle wijzigingen in de toetsenbordindeling hebt toegepast en getest, kunt u deze opslaan.
+
+11) Sluit het toetsenbordprogramma af.
+
+++++"Toetsdefinitieveld bewerken"
+Het toetsdefinitieveld bevindt zich rechts van elke knop voor een combinatietoets. Hierin wordt de actie beschreven die voor deze combinatietoets is toegewezen aan de huidige toets. U kunt de acties in de toetsdefinitievelden wijzigen. Klik op het gewenste definitieveld en gebruik het toetsenbord om uw wijzigingen aan te brengen. Klik vervolgens op "OK" om de wijzigingen te accepteren.
+
+Houd er rekening mee dat de tekst van een gewijzigde actie correct gespeld moet zijn en hoofdlettergevoelig is. Als u meer dan één actie wilt definiëren, moet u de definities scheiden door een enkele spatie.
+
+Als de tekst van de definitie een fout bevat, verschijnt er een waarschuwingsvenster waarin de betreffende definitie geaccentueerd wordt weergegeven.
+
+U maakt een toetsdefinitieveld actief door erop de klikken. Als u op een combinatietoets klikt terwijl een toetsdefinitieveld actief is, wordt de huidige actie op de plaats van de cursor ingevoegd in het toetsdefinitieveld. 
+Als u op een combinatietoets klikt terwijl het toetsdefinitieveld niet actief is, vervangt de huidige actie de voorgaande actie of acties. 
+
+//// Note: The translation of String() and Play() below should match the translated resource text for AllShare*string() and Keyxxx52*play() in the keyboard remapping resource file.
+De Ctrl-toets en de toetsencombinatie Alt + de cijfers 0 tot en met 9 op het numerieke toetsenblok ondersteunen geen tekst tussen haakjes in het toetsdefinitieveld. Reeks() en Afspelen() ondersteunen geen tekst voor deze toetsencombinaties. 
+
+++++"Wijzigingen toetsenbordindeling aanbrengen"
+Met de knop Wijzigingen aanbrengen voor sessie kunt u de wijzigingen in de toetsenbordindeling die u hebt aangebracht tijdelijk toepassen op de emulatiesessie waarin het toetsenbordprogramma was gestart. U kunt dan uw wijzigingen testen. Informatie over het opslaan van gemaakte wijzigingen voor later gebruik kunt u vinden bij "Wijzigingen toetsenbordindeling opslaan".
+
+++++"Wijzigingen toetsenbordbestanden opslaan"
+Met de knop Opslaan kunt u de wijzigingen in de toetsenbordindeling opslaan voor later gebruik. Opslaan van de wijzigingen gebeurt in een toetsenbordbestand. U kunt zelf kiezen hoe uw wijzigingen worden opgeslagen: als standaard toetsenbordbestand dat voor al uw sessies wordt gebruikt of als specifiek toetsenbordbestand dat alleen gebruikt wordt in de sessie waarin het toetsenbordprogramma is gestart.
+
+Met toetsenbordbestanden die specifiek zijn voor bepaalde sessies, kunt u verschillende toetsenbordindelingen definiëren voor verschillende 3270-sessies. Een toetsenbordbestand voor een bepaalde sessie heeft de hoogste prioriteit en wordt gebruikt voor de sessie waarin het toetsenbordbestand is gemaakt (met gebruikmaking van het 3270-sessienummer en de sessienaam).
+
+
+Een standaard toetsenbordbestand heeft de op een na hoogste prioriteit en wordt gebruikt voor alle sessies zonder eigen toetsenbordbestand. 
+
+Meer informatie over het wissen van toetsenbordbestanden vindt u bij "Toetsenbordbestanden wissen".
+
+++++"Toetsenbordbestanden wissen"
+Met de knop "Wissen" op de actiebalk kunt u gemaakte toetsenbordbestanden wissen. Selecteer alle toetsenbordbestanden die u wilt wissen en kies vervolgens de knop Wissen.
+
+++++"Toetsenbordindeling herstellen"
+Als u wijzigingen hebt aangebracht in een toetsenbordindeling en u wilt deze ongedaan maken, dan kunt u de toetsenbordindeling weer terugzetten tot:
+
+1) De oorspronkelijke toetsenbordindeling zoals die bestond bij het starten van het toetsenbordprogramma.
+
+2) De indeling die bestond na de laatste keer dat u tijdens deze sessie wijzigingen hebt aangebracht met de knop Wijzigingen aanbrengen in de actiebalk. 
+
+De knop Herstellen zorgt er niet voor dat herstelde toetsenbordindelingen worden opgeslagen of toegepast, maar maakt slechts de wijzigingen ongedaan die zijn aangebracht met het toetsenbordprogramma.
+
+Als u de functies van een standaard toetsenbordindeling wilt herstellen, wist u het toetsenbordbestand dat specifiek is voor de sessie en start u de sessie opnieuw.
+
+++++"Eenvoudige toetsenbordmacro's"
+Een toetsenbordmacro is een toetsenreeks die u gemakkelijk in uw emulatiesessie kunt instellen. Eenvoudige toetsenbordmacro's kunnen worden gemaakt met behulp van het toetsenbordprogramma.
+Lange of ingewikkelde toetsenbordreeksen maakt u met de functies Opnemen en Afspelen. Meer informatie hierover kunt u vinden bij de diverse onderwerpen over Opnemen en Afspelen in de Help-informatie bij de Hoofdemulator. 
+
+U maakt als volgt een eenvoudige toetsenbordmacro: 
+
+1) Klik op de toets op het grafische toetsenbord waarmee de toetsenbordmacro wordt uitgevoerd. 
+
+//// Note: The translation of String() below should match the translated resource text for AllShare*string() in the keyboard remapping resource file.
+2) Blader naar de actie Reeks() in de Lijst van beschikbare acties en klik op Reeks().
+
+3) Klik op de gewenste combinatietoets voor de toets die u hebt geselecteerd. 
+
+4) Klik in het veld Toets/actie tussen de haakjes van Reeks (). 
+
+5) Typ aanhalingstekens, de gegevens voor de toetsenbordmacro en aanhalingstekens, bijvoorbeeld Reeks ("uw gegevens").
+
+6) Klik op OK als u de wijzigingen accepteert. 
+
+7) Klik op Wijzigingen aanbrengen voor sessie. 
+
+8) Test de toetsenbordmacro; druk op de toetsenreeks in de emulatiesessie. U kunt de toetsenbordmacro wijzigen als u dat wilt. Klik op Opslaan.
+
+Opmerking: Meerdere acties kunnen aan dezelfde toets worden toegewezen. Om dit te bewerkstelligen klikt u op het gewenste toetsdefinitieveld en typt u de gewenste acties. U kunt ook eerst op het toetsdefinitieveld klikken en vervolgens op de knoppen van de combinatietoetsen voor het invoegen van de reeks acties uit de lijsten met beschikbare acties en tekens. Als u meer dan één actie wilt definiëren, moet u de definities scheiden door een enkele spatie.
+
+Als u een macro wilt maken met combinaties van meer dan een combinatietoets, die niet beschikbaar zijn in het veld Toets/actie, kunt u de functie Uitgebreide toetsenbordindeling gebruiken (zie Uitgebreide toetsenbordindeling).
+
+++++"Afspeelbestanden"
+U kunt een afspeelbestand in een toetsenreeks plaatsen. Neem een afspeelbestand op met de functie Opnemen (zie de Help-tekst in de Hoofdemulator onder Opnemen voor meer informatie). 
+
+////Note: The translation of Play() below should match the translated resource text for Keyxxx52*play() in the keyboard remapping resource file.
+Selecteer vervolgens in de toetsenbordindeling de toets waarmee het afspeelbestand wordt gestart. Wijs de functie Afspelen() toe aan de toetsenreeks. Klik met de muis tussen de twee haakjes van Afspelen in het veld Toets/actie. Typ de naam van het afspeelbestand tussen de twee haakjes. 
+
+++++"Ongedefinieerd"
+U zorgt er als volgt voor dat aan een toetsenreeks geen enkele actie wordt toegewezen: selecteer het vakje "Ongedefinieerd" in het actiekeuzeveld en klik vervolgens op de knop voor de combinatietoets voor de gewenste toetsenreeks. Kies "OK" om de wijzigingen vast te leggen.
+
+////Note: The translation of Dead Key below should match the translated resource text for Keyxxx52*unmappable() in the keyboard remapping resource file.
+Opmerking: Een dode toets in het toetsdefinitieveld kan niet worden toegewezen omdat dode toetsen worden verwerkt door het besturingssysteem. 
+
+////Note: The translation of Undefined below should match the translated resource text for Keyxxx52*undefined() in the keyboard remapping resource file.
+Opmerking: Een toets met Ongedefinieerd in het toetsdefinitieveld kan wel worden toegewezen.
+
+++++"Acties zoeken"
+U kunt als volgt de toetsaanslag(en) vinden die aan een bepaalde actie zijn toegewezen: selecteer de actie in de lijst van beschikbare acties en klik dan op de knop Zoeken in het actiekeuzeveld.
+
+Alle toetsen die aan de actie zijn toegewezen worden geaccentueerd weergegeven en de toets die als eerste is gevonden, wordt de actieve toets in het veld Toets/actie.
+
+U kunt niet zoeken naar Ongedefinieerd, tekens uit de tekenlijst of naar toetsenbordmacro's.
+
+++++"Lijst van tekens"
+Met de lijst van tekens kunt u gebruikmaken van tekens die niet op uw toetsenbord voorkomen.
+
+Een teken toevoegen voor een toetsenreeks: Klik op de toets op het grafische toetsenbord waarop het teken is weergegeven. Klik op het gewenste teken in de lijst van tekens. Klik op de gewenste combinatietoets. Klik op OK om de wijziging te accepteren.
+
+Een teken toevoegen aan een toetsenbordmacro: Klik op de toetsenblokknop voor de toetsenbordmacro. Klik op het gewenste teken in de lijst van tekens. Klik in de macro op het toetsenblok, binnen de Reeks(), op de plaats waar het teken moet worden toegevoegd (met de cursortoetsen kunt u de cursor op de juiste plaats zetten). Klik op de gewenste combinatietoets. Klik op OK om de wijziging te accepteren.
+
+++++"Toetsen voor vensterbeheer"
+Bepaalde toetsen zijn standaard gereserveerd voor het programma Vensterbeheer, bijvoorbeeld de toetsenreeks waarmee u een venster verplaatst naar de achtergrond. Toetsen voor vensterbeheer kunnen daarom niet worden gewijzigd met het toetsenbordprogramma.
+
+
+////3270
+++++"Lichtpen-emulatie"
+Selectie van een veld met behulp van een lichtpen kan worden gesimuleerd met een toetsenreeks of met de muis. Om de toetsenreeks of de muis te definiëren gebruikt u het toetsenbordprogramma. 
+
+//// Note: The translation of PenSelectField() below should match the translated resource text for Keyxxx52*select-field() in the keyboard remapping resource file.
+Toetsenreeks: Klik op de gewenste toets op het grafische toetsenbord en wijs de actie VeldSelectiePen () toe aan deze toets(-combinatie). 
+
+////Note: Do not translate Alt<KeyPress>Insert: select-field() and Alt<Btn3Down>: select-field() below.
+Muis: Bepaal de muisreeks voor de lichtpenemulatie; schakel geen bruikbare muisfuncties uit. Het is het makkelijkst om de actie VeldSelectiePen () tijdelijk toe te wijzen aan een toetsenreeks, zoals hier boven is beschreven. Overschrijf geen bruikbare toetsenreeks (Alt-Insert is bijvoorbeeld doorgaans beschikbaar). Gebruik vervolgens uitgebreide toetsenbordindeling (zie de Help-tekst over Uitgebreide toetsenbordindeling voor meer informatie) om de reeks te bewerken, die de eerste toetsenreeks op de lijst moet zijn. Voorbeeld: wijzig Alt<KeyPress>Insert: select-field() in Alt<Btn3Down>: select-field(). In dit geval zal Alt in combinatie met de rechtermuisknop de lichtpen emuleren.
+////9999
+
+
+++++"Niet-afbeeldbare toewijzingen"
+Er is alleen sprake van toewijzingen die niet kunnen worden afgebeeld als u bij het toewijzen van functies gebruik hebt gemaakt van de optie Uitgebreide toetsenbordindeling of een toetsenbordbestand dat is gemaakt met een eerdere versie van het toetsenbordprogramma.
+
+Met de optie Uitgebreide toetsenbordindeling (en de eerdere versie van het toetsenbordprogramma) kunt u verschillende functies toewijzen aan combinatietoetsen. Deze combinatietoetsen worden niet afgebeeld in het veld Toets/actie.
+
+
+Als er sprake is van een toewijzing voor de actieve toets die niet kan worden afgebeeld, wordt dit gemeld in het berichtenveld. Een dergelijke toewijzing kan alleen zichtbaar gemaakt, bewerkt of gewist worden met de functie Uitgebreide toetsenbordindeling en kan niet (per ongeluk) met het toetsenbordprogramma gewijzigd worden. 
+
+++++"Toetsenbordbestanden afdrukken"
+U kunt het huidige toetsenbordbestand afdrukken door de knop "Afdrukken" te kiezen op de actiebalk, waarna u de afdrukoptie kiest in het afdrukvenster. Alle toetsen/combinatietoetsen van het toetsenbord worden afgebeeld met de bijbehorende actie. Toetsencombinaties die zijn gemaakt met Uitgebreide toetsenbordindeling worden niet afgedrukt.
+
+++++"Uitgebreide toetsenbordindeling"
+Waarschuwing: De functie Uitgebreide toetsenbordindeling kan ongewenste resultaten tot gevolg hebben en voor ernstige problemen zorgen met de emulatiesessie. Als dit het geval is, moet u de aangebrachte wijzigingen in de toetsenbordindeling corrigeren (wijzigen en toepassen) of het toetsenbordbestand wissen. Sluit de emulatiesessie af en start de sessie opnieuw nadat u het toetsenbordbestand hebt gewist.
+
+De functie Uitgebreide toetsenbordindeling geeft ervaren gebruikers de mogelijkheid om de interne lijst van toetswijzigingen behorend bij de emulatiesessie te wijzigen. 
+
+Houd de "Alt"-toets ingedrukt en druk dan op de "a"-toets om de functie Uitgebreide toetsenbordindeling te starten.
+
+Het venster Uitgebreide toetsenbordindeling bevat naast de interne toewijzingslijst de volgende vier knoppen:
+
+1) "Bewerken" van de eerste geselecteerde toewijzing in de lijst.
+
+2) "Invoegen" van een lege regel voor de geselecteerde toewijzing.
+
+3) "Wissen" van alle geselecteerde toewijzingen in de lijst (controleer of u alle geselecteerde toewijzingen inderdaad wilt wissen, voordat u op Wissen klikt).
+
+4) "Sluiten" van het venster Uitgebreide toetsenbordindeling. 
+
+Zoeken van items in de toetstoewijzingslijst: Als u op een toets klikt op het grafische toetsenbord, worden alle toewijzingen voor die toets geaccentueerd weergegeven in de toewijzingslijst. De lijst wordt automatisch bijgewerkt om de eerste toewijzing die is geselecteerd zichtbaar te maken.
+
+Als u een actie in de toewijzingstabel zoekt, selecteert u de actie in de lijst met beschikbare acties en klikt u op de knop Zoeken. De toetsen waaraan deze actie is toegewezen worden nu geaccentueerd weergegeven.
+
+Toewijzingsprocedure: Toewijzingen moeten in de juiste volgorde worden gemaakt. De toewijzingslijst wordt van boven naar beneden doorzocht op toewijzingen die overeenkomen met een toetsaanslag. Het eerste item dat aan de vereisten voldoet, wordt gebruikt. De items uit de toewijzingslijst waaraan  de meeste combinatietoetsen zijn toegewezen (de meest specifieke) worden voor de items geplaatst die er minder bezitten. 
+
+Bijvoorbeeld:
+
+////5250
+////In the following two lines, only "must come before" should be translated.
+  
+  Alt<KeyPress>Print: sysreq()  moet voorafgaan aan  <KeyPress>Print: print()
+
+U selecteert "sysreq" door op de Print-toets te drukken terwijl u de Alt-toets ingedrukt houdt (andere combinatietoetsen kunnen ook ingedrukt zijn). "Print" wordt geselecteerd als u de Print-toets indrukt (andere combinatietoetsen kunnen ook ingedrukt zijn). Als de instructie <KeyPress>Print: print() vóór Alt<KeyPress>Print: sysreq() zou staan, dan zou Alt<KeyPress>Print: sysreq() nooit worden uitgevoerd omdat in deze volgorde de instructie <KeyPress>Print: print() als eerste wordt verwerkt.
+////3270
+
+  Alt<KeyPress>Print: sysreq()  moet voorafgaan aan  <KeyPress>Print: pa1()
+
+U selecteert "sysreq" door op de Print-toets te drukken terwijl u de Alt-toets ingedrukt houdt (andere combinatietoetsen kunnen ook ingedrukt zijn). "Pa1" wordt geselecteerd als de Print-toets wordt ingedrukt (andere combinatietoetsen kunnen zijn ingedrukt). Als de instructie <KeyPress>Print: pa1() vóór Alt<KeyPress>Print: sysreq() zou staan, dan zou Alt<KeyPress>Print: sysreq() nooit worden uitgevoerd omdat in deze volgorde de instructie <KeyPress>Print: pa1() als eerste wordt verwerkt.
+////9999
+
+De structuur van toewijzingen:
+
+////In the following line, "<KeyPress>" should not be translated.
+  Comb Comb<KeyPress> toetssymbool: functie() functie() 
+
+Er is geen combinatietoets vereist. Het is mogelijk meer dan een combinatietoets te gebruiken. Er is één actie vereist, maar meer dan één actie is toegestaan.
+
+De volgende combinatietoetsen worden door het programma herkend:
+
+////In the following list, the left column ("Any" through "Mod5") should not be translated. The information in parenthesis to the right should be translated.
+////5250
+Any      (gelijk aan geen combinatietoets)
+Shift    (shift)
+Lock     (caps lock of shift lock)
+Ctrl     (linker Ctrl-toets)
+Alt      (alt)
+Mod2     (rechter alt-toets, Alt Graphical)
+Mod3     (niet in gebruik)
+Mod4     (niet in gebruik)
+Mod5     (Num_lock)
+////3270
+Any      (gelijk aan geen combinatietoets)
+Shift    (shift)
+Lock     (caps lock of shift lock)
+Ctrl     (linker Ctrl-toets)
+Alt      (alt)
+Mod2     (rechter alt-toets, Alt Graphical)
+Mod3     (niet in gebruik)
+Mod4     (niet in gebruik)
+Mod5     (Num_lock)
+////9999
+
+Het toetsenbordprogramma herkent tevens de (!) aan het begin van een wijzigingslijst als uitsluitingsteken.
+////5250
+////Do not translate "reset()" and "Ctrl" below.
+De actie reset() is toegewezen aan de linker Ctrl-toets en mag niet aan een andere toets worden toegewezen. Als u de Ctrl-toets gebruikt voor het definiëren van een actie, moet u er rekening mee houden dat de linker Control-toets de actie reset() uitvoert voordat de door u opgegeven toewijzing wordt verwerkt.
+////9999
+
+////Do not translate "enter()", "newline()", and "Control_R" below.
+Gewoonlijk worden de acties enter() en newline() toegewezen aan de Control_R-toets.

@@ -1,0 +1,335 @@
+//// ENGLISH_SOURCE_VERSION= 1.1 
+////This file contains the keyboard remapping program on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file is stored in locale specific ASCII (code page 819 for Latin1 languages). This help text is stored on the booting server as N3_5KeyH.
+
+////Help text format (this section is not displayed to IBM emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1. Do not translated (or change) anything in a comment line.
+//// 3. This help file contains help text for the 3270, and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator.   A comment line of four "/" characters followed by:
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+//// 3B. "5250" indicates subsequent data is only displayed in 5250 on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in 3270, and 5250 on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+////  3G. Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters.  The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Do not change the order of topics in this help text file.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+----"Ajuda do Mapeamento de Teclado do 3270"
+++++"Informações Gerais"
+Para obter informações sobre a utilização deste programa visualizador de ajuda, consulte o primeiro tópico na ajuda principal do emulador (selecione a opção "Ajuda" na barra de menus da janela do emulador).
+
+Estas informações de ajuda descrevem como o programa de Remapeamento de Teclado pode ser utilizado para alterar as ações do teclado nas sessões do emulador.
+
+Nota: Somente um programa de Remapeamento de Teclado pode estar ativo por vez.
+
+++++"Seleção de Arquivo de Mapeamento de Teclado"
+No início de uma sessão 3270, o emulador 3270 pesquisa por um arquivo de mapeamento de teclado para a sessão. O tipo do teclado precisa corresponder; um arquivo de mapeamento de teclado é utilizado para um tipo de teclado (por exemplo, um teclado PC de 102 teclas). A seguinte ordem é utilizada; se um arquivo de mapeamento de teclado for localizado, ele será utilizado para a sessão 3270:
+
+- Procura por um arquivo de mapeamento de teclado nomeado por -KEYFILE.
+
+- Procura por um arquivo de mapeamento de teclado específico da sessão criado utilizando o programa Remapeamento de Teclado.
+
+- Procura por um arquivo de mapeamento de teclado padrão criado utilizando o programa Remapeamento de Teclado.
+
+- Se nenhum dos itens acima for localizado, o emulador utilizará as ações padrão do teclado.
+
+////5250
+++++"Tecla Enter/Sair de Campo"
+As Preferências Diversas podem alterar a localização das ações Enter e Sair de Campo. Se forem desejadas alterações na tecla Enter ou na tecla Ctrl da direita, verifique primeiramente se o mapeamento desejado está disponível em Preferências Diversas. Para fazer isto, consulte o menu Opção na barra de menus do emulador pela existência de Preferências Diversas.
+
+Quaisquer alterações de remapeamento de teclado feitas nas teclas Enter ou Ctrl da direita são substituídas por "Preferências Diversas" se a opção Tecla Enter/Sair de Campo não estiver definida para o padrão.
+
+Se o mapeamento desejado não estiver disponível em Preferências Diversas, defina primeiramente a opção Tecla Enter/Sair de Campo para o padrão e, em seguida, faça as alterações desejadas utilizando o programa Remapeamento de Teclado.
+
+Nota: As Preferências Diversas também podem modificar a localização da ação Imprimir, substituindo as alterações de remapeamento de teclado para a tecla Print Screen. 
+
+////3270
+++++"Tecla Enter"
+As Preferências Diversas e o programa IBM 3270 Emulator Setup podem alterar a localização da ação Enter. Se forem desejadas alterações na tecla Enter ou na tecla Ctrl da direita, verifique primeiramente se o mapeamento desejado está disponível em Preferências Diversas ou no programa IBM 3270 Emulator Setup. 
+
+A localização da tecla Enter nas Preferências Diversas é a prioridade mais alta. Em seguida, é utilizada a definição da localização da tecla Enter no programa IBM 3270 Emulator Setup. Se a localização da tecla Enter nas Preferências Diversas estiver definida para o padrão e a localização da tecla Enter no programa IBM 3270 Emulator Setup também estiver definida para o padrão, o remapeamento de teclado poderá ser utilizado para modificar as ações das teclas Enter e Ctrl da direita.
+
+Nota: As Preferências Diversas podem modificar a localização da ação Imprimir Local. Esta definição substituirá quaisquer alterações de remapeamento de teclado para a tecla Print Screen. 
+
+////9999
+++++"Layout da Janela"
+A janela Remapeamento de Teclado possui uma área de layout gráfico do teclado (acima), uma área de seleção de ações (à esquerda), uma área de tecla/ação (à direita) e uma barra de ações/área de mensagens (abaixo).
+
+Teclado Gráfico: Mostra o layout físico do teclado atual. Clicar em uma tecla exibe as ações mapeadas para essa tecla na área tecla/ação. 
+
+
+A Área de Seleção de Ações contém o seguinte:
+
+1) A "Lista de Ações Disponíveis" que contém as ações disponíveis. Uma ação selecionada nesta lista se torna a ação atual.
+
+2) A "Lista de Caracteres" que relaciona todos os caracteres disponíveis. Um caractere selecionado se torna a ação atual. Para selecionar um caractere, clique nele.
+
+3) O botão "Ajuda da Ação" fornece definições de ação do teclado em uma janela de ajuda da ação. As definições da ação podem ser impressas.
+
+////5250
+4) O botão "Nenhuma Ação" que define a ação atual como "nothing". Uma seqüência de teclas com a ação "nothing" funciona como se a seqüência de teclas não tivesse sido pressionada.
+////3270
+4) O botão "Nenhuma Ação" que define a ação atual como "noop". Uma seqüência de teclas com a ação "noop" funciona como se a seqüência de teclas não tivesse sido pressionada.
+////9999
+
+5) O botão "Localizar" que localiza todas as teclas mapeadas para a ação realçada na lista de ações disponíveis. As teclas localizadas são realçadas no teclado gráfico e a primeira tecla se torna a tecla atual na área tecla/ação.
+
+Nota: Apenas uma ação pode ser a ação atual.
+
+
+A Área Tecla/Ação contém o seguinte:
+
+1) A "Tecla Atual" que exibe a tecla que pode ser modificada. A "Tecla Atual" é exibida na parte superior da área tecla/ação ou área de seleção de ação (dependendo do tipo do teclado). Apenas uma tecla pode ser modificada por vez.
+
+2) Os botões "Modificadores" que são as combinações modificadoras reconhecidas pelo programa Remapeamento de Teclado. Os botões Modificadores iniciam com "-> ". Clicar em um botão modificador faz com que a tecla atual (na lista de ações disponíveis, lista de caracteres ou nenhuma ação) substitua a ação na área de texto da ação.
+
+3) A "Área de Texto da Ação" que está localizada à direita de cada botão modificador e exibe a ação mapeada para a tecla atual deste modificador. Esta área pode ser editada (consulte "Editando uma Área de Texto de Ação").
+
+4) O botão "OK" que aceita as alterações feitas na tecla atual.
+
+5) O botão "Cancelar" que cancela as alterações feitas na tecla atual.
+
+
+Os botões da Barra de Ações fornecem as seguintes funções:
+
+1) "Salvar" alterações de remapeamento de teclado em um arquivo de mapeamento de teclado.
+
+2) "Excluir" arquivos de mapeamento de teclado criados anteriormente.
+
+3) "Aplicar Alterações à Sessão" que iniciou o programa Remapeamento de Teclado. Isto permite testar as alterações antes de salvá-las em um arquivo de mapeamento de teclado.
+
+4) "Restaurar" (desfazer) alterações que foram feitas desde o último "Aplicar" ou desde que o programa Remapeamento de Teclado foi iniciado.
+
+5) "Sair" do programa Remapeamento de Teclado.
+
+6) "Imprimir" imprime as seqüências tecla/modificador com as ações resultantes.
+
+7) "Ajuda" exibe este texto de ajuda.
+
+Área de Mensagens:
+Exibe mensagens informativas e de erro.
+
+++++"Introdução"
+A seguir são descritas as etapas para fazer alterações no remapeamento de teclado:
+
+1) Inicie o programa de Remapeamento de Teclado na sessão do emulador onde as alterações de remapeamento são desejadas.
+
+2) Clique na tecla a ser alterada no teclado gráfico.
+
+3) A área tecla/ação agora está ativa e a tecla selecionada é a tecla atual. As ações mapeadas atualmente para a tecla nos vários modificadores aparecerão nas áreas de texto da ação.
+
+4) Clique em uma ação a ser mapeada para a tecla atual na lista de ações disponíveis, lista de caracteres ou nenhuma ação. (Nota: O tópico Macros de Teclado Simples explica como criar uma macro de teclado simples.)
+
+5) Clique no botão modificador ao qual a ação deve ser associada. A área de texto da ação para o modificador deve exibir a ação desejada. Se a ação for desejada em vários modificadores para esta tecla, clique nos modificadores desejados. A área de texto da ação pode ser editada; consulte "Editando Áreas de Texto de Ação" para obter informações adicionais.
+
+6) Clique em "OK" para aceitar as alterações na tecla ou em "Cancelar" para retornar as ações originais.
+
+7) Clique em "Aplicar Alterações à Sessão".
+
+8) Teste as alterações de remapeamento do teclado na sessão do emulador; não saia do programa de Remapeamento de Teclado.
+
+9) No programa de Remapeamento de Teclado, é possível fazer mais alterações de mapeamento de teclado ou "Restaurar" se necessário.
+
+10) Após todas as alterações de mapeamento do teclado serem aplicadas e testadas, salve as alterações. 
+
+11) Saia do programa de Remapeamento de Teclado.
+
+++++"Editando a Área de Texto da Ação"
+Uma área de texto de ação está localizada à direita de cada botão modificador e exibe a ação (ou ações) mapeada para a tecla atual deste modificador. As áreas de texto de ação podem ser alteradas utilizando o teclado. Clique na área de texto da ação desejada e faça a alteração utilizando o teclado. Clique em "OK" para aceitar as alterações.
+
+As ações alteradas devem ser escritas de forma correta e fazem distinção entre maiúsculas e minúsculas. Várias ações devem ser separadas por um único espaço.
+
+Se for encontrado um erro de texto da ação, um diálogo de aviso será exibido e a ação com erro será realçada.
+
+Clicar na área de texto da ação a torna ativa. Se um botão modificador for clicado enquanto a área de texto da ação associada estiver ativa, a ação atual será inserida na área de texto da ação na localização do cursor. Se um botão modificador for clicado e a área de texto da ação associada não estiver ativa, a ação atual substituirá a ação ou ações anteriores.
+
+//// Note: The translation of String() and Play() below should match the translated resource text for AllShare*string() and Keyxxx52*play() in the keyboard remapping resource file.
+As teclas Ctrl e Alt + 0 a 9 do keypad não suportam texto nos parênteses da área de texto da ação. Cadeia() e Reproduzir() não suportam texto para essas combinações de teclas.
+
+++++"Aplicando Alterações no Mapa do Teclado"
+O botão Aplicar Alterações à Sessão aplica temporariamente as alterações de remapeamento de teclado na sessão do emulador onde o programa Remapeameto de Teclado foi iniciado. As alterações podem então ser testadas. Consulte "Salvando Remapeamento de Teclado" para obter informações sobre o salvamento das alterações para uso posterior.
+
+++++"Salvando Arquivos de Mapeamento de Teclado"
+O botão Salvar salva as alterações de remapeamento de teclado para uso posterior. As alterações de remapeamento de teclado são salvas em um arquivo de mapeamento de teclado. Você seleciona como as alterações de remapeamento de teclado são salvas: como o arquivo de mapeamento de teclado padrão que será utilizado para todas as sessões ou como um arquivo de mapeamento de teclado específico da sessão utilizado apenas para a sessão de onde o programa de Remapeamento de Teclado foi iniciado.
+
+Um arquivo de mapeamento de teclado específico da sessão permite ações de teclado diferentes em sessões 3270 diferentes. Um arquivo de mapeamento de teclado específico da sessão possui a mais alta prioridade e é utilizado para a sessão específica onde o arquivo de mapeamento de teclado foi criado (utilizando o número da sessão 3270 e seu nome).
+
+Um arquivo de mapeamento de teclado padrão possui a segunda prioridade mais alta e é utilizado para todas as sessões que não possuem um arquivo de mapeamento de teclado específico da sessão. 
+
+Consulte "Excluindo Arquivos de Mapeamento de Teclado" para obter informações sobre a exclusão de um arquivo de mapeamento de teclado.
+
+++++"Excluindo Arquivos de Mapeamento de Teclado"
+Selecione o botão "Excluir" na barra de ações para excluir arquivos de mapeamento de teclado criados. Selecione quaisquer arquivos de mapeamento de teclado a serem excluídos e, em seguida, selecione o botão excluir.
+
+++++"Restaurando um Mapa de Teclado"
+Se alterações indesejáveis de remapeamento de teclado foram feitas, o mapa do teclado pode ser restaurado para:
+
+1) O mapa de teclado original que foi lido quando o programa de Remapeamento de Teclado foi iniciado.
+
+2) O estado da última operação aplicar; este é o mapeamento que foi aplicado mais recentemente à sessão utilizando o botão Aplicar na barra de ações.
+
+A restauração não Salva nem Aplica os mapeamentos de teclas restaurados. Ela restaura as traduções para o programa de Remapeamento de Teclado.
+
+Para restaurar os mapeamento de um mapa de teclado padrão, exclua o arquivo de mapeamento de teclado específico da sessão e inicie novamente a sessão.
+
+++++"Macros de Teclado Simples"
+Uma macro de teclado é uma seqüência de pressionamentos de tecla que você pode inserir facilmente na sessão do emulador. As macros de teclado simples podem ser criadas utilizando o programa de Remapeamento de Teclado. Seqüências de teclado longas ou complexas devem ser criadas utilizando o recurso Gravar e Reproduzir. Consulte os tópicos Gravar e Reproduzir no texto da Ajuda principal do emulador.
+
+Criando uma macro de teclado simples:
+
+1) Clique na tecla no teclado gráfico que executará a macro de teclado.
+
+//// Note: The translation of String() below should match the translated resource text for AllShare*string() in the keyboard remapping resource file.
+2) Role até a ação Cadeia() na Lista de Ações Disponíveis e clique em Cadeia().
+
+3) Clique no botão modificador desejado para a tecla selecionada.
+
+4) Clique entre os parênteses de Cadeia() na Área Tecla/Ação.
+
+5) Digite aspas duplas, os dados da sua macro de teclado e aspas duplas novamente; por exemplo, Cadeia("seus dados")
+
+6) Clique em OK para aceitar as alterações.
+
+7) Clique em Aplicar Alterações à Sessão.
+
+8) Teste a macro de teclado; pressione a seqüência de teclas na sessão do emulador. É possível alterar a macro de teclado se for desejado. Clique em Salvar.
+
+Nota: Várias ações podem ser mapeadas para uma única tecla. Para fazer isto, é possível clicar na área de texto da ação desejada e digitar a série de ações desejada. Também é possível clicar na área de texto da ação desejada e clicar nos botões modificadores para inserir a série de ações na lista de ações disponíveis e na lista de caracteres. As várias ações devem ser separadas por um único espaço.
+
+Nota: Se desejar criar uma macro utilizando várias combinações de modificadores que não estão disponíveis na área tecla/ação, o recurso Remapeamento Avançado de Teclado pode ser utilizado (consulte o tópico Remapeamento Avançado de Teclado).
+
+++++"Arquivos de Reprodução"
+É possível mapear um arquivo de reprodução para uma seqüência de teclas. Grave um arquivo de reprodução utilizando o recurso de gravação (consulte o tópico Gravar no texto da Ajuda principal do emulador para obter ajuda sobre a gravação).
+
+////Note: The translation of Play() below should match the translated resource text for Keyxxx52*play() in the keyboard remapping resource file.
+Em seguida, em remapeamento de teclado, selecione a tecla para iniciar o arquivo de reprodução. Atribua a ação Reproduzir() à seqüência de teclas. Clique no mouse entre os parênteses de Reproduzir() na Área Tecla/Ação. Insira o nome do arquivo de reprodução entre os parênteses.
+
+++++"Nenhuma Ação"
+Para que uma seqüência de teclas não faça nada, clique no botão "Nenhuma Ação" na área de seleção de ações e clique no botão modificador para a seqüência de teclas desejada. Em seguida, aceite as alterações com o botão "OK".
+
+////Note: The translation of Dead Key below should match the translated resource text for Keyxxx52*unmappable() in the keyboard remapping resource file.
+Nota: Uma tecla com Tecla Inoperante na área de texto da ação não pode ser mapeada porque o sistema operacional processa teclas inoperantes.
+
+////Note: The translation of Undefined below should match the translated resource text for Keyxxx52*undefined() in the keyboard remapping resource file.
+Nota: Uma tecla com Não-Definido na área de texto da ação pode ser mapeada.
+
+++++"Localizando Ações"
+Para localizar pressionamentos de teclas mapeados para uma ação, selecione a ação na lista de ações disponíveis e clique no botão Localizar na área de seleção de ações.
+
+Todas as teclas mapeadas para a ação localizada serão realçadas e a primeira tecla localizada se tornará a tecla atual na área tecla/ação.
+
+Localizar não é permitido para "nenhuma ação", caracteres da lista de caracteres ou macros de teclado.
+
+++++"Lista de Caracteres"
+A lista de caracteres permite acessar os caracteres que podem não estar acessíveis no teclado.
+
+Especificar um caractere para uma seqüência de teclas: Clique na tecla no teclado gráfico que exibirá o caractere. Clique no caractere desejado na lista de caracteres. Clique no botão modificador desejado. Clique em OK para aceitar a alteração e aplicá-la à sessão.
+
+Incluir um caractere em uma macro de teclado: Clique na tecla do teclado gráfico que exibe a macro de teclado. Clique no caractere desejado na lista de caracteres. Clique na área de texto da ação da macro de teclado (na ação Cadeia()), na localização onde o caractere incluído deve ser inserido (as teclas cursor para a esquerda e para a direita podem mover o cursor para a localização correta). Clique no botão modificador desejado. Clique em OK para aceitar a alteração e aplicá-la à sessão.
+
+++++"Teclas do Window Manager"
+Algumas teclas são processadas pelo programa Window Manager; por exemplo, a seqüência de teclas para mover uma janela para o segundo plano. As teclas do Window Manager não estão disponíveis para remapeamento de teclado utilizando o programa de Remapeamento de Teclado do emulador.
+
+////3270
+++++"Emulação de Caneta Ótica"
+Uma caneta ótica (seleção de campo) pode ser emulada por uma seqüência de teclas ou o mouse. A seqüência de teclas ou de mouse é definida utilizando o programa de remapeamento de teclado.
+
+//// Note: The translation of PenSelectField() below should match the translated resource text for Keyxxx52*select-field() in the keyboard remapping resource file.
+Seqüência de Teclas: Clique na tecla desejada no teclado gráfico e atribua a ação SelecionarCampoDeCaneta() à seqüência de teclas desejada.
+
+////Note: Do not translate Alt<KeyPress>Insert: select-field() and Alt<Btn3Down>: select-field() below.
+Mouse: Determine a seqüência do mouse para emular a caneta ótica; não desative uma função útil do mouse. Pode ser mais fácil atribuir temporariamente a ação SelecionarCampoDeCaneta() a uma seqüência de teclas conforme descrito acima. Não sobrescreva uma seqüência de teclas útil (por exemplo, Alt-Insert está normalmente disponível). Em seguida, utilize o Remapeamento Avançado de Teclado (consulte o tópico de ajuda Remapeamento Avançado de Teclado para obter informações adicionais) para editar a seqüência de teclas, que deve ser a primeira seqüência de teclas na lista. Por exemplo, altere Alt<KeyPress>Insert: select-field() para Alt<Btn3Down>: select-field(). Neste caso, Alt mais o botão direito do mouse emularão a caneta ótica.
+////9999 
+
+++++"Traduções Não-exibíveis"
+As traduções não-exibíveis ocorrem apenas se você incluiu traduções utilizando o Remapeamento Avançado de Teclado ou se possui um arquivo de mapeamento de teclado criado com uma versão anterior do programa de Remapeamento de Teclado.
+
+No Remapeamento Avançado de Teclado (e na versão anterior do programa de Remapeamento de Teclado) várias traduções de modificadores são permitidas. Esses modificadores não são exibidos na área tecla/ação.
+
+Se existir uma tradução para a tecla atual que não possa ser exibida, uma mensagem será apresentada na área de mensagens. Esta tradução pode ser apenas visualizada, editada ou removida utilizando o recurso Remapeamento Avançado de Teclado. Essas traduções podem fornecer funções úteis; o programa Remapeamento de Teclado não modificará essas traduções. 
+
+++++"Imprimindo Arquivos de Mapeamento de Teclado"
+A impressão do arquivo de mapeamento de teclado atual pode ser feita selecionando o botão "Imprimir" na barra de ações e escolhendo as opções de impressão no diálogo de impressão. Cada seqüência tecla/modificador no teclado é listada com a ação resultante. Entretanto, as seqüências de teclas criadas utilizando o Remapeamento Avançado de Teclado não serão impressas.
+
+++++"Remapeamento Avançado de Teclado"
+Aviso: O Remapeamento Avançado de Teclado possui a capacidade de produzir resultados indesejáveis e pode causar problemas significativos na sessão do emulador. Se isto ocorrer, recupere corrigindo as alterações de remapeamento de teclado (modificar e aplicar) ou excluindo o arquivo de mapeamento de teclado. A sessão do emulador deve ser finalizada e iniciada novamente após excluir o arquivo de mapeamento de teclado.
+
+O Remapeamento Avançado de Teclado fornece aos usuários experientes a oportunidade de editar a lista interna de traduções de pressionamentos de tecla associada à sessão do emulador.
+
+Pressione e segure a tecla "Alt" e, em seguida, pressione a tecla "a" para iniciar o Remapeamento Avançado de Teclado.
+
+A janela Remapeamento Avançado contém a lista de traduções internas e os quatro botões a seguir:
+
+1) "Editar" a primeira tradução selecionada na lista.
+
+2) "Inserir" uma linha em branco antes da tradução selecionada.
+
+3) "Remover" todas as traduções selecionadas na lista (verifique se deseja remover todas as traduções selecionadas antes de clicar em Remover).
+
+4) "Fechar" a janela Remapeamento Avançado.
+
+Localizando itens na Lista de Traduções: Quando uma tecla é clicada no teclado gráfico, todas as traduções mapeadas para esta tecla ficam realçadas na lista de traduções. A lista é ajustada automaticamente para tornar visível a primeira tradução selecionada.
+
+Para localizar uma ação na lista de traduções, selecione a ação na lista de ações disponíveis principal e clique no botão localizar. As teclas que utilizam essa ação são realçadas.
+
+Precedência de Tradução: As traduções devem estar na ordem correta. A lista de traduções é inspecionada de cima para baixo na procura de uma tradução que corresponda ao pressionamento de teclas. A primeira entrada localizada que atenda aos requisitos será utilizada. As entradas da lista de traduções que possuem a maioria dos modificadores incluída (mais específicas) são colocadas antes das que possuem menos.
+
+Por exemplo:
+
+////5250
+////In the following two lines, only "must come before" should be translated.
+  Alt<KeyPress>Print: sysreq() deve vir antes de
+  <KeyPress>Print: print()
+
+"sysreq" é selecionado quando a tecla Print é pressionada e a tecla Alt é mantida pressionada (outras teclas modificadoras podem ser mantidas pressionadas). "print" é selecionado quando a tecla Print é pressionada (outras teclas modificadoras podem ser mantidas pressionadas). Se <KeyPress>Print: print() estivesse antes de Alt<KeyPress>Print: sysreq(), Alt<KeyPress>Print: sysreq() nunca seria processado pois <KeyPress>Print: print() seria processado antes.
+////3270
+  Alt<KeyPress>Print: sysreq()  deve vir antes de
+  <KeyPress>Print: pa1()
+
+"sysreq" é selecionado quando a tecla Print é pressionada e a tecla Alt é mantida pressionada (outras teclas modificadoras podem ser mantidas pressionadas). "pa1" é selecionado quando a tecla Print é pressionada (outras teclas modificadoras podem ser mantidas pressionadas). Se <KeyPress>Print: pa1() estivesse antes de Alt<KeyPress>Print: sysreq(), Alt<KeyPress>Print: sysreq() nunca seria processado pois <KeyPress>Print: pa1() seria processado antes.
+////9999
+
+Estrutura das traduções:
+
+////In the following line, "<KeyPress>" should not be translated.
+  Modificador Modificador<KeyPress>Tecla: ação() ação()
+
+Nenhum modificador é necessário. Vários modificadores são suportados. Uma ação é obrigatória. Várias ações são suportadas.
+
+Modificadores reconhecidos pelo Remapeamento de Teclado:
+
+////In the following list, the left column ("Any" through "Mod5") should not be translated. The information in parenthesis to the right should be translated.
+////5250
+Any      (o mesmo que sem modificador)
+Shift    (shift)
+Lock     (caps lock ou shift lock)
+Ctrl     (tecla Ctrl da esquerda)
+Alt      (alt)
+Mod2     (tecla alt da direita, Alt Gr)
+Mod3     (não utilizado atualmente)
+Mod4     (não utilizado atualmente)
+Mod5     (Num_lock)
+////3270
+Any      (o mesmo que sem modificador)
+Shift    (shift)
+Lock     (caps lock ou shift lock)
+Ctrl     (tecla Ctrl da esquerda)
+Alt      (alt)
+Mod2     (tecla alt da direita, Alt Gr)
+Mod3     (não utilizado atualmente)
+Mod4     (não utilizado atualmente)
+Mod5     (Num_lock)
+////9999
+
+O programa de Remapeamento de Teclado também reconhece a designação exclusiva (!) no início de uma lista de modificadores.
+
+////5250
+////Do not translate "reset()" and "Ctrl" below.
+A ação reset() é mapeada para a tecla Ctrl da esquerda (a ação reset não deve ser movida). Se você especificar o modificador Ctrl para selecionar uma ação, a tecla Ctrl da esquerda processará a ação reset() antes da sua ação ser processada.
+////9999
+
+////Do not translate "enter()", "newline()", and "Control_R" below.
+As ações enter() ou newline() normalmente são colocadas na tecla Control_R.

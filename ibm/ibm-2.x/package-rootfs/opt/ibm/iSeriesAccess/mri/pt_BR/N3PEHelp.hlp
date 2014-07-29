@@ -1,0 +1,79 @@
+//// ENGLISH_SOURCE_VERSION= 1.2 
+////This file contains the playback editor program on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file will be stored in locale specific ASCII (code page 819 for Latin1 languages). 
+
+////Help text format (this section is not displayed to IBM emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1.
+//// 3. This help file contains help text for the 3270 and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator. A comment line of four "/" characters followed by:
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+//// 3B.  "5250" indicates subsequent data is only displayed in 5250 on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in both 3270 and 5250 on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+//// 3D Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters.  The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Do not change the order of topics in this help text file.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+
+----"Ajuda do Editor de Reprodução do 3270"
+++++"Informações Gerais"
+Para obter informações sobre a utilização deste programa visualizador de ajuda, consulte o primeiro tópico na ajuda principal do emulador (selecione a opção "Ajuda" na barra de menus da janela do emulador).
+
+Estas informações de ajuda descrevem como editar arquivos de reprodução existentes. Um arquivo de reprodução é criado utilizando a opção 'Gravar' do menu Opções e consiste em várias ações e seqüências de teclas definidas pelo usuário.  
+
+Nota: Somente um programa editor de reprodução pode estar ativo por vez.
+
+++++"Layout da Janela"
+A janela do editor de reprodução possui uma área de seleção de ações do teclado (à esquerda), uma área de trabalho da lista de ações de reprodução (à direita), uma área de barra de ações (abaixo) e uma área de mensagens (abaixo). 
+
+A Área de Seleção de Ações do Teclado contém o seguinte:
+
+1) A "Lista de Ações Disponíveis" são as ações de teclado disponíveis. Uma ação selecionada nesta lista se torna a ação atual.
+
+2) A "Lista de Caracteres" relaciona todos os caracteres disponíveis. Um caractere selecionado se torna a ação atual. Para selecionar um caractere, clique nele.
+
+3) O botão "Ajuda da Ação" fornece definições de ação do teclado em uma janela de ajuda da ação. As definições da ação podem ser impressas.
+
+4) O botão "Inserir Ação ->" insere a ação atual na área de trabalho da lista de reprodução acima da ação selecionada do arquivo de reprodução.
+
+Nota: Apenas uma ação pode ser a ação atual.
+
+
+A Área de Trabalho da Lista de Ações de Reprodução contém o seguinte:
+
+1) O "Arquivo de Reprodução Atual" exibe o nome do arquivo de reprodução.
+
+2) A área "Ações do Arquivo de Reprodução Atual" relaciona as ações do teclado no arquivo de reprodução atual. Uma linha de ação do teclado deve ser selecionada para inserir, editar ou remover uma ação. Uma linha de ação está limitada a 100 caracteres.
+
+3) O botão "Editar Ação" permite editar a ação selecionada. O botão 'OK' na janela de edição substitui uma ação editada. O botão 'Cancelar' cancela as alterações feitas na ação.
+
+4) O botão "Inserir Linha" insere uma linha em branco na lista de ações do arquivo de reprodução na localização selecionada, que pode então ser editada.
+
+5) O botão "Remover Ação" remove a ação selecionada.
+
+6) O botão "OK" aceita as alterações feitas na lista de ações do arquivo de reprodução.
+
+7) O botão "Cancelar" cancela as alterações feitas na lista de ações do arquivo de reprodução.
+
+
+Os botões da Barra de Ações fornecem as seguintes funções:
+
+1) "Salvar" permite salvar as alterações do arquivo de reprodução. É possível alterar o arquivo de reprodução original ou salvar as alterações em um novo arquivo de reprodução.
+
+2) "Sair" sai do programa Editor de Arquivo de Reprodução.
+
+3) "Ajuda" exibe este texto de ajuda.
+
+
+Área de Mensagens: Exibe mensagens informativas e de erro.
+
+++++"Ações do Mouse"
+A Lista de Ações Disponíveis relaciona todas as ações disponíveis que podem ser utilizadas em um arquivo de reprodução, incluindo ações do mouse que podem ser gravadas em um arquivo de reprodução. Uma ação de mouse possui um parâmetro de posição de linha e coluna, separados por uma vírgula; por exemplo, (12,61).
+
+////3270
+++++"Antigo Destravamento de Teclado do 3270"
+Nota: Os aplicativos do 3270 às vezes destravam o teclado antes que as atualizações de tela sejam concluídas. Um retardo é incluído automaticamente pelo emulador do 3270 durante a reprodução. Consulte o tópico Reprodução na ajuda principal do 3270 para obter informações adicionais.
+////9999

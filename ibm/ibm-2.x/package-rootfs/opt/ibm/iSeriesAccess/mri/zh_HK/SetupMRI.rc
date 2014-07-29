@@ -1,0 +1,377 @@
+!
+!
+!
+! This file contains the resource text strings for the IBM 3270 and IBM 5250 Emulator 
+! Setup programs
+
+! This resource file is stored in locale specific ASCII (code page 819 for Latin1 languages).
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. Resource format: 
+!    - A resource line starts with one of the following strings:
+!      SetupXXXX* : for the combined setup program resources
+!      Setup3270* : for the 3270 setup program resources
+!      Setup5250* : for the 5250 setup program resources  
+!      AllShare* : for resources shared by the 5250, 3270 and combined setup programs.
+!    - Each string is followed by a resource name and a ":".  
+!		Do NOT make any changes to the text to the left of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+
+!******************************************************************************
+!************************ BEGIN DO NOT TRANSLATE ******************************
+!******************************************************************************
+!*   The first section of resources are are locale specific but               *
+!*   DO NOT REQUIRE TRANSLATION.                                              *
+!*                                                                            *
+!* This source file enables the resource section for Latin1 and Latin2.       *
+!*                                                                            *
+!* For ru_RU or Latin5 locales and DBCS locales                               *
+!*      1. Place a '!' as the first character in each line in the Latin1      *
+!*      and Latin2 section                                                    *
+!*      2. Remove the '!' character for each resource line in the apropriate  *
+!*      section that matches your locale.                                     *
+!*                                                                            *
+!* For example, ru_RU should place ! in front of all lines in the LATIN1      *
+!* section remove the ! from all lines in the LATIN5 section.                 *      
+!******************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN1 and LATIN2                ****************
+!**************************************************************************
+Setup5250*extraLargeFontList: -*-*-medium-r-normal-*-*-*-*-*-m-110-*-*
+Setup5250*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-110-*-*
+Setup5250*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-90-*-*
+Setup5250*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+!**************************************************************************
+!****************   END LATIN1 and LATIN2                  ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN5                           ****************
+!**************************************************************************
+!Setup5250*extraLargeFontList: -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*
+!Setup5250*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*
+!Setup5250*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!Setup5250*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!**************************************************************************
+!****************   END   LATIN5                           ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (ja_JP ko_KR zh_CN )   ****************
+!**************************************************************************
+!Setup5250*extraLargeFontList: -*-*-medium-r-normal--24-*-*-*-c-*
+!Setup5250*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*
+!Setup5250*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!Setup5250*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*
+!**************************************************************************
+!**************************************************************************
+!****************   END DBCS (ja_JP ko_KR zh_CN )     ****************
+!**************************************************************************
+!**************************************************************************
+!****************   BEGIN DBCS ( zh_TW )   ****************
+!**************************************************************************
+!**** For  zh_TW
+!Setup5250*extraLargeFontList: -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Setup5250*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Setup5250*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Setup5250*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!**************************************************************************
+!****************   END DBCS ( zh_TW )     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   END DO NOT TRANSLATE                   ****************
+!**************************************************************************
+
+
+! ********************************************************************************
+! Setup Program Resources
+! ********************************************************************************
+!
+! In general, the following buttons should not be made much longer during translation.
+! Buttons have one to four words. Note: Testing is the only way to know for sure if all
+! buttons fit on the screen ok.  The emulators have a testing document that will be used
+! during testing; this will point out a problem if button text is too long. In many 
+! cases, buttons are presented side by side, where the total button text length cannot
+! increase significantly.
+! Note: \n causes a new line and should not be translated.
+! You can move, add, or remove \n within text strings.
+!
+! Password prompt panel 
+Setup5250*passwordPromptDialogWidth:            60
+Setup5250*passwordPromptDialogHeight:           10
+Setup5250*passwordPanelTitle.labelString:       密碼
+Setup5250*passwordPanelInstructions.labelString: 您要求的作業需要密碼。\n\
+請輸入密碼。
+
+! Password change panel 
+Setup5250*passwordChangeDialogWidth:            60
+Setup5250*passwordChangeDialogHeight:           21
+Setup5250*passwordChangeDialog2Width:           60
+Setup5250*passwordChangeDialog2Height:          17
+Setup5250*passwordChangePanelTitle.labelString:       變更密碼
+Setup5250*passwordChangePanelInstructions.labelString: 輸入現行密碼，然後輸入新密碼來變更\n\
+密碼。
+Setup5250*passwordChangePanelInstructions2.labelString: 輸入新密碼來設定密碼。
+Setup5250*currentPassword.labelString:          現行密碼：
+Setup5250*newPassword.labelString:              新密碼：
+Setup5250*newPassword2.labelString:             確認新密碼：
+
+! menu bar
+Setup5250*ConnectionCascade.labelString:        連線
+SetupXXXX*NewConnectionCascade.labelString:     新建...
+SetupXXXX*New3270ConnectionButton.labelString:     3270...
+SetupXXXX*New5250ConnectionButton.labelString:     5250...
+Setup5250*NewConnectionButton.labelString:      新建...
+Setup5250*NewConnectionCascade.mnemonic:        N
+Setup5250*EditConnectionButton.labelString:     編輯(E)...
+Setup5250*EditConnectionButton.mnemonic:        E
+Setup5250*BrowseConnectionButton.labelString:   瀏覽(B)...
+Setup5250*BrowseConnectionButton.mnemonic:      B
+Setup5250*CopyConnectionButton.labelString:     複製(C)...
+Setup5250*CopyConnectionButton.mnemonic:        C
+Setup5250*Copy:                                 複製
+Setup5250*ConnectButton.labelString:            連接
+Setup5250*RemoveConnectionButton.labelString:   移除(R)...
+Setup5250*RemoveConnectionButton.mnemonic:      R
+Setup5250*ExitButton.labelString:               結束(X)
+Setup5250*ExitButton.mnemonic:                  X
+Setup5250*PreferencesCascade.labelString:       喜好設定(P)
+Setup5250*PreferencesCascade.mnemonic:          P
+Setup5250*Prefs3270Button.labelString:          3270...
+Setup5250*Prefs3270Button.mnemonic:             3
+Setup5250*Prefs5250Button.labelString:          5250...
+Setup5250*Prefs5250Button.mnemonic:             5
+Setup5250*OptionsCascade.labelString:           選項(O)
+Setup5250*OptionsCascade.mnemonic:              O
+Setup5250*PasswordButton.labelString:           密碼...
+Setup5250*HelpCascade.labelString:              說明
+Setup5250*HelpCascade.mnemonic:                 H
+Setup5250*HelpAboutButton.labelString:          關於...
+Setup5250*HelpContentsButton.labelString:       內容...
+Setup5250*Help3270ContentsButton.labelString:   3270 安裝程式內容...
+Setup5250*Help5250ContentsButton.labelString:   5250 安裝程式內容...
+Setup5250*Help3270EmulatorContentsButton.labelString: 3270 模擬器內容...
+Setup5250*Help5250EmulatorContentsButton.labelString: 5250 模擬器內容...
+Setup5250*UserConnectionsListlabel.labelString:     使用者連線
+Setup5250*DefaultConnectionsListlabel.labelString:  預設連線
+Setup5250*ProfileConnectionsListlabel.labelString:  設定檔連線
+	
+! Command lines
+Setup5250*GeometryTitle.labelString:            視窗大小和位置以圖素為單位 (選用的)
+Setup5250*GeometryTitle2.labelString:           視窗大小和位置 (選用的)
+Setup5250*GeometryTitle3.labelString:           畫面大小 (選用的)
+Setup5250*GeometryFullScreenLabel.labelString:  全\n\
+螢幕
+Setup5250*GeometryFullScreenCheckBox.labelString:
+Setup5250*GeometryWidthLabel.labelString:       寬度
+Setup5250*GeometryHeightLabel.labelString:      高度
+Setup5250*GeometryColsLabel.labelString:        直欄 
+Setup5250*GeometryRowsLabel.labelString:        列
+Setup5250*GeometryHorizontalOffsetLabel.labelString: 水平\n\
+偏移
+Setup5250*GeometryVerticalOffsetLabel.labelString:   垂直\n\
+偏移
+Setup5250*GeometryCornerLabel.labelString:      要偏移\n\
+的角
+Setup5250*cornerButton1.labelString:            左上角
+Setup5250*cornerButton2.labelString:            右上角
+Setup5250*cornerButton3.labelString:            左下角
+Setup5250*cornerButton4.labelString:            右下角
+
+! 3270 and 5250 Command Line Editing 
+Setup5250*CommandLine5250EditTitle.labelString: 5250 模擬器連線
+Setup5250*Advanced5250EditTitle.labelString:    進階 5250 模擬器連線
+Setup5250*AS400.labelString:                    i5/OS 主機名稱 或\n\
+IP 位址 (選用的)
+Setup5250*CommandLine3270EditTitle.labelString: 3270 模擬器連線
+Setup5250*Advanced3270EditTitle.labelString:    進階 3270 模擬器連線
+Setup5250*s390.labelString:                     S/390 主機名稱或\n\
+IP 位址 (選用的)
+Setup5250*ConnectionDescription.labelString:    連線說明
+
+Setup5250*sessionTitle.labelString:             階段作業標題 (選用的)
+Setup5250*userid.labelString:                   模擬器使用者 ID (選用的)
+Setup5250*password.labelString:                 模擬器密碼 (選用的)
+Setup5250*displayName.labelString:              顯示名稱 (選用的)
+Setup5250*port_string.labelString:              Telnet 埠 (空白=預設值=23)
+Setup5250*otherParameters.labelString:          其他參數 (選用的)
+
+Setup5250*OKButton.labelString:                 確定
+Setup5250*cancelButton.labelString:             取消
+Setup5250*SetToDefaultsButton.labelString:      設為預設值
+Setup5250*helpButton.labelString:               說明
+
+Setup5250*advancedButton.labelString:           進階...
+Setup5250*advanced5250Button.labelString:       進階 5250 連線...
+Setup5250*5250PreferencesButton.labelString:    整體 5250 喜好設定...
+Setup5250*advanced3270Button.labelString:       進階 3270 連線...
+Setup5250*3270PreferencesButton.labelString:    整體 3270 喜好設定...
+Setup5250*screenSizeLabel.labelString:          畫面大小：
+Setup5250*24x80.labelString:                    24x80 (模式 2，無圖形)
+Setup5250*32x80.labelString:                    32x80 (模式 3)
+Setup5250*43x80.labelString:                    43x80 (模式 4，無圖形)
+Setup5250*27x132.labelString:                   27x132 (模式 5，無圖形)
+Setup5250*graphicsLabel.labelString:            圖形：
+Setup5250*customSize.labelString:               自行設定 (無圖形)
+Setup5250*tn3270eLabel.labelString:             TN3270E：
+
+! 3270 and 5250 Application Preferences 
+Setup5250*panel5250PrefsTitle.labelString: 5250 喜好設定
+Setup5250*panel5250ProfilePrefsTitle.labelString: 5250 設定檔喜好設定
+Setup5250*5250AppPrefsPanelInstructions.labelString: 「5250 喜好設定」適用於所有 5250 連線。
+Setup5250*panel3270PrefsTitle.labelString: 3270 喜好設定
+Setup5250*panel3270ProfilePrefsTitle.labelString: 3270 設定檔喜好設定
+Setup5250*3270AppPrefsPanelInstructions.labelString: 「3270 喜好設定」適用於所有 3270 連線。
+
+Setup5250*keymapAreaLabel.labelString: 鍵盤對映：
+Setup5250*keymapLabel.labelString: 按鍵重新對映\n\
+功能：
+
+Setup5250*keypadAreaLabel.labelString: 小鍵盤：
+Setup5250*keypadLabel.labelString: 小鍵盤功能：
+
+Setup5250*recplayAreaLabel.labelString: 記錄/播放：
+Setup5250*recplayLabel.labelString: 記錄/播放\n\
+功能：
+
+Setup5250*colorsAreaLabel.labelString: 顏色：
+Setup5250*colorsLabel.labelString: 顏色\n\
+自行設定\n\
+功能：
+
+Setup5250*appearanceAreaLabel.labelString: 外觀：
+Setup5250*wideScreenLabel.labelString: 132 個直欄：
+Setup5250*columnSepLabel.labelString: 直欄分隔元：
+Setup5250*enterKeyLabel.labelString: Enter 鍵\n\
+的功能：
+
+Setup5250*allowUseAreaLabel.labelString: 允許使用的功能：
+Setup5250*commandMenuLabel.labelString: 指令功能表：
+Setup5250*editLabel.labelString: 編輯功能表：
+Setup5250*optionLabel.labelString: 選項功能表：
+Setup5250*printLabel.labelString: 列印功能表：
+Setup5250*helpLabel.labelString: 說明功能表：
+Setup5250*controlLabel.labelString: 控制功能表：
+Setup5250*graphicsLabel.labelString: 圖形：
+Setup5250*miscPrefLabel.labelString: 雜項\n\
+喜好設定：
+Setup5250*fontMenuLabel.labelString: 字型功能表清單：
+Setup5250*newSessionLabel.labelString: 新階段作業\n\
+視窗：
+Setup5250*browserLabel.labelString: 瀏覽器熱點：
+Setup5250*desktopLabel.labelString: 桌面檔案：
+
+Setup5250*authenticationParameters.labelString: 身份驗證參數：
+Setup5250*additionalParameters.labelString: 其他參數：
+
+! preference choice values.
+Setup5250*prefdefault.labelString: 預設值
+Setup5250*prefEnabled.labelString: 已啟用
+Setup5250*prefDisabled.labelString: 已停用
+Setup5250*prefHidden.labelString: 隱藏
+Setup5250*prefBasic.labelString: 基本
+Setup5250*prefAdvanced.labelString: 進階
+Setup5250*prefPlaybackOnly.labelString: 僅播放
+Setup5250*prefNoResizeOrMove.labelString: 否，不調整大小或移動
+Setup5250*prefFixedFontsOnly.labelString: 僅固定字型
+Setup5250*prefKeypadOnly.labelString: 僅供小鍵盤使用
+Setup5250*prefKeyboardPrintOnly.labelString: 無功能表，僅鍵盤列印
+Setup5250*prefYes.labelString: 是
+Setup5250*prefNo.labelString: 否
+Setup5250*prefEnterKey.labelString: Enter 鍵
+Setup5250*prefControlKey.labelString: 控制鍵
+Setup5250*pref24x80.labelString: 24x80 (無圖形)
+Setup5250*pref32x80.labelString: 32x80
+Setup5250*pref43x80.labelString: 43x80 (無圖形)
+Setup5250*pref27x132.labelString: 27x132 (無圖形)
+Setup5250*prefNoAllowWMClose.labelString: 否，但允許視窗關閉
+Setup5250*prefYesReadOnly.labelString: 是，但唯讀
+
+! 3270 scrolled window sizes.
+Setup5250*CommandLine3270SizeWidth:                26
+Setup5250*CommandLine3270SizeHeight:               22
+Setup5250*CommandLine3270AdvSizeWidth:             68  
+Setup5250*CommandLine3270AdvSizeHeight:            33 
+Setup5250*AppPrefs3270SizeWidth:                   56 
+Setup5250*AppPrefs3270SizeHeight:                  30 
+
+! 5250 scrolled window sizes.
+Setup5250*CommandLine5250SizeWidth:             36
+Setup5250*CommandLine5250SizeHeight:            22
+Setup5250*CommandLine5250AdvSizeWidth:          75
+Setup5250*CommandLine5250AdvSizeHeight:         29 
+Setup5250*AppPrefs5250SizeWidth:                65 
+Setup5250*AppPrefs5250SizeHeight:               30 
+
+! messages
+Setup5250*SetNonKioskPrefsDialog.okLabelString:      是
+Setup5250*SetNonKioskPrefsDialog.cancelLabelString:  否
+Setup5250*SetKioskPrefsDialog.okLabelString:      是
+Setup5250*SetKioskPrefsDialog.cancelLabelString:  否
+Setup5250*SetKioskPrefsDialog.messageString: 將所有模擬器喜好設定設為\n\
+「單一模擬器」模式的預設值嗎？
+Setup5250*SetNonKioskPrefsDialog.messageString: 將所有模擬器喜好設定設為\n\
+「多個應用程式」模式的預設值嗎？
+Setup5250*removeConnectionConfirmation.messageString: 移除已選取的連線嗎？
+Setup5250*Emulator5250Starting: 正在啟動「5250 模擬器」。請稍候。
+Setup5250*Emulator3270Starting: 正在啟動「3270 模擬器」。請稍候。
+Setup5250*3270PreferencesChanged: 若要使變更的喜好設定生效，必須結束所有現行\n\
+「3270 模擬器」階段作業。
+Setup5250*Current3270SessionIsNotForConfiguration.messageString: 會先結束所有一般「3270 模擬器」階段作業，\n\
+再啟動要修改設定檔的 3270 階段作業。
+Setup5250*Current3270SessionIsForConfiguration.messageString: 會先結束要修改設定檔的所有「3270 模擬器」階段作業，\n\
+再啟動一般 3270 階段作業。
+Setup5250*5250PreferencesChanged: 若要使變更的喜好設定生效，必須結束所有現行\n\
+「5250 模擬器」階段作業。
+Setup5250*Current5250SessionIsNotForConfiguration.messageString: 會先結束所有一般「5250 模擬器」階段作業，\n\
+再啟動要修改設定檔的 5250 階段作業。
+Setup5250*Current5250SessionIsForConfiguration.messageString: 會先結束要修改設定檔的所有「5250 模擬器」階段作業，\n\
+再啟動一般 5250 階段作業。
+! error messages
+Setup5250*ErrorPasswordIncorrect:               您輸入的密碼不正確。
+Setup5250*ErrorCurrentPasswordIncorrect:        現行密碼不正確。
+Setup5250*ErrorNewPasswordsDontMatch:           確認的新密碼不符合新密碼。
+Setup5250*ErrorCantRemoveDefaultPWOnlyOverrideIt:  無法移除預設密碼，\n\
+只用使用者密碼來取代。
+Setup5250*ErrorNoConnectionDescription:         您必須指定連線說明。
+Setup5250*ErrorConnectionDescriptionExistsAlready:  您輸入的連線說明已存在。
+Setup5250*ErrorUseUserIDInvalidDisplayName:     不支援顯示名稱 USE_USER_ID。
+Setup5250*ErrorNonNumericDataNotAllowed:        不允許非數值資料。
+
+! misc
+Setup5250*okLabelString:                        確定
+Setup5250*cancelLabelString:                    取消
+SetupXXXX*title:                                模擬器安裝程式
+SetupXXXX*iconName:                             模擬器安裝程式
+Setup3270*title:                                3270 安裝程式
+Setup3270*iconName:                             3270 安裝程式
+Setup5250*title:                                5250 安裝程式
+Setup5250*iconName:                             5250 安裝程式
+Setup5250*keymapFilename.labelString:           鍵盤對映表檔名 (選用的)
+Setup5250*keypadFilename.labelString:           小鍵盤檔名 (選用的)	
+Setup5250*sslFilename.labelString:              SSL 檔名 (選用的)	
+
+! help dialog.
+SetupXXXX*helpAboutTextTitle.labelString: 關於 IBM 模擬器安裝程式
+SetupXXXX*helpAboutText.value: (C) Copyright 2001, 2005 IBM Corporation, All rights reserved.\n\
+\n\
+此設定程式是用來配置及啟動 IBM 模擬器。
+Setup5250*helpAboutTextTitle.labelString: 關於 IBM 5250 模擬器安裝程式
+Setup5250*helpAboutText.value: (C) Copyright 2001, 2005 IBM Corporation, All rights reserved.\n\
+\n\
+此設定程式是用來配置及啟動 IBM 5250 模擬器。
+Setup3270*helpAboutTextTitle.labelString: 關於 IBM 3270 模擬器安裝程式
+Setup3270*helpAboutText.value: (C) Copyright 2001, 2005 IBM Corporation, All rights reserved.\n\
+\n\
+此設定程式是用來配置及啟動 IBM 3270 模擬器。
+
+!arabic parameters
+Setup5250*arabicParametersLabel.labelString: 阿拉伯文參數
+Setup5250*allocateLamAlefLabel.labelString: 配置空格\n\
+ 給 LamAlef
+! ENGL1SH_VERS10N 1.4.2.1 DO NOT REMOVE OR CHANGE THIS LINE

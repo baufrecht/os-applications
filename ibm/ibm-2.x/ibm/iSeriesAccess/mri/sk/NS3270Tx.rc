@@ -1,0 +1,690 @@
+!
+!
+!
+! This file contains the resource text strings for the IBM Linux 3270 and 5250
+! emulators, in particular the main emulator windows.
+
+! This resource file will be stored on all servers in locale specific ASCII (819 for Latin1
+! languages). 
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. This resource file contains text strings for the 3270 and 5250 emulators.  Much of
+!    the resource text is common to both emulators. Some is specific to one emulator.
+!    IBM9999 = Resources used by both 3270 and 5250 emulators.
+!    IBM3270 = Resources used by the 3270 emulator.
+!    IBM5250 = Resources used by the 5250 emulator.
+! 4. Resource format: 
+!    - A resource line starts with IBM3270*, IBM5250*, or IBM9999*, followed by a resource name
+!      and a ":".  Do NOT make any changes to the text to the left of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+!******************************************************************************
+!************************ BEGIN DO NOT TRANSLATE ******************************
+!******************************************************************************
+!*   The first section of resources are are locale specific but               *
+!*   DO NOT REQUIRE TRANSLATION.                                              *
+!*                                                                            *
+!* This source file enables the resource section for Latin1 and Latin2.       *
+!*                                                                            *
+!* For ru_RU or Latin5 locales and DBCS locales                               *
+!*      1. Place a '!' as the first character in each line in the Latin1      *
+!*      and Latin2 section                                                    *
+!*      2. Remove the '!' character for each resource line in the apropriate  *
+!*      section that matches your locale.                                     *
+!*                                                                            *
+!* For example, ru_RU should place ! in front of all lines in the LATIN1      *
+!* section remove the ! from all lines in the LATIN5 section.                 *      
+!******************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN1 and LATIN2                ****************
+!**************************************************************************
+IBM9999*font_List:     -*-*-medium-r-normal-*-*-*-*-*-m-150-*-*;-*-*-medium-r-normal-*-*-*-*-*-m-110-*-*;-*-*-medium-r-normal-*-*-*-*-*-m-90-*-*;-*-*-medium-r-normal-*-*-*-*-*-m-70-*-*;-*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+IBM9999*largestFontList:     -*-*-medium-r-normal-*-*-*-*-*-m-150-*-*
+IBM9999*extraLargeFontList:  -*-*-medium-r-normal-*-*-*-*-*-m-110-*-*
+IBM9999*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-90-*-*
+IBM9999*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-70-*-*
+IBM9999*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+!**************************************************************************
+!****************   END LATIN1 and LATIN2                  ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN5                           ****************
+!**************************************************************************
+!IBM9999*font_List:     -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*;-*-*-medium-r-normal-*-*-*-*-*-c-90-*-*;-*-*-medium-r-normal-*-*-*-*-*-c-70-*-*;-*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!IBM9999*largestFontList:     -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*
+!IBM9999*extraLargeFontList:  -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*
+!IBM9999*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!IBM9999*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-70-*-*
+!IBM9999*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!**************************************************************************
+!****************   END   LATIN5                           ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (ja_JP ko_KR zh_CN)   ****************
+!**************************************************************************
+!IBM9999*font_List:            -*-*-medium-r-normal--24-*-*-*-c-*;-*-*-medium-r-normal--16-*-*-*-c-*
+!IBM9999*largestFontList:     -*-*-medium-r-normal--24-*-*-*-c-*
+!IBM9999*extraLargeFontList:  -*-*-medium-r-normal--24-*-*-*-c-*
+!IBM9999*largeFontList:       -*-*-medium-r-normal--16-*-*-*-c-*
+!IBM9999*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!IBM9999*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*
+!**************************************************************************
+!****************   END DBCS (ja_JP ko_KR zh_CN)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (zh_TW)   ****************
+!**************************************************************************
+!IBM9999*font_List:            -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*;-*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!IBM9999*largestFontList:     -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!IBM9999*extraLargeFontList:  -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!IBM9999*largeFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!IBM9999*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!IBM9999*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!**************************************************************************
+!****************   END DBCS (zh_TW)     ****************
+!**************************************************************************
+
+!uncomment the appropriate inputMethod
+!For LatinX (non DBCS locales) or locales without an input method.
+IBM5250*inputMethod:
+!
+! For ja_JP
+!IBM5250*inputMethod: kinput2
+!
+! For ko_KR 
+!IBM5250*inputMethod: Ami
+!
+!For zh_CN
+!IBM5250*inputMethod: xcin-zh_CN
+!
+!For zh_TW
+!IBM5250*inputMethod: xcin-zh_TW
+
+!**************************************************************************
+!****************   END DO NOT TRANSLATE                   ****************
+!**************************************************************************
+
+
+
+IBM5250*MainWindow.title: 5250
+IBM3270*MainWindow.title: 3270
+
+IBM5250*errorMsgDialog_popup.title: Chyba 5250
+IBM3270*errorMsgDialog_popup.title: Chyba 3270
+
+IBM5250*warningMsgDialog_popup.title: Informácie 5250
+IBM3270*warningMsgDialog_popup.title: Informácie 3270
+
+IBM5250*hostNameDialog_popup.title: Nová relácia 5250
+IBM3270*hostNameDialog_popup.title: Nová relácia 3270
+
+IBM5250*hostNameDialog.selectionLabelString: Zadajte nový názov hostiteµa 5250.
+IBM3270*hostNameDialog.selectionLabelString: Zadajte nový názov hostiteµa 3270.
+
+IBM5250*hostNameDialog.iconName: Nová relácia 5250
+IBM3270*hostNameDialog.iconName: Nová relácia 3270
+
+IBM5250*lowMemoryDialog_popup.title: Málo pamäte 5250
+IBM3270*lowMemoryDialog_popup.title: Málo pamäte 3270
+
+IBM5250*new5250Button.labelString: Nová relácia 5250...
+
+IBM5250*quitButton.labelString: Ukonèi» 5250
+IBM3270*quitButton.labelString: Ukonèi» 3270
+
+IBM5250*localPrintControls_popup.title: Tlaè obrazovky 5250
+IBM3270*localPrintControls_popup.title: Tlaè obrazovky 3270
+
+
+!**************************************************************************************
+!** Resources in both 5250 and 3270 that do not need separate translations
+!**************************************************************************************
+
+!***********************
+!**  Various Dialogs  **
+!***********************
+IBM9999*lowMemoryDialog.messageString: Nedostatok pamäte na dokonèenie operácie.
+
+IBM9999*ErrorMsgMaxSessions: Relácia nie je dovolená. Dosiahol sa maximálny poèet relácií.
+
+! -DISPLAY_NAME is not translated.
+IBM9999*ErrorMsgInvalidName: Neplatná ¹pecifikácia parametra -DISPLAY_NAME.
+
+! \n in the following resource string allows text following \n to appear on a new line.
+! \n is not translated. You can move, add, or remove the \n as needed.
+IBM9999*ErrorMsgNameInUse: Názov(y) zadaný pre parameter -DISPLAY_NAME sa u¾ pou¾íva.\n\
+Vá¹ administrátor systému obmedzil vá¹ poèet relácií.
+
+! BROWSER is not translated.
+IBM9999*ErrorMsgBrowserStart: Premenná prehliadaèa BROWSER nie je definovaná, nedá sa spusti» prehliadaè.
+
+IBM9999*ErrorMsgTelnetUndefined: Telnet nie je definované v súbore slu¾ieb...
+
+IBM9999*ErrorMsgUnknownHost: Hostiteµ je neznámy.
+
+IBM9999*ErrorMsgUnableToConnect: Nedá sa inicializova» pripojenie.
+
+IBM9999*ErrorMsgTelnetNegoFailed: Zlyhalo pripojenie pomocou protokolu Telnet.
+
+IBM9999*ErrorMsgRetryButton: Zopakova»
+
+! \n in the following resource string allows text following \n to appear on a new line.
+IBM9999*ErrorMsgNoHostData: Preru¹ilo sa pripojenie k hostiteµovi.\n\
+Re¹tartujte reláciu emulátora.
+
+! \n in the following resource string allows text following \n to appear on a new line.
+IBM9999*ErrorMsgNoHostData2: Preru¹ilo sa pripojenie k hostiteµovi.\n\
+Znovu spusti» reláciu emulátora?
+
+IBM9999*ErrorMsgFatalTelnetError: Do¹lo k fatálnej chybe telnetu.
+
+IBM9999*ErrorMsgColorMapActive: Aplikácia mapovania farieb je u¾ aktívna v inej relácii.
+
+IBM9999*ErrorMsgColorMapLowMemory: Nedostatok pamäte na spustenie mapovania farieb.
+
+IBM9999*ErrorMsgKeyMapActive: Aplikácia mapovania klávesov je u¾ aktívna v inej relácii.
+
+! this cannot be made much longer during translation.
+IBM9999*ErrorMsgKeypadActive:  Aplikácia Prispôsobenie pomocnej klávesnice je u¾ aktívna v inej relácii.
+
+IBM9999*ErrorMsgKeyMapLowMemory: Nedostatok pamäte na spustenie Premapovania klávesnice.
+
+IBM9999*ErrorMsgKeypadLowMemory:   Nedostatok pamäte na spustenie Prispôsobenia pomocnej klávesnice.
+
+IBM9999*ErrorMsgHelpViewLowMemory: Nedostatok pamäte na spustenie Prezeraèa pomoci
+
+IBM9999*ErrorMsgMiscellaneousLowMemory: Nedostatok pamäte na spustenie Rôznych preferencií.
+
+! this cannot be made any longer during translation.
+IBM9999*ErrorMsgNSMServerDownLevel:   Nedá sa zaznamenáva». Server IBM Network Station Manager je vypnutý.
+
+IBM9999*ErrorMsgNoPrinters:           Nie sú nakonfigurované ¾iadne tlaèiarne. Kontaktujte administrátora systému.
+
+! \n in the following resource string allows text following \n to appear on a new line.
+IBM9999*ErrorMsgNoKeypadSelected: Nie je vybratý ¾iadny súbor.\n\
+Vyberte súbor alebo Zru¹i». 
+
+! \n in the following resource string allows text following \n to appear on a new line.
+IBM9999*ErrorMsgNoKeypads: Nena¹iel sa ¾iadny súbor pomocnej klávesnice. Vyberte voµbu 'Prispôsobi» pomocnú klávesnicu...'\n\
+z ponuky Voµba a vytvorte u¾ívateµskú pomocnú klávesnicu.
+
+IBM9999*ErrorMsgTooManyKeypads: Naraz mô¾ete ma» aktívnych len 10 pomocných klávesníc.
+	
+IBM9999*ErrorMsgFileNameChars: Zadali ste znak, ktorý názov súboru nemô¾e obsahova».
+
+! \n in the following resource string allows text following \n to appear on a new line.
+IBM9999*WarningMsgColorNotAvailable: Niektoré farby emulátora nie sú dostupné.\n\
+Tieto farby sú prispôsobené pre va¹u reláciu.
+
+IBM9999*WarningMsgColorFileCorrupt: V súbore farieb existujú chyby, pou¾ijú sa predvolené farby.
+
+IBM9999*hostNameDialog*startupPlaybackChoice.labelString: Pou¾i» spú¹»ací prehrávací súbor
+
+! java ECL that is not supported yet but please translate
+IBM9999*runAppletDialog_popup.title: Aplet Java ECL
+
+! java ECL that is not supported yet but please translate
+IBM9999*runAppletDialog.selectionLabelString: Zadajte názov triedy.
+
+! java ECL that is not supported yet but please translate
+IBM9999*runAppletDialog.iconName: Aplet Java ECL
+
+! java ECL that is not supported yet but please translate
+IBM9999*runAppletDialog: Zadajte názov triedy.
+
+! java ECL that is not supported yet but please translate
+IBM9999*ErrorMsgUnableToRunApplet: Nedá sa naèíta» trieda
+
+
+!*******************************
+!**  Menu items in emulators  **
+!*******************************
+IBM9999*cmdCascade.labelString: Príkaz
+
+IBM9999*editCascade.labelString: Upravi»
+
+IBM9999*pasteButton.labelString: Vlo¾i»
+
+IBM9999*copyButton.labelString: Kopírova»
+
+IBM9999*cutButton.labelString: Vystrihnú»
+
+IBM9999*optCascade.labelString: Voµba
+
+IBM9999*fontMenuCascade.labelString: Písma
+
+IBM9999*pfkeysButton.labelString: Pomocná Klávesnica...
+
+IBM9999*keypadCascade.labelString: Pomocná klávesnica
+
+IBM9999*customizeButton.labelString: Prispôsobi» pomocnú klávesnicu...   
+
+IBM9999*recordButton.labelString: Zaznamena»...
+
+IBM9999*playbackButton.labelString: Prehra»...
+
+IBM9999*miscButton.labelString: Rôzne preferencie...
+
+IBM9999*colormapButton.labelString: Mapovanie farieb...
+
+IBM9999*keymapButton.labelString: Premapovanie pomocnej klávesnice...
+
+! java ECL that is not supported yet but please translate
+IBM9999*runAppletButton.labelString: Spusti» aplet...
+
+IBM9999*ctlCascade.labelString: Ovládanie
+
+IBM9999*resetButton.labelString: Kláves Reset
+
+IBM9999*sysreqButton.labelString: Kláves System Request
+
+IBM9999*attentionButton.labelString: Kláves Attention
+
+IBM9999*helpkeyButton.labelString: Kláves Help
+
+IBM9999*enterkeyButton.labelString: Kláves Enter
+
+IBM9999*prtCascade.labelString: Tlaèi»
+
+IBM9999*systemButton.labelString: Systém
+
+IBM9999*localButton.labelString: Tlaè obrazovky...
+
+IBM9999*helpCascade.labelString: Pomoc
+
+! message on IBM5250 on status line, cannot be made any longer, you can remove some periods.
+IBM9999*msgWaitingMsg.labelString: Èaká správa.....
+
+IBM9999*cursorRowCol.labelString:  01/001
+
+IBM9999*okLabelString: OK
+
+IBM9999*cancelLabelString: Zru¹i»
+
+!****************************
+!** Local Print Resources
+!****************************
+
+IBM9999*localPrintPrinterSelectButton.labelString: Vyberte tlaèiareò:
+
+IBM9999*localPrintPrinterSelectControls_popup.title: Výber tlaèiarne
+
+IBM9999*localPrintPrinterSelectServerDelineator: @
+
+IBM9999*localPrintPrinterSelectLocalDesignator: (lokálna)
+
+IBM9999*localPrintPDTLabel.labelString: Definièná tabuµka tlaèiarne:
+
+IBM9999*localPrintOtherOptions.labelString: Iné voµby tlaèe:
+
+IBM9999*localPrintFormFeedLabel.labelString: Posun formulára:
+
+IBM9999*localPrintFormFeedYesButton.labelString: Áno
+
+IBM9999*localPrintFormFeedNoButton.labelString: Nie
+
+IBM9999*localPrintOrientationLabel.labelString: Orientácia:
+
+IBM9999*localPrintOrientationPortraitButton.labelString: Na vý¹ku
+
+IBM9999*localPrintOrientationLandscapeButton.labelString: Na ¹írku
+
+IBM9999*localPrintControls*startBtn.labelString: Tlaèi»
+
+IBM9999*localPrintControls*cancelBtn.labelString: Zru¹i»
+
+IBM9999*localPrintControls*selectOptions.labelString: Vyberte voµby pre tlaè
+
+IBM9999*localPrintControls*printing.labelString: Prebieha tlaè...
+
+IBM9999*PrintCommand.labelString: Príkaz tlaèe
+
+
+!********************************************************
+!**                  Record Resources
+!**
+!** MAX:  Push buttons should not exceed 8 characters
+!********************************************************
+IBM9999*recordControl_popup.title: Ovládacie prvky záznamu
+
+IBM9999*recordControl*startBtn.labelString: Spusti»
+
+IBM9999*recordControl*cancelBtn.labelString: Zru¹i»
+
+IBM9999*recordControl*pauseBtn.labelString: Pauza
+
+IBM9999*recordControl*stopBtn.labelString: Zastavi»
+
+IBM9999*recordControl*recordControlLabelRecording.labelString: Zaznamenáva sa.
+
+IBM9999*recordControl*recordControlLabelPaused.labelString: Pozastavené.
+
+IBM9999*recordControl*recordControlKeysRemaingLabel.labelString: Zvy¹ný priestor:
+
+IBM9999*recordPauseControls_popup.title: Voµby pozastavenia zaznamenávania
+
+! this cannot be made much longer during translation. 
+IBM9999*recordPauseControls*recordPauseChoicesInstructions.labelString: Zaznamenávanie bolo pozastavené. Vyberte voµbu, ktorá \n\
+sa má vykona» poèas prehrávania:
+
+IBM9999*recordPauseControls*recordPauseRecordBtn.labelString: Pozastavi» prehrávanie
+
+IBM9999*recordPauseControls*recordPauseUseridBtn.labelString: Vlo¾i» ID u¾ívateµa
+
+IBM9999*recordPauseControls*recordPausePasswordBtn.labelString: Vlo¾i» heslo
+
+IBM9999*recordPauseControls*recordPauseNoneBtn.labelString: ®iadne
+
+IBM9999*recordPauseControls*continueBtn.labelString:   Pokraèova» v zaznamenávaní
+
+IBM9999*recordPauseControls*pauseStopBtn.labelString: Zastavi» zaznamenávanie
+
+IBM9999*recordFileControl_popup.title: Ovládacie prvky ulo¾enia súboru
+
+IBM9999*recordFileControl*recordFileListLabel.labelString: Vyberte prehrávací súbor na nahradenie.
+
+IBM9999*recordFileControl*acceleratorBtn.labelString: Priradi» voliteµný akcelerátor
+
+IBM9999*recordFileControl*accButton0.labelString: ®iadne
+
+! Function keys for accelerators.
+IBM9999*recordFileControl*accButton1.labelString:  F1
+
+IBM9999*recordFileControl*accButton2.labelString:  F2
+
+IBM9999*recordFileControl*accButton3.labelString:  F3
+
+IBM9999*recordFileControl*accButton4.labelString:  F4
+
+IBM9999*recordFileControl*accButton5.labelString:  F5
+
+IBM9999*recordFileControl*accButton6.labelString:  F6
+
+IBM9999*recordFileControl*accButton7.labelString:  F7
+
+IBM9999*recordFileControl*accButton8.labelString:  F8
+
+IBM9999*recordFileControl*accButton9.labelString:  F9
+
+IBM9999*recordFileControl*accButton10.labelString:  F10
+
+IBM9999*recordFileControl*accButton11.labelString:  F11
+
+IBM9999*recordFileControl*accButton12.labelString:  F12
+
+IBM9999*recordFileControl*accButton13.labelString:  F13
+
+IBM9999*recordFileControl*accButton14.labelString:  F14
+
+IBM9999*recordFileControl*accButton15.labelString:  F15
+
+IBM9999*recordFileControl*accButton16.labelString:  F16
+
+IBM9999*recordFileControl*accButton17.labelString:  F17
+
+IBM9999*recordFileControl*accButton18.labelString:  F18
+
+IBM9999*recordFileControl*accButton19.labelString:  F19
+
+IBM9999*recordFileControl*accButton20.labelString:  F20
+
+IBM9999*recordFileControl*accButton21.labelString:  F21
+
+IBM9999*recordFileControl*accButton22.labelString:  F22
+
+IBM9999*recordFileControl*accButton23.labelString:  F23
+
+IBM9999*recordFileControl*accButton24.labelString:  F24
+
+IBM9999*recordFileControl*recordFileTextLabel.labelString: Zadajte názov nového prehrávacieho súboru.
+
+IBM9999*recordFileControl*saveBtn.labelString: Ulo¾i»
+
+IBM9999*recordFileControl*doNotSaveBtn.labelString: Neulo¾i»
+
+IBM9999*recordFileControl*recordFileReplaceWarningDialog_popup.title: Upozornenie na nahradenie prehrávacieho súboru
+
+IBM9999*recordFileControl*recordFileReplaceWarningDialog.messageString: Súbor u¾ existuje. Chcete ho prepísa»?
+
+IBM9999*recordFileControl*recordFileMsgDialog_popup.title: Chybová správa pri ukladaní prehrávacieho súboru
+
+IBM9999*RecordFileMsgNoOpen: Nedá sa otvori» súbor.  Stlaèenia klávesov sa neulo¾ili.
+
+IBM9999*RecordFileMsgNoAccess: Nedá sa pristúpi» k adresáru.
+
+IBM9999*RecordFileMsgNoMake: Nedá sa vytvori» adresár.
+
+
+!****************************
+!** Playback Resources
+!****************************
+IBM9999*playbackControl_popup.title: Ovládacie prvky prehrávania
+
+IBM9999*playbackControl*playbackControlLabelSelectFile.labelString: Vyberte prehrávací súbor na prehratie.
+
+IBM9999*playbackControl*playbackFileListLabel.labelString: U¾ívateµské prehrávacie súbory
+
+IBM9999*playbackControl*playbackDefaultFileListLabel.labelString: Predvolené prehrávacie súbory
+
+IBM9999*scaleBtn.titleString: Rýchlos» prehrávania
+
+IBM9999*playbackControl*startBtn.labelString: Spusti»
+
+IBM9999*playbackControl*cancelBtn.labelString: Zru¹i»
+
+IBM9999*playbackControl*deleteBtn.labelString: Vymaza» \
+
+IBM9999*playbackControl*editBtn.labelString: Upravi»
+
+IBM9999*playbackControl*pauseBtn.labelString: Pauza
+
+IBM9999*playbackControl*continueBtn.labelString: Pokraèova»
+
+IBM9999*playbackControl*stopBtn.labelString: Zastavi»
+
+IBM9999*playbackControl*playbackControlLabelStopped.labelString: Zastavené.
+
+IBM9999*playbackControl*playbackControlLabelPlaying.labelString: Prehráva sa.
+
+IBM9999*playbackControl*playbackControlLabelPaused.labelString:  Pozastavené.
+
+IBM9999*playbackControl*playbackControlLabelDone.labelString: Dokonèené:
+
+IBM9999*playbackControl*playbackKeysRemainingLabel.labelString:  Zvy¹né údaje:
+
+IBM9999*playbackControl*playbackDeleteWarningDialog_popup.title: Upozornenie na vymazanie prehratia
+
+IBM9999*playbackControl*playbackDeleteWarningDialog.messageString: Chcete vymaza» vybraté súbory?
+
+IBM9999*playbackControl*playbackMsgDialog_popup.title: Chybová správa z prehrávania
+
+IBM9999*playbackControl*playbackPauseDialog_popup.title: Pozastavi» prehrávanie
+
+IBM9999*playbackControl*playbackPauseDialog.okLabelString:        Pokraèova»
+
+IBM9999*playbackControl*playbackPauseDialog.cancelLabelString:    Zastavi»
+
+IBM9999*playbackPauseDialogMsg1: Prehrávanie pozastavené. Zadajte údaje a pokraèujte.
+
+IBM9999*playbackPauseDialogMsg2: Prehrávanie pozastavené. Zadajte heslo a pokraèujte.
+
+IBM9999*playbackPauseDialogMsg3: Prehrávanie pozastavené u¾ívateµom.
+
+IBM9999*PlaybackMsgNoStartup: Spú¹»ací prehrávací súbor nie je v zozname prehrávania.
+
+IBM9999*PlaybackMsgFileNotInList:  Prehrávací súbor nie je v zozname prehrávania.
+
+IBM9999*PlaybackMsgFileCorrupt: Prehrávací súbor sa nevytvoril Zaznamenaním.
+
+IBM9999*PlaybackMsgFileNoRead: Nedá sa preèíta» prehrávací súbor klávesov. Prehrávanie sa nedá spusti».
+
+IBM9999*PlaybackMsgFileNoOpen: Nedá sa otvori» prehrávací súbor. Prehrávanie sa nedá spusti».
+
+IBM9999*PlaybackMsgIncompatible:  Prehrávací súbor nie je kompatibilný s aktuálnou obrazovkou.
+
+IBM9999*PlaybackMsgPasswordLocation:  Heslo sa nedá vlo¾i» na pozíciu kurzora.
+
+
+!*****************************
+! Keypad Resources
+!*****************************
+IBM9999*keypadfilechangebox_popup.title:   Plávajúca pomocná klávesnica
+
+IBM9999*keypadfilechangeboxlabel.labelString:   Vyberte súbor pomocnej klávesnice:
+
+IBM9999*userKeypads.labelString:  U¾ívateµské pomocné klávesnice
+
+IBM9999*defaultKeypads.labelString:  Predvolené pomocné klávesnice
+
+IBM9999*cancelkeypad.labelString:   Zru¹i»
+
+IBM9999*keypadOKbox.labelString:   OK
+
+!*****************************************************************************
+! This menubar resource is used for double byte languages, but DOES need to be
+! translated into all MRI languages (because users can have a different MRI
+! language than their emulator session language).
+!*****************************************************************************
+IBM9999*altviewButton.labelString:  Alternatívne zobrazenie
+
+!***********************************************************
+! The resources below are used to prompt the user to choose between two types 
+! of Japanese.  These resources should be translated into all languages.
+!***********************************************************
+IBM9999*hostNameDialog.helpLabelString:  Roz¹írené...
+IBM9999*katawidget.title:   Výber japonskej kódovej stránky hostiteµa
+IBM9999*labelw.labelString:  Vyberte kódovú stránku hostiteµa
+IBM9999*button_two.labelString:  Roz¹írená Katakana (5026)
+IBM9999*button_one.labelString:  Roz¹írená latinka (5035)
+IBM9999*okw.labelString:  OK
+IBM9999*cancelw.labelString:  ZRU©I«
+
+
+!***********************************
+!* Shared Emulator Print Resources *
+!***********************************
+
+IBM9999*localPrintPrintSelectionLabel.labelString:       Vytlaèi» výber:
+
+IBM9999*localPrintPrintSelectionTextButton.labelString:  Text
+
+IBM9999*localPrintPrintSelectionImageButton.labelString: Obrázok
+
+IBM9999*localPrintImageColorSupportLabel.labelString: Farebná tlaè:
+
+IBM9999*localPrintImageColorSupportFalseButton.labelString: Nie
+
+IBM9999*localPrintImageColorSupportTrueButton.labelString: Áno
+
+IBM9999*localPrintPageSizeMenuLabel.labelString:  Veµkos» papiera
+
+! The following are printer page sizes.
+IBM9999*localPrintPageSizeMenu*pageSize1.labelString:  Letter (8,5 x 11 palcov)
+
+IBM9999*localPrintPageSizeMenu*pageSize2.labelString:  Legal (8,5 x 14 palcov)
+
+IBM9999*localPrintPageSizeMenu*pageSize3.labelString:  A4 (210 x 297 mm)
+
+IBM9999*localPrintPageSizeMenu*pageSize4.labelString:  A5 (148 x 210 mm)
+
+IBM9999*localPrintPageSizeMenu*pageSize5.labelString:  B5 ISO (176 x 250 mm)
+
+IBM9999*localPrintPageSizeMenu*pageSize6.labelString:  B5 JIS (182 X 257 mm)
+
+IBM9999*localPrintPageSizeMenu*pageSize7.labelString:  Executive (7,25 x 10,5 palcov)
+
+IBM9999*localPrintPageSizeMenu*pageSize8.labelString:  Statement (8,5 x 5,5 palcov)
+
+IBM9999*localPrintDPIMenuLabel.labelString:  Rozlí¹enie (dpi):
+
+IBM9999*localPrintDPIMenu*DPI1.labelString:  75
+
+IBM9999*localPrintDPIMenu*DPI2.labelString:  100
+
+IBM9999*localPrintDPIMenu*DPI3.labelString:  150
+
+IBM9999*localPrintDPIMenu*DPI4.labelString:  200
+
+IBM9999*localPrintDPIMenu*DPI5.labelString:  300
+
+IBM9999*localPrintDPIMenu*DPI6.labelString:  600
+
+IBM9999*ErrorMsgBrowserLowMemory:  Nedostatok pamäte na dokonèenie operácie.
+
+IBM9999*userKeypads.labelString: U¾ívateµské pomocné klávesnice
+
+IBM9999*defaultKeypads.labelString: Predvolené pomocné klávesnice
+
+IBM9999*playbackControl*playbackDeleteWarningDialog.cancelLabelString: Zru¹i»
+
+IBM9999*playbackControl*playbackDeleteWarningDialog.okLabelString: OK
+
+!***********************************
+!**  Resources only used by 3270  **
+!***********************************
+! 'Command' menu
+IBM3270*sessMenuCascade.labelString: Nová relácia 3270
+
+IBM3270*new_sessionButton.labelString: Nová relácia 3270
+
+IBM3270*new_mod2Button.labelString: Nová relácia 24x80
+
+IBM3270*new_mod3Button.labelString: Nová relácia 32x80
+
+IBM3270*new_mod4Button.labelString: Nová relácia 43x80
+
+IBM3270*new_mod5Button.labelString: Nová relácia 27x132
+
+IBM3270*graphicsMsg.labelString: Grafika
+
+IBM3270*font0Button.labelString: ©tandard
+
+IBM3270*printTelnetFailure: Dohodovanie\n\
+Telnet pre tlaè bolo neúspe¹né.
+
+!**************************************************
+!*
+!*        Printing translations 
+!*
+!*      Added by AJMEYER for V310.nc
+!*
+!**************************************************
+
+IBM9999*printDialogPrinterTypeLabel.labelString:  Typ tlaèiarne:
+
+IBM9999*printDialogPrinterTypeMenu*postscript.labelString:  PostScript
+
+IBM9999*printDialogPrinterTypeMenu*ascii.labelString:  ASCII
+
+IBM9999*printDialogPrinterTypeMenu*pcl.labelString:  PCL
+
+IBM9999*printDialogPrinterSelectControls_popup.title:   Výber tlaèiarne
+
+IBM9999*printSelectDialogOKButton.labelString:  OK
+
+IBM9999*printSelectDialogCancelButton.labelString:  Zru¹i»
+
+IBM9999*printDialogSelectPrinter.labelString: Vyberte tlaèiareò:
+
+IBM9999*printDialogPrintCommandLabel.labelString: Príkaz tlaèe:
+
+IBM5250*hostNameDialog*useridLabel.labelString: ID u¾ívateµa:
+
+IBM5250*hostNameDialog*passwordLabel.labelString: Heslo:
+
+!**************************************************
+!*
+!*                ICU path  
+!*
+!*     
+!**************************************************
+
+
+IBM5250*ICUTablePath:  /usr/local/share/icu/3.4
+! ENGL1SH_VERS10N 1.8.2.1 DO NOT REMOVE OR CHANGE THIS LINE

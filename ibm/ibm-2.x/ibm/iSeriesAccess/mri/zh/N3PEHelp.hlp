@@ -1,0 +1,80 @@
+//// ENGLISH_SOURCE_VERSION= 1.2 
+////This file contains the playback editor program on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file will be stored in locale specific ASCII (code page 819 for Latin1 languages).
+
+
+////Help text format (this section is not displayed to IBM emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1.
+//// 3. This help file contains help text for the 3270 and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator.   A comment line of four "/" characters followed by:
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+//// 3B.  "5250" indicates subsequent data is only displayed in 5250 on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in both 3270 and 5250 on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+//// 3D Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters. The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Do not change the order of topics in this help text file.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+
+----"3270 回放编辑器帮助"
+++++"一般信息"
+有关使用此帮助查看程序的信息，请参阅主仿真器帮助中的第一个主题（在仿真器窗口中选择“帮助”菜单栏选项）。
+
+本帮助信息描述如何编辑现有的回放文件。回放文件是使用“选项”菜单中的“录制”选项创建的，它由用户定义的各种操作和键序列组成。
+
+注意：每次只能有一个回放编辑器程序处于活动状态。
+
+++++"窗口布局"
+回放编辑器窗口包含键盘操作选择区域（左边）、回放操作列表工作区域（右边）、操作栏区域（底部）和消息区域（底部）。
+
+键盘操作选择区域包含下列内容：
+
+1) “可用的操作列表”是可用的键盘操作。从此列表中选择的操作将成为当前操作。
+
+2) “字符列表”列示所有可用字符。选择的字符将成为当前操作。要选择字符，单击该字符即可。
+
+3) “操作帮助”按钮在一个操作帮助窗口中提供键盘操作定义。可以打印操作定义。
+
+4) “插入操作 ->”按钮将当前操作插入到回放操作列表工作区域的所选回放文件操作上方。
+
+注意：只有一个操作可以是当前操作。
+
+
+回放操作列表工作区域包含下列内容：
+
+1) “当前回放文件”显示回放文件名。
+
+2) “当前回放文件操作”区域列示当前回放文件中的键盘操作。必须选择一个键盘操作行才能插入、编辑或除去操作。操作行限长大约 100 个字符。
+
+3) “编辑操作”按钮允许对所选操作进行编辑。编辑窗口中的“确定”按钮替换所编辑的操作。“取消”按钮取消对操作所作的更改。
+
+4) “插入行”按钮在回放文件操作列表中的所选位置插入空白行，接着，可以对这个空白行进行编辑。
+
+5) “除去操作”按钮除去选择的操作。
+
+6) “确定”按钮接受对回放文件操作列表所作的更改。
+
+7) “取消”按钮取消对回放文件操作列表所作的更改。
+
+
+“操作栏”按钮提供了下列功能：
+
+1) “保存”允许保存回放文件更改。可以更改原始回放文件，也可以将更改保存在新的回放文件中。
+
+2) “退出”从“回放文件编辑器”程序中退出。
+
+3) “帮助”显示本帮助文本。
+
+
+消息区域：显示信息和错误消息。
+
+++++"鼠标操作"
+“可用操作列表”列示所有可以在回放文件中使用的可用操作，包括可以在回放文件中录制的鼠标操作。鼠标操作包含由逗号分隔的行和列位置参数；例如 (12,61)。
+
+////3270
+++++"3270 键盘提早解锁"
+注意：3270 应用程序有时会在屏幕更新完成之前将键盘解锁。在回放期间，3270 仿真器自动添加延迟。有关更多信息，请参阅 3270 主帮助中的“回放”主题。
+////9999

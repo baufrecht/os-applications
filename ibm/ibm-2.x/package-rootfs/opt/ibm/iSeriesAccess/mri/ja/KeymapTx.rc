@@ -1,0 +1,1749 @@
+!
+!
+!
+! This file contains the resource text strings for the IBM Network Station 3270, 5250, VTxxx
+! emulators, in particular the keyboard remapping, keypad customize, and playback edit programs.
+
+! This resource file is stored in locale specific ASCII (code page 819 for Latin1 languages).
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. Resource format:
+!    - A resource line starts with one of the following strings:
+!      Keymap52* : for keymapper resources
+!      Keypad52* : for keypad customize resources
+!      Playedit* : for playback editor resources
+!      Keyxxx52* : for resources shared by keymapper and keypad
+!      AllShare* : for resources shared by keymapper, keypad, and playback editor
+!    - Each string is followed by a resource name and a ":".
+!       Do NOT make any changes to the text to the left of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+
+!******************************************************************************
+!************************ BEGIN DO NOT TRANSLATE ******************************
+!******************************************************************************
+!*   The first section of resources are are locale specific but               *
+!*   DO NOT REQUIRE TRANSLATION.                                              *
+!*                                                                            *
+!* This source file enables the resource section for Latin1 and Latin2.       *
+!*                                                                            *
+!* For ru_RU or Latin5 locales and DBCS locales                               *
+!*      1. Place a '!' as the first character in each line in the Latin1      *
+!*      and Latin2 section                                                    *
+!*      2. Remove the '!' character for each resource line in the apropriate  *
+!*      section that matches your locale.                                     *
+!*                                                                            *
+!* For example, ru_RU should place ! in front of all lines in the LATIN1      *
+!* section remove the ! from all lines in the LATIN5 section.                 *
+!******************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN1 and LATIN2                ****************
+!**************************************************************************
+!Keypad52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-110-*-* \
+!Keypad52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-90-*-* \
+!Keypad52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-* \
+!Keymap52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-90-*-* \
+!Keymap52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-70-*-* \
+!Keymap52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-* \
+!Playedit*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-90-*-* \
+!Playedit*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-70-*-* \
+!Playedit*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+!**************************************************************************
+!****************   END LATIN1 and LATIN2                  ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN5                           ****************
+!**************************************************************************
+!Keypad52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*
+!Keypad52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!Keypad52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!Keymap52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!Keymap52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-70-*-*
+!Keymap52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!Playedit*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!Playedit*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-70-*-*
+!Playedit*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!**************************************************************************
+!****************   END   LATIN5                           ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (ja_JP ko_KR zh_CN)   ****************
+!**************************************************************************
+Keypad52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-* \
+Keypad52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-* \
+Keypad52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-* \
+Keymap52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-* \
+Keymap52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-* \
+Keymap52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-* \
+Playedit*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-* \
+Playedit*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-* \
+Playedit*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*
+!**************************************************************************
+!****************   END DBCS (ja_JP ko_KR zh_CN)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (zh_TW)   ****************
+!**************************************************************************
+!Keypad52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Keypad52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Keypad52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Keymap52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Keymap52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Keymap52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Playedit*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Playedit*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Playedit*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!**************************************************************************
+!****************   END DBCS (zh_TW)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   END DO NOT TRANSLATE                   ****************
+!**************************************************************************
+
+
+! ********************************************************************************
+! Keyboard Remapping Resources
+! ********************************************************************************
+!
+! In general, the following buttons should not be made much longer during translation.
+! Buttons have one to four words. Note: Testing is the only way to know for sure if all
+! buttons fit on the screen ok.  The emulators have a testing document that will be used
+! during testing; this will point out a problem if button text is too long. In many
+! cases, buttons are presented side by side, where the total button text length cannot
+! increase significantly.
+Keymap52*key.labelString:  現行のキー
+!
+Keymap52*title:  キーボード再マップ
+!
+Keymap52*iname5250:  5250 キー・マップ
+!
+Keymap52*iname3270:  3270 キー・マップ
+!
+Keymap52*inameNSTERM:  VT エミュレーター・キー・マップ
+!
+AllShare*fileSaveButton.labelString:  保管
+!
+Keymap52*fileDeleteButton.labelString:  削除
+!
+Keymap52*applyTranslationsButton.labelString:  セッションに対する変更の適用
+!
+AllShare*fileQuitButton.labelString:  終了
+!
+AllShare*helpPush.labelString:  ヘルプ
+!
+AllShare*lowMemMsgDialog.messageString:  ヘルプ・ビューアーを開始するにはメモリーが不足しています。
+!
+AllShare*quitDialog.dialogTitle:  終了の警告
+!
+! Note: \n causes a new line in the dialogue box and should not be translated.
+! You can move, add, or remove \n within this text string.
+Keymap52*invalidExt.value: キーマップ・ファイルの拡張子が誤っているか抜けています。\n\
+正しい拡張子が自動的に追加されています。\n\
+メッセージ域の新規のファイル名と拡張子に注意してください。
+!
+Keymap52*invalidExtOkButton.labelString:  了解
+!
+Keymap52*invalidFileName.value:  ファイル名として入力した文字は無効です。
+!
+Keymap52*invalidFileNameOkbutton.labelString:  了解
+!
+Keymap52*noKeyCaps.value: キーボード再マップ・プログラムは、ユーザーのキーボード・タイプ用に更新されませんでした。 グラフィカル・キーボード上のキーのテキストは英語で表示されます。
+!
+Keymap52*noKeyCapOkbutton.labelString:  了解
+!
+Keymap52*EBCMismatchText.value: キーボード再マップ・プログラムによって呼び出されたエミュレーター・セッションの言語が IBM ネットワーク・ステーションの言語と一致しません。  この再マッパーによって作成された文字およびストリングが、エミュレーター・セッションで望ましくない結果の原因となる場合があります。
+!
+Keymap52*mismatchOKbutton.labelString:  了解
+!
+Keymap52*poorResolutionMsgText.value:   モニターのレゾリューションが 800 x 600 より低くなっています。 キーボード再マップは、レゾリューションが 800 x 600 より低いモニターではサポートされません。
+!
+Keymap52*keymapFailureCancelBtn.labelString:  取消
+!
+Keymap52*saveDialog.dialogTitle:  キーボード再マップの保管
+!
+Keymap52*saveBoxLabel*labelString:  キーボード再マップの変更を保管する場所の選択:
+!
+Keymap52*saveBoxToggle1.labelString:  すべてのユーザー・セッションのデフォルトとして保管
+!
+Keymap52*saveBoxToggleNsterm1.labelString:      この端末タイプのデフォルトとして保管
+!
+Keymap52*saveBoxToggle2.labelString:  このセッション用に保管
+!
+Keymap52*saveBoxToggle3.labelString:  名前付きキー・マッピング・ファイルとして保管 (管理者のみ)
+!
+AllShare*saveBoxSaveBtn.labelString:  保管
+!
+AllShare*saveBoxCancelBtn.labelString:  取消
+!
+Keymap52*fileNameSaveBoxLabel.labelString:  キー・マッピング・ファイル名を入力してください:
+!
+Keymap52*fileDeleteDialog.dialogTitle:  キーボード再マップ・ファイルの削除
+!
+Keymap52*fileDeleteBoxLabel*labelString:  削除する 1 つまたは複数のファイルの選択:
+!
+KeyXXX52*fileDeleteBoxLabelAlt*labelString:  削除するファイルはありません。
+!
+KeyXXX52*fileDeleteBoxDeleteBtn.labelString:  削除
+!
+KeyXXX52*fileDeleteBoxCancelBtn.labelString:  取消
+!
+KeyXXX52*fileDeleteVerifyDialog.dialogTitle:  削除の確認
+!
+KeyXXX52*fileDeleteVerifyDialog.okLabelString:  了解
+!
+KeyXXX52*fileDeleteVerifyDialog.cancelLabelString:  取消
+
+! this cannot be much longer
+KeyXXX52*noundoDelete:  ファイルの削除をやり直すことはできません。 削除しますか ?
+!
+KeyXXX52*novalidDelete:  ファイルが選択されていません。 削除は無効です。
+!
+Keymap52*fileWarningDialog.dialogTitle:  キー・マッピングの警告
+!
+AllShare*fileWarningDialog.okLabelString:  はい
+!
+AllShare*fileWarningDialog.cancelLabelString:  いいえ
+!
+AllShare*fileAlreadyExists:  ファイルはすでに存在しています。 上書きしますか？
+!
+Keymap52*transTempApp:  キーボード再マップの変更は一時的にセッションに適用されています。
+!
+AllShare*nomakeDir:  ディレクトリーを作成することができません。
+!
+AllShare*nofilepathSave:  ファイルのパスを判別することができません。
+!
+Keymap52*transRxd:  オリジナルのキーボード・マップがエミュレーター・セッションから受信されました。
+!
+Keymap52*saveTran:  キーボード再マップ・ファイルの保管中...
+!
+Keymap52*savetoTranError:  キーボード再マップ・ファイルの保管エラー...ファイルは保管されません。
+!
+Keymap52*savedtoTran:   キーボード再マップ・ファイルの保管先:
+!
+Keymap52*quitDialog1:  キーボード・マップは変更されていますが、適用または保管されていません。
+!
+Keymap52*quit1Tog1:  変更を適用または保管しないで終了します。
+!
+Keymap52*quit1Tog2:  変更を適用および保管してから終了します。
+!
+Keymap52*quitDialog2:  キーボード・マップは変更および適用されていますが、保管されていません。
+!
+Keymap52*quit2Tog1:  保管しないで終了し、キーボード・マップに対して行った変更をやり直します。
+!
+Keymap52*quit2Tog2:  保管しないで終了し、変更がセッションに一時的に適用されたままにします。
+!
+Keymap52*quitDialog3:  キーボード・マップは変更および保管されていますが、適用されていません。
+!
+Keymap52*quit3Tog1:  変更を適用しないで終了します。
+!
+Keymap52*quitTog3.labelString:  変更をこのセッションに適用してから終了します。
+!
+AllShare*quitDialog*quitTog4.labelString:  変更を保管してから終了します。
+!
+AllShare*quitDialog*exitBox.labelString:  終了
+!
+AllShare*quitDialog*cancelBox.labelString:  取消
+!
+Keymap52*undoDialog.dialogTitle:  復元ダイアログ
+!
+Keymap52*undoDialog1.labelString:  復元するキーボード・マッピングの状態を選択してください。
+!
+Keymap52*undoDialog*undoBox.labelString:  了解
+!
+Keymap52*undoDialog*cancelBox.labelString:  取消
+!
+Keymap52*restoreWarning.dialogTitle:  終了メッセージ
+!
+Keymap52*restoreWarning.okLabelString:  了解
+
+! this cannot be made much longer during translation
+Keymap52*restoreWarning.messageString:  このセッション用のキーボード再マップは、そのオリジナルの値に復元されました。
+!
+Keymap52*nonValidDialog.dialogTitle:  警告メッセージ
+!
+KeyXXX52*nonValidDialog.okLabelString:  了解
+!
+Keymap52*nonValidDialog.messageString:  このキーに対する 1 つまたは複数のアクションが無効です。
+!
+Keymap52*reservedtrans.dialogTitle:  警告メッセージ
+!
+Keymap52*reservedtrans.okLabelString:  了解
+
+! this cannot be made much longer during translation
+Keymap52*reservedtrans.messageString:  ウィンドウ・マネージャーによって予約されているキー・ストロークを再マップすることはできません。
+!
+Keymap52*lastButton.labelString:  最後に適用されたキーボード・マップの復元
+!
+Keymap52*origButton.labelString:  オリジナルのキーボード・マップの復元
+
+! this cannot be made much longer during translation
+Keymap52*lastRest:  キーボード再マップは、セッションに最後に適用された値に復元されました。
+!
+Keymap52*origRest:  キーボード再マップは、そのオリジナルの値に復元されました。
+!
+Keymap52*noRest:  復元オプションが選択されていません。変更は行われていません。
+!
+Keymap52*fileDeleted:  選択された 1 つまたは複数のキーボード再マップ・ファイルが削除されました。
+
+! this resource has been left intentionally blank, do not translate.
+Keymap52*blank:
+!
+Keymap52*basePb.labelString:  -> 基本
+!
+AllShare*changePb.labelString:  了解
+!
+AllShare*cancelPb.labelString:  取消
+!
+AllShare*actionHelp.labelString: アクションヘルプ
+!
+AllShare*actionListLabel.labelString:  使用可能なアクション・リスト:
+!
+AllShare*charListLabel.labelString:  文字リスト:
+!
+AllShare*actionDef.labelString:  アクションの定義:
+!
+AllShare*printActionDefTitle:  使用可能なアクションの定義
+!
+Keymap52*restorePB.labelString:  復元
+
+! this cannot be made any longer during translation.
+Keymap52*locatePB.labelString:  検出
+
+! this cannot be made any longer during translation.
+Keymap52*nothingTB.labelString:  アクションなし
+!
+Keymap52*translistdialog.dialogTitle:  拡張キーボード再マップ
+!
+Keymap52*noRemPass:  無効な操作です。受動キー・マッピングを除去することはできません。
+!
+Keymap52*searchFailed:  検出に失敗しました。一致したアクションがキーボード・マップで見つかりません。
+!
+Keymap52*searchSuccess:  正常に検出しました....
+!
+Keymap52*searchSemi:  正常に検出しました... このアクションに対するキーは選択することができません。
+!
+Keymap52*noSearchMsg:  検出を実行することができません。有効なアクションが選択されていません。
+!
+Keymap52*nonStand:  このキーについて少なくとも 1 つの表示できない変換が存在しています。
+!
+Keymap52*change.dialogTitle:  キー・マッピングの警告
+!
+KeyXXX52*change.messageString:  別のキーを表示する前に、現行のキーに対する変更に対して「了解」または「取消」を選択してください。
+!
+KeyXXX52*change.okLabelString:  続行
+!
+Keymap52*editb.labelString:  編集
+!
+Keymap52*insertb.labelString:  挿入
+!
+Keymap52*removeb.labelString:  除去
+!
+Keymap52*closeb.labelString:  閉じる
+!
+Keymap52*editDialog.dialogTitle:  編集ダイアログ
+!
+Keymap52*editDialog*editLabel.labelString:  以下の変換の編集:
+!
+Keymap52*editDialog*okButton.labelString:  了解
+!
+Keymap52*editDialog*clearButton.labelString:  クリア
+!
+Keymap52*editDialog*cancelButton.labelString:  取消
+!
+Keymap52*Any:  -> 基本
+!
+Keymap52*Shift:  -> シフト
+!
+Keymap52*Lock:  -> 大文字ロック
+!
+Keymap52*Lock122:  -> シフト・ロック
+!
+Keymap52*Ctrl:  -> Left Ctrl
+!
+Keymap52*CtrlNsterm: -> Ctrl
+!
+Keymap52*Alt:  -> Alt (前面)
+!
+Keymap52*Mod2:  -> Alt (前面) (Gr)
+!
+Keymap52*Mod3:  -> APL/Super
+!
+Keymap52*Mod4:  -> Mod4
+!
+Keymap52*Mod5:  -> 数字ロック
+!
+Keymap52*Shift_Alt:  -> シフト Alt (前面)
+!
+Keymap52*cantdothat.dialogTitle:  キー・マッピングの警告
+!
+Keymap52*cantdothat.messageString:  アクション・バーからオプションを選択する前に、現行のキーに対する変更に対して「了解」または「取消」を選択してください。
+!
+KeyXXX52*cantdothat.okLabelString:  続行
+!
+Keymap52*chooseApply:  セッション中で変更を有効にするには「適用」を選択してください。
+!
+Keymap52*transListLabel.labelString:  変換リスト:
+!
+Keymap52*seeHelpLabel.labelString:  拡張変更を行う前に、ヘルプを参照してください。
+!
+Keymap52*keyAction.labelString:  キー／アクション
+!
+Keymap52*nomapmod:  修飾子を再マップすることはではません。
+!
+AllShare*toobig:  操作は取り消されました。アクションの最大長を超えました。
+!
+Keymap52*currKeyLabel.labelString:  現行のキー:
+!
+AllShare*printKeymap.labelString:  印刷
+!
+AllShare*printDialogCancelButton.labelString:  取消
+!
+AllShare*printDialogBoxLabel.labelString:  印刷オプションの選択
+!
+AllShare*printDialogPrintCommandLabel.labelString: 印刷コマンド:
+!
+AllShare*printDialogSelectPrinter.labelString:  プリンターの選択:
+!
+AllShare*PrinterSelectServerDelineator:  @
+!
+AllShare*PrinterSelectLocalDesignator:  (ローカル)
+!
+AllShare*ActionHelpPrinted:  印刷されたアクションヘルプの定義
+!
+AllShare*printDialogPrintInProgress.labelString:  印刷中...
+!
+AllShare*okLabelString:  了解
+!
+AllShare*cancelLabelString:  取消
+!
+! Start Action list translations (to be shared by keypad customizer and keymapper).
+!
+! Rules for translating actions:
+! 1) Action text (to the right of the ":") is translated
+! 2) All actions need to end in ()
+! 3) Action text may not contain spaces
+! 4) Action text may be separated by capitals or underscores (_)
+! 5) Because actions are cross-referenced, each translated action must be unique
+! 6) Action text should be a maximum of 29 characters, not counting the () characters
+!
+!    ValidActionText()
+!    InvalidActionText
+!    ValidActionText()
+!    Valid_Action_Text()
+!    Invalid Action Text()
+!
+!    Valid Unique action names:
+!    Keyxxx52*tab():  Tab()
+!    Keyxxx52*backtab():  BackTab()
+!    Keyxxx52*tabadvancefunction():  TabAdvance()
+!    Keyxxx52*tabfunction():  OfficeTabFunction()
+!
+!    Invalid action names, not unique:
+!    Keyxxx52*tab():  Tab()
+!    Keyxxx52*backtab():  Tab()
+!    Keyxxx52*tabadvancefunction():  Tab()
+!    Keyxxx52*tabfunction():  Tab()
+!
+! Each action is followed by an action definition (to the right of the ":") which is translated
+!
+Keyxxx52*nothing():  NoAction()
+AllShare*DEFnothing():  このアクションでは何も行なわれず、空アクションの表示に使用されます。
+!
+Keyxxx52*ruleline():  RuleLine()
+AllShare*DEFruleline():  けい線行の表示の状態を、表示と非表示に変更します。 けい線行はカーソルの位置指定に役立ちます。 各種の設定の変更によってけい線行の機能を使用可能 (デフォルト) または使用不可にして、けい線行のスタイルを変更することができます。
+!
+AllShare*string():  String()
+AllShare*DEFstring():  カーソル位置に文字または文字の文字列を表示します。 このアクションの形式は String(\"text\") です。 二重引用符 (\") が必要となり、'text' は表示される 1 つまたは複数の文字となります。 String() を使用して、キーボード・マクロを作成します。
+!
+Keyxxx52*play():  Play()
+AllShare*DEFplay():  再生() アクションは再生ウィンドウを表示するので、再生ファイルを開始することができます。 また、再生() アクションは再生ファイル名をパラメーター (括弧で囲む) としてもサポートします。再生ファイルは自動的に開始されます。
+!
+Keyxxx52*record():  Record()
+AllShare*DEFrecord():  記録ウィンドウを表示して、再生順序の記録を開始します。
+!
+AllShare*pause():  Pause()
+AllShare*DEFpause():  再生ファイルの再生または再生ファイルの記録を一時停止します。 ユーザーは「続行」を選択して、再生または記録を続行します。
+!
+AllShare*local-screen-print():  ScreenPrint()
+AllShare*DEFlocal-screen-print():  現在の画面を印刷するために印刷画面ウィンドウを表示します。
+!
+Keyxxx52*print-screen-now():  PrintScreenNow()
+AllShare*DEFprint-screen-now():  前回使用した印刷オプションおよびプリンターを使用して現在の画面を印刷します。
+!
+AllShare*extended():  DisplayAttributes()
+AllShare*DEFextended():  画面上のすべてのフィールド属性を表示します。
+!
+AllShare*up():  CursorUp()
+AllShare*DEFup():  カーソルを 1 つ上のカーソル位置に移動します。
+!
+AllShare*down():  CursorDown()
+AllShare*DEFdown():  カーソルを 1 つ下のカーソル位置に移動します。
+!
+AllShare*left():  CursorLeft()
+AllShare*DEFleft():  カーソルを 1 つ左のカーソル位置に移動します。
+!
+AllShare*right():  CursorRight()
+AllShare*DEFright():  カーソルを 1 つ右のカーソル位置に移動します。
+!
+AllShare*fastleft():  FastCursorLeft()
+AllShare*DEFfastleft():  カーソルを 3 つ左のカーソル位置に移動します。
+!
+AllShare*fastright():  FastCursorRight()
+AllShare*DEFfastright():  カーソルを 3 つ右のカーソル位置に移動します。
+!
+AllShare*newline():  Newline()
+AllShare*DEFnewline():  カーソルを次の行の入力フィールドの先頭に移動します。
+!
+AllShare*home():  Home()
+AllShare*DEFhome():  カーソルをホーム位置 (通常、画面の入力フィールドの最初の桁) に移動して、ホーム AID コードをホスト・システムに送信することもあります。
+!
+AllShare*tab():  Tab()
+AllShare*DEFtab():  カーソルを次の入力フィールドに移動します。
+!
+AllShare*backtab():  BackTab()
+AllShare*DEFbacktab():  カーソルが入力フィールドの最初の桁または出力エリア内にある場合には、カーソルは前の入力フィールドの最初の桁に移動します。 カーソルが入力フィールド内にあり、入力フィールドの最初の桁ではない場合には、カーソルは入力フィールドの最初の桁に移動します。
+!
+AllShare*end():  EndOfLine()
+AllShare*DEFend():  カーソルを、入力フィールドの最後の非ヌル文字または非ブランク文字の後に移動します。
+!
+AllShare*tabadvancefunction():  TabAdvance()
+AllShare*DEFtabadvancefunction():  カーソルを次の論理入力フィールドに移動します。
+!
+AllShare*insert():  Insert()
+AllShare*DEFinsert():  挿入モードをオンにします。
+!
+AllShare*delete():  Delete()
+AllShare*DEFdelete():  カーソル位置の文字を削除 (除去) します。
+!
+AllShare*backspace():  Backspace()
+AllShare*DEFbackspace():  1 カーソル位置だけカーソルを戻して、カーソルの前の文字を削除することができます。 各種の設定の変更によって、文字を削除する「後退」を使用可能または使用不可にすることができます。
+!
+AllShare*erase-eof():  ErasetoEnd()
+AllShare*DEFerase-eof():  カーソル位置からフィールドの終わりまでのすべての文字を除去します。
+!
+AllShare*erase-input():  EraseInputFields()
+AllShare*DEFerase-input():  画面上のすべての入力フィールドを消去します。
+!
+AllShare*dup():  Dup()
+AllShare*DEFdup():  現行フィールドに、カーソルからフィールドの終わりまでダンプ文字を埋め込みます。
+!
+AllShare*field-mark():  FieldMark()
+AllShare*DEFfield-mark():  フィールド・マーク文字でフィールドにマークを付けます。
+!
+AllShare*pf1():  PF1()
+AllShare*DEFpf1():  F1 キーに定義されたアクションを実行します。
+!
+AllShare*pf2():  PF2()
+AllShare*DEFpf2():  F2 キーに定義されたアクションを実行します。
+!
+AllShare*pf3():  PF3()
+AllShare*DEFpf3():  F3 キーに定義されたアクションを実行します。
+!
+AllShare*pf4():  PF4()
+AllShare*DEFpf4():  F4 キーに定義されたアクションを実行します。
+!
+AllShare*pf5():  PF5()
+AllShare*DEFpf5():  F5 キーに定義されたアクションを実行します。
+!
+AllShare*pf6():  PF6()
+AllShare*DEFpf6():  F6 キーに定義されたアクションを実行します。
+!
+AllShare*pf7():  PF7()
+AllShare*DEFpf7():  F7 キーに定義されたアクションを実行します。
+!
+AllShare*pf8():  PF8()
+AllShare*DEFpf8():  F8 キーに定義されたアクションを実行します。
+!
+AllShare*pf9():  PF9()
+AllShare*DEFpf9():  F9 キーに定義されたアクションを実行します。
+!
+AllShare*pf10():  PF10()
+AllShare*DEFpf10():  F10 キーに定義されたアクションを実行します。
+!
+AllShare*pf11():  PF11()
+AllShare*DEFpf11():  F11 キーに定義されたアクションを実行します。
+!
+AllShare*pf12():  PF12()
+AllShare*DEFpf12():  F12 キーに定義されたアクションを実行します。
+!
+AllShare*pf13():  PF13()
+AllShare*DEFpf13():  F13 キーに定義されたアクションを実行します。
+!
+AllShare*pf14():  PF14()
+AllShare*DEFpf14():  F14 キーに定義されたアクションを実行します。
+!
+AllShare*pf15():  PF15()
+AllShare*DEFpf15():  F15 キーに定義されたアクションを実行します。
+!
+AllShare*pf16():  PF16()
+AllShare*DEFpf16():  F16 キーに定義されたアクションを実行します。
+!
+AllShare*pf17():  PF17()
+AllShare*DEFpf17():  F17 キーに定義されたアクションを実行します。
+!
+AllShare*pf18():  PF18()
+AllShare*DEFpf18():  F18 キーに定義されたアクションを実行します。
+!
+AllShare*pf19():  PF19()
+AllShare*DEFpf19():  F19 キーに定義されたアクションを実行します。
+!
+AllShare*pf20():  PF20()
+AllShare*DEFpf20():  F20 キーに定義されたアクションを実行します。
+!
+AllShare*pf21():  PF21()
+AllShare*DEFpf21():  F21 キーに定義されたアクションを実行します。
+!
+AllShare*pf22():  PF22()
+AllShare*DEFpf22():  F22 キーに定義されたアクションを実行します。
+!
+AllShare*pf23():  PF23()
+AllShare*DEFpf23():  F23 キーに定義されたアクションを実行します。
+!
+AllShare*pf24():  PF24()
+AllShare*DEFpf24():  F24 キーに定義されたアクションを実行します。
+!
+AllShare*clear():  Clear()
+AllShare*DEFclear():  消去 AID コードをホスト・システムに送信します。
+!
+AllShare*enter():  Enter()
+AllShare*DEFenter():  入力を入力するために入力処置を実行します。
+!
+AllShare*pa1():  PA1()
+AllShare*DEFpa1():  PA1 AID コードをホスト・システムに送信します。
+!
+AllShare*pa2():  PA2()
+AllShare*DEFpa2():  PA2 AID コードをホスト・システムに送信します。
+!
+AllShare*pa3():  PA3()
+AllShare*DEFpa3():  PA3 AID コードをホスト・システムに送信します。
+!
+AllShare*sysreq():  SystemRequest()
+AllShare*DEFsysreq():  システム要求 AID をホスト・システムに送信します。
+!
+AllShare*reset():  Reset()
+AllShare*DEFreset():  エラーをリセットします。
+!
+AllShare*hex-entry():  HexMode()
+AllShare*DEFhex-entry():  EBCDIC 文字を作成するために、次の 2 つのキー・ストロークのモードを設定します。 このキー・ストロークは 0 から 9 または a から f でなければなりません。
+!
+AllShare*hex():  Hex()
+AllShare*DEFhex():  パラメーターとして 2 つの文字コード・ポイント値が必要です (括弧で囲む)。 この 2 つの文字値 (00 から ff) は ASCII コード・ページ 819 文字です。
+!
+AllShare*cursor-select():  CursorSelect()
+AllShare*DEFcursor-select():  カーソルがあるフィールドを選択します。
+!
+AllShare*attention():  Attention()
+AllShare*DEFattention():  アテンション AID コードをホスト・システムに送信します。
+!
+AllShare*print():  SystemPrint()
+AllShare*DEFprint():  印刷 AID コードをホスト・システムに送信します。
+!
+AllShare*scroll_image_up(): ScrollImageUp()
+AllShare*DEFscroll_image_up():  表示されているイメージをスクロールアップします。
+!
+AllShare*scroll_image_down():   ScrollImageDown()
+AllShare*DEFscroll_image_down():  表示されているイメージをスクロールダウンします。
+!
+AllShare*scroll_image_right():  ScrollImageRight()
+AllShare*DEFscroll_image_right():  表示されているイメージを右にスクロールします。
+!
+AllShare*scroll_image_left():   ScrollImageLeft()
+AllShare*DEFscroll_image_left():  表示されているイメージを左にスクロールします。
+!
+AllShare*help():  SystemHelp()
+AllShare*DEFhelp():  ヘルプ AID コードをホスト・システムに送信します。
+!
+AllShare*rolldown():  PageUp()
+AllShare*DEFrolldown():  現行ページの上にあるページに画面を移動します。
+!
+AllShare*rollup():  PageDown()
+AllShare*DEFrollup():  現行ページの下にあるページに画面を移動します。
+!
+AllShare*fieldexit():  FieldExit()
+AllShare*DEFfieldexit():  画面の次のフィールドの始めに進みます。
+!
+AllShare*fieldplus():  FieldPlus()
+AllShare*DEFfieldplus():  画面の次のフィールドの始めに進みます。
+!
+AllShare*fieldminus():  FieldMinus()
+AllShare*DEFfieldminus():  フィールドの値を負にして、次のフィールドに進みます。
+!
+AllShare*testreq():  TestRequest()
+AllShare*DEFtestreq():  テスト要求 AID コードをホスト・システムに送信します。
+!
+! Note: Office actions are used within the AS/400 OfficeVision editor.
+AllShare*tabfunction():  OfficeTabFunction()
+AllShare*DEFtabfunction():  OV/400 エディターでは、カーソル位置にタブ文字を挿入します。
+!
+AllShare*textcarrierreturn():  OfficeCarrierReturn()
+AllShare*DEFtextcarrierreturn():  OV/400 エディターでは、現行のカーソル位置に改行を入れます。
+!
+AllShare*textrqtabfunction():  OfficeRequiredTabFunction()
+AllShare*DEFtextrqtabfunction():  OV/400 エディターでは、現行のカーソル位置に必須タブを入れます。 必須タブは、段落の終わりで終了するまで有効のままとなる一時字下げを定義します。
+!
+AllShare*textunderscore():  OfficeStartUnderline()
+AllShare*DEFtextunderscore():  OV/400 エディターでは、現行のカーソル位置で下線を開始します。
+!
+AllShare*textintensify():  OfficeStartBold()
+AllShare*DEFtextintensify():  OV/400 エディターでは、現行のカーソル位置で高輝度テキストを開始します。
+!
+AllShare*textendattribute():  OfficeEndUnderlineOrBold()
+AllShare*DEFtextendattribute():  OV/400 エディターでは、アクティブ下線または高輝度の効果を終了します。
+!
+AllShare*textsymbolscmdprompt():  OfficeInsertSpecialCharacters()
+AllShare*DEFtextsymbolscmdprompt():  OV/400 エディターでは、キーボードからは使用できない記号を入力が可能となるプロンプトを表示します。
+!
+AllShare*textrqspace():  OfficeRequiredSpace()
+AllShare*DEFtextrqspace():  OV/400 エディターでは、現行のカーソル位置に必須スペースを入れます。 必須スペースはスペース文字として表示されますが、このスペースで分割された 2 つのワードを同じ行上に一緒に保持します。
+!
+AllShare*texttopofpage():  OfficeTopOfPage()
+AllShare*DEFtexttopofpage():  OV/400 エディターでは、カーソルを現在表示されているページの上部に移動します (さらに、画面の位置変更を行なう場合もあります)。
+!
+AllShare*textbottomofpage():  OfficeBottomOfPage()
+AllShare*DEFtextbottomofpage():  OV/400 エディターでは、カーソルを現在表示されているページの下部に移動します (さらに、画面の位置変更を行なう場合もあります)。
+!
+AllShare*textbeginofline():  OfficeBeginningOfLine()
+AllShare*DEFtextbeginofline():  OV/400 エディターでは、カーソルを現行テキスト行の先頭に移動します。
+!
+AllShare*textpageend():  OfficeInsertPageEnd()
+AllShare*DEFtextpageend():  OV/400 エディターでは、ページ終了文字を挿入します。 これは、テキストの新規ページを開始します。
+!
+AllShare*textstopcodefunction():  OfficeStopCodeInsert()
+AllShare*DEFtextstopcodefunction():  OV/400 エディターでは、現行のカーソル位置で新規の停止コードの定義が可能となるプロンプトを表示します。
+!
+AllShare*textstopcodeadvance():  OfficeStopCodeAdvance()
+AllShare*DEFtextstopcodeadvance():  OV/400 エディターでは、カーソルを文書の次の停止コードに移動します。
+!
+AllShare*textaltd():  OfficeNextTextColumn()
+AllShare*DEFtextaltd():  OV/400 エディターでは、カーソル位置に新規のテキスト・カラムを開始する制御を挿入します。 この機能がアクティブになるのは、複数のテキスト・カラムを編集する場合だけです。
+!
+AllShare*textcent():  OfficeCenter()
+AllShare*DEFtextcent():  OV/400 エディターでは、カーソルがあるテキストの行で中央そろえを行ないます。
+!
+AllShare*textwordunderscore():  OfficeWordUnderscore()
+AllShare*DEFtextwordunderscore():  OV/400 エディターでは、現行のカーソル位置にワード下線制御を入れます。 このカーソルは下線付けするテキストの終わりの位置になければならず、下線付けの効果は現行のワードからカーソル位置まで拡張されます。
+!
+AllShare*texthalfindexup():  OfficeHalfIndexUp()
+AllShare*DEFtexthalfindexup():  OV/400 エディターでは、現行のカーソル位置に半行上げ (肩文字) 制御を入れます。 この半行上げは、次の半行下げ制御までアクティブのままになります。
+!
+AllShare*texthalfindexdown():  OfficeHalfIndexDown()
+AllShare*DEFtexthalfindexdown():  OV/400 エディターでは、現行のカーソル位置に半行下げ (添え字) 制御を入れます。 この半行下げは、次の半行上げ制御までアクティブのままになります。
+!
+AllShare*displaytextsymb():  OfficeDisplaySymbols()
+AllShare*DEFdisplaytextsymb():  OV/400 エディターでは、通常表示されない制御文字を表示します。  これには、タブ、必須タブ、改行、必須改行、必須スペース、およびページ終了文字が含まれます。
+!
+AllShare*kanji():  InsertSOandSI()
+AllShare*DEFkanji():  DBCS シフトアウトとシフトイン文字を挿入します (日本語、韓国語、および中国語で使用される)。
+!
+!//@bd_GBR1 start
+AllShare*lklayer():  LatinLayer()
+AllShare*DEFlklayer():  キーボード・レイヤー言語を Latin に設定します。
+!
+AllShare*nklayer():  BidiLayer()
+AllShare*DEFnklayer():  キーボード・レイヤー言語を National (アラビア語およびヘブライ語で使用される) に設定します。
+!//@bd_GBR1 end
+! //@bd_GBR1 rename AllShare*reverse():  ReverseCursor()
+AllShare*reverse():  FieldReverse()
+AllShare*DEFreverse():  フィールドのカーソルの方向を反転して、キー・ストロークで逆の言語レイヤーを選択します (アラビア語およびヘブライ語で使用される)。
+!
+AllShare*close():  CloseBIDIData()
+AllShare*DEFclose():  組み込みブランクを除去し、フィールドの論理開始の方向にデータを移動して、フィールド中のデータをクローズします (アラビア語およびヘブライ語で使用される)。
+!
+AllShare*base():  BaseShape()
+AllShare*DEFbase():  アラビア語の形状オン/オフに切り替えます (アラビア語で使用される)。
+!
+AllShare*charadvance():  CharacterAdvance()
+AllShare*DEFcharadvance():  カーソルを画面上の次の入力位置に移動します。
+!
+AllShare*displaySOSI():  DisplaySOandSI()
+AllShare*DEFdisplaySOSI():  画面上のすべてのシフトアウトとシフトイン文字 (日本語、韓国語、および中国語で使用される) を表示します。
+!
+AllShare*reverse-scn():  ReverseScreen()
+AllShare*DEFreverse-scn():  画面上の表示を反転します (アラビア語およびヘブライ語で使用される)。
+!
+AllShare*EBChex():  EBCDICHexEntry()
+AllShare*DEFEBChex():  データの入力のために EBCDIC コード・ポイントが使用可能になります (日本語、韓国語、および中国語で使用される)。
+!
+AllShare*AltView():  AlternateView()
+AllShare*DEFAltView():  日本語データを代替コード・ページで表示することができます。
+!
+Keyxxx52*noop():  NoAction()
+AllShare*DEFnoop():  このアクションでは何も行なわれず、空アクションの表示に使用されます。
+!
+! There are no parentheses after Undefined, making this action different than other actions.
+Keyxxx52*undefined():  未定義
+!
+AllShare*cursor-move():  MoveCursor()
+AllShare*DEFcursor-move():  カーソルを指定された画面の位置に移動します。
+!
+AllShare*forward-word():  NextWord()
+AllShare*DEFforward-word():  カーソルを次のワードの先頭に移動します。
+!
+AllShare*backward-word():  PreviousWord()
+AllShare*DEFbackward-word():  カーソルを前のワードの先頭に移動します。
+!
+AllShare*spbackspace():  AlternateBackspace()
+AllShare*DEFspbackspace():  BackSpace() と同等のアクションを実行します。 カーソルの右方の文字が移動されるのは、挿入モードがオンにセットされた場合だけです。
+!
+AllShare*kill-word():  DeleteRemainderofWord()
+AllShare*DEFkill-word():  カーソル位置からフィールドの終わりまでの文字を削除します。
+!
+AllShare*backward-kill-word():  DeletePreviousWord()
+AllShare*DEFbackward-kill-word():  前のワードの文字を削除します。
+!
+AllShare*cent():  Cent()
+AllShare*DEFcent():  カーソル位置にセント通貨記号を表示します。
+!
+AllShare*unlock():  UnlockKeyboard()
+AllShare*DEFunlock():  入力が可能になるように、キーボードをアンロックします。
+!
+AllShare*selpen-attn():  SelectorPenAttention()
+AllShare*DEFselpen-attn():  選択ペン・アテンション AID をホスト・システムに送信します。
+!
+AllShare*select-field():  PenSelectField()
+AllShare*DEFselect-field():  選択可能フィールドを選択します。
+!
+AllShare*xh-attn():  AttentionAlternate()
+AllShare*DEFxh-attn():  代替アテンション AID コードをホスト・システムに送信します。
+!
+Keyxxx52*insert-selection:  Paste()
+Keyxxx52*DEFinsert-selection:  カーソル位置にクリップボードの内容を貼り付ける場合のアクション。
+!
+Keyxxx52*jump():  Jump()
+AllShare*DEFjump():  アクションはセッション・リストの次のセッションにジャンプします。 セッション 1 がアクティブ・セッションである場合には、セッション 2 がアクティブ・セッションになります。
+!
+Keyxxx52*jump-to-session():  JumpToSession()
+AllShare*DEFjump-to-session():  アクションはパラメーター (括弧で囲む) として指定されたセッションにジャンプします。 値 2 が引き数として指定された場合には、2 番目のセッションがアクティブ・セッションになります。
+!
+Keyxxx52*delay():  Delay()
+AllShare*DEFdelay(): キーボード再マップまたはキーパッド・カスタマイズで複数のアクションを 1 つのキー・シーケンスに設定する時に、そのアクション間に一時停止を追加します。 このパラメーター (括弧で囲む) は遅延させる 10 分の 1 秒単位の値です (デフォルトの値は 10 分の 5 秒)。
+!
+Keyxxx52*menu-bar-focus():  MenuBarFocus()
+AllShare*DEFmenu-bar-focus():  マウスを使用しないでメニュー・バーにアクセスすることができます。
+!
+Keyxxx52*wider-font(): WiderFont()
+Keyxxx52*DEFwider-font(): カレント・フォントの幅を広くします。
+!
+Keyxxx52*narrower-font(): ThinnerFont()
+Keyxxx52*DEFnarrower-font(): カレント・フォントの幅を狭くします。
+!
+Keyxxx52*taller-font(): TallerFont()
+Keyxxx52*DEFtaller-font(): カレント・フォントの高さを高くします。
+!
+Keyxxx52*shorter-font(): ShorterFont()
+Keyxxx52*DEFshorter-font(): カレント・フォントの高さを低くします。
+!
+! The following three key sequences should be translated; they may be used in the future for keyboard actions that we currently do not know about.
+Keyxxx52*key-seq1():  KeySequence1()
+Keyxxx52*key-seq2():  KeySequence2()
+Keyxxx52*key-seq3():  KeySequence3()
+!
+! General dead key (the first key of a key sequence to create a dead key character, for example tilda in many languages) that is not remappable because dead keys are processed by the Network Station kernel.
+! There are no parentheses at the end of the following line.
+Keyxxx52*unmappable():  デッド・キー
+!
+AllShare*inserteuro():  Euro()
+AllShare*DEFinserteuro():  カーソル位置にユーロ記号を挿入します。
+!
+! Action List Translations for NSTerm (VTxxx)
+!
+Keymap52*vt-backspace(): VtBackspace()
+AllShare*DEFvt-backspace():  1 カーソル位置だけカーソルを戻して、カーソルの前の文字を削除します。
+!
+Keymap52*enterkey(): EnterKey()
+Keymap52*DEFenterkey():  改行文字をホストに送信します。
+!
+Keymap52*local-print-buffer(): LocalPrintBuffer()
+Keymap52*DEFlocal-print-buffer():  スクロール・バッファーの現在の内容を印刷するために印刷画面ウィンドウを表示します。
+!
+Keymap52*local-print-screen(): LocalPrintScreen()
+Keymap52*DEFlocal-print-screen():  現在の画面を印刷するために印刷画面ウィンドウを表示します。
+!
+Keymap52*cut-clipboard(): CutClipboard()
+Keymap52*DEFcut-clipboard():  画面上でマークされた領域をクリップボードにコピーして、画面からその領域を除去します。
+!
+Keymap52*copy-clipboard(): CopyClipboard()
+Keymap52*DEFcopy-clipboard():  画面上でマークされた領域をクリップボードにコピーします。
+!
+Keymap52*paste-clipboard(): PasteClipboard()
+Keymap52*DEFpaste-clipboard():  クリップボード・バッファーに保管したデータをコピーして、画面のカーソル位置にそれを転送します。
+!
+Keymap52*beginning-of-buffer(): BeginningOfBuffer()
+Keymap52*DEFbeginning-of-buffer(): 画面をスクロール・バッファーの先頭に移動します。
+!
+Keymap52*end-of-buffer(): EndOfBuffer()
+Keymap52*DEFend-of-buffer():  現行バッファーの終わりが表示されるように、画面をスクロールします。
+!
+Keymap52*hard-reset(): HardReset()
+Keymap52*DEFhard-reset():  端末をデフォルトの状態にリセットし、画面の内容をすべて削除して、すべての選択を消去します。
+!
+Keymap52*soft-reset(): SoftReset()
+Keymap52*DEFsoft-reset():  端末をデフォルトの状態にリセットします。
+!
+Keymap52*vt-break(): VtBreak()
+Keymap52*DEFvt-break(): RS-232 ブレーク信号をホストに送信します。
+!
+Keymap52*vt-find(): VtFind()
+Keymap52*DEFvt-find(): VT200 モードまたはそれ以降が DEC コード (CSI 1~) をホストに送信する場合に、「検索」機能を実行します。
+!
+Keymap52*vt-ins(): VtInsert()
+Keymap52*DEFvt-ins(): VT200 モードまたはそれ以降が DEC コード (CSI 2~) をホストに送信する場合に、「Here 挿入」機能を実行します。
+!
+Keymap52*vt-delete(): VtRemove()
+Keymap52*DEFvt-delete(): VT200 モードまたはそれ以降が DEC コード (CSI 3~) をホストに送信する場合に、「除去」機能を実行します。
+!
+Keymap52*vt-select(): VtSelect()
+Keymap52*DEFvt-select(): VT200 モードまたはそれ以降が DEC コード (CSI 4~) をホストに送信する場合に、「選択」機能を実行します。
+!
+Keymap52*vt-prev-screen(): VtPreviousScreen()
+Keymap52*DEFvt-prev-screen(): VT200 モードまたはそれ以降が DEC コード (CSI 5~) をホストに送信する場合に、「前画面」機能を実行します。
+!
+Keymap52*vt-next-screen(): VtNextScreen()
+Keymap52*DEFvt-next-screen(): VT200 モードまたはそれ以降が DEC コード (CSI 6~) をホストに送信する場合に、「次画面」機能を実行します。
+!
+Keymap52*vt-prev-page(): VtPreviousPage()
+Keymap52*DEFvt-prev-page(): 1 ページ分だけテキストを下に、ウィンドウを上に移動します。
+!
+Keymap52*vt-next-page(): VtNextPage()
+Keymap52*DEFvt-next-page(): 1 ページ分だけテキストを上に、ウィンドウを下に移動します。
+!
+Keymap52*vt-do(): VtDo()
+Keymap52*DEFvt-do(): VT200 モードまたはそれ以降が DEC コード (CSI 29~) をホストに送信する場合に、「DO」機能を実行します。
+!
+Keymap52*vt-help(): VtHelp()
+Keymap52*DEFvt-help(): VT200 モードまたはそれ以降が DEC コード (CSI 28~) をホストに送信する場合に、「ヘルプ」機能を実行します。
+!
+Keymap52*vt-next-line(): VtNextLine()
+Keymap52*DEFvt-next-line():  1 行分だけテキストを上に、ウィンドウを下に移動します。
+!
+Keymap52*vt-prev-line(): VtPreviousLine()
+Keymap52*DEFvt-prev-line(): 1 行分だけテキストを下に、ウィンドウを上に移動します。
+!
+Keymap52*tty-interrupt(): TtyInterrupt()
+Keymap52*DEFtty-interrupt(): TTY 割り込み文字 (inter = Ctrl-C) をホストに送信します。
+!
+Keymap52*tty-suspend(): TtySuspend()
+Keymap52*DEFtty-suspend(): TTY 中断文字 (susp = Ctrl-Z) をホストに送信します。
+!
+Keymap52*tty-start(): TtyStart()
+Keymap52*DEFtty-start(): TTY 開始文字 (start = Ctrl-Q) をホストに送信します。
+!
+Keymap52*tty-stop(): TtyStop()
+Keymap52*DEFtty-stop(): TTY 停止文字 (stop = Ctrl-S) をホストに送信します。
+!
+Keymap52*delete-word(): TtyEraseWord()
+Keymap52*DEFdelete-word(): TTY ワード消去文字 (werase = Ctrl-W) をホストに送信します。
+!
+Keymap52*line-feed(): TtyLineFeed()
+Keymap52*DEFline-feed(): 改行 (Ctrl-J) をホストに送信します。
+!
+Keymap52*cr-lf(): TtyCR_LF()
+Keymap52*DEFcr-lf(): 復帰と改行の両方の文字 (Ctrl-M Ctrl-J) をホストに送信します。
+!
+Keymap52*escape(): EscapeCharacter()
+Keymap52*DEFescape(): エスケープ文字 (Ctrl-[) をホストに送信します。
+!
+Keymap52*udk-f1(): UDK_F1()
+Keymap52*DEFudk-f1():  F1 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f2(): UDK_F2()
+Keymap52*DEFudk-f2():  F2 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f3(): UDK_F3()
+Keymap52*DEFudk-f3():  F3 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f4(): UDK_F4()
+Keymap52*DEFudk-f4():  F4 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f5(): UDK_F5()
+Keymap52*DEFudk-f5():  F5 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f6(): UDK_F6()
+Keymap52*DEFudk-f6():  F6 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f7(): UDK_F7()
+Keymap52*DEFudk-f7():  F7 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f8(): UDK_F8()
+Keymap52*DEFudk-f8():  F8 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f9(): UDK_F9()
+Keymap52*DEFudk-f9():  F9 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f10(): UDK_F10()
+Keymap52*DEFudk-f10():  F10 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f11(): UDK_F11()
+Keymap52*DEFudk-f11():  F11 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f12(): UDK_F12()
+Keymap52*DEFudk-f12():  F12 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f13(): UDK_F13()
+Keymap52*DEFudk-f13():  F13 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f14(): UDK_F14()
+Keymap52*DEFudk-f14():  F14 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f15(): UDK_F15()
+Keymap52*DEFudk-f15():  F15 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f16(): UDK_F16()
+Keymap52*DEFudk-f16():  F16 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f17(): UDK_F17()
+Keymap52*DEFudk-f17():  F17 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f18(): UDK_F18()
+Keymap52*DEFudk-f18():  F18 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f19(): UDK_F19()
+Keymap52*DEFudk-f19():  F19 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f20(): UDK_F20()
+Keymap52*DEFudk-f20():  F20 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f21(): UDK_F21()
+Keymap52*DEFudk-f21():  F21 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f22(): UDK_F22()
+Keymap52*DEFudk-f22():  F22 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f23(): UDK_F23()
+Keymap52*DEFudk-f23():  F23 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f24(): UDK_F24()
+Keymap52*DEFudk-f24():  F24 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f25(): UDK_F25()
+Keymap52*DEFudk-f25():  F25 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f26(): UDK_F26()
+Keymap52*DEFudk-f26():  F26 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f27(): UDK_F27()
+Keymap52*DEFudk-f27():  F27 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f28(): UDK_F28()
+Keymap52*DEFudk-f28():  F28 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f29(): UDK_F29()
+Keymap52*DEFudk-f29():  F29 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f30(): UDK_F30()
+Keymap52*DEFudk-f30():  F30 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f31(): UDK_F31()
+Keymap52*DEFudk-f31():  F31 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f32(): UDK_F32()
+Keymap52*DEFudk-f32():  F32 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f33(): UDK_F33()
+Keymap52*DEFudk-f33():  F33 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f34(): UDK_F34()
+Keymap52*DEFudk-f34():  F34 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*udk-f35(): UDK_F35()
+Keymap52*DEFudk-f35():  F35 キーの DEC ユーザー定義キーのアクションを実行します。
+!
+Keymap52*x-f1(): F1()
+Keymap52*DEFx-f1():  F1 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f2(): F2()
+Keymap52*DEFx-f2():  F2 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f3(): F3()
+Keymap52*DEFx-f3():  F3 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f4(): F4()
+Keymap52*DEFx-f4():  F4 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f5(): F5()
+Keymap52*DEFx-f5():  F5 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f6(): F6()
+Keymap52*DEFx-f6():  F6 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f7(): F7()
+Keymap52*DEFx-f7():  F7 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f8(): F8()
+Keymap52*DEFx-f8():  F8 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f9(): F9()
+Keymap52*DEFx-f9():  F9 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f10(): F10()
+Keymap52*DEFx-f10():  F10 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f11(): F11()
+Keymap52*DEFx-f11():  F11 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f12(): F12()
+Keymap52*DEFx-f12():  F12 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f13(): F13()
+Keymap52*DEFx-f13():  F13 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f14(): F14()
+Keymap52*DEFx-f14():  F14 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f15(): F15()
+Keymap52*DEFx-f15():  F15 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f16(): F16()
+Keymap52*DEFx-f16():  F16 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f17(): F17()
+Keymap52*DEFx-f17():  F17 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f18(): F18()
+Keymap52*DEFx-f18():  F18 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f19(): F19()
+Keymap52*DEFx-f19():  F19 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f20(): F20()
+Keymap52*DEFx-f20():  F20 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f21(): F21()
+Keymap52*DEFx-f21():  F21 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f22(): F22()
+Keymap52*DEFx-f22():  F22 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f23(): F23()
+Keymap52*DEFx-f23():  F23 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f24(): F24()
+Keymap52*DEFx-f24():  F24 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f25(): F25()
+Keymap52*DEFx-f25():  F25 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f26(): F26()
+Keymap52*DEFx-f26():  F26 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f27(): F27()
+Keymap52*DEFx-f27():  F27 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f28(): F28()
+Keymap52*DEFx-f28():  F28 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f29(): F29()
+Keymap52*DEFx-f29():  F29 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f30(): F30()
+Keymap52*DEFx-f30():  F30 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f31(): F31()
+Keymap52*DEFx-f31():  F31 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f32(): F32()
+Keymap52*DEFx-f32():  F32 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f33(): F33()
+Keymap52*DEFx-f33():  F33 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f34(): F34()
+Keymap52*DEFx-f34():  F34 キーに定義されたアクションを実行します。
+!
+Keymap52*x-f35(): F35()
+Keymap52*DEFx-f35():  F35 キーに定義されたアクションを実行します。
+!
+Keymap52*vt-f1(): VtPF1()
+Keymap52*DEFvt-f1():  任意のモードで、文字コード (SS3 P) をアプリケーションに送信します。
+!
+Keymap52*vt-f2(): VtPF2()
+Keymap52*DEFvt-f2(): 任意のモードで、文字コード (SS3 Q) をアプリケーションに送信します。
+!
+Keymap52*vt-f3(): VtPF3()
+Keymap52*DEFvt-f3(): 任意のモードで、文字コード (SS3 R) をアプリケーションに送信します。
+!
+Keymap52*vt-f4(): VtPF4()
+Keymap52*DEFvt-f4(): 任意のモードで、文字コード (SS3 S) をアプリケーションに送信します。
+!
+Keymap52*x-print(): X_Print()
+Keymap52*DEFx-print(): ANSI エスケープ・シーケンス (Ctrl-[[209q) をホストに送信します。
+!
+Keymap52*x-scroll-lock(): X_ScrollLock()
+Keymap52*DEFx-scroll-lock(): ANSI エスケープ・シーケンス (Ctrl-[[213q) をホストに送信します。
+!
+Keymap52*x-pause(): X_Pause()
+Keymap52*DEFx-pause(): 一時停止キーの ANSI エスケープ・シーケンス (Ctrl-[[217q) をホストに送信します。
+!
+Keymap52*x-ins(): X_Insert()
+Keymap52*DEFx-ins(): ANSI エスケープ・シーケンス (Ctrl-[[139q) をホストに送信します。
+!
+Keymap52*x-delete(): X_Delete()
+Keymap52*DEFx-delete(): ANSI エスケープ・シーケンス (Ctrl-[[P) をホストに送信します。
+!
+Keymap52*x-home(): X_Home()
+Keymap52*DEFx-home(): ANSI エスケープ・シーケンス (Ctrl-[[H) をホストに送信します。
+!
+Keymap52*x-end(): X_End()
+Keymap52*DEFx-end(): ANSI エスケープ・シーケンス (Ctrl-[[146q) をホストに送信します。
+!
+Keymap52*x-page-up(): X_PageUp()
+Keymap52*DEFx-page-up(): ANSI エスケープ・シーケンス (Ctrl-[[150q) をホストに送信します。
+!
+Keymap52*x-page-down(): X_PageDown()
+Keymap52*DEFx-page-down(): ANSI エスケープ・シーケンス (Ctrl-[[154q) をホストに送信します。
+!
+Keymap52*kp-numlock(): KP_NumLock()
+Keymap52*DEFkp-numlock():  「数値ロック」アクションを実行します。
+!
+Keymap52*kp-divide(): KP_Divide()
+Keymap52*DEFkp-divide():  キーパッドに定義された通り除算関数を実行します。
+!
+Keymap52*kp-multiply(): KP_Multiply()
+Keymap52*DEFkp-multiply():  キーパッドに定義された通り乗算関数を実行します。
+!
+Keymap52*kp-subtract(): KP_Minus()
+Keymap52*DEFkp-subtract():  数字モードでは、マイナス文字 (-) をアプリケーションに送信します。 アプリケーション・モードでは、文字コード SS3 l (ESC ? l) をアプリケーションに送信します。
+!
+Keymap52*kp-7(): KP_7()
+Keymap52*DEFkp-7():  数字モードでは、文字 7 をアプリケーションに送信します。 アプリケーション・モードでは、文字コード SS3 w (ESC ? w) をアプリケーションに送信します。
+!
+Keymap52*kp-8(): KP_8()
+Keymap52*DEFkp-8():  数字モードでは、文字 8 をアプリケーションに送信します。 アプリケーション・モードでは、文字コード SS3 x (ESC ? x) をアプリケーションに送信します。
+!
+Keymap52*kp-9(): KP_9()
+Keymap52*DEFkp-9():  数字モードでは、文字 9 をアプリケーションに送信します。 アプリケーション・モードでは、文字コード SS3 y (ESC ? y) をアプリケーションに送信します。
+!
+Keymap52*kp-4(): KP_4()
+Keymap52*DEFkp-4():  数字モードでは、文字 4 をアプリケーションに送信します。 アプリケーション・モードでは、文字コード SS3 t (ESC ? t) をアプリケーションに送信します。
+!
+Keymap52*kp-5(): KP_5()
+Keymap52*DEFkp-5():  数字モードでは、文字 5 をアプリケーションに送信します。 アプリケーション・モードでは、文字コード SS3 u (ESC ?u) をアプリケーションに送信します。
+!
+Keymap52*kp-6(): KP_6()
+Keymap52*DEFkp-6():  数字モードでは、文字 6 をアプリケーションに送信します。 アプリケーション・モードでは、文字コード SS3 v (ESC ? v) をアプリケーションに送信します。
+!
+Keymap52*kp-add(): KP_Plus()
+Keymap52*DEFkp-add():  キーパッドに定義された通り加算関数を実行します。
+!
+Keymap52*kp-1(): KP_1()
+Keymap52*DEFkp-1():  数字モードでは、文字 1 をアプリケーションに送信します。 アプリケーション・モードでは、文字コード SS3 q (ESC ? q) をアプリケーションに送信します。
+!
+Keymap52*kp-2(): KP_2()
+Keymap52*DEFkp-2():  数字モードでは、文字 2 をアプリケーションに送信します。 アプリケーション・モードでは、文字コード SS3 r (ESC ? r) をアプリケーションに送信します。
+!
+Keymap52*kp-3(): KP_3()
+Keymap52*DEFkp-3():  数字モードでは、文字 3 をアプリケーションに送信します。 アプリケーション・モードでは、文字コード SS3 s (ESC ? s) をアプリケーションに送信します。
+!
+Keymap52*kp-0(): KP_0()
+Keymap52*DEFkp-0():  数字モードでは、文字 0 をアプリケーションに送信します。 アプリケーション・モードでは、文字コード SS3 p (ESC ? p) をアプリケーションに送信します。
+!
+Keymap52*kp-decimal(): KP_Decimal()
+Keymap52*DEFkp-decimal():  数字モードでは、小数点 (.) 文字をアプリケーションに送信します。 アプリケーション・モードでは、文字コード SS3 n (ESC ? n) をアプリケーションに送信します。
+!
+Keymap52*kp-enter(): KP_Enter()
+Keymap52*DEFkp-enter():  数字モードでは、入力関数をアプリケーションに送信します。 アプリケーション・モードでは、文字コード SS3 M (ESC ? M) をアプリケーションに送信します。
+!
+Keymap52*kp-space(): KP_Space()
+Keymap52*DEFkp-space():  スペース文字をアプリケーションに送信します。
+!
+Keymap52*kp-tab(): KP_Tab()
+Keymap52*DEFkp-tab():  タブ文字をアプリケーションに送信します。
+!
+Keymap52*kp-equal(): KP_Equal()
+Keymap52*DEFkp-equal():  等しい (=) 文字をアプリケーションに送信します。
+!
+Keymap52*kp-separator(): KP_Separator()
+Keymap52*DEFkp-separator():  区切り記号文字をアプリケーションに送信します。
+!
+Playedit*btn1-press():  MouseBtn1Press()
+Playedit*DEFbtn1-press():  左マウス・ボタンを押した場合のアクション。
+!
+Playedit*btn1-release():  MouseBtn1Release()
+Playedit*DEFbtn1-release():  左マウス・ボタンを解放した場合のアクション。
+!
+Playedit*btn2-press():  MouseBtn2Press()
+Playedit*DEFbtn2-press():  右マウス・ボタンを押した場合のアクション。
+!
+Playedit*btn2-release():  MouseBtn2Release()
+Playedit*DEFbtn2-release():  右マウス・ボタンを解放した場合のアクション。
+!
+Playedit*btn3-press():  MouseBtn3Press()
+Playedit*DEFbtn3-press():  マウス・ボタン 3 を押した場合のアクション。
+!
+Playedit*btn3-release():  MouseBtn3Release()
+Playedit*DEFbtn3-release():  マウス・ボタン 3 を解放した場合のアクション。
+!
+Playedit*shift-btn1-press():  MouseShiftBtn1Press()
+Playedit*DEFshift-btn1-press():  左マウス・ボタンとシフト修飾子を押すキー順の場合のアクション。
+!
+Playedit*shift-btn1-release():  MouseShiftBtn1Release()
+Playedit*DEFshift-btn1-release():  シフト修飾子を押しながら、左マウス・ボタンを解放するキー順の場合のアクション。
+!
+Playedit*shift-btn2-press():  MouseShiftBtn2Press()
+Playedit*DEFshift-btn2-press():  右マウス・ボタンとシフト修飾子を押すキー順の場合のアクション。
+!
+Playedit*shift-btn2-release():  MouseShiftBtn2Release()
+Playedit*DEFshift-btn2-release():  シフト修飾子を押しながら、左マウス・ボタンを解放するキー順の場合のアクション。
+!
+Playedit*shift-btn3-press():  MouseShiftBtn3Press()
+Playedit*DEFshift-btn3-press():  マウス・ボタン 3 とシフト修飾子を押すキー順の場合のアクション。
+!
+Playedit*shift-btn3-release():  MouseShiftBtn3Release()
+Playedit*DEFshift-btn3-release():  シフト修飾子を押しながら、マウス・ボタン 3 を解放するキー順の場合のアクション。
+!
+Playedit*btn1-double-press():  MouseBtn1DoublePress()
+Playedit*DEFbtn1-double-press():  左マウス・ボタンをダブルクリックした場合のアクション。
+!
+Playedit*btn1-triple-press():  MouseBtn1TriplePress()
+Playedit*DEFbtn1-triple-press():  左マウス・ボタンをトリプルクリックした場合のアクション。
+!
+Playedit*btn2-double-press():  MouseBtn2DoublePress()
+Playedit*DEFbtn2-double-press():  右マウス・ボタンをダブルクリックした場合のアクション。
+!
+Playedit*btn2-triple-press():  MouseBtn2TriplePress()
+Playedit*DEFbtn2-triple-press():  右マウス・ボタンをトリプルクリックした場合のアクション。
+!
+Playedit*btn3-double-press():  MouseBtn3DoublePress()
+Playedit*DEFbtn3-double-press():  マウス・ボタン 3 をダブルクリックした場合のアクション。
+!
+Playedit*btn3-triple-press():  MouseBtn3TriplePress()
+Playedit*DEFbtn3-triple-press():  マウス・ボタン 3 をトリプルクリックした場合のアクション。
+!
+Playedit*shift-btn1-double-press():  MouseShiftBtn1DoublePress()
+Playedit*DEFshift-btn1-double-press():  左マウス・ボタンとシフト修飾子をダブルクリックするキー順の場合のアクション。
+!
+Playedit*shift-btn1-triple-press():  MouseShiftBtn1TriplePress()
+Playedit*DEFshift-btn1-triple-press():  左マウス・ボタンとシフト修飾子をトリプルクリックするキー順の場合のアクション。
+!
+Playedit*shift-btn2-double-press():  MouseShiftBtn2DoublePress()
+Playedit*DEFshift-btn2-double-press():  右マウス・ボタンとシフト修飾子をダブルクリックするキー順の場合のアクション。
+!
+Playedit*shift-btn2-triple-press():  MouseShiftBtn2TriplePress()
+Playedit*DEFshift-btn2-triple-press():  右マウス・ボタンとシフト修飾子をトリプルクリックするキー順の場合のアクション。
+!
+Playedit*shift-btn3-double-press():  MouseShiftBtn3DoublePress()
+Playedit*DEFshift-btn3-double-press():  マウス・ボタン 3 とシフト修飾子をダブルクリックするキー順の場合のアクション。
+!
+Playedit*shift-btn3-triple-press():  MouseShiftBtn3TriplePress()
+Playedit*DEFshift-btn3-triple-press():  マウス・ボタン 3 とシフト修飾子をトリプルクリックするキー順の場合のアクション。
+!
+AllShare*paste():  Paste()
+AllShare*DEFpaste():  カーソル位置にクリップボードの内容を貼り付ける場合のアクション。
+!
+AllShare*copy():  Copy()
+AllShare*DEFcopy():  現行の画面選択をクリップボードにコピーする場合のアクション。
+!
+AllShare*cut():  Cut()
+AllShare*DEFcut():  現行の画面選択を除去する場合のアクション。
+!
+Playedit*userid():  USERID()
+Playedit*DEFuserid():  現行ユーザーのユーザー ID を入力します。 このアクションは、エミュレーター・セッションへの自動ログインで使用されます。
+!
+Playedit*password():  PASSWORD()
+Playedit*DEFpassword():  現行ユーザーのパスワードを入力します。 このアクションは、エミュレーター・セッションへの自動ログインで使用されます。
+!
+AllShare*adjust-copy-left():  AdjustCopyAreaLeft()
+AllShare*DEFadjust-copy-left():  画面上のコピー・エリアが開始されていない場合には、それを開始して、そのコピー・エリアを現在の位置から 1 文字左方に調整します。
+!
+AllShare*adjust-copy-right():  AdjustCopyAreaRight()
+AllShare*DEFadjust-copy-right():  画面上のコピー・エリアが開始されていない場合には、それを開始して、そのコピー・エリアを現在の位置から 1 文字右方に調整します。
+!
+AllShare*adjust-copy-up():  AdjustCopyAreaUp()
+AllShare*DEFadjust-copy-up():  画面上のコピー・エリアが開始されていない場合には、それを開始して、そのコピー・エリアを現在の位置から 1 行上方に調整します。
+!
+AllShare*adjust-copy-down():  AdjustCopyAreaDown()
+AllShare*DEFadjust-copy-down():  画面上のコピー・エリアが開始されていない場合には、それを開始して、そのコピー・エリアを現在の位置から 1 行下方に調整します。
+!
+AllShare*adjust-copy-anchor-left():  AdjustCopyAreaAnchorLeft()
+AllShare*DEFadjust-copy-anchor-left():  画面上のコピー・エリアが開始されていない場合には、それを開始して、そのコピー・エリアの左側は調整しないで、コピー・エリアを 1 文字右方に調整します。
+!
+AllShare*adjust-copy-anchor-right():  AdjustCopyAreaAnchorRight()
+AllShare*DEFadjust-copy-anchor-right():  画面上のコピー・エリアが開始されていない場合には、それを開始して、そのコピー・エリアの右側は調整しないで、コピー・エリアを 1 文字左方に調整します。
+!
+AllShare*adjust-copy-anchor-up():  AdjustCopyAreaAnchorUp()
+AllShare*DEFadjust-copy-anchor-up():  画面上のコピー・エリアが開始されていない場合には、それを開始して、そのコピー・エリアの上部は調整しないで、コピー・エリアを 1 行下方に調整します。
+!
+AllShare*adjust-copy-anchor-down():  AdjustCopyAreaAnchorDown()
+AllShare*DEFadjust-copy-anchor-down():  画面上のコピー・エリアが開始されていない場合には、それを開始して、そのコピー・エリアの下部は調整しないで、コピー・エリアを 1 行上方に調整します。
+!
+AllShare*toggle-default-copy-type():  ToggleDefaultCopyType()
+AllShare*DEFtoggle-default-copy-type():  コピーを、ブロック・コピーまたはリニア・コピーのいずれかとして設定します。
+!
+Playedit*hex-string():  HexString()
+Playedit*DEFhex-string():  データを 16 進数モードで入力することができます。
+!
+Playedit*graphics-hex-string():  GraphicsHexString()
+Playedit*DEFgraphics-hex-string():  グラフィック・データを EBCDIC 16 進数モードで入力することができます。
+!
+Playedit*BIDItogglescrrev():  BIDIToggleScreenReverse()
+Playedit*DEFBIDItogglescrrev():  反転画面モードをオン/オフにします (アラビア語およびヘブライ語で使用される)。
+!
+Playedit*BIDItogglefieldrev():  BIDIToggleFieldReverse()
+Playedit*DEFBIDItogglefieldrev():  反転フィールド・モードをオン/オフにします (アラビア語およびヘブライ語で使用される)。
+!
+Playedit*BIDItoggleautorev():  BIDIToggleAutoReverse()
+Playedit*DEFBIDItoggleautorev():  自動フィールド取り消しをオン/オフにします (アラビア語およびヘブライ語で使用される)。
+!
+Playedit*BIDIpush():  BIDIPush()
+Playedit*DEFBIDIpush():  プッシュ・モードをオンにします (アラビア語およびヘブライ語で使用される)。
+!
+Playedit*BIDIendpush():  BIDIEndPush()
+Playedit*DEFBIDIendpush():  プッシュ・モードをオフにします (アラビア語およびヘブライ語で使用される)。
+!
+Playedit*BIDItoggleautopush():  BIDIToggleAutoPush()
+Playedit*DEFBIDItoggleautopush():  BIDI と英語との間で言語を切り替える時に、自動的にプッシュ・モードになるようにエミュレーターを設定します (アラビア語およびヘブライ語で使用される)。
+!
+Playedit*BIDIsetshape():  BIDISetShape()
+Playedit*DEFBIDIsetshape():  アラビア語の形状設定モードを設定します。
+!
+Playedit*BIDIfieldshape():  BIDIFieldShape()
+Playedit*DEFBIDIfieldshape():  アラビア語のフィールドのデータ形状を設定します。
+!
+Playedit*BIDItogglenumswap():  BIDIToggleNumericSwapping()
+Playedit*DEFBIDItogglenumswap():  アラビア語のアラビア語 / ヒンディ語の数字スワッピングをオン/オフにします。
+!
+! End action names
+!
+!
+Keyxxx52*ERROR:  無効なアクション
+!
+Keymap52*managing_server_text.value:  このキーボード再マップ・ファイルを保管できません。  管理サーバーを IBM Network Station Manager の最新リリースに更新してください。
+!
+Keymap52*managingBtn.labelString:  了解
+!
+Keymap52*general_fatal_error.value:  キーボード再マッパーでエラーが発生しました。  プログラムは終了されます。
+!
+Keymap52*genfatalBtn.labelString:  終了
+!
+Keymap52*general_nonfatal_text.value:  キーボード再マップ・エラー。
+!
+Keymap52*gennonfatBtn.labelString:  了解
+!
+!
+!************************************************************************
+!
+!
+!                        Keypad Customizer Resources
+!
+!
+!************************************************************************
+Keypad52*title:  キーパッド・カスタマイザー
+
+Keypad52*iname5250:  5250 キーパッド・カスタマイザー
+
+Keypad52*iname3270:  3270 キーパッド・カスタマイザー
+
+Keypad52*keypadTitle.dialogTitle:  キーパッド
+
+!following resource left blank on purpose, do not translate.
+AllShare*blankLabel.labelString:
+
+! initial popup dialog
+Keypad52*initialpopupDialoglist.labelString:  キーパッド・ファイルの選択:
+
+Keypad52*initialpopupDialogaltlabel.labelString:  キーパッド・ファイルがありません。
+
+Keypad52*initialpopupDialogOKbtn.labelString:  了解
+
+Keypad52*initialpopupDialogcancelbtn.labelString:  取消
+
+Keypad52*initialpopupDialognewbtn.labelString:  新規キーパッド
+
+!*************************************
+!**  Keypad Customizer Main Window  **
+!*************************************
+
+! In general, the following buttons should not be made much longer during translation.
+! Buttons have one to four words.
+
+Keypad52*keyAction.labelString:  ボタン・アクション->
+
+Keypad52*fileDeleteButton.labelString:  キーパッド・ボタンの消去
+
+Keypad52*selectplayfile.labelString:  再生ファイル・アクションの選択
+
+Keypad52*changeSize.labelString:  キーパッド・スタイルの変更
+
+Keypad52*keypadfileDelete.labelString:  キーパッド・ファイルの削除
+
+Keypad52*transRxing:  エミュレーター・セッションからの現行のキーパッド・カスタマイザー情報の受信中。
+
+Keypad52*transRxd:  キーパッド・カスタマイザー情報がエミュレーター・セッションから受信されました。
+
+Keypad52*currKeypadLabel.labelString:  現行のキーパッド:
+
+Keypad52*currKeyLabel.labelString:  現行のキーパッド・ボタンのテキスト:
+
+Keypad52*currActLabel.labelString:  現行のキーパッド・ボタンのアクション:
+
+!******************
+!**  Resolution  **
+!******************
+Keypad52*poorResolutionMsgText.value:   モニターのレゾリューションが 800 x 600 より低くなっています。 キーパッド・カスタマイザーは、レゾリューションが 800 x 600 より低いモニターではサポートされません。
+
+Keypad52*keypadFailureCancelBtn.labelString:  取消
+
+!**************
+!**  Saving  **
+!**************
+Keypad52*saveDialog.dialogTitle:  キーパッドの保管
+
+Keypad52*saveBoxLabel*labelString:  キーパッド・ファイルの新規保管:
+
+Keypad52*saveTran:  キーパッド・ファイルが保管されました...
+
+Keypad52*fileWarningDialog.dialogTitle:  キーパッドの警告
+
+!**************
+!**  Delete  **
+!**************
+Keypad52*fileDeleteDialog.dialogTitle:  キーパッド・ファイルの削除
+
+Keypad52*fileDeleteBoxLabel.labelString:  削除する 1 つまたは複数のキーパッドの選択:
+
+Keypad52*fileDeleted:  選択された 1 つまたは複数のキーパッド・ファイルが削除されました。
+
+!****************
+!**  Playback  **
+!****************
+Keypad52*invalidSelectionplay.messageString:  なにも選択されていません。  リストから選択するか、「取消」を選択してください。
+
+Keypad52*invalidSelectionplay.okLabelString:  続行
+
+Keypad52*selectPlaybackFile.labelString:  再生ファイルの選択
+
+Keypad52*userPlaybackFiles.labelString:  ユーザー再生ファイル
+
+Keypad52*defaultPlaybackFiles.labelString:  デフォルトの再生ファイル
+
+AllShare*okLabel.labelString:  了解
+
+!********************
+!**  Keypad Style  **
+!********************
+Keypad52*selectSizeTitle.dialogTitle:  キーパッド・スタイル
+
+Keypad52*selectKeypadSizeLabel.labelString:  キーパッド・スタイルの選択:
+
+Keypad52*selectKeypadStyle.labelString:  キーパッド・スタイル:
+
+Keypad52*popupStyleChoice.labelString:  ポップアップ・キーパッド
+
+Keypad52*menuStyleChoice.labelString:  プルダウン・キーパッド
+
+Keypad52*selectKeypadSizeRows.labelString:  行数:
+
+Keypad52*selectKeypadSizeCols.labelString:  カラム数:
+
+Keypad52*selectKeypadSizeTextLen.labelString:  テキスト長:
+
+Keypad52*changeKeypadSizeMessage:  希望するキーパッド・スタイルの選択...
+
+Keypad52*newPb.labelString:  新規
+
+Keypad52*row_col_pulldownvalue.labelString:  -
+
+Keypad52*invalidSizeSelection.messageString:  選択されたサイズが現行のキーパッドには小さすぎます。
+
+Keypad52*invalidSizeSelection.okLabelString:  続行
+
+!***********************
+!**  Warning dialogs  **
+!***********************
+Keypad52*change.dialogTitle:  キーパッドの警告
+
+Keypad52*unsaved.dialogTitle:  キーパッドの警告
+
+Keypad52*unsaved.messageString:  キーパッドの変更は保管されていません。
+
+Keypad52*unsaved.okLabelString:  続行
+
+Keypad52*nochange.dialogTitle:  キーパッドの警告
+
+! this cannot be made much longer during translation.
+Keypad52*nochange.messageString:  次の変更を行う前に、現在の変更に対して「了解」または「取消」を選択してください。
+
+Keypad52*nochange.okLabelString:  続行
+
+Keypad52*cantdothat.dialogTitle:  キーパッドの警告
+
+Keypad52*cantdothat.messageString:  変更内容について「了解」または「取消」を押してから、このオプションを選んでください。
+
+!nothing selected in first dialog box
+Keypad52*invalidSelectionwarn.messageString:  なにも選択されていません。 リストから「新規作成」の選択または「取消」を選択してください。
+
+Keypad52*invalidSelectionwarn.okLabelString:  続行
+
+Keypad52*noaccessDir:  ディレクトリーにアクセスすることができません。
+
+Keypad52*selectKeypadButton.messageString:  カスタマイズを始める前にキーパッド・ボタンを選択しなければなりません。
+
+Keypad52*generalError.dialogTitle:  キーパッド・エラー
+
+Keypad52*generalError.messageString:  アクションの実行中にエラーが発生しました。
+
+Keypad52*generalError.okLabelString:  了解
+
+Keypad52*emptyList:  変換リストにエラーがあり、保管または適用することができません。
+
+Keypad52*ErrorMsgFileNameChars.messageString:  ファイル名として入力した文字は無効です。
+
+Keypad52*EBCMismatchText.value: キーパッド・カスタマイザー・プログラムによって呼び出されたエミュレーター・セッションの言語が IBM ネットワーク・ステーションの言語と一致しません。  このアプリケーションによって作成された文字およびストリングが、エミュレーター・セッションでの予期しないおよび／または望ましくない結果の原因となる場合があります。
+
+!************************
+!**  Various Messages  **
+!************************
+! help button pressed
+Keypad52*helpMessage:  ヘルプ・ビューアーのロード中...
+
+! after OK clicked
+Keypad52*chooseSave:  すべての変更を保管するためには「保管」を選択します。
+
+! after Cancel clicked
+Keypad52*chooseCancel:  現在の変更がやり直されます。
+
+! original message when new keypad opens
+Keypad52*chooseNew:  新規キーパッドの編集
+
+! button pressed in keypad
+Keypad52*continueedit:  現行のボタンの編集...
+
+! click button action -> with nothing selected
+Keypad52*noActionSelected:  アクション・リストまたは文字リストの中からなにも選択されていません。
+
+! swapping messages (next 2)
+Keypad52*swapinprogress:  「了解」、「取消」、または他のキーパッド・ボタンの移動の「作成」の選択...
+
+Keypad52*swaprunninginfo:  ボタン移動の進行中...
+
+! following 3 messages for invalid keypad action
+Keypad52*nonValidDialog.dialogTitle:  キーパッド警告メッセージ
+
+Keypad52*nonValidDialog.messageString:  このボタンの 1 つまたは複数のキーパッド・アクションが無効です。
+
+Keypad52*deleteKeypadMessage:  削除する 1 つまたは複数のキーパッドの選択...
+
+!***************
+!**  Exiting  **
+!***************
+Keypad52*quitDialog1:  キーパッドは変更されましたが、保管されていません。
+
+Keypad52*quit1Tog1:  変更を保管しないで終了します。
+
+Keypad52*quit1Tog2:  変更を保管してから終了します。
+
+!************************************************************************
+!
+!
+!                        Playback Editor Resources
+!
+!
+!************************************************************************
+Playedit*title:  再生ファイル・エディター
+
+Playedit*iname5250:  5250 再生ファイル・エディター
+
+Playedit*iname3270:  3270 再生ファイル・エディター
+
+Playedit*editorTitle.dialogTitle:  再生ファイル・エディター
+
+!****  Main Window
+Playedit*keyAction.labelString:  挿入アクション->
+
+Playedit*deleteAction.labelString:  除去アクション
+
+Playedit*insertAction.labelString:  行の挿入
+
+Playedit*editAction.labelString:  編集アクション
+
+Playedit*transRxing:  エミュレーター・セッションからの再生ファイル・エディター情報の受信中。
+
+Playedit*transRxd:  再生ファイル・エディター情報をエミュレーター・セッションから受信しました。
+
+Playedit*currFileLabel.labelString:  現行の再生ファイル:
+
+Playedit*currActLabel.labelString:  現行の再生ファイル・アクション:
+
+!** Resolution
+Playedit*poorResolutionMsgText.value:  モニターのレゾリューションが 800 x 600 より低くなっています。 再生ファイル・エディターは、レゾリューションが 800 x 600 より低いモニターではサポートされません。
+
+!** Saving
+Playedit*saveDialog.dialogTitle:  再生ファイルの保管
+
+Playedit*saveBoxLabel*labelString:  再生ファイルの別名保管:
+
+Playedit*saveTran:  再生ファイルが保管されました...
+
+Playedit*fileWarningDialog.dialogTitle:  再生エディターの警告
+
+!** Edit
+Playedit*editBoxLabel*labelString:  編集アクション:
+
+!** Warning Dialogs
+Playedit*PlaybackMsgFileNoOpen.value:  再生ファイルをオープンすることができません。  アプリケーションの終了中。
+
+Playedit*PlaybackMsgFileNoRead.value:  再生ファイルを読み取ることができません。  アプリケーションの終了中。
+
+Playedit*PlaybackMsgFileCorrupt.value:  再生ファイルがエミュレーター「記録」アプリケーションによって作成されていません。 ファイルをオープンできません。  アプリケーションの終了中。
+
+Playedit*noaccessDir:  ディレクトリーにアクセスすることができません。
+
+Playedit*selectInsertLocation.messageString:  このアクションを挿入する行を強調表示します。
+
+Playedit*ErrorMsgFileNameChars.messageString:  ファイル名として入力した文字は無効です。
+
+Playedit*EBCMismatchText.value:  再生ファイル・エディターを呼び出すエミュレーター・セッションの言語が IBM ネットワーク・ステーションの言語と一致しません。  このアプリケーションによって作成された文字およびストリングが、エミュレーター・セッションでの予期しないおよび／または望ましくない結果の原因となる場合があります。
+
+Playedit*nonValidDialog.messageString:  1 つまたは複数のアクションが無効です。
+
+!** Messages
+Playedit*helpMessage:  ヘルプ・ビューアーのロード中...
+
+Playedit*chooseSave:  すべての変更を保管するためには「保管」を選択します。
+
+Playedit*chooseCancel:  現在の変更がやり直されます。
+
+Playedit*noActionSelected.messageString:  アクション・リストまたは文字リストの中からなにも選択されていません。
+
+Playedit*nothingHighlightedDelete.messageString:  削除のための選択が行なわれていません。
+
+Playedit*nothingHighlightedInsert.messageString:  必要な挿入の位置を強調表示します。
+
+Playedit*nothingHighlightedEdit.messageString:  編集のための選択が行なわれていません。
+
+!** Exit
+Playedit*quitDialog1:  再生ファイルは変更されましたが、保管されていません。
+
+Playedit*quit1Tog1:  変更を保管しないで終了します。
+
+Playedit*quit1Tog2:  変更を保管してから終了します。
+
+!**************************************************
+!*
+!*        Printing translations
+!*
+!*      Added by AJMEYER for V310.nc
+!*
+!**************************************************
+
+AllShare*printDialogPrinterTypeLabel.labelString:  プリンター・タイプ:
+
+AllShare*printDialogPrinterTypeMenu*postscript.labelString:  PostScript
+
+AllShare*printDialogPrinterTypeMenu*ascii.labelString:  ASCII
+
+AllShare*printDialogPrinterTypeMenu*pcl.labelString:  PCL
+
+AllShare*printDialogPrinterSelectControls_popup.title:   プリンター・セレクター
+
+AllShare*printSelectDialogOKButton.labelString:  了解
+
+AllShare*printSelectDialogCancelButton.labelString:  取消
+! ENGL1SH_VERS10N 1.6.2.2 DO NOT REMOVE OR CHANGE THIS LINE

@@ -203,7 +203,7 @@ class Util(Logger):
 
         # should we return a string or a dict?
         if geometrystring == True:
-            screen_geometry = x + "x" + y + "+" + 0 + "+" + panel_size # e.g. 1920x1065+0+25
+            screen_geometry = str(x) + "x" + str(y) + "+0+" + str(panel_size) # e.g. 1920x1065+0+25
         else:
              screen_geometry = int(x), int(y), 0, int(panel_size)
         return screen_geometry
@@ -219,7 +219,8 @@ class Util(Logger):
 
         # should we return a string or a dict?
         if geometrystring == True:
-            screen_geometry = x + "x" + y # e.g. 1920x1080
+            # FIX ME: have offsets here depending on first screens resolution
+            screen_geometry = str(x) + "x" + str(y)
         else:
              screen_geometry = int(x), int(y)
         return screen_geometry
@@ -964,6 +965,7 @@ class Ldap(Logger):
         return member_uid_dn
 
     def getUsergroupsDn(self, user_dn, ldap_url):
+        tcos_dn = self.getUserDn('tcos', ldap_url)
         slc = self.SecondaryLdapConnection(ldap_url)
 
         secondary_ldap_url = slc.getLdapUrl()
@@ -984,7 +986,8 @@ class Ldap(Logger):
                                                               direct_usergroups,
                                                               ldap_url)
         elif (server_type == self.DirectoryType.ADS and \
-                  usergroup_type == "UsersGroups"):
+                  usergroup_type == "UsersGroups" and \
+                  user_dn != tcos_dn):
             direct_usergroups = self.getMemberOfDn(user_dn, ldap_url)
             usergroups = self.getMemberOfDnRecursiv(direct_usergroups, ldap_url)
         elif (server_type == self.DirectoryType.OPENLDAP and \

@@ -1,0 +1,79 @@
+//// ENGLISH_SOURCE_VERSION= 1.2 
+////This file contains the playback editor program on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file will be stored in locale specific ASCII (code page 819 for Latin1 languages). 
+
+////Help text format (this section is not displayed to IBM emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1.
+//// 3. This help file contains help text for the 3270 and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator. A comment line of four "/" characters followed by:
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+//// 3B.  "5250" indicates subsequent data is only displayed in 5250 on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in both 3270 and 5250 on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+//// 3D Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters.  The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Do not change the order of topics in this help text file.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+
+----"Guida dell'editor di riproduzione 3270"
+++++"Informazioni generali"
+Per informazioni sull'utilizzo di questo programma di visualizzazione della guida, consultare il primo argomento nella finestra principale dell'emulatore (selezionare "Guida" nella barra dei menu nella finestra dell'emulatore).
+
+In guida fornisce informazioni su come modificare i file di riproduzione esistenti. Un file di riproduzione viene creato utilizzando l'opzione 'Registra' nel menu Opzioni ed Š composto da diverse sequenze di azioni e tasti definite dall'utente.  
+
+Nota: Š possibile attivare un solo programma dell'editor di riproduzione per volta.
+
+++++"Layout della finestra"
+La finestra dell'editor di riproduzione presenta un'area di selezione delle azioni della tastiera (lato sinistro), un'area di lavoro dell'elenco di azioni di riproduzione (lato destro), un'area della barra di azioni (in basso) e un'area di messaggi (in basso). 
+
+L'area di selezione delle azioni della tastiera contiene quanto segue:
+
+1) L'elenco di azioni disponibili contiene le azioni della tastiera disponibili. Le azioni selezionate in questo elenco diventano le azioni correnti.
+
+2) L'elenco di caratteri contiene tutti i caratteri disponibili. Un carattere selezionato diventa l'azione corrente. Per selezionare un carattere, fare clic su di esso.
+
+3) Il pulsante "Guida Azioni" contiene le definizioni delle azioni della tastiera in una finestra di guida delle azioni. Le definizioni delle azioni possono essere stampate.
+
+4) Il pulsante "Inserisci azione ->" consente di inserire l'azione corrente nell'area di lavoro dell'elenco di azioni di riproduzione al di sopra dell'azione del file di riproduzione selezionata.
+
+Nota: una sola azione pu• essere quella corrente.
+
+
+L'area di lavoro dell'elenco di azioni di riproduzione contiene quanto segue:
+
+1) Il "File di riproduzione corrente" contiene il nome del file di riproduzione.
+
+2) L'area delle "azioni del file di riproduzione correnti" contiene le azioni della tastiera nel file di riproduzione corrente. E' necessario selezionare un'azione della tastiera per inserire, modificare o eliminare un'azione. Una riga di azione Š limitata a circa 100 caratteri.
+
+3) Il pulsante "Modifica azione" consente di modificare l'azione selezionata. Il pulsante 'OK' nella finestra di modifica sostituisce un'azione modificata. Il pulsante 'Annulla' consente di annullare le modifiche apportate all'azione.
+
+4) Il pulsante "Inserisci riga" consente di inserire una riga vuota nell'elenco di azioni del file di riproduzione nell'ubicazione selezionata, che pu• essere modificata.
+
+5) Il pulsante "Elimina azione" consente di eliminare l'azione selezionata.
+
+6) Selezionando il pulsante "OK", vengono accettate le modifiche apportate nell'elenco di azioni del file di riproduzione.
+
+7) Il pulsante "Annulla" consente di annullare le modifiche apportate nell'elenco di azioni del file di riproduzione.
+
+
+I pulsanti della barra delle applicazioni contengono le seguenti funzioni:
+
+1) L'opzione "Salva" consente di salvare le modifiche apportate nel file di riproduzione. E' possibile modificare il file di riproduzione originale oppure salvare le modifiche in un nuovo file di riproduzione.
+
+2) L'opzione "Esci" consente di chiudere il programma dell'editor dei file di riproduzione.
+
+3) L'opzione "Guida" consente di visualizzare questa guida.
+
+
+Area dei messaggi: contiene i messaggi di informazioni e di errore.
+
+++++"Azioni del mouse"
+L'elenco delle azioni disponibili contiene tutte le azioni disponibili che Š possibile utilizzare in un file di riproduzione, incluse le azioni del mouse che Š possibile registrare in un file di riproduzione. Le azioni del mouse presentano dei parametri di posizione di righe e colonne, separati da una virgola, ad esempio, (12,61).
+
+////3270
+++++"Sblocco anticipato della tastiera 3270"
+Nota: le applicazioni 3270 a volte sbloccano la tastiera prima che sia stato completato l'aggiornamento dello schermo. Un ritardo viene aggiunto automaticamente dall'emulatore 3270 durante la riproduzione. Per ulteriori informazioni, consultare l'argomento Riproduzione nella guida principale di 3270.
+////9999

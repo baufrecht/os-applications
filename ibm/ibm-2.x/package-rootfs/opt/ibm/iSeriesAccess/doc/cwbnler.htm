@@ -1,0 +1,217 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>iSeries Access</title>
+<!-- iSeries Access for Linux -->
+</head>
+
+<body bgcolor="#00FFFF" text="#000000">
+
+<h1>iSeries Access Error Messages</h1>
+
+<h2><a name="Contents">Contents</a></h2>
+
+<ul>
+    <li><a href="#CWBNL0101">CWBNL0101</a></li>
+    <li><a href="#CWBNL0102">CWBNL0102</a></li>
+    <li><a href="#CWBNL0103">CWBNL0103</a></li>
+    <li><a href="#CWBNL0104">CWBNL0104</a></li>
+    <li><a href="#CWBNL0105">CWBNL0105</a></li>
+    <li><a href="#CWBNL0106">CWBNL0106</a></li>
+    <li><a href="#CWBNL0107">CWBNL0107</a></li>
+    <li><a href="#CWBNL0108">CWBNL0108</a></li>
+    <li><a href="#CWBNL0201">CWBNL0201</a></li>
+    <li><a href="#CWBNL0202">CWBNL0202</a></li>
+    <li><a href="#CWBNL0203">CWBNL0203</a></li>
+</ul>
+
+<h1><a name="CWB0022">National Languages and Codes</a><a href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<ul>
+<li>2963 - Belgium Dutch MNCS</li>
+<li>2966 - Belgium French MNCS</li>
+<li>2980 - Brazilian Portuguese</li>
+<li>2981 - Canadian French MNCS</li>
+<li>2926 - Danish</li>
+<li>2923 - Dutch Netherlands</li>
+<li>2924 - English</li>
+<li>2984 - English Mixed Case DBCS</li>
+<li>2950 - English Uppercase</li>
+<li>2938 - English Uppercase DBCS</li>
+<li>2925 - Finnish</li>
+<li>2928 - French</li>
+<li>2940 - French MNCS</li>
+<li>2929 - German</li>
+<li>2939 - German MNCS</li>
+<li>2957 - Greek</li>
+<li>2958 - Icelandic</li>
+<li>2932 - Italian</li>
+<li>2942 - Italian MNCS</li>
+<li>2962 - Japanese</li>
+<li>2986 - Korean DBCS</li>
+<li>2933 - Norwegian</li>
+<li>2922 - Portuguese</li>
+<li>2996 - Portuguese MNCS</li>
+<li>2989 - Simplified Chinese DBCS</li>
+<li>2931 - Spanish</li>
+<li>2937 - Swedish</li>
+<li>2987 - Traditional Chinese DBCS</li>
+<li>2956 - Turkish
+</ul>
+
+<h1><a name="CWBNL0101">CWBNL0101</a><a href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+An error occurred while attempting to convert character data from
+one code page to another. <br>
+The most common reason for this error is that the conversion
+table required to perform the conversion is not yet present on
+the personal computer. Under normal circumstances, when a
+conversion table is missing, the table is automatically retrieved
+from the default server and saved on the
+personal computer. When a default server is not configured or not
+available for some reason, the necessary code page conversion
+table cannot be retrieved.<br>
+Another possible reason this error might occur is that there is
+no conversion table defined for this pair of code pages.
+Conversion tables are usually not defined for incompatible pairs
+of code pages. The code pages may be incompatible because the
+characters represented by one code page cannot be represented by
+the other code page.<br>
+<b>Recovery</b><br>
+Configure a default server, verify its connection, and signon to
+the server when prompted. See Work with the
+default server for information about configuring a default
+server. The Central Client server must be started in order to
+retrieve conversion tables. See Check Host Socket
+Server Status for information on how to check the status of
+the various servers.</p>
+
+<h1><a name="CWBNL0102">CWBNL0102</a><a href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+Conversion table is in a format that is not recognized.<br>
+<b>Recovery</b><br>
+Do one of the following:<br>
+* Delete the not valid conversion table so that a new table will
+be retrieved from the server.<br>
+* Obtain a copy of the conversion table from your server
+administrator.<br>
+* Review the message log for other causes of this error.<br>
+* Contact your service representative.</p>
+
+<h1><a name="CWBNL0103">CWBNL0103</a><a href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+An attempt was made to use a conversion table, but the table was
+not found.<br>
+<b>Recovery</b><br>
+Do one of the following:<br>
+* Obtain a copy of the conversion table from your server
+administrator.<br>
+* Review the message log for other causes of this error.<br>
+* Contact your service representative.</p>
+
+<h1><a name="CWBNL0104">CWBNL0104</a><a href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+A code page conversion table was being retrieved from the server
+when an error occurred.<br>
+<b>Recovery</b><br>
+Do one of the following:<br>
+* Review the message log for other causes of this error.<br>
+* Obtain a copy of the conversion table from your server
+administrator.<br>
+* Contact your service representative.</p>
+
+<h1><a name="CWBNL0105">CWBNL0105</a><a href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+Communications returned a primary return code and secondary error
+code.<br>
+A primary return code of 0005 indicates a conversion map
+retrieval error.<br>
+Secondary error codes:<br>
+* 0001 - Invalid request<br>
+* 0003 - Error calling user exit program<br>
+* 0004 - Request rejected by exit program<br>
+* 0036 - Retrieve conversion map error<br>
+<b>Recovery</b><br>
+Do one of the following:<br>
+* Review the message log for other causes of this error.<br>
+* Contact your service representative.</p>
+
+<h1><a name="CWBNL0106">CWBNL0106</a><a href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+Server returned a primary return code and secondary error code.<br>
+<b>Recovery</b><br>
+Do one of the following:<br>
+* Review the message log for other causes of this error.<br>
+* Obtain a copy of the conversion table from your server
+administrator.<br>
+* Contact your service representative.</p>
+
+<h1><a name="CWBNL0107">CWBNL0107</a><a href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><br>
+<b>Cause</b><br>
+While converting character data from one code page to another,
+some untranslatable characters were encountered. <br>
+<b>Recovery</b><br>
+Verify that the data being converted is correct and that it does
+not contain any not valid characters. </p>
+
+<h1><a name="CWBNL0108">CWBNL0108</a><a href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+A required conversion table was not found on the PC. An attempt
+was made to retrieve the table from the default server, but no
+default server is configured.<br>
+<b>Recovery </b><br>
+A default server is required for retrieving conversion tables.
+Configure iSeries Access
+and retry the operation. See iSeries Access Default Server and Work with the
+default server for information about configuring a default
+server.</p>
+
+<h1><a name="CWBNL0201">CWBNL0201</a><a href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+Message file not in a recognized format. It has been corrupted.<br>
+<b>Recovery</b><br>
+Do one or more of the following:<br>
+* Update iSeries Access.<br>
+* Copy the message file from the server.<br>
+* Obtain a copy of the message file from your server
+administrator.<br>
+* Contact your service representative.</p>
+
+<h1><a name="CWBNL0202">CWBNL0202</a><a href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+Message file could not be found.<br>
+<b>Recovery</b><br>
+Do one of the following:<br>
+* Update iSeries Access.<br>
+* Copy the message file from the server.<br>
+* Obtain a copy of the message file from your server
+administrator.</p>
+
+<h1><a name="CWBNL0203">CWBNL0203</a><a href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The message file is missing a message. The message file could be
+corrupted, or a newer version of the message file is needed.<br>
+<b>Recovery</b><br>
+Do one or more of the following:<br>
+* Update iSeries Access.<br>
+* Obtain a copy of the message file from your server
+administrator.<br>
+* Contact your service representative. </p>
+
+</body>
+</html>

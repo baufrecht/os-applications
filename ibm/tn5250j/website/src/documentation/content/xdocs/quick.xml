@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V1.1//EN" "document-v11.dtd">
+<document>
+  <header>
+    <title>Quick Start</title>
+  </header>
+  <body>
+    <p>
+    <code>java -jar tn5250j.jar</code></p>
+    <p>
+    On first invocation of the emulator there where be some warning messages
+    that will be output to the console.  These are to inform you that defaults
+    files are being setup for you for first run.</p>
+    <p>
+    You will be presented with a Connections screen for defining sessions.
+    Select the configure button to define sessions when the session selection
+    window is displayed.</p>
+    <p>or</p>
+    <p><code>java -jar tn5250j.jar host -p port</code></p>
+    <p>or</p>
+    <p><code>java -jar tn5250j.jar host</code></p>
+    <section><title>Command line options(If you do not want to use the configure button)</title>
+    <source>
+    -p port ----> port to be used - default is port 23 if not specified
+
+    -f filename ----> configuration file.  This is defined on the Session
+                      Configuration screen under Options Tab - Configuration
+                      File Name.
+
+    -t ----> use system name instead of system id Host IP Address/DNS Host name.
+
+    -cp ---> Code Page
+                Supported code pages
+                --------------------
+                37 - US default
+                37PT - Portuguese
+                273 - German
+                280 - Italian
+                284 - Spanish
+                297 - French
+                500-ch - Switzerland
+                870-pl - Poland
+
+                Let me know of others that are needed.  The code pages can be
+                updated quickly.
+
+    -e ----> Enhanced 5250 option.  This gives graphical windows, edit masked
+               fields, continued edit fields, etc...
+               ** Note ** not all enhanced options are implemented as yet.
+               I have only implemented what our applications use here and should
+               be considered as improving (buggy :-)).  At our site we have not
+               had any problems with it yet (note the word yet please).
+               Watch for further announcements and improvements.
+
+    -L ----> Specify the locale/language to be used for literals.  The default
+               is the locale of the system if it is supported.
+
+                  Available Languages
+                     Default -> Supported locale of the system or English
+                     Spanish -> -L es
+                     German -> -L de
+                     French  -> -L fr
+                     Portuguese -> -L pt
+                     Catalan -> -L ca_ES
+                     Dutch -> -L nl
+                     Italian -> -L it
+                     Polish -> -L pl
+
+    -132 ----> Change to 27*132 column.
+
+    -s ------> Start up emulator using an existing configured session
+                  you can specify multiple of these as in -s xxxx -s yyyy
+                  and at startup the emulator will start up session xxxx and
+                  yyyy.  This does not use the sessions file but the entries
+                  that are defined inside for PRE-EXISTIING session
+                  definitions.
+
+                  format of the session entries:
+                  ------------------------------
+
+                  systemName=route-to-host [options as described above]
+
+                  The parameter is used along the systemName entry that
+                  is passed on the command line.  Please see examples
+                  below.
+
+               ==========================================================
+               **** NOTE **** Session names are case sensitive!!!!!!!
+               =========================================================
+
+    -width --> Start up emulator using the width specified
+
+    -height -> Start up emulator using the height specified
+
+    -d ------> if no other instances are running and the -nc options is not
+               specified then start up the bootstrap monitoring thread
+
+    -nc -----> no check for other tn5250j instances that are running
+                    A new frame will be created within another instance
+                    of JVM
+
+    -noembed-> Do not add a new session tab but open in new frame.  Default
+               is embed so add a new session tab in the visible frame.
+
+    -usp ----> Use Socks Proxy
+    -sph ----> Socks Proxy Host - please read step 10 below.
+               I do believe that you can set the user name and password to be
+               used by supplying the following on the the command line to start
+               the emulator.
+               -Djava.net.socks.username="username" &lt;- replace user name with yours
+               -Djava.net.socks.password="password" &lt;- replace password with yours
+
+               Example command line:
+               =====================
+               java -Djava.net.socks.username="kjp1" -Djava.net.socks.password="tn5250j"
+               -jar tn5250j.jar
+
+               I have not tried this so please let me know if it works.
+
+    -spp ----> Socks Proxy Port
+
+    -dn -----> This option takes a device name parameter to be used
+               by the Host.  The device name is 10 characters in
+               length and following rfc2877 it the device name
+               is already allocated then the device name will be
+               sent again with a consecutive number appended.  If
+               the device name plus appended sequencial number is
+               longer than 10 characters then the device name is
+               truncated until the device name and the appended
+               sequential number fits within 10 characters.
+
+             For example:
+             -dn DEVICEUSER
+
+             This will send the device name on allocation to the host
+             as DEVICEUSER.  If there is already a session allocated
+             with device name DEVICEUSER then the emulator will send
+             the device name with a 1 (number one) appended as
+             DEVICEUSE1 if this is allocated then DEVICEUSE2 and so
+             on until the host says no more attempts are allowed or
+             the same device name is sent twice in succession as per
+             rfc2877.
+
+             This option will also change the session name to that
+             of the allocated device name.
+
+    -MDI ----> Use the MDI interface represented by JInternalFrames instead of
+               tabs.
+               --------- N O T E ---------
+               New feature for now and is in testing.  Please send comments/
+               feedback/bugs.
+      </source>
+    </section>
+    <section><title>Example of command line options</title>
+    <p>
+    <code>java -jar tn5250j.jar -L es</code></p>
+    <p>
+    This will change the default language of the system to use the languange
+    translations of what is specified.</p>
+    <p>
+    <code>java -jar tn5250j.jar hostAS400 -f hostAS400.prop</code></p>
+    <p>
+       This will connect to hostAS400 and use the file hostAS400.prop as the
+       property file.  Any properties that are changed will be saved to this
+       file under the current directory.  It does not have to exist as it will
+       be created.  If there are any properties saved from a previous session
+       then those will be read and used.  It uses the code page 37 which is
+       default.</p>
+    <p>
+    <code>java -jar tn5250j.jar parisAS400 -f parisAS400.prop -cp 297</code></p>
+    <p>
+    This will connect to parisAS400 use the property file as described above
+    and use the code page 297 for french.</p>
+    <p>
+    <code>java -jar tn5250j.jar spainAS400 -f spainAS400.prop -cp 284 -e</code></p>
+    <p>
+        This will connect to spainAS400 use the property file as described above
+        and use the code page 284 for spanish and will notify the as400 that it
+        can send enhanced commands.</p>
+    <note>the -e can be used on all sessions.</note>
+    </section>
+    <section><title>Format of the session entries</title>
+    <source>
+systemName=route-to-host [options as described above]
+    </source>
+    </section>
+    <section><title>Sample sessions file</title>
+    <source>
+luxembourg=lux -f luxgui.prop -e -gui
+lux-nogui=lux -f lux.prop -e
+houilles=houilles -f houilles.prop -cp 297 -e
+paris=paris -f paris.prop -cp 297 -e
+spain=spain -f spain.prop -cp 284 -e
+</source>
+<note>Session names are case sensitive!!!!!!!</note>
+</section>
+<section><title>Example of command line option -s</title>
+
+    <p>
+    Command line usage follows:
+    </p>
+    <source>
+java -jar tn5250j.jar -s luxembourg
+    </source>
+    <p>
+    This will search the session file for the entry luxembourg and if found
+    use the the entry parameters that are defined for that session.
+    </p>
+    <p>
+    So using the Sample sessions file described above the program would read
+    the -s option and obtain luxembourg.  It would then search the sessions
+    file for this entry and if found execute the options that where there:
+    </p>
+    <p>
+    system/ip addrss = lux
+    configuration file = luxgui.prop
+    -e = use enhanced mode
+    -gui = start in gui mode
+    </p>
+    <p>
+    If an entry is not found for the -s option then the Connection dialog
+    is displayed for you to enter a new connection or select a pre existing
+    one from the list.
+    </p>
+
+</section>
+
+<section><title>Configure a 5250 Display Session</title>
+
+    <p>
+    <strong>Step 1 - Start the emulator as described above</strong>
+    </p>
+    <p>
+    You will then be presented with the following screen
+    </p>
+    <figure alt="" src="images/connect1.png"/>
+
+    <p>
+    <strong>Step 2 - Click the Add button</strong>
+    </p>
+    <p>
+    This will allow you to define a new session and it's options to be used
+    within the emulator.
+    </p>
+    <figure alt="" src="images/connect2.png" />
+
+    <p>
+    <strong>Step 3 - Specify a name for the session</strong>
+    </p>
+    <p>
+    The name supplied here identifies the session.
+    </p>
+    <figure alt="" src="images/connect3.png" />
+
+    <p>
+    <strong>Step 4 - Specify the IP Address</strong>
+    </p>
+    <ol>
+        <li>
+        Click the TCP/IP Tab to supply the host address of your AS400
+        </li>
+        <li>
+        Modify the port number if needed.  The normal default is port 23.
+        </li>
+        <li>
+        Specify a device name to connect with if desired.  This is not requred
+        </li>
+        <li>
+        Click Add at the bottom of the dialog box.  This will return you to the
+        Connect dialog..
+        </li>
+    </ol>
+    <figure alt="" src="images/connect4.png" />
+
+    <p>
+    <strong>Step 5 - Select Connect</strong>
+    </p>
+    <p>
+    From the Connect dialog select your new session with the mouse so that
+    it is highlighted and then click Connect or Alt-C.
+    </p>
+    <figure alt="" src="images/connect5.png" />
+
+    <p>
+    <strong>You should now be presented with a sign on screen</strong>
+    </p>
+    <figure alt="" src="images/connect7.png" />
+
+</section>
+
+  </body>
+</document>

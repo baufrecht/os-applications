@@ -1,0 +1,336 @@
+//// ENGLISH_SOURCE_VERSION= 1.1 
+////This file contains the keyboard remapping program on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file is stored in locale specific ASCII (code page 819 for Latin1 languages). This help text is stored on the booting server as N3_5KeyH.
+
+////Help text format (this section is not displayed to IBM emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1. Do not translated (or change) anything in a comment line.
+//// 3. This help file contains help text for the 3270, and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator.   A comment line of four "/" characters followed by:
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+//// 3B. "5250" indicates subsequent data is only displayed in 5250 on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in 3270, and 5250 on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+////  3G. Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters.  The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Do not change the order of topics in this help text file.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+----"Définition du clavier 3270 - Aide"
+++++"Informations générales"
+Pour plus de détails sur l'utilisation du programme d'affichage de l'aide, reportez-vous à la première section de l'aide principale de l'émulateur (sélectionnez le menu "Aide" dans la fenêtre de l'émulateur).
+
+Ces informations décrivent comment utiliser le programme de définition de clavier pour modifier les actions du clavier dans vos sessions d'émulation.
+
+Remarque : Vous ne pouvez activer qu'un seul programme de définition de clavier à la fois.
+
+++++"Définition de clavier - Sélection de fichier"
+Au début d'une session 3270, l'émulateur 3270 recherche un fichier de définition de clavier propre à la session. Le type de clavier doit correspondre au clavier utilisé ; un fichier de définition de clavier est utilisé pour un type de clavier précis (par exemple, un clavier PC 102 touches). Le programme procède dans l'ordre suivant et dès qu'il trouve un fichier de définition de clavier, il l'utilise pour la session 3270 :
+
+- Il recherche un fichier de définition de clavier ayant été défini à l'aide du paramètre -KEYFILE.
+
+- Il recherche le fichier de définition de clavier associé à la session, que vous avez créé à l'aide du programme de redéfinition de clavier.
+
+- Il recherche le fichier de définition de clavier par défaut que vous avez créé à l'aide du programme de redéfinition de clavier.
+
+- S'il ne trouve aucun de ces fichiers, l'émulateur utilise les actions de clavier par défaut.
+
+////5250
+++++"Touche d'entrée/zone suivante"
+L'option Préférences diverses permet de modifier l'affectation des touches Entrée et de Ctrl droite. Si vous voulez modifier ces touches, assurez-vous d'abord que la définition voulue est disponible dans les Préférences diverses. Pour cela, déroulez le menu Option dans la barre de menus de l'émulateur et sélectionnez Préférences diverses.
+
+Si l'option Touche d'entrée/zone suivante n'est pas associée à son comportement par défaut et que vous modifiez l'affectation des touches Entrée ou Ctrl droite, la valeur que vous indiquez sera remplacée par celle définie dans les "Préférences diverses".
+
+Si la définition souhaitée n'est pas disponible dans les Préférences diverses, indiquez d'abord la valeur par défaut de l'option Touche d'entrée/zone suivante, puis effectuez les modifications voulues à l'aide du programme de redéfinition de clavier.
+
+Remarque : L'option Préférences diverses permet également de modifier la touche affectée à la fonction d'impression, la substituant ainsi aux éventuelles redéfinitions effectuées pour la touche Impr écran. 
+
+////3270
+++++"Touche Entrée"
+Les Préférences diverses et le programme Configuration de l'émulateur IBM 3270 permettent de modifier la touche affectée à l'opération d'entrée. Si vous voulez modifier les touches Entrée ou Ctrl droite, assurez-vous d'abord que la définition voulue est disponible dans les Préférences diverses ou dans le programme Configuration de l'émulateur IBM 3270.
+
+La définition de la touche Entrée dans les Préférences diverses est prioritaire. La définition de cette touche dans le programme Configuration de l'émulateur IBM 3270 est utilisée ensuite. Si la touche Entrée est associée à son comportement par défaut dans les préférences diverses et dans le programme Configuration de l'émulateur IBM 3270, vous pouvez utiliser le programme de redéfinition du clavier pour modifier l'affectation des touches Entrée et Ctrl droite.
+
+Remarque : L'option Préférences diverses permet de modifier la touche affectée à l'impression locale. Cette valeur se substitue à toute redéfinition effectuée pour la touche Impr écran. 
+
+////9999
+++++"Présentation de la fenêtre"
+La fenêtre de redéfinition de clavier comprend une zone de présentation de clavier graphique (partie supérieure), une zone de sélection d'action (à gauche), une zone Touche/Action (à droite) et une barre de sélection/zone de message (partie inférieure).
+
+Clavier graphique : Présente la configuration physique du clavier en cours. Lorsque vous cliquez sur une touche, les actions définies pour cette touche s'affichent dans la zone Touche/Action. 
+
+
+La zone de sélection d'action comprend :
+
+1) La "Liste des actions disponibles", qui répertorie les actions disponibles. L'action sélectionnée dans la liste devient l'action en cours.
+
+2) La "Liste des caractères", qui répertorie les caractères disponibles. Le caractère sélectionné dans la liste devient l'action en cours. Pour sélectionner un caractère, cliquez sur celui-ci.
+
+3) Le bouton "Aide Action" affiche la fenêtre d'aide qui fournit des définitions d'action de clavier. Les définitions d'action peuvent être imprimées.
+
+////5250
+4) Le bouton "Aucune action" qui affecte la valeur "aucune" à l'action en cours. Si vous avez associé cette valeur à une séquence de touches, aucune action n'est effectuée lorsque vous appuyez sur cette séquence de touches.
+////3270
+4) Le bouton "Aucune action" qui définit la valeur "noop" pour l'action en cours. Si vous avez associé cette valeur à une séquence de touches, aucune action n'est effectuée lorsque vous appuyez sur cette séquence de touches.
+////9999
+
+5) Le bouton "Recherche" qui recherche toutes les touches correspondant à l'action mise en évidence dans la liste des actions disponibles. Les touches trouvées sont mises en évidence sur le clavier graphique, et la première touche devient la touche en cours dans la zone Touche/Action.
+
+Remarque : Il ne peut y avoir qu'une seule action en cours.
+
+
+La zone Touche/Action comprend :
+
+1) La "touche en cours", qui affiche la touche que vous pouvez modifier. Celle-ci est affichée dans la partie supérieure de la zone Touche/Action ou de la zone de sélection d'action (selon le type de clavier). Vous ne pouvez modifier qu'une seule touche à la fois.
+
+2) Les boutons de "touches de modification", qui correspondent aux combinaisons reconnues par le programme de redéfinition de clavier. Ces boutons commencent par "-> ". Lorsque vous cliquez sur l'un de ces boutons, l'action en cours, si elle existe (elle est alors issue de la liste des actions disponibles ou de la liste des caractères), remplace celle qui se trouve dans la zone Action correspondante.
+
+3) La "zone de texte d'action", qui se trouve à droite de chaque bouton de touche de modification et indique l'utilisation simultanée de la touche en cours et de cette touche de modification. Il est possible de modifier cette zone (reportez-vous à la section "Modification de la zone de texte d'action").
+
+4) Le bouton "OK", qui valide les modifications apportées à la touche en cours.
+
+5) Le bouton "Annulation", qui annule les modifications apportées à la touche en cours.
+
+
+Les boutons de la barre de sélection fournissent les fonctions suivantes :
+
+1) "Sauvegarde" permet de sauvegarder les modifications de redéfinition de clavier dans un fichier de définition.
+
+2) "Suppression" permet de supprimer des fichiers de définition de couleurs créés précédemment.
+
+3) "Appliquer à la session" permet d'appliquer les modifications à la session à partir de laquelle le programme de redéfinition de clavier a été lancé. Cela permet de tester les modifications avant de les sauvegarder dans un fichier de définition.
+
+4) "Restauration" permet de défaire les modifications effectuées depuis la dernière fois que le bouton "Appliquer" a été utilisé ou depuis le démarrage du programme de redéfinition de clavier.
+
+5) "Sortie" permet de quitter le programme de redéfinition de clavier.
+
+6) "Impression" permet d'imprimer les séquences touche/modification avec les actions résultantes.
+
+7) "Aide" permet d'afficher ce texte d'aide.
+
+Zone de message :
+Affiche des messages d'information et d'erreur.
+
+++++"Initiation"
+Pour redéfinir le clavier, procédez comme suit :
+
+1) Démarrez le programme de redéfinition de clavier à partir de la session d'émulation voulue.
+
+2) Cliquez sur la touche à modifier sur le clavier graphique.
+
+3) La zone Touche/Action devient active et la touche sélectionnée devient la touche en cours. Les actions définies pour chaque utilisation simultanée de la touche en cours et des touches de modification s'affichent dans les zones de texte d'action.
+
+4) Dans la liste des actions disponibles ou dans la liste des caractères, cliquez sur l'action que vous voulez définir pour la touche en cours, ou sélectionnez "Aucune action". (Remarque : La section Macros de clavier simples indique le mode de création d'une macro de clavier simple).
+
+5) Cliquez sur le bouton de la touche de modification à laquelle l'action doit être associée. L'action voulue devrait s'afficher dans la zone de texte d'action correspondant à la touche de modification. Si vous souhaitez associer une même action à plusieurs touches de modification utilisées simultanément avec cette touche, cliquez sur les boutons de touches de modification correspondants. Il est possible de modifier la zone de texte d'action ; pour plus de détails, reportez-vous à la section "Modification des zones de texte d'actions".
+
+6) Cliquez sur "OK" pour valider les modifications apportées à la touche, ou sur "Annulation" pour restituer les actions d'origine.
+
+7) Cliquez sur "Appliquer à la session".
+
+8) Testez les modifications de redéfinition de clavier dans la session d'émulation ; ne fermez pas le programme de redéfinition de clavier.
+
+9) Dans le programme de redéfinition de clavier, vous pouvez effectuez d'autres modifications de définition de clavier ou cliquer sur "Restauration" en cas de besoin.
+
+10) Une fois toutes les modifications de définition de clavier appliquées et testées, sauvegardez-les. 
+
+11) Fermez le programme de redéfinition de clavier.
+
+++++"Modification d'une zone de texte d'action"
+La zone de texte d'action, située à droite de chaque bouton de touche de modification, affiche l'action définie pour l'utilisation simultanée de la touche en cours et de cette touche de modification. Il est possible de modifier les zones de texte d'action à l'aide du clavier. Cliquez sur la zone de texte d'action et modifiez le texte à partir du clavier. Cliquez sur "OK" pour accepter les modifications.
+
+Les actions modifiées doivent être tapées correctement ; veillez à respecter les minuscules/majuscules. Si vous indiquez plusieurs actions, séparez-les par un espace.
+
+En cas d'erreur au niveau d'un texte d'action, une boîte de dialogue d'avertissement s'affiche et l'action erronée est mise en évidence.
+
+Cliquez sur la zone d'un texte d'action pour l'activer. Si vous avez cliqué sur un bouton de touche de modification alors qu'une zone de texte d'action est active, l'action en cours est insérée dans la zone de texte d'action à l'emplacement du curseur. Si vous avez cliqué sur un bouton de touche de modification alors qu'une zone de texte d'action est inactive, l'action en cours remplace le ou les actions précédentes.
+
+//// Note: The translation of String() and Play() below should match the translated resource text for AllShare*string() and Keyxxx52*play() in the keyboard remapping resource file.
+La touche Ctrl et les combinaisons de touches Alt + touche numérique 0 à 9 n'admettent pas de texte entre les parenthèses de la zone de texte d'action. Chaîne() et Exécution() n'admettent pas de texte pour ces combinaisons de touches.
+
+++++"Application de modifications de définition de clavier"
+Le bouton Appliquer à la session permet d'appliquer provisoirement les modifications apportées à la définition de clavier dans la session d'émulation à partir de laquelle a été lancé le programme de définition de clavier. Vous pouvez alors tester vos modifications. Pour savoir comment sauvegarder vos modifications afin de les utiliser ultérieurement, reportez-vous à la section "Sauvegarde de fichiers de définition de clavier".
+
+++++"Sauvegarde de fichiers de définition de clavier"
+Le bouton Sauvegarde permet de sauvegarder vos redéfinitions de clavier en vue d'une utilisation ultérieure. Les modifications sont sauvegardées dans un fichier de définition de clavier. Cette option permet de sélectionner la manière dont les modifications de clavier sont sauvegardées (dans un fichier qui sera utilisé par défaut dans toutes vos sessions, ou dans un fichier qui sera dédié uniquement à la session en cours).
+
+L'utilisation de fichiers de définition de clavier propres à chaque session permet d'utiliser des actions de touches différentes dans vos sessions 3270. Ces fichiers sont prioritaires dans la session 3270 à partir de laquelle ils ont été créés (identifiée par son numéro et par son nom).
+
+Le fichier de définition de clavier par défaut vient en deuxième position au niveau des priorités ; il est utilisé dans toutes les sessions qui n'ont pas de fichier de définition de clavier spécifique. 
+
+Pour savoir comment supprimer un fichier de définition de clavier, reportez-vous à la section "Suppression de fichiers de définition de clavier".
+
+++++"Suppression de fichiers de définition de clavier"
+Cliquez sur le bouton "Suppression" dans la barre de sélection pour supprimer les fichiers de définition de clavier qui ont été créés. Sélectionnez ceux que vous souhaitez supprimer, puis cliquez sur le bouton Suppression.
+
+++++"Restauration de la définition de clavier"
+Si vous voulez annuler des modifications apportées à la redéfinition d'un clavier, vous pouvez restaurer la définition d'origine comme suit :
+
+1) Restauration de la définition de clavier d'origine affichée au lancement du programme de redéfinition de clavier.
+
+2) Restauration de l'état de la dernière application ; il s'agit de la définition que vous avez appliquée en dernier à la session à l'aide du bouton Appliquer dans la barre de sélection.
+
+Le bouton Restauration ne sauvegarde ni n'applique les définitions restaurées. Il restaure uniquement les affectations de touches du programme de redéfinition de clavier.
+
+Pour restaurer les valeurs d'une définition de clavier par défaut, supprimez le fichier de définition de clavier propre à la session et redémarrez cette dernière.
+
+++++"Macros de clavier simples"
+Une macro de clavier est une séquence de touches que vous pouvez aisément taper dans votre session d'émulation. Il est possible de créer des macros de clavier simples à l'aide du programme de redéfinition de clavier. Il est préférable de créer les séquences de touches longues ou complexes à l'aide des fonctions d'enregistrement et d'exécution. Pour plus de détails, reportez-vous aux sections Enregistrement et Exécution dans l'aide principale de l'émulateur.
+
+Pour créer une macro de clavier simple, procédez comme suit :
+
+1) Sur le clavier graphique, cliquez sur la touche qui exécutera votre macro de clavier.
+
+//// Note: The translation of String() below should match the translated resource text for AllShare*string() in the keyboard remapping resource file.
+2) Faites défiler la liste des actions disponibles jusqu'à Chaîne() et cliquez sur cette action.
+
+3) Cliquez sur le bouton de touche de modification voulu pour la touche que vous avez sélectionnée.
+
+4) Cliquez entre les parenthèses de l'action Chaîne() dans la zone Touche/Action.
+
+5) Tapez les données de votre macro de clavier entre guillemets, par exemple, Chaîne("vos données").
+
+6) Cliquez sur OK pour accepter les modifications.
+
+7) Cliquez sur Appliquer à la session.
+
+8) Testez votre macro de clavier ; appuyez sur la séquence de touches dans la session d'émulation. Vous pouvez modifier votre macro de clavier si vous le souhaitez. Cliquez sur Sauvegarde.
+
+Remarque : Il est possible de définir plusieurs actions sur une seule touche. Pour cela, vous pouvez cliquer sur la zone de texte d'action voulue, puis taper les actions souhaitées. Vous pouvez également cliquer sur la zone de texte d'action voulue, puis sur les boutons de touches de modification afin d'insérer les actions de la liste des actions disponibles et de la liste des caractères disponibles. Si vous indiquez plusieurs actions, séparez-les par un espace.
+
+Remarque : Si vous voulez créer une macro en utilisant plusieurs combinaisons de touches de modification ne figurant pas dans la zone Touche/Action, vous pouvez utiliser la fonction de redéfinition de clavier étendue (reportez-vous à la section Redéfinition de clavier étendue).
+
+++++"Fichiers de macros"
+Vous pouvez définir un fichier de macros contenant une séquence de touches. Enregistrez les fichiers de macros à l'aide de la fonction d'enregistrement (pour plus de détails, reportez-vous à la section Enregistrement de l'aide principale de l'émulateur).
+
+////Note: The translation of Play() below should match the translated resource text for Keyxxx52*play() in the keyboard remapping resource file.
+Ensuite, dans la redéfinition de clavier, sélectionnez la touche qui devra lancer le fichier de macros. Affectez l'action Exécution() à votre séquence de touches. Cliquez entre les parenthèses de l'action Exécution() dans la zone Touche/Action. Entrez le nom du fichier de macros entre les parenthèses.
+
+++++"Aucune Action"
+Si vous voulez qu'une séquence de touches ne génère aucune action, cliquez sur le bouton "Aucune action" dans la zone de sélection d'action et cliquez sur le bouton de touche de modification correspondant à la séquence de touche voulue. Validez ensuite les modifications en cliquant sur "OK".
+
+////Note: The translation of Dead Key below should match the translated resource text for Keyxxx52*unmappable() in the keyboard remapping resource file.
+Remarque : Une touche à laquelle le texte d'action Touche morte est associé ne peut pas être redéfinie, car le système d'exploitation traite les touches mortes.
+
+////Note: The translation of Undefined below should match the translated resource text for Keyxxx52*undefined() in the keyboard remapping resource file.
+Remarque : Une touche à laquelle le texte d'action Indéfini est associé peut être redéfinie.
+
+++++"Recherche d'actions"
+Pour rechercher les touches définies pour une action, sélectionnez cette dernière dans la liste des actions disponibles, puis cliquez sur le bouton Recherche dans la zone de sélection d'action.
+
+Toutes les touches définies pour l'action trouvée sont mises en évidence, et la première touche devient la touche en cours dans la zone Touche/Action.
+
+Le bouton Recherche n'est pas autorisé pour "aucune action", ni pour les caractères de la liste ou pour une macro de clavier.
+
+++++"Liste des caractères"
+La liste des caractères permet d'accéder aux caractères inaccessibles depuis le clavier.
+
+Indiquez le caractère associé à la séquence de touches : cliquez sur la touche du clavier graphique qui affiche le caractère souhaité. Cliquez sur le caractère choisi dans la liste des caractères. Cliquez sur le bouton de touche de modification souhaité. Cliquez sur OK pour accepter les modifications et les appliquer à la session.
+
+Ajout d'un caractère à une macro de clavier : cliquez sur la touche du clavier graphique qui affiche la macro de clavier. Cliquez sur le caractère choisi dans la liste des caractères. Cliquez dans la zone de texte d'action de la macro de clavier (dans l'action Chaîne()), à l'emplacement auquel le caractère ajouté doit être inséré (les touches curseur gauche et curseur droit permettent de déplacer le curseur jusqu'à l'emplacement correct). Cliquez sur le bouton de touche de modification souhaité. Cliquez sur OK pour accepter les modifications et les appliquer à la session.
+
+++++"Touches de Window Manager"
+Certaines touches sont traitées par le programme IBM Network Station Window Manager ; par exemple, la séquence de touches permettant de faire passer une fenêtre à l'arrière-plan. Vous ne pouvez pas redéfinir les touches de Window Manager à l'aide du programme de redéfinition de clavier de l'émulateur.
+
+////3270
+++++"Emulation du photostyle"
+Il est possible d'émuler un photostyle (sélection d'une zone) à l'aide d'une séquence de touches ou de la souris. Vous définissez la séquence de touches ou la souris à l'aide du programme de redéfinition de clavier.
+
+//// Note: The translation of PenSelectField() below should match the translated resource text for Keyxxx52*select-field() in the keyboard remapping resource file.
+Séquence de touches: Cliquez sur la touche voulue du clavier graphique et affectez l'action SélectionZoneParPhotostyle() à la séquence de touches voulue.
+
+////Note: Do not translate Alt<KeyPress>Insert: select-field() and Alt<Btn3Down>: select-field() below.
+Souris: Déterminez la séquence de boutons de la souris permettant d'émuler le photostyle en veillant à ne pas désactiver une fonction utile de la souris. Le plus simple serait d'affecter temporairement l'action SélectionZoneParPhotostyle() à une séquence de touches, comme indiqué ci-dessus. N'écrasez pas une séquence de touches utile (par exemple, Alt-Inser est généralement disponible). Utilisez ensuite la fonction de redéfinition de clavier étendue (pour plus de détails, reportez-vous à la section Redéfinition de clavier étendue) pour modifier la séquence de touches, qui devrait être la première de la liste. Par exemple, remplacez  Alt<KeyPress>Insert: SelectionZoneParPhotostyle() par Alt<Btn3Down>: SelectionZoneParPhotostyle(). Dans ce cas, la combinaison de touches Alt plus bouton droit de la souris permettra d'émuler le photostyle.
+////9999 
+
+++++"Affectations non affichables"
+Certaines affectations de touches ne s'affichent pas parce que vous les avez ajoutées à l'aide de la fonction de redéfinition de clavier étendue, ou parce que le fichier de redéfinition de clavier utilisé a été créé dans une version antérieure du programme.
+
+Lorsque vous utilisez la fonction de redéfinition de clavier étendue (avec une version antérieure du programme de redéfinition de clavier), il est possible d'utiliser plusieurs affectations de touches de modification. Ces touches de modification ne s'affichent pas dans la zone Touche/Action.
+
+Si l'affectation de la touche courante ne peut pas être affichée, un message s'affiche dans la zone de message. Cette affectation peut être visualisée, modifiée ou supprimée uniquement à l'aide de la fonction de redéfinition de clavier étendue. Ce type d'affectation peut fournir des fonctions utiles ; par conséquent, il ne peut pas être modifié par le programme de redéfinition de clavier. 
+
+++++"Impression de fichiers de définition de clavier"
+Pour imprimer le fichier de définition de clavier en cours, cliquez sur le bouton "Impression" de la barre de sélection et sélectionnez les options d'impression dans la boîte de dialogue d'impression. Les séquences touche/touche de modification du clavier sont répertoriés avec l'action résultante. En revanche, les séquences de touches créées à l'aide du programme de redéfinition de clavier étendu ne sont pas imprimées.
+
+++++"Redéfinition de clavier étendue"
+Avertissement : la redéfinition de clavier étendue peut provoquer des résultats indésirables et des incidents importants dans la session d'émulation. Si cela se produit, corrigez les modifications de redéfinition de clavier (modifiez la redéfinition et cliquez sur Appliquer) ou supprimez le fichier de définition de clavier. Vous devez fermer la session d'émulation et la redémarrer une fois le fichier de définition de clavier supprimé.
+
+La redéfinition de clavier étendue permet aux utilisateurs expérimentés de modifier la liste interne des affectations de touches associée à la session d'émulation.
+
+Appuyez simultanément sur les touches "Alt" et "a" pour démarrer la fonction de redéfinition de clavier étendue.
+
+La fenêtre de redéfinition étendue contient la liste des affectations internes et les quatre boutons suivants:
+
+1) "Modification", qui permet de modifier la première affectation sélectionnée dans la liste.
+
+2) "Insertion", qui permet d'insérer une ligne avant l'affectation sélectionnée.
+
+3) "Suppression", qui permet de supprimer toutes les affectations sélectionnées dans la liste (vérifiez que vous voulez bien enlever toutes les affectations sélectionnées avant d'appuyer sur ce bouton).
+
+4) "Fermeture", qui permet de fermer la fenêtre de redéfinition étendue.
+
+Recherche d'éléments dans la liste des affectations : Lorsque vous cliquez sur une touche du clavier graphique, toutes les affectations définies pour cette touche sont mises en évidence dans la liste des affectations. La liste est régénérée automatiquement de façon à afficher la première affectation sélectionnée.
+
+Pour rechercher une action dans la liste des affectations, sélectionnez l'action dans la liste principale des actions disponibles et cliquez sur le bouton Recherche. Les touches associées à cette action sont mises en évidence.
+
+Priorité des affectations : L'ordre des affectations est très important. La liste des affectations est parcourue de haut en bas pour rechercher une affectation correspondant à une touche. La première entrée trouvée répondant aux critères de recherche est utilisée. Les entrées de la liste des affectations comportant le plus de touches de modification (plus spécifiques) sont placées avant les autres.
+
+Par exemple:
+
+////5250
+////In the following two lines, only "must come before" should be translated.
+  Alt<KeyPress>Print: syst() précède
+  <KeyPress>Print: Imprsyst()
+
+"sysreq" est sélectionné lorsque vous appuyez simultanément sur les touches Alt et Impr (d'autres touches de modification peuvent également être enfoncées). "print" est sélectionné lorsque vous appuyez sur la touche Impr (d'autres touches de modification peuvent également être enfoncées). Si
+<KeyPress>Print: print() se trouve avant Alt<KeyPress>Print: sysreq(), Alt<KeyPress>Print: sysreq() ne sera jamais traité car <KeyPress>Print: print() sera traité en premier.
+////3270
+  Alt<KeyPress>Print: syst()  précède
+  <KeyPress>Print: pa1()
+
+"sysreq" est sélectionné lorsque vous appuyez simultanément sur les touches Alt et Impr (d'autres touches de modification peuvent également être enfoncées). "pa1" est sélectionné lorsque vous appuyez sur la touche Impr (d'autres touches de modification peuvent également être enfoncées). Si <KeyPress>Print: pa1() se trouve avant Alt<KeyPress>Print: sysreq(), Alt<KeyPress>Print: sysreq() ne sera jamais traité car <KeyPress>Print: pa1() sera traité en premier.
+////9999
+
+Structure des affectations :
+
+////In the following line, "<KeyPress>" should not be translated.
+  Touche_modification Touche_modification<KeyPress>Touche: action() action()
+
+Les touches de modification ne sont pas obligatoires. Il est possible d'en utiliser plusieurs. Vous devez indiquer au moins une action. Il est possible d'en indiquer plusieurs.
+
+Les touches de modification reconnues par le programme de redéfinition de clavier sont :
+
+////In the following list, the left column ("Any" through "Mod5") should not be translated. The information in parenthesis to the right should be translated.
+////5250
+Any      (idem sans touche de modification)
+Shift    (Maj)
+Lock     (Verr Maj)
+Ctrl     (touche Ctrl gauche)
+Alt      (Alt)
+Mod2     (touche alt droite, Alt graphique)
+Mod3     (non utilisé pour le moment)
+Mod4     (non utilisé pour le moment)
+Mod5     (Verr_Num)
+////3270
+Any      (idem sans touche de modification)
+Shift    (Maj)
+Lock     (Verr Maj)
+Ctrl     (touche Ctrl gauche)
+Alt      (Alt)
+Mod2     (touche Alt droite, Alt graphique)
+Mod3     (non utilisé pour le moment)
+Mod4     (non utilisé pour le moment)
+Mod5     (Verr_Num)
+////9999
+
+Le programme de redéfinition de clavier reconnaît également l'indication exclusive (!) au début d'une liste de touches de modification.
+
+////5250
+////Do not translate "reset()" and "Ctrl" below.
+L'action reset() est définie sur la touche Ctrl gauche (l'action reset ne doit pas être déplacée). Si vous indiquez que la touche de modification Ctrl sélectionne une action, la touche Ctrl gauche traitera l'action reset() avant que votre action ne soit traitée.
+////9999
+
+////Do not translate "enter()", "newline()", and "Control_R" below.
+L'action enter() ou newline() est généralement associée à la touche Control_R.

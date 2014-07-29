@@ -1,0 +1,381 @@
+! ENGLISH_SOURCE_VERSION= 1.4.1.2 
+!
+!
+!
+! This file contains the resource text strings for the IBM Network Station 3270 and 5250
+! emulators, in particular the color mapping program.
+
+! This resource file will be stored on all servers in locale specific ASCII (819 for Latin1
+! languages). 
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. Resource format: 
+!    - A resource line starts with ColorMap* followed by a resource name
+!      and a ":".  Do NOT make any changes to the text to the left of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+!******************************************************************************
+!************************ BEGIN DO NOT TRANSLATE ******************************
+!******************************************************************************
+!*   The first section of resources are are locale specific but               *
+!*   DO NOT REQUIRE TRANSLATION.                                              *
+!*                                                                            *
+!* This source file enables the resource section for Latin1 and Latin2.       *
+!*                                                                            *
+!* For ru_RU or Latin5 locales and DBCS locales                               *
+!*      1. Place a '!' as the first character in each line in the Latin1      *
+!*      and Latin2 section                                                    *
+!*      2. Remove the '!' character for each resource line in the apropriate  *
+!*      section that matches your locale.                                     *
+!*                                                                            *
+!* For example, ru_RU should place ! in front of all lines in the LATIN1      *
+!* section remove the ! from all lines in the LATIN5 section.                 *      
+!******************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN1 and LATIN2                ****************
+!**************************************************************************
+!ColorMap*extraLargeFontList: -*-*-medium-r-normal-*-*-*-*-*-m-110-*-* 
+!ColorMap*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-90-*-* 
+!ColorMap*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-70-*-* 
+!ColorMap*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+!**************************************************************************
+!****************   END LATIN1 and LATIN2                  ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN5                           ****************
+!**************************************************************************
+ColorMap*extraLargeFontList: -*-*-medium-r-normal-*-*-*-*-*-c-100-*-* 
+ColorMap*largeFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-90-*-* 
+ColorMap*mediumFontList:     -*-*-medium-r-normal-*-*-*-*-*-c-70-*-* 
+ColorMap*smallFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!**************************************************************************
+!****************   END   LATIN5                           ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (ja_JP ko_KR zh_CN)   ****************
+!**************************************************************************
+!ColorMap*extraLargeFontList: -*-*-medium-r-normal--24-*-*-*-c-*
+!ColorMap*largeFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!ColorMap*mediumFontList:     -*-*-medium-r-normal--16-*-*-*-c-*
+!ColorMap*smallFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!**************************************************************************
+!****************   END DBCS (ja_JP ko_KR zh_CN)     ****************
+!**************************************************************************
+!**************************************************************************
+!****************   BEGIN DBCS (zh_TW)   ****************
+!**************************************************************************
+!ColorMap*extraLargeFontList: -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!ColorMap*largeFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!ColorMap*mediumFontList:     -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!ColorMap*smallFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!**************************************************************************
+!****************   END DBCS (zh_TW)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   END DO NOT TRANSLATE                   ****************
+!**************************************************************************
+
+ColorMap*title: 			Настройка цветов
+
+! icons
+ColorMap*iname3270:                     Цветовая схема 3270
+ColorMap*iname5250:                     Цветовая схема 5250
+
+
+ColorMap*corrupt:               Файл настройки цветов поврежден
+
+ColorMap*lowMemMsgDialog.messageString:  Недостаточно памяти для запуска программы просмотра справки.
+
+ColorMap*okLabelString: OK
+
+ColorMap*cancelLabelString: Отмена
+
+!*******************************************************************************
+!**     Preferences area resources (top of window)                            **
+!*******************************************************************************
+ColorMap*modeInstructions.labelString:  Выберите функцию настройки цветов:
+
+ColorMap*Basic.labelString:             Базовая
+
+ColorMap*Advanced.labelString:          Расширенная
+
+
+!*************************************************************
+!**   Basic and advanced action bar area resources          **
+!*************************************************************
+ColorMap*actionForm.saveButton.labelString:  	Сохранить
+
+ColorMap*actionForm.deleteButton.labelString:   Удалить
+
+ColorMap*actionForm.applyButton.labelString:    Применить изменения в сеансе
+
+ColorMap*actionForm.quitButton.labelString:     Выход
+
+ColorMap*actionForm.helpButton.labelString:     Справка
+
+
+!************************************************
+!**  Basic and advanced color savebox          **
+!************************************************
+ColorMap*saveBoxLabel.labelString:         Выберите опцию сохранения:
+
+ColorMap*saveBoxToggle1.labelString:       Сохранить как значения по умолчанию для всех сеансов
+
+ColorMap*saveBoxToggle2.labelString:       Сохранить только для этого сеанса
+
+ColorMap*saveBoxSaveBtn.labelString:  	   Сохранить
+
+ColorMap*saveBoxCancelBtn.labelString:     Отмена
+
+ColorMap*advancedSaveBoxLabel.labelString: Введите имя файла расширенной настройки цветов:
+
+! Characters in file names must be 819 (ISO8859-1)
+ColorMap*invalidFileName.value:            Введен символ, недопустимый для имени файла.
+
+ColorMap*invalidFileNameOkbutton.labelString:  OK
+
+!****************************************
+!**  Overwrite existing file dialog    **
+!****************************************
+ColorMap*fileWarningDialog.dialogTitle:        Настройка цветов - Предупреждение
+
+ColorMap*fileWarningDialog.messageString:      Файл уже существует. Заменить его?
+
+ColorMap*fileWarningDialog.okLabelString:      Да
+
+ColorMap*fileWarningDialog.cancelLabelString:  Нет
+
+
+
+!***************************************
+!**  Basic color work area            **
+!***************************************
+ColorMap*basicListLabel.labelString:        Выберите цветовую схему:
+
+! The following two resource lines are a late addition to the color mapping resource file (March 12, 1998).  These indicate color map files that came from a system level or user created color map files.
+ColorMap*systemLabel:                       Системная:
+
+ColorMap*userLabel:                         Пользовательская:
+
+ColorMap*ibmBlack:                          IBM: Черный фон
+
+ColorMap*ibmDarkGrey:                       IBM: Темно-серый фон
+
+ColorMap*ibmLightGrey:                      IBM: Светло-серый фон
+
+ColorMap*ibmLight:                          IBM: Светлый фон
+
+ColorMap*ibmLightBlue:                      IBM: Светло-синий фон
+
+
+
+!******************************************
+!**  Advanced color work area            **
+!******************************************
+ColorMap*advancedListLabel.labelString:     Выберите объект для изменения:
+
+! The following 22 *adv type resources are limited in size; they should not exceed 28 characters.
+ColorMap*advMenuBarBack:                    Фон строки меню
+
+ColorMap*advMenuBarFore:                    Текст строки меню
+
+ColorMap*advMainSess:                       Фон основного сеанса
+
+ColorMap*advPushbut:                        Фон кнопки
+
+ColorMap*advBlue:                           Синий текст
+
+ColorMap*advGreen:                          Зеленый текст
+
+ColorMap*advPink:                           Розовый текст
+
+ColorMap*advRed:                            Красный текст
+
+ColorMap*advTurq:                           Бирюзовый текст
+
+ColorMap*advWhite:                          Белый текст
+
+ColorMap*advYellow:                         Желтый текст
+
+ColorMap*advCursor:                         Курсор
+
+ColorMap*advMouse:                          Указатель мыши
+
+ColorMap*advRule:                           Линейка
+
+ColorMap*advStatLineBack:                   Фон строки состояния
+
+ColorMap*advStatLineFore:                   Текст строки состояния
+
+ColorMap*advMonoImageBack:                  Монохромный фон
+
+ColorMap*advMonoImageFore:                  Монохромный текст
+
+! Note: foreground color used for assist program windows
+ColorMap*advAssistFore:                     Фон программы поддержки
+
+! Note: button background for assist program windows
+ColorMap*advAssistForm:                     Кнопка программы поддержки
+
+! Note: main background color for assist program windows
+ColorMap*advAssistPrimary:                  Основа программы поддержки
+
+! Note: entry area background color for assist program windows
+ColorMap*advAssistEntry:                    Запись программы поддержки
+
+
+ColorMap*red.titleString:                   Красный
+
+ColorMap*green.titleString:                 Зеленый
+
+ColorMap*blue.titleString:                  Синий
+
+ColorMap*currentColorLabel.labelString:     Текущий цвет
+
+ColorMap*applyCurrentColor.labelString:     Применить текущий цвет
+
+
+!************************************
+!**  Delete file dialog            **
+!************************************
+ColorMap*deleteDialog.deleteBoxDeleteBtn.labelString:  Удалить
+
+ColorMap*deleteDialog.deleteBoxCancelBtn.labelString:  Отмена
+
+! title of delete dialog
+ColorMap*deleteDialog.dialogTitle:                     Удалить файл схемы
+
+ColorMap*deleteDialog.deleteBoxLabel.labelString:      Выберите файлы для удаления:
+
+ColorMap*deleteDialog.deleteBoxLabelAlt.labelString:   Нет файлов, доступных для удаления.
+
+! message at bottom of primary window
+ColorMap*selectedDeleted:                              Выбранные файлы цветовых схем удалены.
+
+
+!*****************************************************
+!**  Delete file verification dialog box            **
+!*****************************************************
+ColorMap*deleteVerifyDialog.dialogTitle:        Подтвердить удаление
+
+ColorMap*deleteVerifyDialog.okLabelString:      OK
+
+ColorMap*deleteVerifyDialog.cancelLabelString:  Отмена
+
+! this cannot be much longer
+ColorMap*noUndoDelete:                          Начатую операцию удаления нельзя отменить. Продолжить?
+
+ColorMap*noFilesDelete:                         Не выбран ни один файл. Удаление невозможно.
+
+
+!****************************************************
+!**  Emulator preference in construct list         **
+!**						   **
+!**  MAX:  text should be less than 15 characters  **
+!****************************************************
+ColorMap*emuPrefMenuLabel.labelString:       Строка меню
+
+ColorMap*emuPrefBlueText.labelString:        Синий текст
+
+ColorMap*emuPrefGreenText.labelString:       Зеленый текст
+
+ColorMap*emuPrefPinkText.labelString:        Розовый текст
+
+ColorMap*emuPrefRedText.labelString:         Красный текст
+
+ColorMap*emuPrefTurquoiseText.labelString:   Бирюзовый текст
+
+ColorMap*emuPrefWhiteText.labelString:       Белый текст
+
+ColorMap*emuPrefYellowText.labelString:      Желтый текст
+
+ColorMap*emuPrefPbBackground.labelString:    Активная кнопка
+
+ColorMap*emuPrefStatusLine.labelString:      Строка состояния
+
+ColorMap*groupBoxLabel.labelString:          Программа поддержки
+
+ColorMap*entryAreaLabel.labelString:         Область ввода данных
+
+ColorMap*helperFormLabel.labelString:        Кнопка
+
+
+!**************************
+!**  Error dialog boxes  **
+!**************************
+ColorMap*noColorCellsMsgText.value: Не удалось захватить ресурсы цветов, необходимые для запуска программы настройки цветов. Закройте приложение, применяющее большое количество цветов, и повторите операцию.
+
+ColorMap*setColorMsgText.value:      В сеансе эмуляции применены не все цвета. Однако при нажатии кнопки Сохранить будут сохранены правильные цвета.
+
+ColorMap*setColorFailureCancelBtn.labelString:        Отмена
+
+ColorMap*invalidColor:   Следующие цвета текста и фона могут быть неразличимы:
+
+
+!**********************************
+!**  General Error dialog boxes  **
+!**********************************
+ColorMap*noAdvanced.value:            Невозможно захватить ресурсы цветов для предоставления всех функций настройки цветов.
+
+ColorMap*noAdvancedOkbutton.labelString:  OK
+
+
+!*******************************************************************************
+!**  quitDialog resources                                                     **
+!*******************************************************************************
+ColorMap*quitDialog.dialogTitle:           Выход - Предупреждение
+
+ColorMap*quitDialog1:                      Изменения, внесенные в параметры цветов программы эмуляции, не применены и не сохранены.
+
+ColorMap*quitDialog2:                      Изменения, внесенные в параметры цветов программы эмуляции, применены, но не сохранены.
+
+ColorMap*quitDialog3:                      Изменения, внесенные в параметры цветов программы эмуляции, сохранены, но не применены.
+
+ColorMap*quitDialog*exitBox.labelString:   Выход
+
+ColorMap*quitDialog*cancelBox.labelString: Отмена
+
+ColorMap*quit1Tog1:                        Выйти без применения и сохранения изменений.
+
+ColorMap*quit2Tog1:                        Выйти без сохранения изменений.
+
+ColorMap*quitDialog*quitTog2.labelString:  Применить и сохранить изменения перед выходом.
+
+ColorMap*quit3Tog1:                        Выйти без применения изменений.
+
+ColorMap*quitTog3.labelString:             Применить изменения в сеансе перед выходом.
+
+ColorMap*quitDialog*quitTog4.labelString:  Сохранить изменения перед выходом.
+
+
+!*******************************************************************************
+!**  Informational Messages                                                   **
+!*******************************************************************************
+ColorMap*InfoMsgColorsSaved:    Параметры цветов сохранены в файле:
+
+ColorMap*tempApp:               Цвета на время применены в сеансе эмуляции.
+
+ColorMap*notLoaded:             Не удалось загрузить файл настройки цветов. Убедитесь, что он существует.
+
+ColorMap*errorLoad:             Формат файла настройки цветов недопустим.
+
+
+! this resource should contain one black space character; do not translate.
+ColorMap*blank:  
+
+ColorMap*chooseApply:           Для применения цветов в сеансе нажмите кнопку Применить.
+
+ColorMap*noAccessDir:           Каталог недоступен.
+
+! this cannot be made any longer during translation
+ColorMap*noOpenFile:            Не удалось открыть файл цветовой схемы:
+
+ColorMap*noMakeDir:             Не удалось создать каталог.
+
+ColorMap*noDeterminePath:       Не удалось определить путь к файлу.

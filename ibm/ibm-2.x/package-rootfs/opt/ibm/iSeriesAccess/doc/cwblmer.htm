@@ -1,0 +1,215 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>iSeries Access</title>
+<!-- iSeries Access for Linux -->
+</head>
+
+<body bgcolor="#00FFFF" text="#000000">
+
+<h1>iSeries Access Error Messages</h1>
+
+<h2><a name="Contents">Contents</a></h2>
+
+<ul>
+    <li><a href="#CWBLM0001">CWBLM0001</a> </li>
+    <li><a href="#CWBLM0002">CWBLM0002</a> </li>
+    <li><a href="#CWBLM0003">CWBLM0003</a> </li>
+    <li><a href="#CWBLM0004">CWBLM0004</a> </li>
+    <li><a href="#CWBLM0011">CWBLM0011</a> </li>
+    <li><a href="#CWBLM0012">CWBLM0012</a> </li>
+    <li><a href="#CWBLM0013">CWBLM0013</a> </li>
+    <li><a href="#CWBLM0014">CWBLM0014</a> </li>
+    <li><a href="#CWBLM0015">CWBLM0015</a> </li>
+    <li><a href="#CWBLM0017">CWBLM0017</a> </li>
+    <li><a href="#CWBLM0018">CWBLM0018</a> </li>
+    <li><a href="#CWBLM0019">CWBLM0019</a> </li>
+    <li><a href="#CWBLM0020">CWBLM0020</a> </li>
+    <li><a href="#CWBLM0030">CWBLM0030</a> </li>
+    <li><a href="#CWBLM0031">CWBLM0031</a> </li>
+    <li><a href="#CWBLM0032">CWBLM0032</a> </li>
+    <li><a href="#CWBLM0040">CWBLM0040</a> </li>
+</ul>
+
+<h1><a name="CWBLM0001">CWBLM0001</a><a
+href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+A release license was attempted on a license that is in use and cannot be released.
+
+<p><b>Recovery</b><br>
+A license can only be released when it is not in use. Shut down all licensed programs before attempting to release the license.
+
+<h1><a name="CWBLM0002">CWBLM0002</a><a
+href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+A release license was attempted on a system that does not currently have a license in use.
+
+<p><b>Recovery</b><br>
+None
+
+<h1><a name="CWBLM0003">CWBLM0003</a><a
+href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The license usage limit has been exceeded but the license has been granted. The maximum number of available licenses for the product are already in use. However, you may continue to use the product.
+
+<p><b>Recovery</b><br>
+Continue processing. You are, however, out of compliance with the licensing agreement. Contact your server administrator to have the license agreement adjusted.
+
+<h1><a name="CWBLM0004">CWBLM0004</a><a
+href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The license limit has been exceeded but the request is within the grace period. The maximum number of available licenses for the product are already in use. However, you may continue to use the product during the grace period.
+
+<p><b>Recovery</b><br>
+Continue processing. Contact your server administrator and have the license agreement adjusted before the grace period expires. Otherwise, you may be prevented from using the product in the future.
+
+<h1><a name="CWBLM0011">CWBLM0011</a><a
+href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+Internal application error.
+
+<p><b>Recovery</b><br>
+The application software is in error. Make sure you have applied the latest code levels.
+
+<h1><a name="CWBLM0012">CWBLM0012</a><a
+href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The license request failed because the server information was not in the license memory at the time of the request.
+
+<p><b>Recovery</b><br>
+The application software is in error. Make sure you have applied the latest code levels.
+
+<h1><a name="CWBLM0013">CWBLM0013</a><a
+href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+A communications error occurred. No further information is available.
+
+<p><b>Recovery</b><br>
+It is possible that network communication has failed on your PC.  Make sure all network cables are connected.
+If the problem persists, contact you network administrator for assistance.
+
+<h1><a name="CWBLM0014">CWBLM0014</a><a
+href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+Licenses can only be granted when connecting to V3R2 or later versions of iSeries.
+
+<p><b>Recovery</b><br>
+Try again with a later release of iSeries.
+
+<h1><a name="CWBLM0015">CWBLM0015</a><a
+href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The license request failed because an incorrect license handle was used.
+
+<p><b>Recovery</b><br>
+The application software is in error. Make sure you have applied the latest code levels.
+
+<h1><a name="CWBLM0017">CWBLM0017</a><a
+href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+Unable to access server licensing information. The following contains more information, depending on the rc2 number displayed in the error message you received:
+<br>rc2 = 28 License information was not found.
+<br>rc2 = 29 License information was not available.
+
+<p><b>Recovery</b><br>
+Make sure that iSeries Access has been installed on the server.
+
+<h1><a name="CWBLM0018">CWBLM0018</a><a
+href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The server could not process the license request. The following contains more information, depending on the rc2 number displayed in the error message you received:
+<br>rc2 = 01; An invalid request was sent to the host.
+<br>rc2 = 31; More than one release was found.
+<br>rc2 = 33; Incorrect release format specified.
+
+<p><b>Recovery</b><br>
+The application software is in error. Make sure you have applied the latest code levels.
+
+<h1><a name="CWBLM0019">CWBLM0019</a><a
+href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The host is returning an error to the license client. The following contains more information, depending on the rc2 number displayed in the error message you received:
+<br>rc2 = 25; Request license error.
+<br>rc2 = 26; Release license error.
+<br>rc2 = 27; Retrieve license information error.
+<br>rc2 = 2A; The release handle does not match the request handle.
+
+<p><b>Recovery</b><br>
+The application software is in error. Make sure you have applied the latest code levels.
+
+<h1><a name="CWBLM0020">CWBLM0020</a><a
+href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The maximum number of available licenses for iSeries Access are currently in use.
+
+<p><b>Recovery</b><br>
+Wait until a license is released and try again.
+
+<h1><a name="CWBLM0030">CWBLM0030</a><a
+href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The host server is returning a license failure. The following contains more information, depending on the rc2 number displayed in the error message you received:
+<br>rc2 = 02; Invalid client name.
+<br>rc2 = 21; Invalid product ID.
+<br>rc2 = 22; Invalid release.
+<br>rc2 = 23; Invalid feature.
+<br>rc2 = 24; Invalid type of license information.
+
+<p><b>Recovery</b><br>
+The application software is in error. Make sure you have applied the latest code levels.
+
+<h1><a name="CWBLM0031">CWBLM0031</a><a
+href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The host server returned a data conversion error. The following contains more information, depending on the rc2 number displayed in the error message you received:
+<br>rc2 = 02; Invalid client name.
+<br>rc2 = 21; Invalid product ID.
+<br>rc2 = 22; Invalid release.
+<br>rc2 = 23; Invalid feature.
+
+<p><b>Recovery</b><br>
+The application software is in error. Make sure you have applied the latest code levels.
+
+<h1><a name="CWBLM0032">CWBLM0032</a><a
+href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+The host server returned an internal license error. The following contains more information, depending on the rc2 number displayed in the error message you received:
+<br>rc2 = 2; Security error.
+<br>rc2 = 3; No resource.
+<br>rc2 = 4; No network.
+<br>rc2 = 9; The function is busy.
+<br>rc2 = D; CCSID isunavailable.
+
+<p><b>Recovery</b><br>
+The application software is in error. Make sure you have applied the latest code levels.
+
+<h1><a name="CWBLM0040">CWBLM0040</a><a
+href="#Contents"><font size="2">[Contents]</font></a></h1>
+
+<p><b>Cause</b><br>
+An unexpected and undocumented error has occurred.
+
+<p><b>Recovery</b><br>
+The application software is in error. Make sure you have applied the latest code levels.
+
+</body>
+</html>

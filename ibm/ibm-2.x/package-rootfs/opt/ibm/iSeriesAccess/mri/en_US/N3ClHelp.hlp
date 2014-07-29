@@ -1,0 +1,101 @@
+////This file contains the color mapping program on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file will be stored in locale specific ASCII (code page 819 for Latin1 languages). 
+
+////Help text format (this section is not displayed to IBM emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1.
+//// 3. This help file contains help text for the 3270 and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator. A comment line of four "/" characters followed by
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+//// 3B. "5250" indicates subsequent data is only displayed in 5250 on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in both 3270 and 5250 on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+//// 3D. Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters.  The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Do not change the order of topics in this help text file.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+
+----"3270 Color Mapping Help"
+++++"General Information"
+For information on using this help viewing program, see the first topic in the main emulator help (select the "Help" menu bar choice in the Emulator window).
+
+This help information describes how the Color Mapping program can be used to change the colors of your 3270 emulator sessions.
+
+Note: Only one Color Mapping program can be active at a time.
+
+++++"Color Mapping File Selection"
+At the start of a 3270 session, the 3270 emulator searches for a color mapping file for the session. The following order is used; if a color mapping file is found, it is used for the 3270 session:
+ 
+- Search for a session specific color mapping file that you selected using the Color Mapping program.
+
+- Search for a default color mapping file that you selected using the Color Mapping program.
+
+- If none of the above is found, the 3270 emulator uses default colors (black background).
+
+++++"Window Layout"
+For Basic Color Mapping, the Color Mapping window has a color scheme selection area (left), a sample Assist program and 3270 session windows area (lower right), and an action bar/message area (bottom).
+
+For Advanced Color Mapping, the Color Mapping window has a construct selection area (left), a color selection area (upper right), a sample Assist program and 3270 session windows area (lower right), and an action bar/message area (bottom).
+
+The Color Selection Area contains the following:
+
+1) The multicolor bar which contains twenty colors which serve as a starting point for choosing the new color that is being mapped into one of the constructs.
+
+2) The red/green/blue sliders which make finer adjustments to the new color that is being mapped into one of the constructs.
+
+3) The "Current Color" window which displays the new color as it is being modified by the multicolor bar and the red/green/blue sliders.
+
+4) The "Apply Current Color" button which applies the color change to the sample Assist program and 3270 session windows area. This must be done before changes can be applied to the session.
+
+
+Action Bar buttons provide the following functions:
+
+1) "Save" color mapping changes in a color mapping file.
+
+2) "Delete" color mapping files that were previously created.
+
+3) "Apply Changes to the Session" that started the Color Mapping program. This allows testing of changes before saving them in a color mapping file.
+
+4) "Exit" from the Color Mapping Program.
+
+5) "Help" displays this help text.
+
+Message Area: 
+Displays information and error messages.
+
+++++"Basic Color Mapping"
+The Basic Color  Mapping option allows you to select a color scheme (a color mapping file) for this 3270 session or as a default for this and future 3270 sessions.
+
+Basic Color Mapping offers five standard color schemes plus advanced color schemes that you have created. Note: Three of the five standard color schemes use the same colors for Assist Program windows (for example, the colors of this 3270 help window).
+
+++++"Advanced Color Mapping"
+The Advanced Color Mapping option allows you to create an advanced color scheme (a color mapping file). The colors of various elements (constructs) of a 3270 session can be changed. It is recommended that you first select the closest color scheme using the Basic Color Mapping option. Then, use Advanced Color Mapping to further modify the color of specific constructs.
+
+////Note: Some IBM Thin Client models support up to 256 colors (using 1 Megabyte of Video RAM). After this limit is reached, false colors may produce confusing browser images. The five IBM basic color schemes match the colors used by the browser and Java. Advanced color schemes could use up to a maximum of 22 colors. The browser and Java allocate a color palette (for 256 color Thin Clients) using the following values for red, green, and blue: 0, 51, 102, 153, 204, and 255.
+ 
+To change the color of a construct, first, select the construct to see its current color. If you wish to significantly change the color, click on a color in the multicolor bar as a starting point for further changes. The red/green/blue values can be adjusted. For example, you can drag the red value slider (press the primary mouse button with the mouse pointer on the slider and move the mouse pointer), click beside the slider, or click on either the "-" or "+" buttons. The range in value for red, green, and blue is 0 to 255. Then, click on the "Apply Current Color" button; the lower right working area is updated.
+
+The lower right working area has an Assist Program area and a 3270 area. Assist Program colors will apply to the 3270 Online Help window, Miscellaneous Preferences window, Record/Playback windows, Keyboard Remapping window, and Color Mapping window (when Color Mapping window is restarted). The 3270 area shows a menu bar, main session background with the seven foreground colors, push button, rule line, and status line.
+
+To try a color scheme during the current session, click the "Apply Changes To Session" button. To save an Advanced color scheme, click the Save button. Your color mapping file name will be added to the list of color schemes available in the Basic Color Mapping option. The Basic Color Mapping option is used to select a color scheme to apply to one or more 3270 sessions. Note: The Color Mapping program limits an advanced color mapping file name to 32 characters.
+
+An existing advanced color scheme can be changed. Select the advanced color scheme using the Basic Color Mapping option and apply the scheme to the session. The Advanced Color Mapping option is then used to adjust construct colors. Enter the existing advanced color scheme name when saving the color scheme.
+   
+Note: The Advanced option does not prevent you from setting a foreground text color and background color to the same color (or nearly the same color). If this occurs, the foreground text is unreadable. The working area can be used to verify all foreground colors are readable.
+
+++++"Applying Color Map Changes"
+The Apply Changes to Session button temporarily applies your color mapping changes to the emulator session where the Color Mapping program was started. Your changes can then be tested. See "Saving Color Mapping Files" for information on saving your changes for later use.
+
+++++"Saving Color Mapping Files"
+The Save button saves your color mapping changes for later use. Your color mapping changes are saved in a color mapping file. When an Advanced color scheme is saved, your color mapping file name will be added to the list of color schemes available in the Basic Color Mapping option. In Basic Color Mapping, you select how your color remapping changes are saved: as the default color mapping file which is used for all your sessions or as a session specific color mapping file used only for the session from where the Color Mapping program was started.
+
+A session specific color mapping file allows different color combinations in different 3270 sessions. A session specific color mapping file has the highest priority and is used for the specific session where the color mapping file was created (using the session number of the 3270 session and the session name).
+
+A default color mapping file has the second highest priority and is used for all sessions that do not have a session specific color mapping file.
+
+See "Deleting Color Mapping Files" for information on deleting a color mapping file.
+
+++++"Deleting Color Mapping Files"
+Click the "Delete" button on the action bar to delete color mapping files that have been created. Click any color mapping files that are to be deleted and then click the delete button.

@@ -1,0 +1,2072 @@
+!
+!
+!
+! This file contains the resource text strings for the IBM Network Station 3270, 5250, VTxxx
+! emulators, in particular the keyboard remapping, keypad customize, and playback edit programs.
+
+! This resource file is stored in locale specific ASCII (code page 819 for Latin1 languages).
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. Resource format:
+!    - A resource line starts with one of the following strings:
+!      Keymap52* : for keymapper resources
+!      Keypad52* : for keypad customize resources
+!      Playedit* : for playback editor resources
+!      Keyxxx52* : for resources shared by keymapper and keypad
+!      AllShare* : for resources shared by keymapper, keypad, and playback editor
+!    - Each string is followed by a resource name and a ":".
+!       Do NOT make any changes to the text to the left of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+
+!******************************************************************************
+!************************ BEGIN DO NOT TRANSLATE ******************************
+!******************************************************************************
+!*   The first section of resources are are locale specific but               *
+!*   DO NOT REQUIRE TRANSLATION.                                              *
+!*                                                                            *
+!* This source file enables the resource section for Latin1 and Latin2.       *
+!*                                                                            *
+!* For ru_RU or Latin5 locales and DBCS locales                               *
+!*      1. Place a '!' as the first character in each line in the Latin1      *
+!*      and Latin2 section                                                    *
+!*      2. Remove the '!' character for each resource line in the apropriate  *
+!*      section that matches your locale.                                     *
+!*                                                                            *
+!* For example, ru_RU should place ! in front of all lines in the LATIN1      *
+!* section remove the ! from all lines in the LATIN5 section.                 *
+!******************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN1 and LATIN2                ****************
+!**************************************************************************
+Keypad52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-110-*-*
+Keypad52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-90-*-*
+Keypad52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+Keymap52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-90-*-*
+Keymap52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-70-*-*
+Keymap52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+Playedit*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-90-*-*
+Playedit*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-70-*-*
+Playedit*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+!**************************************************************************
+!****************   END LATIN1 and LATIN2                  ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN5                           ****************
+!**************************************************************************
+!Keypad52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*
+!Keypad52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!Keypad52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!Keymap52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!Keymap52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-70-*-*
+!Keymap52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!Playedit*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!Playedit*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-70-*-*
+!Playedit*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!**************************************************************************
+!****************   END   LATIN5                           ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (ja_JP ko_KR zh_CN)   ****************
+!**************************************************************************
+!Keypad52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*
+!Keypad52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!Keypad52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*
+!Keymap52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*
+!Keymap52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!Keymap52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*
+!Playedit*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*
+!Playedit*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!Playedit*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*
+!**************************************************************************
+!****************   END DBCS (ja_JP ko_KR zh_CN)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (zh_TW)   ****************
+!**************************************************************************
+!Keypad52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Keypad52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Keypad52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Keymap52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Keymap52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Keymap52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Playedit*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Playedit*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Playedit*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!**************************************************************************
+!****************   END DBCS (zh_TW)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   END DO NOT TRANSLATE                   ****************
+!**************************************************************************
+
+
+! ********************************************************************************
+! Keyboard Remapping Resources
+! ********************************************************************************
+!
+! In general, the following buttons should not be made much longer during translation.
+! Buttons have one to four words. Note: Testing is the only way to know for sure if all
+! buttons fit on the screen ok.  The emulators have a testing document that will be used
+! during testing; this will point out a problem if button text is too long. In many
+! cases, buttons are presented side by side, where the total button text length cannot
+! increase significantly.
+Keymap52*key.labelString:  Aktuális billentyû
+!
+Keymap52*title:  Billentyûzet átdefiniálása
+!
+Keymap52*iname5250:  5250 billentyûkiosztás
+!
+Keymap52*iname3270:  3270 billentyûkiosztás
+!
+Keymap52*inameNSTERM:  VT emulátor billentyûkiosztás
+!
+AllShare*fileSaveButton.labelString:  Mentés
+!
+Keymap52*fileDeleteButton.labelString:  Törlés
+!
+Keymap52*applyTranslationsButton.labelString:  Módosítások alkalmazása a \
+szekcióra.
+!
+AllShare*fileQuitButton.labelString:  Kilépés
+!
+AllShare*helpPush.labelString:  Súgó
+!
+AllShare*lowMemMsgDialog.messageString:  Nincs elég memória a Súgó Nézõ indításához.
+!
+AllShare*quitDialog.dialogTitle:  Kilépési figyelmeztetés
+!
+! Note: \n causes a new line in the dialogue box and should not be translated.
+! You can move, add, or remove \n within this text string.
+Keymap52*invalidExt.value: A billentyûkiosztás fájl nevében a \
+kiterjesztés helytelen vagy hiányzik. \n\
+A fájl neve a helyes kiterjesztéssel automatikusan kiegészült. \n\
+Kérjük, vegye figyelembe az új fájl nevet és kiterjesztést az üzenet \
+területen.
+!
+Keymap52*invalidExtOkButton.labelString:  OK
+!
+Keymap52*invalidFileName.value:  A begépelt karakter nem érvényes fájlnevekben.
+!
+Keymap52*invalidFileNameOkbutton.labelString:  OK
+!
+Keymap52*noKeyCaps.value: A billentyûzet átdefiniálási program nem lett \
+frissítve a billentyûzet típusához. A grafikus billentyûzeten a billentyûk \
+szövege angol nyelven jelenik meg.
+!
+Keymap52*noKeyCapOkbutton.labelString:  OK
+!
+Keymap52*EBCMismatchText.value: A billentyûzet átdefiniáló programot meghívó \
+emulátor szekció nyelve nem egyezik az IBM hálózati számítógép \
+nyelvével.  Az átdefiniáló programmal készített karakterek és \
+karaktersorozatok nemkívánatos eredményekhez vezethetnek az emulátor \
+szekcióban.
+!
+Keymap52*mismatchOKbutton.labelString:  OK
+!
+Keymap52*poorResolutionMsgText.value:   A monitor felbontása kisebb, mint 800x600. A \
+billentyûzet átdefiniálás nem támogatott a 800x600 képpontnál kisebb felbontású \
+monitorokon.
+!
+Keymap52*keymapFailureCancelBtn.labelString:  Mégsem
+!
+Keymap52*saveDialog.dialogTitle:  Billentyûzet átdefiniálásának mentése
+!
+Keymap52*saveBoxLabel*labelString:  Válassza ki a billentyûzet átdefiniálási \
+módosítások mentésének helyét:
+!
+Keymap52*saveBoxToggle1.labelString:  Minden szekcióhoz alapértelmezettként \
+mentés
+!
+Keymap52*saveBoxToggleNsterm1.labelString:      Ehhez a terminál típushoz \
+alapértelmezettként mentés
+!
+Keymap52*saveBoxToggle2.labelString:  Mentés csak ehhez a szekcióhoz
+!
+Keymap52*saveBoxToggle3.labelString:  Megnevezett billentyûkiosztási fájlként \
+mentés (csak rendszergazdáknak)
+!
+AllShare*saveBoxSaveBtn.labelString:  Mentés
+!
+AllShare*saveBoxCancelBtn.labelString:  Mégsem
+!
+Keymap52*fileNameSaveBoxLabel.labelString:  Adjon meg egy \
+billentyûkiosztási fájlnevet:
+!
+Keymap52*fileDeleteDialog.dialogTitle:  Billentyûzet átdefiniálási fájl \
+törlése
+!
+Keymap52*fileDeleteBoxLabel*labelString:  Jelölje ki a törlendõ \
+fájlt, fájlokat:
+!
+KeyXXX52*fileDeleteBoxLabelAlt*labelString:  Nincs törlendõ fájl
+!
+KeyXXX52*fileDeleteBoxDeleteBtn.labelString:  Törlés
+!
+KeyXXX52*fileDeleteBoxCancelBtn.labelString:  Mégsem
+!
+KeyXXX52*fileDeleteVerifyDialog.dialogTitle:  Törlés ellenõrzése
+!
+KeyXXX52*fileDeleteVerifyDialog.okLabelString:  OK
+!
+KeyXXX52*fileDeleteVerifyDialog.cancelLabelString:  Mégsem
+
+! this cannot be much longer
+KeyXXX52*noundoDelete:  Fájlok törlését nem lehet visszavonni. Kíván törölni?
+!
+KeyXXX52*novalidDelete:  Nincs kijelölt fájl. A törlés érvénytelen.
+!
+Keymap52*fileWarningDialog.dialogTitle:  Billentyûkiosztás figyelmeztetés
+!
+AllShare*fileWarningDialog.okLabelString:  Igen
+!
+AllShare*fileWarningDialog.cancelLabelString:  Nem
+!
+AllShare*fileAlreadyExists:  A fájl már létezik. Akarja felülírni?
+!
+Keymap52*transTempApp:  A billentyûzet átdefiniálási változások a szekcióra \
+ideiglenesen alkalmazásra kerültek.
+!
+AllShare*nomakeDir:  Nem sikerült létrehozni a könyvtárat.
+!
+AllShare*nofilepathSave:  Nem lehet meghatározni a fájl elérési útját
+!
+Keymap52*transRxd:  Eredeti billentyûzetkiosztás érkezett az emulátor \
+szekciótól.
+!
+Keymap52*saveTran:  Billentyûzet átdefiniálási fájl mentése...
+!
+Keymap52*savetoTranError:  Hiba történt a billentyûzet átdefiniálási fájl \
+mentésekor...a fájl nincs elmentve.
+!
+Keymap52*savedtoTran:   A billentyûzet átdefiniálási fájl a következõ \
+helyre lett elmentve:
+!
+Keymap52*quitDialog1:  A billentyûzetkiosztás módosult, de nem lett alkalmazva vagy elmentve.
+!
+Keymap52*quit1Tog1:  Kilépés a módosítások alkalmazása vagy mentése nélkül.
+!
+Keymap52*quit1Tog2:  Alkalmazza és mentse el a módosításokat kilépés elõtt.
+!
+Keymap52*quitDialog2:  A billentyûzetkiosztás módosult és alkalmazásra került, \
+de nem lett elmentve.
+!
+Keymap52*quit2Tog1:  A mentés nélküli kilépés visszavonja a billentyûzetkiosztáson \
+véghezvitt módosításokat.
+!
+Keymap52*quit2Tog2:  Kilépés mentés nélkül, a módosítások a szekcióra \
+ideiglenesen alkalmazva maradnak.
+!
+Keymap52*quitDialog3:  A billentyûzetkiosztás módosult és el lett \
+mentve, de nem lett alkalmazva.
+!
+Keymap52*quit3Tog1:  Kilépés a módosítások alkalmazása nélkül.
+!
+Keymap52*quitTog3.labelString:  Alkalmazza a módosításokat erre a szekcióra kilépés \
+elõtt.
+!
+AllShare*quitDialog*quitTog4.labelString:  Mentse el a módosításokat kilépés elõtt.
+!
+AllShare*quitDialog*exitBox.labelString:  Kilépés
+!
+AllShare*quitDialog*cancelBox.labelString:  Mégsem
+!
+Keymap52*undoDialog.dialogTitle:  Párbeszédpanel visszaállítása
+!
+Keymap52*undoDialog1.labelString:  Válasszon ki egy billentyûzet kiosztás \
+állapotot a visszaállításhoz.
+!
+Keymap52*undoDialog*undoBox.labelString:  OK
+!
+Keymap52*undoDialog*cancelBox.labelString:  Mégsem
+!
+Keymap52*restoreWarning.dialogTitle:  Kilépési üzenet
+!
+Keymap52*restoreWarning.okLabelString:  OK
+
+! this cannot be made much longer during translation
+Keymap52*restoreWarning.messageString:  A billentyûzet átdefiniálás ebben a \
+szekcióban az eredeti értékre lett visszaállítva.
+!
+Keymap52*nonValidDialog.dialogTitle:  Figyelmeztetõ üzenet
+!
+KeyXXX52*nonValidDialog.okLabelString:  OK
+!
+Keymap52*nonValidDialog.messageString:  A billentyûhöz kapcsolódó legalább egy \
+mûvelet érvénytelen.
+!
+Keymap52*reservedtrans.dialogTitle:  Figyelmeztetõ üzenet
+!
+Keymap52*reservedtrans.okLabelString:  OK
+
+! this cannot be made much longer during translation
+Keymap52*reservedtrans.messageString:  Az Ablakkezelõnek fenntartott \
+billentyûket nem lehet átdefiniálni.
+!
+Keymap52*lastButton.labelString:  Visszaállítja az utolsó alkalmazás \
+billentyûzetkiosztását.
+!
+Keymap52*origButton.labelString:  Visszaállítja az eredeti \
+billentyûzetkiosztást.
+
+! this cannot be made much longer during translation
+Keymap52*lastRest:  A billentyûzet átdefiniálás vissza lett állítva a \
+szekcióra utoljára alkalmazott értékekre.
+!
+Keymap52*origRest:  A billentyûzet átdefiniálás az eredeti értékére lett visszaállítva.
+!
+Keymap52*noRest:  Nem lett visszaállítási lehetõség kiválasztva, nem történtek \
+módosítások.
+!
+Keymap52*fileDeleted:  A kijelölt billentyûzet átdefiniálási fájl(ok) \
+törölve lett(ek).
+
+! this resource has been left intentionally blank, do not translate.
+Keymap52*blank:
+!
+Keymap52*basePb.labelString:  -> Alap
+!
+AllShare*changePb.labelString:  OK
+!
+AllShare*cancelPb.labelString:  Mégsem
+!
+AllShare*actionHelp.labelString: Mûvelet súgó
+!
+AllShare*actionListLabel.labelString:  Rendelkezésre álló mûveletek listája:
+!
+AllShare*charListLabel.labelString:  Karakterlista:
+!
+AllShare*actionDef.labelString:  Mûveletmeghatározás:
+!
+AllShare*printActionDefTitle:  Rendelkezésre álló mûveletek \
+meghatározásai
+!
+Keymap52*restorePB.labelString:  Visszaállítás
+
+! this cannot be made any longer during translation.
+Keymap52*locatePB.labelString:  Keresés
+
+! this cannot be made any longer during translation.
+Keymap52*nothingTB.labelString:  Nincs mûvelet
+!
+Keymap52*translistdialog.dialogTitle:  Fejlett billentyûzet átdefiniálás
+!
+Keymap52*noRemPass:  Érvénytelen mûvelet, passzív billentyûzetkiosztásokat \
+nem lehet eltávolítani.
+!
+Keymap52*searchFailed:  A keresés nem sikerült, a billentyûzetkiosztásban \
+nem talált egyezõ mûveleteket.
+!
+Keymap52*searchSuccess:  Sikeres keresés....
+!
+Keymap52*searchSemi:  Sikeres keresés... a mûvelet billentyûje nem érhetõ el.
+!
+Keymap52*noSearchMsg:  A keresést nem lehet végrehajtani, nincs érvényes \
+mûvelet kijelölve.
+!
+Keymap52*nonStand:  A billentyûnk legalább egy olyan fordítása létezik, amely \
+nem jeleníthetõ meg.
+!
+Keymap52*change.dialogTitle:  Billentyûkiosztás figyelmeztetés
+!
+KeyXXX52*change.messageString:  Kattintson az OK vagy a Mégse gombra az \
+aktuális billentyû módosításainak kívánt kezeléséhez, mielõtt egy másikat \
+tekintene meg.
+!
+KeyXXX52*change.okLabelString:  Folytatás
+!
+Keymap52*editb.labelString:  Szerkesztés
+!
+Keymap52*insertb.labelString:  Beillesztés
+!
+Keymap52*removeb.labelString:  Eltávolítás
+!
+Keymap52*closeb.labelString:  Bezárás
+!
+Keymap52*editDialog.dialogTitle:  Párbeszédablak szerkesztése
+!
+Keymap52*editDialog*editLabel.labelString:  Alábbi fordítás szerkesztése:
+!
+Keymap52*editDialog*okButton.labelString:  OK
+!
+Keymap52*editDialog*clearButton.labelString:  Törlés
+!
+Keymap52*editDialog*cancelButton.labelString:  Mégsem
+!
+Keymap52*Any:  -> Alap
+!
+Keymap52*Shift:  -> Shift
+!
+Keymap52*Lock:  -> Caps Lock
+!
+Keymap52*Lock122:  -> Shift Lock
+!
+Keymap52*Ctrl:  -> Bal Ctrl
+!
+Keymap52*CtrlNsterm: -> Ctrl
+!
+Keymap52*Alt:  -> Alt
+!
+Keymap52*Mod2:  -> Alt(Gr)
+!
+Keymap52*Mod3:  -> APL/Super
+!
+Keymap52*Mod4:  -> Mod4
+!
+Keymap52*Mod5:  -> Num Lock
+!
+Keymap52*Shift_Alt:  -> Shift Alt
+!
+Keymap52*cantdothat.dialogTitle:  Billentyûkiosztás figyelmeztetés
+!
+Keymap52*cantdothat.messageString:  Kattintson az OK vagy a Mégse gombra az \
+aktuális billentyû módosításainak kívánt kezeléséhez, mielõtt kiválasztana \
+egy lehetõséget a mûveletsorból.
+!
+KeyXXX52*cantdothat.okLabelString:  Folytatás
+!
+Keymap52*chooseApply:  Ahhoz, hogy a módosításoknak hatása legyen a \
+szekcióban, válassza az Alkalmaz lehetõséget.
+!
+Keymap52*transListLabel.labelString:  Fordítási lista:
+!
+Keymap52*seeHelpLabel.labelString:  Tekintse meg a Súgót a további módosítások \
+elvégzése elõtt.
+!
+Keymap52*keyAction.labelString:  Billentyû/Mûvelet
+!
+Keymap52*nomapmod:  Módosítókat nem lehet átdefiniálni.
+!
+AllShare*toobig:  A mûvelet megszakítva, a maximális mûvelet hossz \
+túl lett lépve.
+!
+Keymap52*currKeyLabel.labelString:  Aktuális billentyû:
+!
+AllShare*printKeymap.labelString:  Nyomtatás
+!
+AllShare*printDialogCancelButton.labelString:  Mégsem
+!
+AllShare*printDialogBoxLabel.labelString:  Válassza ki a nyomtatási beállításokat
+!
+AllShare*printDialogPrintCommandLabel.labelString: Nyomtatási parancs:
+!
+AllShare*printDialogSelectPrinter.labelString:  Válasszon egy nyomtatót:
+!
+AllShare*PrinterSelectServerDelineator:  @
+!
+AllShare*PrinterSelectLocalDesignator:  (Helyi)
+!
+AllShare*ActionHelpPrinted:  A Mûvelet Súgó meghatározásai nyomtatásra kerültek
+!
+AllShare*printDialogPrintInProgress.labelString:  Nyomtatás...
+!
+AllShare*okLabelString:  OK
+!
+AllShare*cancelLabelString:  Mégsem
+!
+! Start Action list translations (to be shared by keypad customizer and keymapper).
+!
+! Rules for translating actions:
+! 1) Action text (to the right of the ":") is translated
+! 2) All actions need to end in ()
+! 3) Action text may not contain spaces
+! 4) Action text may be separated by capitals or underscores (_)
+! 5) Because actions are cross-referenced, each translated action must be unique
+! 6) Action text should be a maximum of 29 characters, not counting the () characters
+!
+!    ValidActionText()
+!    InvalidActionText
+!    ValidActionText()
+!    Valid_Action_Text()
+!    Invalid Action Text()
+!
+!    Valid Unique action names:
+!    Keyxxx52*tab():  Tab()
+!    Keyxxx52*backtab():  BackTab()
+!    Keyxxx52*tabadvancefunction():  TabAdvance()
+!    Keyxxx52*tabfunction():  OfficeTabFunction()
+!
+!    Invalid action names, not unique:
+!    Keyxxx52*tab():  Tab()
+!    Keyxxx52*backtab():  Tab()
+!    Keyxxx52*tabadvancefunction():  Tab()
+!    Keyxxx52*tabfunction():  Tab()
+!
+! Each action is followed by an action definition (to the right of the ":") which is translated
+!
+Keyxxx52*nothing():  NoAction()
+AllShare*DEFnothing():  Ennek a mûveletnek nincs semmilyen hatása, csak egy \
+üres mûvelet megjelenítésére használható.
+!
+Keyxxx52*ruleline():  RuleLine()
+AllShare*DEFruleline():  A vonalzó megjelenítésének állapotát váltja a \
+megjelenítés és elrejtés között. A vonalzó segíthet a kurzor megkeresésében. Az Egyéb \
+beállítások engedélyezhetik (alapértelmezett) vagy letilthatják a vonalzó \
+funkciót és megváltoztathatják a vonalzó stílusát.
+!
+AllShare*string():  String()
+AllShare*DEFstring():  Megjelenít egy karaktert vagy egy \
+karaktersorozatot a kurzor pozíciójában. A mûvelet formátuma: String("szöveg"). Dupla \
+idézõjel (") szükséges és a 'szöveg' a megjelenítendõ karakter vagy karakterek. A \
+String() billentyûzet makrók készítésére használható.
+!
+Keyxxx52*play():  Play()
+AllShare*DEFplay():  A Play() mûvelet megjeleníti a visszajátszás ablakot, így \
+elindítható egy makrófájl. A Play() mûvelet paraméterként(a zárójelek között) támogatja \
+a makrófájlnevet; ekkor a makrófájl automatikusan elindul.
+!
+Keyxxx52*record():  Record()
+AllShare*DEFrecord():  Megjeleníti a Rögzít ablakot a visszajátszási \
+szekvencia rögzítésének indításához.
+!
+AllShare*pause():  Pause()
+AllShare*DEFpause():  Szünetelteti a makrófájl lejátszását vagy a \
+makrófájl rögzítését. A felhasználó a Folytatás lehetõséget \
+választhatja a lejátszás vagy a rögzítés folytatásához.
+!
+AllShare*local-screen-print():  ScreenPrint()
+AllShare*DEFlocal-screen-print():  Megjeleníti a képernyõ nyomtatása \
+ablakot az aktuális képernyõ nyomtatásához.
+!
+Keyxxx52*print-screen-now():  PrintScreenNow()
+AllShare*DEFprint-screen-now():  Nyomtatja az aktuális képernyõt a \
+legutóbbi nyomtatási beállítás használatával és a legutóbb használt \
+nyomtatóval.
+!
+AllShare*extended():  DisplayAttributes()
+AllShare*DEFextended():  A képernyõn megjeleníti az összes mezõjellemzõt.
+!
+AllShare*up():  CursorUp()
+AllShare*DEFup():  A kurzort egy kurzorpozícióval felfelé mozgatja.
+!
+AllShare*down():  CursorDown()
+AllShare*DEFdown():  A kurzort egy kurzorpozícióval lefelé mozgatja.
+!
+AllShare*left():  CursorLeft()
+AllShare*DEFleft():  A kurzort egy kurzorpozícióval balra mozgatja.
+!
+AllShare*right():  CursorRight()
+AllShare*DEFright():  A kurzort egy kurzorpozícióval jobbra mozgatja.
+!
+AllShare*fastleft():  FastCursorLeft()
+AllShare*DEFfastleft():  A kurzort három kurzorpozícióval balra mozgatja.
+!
+AllShare*fastright():  FastCursorRight()
+AllShare*DEFfastright():  A kurzort három kurzorpozícióval jobbra mozgatja.
+!
+AllShare*newline():  Newline()
+AllShare*DEFnewline():  A kurzort a következõ sor beviteli mezõjénk elejére \
+mozgatja.
+!
+AllShare*home():  Home()
+AllShare*DEFhome():  A kurzort alappozícióba mozgatja (tipikusan a képernyõ \
+elsõ beviteli mezõ pozíciója) és néha elküldi az Alappozíció segédlet kódot a \
+hoszt rendszerhez.
+!
+AllShare*tab():  Tab()
+AllShare*DEFtab():  A kurzort a következõ beviteli mezõre mozgatja.
+!
+AllShare*backtab():  BackTab()
+AllShare*DEFbacktab():  Ha a kurzor egy beviteli mezõ vagy kimeneti terület \
+elsõ pozíciójában van, akkor a kurzor az elõzõ beviteli mezõ elsõ pozíciójába \
+ugrik. Ha a kurzor egy beviteli mezõben nem az elsõ pozícióban van, akkor a kurzor a beviteli mezõ elsõ pozíciójába ugrik.
+!
+AllShare*end():  EndOfLine()
+AllShare*DEFend():  A kurzort a beviteli mezõ utolsó nem null vagy nem üres \
+karaktere mögé mozgatja.
+!
+AllShare*tabadvancefunction():  TabAdvance()
+AllShare*DEFtabadvancefunction():  A kurzor a következõ logikai beviteli \
+mezõre halad.
+!
+AllShare*insert():  Insert()
+AllShare*DEFinsert():  Bekapcsolja a beillesztési módot.
+!
+AllShare*delete():  Delete()
+AllShare*DEFdelete():  Törli (eltávolítja) a kurzorpozícióban lévõ karaktert.
+!
+AllShare*backspace():  Backspace()
+AllShare*DEFbackspace():  A kurzort egy kurzorpozícióval vissza mozgatja és a \
+kurzor elõtt álló karaktert törölheti. Az Egyéb beállítások engedélyezhetik \
+vagy letilthatják a Backspace karaktertörlési funkcióját.
+!
+AllShare*erase-eof():  ErasetoEnd()
+AllShare*DEFerase-eof():  Eltávolít minden karaktert a kurzor \
+pozíciójától a mezõ végéig.
+!
+AllShare*erase-input():  EraseInputFields()
+AllShare*DEFerase-input():  Kiüríti a képernyõ minden beviteli mezõjét.
+!
+AllShare*dup():  Dup()
+AllShare*DEFdup():  Betölti az aktuális mezõt dup karakterekkel a \
+kurzor pozíciójától a mezõ végéig.
+!
+AllShare*field-mark():  FieldMark()
+AllShare*DEFfield-mark():  Megjelöl egy mezõt a mezõjelölõ karakterrel.
+!
+AllShare*pf1():  PF1()
+AllShare*DEFpf1():  Végrehajtja az F1 billentyû meghatározott mûveletét.
+!
+AllShare*pf2():  PF2()
+AllShare*DEFpf2():  Végrehajtja az F2 billentyû meghatározott mûveletét.
+!
+AllShare*pf3():  PF3()
+AllShare*DEFpf3():  Végrehajtja az F3 billentyû meghatározott mûveletét.
+!
+AllShare*pf4():  PF4()
+AllShare*DEFpf4():  Végrehajtja az F4 billentyû meghatározott mûveletét.
+!
+AllShare*pf5():  PF5()
+AllShare*DEFpf5():  Végrehajtja az F5 billentyû meghatározott mûveletét.
+!
+AllShare*pf6():  PF6()
+AllShare*DEFpf6():  Végrehajtja az F6 billentyû meghatározott mûveletét.
+!
+AllShare*pf7():  PF7()
+AllShare*DEFpf7():  Végrehajtja az F7 billentyû meghatározott mûveletét.
+!
+AllShare*pf8():  PF8()
+AllShare*DEFpf8():  Végrehajtja az F8 billentyû meghatározott mûveletét.
+!
+AllShare*pf9():  PF9()
+AllShare*DEFpf9():  Végrehajtja az F9 billentyû meghatározott mûveletét.
+!
+AllShare*pf10():  PF10()
+AllShare*DEFpf10():  Végrehajtja az F10 billentyû meghatározott mûveletét.
+!
+AllShare*pf11():  PF11()
+AllShare*DEFpf11():  Végrehajtja az F11 billentyû meghatározott mûveletét.
+!
+AllShare*pf12():  PF12()
+AllShare*DEFpf12():  Végrehajtja az F12 billentyû meghatározott mûveletét.
+!
+AllShare*pf13():  PF13()
+AllShare*DEFpf13():  Végrehajtja az F13 billentyû meghatározott mûveletét.
+!
+AllShare*pf14():  PF14()
+AllShare*DEFpf14():  Végrehajtja az F14 billentyû meghatározott mûveletét.
+!
+AllShare*pf15():  PF15()
+AllShare*DEFpf15():  Végrehajtja az F15 billentyû meghatározott mûveletét.
+!
+AllShare*pf16():  PF16()
+AllShare*DEFpf16():  Végrehajtja az F16 billentyû meghatározott mûveletét.
+!
+AllShare*pf17():  PF17()
+AllShare*DEFpf17():  Végrehajtja az F17 billentyû meghatározott mûveletét.
+!
+AllShare*pf18():  PF18()
+AllShare*DEFpf18():  Végrehajtja az F18 billentyû meghatározott mûveletét.
+!
+AllShare*pf19():  PF19()
+AllShare*DEFpf19():  Végrehajtja az F19 billentyû meghatározott mûveletét.
+!
+AllShare*pf20():  PF20()
+AllShare*DEFpf20():  Végrehajtja az F20 billentyû meghatározott mûveletét.
+!
+AllShare*pf21():  PF21()
+AllShare*DEFpf21():  Végrehajtja az F21 billentyû meghatározott mûveletét.
+!
+AllShare*pf22():  PF22()
+AllShare*DEFpf22():  Végrehajtja az F22 billentyû meghatározott mûveletét.
+!
+AllShare*pf23():  PF23()
+AllShare*DEFpf23():  Végrehajtja az F23 billentyû meghatározott mûveletét.
+!
+AllShare*pf24():  PF24()
+AllShare*DEFpf24():  Végrehajtja az F24 billentyû meghatározott mûveletét.
+!
+AllShare*clear():  Clear()
+AllShare*DEFclear():  A törlés AID kódot küldi a hoszt rendszernek.
+!
+AllShare*enter():  Enter()
+AllShare*DEFenter():  Végrehajtja a Bevitel mûveletet a beviteli mezõben.
+!
+AllShare*pa1():  PA1()
+AllShare*DEFpa1():  A PA1 AID kódot küldi a hoszt rendszernek.
+!
+AllShare*pa2():  PA2()
+AllShare*DEFpa2():  A PA2 AID kódot küldi a hoszt rendszernek.
+!
+AllShare*pa3():  PA3()
+AllShare*DEFpa3():  A PA3 AID kódot küldi a hoszt rendszernek.
+!
+AllShare*sysreq():  SystemRequest()
+AllShare*DEFsysreq():  A rendszerkérés AID kódot küldi a hoszt rendszernek.
+!
+AllShare*reset():  Reset()
+AllShare*DEFreset():  Hiba után alaphelyzetbe állít.
+!
+AllShare*hex-entry():  HexMode()
+AllShare*DEFhex-entry():  A következõ két billentyûleütésre beállítja egy EBCDIC \
+karakter létrehozásának módját. A billentyûleütések csak 0-9 és a-f lehetnek.
+!
+AllShare*hex():  Hex()
+AllShare*DEFhex():  Kétkarakteres kódpont értéket igényel paraméterként \
+(a zárójelek között). A kétkarakteres érték (00-ff) egy 819 kódlap ASCII \
+karakter.
+!
+AllShare*cursor-select():  CursorSelect()
+AllShare*DEFcursor-select():  Kijelöli a kurzort tartalmazó mezõt.
+!
+AllShare*attention():  Attention()
+AllShare*DEFattention():  A figyelmeztetõ AID kódot küldi a hoszt rendszernek.
+!
+AllShare*print():  SystemPrint()
+AllShare*DEFprint():  A nyomtatási AID kódot küldi a hoszt rendszernek.
+!
+AllShare*scroll_image_up(): ScrollImageUp()
+AllShare*DEFscroll_image_up():  Felfelé görgeti a megjelenített képet.
+!
+AllShare*scroll_image_down():   ScrollImageDown()
+AllShare*DEFscroll_image_down():  Lefelé görgeti a megjelenített képet.
+!
+AllShare*scroll_image_right():  ScrollImageRight()
+AllShare*DEFscroll_image_right():  Jobbra görgeti a megjelenített képet.
+!
+AllShare*scroll_image_left():   ScrollImageLeft()
+AllShare*DEFscroll_image_left():  Balra görgeti a megjelenített képet.
+!
+AllShare*help():  SystemHelp()
+AllShare*DEFhelp():  A súgó AID kódot küldi a hoszt rendszernek.
+!
+AllShare*rolldown():  PageUp()
+AllShare*DEFrolldown():  A képernyõt az aktuális oldal feletti oldalra \
+mozgatja.
+!
+AllShare*rollup():  PageDown()
+AllShare*DEFrollup():  A képernyõt az aktuális oldal alatti oldalra mozgatja.
+!
+AllShare*fieldexit():  FieldExit()
+AllShare*DEFfieldexit():  Elõrehalad a képernyõ következõ mezõjének \
+kezdetére.
+!
+AllShare*fieldplus():  FieldPlus()
+AllShare*DEFfieldplus():  Elõrehalad a képernyõ következõ mezõjének kezdetére.
+!
+AllShare*fieldminus():  FieldMinus()
+AllShare*DEFfieldminus():  A mezõben található értéket negatívvá teszi és \
+elõrehalad a következõ mezõre.
+!
+AllShare*testreq():  TestRequest()
+AllShare*DEFtestreq():  A tesztkérés AID kódot küldi a hoszt rendszernek.
+!
+! Note: Office actions are used within the AS/400 OfficeVision editor.
+AllShare*tabfunction():  OfficeTabFunction()
+AllShare*DEFtabfunction():  Az OV/400 szerkesztõben beilleszt egy \
+tabulátor karaktert a kurzor helyén.
+!
+AllShare*textcarrierreturn():  OfficeCarrierReturn()
+AllShare*DEFtextcarrierreturn():  Az OV/400 szerkesztõben beilleszt egy vivõjel \
+vissza karaktert a kurzor aktuális helyén.
+!
+AllShare*textrqtabfunction():  OfficeRequiredTabFunction()
+AllShare*DEFtextrqtabfunction():  Az OV/400 szerkesztõben beilleszt egy \
+kívánt tabulátor karaktert a kurzor aktuális helyén. A kívánt tabulátorok ideiglenes behúzást határoznak meg, amely addig van \
+érvényben, míg egy bekezdés vége jellel (kívánt vivõjel vissza) véget nem ér.
+!
+AllShare*textunderscore():  OfficeStartUnderline()
+AllShare*DEFtextunderscore():  Az OV/400 szerkesztõben a kurzor aktuális helyén \
+aláhúzást indít.
+!
+AllShare*textintensify():  OfficeStartBold()
+AllShare*DEFtextintensify():  Az OV/400 szerkesztõben a kurzor aktuális helyén \
+félkövér stílust indít.
+!
+AllShare*textendattribute():  OfficeEndUnderlineOrBold()
+AllShare*DEFtextendattribute():  Az OV/400 szerkesztõben befejezi az aktív \
+aláhúzás vagy félkövér hatást.
+!
+AllShare*textsymbolscmdprompt():  OfficeInsertSpecialCharacters()
+AllShare*DEFtextsymbolscmdprompt():  Az OV/400 szerkesztõben megjeleníti azt \
+a parancssort, ahol a billentyûzetrõl nem elérhetõ szimbólumok bevitele \
+lehetséges.
+!
+AllShare*textrqspace():  OfficeRequiredSpace()
+AllShare*DEFtextrqspace():  Az OV/400 szerkesztõben a kurzor aktuális helyén beilleszt egy kívánt szóközt. A kívánt szóköz szóköz karakterként jelenik meg, de a kívánt szóközzel \
+elválasztott két szót mindig ugyanabban az egy sorban tartja.
+!
+AllShare*texttopofpage():  OfficeTopOfPage()
+AllShare*DEFtexttopofpage():  Az OV/400 szerkesztõben a kurzort a \
+pillanatnyilag megjelenített oldal tetejére mozgatja (lehetséges, hogy a \
+képernyõ áthelyezésével).
+!
+AllShare*textbottomofpage():  OfficeBottomOfPage()
+AllShare*DEFtextbottomofpage():  Az OV/400 szerkesztõben a kurzort a \
+pillanatnyilag megjelenített oldal aljára mozgatja (lehetséges, hogy a \
+képernyõ áthelyezésével).
+!
+AllShare*textbeginofline():  OfficeBeginningOfLine()
+AllShare*DEFtextbeginofline():  Az OV/400 szerkesztõben a kurzort az aktuális \
+szöveg sor elejére mozgatja.
+!
+AllShare*textpageend():  OfficeInsertPageEnd()
+AllShare*DEFtextpageend():  Az OV/400 szerkesztõben egy oldal vége \
+karakter illeszt be. Ennek következtében egy új szövegoldalt indít.
+!
+AllShare*textstopcodefunction():  OfficeStopCodeInsert()
+AllShare*DEFtextstopcodefunction():  Az OV/400 szerkesztõben megjeleníti azt a \
+parancssort, amiben lehetõség nyílik új leállítási kód meghatározására a kurzor \
+aktuális helyén.
+!
+AllShare*textstopcodeadvance():  OfficeStopCodeAdvance()
+AllShare*DEFtextstopcodeadvance():  Az OV/400 szerkesztõben a kurzort a \
+dokumentumban a következõ megállítási kódhoz mozgatja.
+!
+AllShare*textaltd():  OfficeNextTextColumn()
+AllShare*DEFtextaltd():  Az OV/400 szerkesztõben beilleszti azt a vezérlõelemet, \
+ami egy új szöveges oszlopot indít a kurzor helyén. Ez a funkció csak akkor \
+aktív, ha több szöveges oszlopot szerkeszt.
+!
+AllShare*textcent():  OfficeCenter()
+AllShare*DEFtextcent():  Az OV/400 szerkesztõben középre igazítja a kurzort \
+tartalmazó szövegsort.
+!
+AllShare*textwordunderscore():  OfficeWordUnderscore()
+AllShare*DEFtextwordunderscore():  Az OV/400 szerkesztõben egy szóaláhúzási \
+vezérlõelemet helyez el a kurzor aktuális helyén. A kurzornak az aláhúzni kívánt \
+szöveg végén kell lennie, mivel az aláhúzás hatás az aktuális szó kezdetétõl a \
+kurzor helyéig fog kiterjedni.
+!
+AllShare*texthalfindexup():  OfficeHalfIndexUp()
+AllShare*DEFtexthalfindexup():  Az OV/400 szerkesztõben egy fél index fel \
+(felsõ index) vezérlõelemet helyez el a kurzor aktuális helyén. A \
+fél index fel aktív marad a következõ fél index le vezérlõelemig.
+!
+AllShare*texthalfindexdown():  OfficeHalfIndexDown()
+AllShare*DEFtexthalfindexdown():  Az OV/400 szerkesztõben egy fél index le \
+(alsó index) vezérlõelemet helyez el a kurzor aktuális helyén. A fél index le \
+aktív marad a következõ fél index fel vezérlõelemig.
+!
+AllShare*displaytextsymb():  OfficeDisplaySymbols()
+AllShare*DEFdisplaytextsymb():  Az OV/400 szerkesztõben megjeleníti a vezérelõ \
+karaktereket, amelyek normálisan nem láthatók.  Ebbe beletartozik a Tab, a \
+kívánt Tab, vivõjel vissza, kívánt vivõjel vissza, kívánt szóköz és az oldal \
+vége karakterek.
+!
+AllShare*kanji():  InsertSOandSI()
+AllShare*DEFkanji():  Beilleszt egy DBCS kifelé tolás és egy befelé tolás \
+karaktert (japán, koreai és kínai nyelvekben használatos).
+!
+!//@bd_GBR1 start
+AllShare*lklayer():  LatinLayer()
+AllShare*DEFlklayer():  Beállítja a billentyûzet réteg nyelvet latinra.
+!
+AllShare*nklayer():  BidiLayer()
+AllShare*DEFnklayer():  Beállítja a billentyûzet réteg nyelvet nemzetire (arab és \
+héber nyelveknél használják).
+!//@bd_GBR1 end
+! //@bd_GBR1 rename AllShare*reverse():  ReverseCursor()
+AllShare*reverse():  FieldReverse()
+AllShare*DEFreverse():  Megfordítja a kurzor irányt a mezõben és az \
+ellenkezõ nyelvi réteget választja ki a billentyûleütésekhez (arab és \
+héber nyelveknél használják).
+!
+AllShare*close():  CloseBIDIData()
+AllShare*DEFclose():  Bezárja egy mezõ adatait azáltal, hogy eltávolítja a \
+beágyazott üres karaktereket és eltolja az adatokat a mezõ logikai \
+kezdetéhez (arab és héber nyelveknél használják).
+!
+AllShare*base():  BaseShape()
+AllShare*DEFbase():  Be- és kikapcsolja az arab alakzatot (arab nyelvnél \
+használják).
+!
+AllShare*charadvance():  CharacterAdvance()
+AllShare*DEFcharadvance():  A kurzor a képernyõ következõ beviteli pozíciójába \
+halad.
+!
+AllShare*displaySOSI():  DisplaySOandSI()
+AllShare*DEFdisplaySOSI():  Megjeleníti a képernyõ minden kifelé tolás és befelé \
+tolás karakterét (japán, koreai és kínai nyelvekben használatos).
+!
+AllShare*reverse-scn():  ReverseScreen()
+AllShare*DEFreverse-scn():  Megfordítja a képernyõ megjelenítését (arab \
+és héber nyelveknél használják).
+!
+AllShare*EBChex():  EBCDICHexEntry()
+AllShare*DEFEBChex():  Lehetõvé teszi az EBCDIC kódpontok használatát \
+adatbevitelhez (japán, koreai és kínai nyelveknél használják).
+!
+AllShare*AltView():  AlternateView()
+AllShare*DEFAltView():  Lehetõvé teszi japán adatok megtekintését egy \
+alternatív kódlapban.
+!
+Keyxxx52*noop():  NoAction()
+AllShare*DEFnoop():  Ennek a mûveletnek nincs semmilyen hatása, csak egy üres \
+mûvelet megjelenítésére használható.
+!
+! There are no parentheses after Undefined, making this action different than other actions.
+Keyxxx52*undefined():  Definiálatlan
+!
+AllShare*cursor-move():  MoveCursor()
+AllShare*DEFcursor-move():  A kurzort egy megadott képernyõpozícióba \
+mozgatja.
+!
+AllShare*forward-word():  NextWord()
+AllShare*DEFforward-word():  A kurzort a következõ szó elejére mozgatja.
+!
+AllShare*backward-word():  PreviousWord()
+AllShare*DEFbackward-word():  A kurzort az elõzõ szó elejére mozgatja.
+!
+AllShare*spbackspace():  AlternateBackspace()
+AllShare*DEFspbackspace():  A BackSpace() mûvelethez hasonló mûveletet hajt \
+végre. A kurzortól jobbra lévõ karakterek csak akkor lesznek mozgatva, ha a \
+beillesztési mód be van állítva.
+!
+AllShare*kill-word():  DeleteRemainderofWord()
+AllShare*DEFkill-word():  Kitörli a karaktereket a kurzortól a szó végéig.
+!
+AllShare*backward-kill-word():  DeletePreviousWord()
+AllShare*DEFbackward-kill-word():  Kitörli az elõzõ szó karaktereit.
+!
+AllShare*cent():  Cent()
+AllShare*DEFcent():  Megjeleníti a cent pénznem karakterét a kurzor \
+pozíciójánál.
+!
+AllShare*unlock():  UnlockKeyboard()
+AllShare*DEFunlock():  Feloldja a billentyûzet zárolását, így adatokat \
+lehet bevinni.
+!
+AllShare*selpen-attn():  SelectorPenAttention()
+AllShare*DEFselpen-attn():  A választó toll figyelmeztetõ AID kódot küldi a \
+hoszt rendszernek.
+!
+AllShare*select-field():  PenSelectField()
+AllShare*DEFselect-field():  Kijelöl egy kijelölhetõ mezõt.
+!
+AllShare*xh-attn():  AttentionAlternate()
+AllShare*DEFxh-attn():  Egy másodlagos figyelmeztetõ AID kódot küldi a hoszt \
+rendszernek.
+!
+Keyxxx52*insert-selection:  Paste()
+Keyxxx52*DEFinsert-selection:  A mûvelettel a vágólap tartalma beillesztésre \
+kerül a kurzor pozíciójába.
+!
+Keyxxx52*jump():  Jump()
+AllShare*DEFjump():  A mûvelet a következõ szekcióra ugrik a szekció \
+listában. Ha az 1. szekció az aktív szekció, akkor a 2. szekció lesz az aktív \
+szekció.
+!
+Keyxxx52*jump-to-session():  JumpToSession()
+AllShare*DEFjump-to-session():  A mûvelet arra a szekcióra ugrik, ami \
+paraméterként meg lett adva (a zárójelek között). Ha a paraméterben a 2 érték \
+van megadva, akkor a második szekció lesz az aktív szekció.
+!
+Keyxxx52*delay():  Delay()
+AllShare*DEFdelay(): Szünetet illeszt be mûveletek között, amennyiben egy \
+billentyûkombinációhoz több mûvelet lett beállítva billentyûzet átdefiniálással \
+vagy a billentyûblokk személyre szabásával. A paraméter (a zárójelek között) a \
+késleltetés tizedmásodpercben megadott értéke (5 tized az alapértelmezett \
+érték).
+!
+Keyxxx52*menu-bar-focus():  MenuBarFocus()
+AllShare*DEFmenu-bar-focus():  A menüsor elérését teszi lehetõvé az egér \
+használata nélkül.
+!
+Keyxxx52*wider-font(): WiderFont()
+Keyxxx52*DEFwider-font(): Az aktuális betûkészletet szélesebbé teszi.
+!
+Keyxxx52*narrower-font(): ThinnerFont()
+Keyxxx52*DEFnarrower-font(): Az aktuális betûkészletet vékonyabbá teszi.
+!
+Keyxxx52*taller-font(): TallerFont()
+Keyxxx52*DEFtaller-font(): Az aktuális betûkészletet magasabbá teszi.
+!
+Keyxxx52*shorter-font(): ShorterFont()
+Keyxxx52*DEFshorter-font(): Az aktuális betûkészletet alacsonyabbá teszi.
+!
+! The following three key sequences should be translated; they may be used in the future for keyboard actions that we currently do not know about.
+Keyxxx52*key-seq1():  Billentyûkombináció1()
+Keyxxx52*key-seq2():  Billentyûkombináció2()
+Keyxxx52*key-seq3():  Billentyûkombináció3()
+!
+! General dead key (the first key of a key sequence to create a dead key character, for example tilda in many languages) that is not remappable because dead keys are processed by the Network Station kernel.
+! There are no parentheses at the end of the following line.
+Keyxxx52*unmappable():  Holt billentyû
+!
+AllShare*inserteuro():  Euro()
+AllShare*DEFinserteuro():  Megjeleníti az Euró pénznem szimbólumát a kurzor \
+pozíciójánál.
+!
+! Action List Translations for NSTerm (VTxxx)
+!
+Keymap52*vt-backspace(): VtBackspace()
+AllShare*DEFvt-backspace():  A kurzort egy kurzorpozícióval vissza mozgatja és \
+a kurzor elõtt álló karaktert törli
+!
+Keymap52*enterkey(): EnterKey()
+Keymap52*DEFenterkey():  Egy kocsivissza karaktert küld a hosztnak.
+!
+Keymap52*local-print-buffer(): LocalPrintBuffer()
+Keymap52*DEFlocal-print-buffer():  Megjeleníti a képernyõ nyomtatása ablakot a \
+görgetési puffer aktuális tartalmának nyomtatásához.
+!
+Keymap52*local-print-screen(): LocalPrintScreen()
+Keymap52*DEFlocal-print-screen():  Megjeleníti a képernyõ nyomtatása ablakot az \
+aktuális képernyõ nyomtatásához.
+!
+Keymap52*cut-clipboard(): CutClipboard()
+Keymap52*DEFcut-clipboard():  A képernyõ megjelölt területét a vágólapra \
+másolja és eltávolítja a képernyõrõl.
+!
+Keymap52*copy-clipboard(): CopyClipboard()
+Keymap52*DEFcopy-clipboard():  A képernyõ megjelölt területét a vágólapra \
+másolja.
+!
+Keymap52*paste-clipboard(): PasteClipboard()
+Keymap52*DEFpaste-clipboard():  A vágólappufferben tárolt adatokat másolja \
+és a képernyõn a kurzor pozíciójába viszi át.
+!
+Keymap52*beginning-of-buffer(): BeginningOfBuffer()
+Keymap52*DEFbeginning-of-buffer(): A képernyõt a görgetési puffer elejére mozgatja.
+!
+Keymap52*end-of-buffer(): EndOfBuffer()
+Keymap52*DEFend-of-buffer():  A képernyõt görgeti úgy, hogy az aktuális \
+puffer vége megjelenjen.
+!
+Keymap52*hard-reset(): HardReset()
+Keymap52*DEFhard-reset():  A terminált alaphelyzetbe állítja, letörli \
+a képernyõ teljes tartalmát, töröl minden kijelölést.
+!
+Keymap52*soft-reset(): SoftReset()
+Keymap52*DEFsoft-reset():  A terminált alaphelyzetbe állítja.
+!
+Keymap52*vt-break(): VtBreak()
+Keymap52*DEFvt-break(): Egy RS-232 megszakítás jelzést küld a hosztnak.
+!
+Keymap52*vt-find(): VtFind()
+Keymap52*DEFvt-find(): Keresés funkciót hajt végre, ha a VT200 mód vagy \
+magasabb DEC kódot (CSI 1~) küld a hosztnak.
+!
+Keymap52*vt-ins(): VtInsert()
+Keymap52*DEFvt-ins(): Beillesztés ide funkciót hajt végre, ha a VT200 mód vagy \
+magasabb DEC kódot (CSI 2~) küld a hosztnak.
+!
+Keymap52*vt-delete(): VtRemove()
+Keymap52*DEFvt-delete(): Eltávolítás funkciót hajt végre, ha a VT200 mód vagy \
+magasabb DEC kódot (CSI 3~) küld a hosztnak.
+!
+Keymap52*vt-select(): VtSelect()
+Keymap52*DEFvt-select(): Kijelölés funkciót hajt végre, ha a VT200 mód vagy \
+magasabb DEC kódot (CSI 4~) küld a hosztnak.
+!
+Keymap52*vt-prev-screen(): VtPreviousScreen()
+Keymap52*DEFvt-prev-screen(): Elõzõ képernyõ funkciót hajt végre, ha a VT200 \
+mód vagy magasabb DEC kódot (CSI 5~) küld a hosztnak.
+!
+Keymap52*vt-next-screen(): VtNextScreen()
+Keymap52*DEFvt-next-screen(): Következõ képernyõ funkciót hajt végre, ha a VT200 \
+mód vagy magasabb DEC kódot (CSI 6~) küld a hosztnak.
+!
+Keymap52*vt-prev-page(): VtPreviousPage()
+Keymap52*DEFvt-prev-page(): A szöveget lefelé mozgatja és az ablakot egy \
+oldallal felfelé.
+!
+Keymap52*vt-next-page(): VtNextPage()
+Keymap52*DEFvt-next-page(): A szöveget felfelé mozgatja és az ablakot egy \
+oldallal lefelé.
+!
+Keymap52*vt-do(): VtDo()
+Keymap52*DEFvt-do(): Elvégez funkciót hajt végre, ha a VT200 mód vagy \
+magasabb DEC kódot (CSI 29~) küld a hosztnak.
+!
+Keymap52*vt-help(): VtHelp()
+Keymap52*DEFvt-help(): Súgó funkciót hajt végre, ha a VT200 mód vagy \
+magasabb DEC kódot (CSI 28~) küld a hosztnak.
+!
+Keymap52*vt-next-line(): VtNextLine()
+Keymap52*DEFvt-next-line():  A szöveget felfelé mozgatja és az ablakot egy \
+sorral lefelé.
+!
+Keymap52*vt-prev-line(): VtPreviousLine()
+Keymap52*DEFvt-prev-line(): A szöveget lefelé mozgatja és az ablakot egy \
+sorral felfelé.
+!
+Keymap52*tty-interrupt(): TtyInterrupt()
+Keymap52*DEFtty-interrupt(): TTY megszakítás karaktert (inter = Ctrl-C) küld \
+a hosztnak.
+!
+Keymap52*tty-suspend(): TtySuspend()
+Keymap52*DEFtty-suspend(): TTY felfüggesztés karaktert (susp = Ctrl-Z) küld a \
+hosztnak.
+!
+Keymap52*tty-start(): TtyStart()
+Keymap52*DEFtty-start(): TTY indítás karaktert (start = Ctrl-Q) küld a \
+hosztnak.
+!
+Keymap52*tty-stop(): TtyStop()
+Keymap52*DEFtty-stop(): TTY leállítás karaktert (stop = Ctrl-S) küld a \
+hosztnak.
+!
+Keymap52*delete-word(): TtyEraseWord()
+Keymap52*DEFdelete-word(): TTY szótörlés karaktert (werase = Ctrl-W) küld a \
+hosztnak.
+!
+Keymap52*line-feed(): TtyLineFeed()
+Keymap52*DEFline-feed(): Soremelés karaktert (Ctrl-J) küld a hosztnak.
+!
+Keymap52*cr-lf(): TtyCR_LF()
+Keymap52*DEFcr-lf(): Kocsivissza és soremelés karaktereket (Ctrl-M Ctrl-J) küld \
+a hosztnak.
+!
+Keymap52*escape(): EscapeCharacter()
+Keymap52*DEFescape(): Escape karaktert (Ctrl-[) küld a hosztnak.
+!
+Keymap52*udk-f1(): UDK_F1()
+Keymap52*DEFudk-f1():  Az F1 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f2(): UDK_F2()
+Keymap52*DEFudk-f2():  Az F2 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f3(): UDK_F3()
+Keymap52*DEFudk-f3():  Az F3 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f4(): UDK_F4()
+Keymap52*DEFudk-f4():  Az F4 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f5(): UDK_F5()
+Keymap52*DEFudk-f5():  Az F5 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f6(): UDK_F6()
+Keymap52*DEFudk-f6():  Az F6 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f7(): UDK_F7()
+Keymap52*DEFudk-f7():  Az F7 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f8(): UDK_F8()
+Keymap52*DEFudk-f8():  Az F8 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f9(): UDK_F9()
+Keymap52*DEFudk-f9():  Az F9 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f10(): UDK_F10()
+Keymap52*DEFudk-f10():  Az F10 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f11(): UDK_F11()
+Keymap52*DEFudk-f11():  Az F11 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f12(): UDK_F12()
+Keymap52*DEFudk-f12():  Az F12 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f13(): UDK_F13()
+Keymap52*DEFudk-f13():  Az F13 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f14(): UDK_F14()
+Keymap52*DEFudk-f14():  Az F14 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f15(): UDK_F15()
+Keymap52*DEFudk-f15():  Az F15 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f16(): UDK_F16()
+Keymap52*DEFudk-f16():  Az F16 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f17(): UDK_F17()
+Keymap52*DEFudk-f17():  Az F17 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f18(): UDK_F18()
+Keymap52*DEFudk-f18():  Az F18 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f19(): UDK_F19()
+Keymap52*DEFudk-f19():  Az F19 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f20(): UDK_F20()
+Keymap52*DEFudk-f20():  Az F20 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f21(): UDK_F21()
+Keymap52*DEFudk-f21():  Az F21 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f22(): UDK_F22()
+Keymap52*DEFudk-f22():  Az F22 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f23(): UDK_F23()
+Keymap52*DEFudk-f23():  Az F23 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f24(): UDK_F24()
+Keymap52*DEFudk-f24():  Az F24 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f25(): UDK_F25()
+Keymap52*DEFudk-f25():  Az F25 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f26(): UDK_F26()
+Keymap52*DEFudk-f26():  Az F26 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f27(): UDK_F27()
+Keymap52*DEFudk-f27():  Az F27 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f28(): UDK_F28()
+Keymap52*DEFudk-f28():  Az F28 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f29(): UDK_F29()
+Keymap52*DEFudk-f29():  Az F29 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f30(): UDK_F30()
+Keymap52*DEFudk-f30():  Az F30 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f31(): UDK_F31()
+Keymap52*DEFudk-f31():  Az F31 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f32(): UDK_F32()
+Keymap52*DEFudk-f32():  Az F32 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f33(): UDK_F33()
+Keymap52*DEFudk-f33():  Az F33 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f34(): UDK_F34()
+Keymap52*DEFudk-f34():  Az F34 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*udk-f35(): UDK_F35()
+Keymap52*DEFudk-f35():  Az F35 billentyû DEC felhasználó által meghatározott \
+billentyûmûveletét hajtja végre.
+!
+Keymap52*x-f1(): F1()
+Keymap52*DEFx-f1():  Végrehajtja az F1 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f2(): F2()
+Keymap52*DEFx-f2():  Végrehajtja az F2 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f3(): F3()
+Keymap52*DEFx-f3():  Végrehajtja az F3 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f4(): F4()
+Keymap52*DEFx-f4():  Végrehajtja az F4 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f5(): F5()
+Keymap52*DEFx-f5():  Végrehajtja az F5 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f6(): F6()
+Keymap52*DEFx-f6():  Végrehajtja az F6 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f7(): F7()
+Keymap52*DEFx-f7():  Végrehajtja az F7 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f8(): F8()
+Keymap52*DEFx-f8():  Végrehajtja az F8 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f9(): F9()
+Keymap52*DEFx-f9():  Végrehajtja az F9 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f10(): F10()
+Keymap52*DEFx-f10():  Végrehajtja az F10 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f11(): F11()
+Keymap52*DEFx-f11():  Végrehajtja az F11 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f12(): F12()
+Keymap52*DEFx-f12():  Végrehajtja az F12 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f13(): F13()
+Keymap52*DEFx-f13():  Végrehajtja az F13 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f14(): F14()
+Keymap52*DEFx-f14():  Végrehajtja az F14 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f15(): F15()
+Keymap52*DEFx-f15():  Végrehajtja az F15 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f16(): F16()
+Keymap52*DEFx-f16():  Végrehajtja az F16 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f17(): F17()
+Keymap52*DEFx-f17():  Végrehajtja az F17 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f18(): F18()
+Keymap52*DEFx-f18():  Végrehajtja az F18 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f19(): F19()
+Keymap52*DEFx-f19():  Végrehajtja az F19 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f20(): F20()
+Keymap52*DEFx-f20():  Végrehajtja az F20 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f21(): F21()
+Keymap52*DEFx-f21():  Végrehajtja az F21 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f22(): F22()
+Keymap52*DEFx-f22():  Végrehajtja az F22 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f23(): F23()
+Keymap52*DEFx-f23():  Végrehajtja az F23 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f24(): F24()
+Keymap52*DEFx-f24():  Végrehajtja az F24 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f25(): F25()
+Keymap52*DEFx-f25():  Végrehajtja az F25 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f26(): F26()
+Keymap52*DEFx-f26():  Végrehajtja az F26 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f27(): F27()
+Keymap52*DEFx-f27():  Végrehajtja az F27 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f28(): F28()
+Keymap52*DEFx-f28():  Végrehajtja az F28 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f29(): F29()
+Keymap52*DEFx-f29():  Végrehajtja az F29 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f30(): F30()
+Keymap52*DEFx-f30():  Végrehajtja az F30 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f31(): F31()
+Keymap52*DEFx-f31():  Végrehajtja az F31 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f32(): F32()
+Keymap52*DEFx-f32():  Végrehajtja az F32 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f33(): F33()
+Keymap52*DEFx-f33():  Végrehajtja az F33 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f34(): F34()
+Keymap52*DEFx-f34():  Végrehajtja az F34 billentyû meghatározott mûveletét.
+!
+Keymap52*x-f35(): F35()
+Keymap52*DEFx-f35():  Végrehajtja az F35 billentyû meghatározott mûveletét.
+!
+Keymap52*vt-f1(): VtPF1()
+Keymap52*DEFvt-f1():  Minden módban a karakter kódot (SS3 P) küldi el az \
+alkalmazásnak.
+!
+Keymap52*vt-f2(): VtPF2()
+Keymap52*DEFvt-f2(): Minden módban a karakter kódot (SS3 Q) küldi el az \
+alkalmazásnak.
+!
+Keymap52*vt-f3(): VtPF3()
+Keymap52*DEFvt-f3(): Minden módban a karakter kódot (SS3 R) küldi el az \
+alkalmazásnak.
+!
+Keymap52*vt-f4(): VtPF4()
+Keymap52*DEFvt-f4(): Minden módban a karakter kódot (SS3 S) küldi el az \
+alkalmazásnak.
+!
+Keymap52*x-print(): X_Print()
+Keymap52*DEFx-print(): Az ANSI escape jelsorozatot (Ctrl-[[209q) küldi el a \
+hosztnak.
+!
+Keymap52*x-scroll-lock(): X_ScrollLock()
+Keymap52*DEFx-scroll-lock(): Az ANSI escape jelsorozatot (Ctrl-[[213q) küldi el \
+a hosztnak.
+!
+Keymap52*x-pause(): X_Pause()
+Keymap52*DEFx-pause(): Az ANSI escape jelsorozatot (Ctrl-[[217q) küldi el a \
+hosztnak.
+!
+Keymap52*x-ins(): X_Insert()
+Keymap52*DEFx-ins(): Az ANSI escape jelsorozatot (Ctrl-[[139q) küldi el a \
+hosztnak.
+!
+Keymap52*x-delete(): X_Delete()
+Keymap52*DEFx-delete(): Az ANSI escape jelsorozatot (Ctrl-[[P) küldi el a \
+hosztnak.
+!
+Keymap52*x-home(): X_Home()
+Keymap52*DEFx-home(): Az ANSI escape jelsorozatot (Ctrl-[[H) küldi el a \
+hosztnak.
+!
+Keymap52*x-end(): X_End()
+Keymap52*DEFx-end(): Az ANSI escape jelsorozatot (Ctrl-[[146q) küldi el a \
+hosztnak.
+!
+Keymap52*x-page-up(): X_PageUp()
+Keymap52*DEFx-page-up(): Az ANSI escape jelsorozatot (Ctrl-[[150q) küldi el a \
+hosztnak.
+!
+Keymap52*x-page-down(): X_PageDown()
+Keymap52*DEFx-page-down(): Az ANSI escape jelsorozatot (Ctrl-[[154q) küldi el a \
+hosztnak.
+!
+Keymap52*kp-numlock(): KP_NumLock()
+Keymap52*DEFkp-numlock():  A Numeric Lock (numerikus zárolás) mûveletet hajtja \
+végre.
+!
+Keymap52*kp-divide(): KP_Divide()
+Keymap52*DEFkp-divide():  Végrehajtja a billentyûblokkon meghatározott \
+osztási funkciót.
+!
+Keymap52*kp-multiply(): KP_Multiply()
+Keymap52*DEFkp-multiply():  Végrehajtja a billentyûblokkon meghatározott \
+szorzási funkciót.
+!
+Keymap52*kp-subtract(): KP_Minus()
+Keymap52*DEFkp-subtract():  Numerikus módban a mínusz karaktert (-) küldi az \
+alkalmazásnak. Alkalmazás módban az SS3 1 karakter kódot (ESC ? 1) küldi el \
+az alkalmazásnak.
+!
+Keymap52*kp-7(): KP_7()
+Keymap52*DEFkp-7():  Numerikus módban a 7 karaktert küldi az alkalmazásnak. Alkalmazás módban az SS3 w karakter kódot (ESC ? w) küldi el az alkalmazásnak.
+!
+Keymap52*kp-8(): KP_8()
+Keymap52*DEFkp-8():  Numerikus módban a 8 karaktert küldi az alkalmazásnak. Alkalmazás módban az SS3 x karakter kódot (ESC ? x) küldi el az alkalmazásnak.
+!
+Keymap52*kp-9(): KP_9()
+Keymap52*DEFkp-9():  Numerikus módban a 9 karaktert küldi az alkalmazásnak. Alkalmazás módban az SS3 y karakter kódot (ESC ? y) küldi el az alkalmazásnak.
+!
+Keymap52*kp-4(): KP_4()
+Keymap52*DEFkp-4():  Numerikus módban a 4 karaktert küldi az alkalmazásnak. Alkalmazás módban az SS3 t karakter kódot (ESC ? t) küldi el az alkalmazásnak.
+!
+Keymap52*kp-5(): KP_5()
+Keymap52*DEFkp-5():  Numerikus módban az 5 karaktert küldi az alkalmazásnak. Alkalmazás módban az SS3 u karakter kódot (ESC ? u) küldi el az alkalmazásnak.
+!
+Keymap52*kp-6(): KP_6()
+Keymap52*DEFkp-6():  Numerikus módban a 6 karaktert küldi az alkalmazásnak. Alkalmazás módban az SS3 v karakter kódot (ESC ? v) küldi el az alkalmazásnak.
+!
+Keymap52*kp-add(): KP_Plus()
+Keymap52*DEFkp-add():  Végrehajtja a billentyûblokkon meghatározott összeadási \
+funkciót.
+!
+Keymap52*kp-1(): KP_1()
+Keymap52*DEFkp-1():  Numerikus módban az 1 karaktert küldi az alkalmazásnak. Alkalmazás módban az SS3 q karakter kódot (ESC ? q) küldi el az alkalmazásnak.
+!
+Keymap52*kp-2(): KP_2()
+Keymap52*DEFkp-2():  Numerikus módban a 2 karaktert küldi az alkalmazásnak. Alkalmazás módban az SS3 r karakter kódot (ESC ? r) küldi el az alkalmazásnak.
+!
+Keymap52*kp-3(): KP_3()
+Keymap52*DEFkp-3():  Numerikus módban a 3 karaktert küldi az alkalmazásnak. Alkalmazás módban az SS3 s karakter kódot (ESC ? s) küldi el az alkalmazásnak.
+!
+Keymap52*kp-0(): KP_0()
+Keymap52*DEFkp-0():  Numerikus módban a 0 karaktert küldi az alkalmazásnak. Alkalmazás módban az SS3 p karakter kódot (ESC ? p) küldi el az alkalmazásnak.
+!
+Keymap52*kp-decimal(): KP_Decimal()
+Keymap52*DEFkp-decimal():  Numerikus módban a tizedes karaktert (.) küldi az \
+alkalmazásnak. Alkalmazás módban az SS3 n karakter kódot (ESC ? n) küldi el az \
+alkalmazásnak.
+!
+Keymap52*kp-enter(): KP_Enter()
+Keymap52*DEFkp-enter():  Numerikus módban az Enter funkciót küldi az \
+alkalmazásnak. Alkalmazás módban az SS3 M karakter kódot (ESC ? M) küldi el az \
+alkalmazásnak.
+!
+Keymap52*kp-space(): KP_Space()
+Keymap52*DEFkp-space():  A szóköz karaktert küldi az alkalmazásnak.
+!
+Keymap52*kp-tab(): KP_Tab()
+Keymap52*DEFkp-tab():  A Tab karaktert küldi az alkalmazásnak.
+!
+Keymap52*kp-equal(): KP_Equal()
+Keymap52*DEFkp-equal():  Az egyenlõségjel (=) karaktert küldi az \
+alkalmazásnak.
+!
+Keymap52*kp-separator(): KP_Separator()
+Keymap52*DEFkp-separator():  Az elválasztó karaktert küldi az \
+alkalmazásnak.
+!
+Playedit*btn1-press():  MouseBtn1Press()
+Playedit*DEFbtn1-press():  Az 1. egérgomb megnyomásakor mûködésbe lépõ \
+mûvelet.
+!
+Playedit*btn1-release():  MouseBtn1Release()
+Playedit*DEFbtn1-release():  Az 1. egérgomb elengedésekor mûködésbe lépõ \
+mûvelet.
+!
+Playedit*btn2-press():  MouseBtn2Press()
+Playedit*DEFbtn2-press():  Az 2. egérgomb megnyomásakor mûködésbe lépõ mûvelet.
+!
+Playedit*btn2-release():  MouseBtn2Release()
+Playedit*DEFbtn2-release():  Az 2. egérgomb elengedésekor mûködésbe lépõ \
+mûvelet.
+!
+Playedit*btn3-press():  MouseBtn3Press()
+Playedit*DEFbtn3-press():  Az 3. egérgomb megnyomásakor mûködésbe lépõ mûvelet.
+!
+Playedit*btn3-release():  MouseBtn3Release()
+Playedit*DEFbtn3-release():  Az 3. egérgomb elengedésekor mûködésbe lépõ \
+mûvelet.
+!
+Playedit*shift-btn1-press():  MouseShiftBtn1Press()
+Playedit*DEFshift-btn1-press():  Az 1. egérgomb és a Shift \
+billentyûkombináció együttes megnyomásakor mûködésbe lépõ mûvelet.
+!
+Playedit*shift-btn1-release():  MouseShiftBtn1Release()
+Playedit*DEFshift-btn1-release():  A Shift nyomva tartásával az 1. egérgomb \
+elengedésekor mûködésbe lépõ mûvelet.
+!
+Playedit*shift-btn2-press():  MouseShiftBtn2Press()
+Playedit*DEFshift-btn2-press():  A 2. egérgomb és a Shift billentyûkombináció \
+együttes megnyomásakor mûködésbe lépõ mûvelet.
+!
+Playedit*shift-btn2-release():  MouseShiftBtn2Release()
+Playedit*DEFshift-btn2-release():  A Shift nyomva tartásával az 2. egérgomb \
+elengedésekor mûködésbe lépõ mûvelet.
+!
+Playedit*shift-btn3-press():  MouseShiftBtn3Press()
+Playedit*DEFshift-btn3-press():  Az 3. egérgomb és a Shift billentyûkombináció \
+együttes megnyomásakor mûködésbe lépõ mûvelet.
+!
+Playedit*shift-btn3-release():  MouseShiftBtn3Release()
+Playedit*DEFshift-btn3-release():  A Shift nyomva tartásával az 3. egérgomb \
+elengedésekor mûködésbe lépõ mûvelet.
+!
+Playedit*btn1-double-press():  MouseBtn1DoublePress()
+Playedit*DEFbtn1-double-press():  Az 1. egérgomb kettõs megnyomásakor \
+mûködésbe lépõ mûvelet.
+!
+Playedit*btn1-triple-press():  MouseBtn1TriplePress()
+Playedit*DEFbtn1-triple-press():  Az 1. egérgomb hármas megnyomásakor mûködésbe \
+lépõ mûvelet.
+!
+Playedit*btn2-double-press():  MouseBtn2DoublePress()
+Playedit*DEFbtn2-double-press():  Az 2. egérgomb kettõs megnyomásakor mûködésbe \
+lépõ mûvelet.
+!
+Playedit*btn2-triple-press():  MouseBtn2TriplePress()
+Playedit*DEFbtn2-triple-press():  Az 2. egérgomb hármas megnyomásakor mûködésbe \
+lépõ mûvelet.
+!
+Playedit*btn3-double-press():  MouseBtn3DoublePress()
+Playedit*DEFbtn3-double-press():  Az 3. egérgomb kettõs megnyomásakor mûködésbe \
+lépõ mûvelet.
+!
+Playedit*btn3-triple-press():  MouseBtn3TriplePress()
+Playedit*DEFbtn3-triple-press():  Az 3. egérgomb hármas megnyomásakor mûködésbe \
+lépõ mûvelet.
+!
+Playedit*shift-btn1-double-press():  MouseShiftBtn1DoublePress()
+Playedit*DEFshift-btn1-double-press():  A Shift lenyomva tartásával az 1. \
+egérgomb kettõs megnyomásakor mûködésbe lépõ mûvelet.
+!
+Playedit*shift-btn1-triple-press():  MouseShiftBtn1TriplePress()
+Playedit*DEFshift-btn1-triple-press():  A Shift lenyomva tartásával az 1. \
+egérgomb hármas megnyomásakor mûködésbe lépõ mûvelet.
+!
+Playedit*shift-btn2-double-press():  MouseShiftBtn2DoublePress()
+Playedit*DEFshift-btn2-double-press():  A Shift lenyomva tartásával a 2. \
+egérgomb kettõs megnyomásakor mûködésbe lépõ mûvelet.
+!
+Playedit*shift-btn2-triple-press():  MouseShiftBtn2TriplePress()
+Playedit*DEFshift-btn2-triple-press():  A Shift lenyomva tartásával a 2. \
+egérgomb hármas megnyomásakor mûködésbe lépõ mûvelet.
+!
+Playedit*shift-btn3-double-press():  MouseShiftBtn3DoublePress()
+Playedit*DEFshift-btn3-double-press():  A Shift lenyomva tartásával a 3. \
+egérgomb kettõs megnyomásakor mûködésbe lépõ mûvelet.
+!
+Playedit*shift-btn3-triple-press():  MouseShiftBtn3TriplePress()
+Playedit*DEFshift-btn3-triple-press():  A Shift lenyomva tartásával a 3. \
+egérgomb hármas megnyomásakor mûködésbe lépõ mûvelet.
+!
+AllShare*paste():  Paste()
+AllShare*DEFpaste():  A mûvelettel a vágólap tartalma beillesztésre kerül a \
+kurzor pozíciójába.
+!
+AllShare*copy():  Copy()
+AllShare*DEFcopy():  A mûvelet az aktuális képernyõ kijelölést másolja a \
+vágólapra.
+!
+AllShare*cut():  Cut()
+AllShare*DEFcut():  A mûvelet eltávolítja az aktuális képernyõ kijelölést.
+!
+Playedit*userid():  USERID()
+Playedit*DEFuserid():  Beírja az aktuális felhasználó felhasználói \
+azonosítóját. Ez a mûvelet emulátor szekciók automatikus bejelentkeztetésére \
+használható.
+!
+Playedit*password():  PASSWORD()
+Playedit*DEFpassword():  Beírja az aktuális felhasználó jelszavát. Ez a mûvelet \
+emulátor szekciók automatikus bejelentkeztetésére használható.
+!
+AllShare*adjust-copy-left():  AdjustCopyAreaLeft()
+AllShare*DEFadjust-copy-left():  Ha még nincs elkezdve, akkor elkezd a \
+képernyõn egy másolási területet és igazítja a másolási területet a \
+jelenlegi pozíciójától egy karakterrel balra.
+!
+AllShare*adjust-copy-right():  AdjustCopyAreaRight()
+AllShare*DEFadjust-copy-right():  Ha még nincs elkezdve, akkor elkezd a \
+képernyõn egy másolási területet és igazítja a másolási területet a jelenlegi \
+pozíciójától egy karakterrel jobbra.
+!
+AllShare*adjust-copy-up():  AdjustCopyAreaUp()
+AllShare*DEFadjust-copy-up():  Ha még nincs elkezdve, akkor elkezd a képernyõn \
+egy másolási területet és igazítja a másolási területet a jelenlegi \
+pozíciójától egy sorral felfelé.
+!
+AllShare*adjust-copy-down():  AdjustCopyAreaDown()
+AllShare*DEFadjust-copy-down():  Ha még nincs elkezdve, akkor elkezd a \
+képernyõn egy másolási területet és igazítja a másolási területet a jelenlegi \
+pozíciójától egy sorral lefelé.
+!
+AllShare*adjust-copy-anchor-left():  AdjustCopyAreaAnchorLeft()
+AllShare*DEFadjust-copy-anchor-left():  Ha még nincs elkezdve, akkor elkezd a \
+képernyõn egy másolási területet és igazítja a másolási területet a jelenlegi \
+pozíciójától egy karakterrel jobbra, míg a másolási terület bal oldalát nem \
+igazítja.
+!
+AllShare*adjust-copy-anchor-right():  AdjustCopyAreaAnchorRight()
+AllShare*DEFadjust-copy-anchor-right():  Ha még nincs elkezdve, akkor elkezd a \
+képernyõn egy másolási területet és igazítja a másolási területet a jelenlegi \
+pozíciójától egy karakterrel balra, míg a másolási terület jobb oldalát nem \
+igazítja.
+!
+AllShare*adjust-copy-anchor-up():  AdjustCopyAreaAnchorUp()
+AllShare*DEFadjust-copy-anchor-up():  Ha még nincs elkezdve, akkor elkezd a \
+képernyõn egy másolási területet és igazítja a másolási területet a jelenlegi \
+pozíciójától egy sorral lefelé, míg a másolási terület tetejét nem igazítja.
+!
+AllShare*adjust-copy-anchor-down():  AdjustCopyAreaAnchorDown()
+AllShare*DEFadjust-copy-anchor-down():  Ha még nincs elkezdve, akkor elkezd a \
+képernyõn egy másolási területet és igazítja a másolási területet a jelenlegi \
+pozíciójától egy sorral felfelé, míg a másolási terület alját nem igazítja.
+!
+AllShare*toggle-default-copy-type():  ToggleDefaultCopyType()
+AllShare*DEFtoggle-default-copy-type():  Beállítja, hogy a másolás blokk \
+másolás vagy lineáris másolás legyen.
+!
+Playedit*hex-string():  HexString()
+Playedit*DEFhex-string():  Lehetõvé teszi az adatok megadását hexadecimális \
+módban.
+!
+Playedit*graphics-hex-string():  GraphicsHexString()
+Playedit*DEFgraphics-hex-string():  Lehetõvé teszi grafikai adatok megadását \
+EBCDIC hexadecimális módban.
+!
+Playedit*BIDItogglescrrev():  BIDIToggleScreenReverse()
+Playedit*DEFBIDItogglescrrev():  Be- és kikapcsolja a fordított képernyõ \
+módot (arab és héber nyelveknél használják).
+!
+Playedit*BIDItogglefieldrev():  BIDIToggleFieldReverse()
+Playedit*DEFBIDItogglefieldrev():  Be- és kikapcsolja a fordított mezõ \
+módot (arab és héber nyelveknél használják).
+!
+Playedit*BIDItoggleautorev():  BIDIToggleAutoReverse()
+Playedit*DEFBIDItoggleautorev():  Be- és kikapcsolja az automatikus mezõfordítás \
+módot (arab és héber nyelveknél használják).
+!
+Playedit*BIDIpush():  BIDIPush()
+Playedit*DEFBIDIpush():  Bekapcsolja a tolómódot (arab és \
+héber nyelveknél használják).
+!
+Playedit*BIDIendpush():  BIDIEndPush()
+Playedit*DEFBIDIendpush():  Kikapcsolja a toló módot (arab és \
+héber nyelveknél használják).
+!
+Playedit*BIDItoggleautopush():  BIDIToggleAutoPush()
+Playedit*DEFBIDItoggleautopush():  Beállítja az emulátort úgy, hogy \
+automatikusan belépjen a toló módba, ha a nyelv BIDI és angol nyelv között \
+vált (arab és héber nyelveknél használják).
+!
+Playedit*BIDIsetshape():  BIDISetShape()
+Playedit*DEFBIDIsetshape():  Beállítja az alakzat módot az arab \
+nyelvhez.
+!
+Playedit*BIDIfieldshape():  BIDIFieldShape()
+Playedit*DEFBIDIfieldshape():  A mezõben az adatokat alakítja az arab nyelv \
+számára.
+!
+Playedit*BIDItogglenumswap():  BIDIToggleNumericSwapping()
+Playedit*DEFBIDItogglenumswap():  Be- és kikapcsolja az arab/hindi numerikus \
+cserét az arab nyelvhez.
+!
+! End action names
+!
+!
+Keyxxx52*ERROR:  INVALID ACTION(S)
+!
+Keymap52*managing_server_text.value:  Ezt a billentyûzet átdefiniálási fájlt \
+nem lehet elmenteni.  Frissítse a kezelõ szervert az IBM hálózati \
+számítógép kezelõ legújabb kiadásával.
+!
+Keymap52*managingBtn.labelString:  OK
+!
+Keymap52*general_fatal_error.value:  Hiba történt a Billentyûzet \
+átdefiniáló programban.  A program befejezõdik.
+!
+Keymap52*genfatalBtn.labelString:  Kilépés
+!
+Keymap52*general_nonfatal_text.value:  Billentyûzet átdefiniálási hiba.
+!
+Keymap52*gennonfatBtn.labelString:  OK
+!
+!
+!************************************************************************
+!
+!
+!                        Keypad Customizer Resources
+!
+!
+!************************************************************************
+Keypad52*title:  Billentyûblokk személyre szabási program
+
+Keypad52*iname5250:  5250 Billentyûblokk személyre szabási program
+
+Keypad52*iname3270:  3270 Billentyûblokk személyre szabási program
+
+Keypad52*keypadTitle.dialogTitle:  Billentyûzet
+
+!following resource left blank on purpose, do not translate.
+AllShare*blankLabel.labelString:
+
+! initial popup dialog
+Keypad52*initialpopupDialoglist.labelString:  Válasszon egy billentyûzet állományt:
+
+Keypad52*initialpopupDialogaltlabel.labelString:  Nincs billentyûzetblokk \
+állomány.
+
+Keypad52*initialpopupDialogOKbtn.labelString:  OK
+
+Keypad52*initialpopupDialogcancelbtn.labelString:  Mégsem
+
+Keypad52*initialpopupDialognewbtn.labelString:  Új billentyûblokk
+
+!*************************************
+!**  Keypad Customizer Main Window  **
+!*************************************
+
+! In general, the following buttons should not be made much longer during translation.
+! Buttons have one to four words.
+
+Keypad52*keyAction.labelString:  Gomb mûvelet->
+
+Keypad52*fileDeleteButton.labelString:  Billentyûblokk gombjának törlése
+
+Keypad52*selectplayfile.labelString:  Makrófájl mûvelet kiválasztása
+
+Keypad52*changeSize.labelString:  Billentyûblokk stílus módosítása
+
+Keypad52*keypadfileDelete.labelString:  Billentyûblokk fájl törlése
+
+Keypad52*transRxing:  Aktuális billentyûblokk személyre szabási információk \
+fogadása az emulátor szekciótól.
+
+Keypad52*transRxd:  Billentyûblokk személyre szabási információk érkeztek az \
+emulátor szekciótól.
+
+Keypad52*currKeypadLabel.labelString:  Aktuális billentyûblokk:
+
+Keypad52*currKeyLabel.labelString:  Aktuális billentyûblokk gomb szöveg:
+
+Keypad52*currActLabel.labelString:  Aktuális billentyûblokk gomb mûvelet:
+
+!******************
+!**  Resolution  **
+!******************
+Keypad52*poorResolutionMsgText.value:   A monitor felbontása kisebb, mint \
+800x600. A billentyûzetblokk személyre szabási program nem \
+támogatott a 800x600 képpontnál kisebb felbontású monitorokon.
+
+Keypad52*keypadFailureCancelBtn.labelString:  Mégsem
+
+!**************
+!**  Saving  **
+!**************
+Keypad52*saveDialog.dialogTitle:  Billentyûblokk mentése
+
+Keypad52*saveBoxLabel*labelString:  Billentyûblokk fájl mentése mint:
+
+Keypad52*saveTran:  Billentyûblokk fájl mentve...
+
+Keypad52*fileWarningDialog.dialogTitle:  Billentyûblokk figyelmeztetés
+
+!**************
+!**  Delete  **
+!**************
+Keypad52*fileDeleteDialog.dialogTitle:  Billentyûblokk fájl törlése
+
+Keypad52*fileDeleteBoxLabel.labelString:  Jelölje ki a törlendõ \
+billentyûblokkot, billentyûblokkokat:
+
+Keypad52*fileDeleted:  A kijelölt billentyûblokk fájlok törölve lettek.
+
+!****************
+!**  Playback  **
+!****************
+Keypad52*invalidSelectionplay.messageString:  Nincs elem kiválasztva.  Válasszon a listából vagy válassza a Mégse lehetõséget.
+
+Keypad52*invalidSelectionplay.okLabelString:  Folytatás
+
+Keypad52*selectPlaybackFile.labelString:  Makrófájl kiválasztása
+
+Keypad52*userPlaybackFiles.labelString:  Felhasználói makrófájlok
+
+Keypad52*defaultPlaybackFiles.labelString:  Alapértelmezett makrófájlok
+
+AllShare*okLabel.labelString:  OK
+
+!********************
+!**  Keypad Style  **
+!********************
+Keypad52*selectSizeTitle.dialogTitle:  Billentyûblokk stílus
+
+Keypad52*selectKeypadSizeLabel.labelString:  Billentyûblokk stílus \
+kiválasztása:
+
+Keypad52*selectKeypadStyle.labelString:  Billentyûblokk stílus:
+
+Keypad52*popupStyleChoice.labelString:  Felugró billentyûzet
+
+Keypad52*menuStyleChoice.labelString:  Felhúzható billentyûblokk
+
+Keypad52*selectKeypadSizeRows.labelString:  Sorok:
+
+Keypad52*selectKeypadSizeCols.labelString:  Oszlopok:
+
+Keypad52*selectKeypadSizeTextLen.labelString:  Szöveghossz:
+
+Keypad52*changeKeypadSizeMessage:  Kívánt billentyûblokk stílus \
+kiválasztása...
+
+Keypad52*newPb.labelString:  Új
+
+Keypad52*row_col_pulldownvalue.labelString:  -
+
+Keypad52*invalidSizeSelection.messageString:  A kiválasztott méret túl \
+kicsi az aktuális billentyûblokkhoz.
+
+Keypad52*invalidSizeSelection.okLabelString:  Folytatás
+
+!***********************
+!**  Warning dialogs  **
+!***********************
+Keypad52*change.dialogTitle:  Billentyûblokk figyelmeztetés
+
+Keypad52*unsaved.dialogTitle:  Billentyûblokk figyelmeztetés
+
+Keypad52*unsaved.messageString:  A billentyûblokk módosítások nem lettek elmentve.
+
+Keypad52*unsaved.okLabelString:  Folytatás
+
+Keypad52*nochange.dialogTitle:  Billentyûblokk figyelmeztetés
+
+! this cannot be made much longer during translation.
+Keypad52*nochange.messageString:  OK vagy Mégse a jelenlegi módosításokra, mielõtt tovább megy.
+
+Keypad52*nochange.okLabelString:  Folytatás
+
+Keypad52*cantdothat.dialogTitle:  Billentyûblokk figyelmeztetés
+
+Keypad52*cantdothat.messageString:  OK vagy Mégse a módosításokra, mielõtt másik lehetõséget választ.
+
+!nothing selected in first dialog box
+Keypad52*invalidSelectionwarn.messageString:  Nincs elem kiválasztva. Válasszon a listából: Új vagy Mégse.
+
+Keypad52*invalidSelectionwarn.okLabelString:  Folytatás
+
+Keypad52*noaccessDir:  Nem lehet elérni a könyvtárat.
+
+Keypad52*selectKeypadButton.messageString:  Ki kell jelölni egy billentyût a \
+személyre szabáshoz.
+
+Keypad52*generalError.dialogTitle:  Billentyûblokk hiba
+
+Keypad52*generalError.messageString:  Hiba történt a mûvelet végrehajtása \
+közben.
+
+Keypad52*generalError.okLabelString:  OK
+
+Keypad52*emptyList:  Hiba van a fordítási listában, nem lehet menteni vagy \
+alkalmazni.
+
+Keypad52*ErrorMsgFileNameChars.messageString:  A begépelt karakter nem érvényes fájlnevekben.
+
+Keypad52*EBCMismatchText.value: A billentyûblokk személyre szabási programot \
+meghívó emulátor szekció nyelve nem egyezik az IBM hálózati számítógép nyelvével.  Az alkalmazással készített karakterek és karaktersorozatok \
+nem várt és/vagy nem kívánatos eredményekhez vezethetnek az emulátor szekcióban.
+
+!************************
+!**  Various Messages  **
+!************************
+! help button pressed
+Keypad52*helpMessage:  A Súgómegjelenítõ betöltése folyamatban...
+
+! after OK clicked
+Keypad52*chooseSave:  Válassza a Mentés lehetõséget a módosítások mentéséhez.
+
+! after Cancel clicked
+Keypad52*chooseCancel:  Aktuális módosítások visszavonva.
+
+! original message when new keypad opens
+Keypad52*chooseNew:  Új billentyûblokk szerkesztése
+
+! button pressed in keypad
+Keypad52*continueedit:  Aktuális gomb szerkesztése...
+
+! click button action -> with nothing selected
+Keypad52*noActionSelected:  Nem lett elem kiválasztva a mûvelet listában \
+vagy karakter listában.
+
+! swapping messages (next 2)
+Keypad52*swapinprogress:  Válassza az OK, Mégse vagy más, billentyûblokk \
+gomb mozgatási lehetõséget...
+
+Keypad52*swaprunninginfo:  Gomb mozgatás folyamatban...
+
+! following 3 messages for invalid keypad action
+Keypad52*nonValidDialog.dialogTitle:  Billentyûblokk figyelmeztetési üzenet
+
+Keypad52*nonValidDialog.messageString:  Billentyûblokk mûveletek erre a \
+gombra érvénytelenek.
+
+Keypad52*deleteKeypadMessage:  Jelölje ki a törlendõ billentyûblokkot, \
+billentyûblokkokat...
+
+!***************
+!**  Exiting  **
+!***************
+Keypad52*quitDialog1:  A billentyûblokk módosult, de nincs mentve.
+
+Keypad52*quit1Tog1:  Kilépés a módosítások mentése nélkül.
+
+Keypad52*quit1Tog2:  Mentse el a módosításokat kilépés elõtt.
+
+!************************************************************************
+!
+!
+!                        Playback Editor Resources
+!
+!
+!************************************************************************
+Playedit*title:  Makrófájl szerkesztõ
+
+Playedit*iname5250:  5250 Makrófájl szerkesztõ
+
+Playedit*iname3270:  3270 Makrófájl szerkesztõ
+
+Playedit*editorTitle.dialogTitle:  Makrófájl szerkesztõ
+
+!****  Main Window
+Playedit*keyAction.labelString:  Mûvelet beszúrása->
+
+Playedit*deleteAction.labelString:  Mûvelet eltávolítása
+
+Playedit*insertAction.labelString:  Sor beszúrása
+
+Playedit*editAction.labelString:  Mûvelet szerkesztése
+
+Playedit*transRxing:  Aktuális lejátszási fájl szerkesztõ információinak \
+fogadása az emulátor szekciótól.
+
+Playedit*transRxd:  Makrófájl szerkesztõ információk érkeztek az \
+emulátor szekciótól.
+
+Playedit*currFileLabel.labelString:  Aktuális makrófájl:
+
+Playedit*currActLabel.labelString:  Aktuális makrófájl mûveletek:
+
+!** Resolution
+Playedit*poorResolutionMsgText.value:  A monitor felbontása kisebb, mint \
+800x600. A makrófájl szerkesztõ nem támogatott a 800x600 képpontnál \
+kisebb felbontású monitorokon.
+
+!** Saving
+Playedit*saveDialog.dialogTitle:  Makrófájl mentése
+
+Playedit*saveBoxLabel*labelString:  Makrófájl mentése mint:
+
+Playedit*saveTran:  Makrófájl mentve...
+
+Playedit*fileWarningDialog.dialogTitle:  Visszajátszási szerkesztõ \
+figyelmeztetés
+
+!** Edit
+Playedit*editBoxLabel*labelString:  Mûvelet szerkesztése:
+
+!** Warning Dialogs
+Playedit*PlaybackMsgFileNoOpen.value:  A makrófájl nem nyitható \
+meg.  Kilépés az alkalmazásból.
+
+Playedit*PlaybackMsgFileNoRead.value:  A makrófájl nem olvasható.  Kilépés az alkalmazásból.
+
+Playedit*PlaybackMsgFileCorrupt.value:  Az emulátor Rögzítõ alkalmazása \
+nem hozta létre a makrófájlt. A fájl nem nyitható meg.  Kilépés az \
+alkalmazásból.
+
+Playedit*noaccessDir:  Nem lehet elérni a könyvtárat.
+
+Playedit*selectInsertLocation.messageString:  Emelje ki azt a sort, \
+ahova a mûveletet kívánja beszúrni.
+
+Playedit*ErrorMsgFileNameChars.messageString:  A begépelt karakter nem érvényes fájlnevekben.
+
+Playedit*EBCMismatchText.value:  A makrófájl szerkesztõt meghívó \
+emulátor szekció nyelve nem egyezik az IBM hálózati számítógép nyelvével.  Az \
+alkalmazással készített karakterek és karaktersorozatok nem várt és/vagy nem \
+kívánatos eredményekhez vezethetnek az emulátor szekcióban.
+
+Playedit*nonValidDialog.messageString:  A mûvelet(ek) nem érvényes(ek).
+
+!** Messages
+Playedit*helpMessage:  A Súgómegjelenítõ betöltése folyamatban...
+
+Playedit*chooseSave:  Válassza a Mentés lehetõséget a módosítások mentéséhez.
+
+Playedit*chooseCancel:  Aktuális módosítások visszavonva.
+
+Playedit*noActionSelected.messageString:  Nem lett elem kiválasztva a mûvelet \
+listában vagy karakter listában.
+
+Playedit*nothingHighlightedDelete.messageString:  Nincs elem törlésre kiválasztva.
+
+Playedit*nothingHighlightedInsert.messageString:  Emelje ki a a kívánt beszúrás \
+helyét.
+
+Playedit*nothingHighlightedEdit.messageString:  Nincs elem szerkesztésre \
+kiválasztva.
+
+!** Exit
+Playedit*quitDialog1:  A makrófájl módosult, de nincs mentve.
+
+Playedit*quit1Tog1:  Kilépés a módosítások mentése nélkül.
+
+Playedit*quit1Tog2:  Mentse el a módosításokat kilépés elõtt.
+
+!**************************************************
+!*
+!*        Printing translations
+!*
+!*      Added by AJMEYER for V310.nc
+!*
+!**************************************************
+
+AllShare*printDialogPrinterTypeLabel.labelString:  Nyomtató típusa:
+
+AllShare*printDialogPrinterTypeMenu*postscript.labelString:  PostScript
+
+AllShare*printDialogPrinterTypeMenu*ascii.labelString:  ASCII
+
+AllShare*printDialogPrinterTypeMenu*pcl.labelString:  PCL
+
+AllShare*printDialogPrinterSelectControls_popup.title:   Nyomtató-kiválasztó
+
+AllShare*printSelectDialogOKButton.labelString:  OK
+
+AllShare*printSelectDialogCancelButton.labelString:  Mégsem
+! ENGL1SH_VERS10N 1.6.2.2 DO NOT REMOVE OR CHANGE THIS LINE

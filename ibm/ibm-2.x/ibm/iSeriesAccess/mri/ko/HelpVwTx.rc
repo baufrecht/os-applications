@@ -1,0 +1,203 @@
+! ENGLISH_SOURCE_VERSION= 1.3.1.1 
+!
+!
+!
+! This file contains the resource text strings for the IBM Network Station 3270, 5250 and
+! VTxxx emulators, in particular the help viewer text; for example pushbutton text. This file
+! does not contain the emulator on-line help text; help text is in a different file.
+
+! This resource file will be stored on all servers in locale specific ASCII (819 for Latin1
+! languages). 
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. Resource format: 
+!    - A resource line starts with HelpView* followed by a resource name
+!      and a ":".  Do NOT make any changes to the text to the left of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+!******************************************************************************
+!************************ BEGIN DO NOT TRANSLATE ******************************
+!******************************************************************************
+!*   The first section of resources are are locale specific but               *
+!*   DO NOT REQUIRE TRANSLATION.                                              *
+!*                                                                            *
+!* This source file enables the resource section for Latin1 and Latin2.       *
+!*                                                                            *
+!* For ru_RU or Latin5 locales and DBCS locales                               *
+!*      1. Place a '!' as the first character in each line in the Latin1      *
+!*      and Latin2 section                                                    *
+!*      2. Remove the '!' character for each resource line in the apropriate  *
+!*      section that matches your locale.                                     *
+!*                                                                            *
+!* For example, ru_RU should place ! in front of all lines in the LATIN1      *
+!* section remove the ! from all lines in the LATIN5 section.                 *      
+!******************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN1 and LATIN2                ****************
+!**************************************************************************
+!HelpView*useExtraLargeFont:   True
+!HelpView*largestFontList:     -*-*-medium-r-normal-*-*-*-*-*-m-150-*-*
+!HelpView*extraLargeFontList:  -*-*-medium-r-normal-*-*-*-*-*-m-110-*-*
+!HelpView*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-90-*-*
+!HelpView*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-70-*-*
+!HelpView*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+!HelpView*largestFontColumns:     30 
+!HelpView*extraLargeFontColumns:  40
+!HelpView*largeFontColumns:       50
+!HelpView*mediumFontColumns:      64
+!HelpView*smallFontColumns:       75
+!**************************************************************************
+!****************   END LATIN1 and LATIN2                  ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN5                           ****************
+!**************************************************************************
+!HelpView*useExtraLargeFont:   True
+!HelpView*largestFontList:     -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*
+!HelpView*extraLargeFontList:  -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*
+!HelpView*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!HelpView*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-70-*-*
+!HelpView*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!HelpView*largestFontColumns:     25
+!HelpView*extraLargeFontColumns:  25
+!HelpView*largeFontColumns:       35
+!HelpView*mediumFontColumns:      64
+!HelpView*smallFontColumns:       75
+!**************************************************************************
+!****************   END   LATIN5                           ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (ja_JP ko_KR zh_CN zh_TW)   ****************
+!**************************************************************************
+HelpView*useExtraLargeFont:   False
+HelpView*largestFontList:     -*-*-medium-r-normal-*-24-*-*-*-c-*
+HelpView*extraLargeFontList:  -*-*-medium-r-normal-*-24-*-*-*-c-*
+HelpView*largeFontList:       -*-*-medium-r-normal-*-16-*-*-*-c-*
+HelpView*mediumFontList:      -*-*-medium-r-normal-*-16-*-*-*-c-*
+HelpView*smallFontList:       -*-*-medium-r-normal-*-16-*-*-*-c-*
+HelpView*largestFontColumns:     30
+HelpView*extraLargeFontColumns:  40
+HelpView*largeFontColumns:       50
+HelpView*mediumFontColumns:      64
+HelpView*smallFontColumns:       75
+!**************************************************************************
+!****************   END DBCS (ja_JP ko_KR zh_CN zh_TW)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   END DO NOT TRANSLATE                   ****************
+!**************************************************************************
+
+
+!*******************************************************************************
+!*******                                                             ***********
+!*******                 Help Viewer Resources                       ***********
+!*******                                                             ***********
+!*******************************************************************************
+
+! title above list of topics
+HelpView*topicTitle:   항목
+
+HelpView*okLabelString: 확인\
+
+HelpView*cancelLabelString: 취소
+
+!************************************************
+!*              Action bar buttons
+!*
+!* MAX:  When in largest font, button length 
+!*       must be less than 13 characters
+!************************************************
+HelpView*searchFwd.labelString:    앞으로 검색
+
+HelpView*searchBack.labelString:   뒤로 검색
+
+HelpView*searchNew.labelString:    새 검색
+
+HelpView*goFwdButton.labelString:  다음 항목
+
+HelpView*goBackButton.labelString: 이전 항목
+
+HelpView*exitHelp.labelString:     종료
+
+HelpView*optionMenu.labelString:   글꼴
+
+HelpView*helpTextPrint.labelString:  인쇄
+
+HelpView*printDialogCancelButton.labelString: 취소
+
+HelpView*printDialogBoxLabel.labelString: 인쇄 옵션 선택
+
+HelpView*printDialogPrintCommandLabel.labelString: 인쇄 명령:
+
+HelpView*printDialogSelectPrinter.labelString: 프린터 선택:
+
+HelpView*PrinterSelectServerDelineator: @
+
+HelpView*PrintOptionTopicSelectionLabel.labelString:  인쇄할 내용:
+
+HelpView*PrintOptionTopicSelectionTopic.labelString:  이 항목만
+
+HelpView*PrintOptionTopicSelectionAll.labelString:  모든 항목
+
+HelpView*PrinterSelectLocalDesignator: (로컬)
+
+HelpView*printDialogPrinterSelectControls_popup.title:   프린터 선택자
+
+HelpView*printDialogPrintInProgress.labelString: 인쇄 중...
+
+HelpView*printDialogPrinterTypeLabel.labelString:  프린터 유형:
+
+HelpView*printDialogPrinterTypeMenu*postscript.labelString:  PostScript
+
+HelpView*printDialogPrinterTypeMenu*ascii.labelString:  ASCII
+
+HelpView*printDialogPrinterTypeMenu*pcl.labelString:  PCL
+
+IBM9999*PrintCommand.labelString: 인쇄 명령:
+
+!*******************
+!* Dialog boxes
+!*******************
+! title of dialog boxes
+HelpView*searchDialog*dialogTitle: 검색 대화 상자
+
+HelpView*Cancel*labelString: 취소
+
+HelpView.searchForward: 앞으로 검색...
+
+HelpView.searchReverse: 뒤로 검색...
+
+HelpView*searchDialog*okLabelString: 확인\
+
+HelpView*searchDialog*cancelLabelString: 취소
+
+
+!**********************************************
+!* Messages at bottom of the screen
+!**********************************************
+
+HelpView.located:       찾았습니다...
+
+HelpView.notLocated:    찾을 수 없습니다...
+
+HelpView.noSearchValue: 현재 검색 값이 정의되지 않았습니다.
+
+HelpView.fileError:     파일을 열 수 없습니다.
+
+!**************************************************
+!*
+!*        Printing translations 
+!*
+!*      Added by AJMEYER for V310.nc
+!*
+!**************************************************
+
+HelpView*printSelectDialogOKButton.labelString:  확인\
+
+HelpView*printSelectDialogCancelButton.labelString:  취소

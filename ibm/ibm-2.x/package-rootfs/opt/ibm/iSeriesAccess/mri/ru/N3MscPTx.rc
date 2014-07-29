@@ -1,0 +1,561 @@
+!
+!
+!
+! This file contains the resource text strings for the IBM Network Station 3270, 5250, and
+! VTxxx emulators, in particular the miscellaneous preferences program.
+
+! This resource file will be stored on all servers in locale specific ASCII (819 for Latin1
+! languages). 
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. This resource file contains text strings for the 3270 and 5250 emulators.  Much of
+!    the resource text is common to all emulators. Some is specific to one emulator.
+!    Miscpref = Resources used by both 3270 and 5250 emulators.
+!    Miscpr32 = Resources used by the 3270 emulator.
+!    Miscpr52 = Resources used by the 5250 emulator.
+!    MiscprVT = Resources used by the VT emulator.
+! 4. Resource format: 
+!    - A resource line starts with Miscpref*, Miscpr32*, Miscpr52*,or MiscprVT*, followed by 
+!      a resource name and a ":".  Do NOT make any changes to the text to the left
+!      of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+!******************************************************************************
+!************************ BEGIN DO NOT TRANSLATE ******************************
+!******************************************************************************
+!*   The first section of resources are are locale specific but               *
+!*   DO NOT REQUIRE TRANSLATION.                                              *
+!*                                                                            *
+!* This source file enables the resource section for Latin1 and Latin2.       *
+!*                                                                            *
+!* For ru_RU or Latin5 locales and DBCS locales                               *
+!*      1. Place a '!' as the first character in each line in the Latin1      *
+!*      and Latin2 section                                                    *
+!*      2. Remove the '!' character for each resource line in the apropriate  *
+!*      section that matches your locale.                                     *
+!*                                                                            *
+!* For example, ru_RU should place ! in front of all lines in the LATIN1      *
+!* section remove the ! from all lines in the LATIN5 section.                 *      
+!******************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN1 and LATIN2                ****************
+!**************************************************************************
+Miscpref*extra_Large_Font_List: -*-*-medium-r-normal-*-*-*-*-*-m-110-*-*
+Miscpref*large_Font_List:       -*-*-medium-r-normal-*-*-*-*-*-m-90-*-*
+Miscpref*medium_Font_List:      -*-*-medium-r-normal-*-*-*-*-*-m-70-*-*
+Miscpref*small_Font_List:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+!**************************************************************************
+!****************   END LATIN1 and LATIN2                  ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN5                           ****************
+!**************************************************************************
+!Miscpref*extra_Large_Font_List: -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*
+!Miscpref*large_Font_List:       -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!Miscpref*medium_Font_List:      -*-*-medium-r-normal-*-*-*-*-*-c-70-*-*
+!Miscpref*small_Font_List:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!**************************************************************************
+!****************   END   LATIN5                           ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (ja_JP ko_KR zh_CN)   ****************
+!**************************************************************************
+!Miscpref*extra_Large_Font_List: -*-*-medium-r-normal-*-24-*-*-*-c-*
+!Miscpref*large_Font_List:       -*-*-medium-r-normal-*-16-*-*-*-c-*
+!Miscpref*medium_Font_List:      -*-*-medium-r-normal-*-16-*-*-*-c-*
+!Miscpref*small_Font_List:       -*-*-medium-r-normal-*-16-*-*-*-c-*
+!**************************************************************************
+!****************   END DBCS (ja_JP ko_KR zh_CN)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (zh_TW)   ****************
+!**************************************************************************
+!Miscpref*extra_Large_Font_List: -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Miscpref*large_Font_List:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Miscpref*medium_Font_List:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Miscpref*small_Font_List:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!**************************************************************************
+!****************   END DBCS (zh_TW)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   END DO NOT TRANSLATE                   ****************
+!**************************************************************************
+
+!*******************************************************************
+!*******   Miscellaneous Preferences Resources           ***********
+!*******************************************************************
+Miscpr52*title:     Различные параметры 5250
+
+Miscpr32*title:     Различные параметры 3270
+
+MiscprVT*title:     Различные параметры эмулятора VT
+
+Miscpref*iconName:  Различные параметры
+
+Miscpref*okLabelString: OK
+
+Miscpref*cancelLabelString: Отмена
+
+
+!***********************************************
+!**     Action Bar Area Resources             **
+!***********************************************
+Miscpref*saveButton.labelString: Сохранить
+
+Miscpref*exitButton.labelString: Выход
+
+Miscpref*setDefaultsButton.labelString: По умолчанию
+
+Miscpref*helpButton.labelString: Справка
+
+
+!*********************************************************
+!**     Preference Buttons Area Resources               **
+!**							**
+!*********************************************************
+Miscpref*preferencesListInstructions.labelString: Выберите параметр
+
+Miscpref*CursorStyleItem:                         Стиль курсора
+
+Miscpr52*EnterKeyLocationItem:                    Клавиша Enter/Field Exit
+
+Miscpr32*EnterKeyLocationItem:                    Клавиша Enter
+	
+Miscpr52*AutomaticHelpItem:                       Автоматическая справка
+
+Miscpr52*BlueUnderscoreItem:                      Подчеркивание синим
+
+Miscpref*RowColumnIndicatorItem:                  Индикатор строки/столбца
+
+Miscpref*DestructiveBackspaceItem:                Backspace с удалением
+
+Miscpref*RuleLineEnableItem:                      Активатор линейки
+
+Miscpref*RuleLineStyleItem:                       Стиль линейки
+
+Miscpref*PasteStartLocationItem:                  Начальная позиция вставки
+
+Miscpref*CursorBlinkItem:                         Мигание курсора
+
+Miscpr52*LargeScreenBehaviorItem:                 Обработка большого меню
+
+Miscpref*PrintKeyLocationItem:                    Клавиша Print
+
+Miscpr32*BracketItem:                             Квадратные скобки
+
+Miscpr32*AutomaticReconnectItem:                  Автоматическое повторное подключение
+
+Miscpref*HotspotsItem:                            Активные области
+
+Miscpref*TypeAheadItem:                           Буферизация ввода
+
+Miscpr52*ErrorResetKeys:                          Клавиши сброса ошибки
+
+Miscpref*HotspotHighlight:                        Выделение активной области
+
+Miscpref*DefaultCopyType:                         Тип копирования по умолчанию
+
+Miscpref*TextType:                                Тип текста
+
+Miscpref*TextOrientation:                         Ориентация текста
+
+Miscpref*NumeralShape:                            Форма чисел
+
+Miscpref*InsertMode:                              Режим вставки
+
+Miscpref*InputOnlyCursorMovement:                 Курсор только в полях ввода
+
+Miscpref*AudioAlarm:                              Звуковой сигнал
+
+MiscprVT*CursorBlinkItem:           Мигание курсора
+
+MiscprVT*ApplicationCursor:         Режим курсора приложения
+
+MiscprVT*ApplicationKeypad:         Режим доп. клавиатуры приложения
+
+MiscprVT*AutoLineFeed:              Автомат. перевод строки
+
+MiscprVT*AutoResize:                Автомат. переформатирование
+
+MiscprVT*AutoWrapAround:            Автомат. перенос строки
+
+MiscprVT*ClearScreenWithBlanks:     Применять пробелы для очистки
+
+MiscprVT*ExitOnDisconnect:          Выход при отключении
+
+MiscprVT*JumpScroll:                Ускоренная прокрутка
+
+MiscprVT*MarginBell:                Сигнал границы
+
+MiscprVT*MarginBellColumn:          Столбец сигнала границы
+
+MiscprVT*ReverseWrapAround:         Обратный перенос строки
+
+MiscprVT*VisibleStatusLine:         Видимая строка состояния
+
+MiscprVT*VisualBell:                Визуальный сигнал
+	
+!*************************************************************
+!**     Preference Text Area Resources (Explanation Box)    **
+!*************************************************************
+Miscpref*CursorStyleText.value: Курсор может иметь вид символа подчеркивания или прямоугольника. В качестве стиля курсора можно выбрать одно из следующих значений: всегда подчеркивание, всегда прямоугольник, либо одно из двух в зависимости от того, включен ли режим вставки.
+
+MiscprVT*CursorStyleText.value: В качестве стиля курсора можно выбрать одно из следующих значений: всегда подчеркивание или всегда прямоугольник.
+
+MiscprVT*CursorBlinkText.value: Вы можете включить или выключить мигание курсора. Если мигание включено, то курсор будет мигать только в текущем окне.
+
+MiscprVT*ApplicationCursorText.value: Клавиши перемещения курсора могут находиться в режиме приложения или режиме курсора. В режиме приложения нажатие клавиш со стрелками приводит к созданию escape-последовательностей ANSI, а не к перемещению курсора.
+
+MiscprVT*ApplicationKeypadText.value: Клавиши дополнительной цифровой клавиатуры могут находиться в режиме приложения или в числовом режиме. В режиме приложения нажатие клавиш на дополнительной цифровой клавиатуре приводит к созданию управляющих функций, а не к вводу цифр.
+
+Miscpr52*EnterKeyLocationText.value: Функции Enter, Newline и Field Exit можно присвоить клавишам, отличным от указанных ниже клавиш по умолчанию. Различные сочетания этих функций можно присвоить клавише Enter и правой клавише Ctrl.
+
+Miscpr32*EnterKeyLocationText.value: Функции Enter и Newline можно присвоить клавишам, отличным от указанных ниже клавиш по умолчанию. Различные сочетания этих функций можно присвоить клавише Enter и правой клавише Ctrl.
+
+Miscpr52*AutomaticHelpText.value: При возникновении ошибки оператора может имитироваться нажатие клавиши Help. Обычно автоматическое нажатие клавиши Help применяется для отображения одной строки справки первого уровня, описывающей ошибку оператора. Если автоматическое нажатие клавиши Help выключено, то вместо справки будет показан четырехзначный код ошибки оператора. При необходимости пользователь может самостоятельно нажать клавишу Help, чтобы просмотреть справку первого уровня.
+
+Miscpr52*BlueUnderscoreText.value: Цвет подчеркивания по умолчанию можно изменить на синий.
+
+Miscpref*RowColumnIndicatorText.value: Индикатор строки/столбца показывает строку и столбец, в которых расположен курсор. Этот индикатор находится в правой области строки состояния. Индикатор может быть показан или скрыт. Обратите внимание, что индикатор строки/столбца не будет показан тогда, когда не показан курсор, независимо от значения этого параметра.
+
+Miscpref*DestructiveBackspaceText.value: Для функции забоя можно указать, должна ли она удалять символ. Если будет настроена функция с удалением, то при перемещении курсора в обратном направлении в поле ввода данные будут удаляться. Если будет настроена функция без удаления, то при перемещении курсора в обратном направлении в поле ввода данные удаляться не будут.
+
+Miscpref*RuleLineEnableText.value: Линейка позволяет быстро определить текущее или старое расположение курсора. Вы можете выключить или включить линейку, либо настроить включение и выключение линейки при нажатии клавиши. Если для управления линейкой применяется клавиша, то линейка может оставаться неподвижной, а может следовать за курсором.
+
+Miscpref*RuleLineStyleText.value: Когда линейка включена, она может быть показана как горизонтальная линия, как вертикальная линия или как обе линии.
+
+Miscpref*PasteStartLocationText.value: Для вставки, выполняемой при нажатии клавиши Shift и дополнительной кнопки мыши, может применяться позиция курсора или позиция указателя мыши. Обратите внимание, что этот параметр не влияет на операцию вставки, выполняемую при выборе пункта меню. В этом случае данные всегда вставляются начиная с текущей позиции курсора.
+
+Miscpr52*CursorBlinkText.value: Вы можете включить или выключить функцию мигания курсора. Если эта функция включена, то миганием курсора управляет приложение. Если она выключена, то курсор никогда не мигает.
+
+Miscpr32*CursorBlinkText.value: Вы можете включить или выключить функцию мигания курсора. Если эта функция включена, то курсор всегда мигает. Если она выключена, то курсор никогда не мигает.
+
+Miscpr52*LargeScreenBehaviorText.value: Программу эмуляции 5250 можно настроить таким образом, чтобы она автоматически перемещала окно и/или уменьшала размер шрифта, если задан большой размер меню (в символах). Эта опция применяется в том случае, если окно нового размера не помещается на экране при его текущем расположении и/или размере шрифта.
+
+Miscpr52*PrintKeyLocationText.value: Если это не было переопределено в программе изменения раскладки клавиатуры, то по умолчанию клавише Print присвоена функция Системный запрос, а клавишам Shift+Print присвоена функция печати экрана. В некоторых случаях будет удобнее присвоить клавише Print функцию печати экрана, а клавишам Shift+Print - функцию Системный запрос.
+
+Miscpr32*PrintKeyLocationText.value: Если это не было переопределено в программе изменения раскладки клавиатуры, то клавише Print присвоена функция pa1, а клавишам Shift+Print присвоена функция печати экрана. В некоторых случаях будет удобнее присвоить клавише Print функцию печати экрана, а клавишам Shift+Print - функцию pa1.
+
+Miscpr32*BracketText.value: Если вы включите опцию Квадратные скобки, то преобразование квадратных скобок будет выполняться правильно.
+
+Miscpr32*AutomaticReconnectText.value: При закрытии сеанса окно программы эмуляции 3270 может сохраняться, либо удаляться с экрана. В случае сохранения окна программа эмуляции пытается автоматически подключиться к хосту.
+
+Miscpref*HotspotsText.value: Активными областями называются фрагменты меню, при щелчке на которых выполняется определенное действие. Например, если активные области включены, то щелчок указателем мыши на 'PF1' или 'F1' аналогичен нажатию клавиши F1. Активные области могут быть выключены, могут реагировать на однократные или двойные щелчки основной кнопкой мыши. \
+Когда активные области деактивированы или могут активироваться при однократном щелчке основной кнопкой мыши, двойной щелчок мышью обрабатывается так же, как нажатие клавиши Enter.
+
+Miscpref*TypeAheadText.value: Буферизация ввода позволяет запоминать те клавиши, которые были нажаты, когда клавиатура была блокирована (ввод запрещен). Эти нажатия клавиш обрабатываются после разблокирования клавиатуры. Если буферизация ввода включена, то она всегда применяется. Если буферизация ввода выключена, то она никогда не применяется.
+
+Miscpr52*ErrorResetKeysText.value: Ниже можно настроить клавиши, позволяющие сбрасывать ошибки в программе эмуляции 5250. Нажатие клавиши сброса и щелчок левой кнопкой мыши в строке ошибки всегда сбрасывает ошибку. В дополнение к этим клавишам вы можете выбрать клавиши перемещения курсора (клавишу табуляции, клавишу новой строки, клавиши со стрелками или клавишу забоя), а также другие последовательности нажатия кнопок мыши.
+
+Miscpref*HotspotHighlightText.value: В программе эмуляции можно настроить выделение активных областей. Если активные области включены, и включено их выделение, то все активные области меню будут выделены.
+
+Miscpref*DefaultCopyTypeText.value: Тип копирования по умолчанию определяет тип области копирования, которая создается при однократном нажатии основной кнопки мыши и последующем перемещении курсора. Кроме того, он задает тип копирования, выполняемый при выделении области копирования с помощью клавиатуры.
+
+Miscpref*TextTypeText.value:                                Тип текста для копирования и вставки
+
+Miscpref*TextOrientationText.value: Ориентация текста для копирования и вставки. Выберите ориентацию для всего текста или ориентацию абзаца из внешнего приложения, из которого или в которое осуществляется копирование или вставка.
+
+Miscpref*NumeralShapeText.value: Форма чисел для копирования и вставки. Выберите Обычная, если внешнее приложение, из которого или в которое осуществляется копирование или вставка, работает только с обычными цифрами. Выберите Национальная, если приложение работает только с восточными написаниями цифр. Выберите По контексту, если форма цифр определяется по фрагменту текста.
+
+Miscpr52*InsertModeText.value: По умолчанию режим вставки выключен. Помимо клавиши Insert, этот режим может автоматически включаться приложением или клавишей сброса. Автоматическое включение режима вставки можно запретить независимо от того, включен ли по умолчанию режим вставки.
+
+Miscpr32*InsertModeText.value: По умолчанию режим вставки выключен. Помимо клавиши Insert, этот режим может автоматически включаться при взаимодействии с приложением, например, путем нажатия клавиши Enter, или клавишей сброса. Автоматическое включение режима вставки можно запретить независимо от того, включен ли по умолчанию режим вставки.
+
+Miscpref*InputOnlyCursorMovementText.value: Клавиши со стрелками можно настроить таким образом, чтобы курсор перемещался только по полям ввода. Если эта опция выбрана, то клавиши со стрелками всегда будут перемещать курсор в позицию ввода. Если такой позиции нет, то курсор перемещается в первую позицию окна.
+
+Miscpref*AudioAlarmText.value: Вы можете включить или выключить звуковой сигнал. Если эта опция выключена, то звуковой сигнал никогда не подается.
+
+MiscprVT*AutoLineFeedText.value: Вы можете включить или выключить автоматический перевод строки. Если автоматический перевод строки включен, то при получении от приложения символа перевода строки, вертикальной табуляции или перевода страницы, эмулятор VT будет выполнять возврат каретки. Кроме того, при нажатии любой клавиши, с которой связана функция новой строки (таких как клавиша Enter), приложению будет отправляться символ возврата каретки и перевода строки. Если эта опция выключена, то при получении символа перевода строки, вертикальной табуляции или перевода страницы будет выполняться только перевод строки. При нажатии клавиши Enter приложению будет отправляться только символ перевода строки.
+
+MiscprVT*AutoResizeText.value: Вы можете включить или выключить автоматическое переформатирование.
+
+MiscprVT*AutoWrapAroundText.value: Вы можете включить или выключить автоматический перенос строки. Если эта функция включена, то после достижения курсором границы окна символы автоматически начинают вводиться на следующей строке. Если эта функция выключена, то после достижения курсором границы окна все вводимые символы заменяют последний символ строки.
+
+MiscprVT*ClearScreenWithBlanksText.value: Вы можете включить опцию очищения окна с помощью пробелов.
+
+MiscprVT*ExitOnDisconnectText.value: Терминал можно настроить на завершение работы после отключения от хоста.
+
+MiscprVT*JumpScrollText.value: Терминал можно настроить на выполнение ускоренной прокрутки. В этом случае данные можно прокручивать по несколько строк за один раз. Эта обеспечивает более быстрое обновление данных в том случае, если терминалу было отправлено несколько строк текста. Число строк, на которое прокручиваются данные, не должно превышать число строк в окне эмулятора VT.
+
+MiscprVT*MarginBellText.value: Терминал можно настроить таким образом, чтобы при достижении правой границы во время ввода данных подавался звуковой сигнал.
+
+MiscprVT*MarginBellColumnText.value: Укажите столбец для сигнала границы.
+
+MiscprVT*ReverseWrapAroundText.value: Вы можете включить или выключить обратный перенос строки. Если эта функция включена, то курсор можно переместить из первой позиции текущей строки в последнюю позицию предыдущей строки с помощью клавиши Backspace. Для применения обратного переноса строки должен быть включен автоматический перенос строки.
+
+MiscprVT*VisibleStatusLineText.value: Строка состояния может быть показана или скрыта. Если строка состояния должна быть видна, то в нижней области окна эмулятора VT будет показана 25-ая строка. В этой строке приложения могут показывать информацию о состоянии. Когда строка не занята приложением, в ней показан индикатор строки/столбца.
+
+MiscprVT*VisualBellText.value: Вместо звукового сигнала может применяться визуальный сигнал (мигание).
+
+!*************************************************************
+!**     Preference Text Area Resources (Options area)       **
+!**							    **
+!*************************************************************
+
+Miscpref*PreferenceTextFormForCursorStyle*ToggleButton1.labelString: Курсор в виде символа подчеркивания
+
+Miscpref*PreferenceTextFormForCursorStyle*ToggleButton2.labelString: Курсор в виде прямоугольника
+
+Miscpref*PreferenceTextFormForCursorStyle*ToggleButton3.labelString: Прямоугольник при вставке, подчеркивание при замене
+
+Miscpref*PreferenceTextFormForCursorStyle*ToggleButton4.labelString: Подчеркивание при вставке, прямоугольник при замене
+
+Miscpref*PreferenceTextFormForEnterKeyLocation*ToggleButton1.labelString: Применять функции по умолчанию для Enter и правого Ctrl
+
+Miscpref*PreferenceTextFormForEnterKeyLocation*ToggleButton2.labelString: Клавиша Enter = ввод, правый Ctrl = новая строка
+
+Miscpref*PreferenceTextFormForEnterKeyLocation*ToggleButton3.labelString: Клавиша Enter = новая строка, правый Ctrl = ввод
+
+Miscpr52*PreferenceTextFormForEnterKeyLocation*ToggleButton4.labelString: Клавиша Enter = ввод, правый Ctrl = выход из поля/новая строка
+
+Miscpr52*PreferenceTextFormForEnterKeyLocation*ToggleButton5.labelString: Клавиша Enter = выход из поля/новая строка, правый Ctrl = ввод
+
+Miscpr52*PreferenceTextFormForAutomaticHelp*ToggleButton1.labelString: Включить автоматическое нажатие Help при ошибках оператора
+
+Miscpr52*PreferenceTextFormForAutomaticHelp*ToggleButton2.labelString: Выключить автоматическое нажатие Help при ошибках оператора
+
+Miscpr52*PreferenceTextFormForBlueUnderscore*ToggleButton1.labelString: Включить подчеркивание синим
+
+Miscpr52*PreferenceTextFormForBlueUnderscore*ToggleButton2.labelString: Выключить подчеркивание синим
+
+Miscpref*PreferenceTextFormForRowColumnIndicator*ToggleButton1.labelString: Показывать индикатор строки/столбца
+
+Miscpref*PreferenceTextFormForRowColumnIndicator*ToggleButton2.labelString: Не показывать индикатор строки/столбца
+
+Miscpref*PreferenceTextFormForDestructiveBackspace*ToggleButton1.labelString: Включить Backspace с удалением
+
+Miscpref*PreferenceTextFormForDestructiveBackspace*ToggleButton2.labelString: Выключить Backspace с удалением
+
+Miscpref*PreferenceTextFormForRuleLineEnable*ToggleButton1.labelString: Выключить линейку
+
+Miscpref*PreferenceTextFormForRuleLineEnable*ToggleButton2.labelString: Всегда показывать линейку для текущей позиции курсора
+
+Miscpref*PreferenceTextFormForRuleLineEnable*ToggleButton3.labelString: Включить клавишу линейки (не следовать за курсором)
+
+Miscpref*PreferenceTextFormForRuleLineEnable*ToggleButton4.labelString: Включить клавишу линейки (следовать за курсором)
+
+Miscpref*PreferenceTextFormForRuleLineStyle*ToggleButton1.labelString: Горизонтальная и вертикальная линейка
+
+Miscpref*PreferenceTextFormForRuleLineStyle*ToggleButton2.labelString: Только горизонтальная линейка
+
+Miscpref*PreferenceTextFormForRuleLineStyle*ToggleButton3.labelString: Только вертикальная линейка
+
+Miscpref*PreferenceTextFormForPasteStartLocation*ToggleButton1.labelString: Вставлять в позицию курсора
+
+Miscpref*PreferenceTextFormForPasteStartLocation*ToggleButton2.labelString: Вставлять в позицию указателя
+
+Miscpref*PreferenceTextFormForCursorBlink*ToggleButton1.labelString: Выключить мигание курсора
+
+Miscpref*PreferenceTextFormForCursorBlink*ToggleButton2.labelString: Включить мигание курсора
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton1.labelString: Не перемещать окно и не уменьшать размер шрифта
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton2.labelString: Перемещать окно и (при необходимости) уменьшать размер шрифта
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton3.labelString: Уменьшать размер шрифта
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton4.labelString: Применять шрифт большого меню
+
+Miscpr52*PreferenceTextFormForLargeScreenBehavior*ToggleButton5.labelString: Уменьшать размер шрифта и (при необходимости) перемещать окно
+
+Miscpr52*PreferenceTextFormForPrintKeyLocation*ToggleButton1.labelString: Применять функции по умолчанию для клавиши Print
+
+Miscpr52*PreferenceTextFormForPrintKeyLocation*ToggleButton2.labelString: Print = печать в системе, Shift+Print = локальная печать
+
+Miscpr52*PreferenceTextFormForPrintKeyLocation*ToggleButton3.labelString: Print = локальная печать, Shift+Print = печать в системе
+
+Miscpr32*PreferenceTextFormForPrintKeyLocation*ToggleButton1.labelString: Применять функции по умолчанию для клавиши Print
+
+Miscpr32*PreferenceTextFormForPrintKeyLocation*ToggleButton2.labelString: Print = pa1, Shift+Print = локальная печать
+
+Miscpr32*PreferenceTextFormForPrintKeyLocation*ToggleButton3.labelString: Print = локальная печать, Shift+Print = pa1
+
+Miscpr32*PreferenceTextFormForBracket*ToggleButton1.labelString: Выключить преобразование скобок
+
+Miscpr32*PreferenceTextFormForBracket*ToggleButton2.labelString: Включить преобразование скобок
+
+Miscpr32*PreferenceTextFormForAutomaticReconnect*ToggleButton1.labelString: Удалять окно после закрытия сеанса
+
+Miscpr32*PreferenceTextFormForAutomaticReconnect*ToggleButton2.labelString: Оставлять окно после закрытия сеанса
+
+Miscpref*PreferenceTextFormForHotspots*ToggleButton1.labelString: Не применять активные области
+
+Miscpref*PreferenceTextFormForHotspots*ToggleButton2.labelString: Активировать области при однократном щелчке основной кнопкой
+
+Miscpref*PreferenceTextFormForHotspots*ToggleButton3.labelString: Активировать области при двойном щелчке основной кнопкой
+
+Miscpref*PreferenceTextFormForTypeAhead*ToggleButton1.labelString: Выключить буферизацию ввода
+
+Miscpref*PreferenceTextFormForTypeAhead*ToggleButton2.labelString: Включить буферизацию ввода
+
+Miscpr52*PreferenceTextFormForTypeAhead*ToggleButton3.labelString: Применять параметр хоста i5/OS
+
+Miscpr52*PreferenceTextFormForErrorResetKeys*ToggleButton1.labelString: Нажатие Reset или щелчок левой кнопкой мыши в строке ошибки
+
+Miscpr52*PreferenceTextFormForErrorResetKeys*ToggleButton2.labelString: В дополнение к этому, клавиши перемещения курсора и все кнопки мыши
+
+Miscpr52*PreferenceTextFormForErrorResetKeys*ToggleButton3.labelString: Большинство клавиш и все кнопки мыши
+
+Miscpref*PreferenceTextFormForHotspotHighlight*ToggleButton1.labelString: Выключить выделение активных областей
+
+Miscpref*PreferenceTextFormForHotspotHighlight*ToggleButton2.labelString: Включить выделение активных областей
+
+Miscpref*PreferenceTextFormForDefaultCopyType*ToggleButton1.labelString: Копирование строк
+
+Miscpref*PreferenceTextFormForDefaultCopyType*ToggleButton2.labelString: Копирование блока
+
+Miscpref*PreferenceTextFormForTextType*ToggleButton1.labelString:         Логический текст
+
+Miscpref*PreferenceTextFormForTextType*ToggleButton2.labelString:         Визуальный текст
+
+Miscpref*PreferenceTextFormForTextOrientation*ToggleButton1.labelString:  Слева направо
+
+Miscpref*PreferenceTextFormForTextOrientation*ToggleButton2.labelString:  Справа налево
+
+Miscpref*PreferenceTextFormForNumeralShape*ToggleButton1.labelString:     Обычная
+
+Miscpref*PreferenceTextFormForNumeralShape*ToggleButton2.labelString:     Национальная
+
+Miscpref*PreferenceTextFormForNumeralShape*ToggleButton3.labelString:     По контексту
+
+Miscpref*PreferenceTextFormForInsertMode*ToggleButton1.labelString: Режим вставки выключен по умолчанию, автоматический сброс включен
+
+Miscpref*PreferenceTextFormForInsertMode*ToggleButton2.labelString: Режим вставки выключен по умолчанию, автоматический сброс выключен
+
+Miscpref*PreferenceTextFormForInsertMode*ToggleButton3.labelString: Режим вставки включен по умолчанию, автоматический сброс выключен
+
+Miscpref*PreferenceTextFormForInputOnlyCursorMovement*ToggleButton1.labelString: Выключить перемещение курсора только по полям ввода
+
+Miscpref*PreferenceTextFormForInputOnlyCursorMovement*ToggleButton2.labelString: Включить перемещение курсора только по полям ввода
+
+Miscpref*PreferenceTextFormForAudioAlarm*ToggleButton1.labelString: Выключить звуковой сигнал
+
+Miscpref*PreferenceTextFormForAudioAlarm*ToggleButton2.labelString: Включить звуковой сигнал
+
+MiscprVT*PreferenceTextFormForCursorBlink*ToggleButton1.labelString: Выключить мигание курсора
+
+MiscprVT*PreferenceTextFormForCursorBlink*ToggleButton2.labelString: Включить мигание курсора
+
+MiscprVT*PreferenceTextFormForApplicationCursor*ToggleButton1.labelString: Выключить режим курсора приложения
+
+MiscprVT*PreferenceTextFormForApplicationCursor*ToggleButton2.labelString: Включить режим курсора приложения
+
+MiscprVT*PreferenceTextFormForApplicationKeypad*ToggleButton1.labelString: Выключить режим доп. клавиатуры приложения
+
+MiscprVT*PreferenceTextFormForApplicationKeypad*ToggleButton2.labelString: Включить режим доп. клавиатуры приложения
+
+MiscprVT*PreferenceTextFormForAutoLineFeed*ToggleButton1.labelString: Выключить автоматический перевод строки
+
+MiscprVT*PreferenceTextFormForAutoLineFeed*ToggleButton2.labelString: Включить автоматический перевод строки
+
+MiscprVT*PreferenceTextFormForAutoResize*ToggleButton1.labelString: Выключить автоматическое переформирование
+
+MiscprVT*PreferenceTextFormForAutoResize*ToggleButton2.labelString: Включить автоматическое переформатирование
+
+MiscprVT*PreferenceTextFormForAutoWrapAround*ToggleButton1.labelString: Выключить автоматический перенос строки
+
+MiscprVT*PreferenceTextFormForAutoWrapAround*ToggleButton2.labelString: Включить автоматический перенос строки
+
+MiscprVT*PreferenceTextFormForClearScreenWithBlanks*ToggleButton1.labelString: Выключить очистку пробелами
+
+MiscprVT*PreferenceTextFormForClearScreenWithBlanks*ToggleButton2.labelString: Включить очистку пробелами
+
+MiscprVT*PreferenceTextFormForExitOnDisconnect*ToggleButton1.labelString: Выключить выход при отключении
+
+MiscprVT*PreferenceTextFormForExitOnDisconnect*ToggleButton2.labelString: Включить выход при отключении
+
+MiscprVT*PreferenceTextFormForJumpScroll*ToggleButton1.labelString: Выключить ускоренную прокрутку
+
+MiscprVT*PreferenceTextFormForJumpScroll*ToggleButton2.labelString: Включить ускоренную прокрутку
+
+MiscprVT*PreferenceTextFormForMarginBell*ToggleButton1.labelString: Выключить сигнал границы
+
+MiscprVT*PreferenceTextFormForMarginBell*ToggleButton2.labelString: Включить сигнал границы
+
+MiscprVT*PreferenceTextFormForMarginBellColumn*textFieldLabel.labelString: Число столбцов от конца строки
+
+MiscprVT*PreferenceTextFormForReverseWrapAround*ToggleButton1.labelString: Выключить обратный перенос строки
+
+MiscprVT*PreferenceTextFormForReverseWrapAround*ToggleButton2.labelString: Включить обратный перенос строки
+
+MiscprVT*PreferenceTextFormForVisibleStatusLine*ToggleButton1.labelString: Выключить строку состояния
+
+MiscprVT*PreferenceTextFormForVisibleStatusLine*ToggleButton2.labelString: Включить строку состояния
+
+MiscprVT*PreferenceTextFormForVisualBell*ToggleButton1.labelString: Выключить визуальный сигнал
+
+MiscprVT*PreferenceTextFormForVisualBell*ToggleButton2.labelString: Включить визуальный сигнал
+
+
+
+!**************************************
+!**   Messages at bottom of window   **
+!**************************************
+
+Miscpr52*MiscprefMsgHelpRequested:     В сеансе 5250 запрошена справка.
+
+Miscpr32*MiscprefMsgHelpRequested:     В сеансе 3270 запрошена справка.
+
+MiscprVT*MiscprefMsgHelpRequested:     В сеансе эмулятора VT запрошена справка.
+
+Miscpref*MiscprefMsgPreferenceApplied: Параметры временно применены.
+
+Miscpref*MiscprefMsgPreferencesSaved:  Параметры сохранены.
+
+Miscpref*MiscprefMsgDefaultsApplied:   Параметры по умолчанию временно применены.
+
+Miscpref*MiscprefMsgDefaultsNotSet:    Параметры по умолчанию не заданы.
+
+Miscpref*MiscprefMsgNoAccess:          Каталог недоступен.
+
+
+Miscpref*MiscprefMsgNoMake:            Не удалось создать каталог.
+
+Miscpref*MiscprefMsgFileOpenError:     Ошибка сохранения:  Невозможно открыть файл.
+
+Miscpref*MiscprefMsgFileWriteError:    Ошибка сохранения:  Невозможно записать данные в файл.
+
+
+
+!********************************
+!**  Dialog Box Resources      **
+!********************************
+Miscpref*exitDialog.dialogTitle:              Выход - Предупреждение
+
+Miscpref*exitDialog.okLabelString:            Сохранить
+
+Miscpref*exitDialog.cancelLabelString:        Не сохранять
+
+! this cannot be much longer
+Miscpref*exitDialog.messageString:            В различных параметрах есть несохраненные изменения.
+
+Miscpref*setDefaultsDialog.dialogTitle:       Установить значения по умолчанию - Предупреждение
+
+Miscpref*setDefaultsDialog.okLabelString:     Да
+
+Miscpref*setDefaultsDialog.cancelLabelString: Нет
+
+! this cannot be much longer
+Miscpref*setDefaultsDialog.messageString:     Вы действительно хотите присвоить всем параметрам значения по умолчанию?
+/*******************************************************************************
+**  saveDialog resource
+*******************************************************************************/
+MiscprVT*saveDialog.dialogTitle: Опции сохранения
+
+MiscprVT*saveDialog*saveDialogTitle.labelString: Выберите опцию сохранения.
+
+MiscprVT*saveDialog*saveChangedOnly.labelString: Сохранить только измененные параметры
+
+MiscprVT*saveDialog*saveAll.labelString: Сохранить все параметры
+
+MiscprVT*saveDialog*saveButton.labelString: Сохранить
+
+MiscprVT*saveDialog*cancelButton.labelString: Отмена
+! ENGL1SH_VERS10N 1.4.2.1 DO NOT REMOVE OR CHANGE THIS LINE

@@ -1,0 +1,1533 @@
+////(This is a post-V2R1 GA updated English help text file.)
+////This file contains the main on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file will be stored in locale specific ASCII (code page 819 for Latin1 languages) 
+
+////Help text format (this section is not displayed to IBM Emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1.
+//// 3. This help file contains help text for the IBM 3270 and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator. A comment line of four "/" characters followed by
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+//// 3B. "5250" indicates subsequent data is only displayed in 5250 on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in both 3270 and 5250 on-line help, and non-IBM partner on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+//// 3D. Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters. The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Order of topics: The emulator help viewer program automatically orders topics in alphabetical order when displaying the topics. There are many topics in this main emulator help text file; alphabetical order should make it easier for users to find the topic that they are looking for.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+
+----"Aide 3270"
+++++"Utilisation de l'aide 3270"
+Cette section vous indique comment utiliser l'aide en ligne de l'émulateur 3270.
+
+Le panneau de gauche de la fenêtre d'aide 3270 contient la liste des sections d'aide. Vous pouvez faire défiler ces dernières à l'aide de la souris ou des touches de défilement de page suivante ou de page précédente. Si vous cliquez sur une section à l'aide du bouton gauche de la souris, sa description s'affiche dans le panneau de droite.
+
+Vous pouvez faire défiler la description affichée dans le panneau de droite à l'aide de la souris, des touches PageAv ou PageAr, et des touchées fléchées de défilement du curseur (en haut et en bas de la fenêtre).
+
+Les boutons de recherche vous permettent de rechercher une chaîne de texte dans les sections d'aide. Vous pouvez utiliser des espaces et entrer le texte à rechercher en majuscules et/ou en minuscules.
+
+Cliquez sur les boutons Section suiv et Section préc pour recréer l'ordre des sections que vous avez déjà visualisées.
+
+Cliquez sur le bouton Impression pour imprimer le texte de la section d'aide affichée ou l'ensemble des sections d'aide.
+
+Cliquez sur Sortie pour fermer la session d'aide.
+
+Si la résolution de votre moniteur est 1024x768 ou supérieure, le bouton Police permet de modifier la taille de police du texte d'aide affiché.
+
+++++"Paramètres supplémentaires"
+Les paramètres supplémentaires peuvent être définis dans les préférences du programme Configuration de l'émulateur IBM 3270. Les paramètres supplémentaires définissent la valeur par défaut des préférences diverses ainsi que les autres préférences 3270.
+
+Remarque : Les paramètres supplémentaires s'appliquent à toutes les sessions 3270.
+
+//// For the rest of this topic, the preference names and values (in upper case) must not be translated. The "(default)" and other lower case text should be translated.
+Chaque paramètre supplémentaire doit figurer sur une ligne séparée. Le format d'une ligne de paramètre supplémentaire est le suivant :
+
+  IBM3270*CURSOR_STYLE:BLOCK
+
+IBM3270 est le nom du programme 3270, suivi de "*", du nom de la préférence, d'un ":" et de la valeur de la préférence.
+
+La liste ci-dessous répertorie les paramètres supplémentaires ayant une correspondance dans les préférences diverses ainsi que leurs valeurs. Les préférences diverses 3270 permettent d'obtenir des informations complémentaires sur chaque préférence et chaque valeur de préférence (s'il existe un fichier Préférences diverses pour un utilisateur, les valeurs des paramètres supplémentaires ne sont pas utilisées. Si l'utilisateur a configuré les préférences diverses pour que les valeurs par défaut soient utilisées, les valeurs des paramètres supplémentaires sont utilisés).
+
+Nom de préférence: Valeurs de préférence
+-----------------  ---------------------
+
+CURSOR_STYLE : style de curseur
+   UNDERSCORE  curseur trait
+   BLOCK  curseur bloc
+   BLOCK_INSERT_UNDERSCORE_REPLACE  (par défaut) bloc pour insertion/trait pour remplacement
+   UNDERSCORE_INSERT_BLOCK_REPLACE  trait pour insertion/bloc pour replacement
+
+CURSOR_BLINK : clignotement du curseur
+   DISABLE  (par défaut) pas de clignotement
+   ENABLE  clignotement du curseur
+
+////5250
+ENTER_KEY:  Touche Entrée/touche Ctrl droite
+   USE_DEFAULT  (par défaut) utiliser la valeur par défaut
+   ENTER_ENTER_AND_RIGHT_CTRL_NEWLINE  Touche Entrée = entrée et touche Ctrl droite = nouvelle ligne
+   ENTER_NEWLINE_AND_RIGHT_CTRL_ENTER  Touche Entrée = nouvelle ligne et touche Ctrl droite = entrée
+   ENTER_ENTER_AND_RIGHT_CTRL_FIELD_EXIT  Touche Entrée = entrée et touche Ctrl droite = zone suivante
+   ENTER_FIELD_EXIT_AND_RIGHT_CTRL_ENTER  Touche Entrée = zone suivante et touche Ctrl droite = entrée
+////3270
+Remarque : La touche Entrée 3270 est définie en tant que préférence 3270 dans le programme Configuration de l'émulateur IBM 3270, précédant la zone Paramètres supplémentaires.
+////9999
+
+PRINT_KEY : Touche Impr
+   USE_DEFAULT  (par défaut) utiliser la valeur par défaut
+   SHIFTED_PRINT_IS_SCREEN_PRINT  Maj + Impr = impression d'écran
+   PRINT_IS_SCREEN_PRINT  Impr = impression d'écran
+
+DESTRUCTIVE_BACKSPACE : Retour arrière avec suppression
+   ENABLE  (par défaut) supprime un caractère
+   DISABLE  pas de suppression
+
+INSERT_MODE :  mode d'insertion
+   DEFAULT_OFF_AUTOMATIC_RESET  (par défaut) désactivé par défaut/restauration automatique
+   DEFAULT_OFF_NO_AUTOMATIC_RESET  désactivé par défaut/pas de restauration automatique
+   DEFAULT_ON_NO_AUTOMATIC_RESET  activé par défaut/pas de restauration automatique
+
+DEFAULT_COPY_TYPE : type de copie par défaut
+   LINEAR  (par défaut)  linéaire
+   BLOCK  bloc
+
+PASTE_LOCATION : emplacement de collage
+   AT_CURSOR  (par défaut)  à l'emplacement du curseur
+   AT_MOUSE_POINTER  à l'emplacement du pointeur de la souris
+
+////5250
+AUTOMATIC_HELP : touche d'aide automatique
+   ENABLE  (par défaut) activée
+   DISABLE  désactivée
+
+////9999
+ERROR_RESET_KEYS:  touches de restauration
+////5250
+   RESET_KEY_ONLY  (par défaut) touche de restauration uniquement
+   CURSOR_MOVEMENT_ALSO  touches de déplacement également
+////3270
+   RESET_KEY_ONLY  touche de restauration uniquement
+   CURSOR_MOVEMENT_ALSO  (par défaut) touches de déplacement également
+////9999
+   MOST_KEYS  la plupart des touches de restauration
+
+AUDIO_ALARM : alarme sonore
+   DISABLE  désactivée
+   ENABLE  (par défaut) activée
+
+INPUT_ONLY_CURSOR_MOVEMENT : positionnement du curseur uniquement sur des zones d'entrée
+   DISABLE  (par défaut)  désactivé
+   ENABLE  activé
+
+KEYBOARD_BUFFERING:  mémoire tampon de clavier verrouillé
+   DISABLE  désactivée
+////5250
+   ENABLE  activée
+   USE_AS400_SETTING  (par défaut) utiliser le paramètre hôte i5/OS
+////3270
+   ENABLE  (par défaut) activée
+////9999
+
+////5250
+LARGE_SCREEN_BEHAVIOR : mode grand écran
+   MOVE_WINDOW_AND_REDUCE_FONT_IF_NEEDED  déplacement de fenêtre
+   REDUCE_FONT_ONLY  réduction de police
+   USE_LAST_FONT  (par défaut) utiliser dernière police
+   REDUCE_FONT_AND_MOVE_WINDOW_IF_NEEDED réduction de police/déplacement de fenêtre
+
+////9999
+ROW_COLUMN_INDICATOR: indicateur ligne/colonne
+   ENABLE  (par défaut) affiché
+   DISABLE  non affiché
+
+RULE_LINE : règle
+   DISABLE  touche Règle non disponible
+   ENABLE_FOLLOW_CURSOR  suit le curseur
+   ENABLE_KEY_FIXED  fixé par la touche Règle
+   ENABLE_KEY_FOLLOW_CURSOR  (par défaut)  activée/suit le curseur  
+
+RULE_LINE_STYLE : style de règle
+   BOTH  (par défaut) les deux
+   HORIZONTAL  horizontale uniquement
+   VERTICAL  verticale uniquement
+
+////5250
+BLUE_UNDERSCORE : trait de soulignement bleu
+   ENABLE  activé
+   DISABLE  (par défaut) désactivé
+
+////3270
+BRACKET:  conversion de crochet
+   DISABLE  (par défaut) désactivée
+   ENABLE  activée
+
+AUTOMATIC_RECONNECT : reconnexion automatique
+   DISABLE  désactivée
+   ENABLE  (par défaut)  activée
+
+////9999
+HOTSPOTS:  points repère
+   DISABLE  désactivés
+////5250
+   SINGLE_CLICK  (par défaut) simple clic
+   DOUBLE_CLICK  double clic
+////3270
+   SINGLE_CLICK   simple clic
+   DOUBLE_CLICK  (par défaut) double clic
+////9999
+
+HOTSPOT_HIGHLIGHTING : mise en évidence des points repère
+   DISABLE  (par défaut)  pas de mise en évidence
+   ENABLE  mise en évidence
+
+
+Les autres paramètres supplémentaires 3270 sont répertoriés ci-après :
+
+Nom de préférence: Valeurs de préférence
+-----------------  ---------------------
+
+TITLE_OPTION:  options de titre de fenêtre
+   TEXT_AND_SESSION_ID  (par défaut) texte de titre et id de session
+   TEXT_ONLY  texte de titre uniquement
+   SESSION_ID_ONLY  id de session uniquement
+   TEXT_AND_HOST  texte de titre et nom de l'hôte
+   TEXT_HOST_AND_SESSION_ID  texte de titre, nom de l'hôte et id de session
+
+SESSION_ID:  id de session
+ L'id de session est généralement affiché dans le titre de fenêtre. Il peut comporter 20 caractères maximum (18 ou 19 caractères si +n est utilisé), entre guillemets doubles. +n est également pris en charge, où n est un nombre compris entre 1 et 99. Par exemple : IBM3270*SESSION_ID:"JUAN"+3 aura les id session JUAN1, JUAN2 et JUAN3.
+
+MAX_SESSIONS:  maximum de sessions
+La valeur correspond au nombre maximum de sessions 3270 pouvant être démarrées par l'utilisateur, soit un chiffre compris entre 1 et 99.
+
+DISPLAY_NAME:  nom de l'hôte affiché
+Les valeurs de la préférence sont identiques à -DISPLAY_NAME ; reportez-vous à la section Nom d'écran.
+
+RETRY_COUNT:  nombre de relances
+La valeur correspond au nombre de relances en cas d'incident de communication. La valeur par défaut est 144. 0 signifie une relance manuelle uniquement ; aucune relance automatique n'est effectuée.
+
+RETRY_INTERVAL:  intervalle de relance
+La valeur représente le délai (en secondes) entre chaque relance. La valeur par défaut est 300. Remarque : 3 relances plus rapides sont effectuées avant l'utilisation de cet intervalle.
+
+INACTIVITY_TIMEOUT:  délai d'inactivité
+La valeur est un chiffre compris entre 0 et 9999 minutes. La valeur par défaut 0 désactive le délai. Si la valeur est différente de zéro, après un certain nombre de minutes d'inactivité de l'utilisateur, une déconnexion/reconnexion telnet a lieu.
+
+ICONIFIED_ACTION:  modification de la session en icône lorsque l'écran d'émulateur est modifié
+   DISABLE  (par défaut) aucune modification de la session en icône
+   BEEP  émission de l'alarme audio
+   DEICONIFY  annulation de la mise en icône de la session
+   BLINK  clignotement du nom de l'icône
+
+BLINKING_TEXT:  attribut de texte clignotant
+   DISABLE  (par défaut) pas de clignotement du texte
+   ENABLE   le texte suivant un attribut de clignotement clignote
+
+EURO: symbole Euro
+   ENABLE  (utilise la page de codes EBCDIC 3270 Euro)
+   DISABLE  (utilise la page de codes EBCDIC 3270 non Euro)
+
+////5250
+STAND_ALONE:
+   TRUE: lancement de la session d'émulation en tant que processus autonome sans connexion à une autre session d'émulateur
+   FALSE: (par défaut) si une autre session ibm5250 est démarrée, connexion à cette session
+
+27X132_IN_800X600:  définition du format 27 lignes sur 132 colonnes avec une résolution d'écran 800X600
+   ENABLE  27 par 132 disponible avec une résolution 800X600
+   DISABLE  (par défaut) 27 par 132 non disponible avec une résolution 800X600
+////3270
+KEY_BUFFERING_DELAY:  délai de mémoire tampon de frappe
+La valeur est un chiffre compris entre 0 et 250, par intervalles de 0,1 seconde. Ce délai démarre lorsque le clavier 3270 est déverrouillé avant le traitement des touches mémorisées. La valeur par défaut est 3.
+
+PLAYBACK_DELAY : délai d'exécution
+La valeur est un nombre compris entre 1 et 250, par intervalles de 0,1 seconde. Ce délai démarre lorsque le clavier 3270 est déverrouillé pendant le traitement de l'exécution. La valeur par défaut est 20.
+
+INPUT_ONLY_COPY:  copie d'entrée uniquement
+   DISABLE  (par défaut) non disponible
+   ENABLE  copie d'entrée uniquement disponible
+
+NUMERIC_INPUT_CHECK:  zones d'entrée uniquement numérique 3270
+   DISABLE  (par défaut) non activé
+   ENABLE  seuls les caractères numériques sont admis dans une zone d'entrée uniquement numérique 3270
+
+////9999
+++++"Exécution automatique à l'ouverture de session"
+Cette section décrit comment créer un fichier de macros à exécution automatique (fichier démarrant automatiquement à l'ouverture d'une session 3270). Par exemple, un fichier de macros de connexion permet d'éviter à un utilisateur de taper son ID et son mot de passe. Pour créer un fichier de macros à exécution automatique, procédez comme suit :
+
+1) Démarrez une session 3270.
+
+2) Cliquez sur Option, Enregistrement... puis sur Démarrage.
+
+3) Placez le curseur dans la zone d'entrée ID utilisateur. 
+
+4) Cliquez sur Pause (vous devrez sans doute déplacer la fenêtre des options de pause d'enregistrement pour faire apparaître les zones d'entrée ID utilisateur et mot de passe de la session 3270).
+
+5) Sélectionnez Insérer l'ID utilisateur ici.
+
+6) Cliquez sur le titre de la fenêtre de session 3270 pour activer le curseur dans la session 3270.
+
+7) Entrez votre ID utilisateur dans la zone d'entrée ID utilisateur (votre ID utilisateur n'est pas enregistré).
+
+Remarque sur les étapes 7 et 13 : Lors de l'exécution, l'ID utilisateur et le mot de passe (étape 13) configurés dans le programme Configuration de l'émulateur IBM 3270 sont utilisés lors de l'ouverture d'une session sur le système. Si l'ID utilisateur et le mot de passe ne sont pas configurés, vous pouvez sélectionner Pause de l'exécution ici pour permettre à l'utilisateur d'entrer son ID ou son mot de passe sur ce système.
+
+8) Cliquez sur Poursuivre l'enregistrement.
+
+9) Placez le curseur dans la zone d'entrée Mot de passe : Cliquez sur la première position de la zone d'entrée Mot de passe ou appuyez sur la touche Début, puis sur la touche Tab jusqu'à ce que le curseur atteigne la zone d'entrée Mot de passe.
+
+10) Cliquez sur Pause.
+
+11) Sélectionnez Insérer le mot de passe ici.
+
+12) Cliquez sur le titre de la fenêtre de session 3270 pour activer le curseur dans la session 3270.
+
+13) Entrez votre mot de passe (il n'est pas enregistré).
+
+14) Cliquez sur Poursuivre l'enregistrement. Remarque : le mot de passe configuré dans le programme Configuration de l'émulateur IBM 3270 sera utilisé pendant l'exécution automatique à l'ouverture de session. 
+
+15) Appuyez sur Entrée. Vous devrez peut-être appuyer sur d'autres touches pour supprimer des messages système après avoir appuyé sur Entrée.
+
+16) Si vous le souhaitez, vous pouvez ajouter d'autres actions au fichier de macros. Par exemple, vous pouvez démarrer une application spécifique.
+
+17) Cliquez sur Arrêt de l'enregistrement.
+
+18) Entrez un nom pour ce fichier de macros à exécution automatique à l'ouverture de session et cliquez sur Sauvegarde.
+
+19) Démarrez à présent le programme Configuration de l'émulateur IBM 3270.
+
+20) Sélectionnez la connexion à configurer pour l'ouverture de session automatique, puis cliquez sur Connexion-> Edition.
+
+21) Cliquez sur Connexion 3270 avancée....
+
+Remarque : Si vous utilisez la barre de lancement pour l'ouverture de session automatique, le poste de l'utilisateur ne sera protégé que s'il est verrouillé ou déconnecté. S'il n'est pas verrouillé et qu'une barre de lancement permet l'ouverture de session automatique, n'importe qui peut ouvrir une session sur le système en cliquant sur l'icône de la barre de lancement. Pour y remédier, il convient de modifier l'étape 9 ci-dessus afin de sélectionner plutôt Pause de l'exécution ici. Ainsi, l'utilisateur devra entrer son mot de passe lorsqu'il démarrera une session 3270.
+
+////In the sentence below, "-playback" must not be translated.
+22) Ajoutez le paramètre  -playback  (ou -PLAYBACK), suivi d'un espace et du nom du fichier de macros (respectez les majuscules et les minuscules). Si le nom du fichier de macros comprend des espaces, entourez-le de guillemets doubles (par exemple, -playback "nom du fichier").
+
+23) Dans cet écran, vous pouvez, le cas échéant, configurer l'ID utilisateur et le mot de passe des utilisateurs 3270.
+
+24) Cliquez sur OK. Cliquez sur OK.
+
+Remarque : Si le fichier de macros à exécution automatique ne fonctionne pas correctement, vous pouvez l'enregistrer de nouveau et remplacer le fichier existant.
+
+Remarque : Si vous exécutez ce fichier de macros à exécution automatique à partir de l'option Exécution... du menu Option de la session 3270, vous devrez entrer votre mot de passe.
+
+////3270
+++++"Crochet"
+Si vous activez cette option dans les préférences diverses, les crochets droit et gauche ([ et ]) seront convertis en caractères ASCII.
+
+Cette fonction est particulièrement utile pour les programmeurs de langage C. En effet, la fonction de conversion classique EBCDIC - ASCII ne convertit pas correctement les crochets.
+////9999
+
+++++"Définition de couleurs"
+Le programme de définition de couleurs 3270 permet de modifier les couleurs utilisées dans vos sessions 3270.
+
+Pour autoriser l'utilisation du programme de définition de couleurs 3270, utilisez le programme Configuration de l'émulateur IBM 3270.
+
+Il existe quatre niveaux d'accès au programme de définition de couleurs 3270 :
+
+1) Etendue : vous pouvez utiliser les options de définition de couleurs de base et étendues.
+
+2) Base: vous pouvez utiliser uniquement l'option de couleur de base (le bouton Etendue n'est pas disponible).
+
+3) Désactivée: l'option de définition de couleurs apparaît en grisé, ce qui signifie qu'elle n'est pas disponible.
+
+4) Masquée: l'option Définition de couleurs n'apparaît pas dans le menu déroulant.
+
+////Note: Some IBM Thin Client models hardware supports up to 256 colors. Une fois cette limite atteinte, des couleurs erronées risquent de produire des images incorrectes dans le navigateur. Les cinq palettes de couleurs de base IBM correspondent aux couleurs utilisées par le navigateur de Thin Client et par Java. Les palettes de couleurs étendues peuvent utiliser 22 couleurs au maximum.
+
+Le programme de définition de couleurs 3270 possède son propre texte d'aide auquel vous pouvez vous référer pour plus de détails.
+
+Au début d'une session 3270, l'émulateur 3270 recherche un fichier de définition de couleurs pour cette session. Il procède dans l'ordre suivant et dès qu'il trouve un fichier de définition de couleurs, il l'utilise pour la session 3270 :
+
+- Il recherche un fichier de définition de couleurs propre à la session, éventuellement sélectionné à l'aide du programme de définition de couleurs.
+
+- Il recherche un fichier de définition de couleurs par défaut éventuellement sélectionné à l'aide du programme de définition de couleurs.
+
+- S'il ne trouve aucun de ces fichiers, l'émulateur 3270 utilise les couleurs par défaut (arrière-plan noir).
+
+////5250
+++++"Séparateurs de colonnes"
+Les sessions 3270 n'affichent normalement pas de séparateurs de colonnes (points entre les caractères dans certains types de zones i5/OS). Vous pouvez activer l'affichage de séparateurs de colonnes à l'aide du programme Configuration de l'émulateur IBM 3270.
+////9999
+
+++++"Récupération après erreur de transmission"
+L'émulateur 3270 active par défaut la récupération après erreur de transmission dans les cas suivants :
+
+////5250
+- Interruption d'une session 3270 après perte de communication entre l'émulateur et l'hôte i5/OS.
+////3270
+- Interruption d'une session 3270 après perte de communication entre l'émulateur et le System/390.
+////9999
+- Echec de démarrage d'une session du programme d'émulation 3270, dû à une erreur de transmission.
+
+////In the paragraph below, "-RETRY_COUNT" must not be translated.
+Vous pouvez régler ou désactiver la fonction de récupération après erreur de transmission pour l'émulateur 3270 à l'aide du programme Configuration de l'émulateur IBM 3270. Sélectionnez la session et cliquez sur Connexions-> Edition. Cliquez sur Connexion 3270 avancée... et, dans la zone Autres paramètres, entrez -RETRY_COUNT, un espace et un nombre compris entre 0 et 9999. Un chiffre supérieur ou égal à 1 indique le nombre de relances automatiques pouvant être tentées par l'émulateur. La valeur par défaut est 144. En cas d'échec de la récupération automatique après erreur, la récupération manuelle peut être tentée. Le chiffre 0 désactive la récupération automatique après erreur (et active la récupération manuelle après erreur). Le paramètre -RETRY_COUNT tient compte de la distinction entre les majuscules et les minuscules.
+
+////In the paragraph below, "-RETRY_COUNT" and "-RETRY_INTERVAL" must not be translated.
+La fonction de récupération automatique après erreur de l'émulateur 3270 effectue trois relances rapides (espacées de 20 secondes environ), suivies du nombre de relances indiqué par le paramètre -RETRY_COUNT, en utilisant un intervalle de relance. L'intervalle de relance par défaut est de 300 secondes (5 minutes). L'intervalle de relance peut être défini par le paramètre -RETRY_INTERVAL, suivi d'un espace puis d'un chiffre compris entre 1 et 9999 dans la zone Autres paramètres. Ce chiffre indique l'intervalle entre les relances, exprimé en secondes.
+
+Remarque : Une boîte de dialogue s'affiche pendant la récupération automatique après erreur. Elle permet à l'utilisateur d'annuler la session de l'émulateur 3270. Si la récupération réussit, la boîte de dialogue disparaît sans intervention de l'utilisateur.
+
+////5250
+++++"Menu Contrôle"
+Le menu Contrôle dans la barre de menus permet d'afficher plusieurs touches 3270 i5/OS. Lorsque vous sélectionnez une de ces touches, vous obtenez le même résultat que si vous aviez appuyé sur cette touche sur le clavier. Cela est très pratique lorsque vous avez du mal à repérer les touches sur le clavier.
+////9999
+
+++++"Copie"
+////CPY This comment line is used by the help viewer program to find the Copy topic. This line belongs after the Copy topic (do not translate this comment line).
+Les données d'une session 3270 peuvent être copiées dans le 'tampon du presse-papiers' puis collées dans cette session 3270, dans une autre session 3270 ou même dans une autre application.
+
+Copie via la barre de menus : Sélectionnez (marquez) d'abord les données à copier. Pour cela, placez le pointeur de la souris sur le premier caractère, puis appuyez sur le bouton gauche de la souris et, tout en le maintenant enfoncé, faites glisser la mise en évidence jusqu'au dernier caractère. Relâchez ensuite le bouton. Sélectionnez ensuite l'option Copie dans le menu Edition pour transférer une copie des données dans le presse-papiers.
+
+Pour marquer les données à copier, vous pouvez également appuyer sur le bouton droit de la souris. Ainsi, les données comprises entre le curseur et le pointeur de la souris sont marquées. Utilisez le bouton droit de la souris pour ajuster une zone marquée.
+
+Il est également possible d'effectuer une copie de bloc (zone rectangulaire). Pour cela, cliquez deux fois à l'aide du bouton droit de la souris pour marquer une zone dans le bloc à copier, entre le curseur et le pointeur de la souris. Utilisez le bouton droit de la souris pour ajuster une zone de copie de bloc marquée.
+
+Pour passer de la copie linéaire à la copie de bloc, utilisez les Préférences diverses ou les Paramètres supplémentaires.
+
+////3270
+Il est également possible de marquer un seul mot ou une ligne. Pour cela, cliquez deux fois sur le mot à l'aide du bouton gauche de la souris. Pour marquer la ligne contenant le curseur, cliquez trois fois dessus à l'aide du bouton gauche de la souris.
+
+Remarque : Suivant la valeur définie pour les points repère dans Préférences diverses, il est possible qu'un seul clic ou qu'un double-clic sur un point repère à l'aide du bouton gauche de la souris ne marque pas de zone de copie (pour plus de détails, reportez-vous à la section "Points repère"). 
+////5250
+Remarque : Vous ne pouvez pas lancer d'opération de copie sur un point repère i5/OS (pour plus de détails, reportez-vous à la section "Points repère"), une zone de sélection 3270, une barre de menus, un menu déroulant, un bouton ou une barre de défilement. Par ailleurs, certaines applications i5/OS peuvent programmer le bouton gauche de la souris de façon à ce qu'il effectue une fonction de l'application au lieu d'une copie.
+
+////9999
+Remarque : Si le menu Edition n'apparaît pas, vous pouvez l'activer à l'aide du programme Configuration de l'émulateur IBM 3270.
+
+Reportez-vous à la section Collage pour savoir comment coller des données dans la session en cours ou dans une autre session.
+
+Il est également possible d'effectuer une copie à partir du clavier. Pour sélectionner les données à copier, appuyez sur la touche Maj et, tout en la maintenant enfoncée, appuyez sur le bouton gauche de la souris (vous pouvez alors relâcher la touche Maj), déplacez le pointeur de la souris, puis relâchez le bouton de la souris. Les données marquées sont automatiquement copiées dans le presse-papiers. Pour copier un bloc à partir du clavier, marquez le bloc en appuyant sur la touche Maj, et tout en la maintenant enfoncée, appuyez/relâchez/appuyez sur le bouton gauche de la souris (en respectant le temps imparti pour le double-clic ; puis, sans relâcher le bouton gauche de la souris, relâchez la touche Maj); déplacez ensuite le pointeur de la souris jusqu'à l'emplacement voulu et relâchez le bouton de la souris. Utilisez le bouton droit de la souris pour ajuster une zone de copie marquée (copie de la zone de copie).
+
+++++"Découpage"
+Les données d'une session 3270 peuvent être coupées (supprimées) d'une zone d'entrée et copiées dans le presse-papiers (mémoire tampon). Les données coupées peuvent ensuite être collées dans la session 3270 en cours, dans une autre session 3270, ou dans une autre application.
+
+Sélectionnez (marquez) d'abord les données à copier et à supprimer. Pour cela, placez le pointeur de la souris sur le premier caractère, puis appuyez sur le bouton gauche de la souris et, tout en le maintenant enfoncé, faites glisser la mise en évidence jusqu'au dernier caractère. Relâchez ensuite le bouton. Sélectionnez l'option Découpage du menu Edition pour supprimer le texte de son emplacement d'origine et le mettre dans le presse-papiers. Vous pouvez ajuster la zone de découpage marquée à l'aide du bouton droit de la souris.
+
+Reportez-vous à la section Collage pour savoir comment coller des données dans la session en cours ou dans une autre session.
+
+Reportez-vous à la section "Copie" pour la description de la copie de données. Cette option prend en charge des fonctions supplémentaires telles que la copie de bloc (copie d'une zone rectangulaire).
+
+++++"Fichiers de définition de couleurs par défaut"
+Par défaut, l'arrière-plan des sessions 3270 est noir. Vous pouvez modifier les couleurs utilisées dans vos sessions 3270 à l'aide du programme de définition de couleurs (à partir du moment où vous êtes autorisé à l'utiliser). Même si vous n'êtes pas autorisé à utiliser le programme de définition de couleurs, vous pouvez utiliser une palette de couleurs par défaut.
+
+++++"Fichiers de définition de clavier par défaut"
+Vous pouvez utiliser un fichier de définition de clavier par défaut pour modifier le comportement des touches du clavier, même si vous n'êtes pas autorisé à utiliser le programme de redéfinition de clavier.
+
+++++"Fichiers de bloc de touches par défaut"
+Vous pouvez utiliser des fichiers de bloc de touches en incrustation ou déroulants, même si vous n'êtes pas autorisé à utiliser le programme de personnalisation du bloc de touches 3270.
+
+++++"Fichiers de macros par défaut"
+Vous pouvez utiliser des fichiers d'enregistrement et de macro par défaut, même si vous n'êtes pas autorisé à utiliser le programme d'enregistrement 3270.
+
+Remarque : Les fichiers de macros à exécution automatique sont pris en charge ; pour plus de détails, reportez-vous à la section Ouverture de session automatique.
+
+////5250
+++++"Nom d'écran (session 3270)"
+////In the paragraph below, "-DISPLAY_NAME" must not be translated.
+Vous pouvez utiliser le programme Configuration de l'émulateur IBM 3270 pour indiquer un nom d'affichage virtuel pour les sessions 3270 : sélectionnez la session et cliquez sur Connexion-> Edition. Cliquez sur Connexion 3270 avancée..., puis, dans la zone Autres paramètres, entrez le paramètre -DISPLAY_NAME suivi d'un espace et d'un paramètre (décrit ci-après). -DISPLAY_NAME et son paramètre associé tiennent compte de la distinction entre les majuscules et les minuscules.
+
+////In the sentence below, "-DISPLAY_NAME" must not be translated.
+-DISPLAY_NAME contrôle également le nombre de sessions 3270 pouvant être démarrées sur le système i5/OS cible. L'i5/OS cible doit être au moins à la version 3 édition 2, version 3 édition 7, version 4 édition 1 ou une version ultérieure.
+
+////This paragraph moved up from later in this topic and the 2 item added.
+Les conventions d'appellation i5/OS sont les suivantes :
+
+- Chaque session 3270 active doit avoir un nom de session unique (session virtuelle).
+
+- Les noms d'écran doivent être composés de 2 à 10 caractères.
+
+- Le premier caractère doit être une lettre.
+
+- Les caractères doivent être des lettres, des chiffres, un point ou un trait de soulignement.
+
+- Toutes les lettres doivent être en majuscules.
+
+Il existe 9 types de paramètres de nom d'écran. Les sept premiers types de paramètres peuvent être utilisés par l'utilisateur quel que soit le poste terminal utilisé. Les deux derniers sont associés à un poste terminal spécifique.
+
+////In the paragraph below, "XXXXXX" must not be translated.
+1) XXXXXX où XXXXXX est le nom de la session 3270 (2 à 10 caractères). L'utilisateur est limité à une seule session.
+
+////In the paragraph below, "XXXXXX+n", "XXXXXX", "n", "JUAN+4", 
+////"JUAN1", "JUAN2", "JUAN3", and "JUAN4" must not be translated.
+2) XXXXXX+n où XXXXXX est le nom de la session 3270 (1 à 9 caractères). L'utilisateur est limité à n sessions. n est un chiffre compris entre 2 et 9. Par exemple : JUAN+4 permet à l'utilisateur de démarrer quatre sessions 3270, la première étant JUAN1, la deuxième JUAN2, puis JUAN3 et JUAN4.
+
+3) "XXXXX YYYYYYYY ZZZZ" est la liste des noms d'écran possibles, séparés par un espace. Des guillemets d'ouverture et de fermeture sont requis. Les noms doivent être composés de 2 à 10 caractères. Le nombre maximum de noms dépend de la taille de la zone Autres paramètres du programme Configuration de l'émulateur IBM 3270.
+
+////In the paragraph below, "USE_USER_ID" must not be translated.
+4) USE_USER_ID permet à l'utilisateur de démarrer une seule session 3270, où le nom de la session est le même que l'ID du terminal de l'utilisateur (2 à 10 caractères) ou l'ID utilisateur 3270 configuré dans le programme Configuration de l'émulateur IBM 3270.
+
+////In the paragraph below, "USE_USER_ID+n", "n", "USE_USER_ID+4",
+////"JUAN", "JUAN1", "JUAN2", "JUAN3", and "JUAN4" must not be translated.
+5) USE_USER_ID+n permet à l'utilisateur de démarrer n sessions 3270, où le nom de la session est le même que l'ID du terminal de l'utilisateur (ou l'ID utilisateur 3270 configuré dans le programme Configuration de l'émulateur IBM 3270) auquel est annexé le chiffre n. n est un chiffre compris entre 2 et 9. Par exemple : USE_USER_ID+4 associé à l'ID utilisateur JUAN produirait les noms de session JUAN1, JUAN2, JUAN3 et JUAN4. Remarque : Si l'ID utilisateur comprend 10 caractères, le dernier caractère est remplacé par le chiffre n.
+
+////In the paragraph below, "USE_USER_ID+99" must not be translated.
+USE_USER_ID+99 est accepté (99 est obligatoire). Cette option permet à plusieurs utilisateurs de partager le même ID utilisateur. 99 sessions 3270 maximum peuvent être démarrées ; en revanche, pour des raisons de performances, un chiffre inférieur ou égal à 40 est recommandé. Les numéros de session (compris entre 1 et 99) sont choisis de façon aléatoire et ajoutés à la fin de l'ID utilisateur. Si l'ID utilisateur comprend 9 caractères, le dernier caractère est supprimé et le nombre à 1 ou 2 chiffres est ajouté. Pour un ID utilisateur de 10 caractères, deux caractères sont supprimés.
+
+////In the paragraph below, "USE_USER_ID+999" must not be translated.
+USE_USER_ID+999 est accepté (999 est obligatoire). 999 sessions 3270 maximum peuvent être démarrées. Les numéros de session (compris entre 1 et 999) sont choisis de façon aléatoire et ajoutés à la fin de l'ID utilisateur. Si l'ID utilisateur comprend 8 caractères, le dernier caractère est supprimé et le nombre à 1 ou 3 chiffres est ajouté. Pour un ID utilisateur de 10 caractères, trois caractères sont supprimés.
+
+////In the paragraph below, "USE_USER_ID", "DSP", "JUAN", 
+////"DSPJUAN" must not be translated.
+6) texte+USE_USER_ID est une autre variation de USE_USER_ID. 'texte' représente les caractères précédant l'ID utilisateur. Par exemple, DSP+USE_USER_ID associé à l'ID utilisateur JUAN produirait le nom de session DSPJUAN. Le texte peut comporter entre 1 et 8 caractères.
+
+////In the paragraph below, "USE_USER_ID+n" and "n" must not be translated.
+7) texte+USE_USER_ID+n est également pris en charge. n est un chiffre compris entre 2 et 9.
+
+////In the paragraph below, "USE_USER_ID+99" and "USE_USER_ID+999" must not be translated.
+texte+USE_USER_ID+99 et texte+USE_USER_ID+999 sont pris en charge ; pour plus de détails, reportez-vous au paragraphe 5 ci-dessus.
+
+////In the paragraph below, "USE_USER_ID" must not be translated.
+USE_USER_ID+text, USE_USER_ID+text+n, USE_USER_ID+text+99 et USE_USER_ID+text+999 sont pris en charge ; pour plus de détails, reportez-vous aux paragraphe 6 et 7 ci-avant. Le texte ne doit pas commencer par un caractère numérique.
+
+////In the paragraph below, "USE_HOST_NAME" must not be translated.
+8) USE_HOST_NAME permet à l'utilisateur de démarrer une seule session 3270, où le nom de la session est le même que le nom d'hôte TCP/IP du poste terminal. Le nom d'hôte est fourni par le serveur de noms de domaines (DNS) lors de la connexion. Les minuscules sont transformées en majuscules par l'émulateur 3270. Si le nom d'hôte excède 10 caractères, le nom de session est tronqué à partir de la droite jusqu'au premier point de la chaîne. Par exemple, un poste terminal dont le nom d'hôte est ns23.newyork.ibm.com aurait pour nom de session NS23.
+
+////In the paragraph below "USE_HOST_NAME+n" and "n" must not be translated.
+9) USE_HOST_NAME+n est également pris en charge. n est un chiffre compris entre 2 et 9.
+
+////In the paragraph below, "USE_MAC_ADDRESS", "T", "E", "X",
+////"00.00.E5.68.D5.99", and "TE568D599" must not be translated.
+////10) USE_MAC_ADDRESS allows the user to start a single 3270 session where the session name is created starting with an alpha character which indicates the type of communication card (T for token ring or E for Ethernet) followed by the lower four bytes of the MAC address. For example: USE_MAC_ADDRESS with token ring and a MAC address of 00.00.E5.68.D5.99 would result in a session name of TE568D599.
+
+////In the paragraph below, "USE_MAC_ADDRESS+n", "n", "E", 
+////"USE_MAC_ADDRESS+3", "00.00.E5.68.D5.99", "TE568D5991","TE568D5992", and "TE568D5993" must not be translated.
+////11) USE_MAC_ADDRESS+n allows the user to start n 3270 sessions where the session name is created as above but with n appended to the end. n is a number from 2 to 9. For example: USE_MAC_ADDRESS+3 with token ring and a MAC address of 00.00.E5.68.D5.99 would allow session names of TE568D5991, TE568D5992, and TE568D5993.
+////3270
+++++"Nom d'écran (Nom LU 3270)"
+////In the paragraph below, "-DISPLAY_NAME" must not be translated.
+Vous pouvez utiliser le programme Configuration de l'émulateur IBM 3270 pour indiquer un nom d'écran LU pour les sessions 3270 : sélectionnez la session et cliquez sur Connexion-> Edition. Cliquez sur Connexion 3270 avancée... et, dans la zone Autres paramètres, entrez le paramètre -DISPLAY_NAME suivi d'un espace et d'un paramètre (décrit ci-dessous). -DISPLAY_NAME et son paramètre associé tiennent compte de la distinction entre les majuscules et les minuscules.
+
+Remarque : TN3270E (TN3270 Enhancements) doit être installé sur le serveur pour que vous puissiez définir les noms LU des sessions 3270.
+
+////In the sentence below, "-DISPLAY_NAME" must not be translated.
+-DISPLAY_NAME contrôle également le nombre de sessions 3270 pouvant être démarrées sur le System/390 cible.
+
+Les conventions d'appellation System/390 sont les suivantes :
+
+- Chaque session 3270 active doit avoir un nom de session unique (session virtuelle).
+
+- Les noms d'écran doivent être composés de 2 à 8 caractères.
+
+- Le premier caractère doit être une lettre, @, # ou $.
+
+- Tous les caractères doivent être des lettres, des chiffres, @, # ou $.
+
+- Toutes les lettres doivent être en majuscules.
+
+Il existe 7 types de paramètres de nom d'écran. Les cinq premiers types de paramètres peuvent être utilisés par l'utilisateur quel que soit le poste terminal utilisé. Les deux derniers sont associés à un poste terminal spécifique.
+
+////In the paragraph below, "XXXXXX" must not be translated.
+1) XXXXXX où XXXXXX est le nom de la session 3270 (2 à 8 caractères). L'utilisateur est limité à une seule session.
+
+////In the paragraph below, "XXXXXX+n", "XXXXXX", "n", "JUAN+3", 
+////"JUAN1", "JUAN2", and "JUAN3" must not be translated.
+2) XXXXXX+n où XXXXXX est le nom de la session 3270 (1 à 7 caractères). L'utilisateur est limité à n sessions. n est un chiffre compris entre 2 et 9. Par exemple : JUAN+3 permet à l'utilisateur de démarrer trois sessions 3270, la première étant JUAN1, la deuxième JUAN2, puis JUAN3.
+
+3) "XXXXX YYYYYYYY ZZZZ" est la liste des noms d'écran possibles, séparés par un espace. Des guillemets d'ouverture et de fermeture sont requis. Chaque nom doit être composé de 2 à 8 caractères. Le nombre maximum de noms dépend de la taille de la zone Autres paramètres du programme Configuration de l'émulateur IBM 3270.
+
+////In the paragraph below, "USE_USER_ID" must not be translated.
+4) USE_USER_ID permet à l'utilisateur de démarrer une seule session 3270, où le nom de la session est le même que l'ID utilisateur de l'utilisateur (2 à 8 caractères) ou l'ID utilisateur 3270 configuré dans le programme Configuration de l'émulateur IBM 3270.
+
+////In the paragraph below, "USE_USER_ID+n", "n", "USE_USER_ID+3",
+////"JUAN", "JUAN1", "JUAN2", and "JUAN3" must not be translated.
+5) USE_USER_ID+n permet à l'utilisateur de démarrer n sessions 3270, où le nom de la session est le même que l'ID de l'utilisateur (limité à 7 caractères) auquel est annexé le chiffre n. n est un chiffre compris entre 2 et 9. Par exemple : USE_USER_ID+3 associé à l'ID utilisateur JUAN produirait les noms de session JUAN1, JUAN2, JUAN3.
+
+////In the paragraph below, "USE_HOST_NAME" must not be translated.
+6) USE_HOST_NAME permet à l'utilisateur de démarrer une seule session 3270, où le nom de la session est le même que le nom d'hôte TCP/IP du poste terminal. Le nom d'hôte est fourni par le serveur de noms de domaines (DNS) lors de la connexion. Les minuscules sont transformées en majuscules par l'émulateur 3270. Si le nom d'hôte excède 8 caractères, le nom de session est tronqué à partir de la droite jusqu'au premier point de la chaîne. Par exemple, un poste terminal dont le nom d'hôte est ns23.newyork.ibm.com aurait pour nom de session NS23.
+
+////In the paragraph below "USE_HOST_NAME+n" and "n" must not be translated.
+7) USE_HOST_NAME+n est également pris en charge. n est un chiffre compris entre 2 et 9.
+
+////In the paragraph below, "USE_MAC_ADDRESS", "T", "E",
+////"00.00.E5.68.D5.99", and "T568D599" must not be translated.
+////8) USE_MAC_ADDRESS allows the user to start a single 3270 session where the session name is created starting with an alpha character which indicates the type of communication card (T for token ring or E for Ethernet) followed by the lower three and one half bytes of the MAC address. For example: USE_MAC_ADDRESS with token ring and a MAC address of 00.00.E5.68.D5.99 would result in a session name of T568D599.
+
+////In the paragraph below, "USE_MAC_ADDRESS+n", "n", 
+////"USE_MAC_ADDRESS+2", "00.00.E5.68.D5.99", "T68D5991"
+////and "T68D5992" must not be translated.
+////9) USE_MAC_ADDRESS+n allows the user to start n 3270 sessions where the session name is created from the lower three bytes of the MAC address, with n appended to the end. n is a number from 2 to 9. For example: USE_MAC_ADDRESS+2 with token ring and a MAC address of 00.00.E5.68.D5.99 would allow session names of T68D5991 and T68D5992.
+////9999
+
+++++"Emplacement de la touche Entrée"
+////5250
+L'option Préférences diverses... permet à l'utilisateur de transférer la fonction de la touche Entrée sur la touche Ctrl droite.
+
+////3270
+L'option Préférences diverses... et le programme Configuration de l'émulateur IBM 3270 permettent de transférer la fonction de la touche Entrée sur la touche Ctrl droite.
+
+////9999
+Voir la section Séquences de touches pour les emplacements de touches par défaut.
+
+////Do not use the Euro character itself in the help text below. For this release, it will not display in the help text viewer because ASCII code page 819 is used.
+++++"Symbole monétaire Euro"
+Le symbole monétaire Euro est pris en charge par l'émulateur 3270 dans les langues suivantes : danois, néerlandais, flamand, allemand, allemand (Suisse), anglais, américain, finnois, français, français (Belgique), français (Canada), français (Suisse), italien, italien (Suisse), norvégien, portugais, brésilien, espagnol, espagnol (Amérique latine) et suédois.
+
+////In the paragraph below, "$LANG" and "@euro" must not be translated.
+L'émulateur utilise l'environnement local spécifié par la variable d'environnement système $LANG.  "@euro" peut être ajouté à $LANG pour activer le symbole Euro (par exemple, de_DE@euro).
+
+////In the paragraph below, "-EURO" and "-NOEURO" must not be translated.
+Remarque : Le cas échéant, les paramètres des sessions de l'émulateur 3270 peuvent se substituer au paramètre de langue. Dans le programme Configuration de l'émulateur IBM 3270, sélectionnez la session et cliquez sur Connexion-> Edition. Cliquez sur Connexion 3270 avancée... et, dans la zone Autres paramètres, entrez -EURO (activé) ou -NOEURO (désactivé). Les paramètres -EURO et -NOEURO respectent les majuscules et les minuscules.
+
+++++"Quitter 3270"
+Cette option permet de fermer la session 3270.
+
+////5250
+++++"Emplacement de la touche de zone suivante"
+L'option Préférences diverses permet à l'utilisateur de transférer les fonctions des touches Entrée et Zone suivante sur les touches Ctrl et Entrée.
+
+Reportez-vous à la section Séquences de touches pour connaître les emplacements de touches par défaut.
+////9999
+
+++++"Polices"
+Vous pouvez modifier la police de la session 3270 en sélectionnant l'option de menu Polices ou en faisant glisser les bords ou les angles de la fenêtre de la session 3270 (à l'aide de la souris).
+
+Vous pouvez utiliser le programme Configuration de l'émulateur IBM 3270 pour définir l'emplacement et la taille de départ de votre fenêtre 3270 (l'émulateur 3270 peut ajuster la taille de la fenêtre obtenue afin qu'elle corresponde à la police utilisée).
+
+////3270
+++++"Graphiques"
+Il est possible d'activer la prise en charge des graphiques GDDM dans une session 3270 à l'aide du programme Configuration de l'émulateur IBM 3270. Sur l'écran Connexion avancée de l'émulateur 3270(Connexion-> Edition, puis Connexion 3270 avancée...),vous pouvez activer ou désactiver la prise en charge des graphiques session par session. L'option Préférences 3270 permet d'activer la prise en charge des graphiques pour l'ensemble de vos sessions 3270. Si les graphiques sont pris en charge, un symbole en forme de diagramme s'affiche dans la partie droite de la ligne d'état.
+
+Remarque : La prise en charge des graphiques GDDM requiert plus de mémoire machine qu'une session 3270 non graphique (environ 0,5 Mo par session). Suivant la configuration de votre poste, vous voudrez peut-être utiliser la fonction graphique au strict minimum. 
+////9999
+
+++++"Vitesse de frappe"
+Il n'y a pas de paramètre d'émulateur pour régler la vitesse de répétition des touches lorsqu'elles sont maintenues enfoncées. Il existe peut-être un paramètre au niveau du système, en fonction du système que vous utilisez.
+
+++++"Points repère"
+////5250
+Vous pouvez utiliser la souris pour naviguer dans les menus de l'application en cliquant sur les points repère. L'option Préférences diverses permet de désactiver les points repère et de les activer par simple clic ou double clic à l'aide du bouton gauche de la souris. Les fonctions de points repère ci-après sont prises en charge.
+////3270
+Vous pouvez utiliser la souris pour naviguer dans les menus de l'application en cliquant sur les points repère. L'option Préférences diverses permet de désactiver les points repère et de les activer par simple clic ou double clic à l'aide du bouton gauche de la souris. Les fonctions de points repère ci-après sont prises en charge.
+////9999
+
+Cliquer sur une touche de fonction à l'aide du bouton gauche de la souris génère le même résultat que si vous aviez appuyé sur cette touche de fonction (par exemple, "F3=Sortie").
+
+////5250
+Cliquer sur le point repère d'un menu à l'aide du bouton gauche de la souris génère le même résultat que si vous aviez entré le ou les numéros du menu (par exemple, "1. Tâches utilisateur").
+
+Cliquer sur la mention "A suivre..." à l'aide du bouton gauche de la souris permet de faire défiler les données vers l'avant, ou vers l'arrière si vous cliquez sur la mention "Fin". Cliquer sur la mention "A suivre..." à l'aide du bouton droit de la souris ou sur "Fin" permet de faire défiler les données vers l'arrière. 
+
+Dans certains cas, la mention "A suivre -/+" s'affiche. Si vous cliquez sur "-" à l'aide du bouton gauche de la souris, les données défilent vers l'arrière. Si vous cliquez sur "+" à l'aide du bouton gauche de la souris, les données défilent vers l'avant.
+
+La touche Entrée peut être émulée par double clic à l'aide du bouton gauche de la souris. Le premier clic place le curseur, et le second active la touche Entrée.
+
+Il est possible de réinitialiser une erreur opérateur (indiquée généralement au bas d'une session 3270 à la suite d'une erreur de frappe) en cliquant sur la ligne d'erreur à l'aide du bouton gauche de la souris.
+////3270
+Cliquer sur "PA1", "PA2" ou "PA3" à l'aide du bouton gauche de la souris génère le même résultat que si vous aviez appuyé sur ces touches. 
+////9999
+
+Par défaut, le bouton gauche de la souris permet de positionner le curseur de texte.
+
+Vous trouverez dans le reste de cette section des détails sur les fonctions des points repère 3270.
+
+////5250
+Les actions de la souris sont généralement ignorées lorsque le clavier est verrouillé ou lorsqu'une erreur opérateur est signalée. Toutefois, si vous cliquez sur la ligne d'erreur à l'aide du bouton gauche de la souris, l'erreur opérateur est réinitialisée.
+
+Les applications i5/OS peuvent programmer la souris de sorte qu'elle renvoie les actions à l'application i5/OS ; cela a priorité sur les fonctions des points repère.
+
+Informations sur l'émulation des touches de fonctions : Vous pouvez cliquer sur n'importe quelle touche de fonction reconnue à l'aide du bouton gauche de la souris ; par exemple, "F23=Définir menu initial". Les formats de touche de fonction reconnus sont les suivants :
+
+- "Fx=" où x peut être compris entre "1" et "9".
+- "Fyz=" où y peut être "0", "1" ou "2".  Si y est égal à "0", z peut être un chiffre compris entre "1" et "9". Si y est égal à "1", z peut être un chiffre compris entre "0" et "9". Si y est égal à "2", z peut être un chiffre compris entre "0" et "4".
+- "PFx=" équivaut à "Fx=".
+- "PFyz=" équivaut à "Fyz=".
+
+Le texte associé aux touches de fonction n'est pas reconnu dans les zones d'entrée.
+
+Informations sur les points repère de menus : Vous pouvez cliquer sur n'importe quel élément de menu reconnu à l'aide du bouton gauche de la souris ; par exemple, "1. Tâches utilisateur". Les caractéristiques des éléments de menu sont les suivantes :
+
+- Le format de l'élément de menu est "xxn.yzzzzzzzz", où chaque x est un espace, une valeur nulle ou un attribut d'affichage. n peut être un nombre de un à cinq chiffres compris entre "0" et "9". y peut être un espace ou une valeur nulle. zz peut être n'importe quel caractère autre qu'un format xx reconnu.
+- Un caractère "x" est admis si ce dernier se trouve en colonne 1.
+- Un élément de menu peut être reconnu jusqu'à la fin d'une ligne.
+
+Le texte associé aux éléments de menus n'est pas reconnu dans les zones d'entrée.
+
+Si un point repère de menu correct est reconnu, le nombre de un à cinq chiffres est saisi automatiquement dans une zone d'entrée correcte. Si le curseur se trouve sur une zone d'entrée correcte, le numéro est saisi et le reste de la zone d'entrée est effacé. Le numéro est entré automatiquement. Si le curseur ne se trouve pas sur une zone d'entrée correcte, celle-ci est recherchée.
+////3270
+Informations sur l'émulation des touches de fonction : vous pouvez cliquer sur n'importe quelle touche de fonction reconnue à l'aide du bouton gauche de la souris ; par exemple, "F23=Définir menu initial". Les formats de touche de fonction reconnus sont les suivants :
+
+- "Fx=" où x peut être compris entre "1" et "9".
+- "Fyz=" où y peut être "0", "1" ou "2".  Si y est égal à "0", z peut être un chiffre compris entre "1" et "9". Si y est égal à "1", z peut être un chiffre compris entre "0" et "9". Si y est égal à "2", z peut être un chiffre compris entre "0" et "4".
+- "PFx=" équivaut à "Fx=".
+- "PFyz=" équivaut à "Fyz=".
+- "x" équivaut à "Fx=". -
+- "yz" équivaut à "Fyz=".
+
+Le texte associé aux touches de fonction n'est pas reconnu dans les zones d'entrée.
+////9999
+////5250
+++++"Affichage image/télécopie"
+L'émulateur 3270 prend en charge l'affichage et l'impression d'images et de télécopies ; les algorithmes et les formats pris en charge sont décrits ci-après. Remarque: Pour que l'émulateur 3270 affiche des images ou des télécopies, vous devez exécuter une application i5/OS prenant en charge des images ou des télécopies. 
+
+Défilement image/télécopie : Vous pouvez utiliser la souris pour faire défiler les données de l'image ou de la télécopie en agissant interactivement avec une barre de défilement d'image/télécopie locale. Pour faire défiler les données, cliquez sur l'image/télécopie à l'aide du bouton principal de la souris (le bouton gauche) et déplacez le pointeur de la souris. Vous pouvez aussi utiliser le clavier pour faire défiler les données de l'image ou de la télécopie à l'aide de la combinaison de touches Alt +  l'une des touches numériques suivantes: '2', '4', '6' ou '8'.
+
+Changement d'échelle image/télécopie : Votre application d'image/télécopie dispose éventuellement de boutons permettant de modifier les valeurs d'échelle. Pour modifier l'échelle d'une image/télécopie, cliquez dessus à l'aide du bouton secondaire de la souris (bouton droit), déplacez le pointeur et relâchez le bouton de la souris. La valeur d'échelle est augmentée. Pour rétablir la valeur d'échelle d'origine, cliquez deux fois sur le bouton secondaire de la souris (bouton droit).
+
+Le symbole en forme de diagramme qui s'affiche dans la partie droite de la ligne d'état indique que les images et les télécopies sont prises en charge.
+
+Remarque : l'affichage d'une image ou d'une télécopie requiert à l'émulateur 3270 plus de mémoire machine  qu'une session 3270 ne prenant pas en charge les images et télécopies. Si une image ou une télécopie est trop grande pour s'afficher sur votre poste machine à cause d'un manque de mémoire disponible, un message d'erreur s'affiche.
+
+Reportez-vous à la section Impression d'écran pour plus de détails sur l'impression d'une image ou d'une télécopie affichée dans la session 3270.
+
+L'émulateur 3270 prend en charge les formats d'images et de télécopies suivants :
+
+1) Format TIFF (TIFF est une marque d'Aldus Corporation) : Une seule image est prise en charge par format TIFF. Si un TIFF contient plusieurs images, l'i5/OS doit envoyer chaque image TIFF séparément. Les algorithmes de compression TIFF disponibles sont les suivants :
+
+- Pas de compression
+- Codage de longueur Huffman modifié unidimensionnel de télécopie CCITT Groupe 3
+- Compression de télécopie CCITT Groupe 3
+- Compression de télécopie CCITT Groupe 4
+- Codage de longueur PackBits
+- Couleur
+- Echelle de gris
+
+2) Format IOCA (jeu de fonctions 10 uniquement) :  Une seule image est prise en charge par format IOCA. Les cinq algorithmes de compression jeux de fonction 10 IOCA suivants sont pris en charge :
+
+- IBM MMR (algorithme de lecture modifié CCITT modifié)
+- Pas de compression
+- Codage de longueur Huffman modifié unidimensionnel de télécopie CCITT Groupe 3
+- Compression de télécopie CCITT Groupe 3
+- Compression de télécopie CCITT Groupe 4
+
+3) Format PCX : Les algorithmes de compression suivants sont pris en charge :
+- Pas de compression
+- Codage de longueur
+- Couleur
+
+4) DCT de ligne de base 8 bits de l'échelle de couleurs/de gris JPEG (la ligne de base étendue n'est pas prise en charge).
+
+5) Format de compression de télécopie Groupe 3 autonome : longueur de quatre octets de la télécopie Groupe 3, huit octets (généralement définis à zéro) et télécopie de compression Groupe 3.
+////9999
+
+++++"Séquences de touches"
+////5250
+Certaines fonctions de touches 3270 ne figurent pas sur les claviers de type PC. Les fonctions de touches et les séquences de touches par défaut sont répertoriées ci-dessous. L'écran de l'éditeur OV/400 comporte des fonctions de touches uniques, décrites dans la section Séquences de touches de l'éditeur OV/400. Le programme de redéfinition de clavier 3270 peut modifier l'emplacement des fonctions de touches 3270 sur votre clavier.
+
+////SORT  This line tells the viewer program to place the following information in alphabetical order when displaying this topic.
+Attention :  Echap
+
+Avance caractère :  Maj + Retour arrière
+
+Caractère d'espacement arrière : Retour arrière
+
+Effacement :  Maj + Page préc
+
+Sélection par le curseur : Alt + Inser
+
+Duplication :  Maj + Inser
+
+Entrée :  Entrée (ou Maj + Entrée) (l'option Préférences diverses permet de permuter cette touche avec la touche Ctrl)
+
+Effacement fin de zone :  Alt + Suppr
+
+Effacement entrée :  Alt + Fin
+
+Attributs d'affichage étendus :  Alt + l (lettre l)
+
+F13 - F24 :  Maj + F1 - F12
+
+Déplacement rapide du curseur vers la gauche :  Alt + curseur gauche
+
+Déplacement rapide du curseur vers la droite :  Alt + curseur droite
+
+Zone suivante :  + (à droite du pavé numérique si le Verr num n'est pas activé) (l'option Préférences diverses permet de
+transférer cette touche à l'emplacement de la touche Ctrl ou Entrée)
+
+Marquage de zone :  Maj + Pos1
+
+Zone négative :  - (pavé numérique si le Verr num n'est pas activé)
+
+Zone positive :  + (pavé numérique si le Verr num n'est pas activé)
+Remarque : Zone suivante et zone positive fournissent la même fonction.
+
+Aide :  Arrêt défil
+
+Touche Hex :  Alt + 7 (la touche numérique 7 située au-dessus des touches alphabétiques)
+
+Défilement d'image vers le bas : Alt + touche numérique '2'
+
+Défilement d'image vers la gauche : Alt + touche numérique '4'
+
+Défilement d'image vers la droite : Alt + touche numérique '6'
+
+Défilement d'image vers le haut : Alt + touche numérique '8'
+
+Impression d'écran :  Maj + Impr écran (l'option Préférences diverses permet l'impression d'écran sans utiliser la touche Maj)
+
+Nouvelle ligne :  Ctrl (l'option Préférences diverses peut la remplacer par la touche Entrée)
+
+P1 :  Maj + Suppr
+
+AP2 :  Maj + Fin
+
+AP3 :  Maj + Page suiv
+
+Exécution :  Alt + Page préc
+
+Enregistrement :  Alt + Pos1
+
+Restauration :  Ctrl (dans la partie inférieure gauche du clavier)
+
+Défilement vers la bas :  Page préc
+
+Défilement vers le haut :  Page suiv
+
+Règle :  Alt + Page suiv
+
+Appel système :  Alt + Impr écran (Remarque : Vous devrez ensuite appuyer sur la touche Entrée pour envoyer les données à l'i5/OS)
+
+Test : Alt + Arrêt défil
+////SORTOFF  This line tells the viewer program to stop alphabetical ordering.
+
+////3270
+Certaines fonctions de touches 3270 ne figurent pas sur les claviers IBM de type PC. Les fonctions de touches et les séquences de touches par défaut sont répertoriées ci-dessous. Le programme de redéfinition de clavier 3270 peut modifier l'emplacement des fonctions de touches 3270 sur votre clavier.
+
+////SORT  This line tells the viewer program to place the following information in alphabetical order when displaying this topic.
+Attention :  Maj + Echap
+
+Retour arrière avec suppression de mot :  Alt + Retour arrière 
+
+Retour arrière de mot en mot :  Ctrl gauche + curseur gauche ou Alt + b
+
+Effacement :  Echap ou Pause
+
+Duplication :  Alt + Fin
+
+Entrée :  Entrée (l'option Préférences diverses ou le programme IBM Network Station Manager peut permuter cette touche avec la touche Ctrl droite)
+
+Effacement de fin de zone :  Ctrl gauche + Fin ou Ctrl gauche + k
+
+Effacement entrée :  Ctrl gauche + Suppr
+
+F13 - F24 :  Maj + F1 - F12
+
+Marquage de zone :  Maj + Pos1
+
+Avance de mot à mot :  Ctrl gauche + curseur droit ou Alt + f
+
+Suppression de mot :  Alt + d
+
+Impression d'écran :  Maj + Impr écran (l'option Préférences diverses permet l'impression d'écran sans utiliser la touche Maj)
+
+Nouvelle ligne :  Ctrl droite (l'option Préférences diverses ou le programme IBM Network Station Manager peut la remplacer par la touche Entrée)
+
+Activation de la barre de menus:  Ctrl gauche + curseur haut (bascule le focus du curseur entre la barre de menus de l'émulateur et la zone de texte principale sans utilisation de la souris)
+
+AP1 :  Impr écran, Ctrl gauche + F1 ou Ctrl gauche + z
+
+AP2 :  Arrêt défil, Ctrl gauche + F2 ou Ctrl gauche + l (lettre l)
+
+AP3 :  Ctrl gauche + F3
+
+Exécution :  Alt + Page préc
+
+Enregistrement :  Alt + Pos1
+
+Restauration :  Alt + Echap ou Ctrl gauche + g
+
+Règle :  Alt + Page suiv
+
+Appel système :  Alt + Impr écran
+
+Déverrouillage :  Ctrl gauche + u
+////SORTOFF  This line tells the viewer program to stop alphabetical ordering.
+////9999
+
+++++"Macros de clavier"
+Les macros de clavier permettent de taper facilement une séquence de caractères dans vos sessions 3270. Le programme de redéfinition de clavier peut être utilisé pour créer des macros de clavier simples (de moins de 100 caractères). Il est également possible de spécifier une macro de clavier simple pour un bouton de bloc de touches.
+
+Le programme d'enregistrement/exécution de macros peut être utilisé pour créer des macros de clavier simples ou complexes. Le fichier de macros obtenu peut être exécuté à partir du menu déroulant Exécution de l'émulateur, d'une séquence de touches définie dans le programme de redéfinition de clavier ou d'un bouton de bloc de touches. Pour plus de détails, reportez-vous à la section Exécution.
+  
+++++"Redéfinition du clavier"
+Le programme de redéfinition de clavier 3270 vous permet de modifier les actions des touches dans une session 3270.
+
+L'autorisation d'utiliser ce programme peut être modifiée à l'aide du programme Configuration de l'émulateur IBM 3270. Le programme de redéfinition de clavier n'empêche pas un utilisateur de modifier accidentellement les fonctions de touches, produisant ainsi des résultats indésirables. Il existe trois niveaux d'autorisation d'utilisation du programme de redéfinition de clavier :
+
+1) Activée : vous êtes autorisé à redéfinir votre clavier pour les sessions 3270.
+
+2) Désactivée : vous n'êtes pas autorisé à utiliser le programme de redéfinition de clavier 3270. L'option de menu "Redéfinition de clavier..." n'est pas disponible.
+
+3) Masquée : vous n'êtes pas autorisé à utiliser le programme de redéfinition de clavier 3270. L'option de menu "Redéfinition de clavier..." ne s'affiche pas.
+
+Le programme de définition de couleurs 3270 possède son propre système d'aide auquel vous pouvez vous référer pour plus de détails.
+
+Remarque : Le programme de redéfinition de clavier n'est pas disponible sur les écrans de type VGA. Ceux-ci ont une définition inférieure (640x480) et sont généralement plus anciens.
+
+Au début d'une session 3270, l'émulateur 3270 recherche un fichier de définition de clavier pour cette session. Le type de clavier doit correspondre au clavier utilisé ; un fichier de définition de clavier est utilisé pour un type de clavier précis (par exemple, un clavier PC 102 touches). Le programme procède dans l'ordre suivant et dès qu'il trouve un fichier de définition de clavier, il l'utilise pour la session 3270 :
+
+//// $HOME/.iSeriesAccess/ibm3270/K should not be translated
+- Il recherche le fichier de définition de clavier, -keyfile, que vous avez créé à l'aide du programme de redéfinition de clavier (placé dans le répertoire $HOME/.iSeriesAccess/ibm_3270/K).
+
+- Il recherche le fichier de définition de clavier associé à la session, que vous avez créé à l'aide du programme de redéfinition de clavier.
+
+- Il recherche le fichier de définition de clavier par défaut que vous avez créé à l'aide du programme de redéfinition de clavier.
+
+- S'il ne trouve aucun de ces fichiers, l'émulateur 3270 utilise les actions de clavier par défaut.
+
+++++"Langue d'une session 3270"
+La langue dans laquelle s'affichent le texte d'aide de l'émulateur, la barre de menus, les menus déroulants et les boîtes de dialogue dépend de la langue des messages système.
+
+Par défaut, la langue de votre session 3270 est celle définie pour votre clavier ou pour la définition de la variable d'environnement LANG. La langue de la session 3270 est la langue des données de votre fenêtre principale 3270. Vous pouvez définir pour certaines ou l'ensemble de vos sessions 3270 une langue différente de votre langue de session 3270 par défaut.
+////3270
+
+La langue de vos sessions 3270 doit correspondre à la langue principale du système System/390 cible.
+////9999
+
+////In the paragraph below, "$LANG" and "@euro" must not be translated.
+L'émulateur utilise l'environnement local spécifié par la variable d'environnement système $LANG.  "@euro" peut être ajouté à $LANG pour activer le symbole Euro (par exemple, de_DE@euro).
+
+////In the paragraph below, "-LANGID" must not be translated.
+Vous pouvez utiliser le paramètre facultatif -LANGID pour définir pour vos sessions 3270 une langue différente de votre langue de session 3270 par défaut. Pour utiliser -LANGID dans le programme Configuration de l'émulateur IBM 3270, procédez comme suit : sélectionnez la session et cliquez sur Connexion-> Edition. Cliquez sur Connexion 3270 avancée..., puis, dans la zone Autres paramètres, entrez le paramètre -LANGID suivi d'un espace et d'un paramètre (décrit ci-après). Le paramètre -LANGID et son paramètre associé tiennent compte de la distinction entre les majuscules et les minuscules.
+
+////In the following line, "-LANGID" must not be translated.
+-LANGID est suivi de l'environnement local correspondant à la langue sélectionnée.  Par exemple, -LANGID en_US peut être utilisé pour remplacer la valeur $LANG du client et utiliser les valeurs pour English, -LANGID es_ES utilise les valeurs Spanish (Spain).
+   
+Remarque : Un utilisateur d'émulateur IBM 3270 peut utiliser plusieurs sessions 3270 dans différentes langues.
+
+////5250
+++++"Mode grand écran : 27 x 132"
+Vous pouvez désactiver la taille d'écran 27 lignes x 132 colonnes pour toutes vos sessions 3270 à l'aide du programme Configuration de l'émulateur IBM 3270 (préférences 3270).
+
+////In the paragraph below, "-wide disable" must not be translated.
+Vous pouvez utiliser le programme Configuration de l'émulateur IBM 3270 pour désactiver la taille d'écran 27 lignes x 132 colonnes pour certaines sessions 3270 : sélectionnez la session et cliquez sur Connexion-> Edition. Cliquez sur Connexion 3270 avancée..., puis entrez le paramètre suivant dans la zone Autres paramètres : -wide disable.
+
+Remarque : La plupart des écrans i5/OS utilisent l'affichage 24 lignes x 80 colonnes, que l'option 27 x 132 soit ou non activée. Lorsque l'i5/OS envoie un écran 27 x 132, il se peut que votre fenêtre 3270 change de police et qu'elle soit déplacée. Il est possible d'ajuster ce comportement à l'aide de l'option de menu Préférences diverses.
+
+Remarque : Il est possible que les écrans plus anciens (VGA) ne puissent pas afficher d'écrans 27 lignes x 132 colonnes. L'écran de votre machine doit pouvoir prendre en charge (et être configuré pour utiliser) une résolution 1024 x 768 ou supérieure pour afficher 27 lignes x 132 colonnes. L'affichage 27 lignes x 132 colonnes est disponible avec une résolution d'écran de 800x600, en mode défilement ; le paramètre supplémentaire 27X132_IN_800X600 doit être défini par ENABLE.
+
+////9999
+////++++"Left/Right Handed Mouse"
+////The mouse on a IBM Thin Client defaults to being a right handed mouse. The primary mouse button is the left mouse button. The primary mouse button on a left handed mouse is the right mouse button. 
+
+////3270
+++++"Emulateur de photostyle"
+Il est possible d'émuler un photostyle à l'aide du programme de redéfinition de clavier 3270. Pour plus de détails, reportez-vous à la section Emulation du photostyle dans l'aide relative à la redéfinition de clavier.
+////9999
+
+++++"Agrandissement"
+Il est possible d'agrandir la fenêtre 3270 afin qu'elle occupe tout l'écran. Cliquez sur le carré situé dans l'angle supérieur droit pour alterner entre la taille de fenêtre normale et la taille de fenêtre maximale.
+
+++++"Préférences diverses"
+////MIS This comment line is used by the help viewer program to find the Miscellaneous Preferences topic. This line belongs after the Miscellaneous Preferences topic (do not translate this comment line).
+Cette option vous permet de paramétrer vos sessions 3270 (par exemple, l'apparence curseur, la fonction de la touche de retour arrière et le contrôle de la règle).
+
+Remarque : Le programme Configuration de l'émulateur IBM 3270 peut désactiver les Préférences diverses.
+
+Le programme Configuration de l'émulateur IBM 3270 peut définir des préférences par défaut ; voir la rubrique "Paramètres supplémentaires" pour plus d'informations.
+
+La partie gauche de la fenêtre Préférences diverses répertorie les préférences que vous pouvez modifier. Vous ne pouvez sélectionner qu'une seule préférence à la fois. 
+
+La partie droite de la fenêtre Préférences diverses répertorie les valeurs possibles pour la préférence sélectionnée. Lorsque vous modifiez une préférence, toutes les sessions 3270 de l'émulateur sont provisoirement mises à jour avec les nouvelles valeurs. Par exemple, pour modifier le style du curseur, sélectionnez simplement un autre style de curseur. Vous ne pouvez pas modifier les préférences en les sélectionnant simplement dans la partie gauche de la fenêtre.
+
+La partie inférieure de la fenêtre Préférences diverses comporte quatre boutons :
+
+1) Cliquez sur Sauvegarde pour sauvegarder les préférences que vous avez modifiées afin de pouvoir les retrouver ultérieurement. Les préférences sont sauvegardées dans votre répertoire utilisateur. 
+
+2) Cliquez sur Sortie pour quitter la fenêtre Préférences diverses.
+
+3) Cliquez sur Valeurs par défaut pour restaurer les valeurs par défaut des préférences.
+
+4) Cliquez sur Aide pour afficher ce texte d'aide.
+
+Les valeurs définies pour les préférences diverses sont les mêmes pour toutes les sessions 3270 d'un utilisateur donné.
+
+////5250
+Si vous modifiez les touches d'entrée/zone suivante (touches Entrée et Ctrl) ou la touche d'impression (touche Impr écran), celles-ci ne pourront pas être redéfinies à l'aide du programme de redéfinition de clavier 3270.
+////3270
+Si vous modifiez la touche d'impression (Impr écran), vous ne pourrez pas la redéfinir à l'aide du programme de redéfinition de clavier 3270.
+////9999
+
+++++"Fonctions de la souris"
+////The mouse controls many functions on the Thin Client.
+
+////The mouse moves windows (by clicking and dragging the window title), changes window size (by pulling down "Fonts...", or dragging a window side or corner), and re-tiles windows.
+
+La souris permet également:
+
+- d'accéder à la barre de menus et aux menus déroulants.
+
+- de couper, copier et coller des données : pour plus de détails, reportez-vous aux sections Découpage, Copie et Collage.
+
+- d'activer les points repère 3270: par exemple, par la sélection de touches de fonction (pour plus de détails, reportez-vous à Points repère).
+
+- de positionner le curseur (action par défaut du bouton gauche de la souris).
+
+////5250
+- de sélectionner et de contrôler les éléments qui composent l'interface utilisateur améliorée 3270 ; par exemple, zones de sélection, boutons, barres de défilement.
+
+////9999
+++++"Vitesse de la souris"
+L'émulateur IBM 3270 n'a aucun contrôle sur la vitesse de déplacement du pointeur par rapport au mouvement de la souris.
+
+++++"Nouvelle session 3270"
+Cette option de menu permet de démarrer de nouvelles sessions 3270. Vous êtes invité à entrer le nom d'hôte. Le nom d'hôte en cours est fourni par défaut. Il peut s'agir du nom (de serveur de noms) du système ou de l'adresse IP (numérique) du système.
+
+////3270
+Lorsque vous démarrez une nouvelle session 3270 à partir du menu "Commande", vous avez le choix entre plusieurs options de tailles d'écran. L'émulateur 3270 prend en charge les types de terminaux suivants ainsi que les tailles d'écran correspondantes :
+
+  Mod 2 - 24 x 80
+  Mod 3 - 32 x 80 (par défaut)
+  Mod 4 - 43 x 80
+  Mod 5 - 27 x 132
+
+Remarque : 32 x 80 est la seule taille d'écran prise en charge pour les graphiques.
+
+Si une taille d'écran n'est pas répertoriée, cela signifie que votre définition d'écran (il s'agit généralement d'un écran ancien) ne permet pas de l'afficher, ou que votre machine est configurée pour utiliser une définition inférieure. Remarque : Si une taille d'écran supérieure à la capacité d'affichage de votre définition d'écran est indiquée pour une session, la taille d'écran 24 x 80 est utilisée.
+
+////9999
+++++"Autres paramètres"
+Vous pouvez définir les options d'émulateur 3270 dans la zone Autres paramètres de l'écran Connexion avancée de l'émulateur 3270 du programme Configuration de l'émulateur IBM 3270 : sélectionnez la session et cliquez sur Connexion-> Edition. Cliquez sur Connexion 3270 avancée..., puis éditions les options Autres paramètres.
+
+Le signe moins ("-") doit figurer au début de chacun de ces paramètres, et la différence majuscules/minuscules est prise en compte. Si vous indiquez plusieurs options, elles doivent être séparées par un espace. Les options disponibles pour les Autres paramètres sont les suivantes :
+
+//// For the rest of this topic, the parameters and values (in upper case) must not be translated.
+-TITLE_OPTION est suivi de TEXT_AND_SESSION_ID (par défaut -- texte de titre et id de session), TEXT_ONLY (texte de titre uniquement), SESSION_ID_ONLY (id de session uniquement), TEXT_AND_HOST  (texte de titre et nom d'hôte) ou TEXT_HOST_AND_SESSION_ID (texte de titre, nom d'hôte et id de session).
+
+-LANGID est suivi de la langue de la session 3270 en cours ; par exemple en_US pour l'américain.
+
+-EURO et -NOEURO permettent d'activer ou de désactiver le symbole Euro pour la session 3270 en cours.
+
+////In the following line, do not translate -playback).
+-PLAYBACK (ou -playback) est suivi du nom d'un fichier de macros à exécution automatique (en respectant les majuscules et les minuscules).
+
+-KEYPAD (ou -keypad) est suivi du nom d'un fichier de bloc de touches en incrustation (en respectant les majuscules et les minuscules). Le bloc de touches s'affiche au démarrage de la session 3270.
+
+-KEYFILE est suivi du nom d'un fichier de définition de clavier nommé (en respectant les majuscules et les minuscules). Utilisez le paramètre -KEYFILE pour modifier un fichier de définition de clavier nommé par défaut.
+
+-DISPLAY_NAME indique le nom de la session 3270 en cours.
+
+-ICONIC indique que la session 3270 doit être lancée sous forme d'icône.
+
+////5250
+-STAND_ALONE indique que la session 5250 doit être exécutée sous forme de processus autonome et non de processus associé à une autre session 5250.
+
+-PORT est suivi d'un numéro de port i5/OS. Par défaut, il s'agit du numéro de port 23. 
+////3270
+
+-PORT est suivi d'un numéro de port System/390. Par défaut, il s'agit du numéro de port 23. 
+
+////5250
+++++"Editeur OV/400"
+////OVE This comment line is used by the help viewer program to find the OV/400 Editor Function topic. This line belongs after the OV/400 Editor Function topic (do not translate this comment line).
+Le programme 3270 fournit une fonction d'édition OV/400 semblable aux terminaux Infowindow II 3477, 3487 et 3488. Pour plus de détails sur les séquences de touches, reportez-vous à la section Séquences de touches de l'éditeur OV/400. 
+////9999
+
+////5250
+++++"Séquences de touches de l'éditeur OV/400"
+Plusieurs fonctions de touches de l'éditeur OV/400 ne sont pas repérées sur les claviers de type PC. Ces fonctions de touches et les séquences de touches par défaut sont répertoriées ci-dessous. Le programme de redéfinition de clavier 3270 peut modifier l'emplacement des fonctions de touches 3270 sur votre clavier.
+
+////SORT  This line tells the viewer program to place the following information in alphabetical order when displaying this topic.
+Début gras :  Alt + b
+
+Début soulignement :  Alt + u
+
+Début de ligne :  Maj + curseur gauche (flèche vers la gauche)
+
+Bas de page :  Maj + curseur bas (flèche vers le bas)
+
+Retour marge :  Alt + Entrée du clavier principal (et non celle du pavé numérique à droite du clavier)
+
+Centrage de texte :  Alt + c
+
+Affichage des attributs de texte :  Alt + i
+
+Fin de l'attribut actif :  Alt + j
+
+Fin de la colonne en cours :  Alt + d
+
+Fin de ligne :  Maj + curseur droit (flèche vers la droite)
+
+Indice :  Alt + h
+
+Exposant :  Alt + y
+
+Changement de clavier (symboles):  Alt + a
+
+Code d'arrêt suivant :  Alt + n
+
+Fin de page :  Alt + p
+
+Retour ligne imposé :  - ou + (pavé numérique si le Verr num n'est pas activé)
+
+Espace insécable :  pas de combinaison de touches par défaut
+
+Tabulation obligatoire :  Alt + t
+
+Code d'arrêt :  Alt + s
+
+Début de page :  Maj + curseur haut (flèche vers le haut)
+
+Soulignement de mot :  Alt + w
+////SORTOFF  This line tells the viewer program to stop alphabetical ordering.
+////9999
+
+++++"Collage"
+Les données ayant été précédemment coupées ou copiées dans le presse-papiers peuvent être collées dans une session 3270.
+
+Sélectionnez l'option Collage dans le menu déroulant pour insérer les données copiées dans le presse-papiers vers la session 3270, à l'emplacement du pointeur de la souris.
+
+Vous pouvez également effectuer le collage à partir du clavier. Pour cela, appuyez sur la touche Maj et, tout en la maintenant enfoncée, appuyez sur le bouton droit de la souris. Les préférences diverses permettent de configurer la fonction pour que les données soient collées à l'emplacement désigné par le pointeur de la souris, et non à l'endroit où se trouve le curseur de texte.
+
+Si les données à coller proviennent d'une copie de bloc dans une session 3270, le collage est un collage de bloc.
+
+////5250
+Restriction relative au collage sur un écran d'édition OV/400 : Le collage s'interrompt si une 'instruction de texte' ou un 'caractère de changement de format' figure dans les données à coller. Une instruction de texte typique peut être une instruction de date. Un caractère de modification de présentation s'affiche sous la forme d'un 'F' majuscule en vidéo inverse. L'erreur opérateur '0072' ou 'Touche non admise' s'affiche si une opération de collage est interrompue. 
+////9999
+
+++++"Exécution"
+////PLY This comment line is used by the help viewer program to find the Playback topic. This line belongs after the Playback topic (do not translate this comment line).
+Cette option vous permet d'exécuter les séquences de touches enregistrées dans la fenêtre 3270. Pour plus de détails sur l'opération d'enregistrement, reportez-vous à la section Enregistrement.
+
+L'autorisation d'utiliser l'enregistrement/l'exécution peut être modifiée à l'aide du programme Configuration de l'émulateur IBM 3270. Il existe trois niveaux d'autorisation pour l'enregistrement/l'exécution 3270 :
+
+1) Activée : vous êtes autorisé à utiliser les options d'enregistrement et d'exécution dans vos sessions 3270.
+
+2) Exécution seule : vous êtes autorisé uniquement à exécuter les touches dans vos sessions 3270. L'option "Enregistrement..." ne s'affiche pas. 
+
+3) Masquée : vous n'êtes pas autorisé à utiliser les options d'enregistrement et d'exécution. Les options "Enregistrement..." et "Exécution..." ne s'affichent pas.
+ 
+Exécution : placez le curseur à l'emplacement voulu du menu que vous souhaitez et démarrez l'exécution. Vous pouvez démarrer un fichier de macros de cinq façons :
+1) Sélectionnez l'option d'exécution puis choisissez un fichier de macros, et cliquez sur le bouton "Démarrage".
+
+2) Appuyez sur la touche d'exécution, puis sur la touche de fonction appropriée (l'accélérateur est défini au cours de l'enregistrement). Pour savoir où se trouve la touche d'exécution, reportez-vous à la section Séquences de touches.
+
+////Note: The translation of Play() below should match the translated resource text for Keyxxx52*play() in the keyboard remapping resource file.
+3) A l'aide du programme de redéfinition de clavier, vous pouvez indiquer un fichier de macros qui sera exécuté lorsque vous appuierez sur une séquence de touches spécifique. Insérez le nom de votre fichier de macros entre parenthèses comme valeur de l'action Exécution(), dans le fichier de redéfinition de clavier.
+
+4) Il est possible d'indiquer un fichier de macros sur un bouton de bloc de touches. Pour plus de détails, reportez-vous à la section Bloc de touches en incrustation/déroulant.
+
+5) Un fichier de macros à exécution automatique s'exécute à l'ouverture de la session 3270. Pour plus de détails, reportez-vous à la section Exécution automatique à l'ouverture de session.
+
+L'exécution marque une pause en cas de saisie de données dans une zone d'entrée non affichable (sauf dans le cas d'un fichier de macros à exécution automatique à l'ouverture de la session 3270). Dans certains cas, un fichier de macros à exécution automatique marquera une pause pour une zone d'entrée non affichable. Pour plus de détails, reportez-vous à la section Exécution automatique à l'ouverture de session). Au cours de l'enregistrement, il est possible de définir une pause pour permettre la saisie d'une variable (par exemple, un numéro de référence) ou de données confidentielles (par exemple, un mot de passe). Pour reprendre l'exécution, cliquez sur le bouton Poursuite.
+
+La vitesse de l'exécution peut être contrôlée en réglant le curseur Vitesse de l'exécution.
+
+Lors de l'exécution, un indicateur d'exécution apparaît dans la ligne d'état située au bas de l'écran. Si vous cliquez sur cet indicateur d'exécution, l'exécution s'arrête.
+
+Cliquez sur Annulation dans la fenêtre d'exécution pour mettre fin à la session d'exécution.
+
+Pour supprimer un fichier de macros utilisateur, sélectionnez-le et cliquez sur le bouton Suppression. 
+
+////3270
+////In the paragraph below, "-PLAYBACK_NEW_SCREEN_DELAY" must not be translated.
+Les applications 3270 déverrouillent parfois le clavier avant que l'écran n'ait été complètement mis à jour. L'émulateur 3270 attend 2 secondes après le déverrouillage du clavier pour commencer l'exécution sur un écran mis à jour (de cette façon, les touches enregistrées ne sont pas perdues). Le délai peut être modifié. Vous pouvez ajouter le paramètre -PLAYBACK_NEW_SCREEN_DELAY au programme Configuration de l'émulateur IBM 3270 : sélectionnez la session, puis cliquez sur Connexion-> Edition. Cliquez sur Connexion 3270 avancée..., puis entrez le paramètre dans la zone Autres paramètres. Ce paramètre tient compte de la distinction entre les majuscules et les minuscules. Il est suivi d'un espace et d'un nombre compris entre 1 et 255. Ce nombre correspond au délai, indiqué par incréments de 0,1 seconde.
+
+////9999
+++++"Bloc de touches en incrustation/déroulant"
+L'émulateur 3270 permet de créer des blocs de touches en incrustation et déroulants. Un bloc de touches comporte des boutons. Chaque bouton de bloc de touches est associé à une séquence de touches ou à un fichier de macros.
+
+Remarque : Vous pouvez désactiver les blocs de touches à l'aide du programme Configuration de l'émulateur IBM 3270.
+
+Cette option est affichée si vous avez créé un ou plusieurs blocs de touches en incrustation. Cette option permet d'exécuter un ou plusieurs blocs de touches en incrustation. Lorsque vous sélectionnez un bouton de bloc de touches, l'action correspondante est exécutée dans la session 3270 qui a démarré ce bloc de touches en incrustation.
+
+Le menu "Bloc de touches" figure dans la barre de menus si vous avez créé un ou plusieurs blocs de touches déroulants.
+
+L'option "Personnalisation du bloc de touches..." permet de créer des blocs de touches ou de modifier un bloc de touches existant.
+
+Le programme de personnalisation des blocs de touches possède son propre texte d'aide. Cliquez sur "Aide" dans la fenêtre de personnalisation des blocs de touches.
+
+Les blocs de touches que vous créez sont disponibles dans toutes vos sessions 3270.
+
+Remarque : Le programme de personnalisation de bloc de touches n'est pas disponible sur les écrans de type VGA. Ceux-ci ont une définition inférieure (640x480) et sont généralement plus anciens.
+
+////3270
+++++"Port"
+////In the paragraph below, "-port" should not be translated. 
+Le paramètre de port Telnet facultatif peut être utilisé pour remplacer le port telnet 3270 cible par défaut. Vous pouvez définir ce paramètre dans le programme Configuration de l'émulateur IBM 3270.
+////9999
+
+++++"Enregistrement"
+////REC This comment line is used by the help viewer program to find the Record topic. This line belongs after the Record topic (do not translate this comment line).
+Cette option vous permet d'enregistrer des séquences de touches lors d'une session 3270 afin de  pouvoir les exécuter ultérieurement.
+
+Pour autoriser l'utilisation des options d'enregistrement/d'exécution, utilisez le programme Configuration de l'émulateur IBM 3270. Il existe trois niveaux d'autorisation pour l'enregistrement/l'exécution 3270 :
+
+1) Activée : vous êtes autorisé à utiliser les options d'enregistrement et d'exécution dans vos sessions 3270.
+
+2) Exécution seule : vous êtes autorisé uniquement à exécuter les touches dans vos sessions 3270. L'option "Enregistrement..." ne s'affiche pas.
+
+3) Masquée : vous n'êtes pas autorisé à utiliser les options d'enregistrement et d'exécution. Les options "Enregistrement..." et "Exécution..." ne s'affichent pas.
+
+Enregistrement : placez le curseur à l'emplacement voulu de l'écran système et sélectionnez l'option "Enregistrement..." (ou appuyez sur la touche d'enregistrement). Cliquez sur Démarrage pour commencer l'enregistrement. Vos touches (et les actions effectuées à l'aide  de la souris) seront enregistrées.
+  
+Cliquez sur Pause pour interrompre momentanément l'enregistrement. Il existe trois modes d'interruption :
+
+////5250
+) Sélectionnez 'Aucun(e)' pour interrompre momentanément l'enregistrement (par exemple, pour traiter un message i5/OS qui s'afficherait pendant l'enregistrement).
+////3270
+
+1) Sélectionnez 'Aucun(e)' pour interrompre momentanément l'enregistrement.
+////9999
+
+2) Sélectionnez 'Pause de l'exécution ici' pour permettre à l'utilisateur d'entrer des données confidentielles (par exemple un mot de passe) ou des données variables (par exemple un numéro de référence). Marquez la pause avant la première saisie de données confidentielles ou de variables et reprenez l'enregistrement après la dernière saisie de données confidentielles ou de variables.
+
+3) Sélectionnez 'Insérer l'ID utilisateur ici' et 'Insérer le mot de passe ici' pour la connexion automatique et l'exécution automatique d'un fichier de macros à l'ouverture d'une session 3270 (pour plus de détails, reportez-vous à la section Exécution automatique à l'ouverture de session).
+
+Cliquez sur Poursuivre l'enregistrement pour reprendre l'enregistrement.
+
+Cliquez sur Arrêt une fois l'enregistrement terminé ou si vous souhaitez supprimer une séquence d'enregistrement. Sélectionnez un fichier de macros existant à remplacer (écraser), entrez le nom du nouveau fichier de macros, ou cliquez sur Pas de sauvegarde pour supprimer une séquence d'enregistrement.
+
+Remarque : Le programme d'enregistrement n'admet pas de nom de fichier de macros de plus de 32 caractères.
+
+Un fichier de macros peut être affecté à une séquence de touches lors de la définition du clavier.
+
+Vous pouvez définir une touche de raccourci. Cela permet une exécution ultérieure à l'aide de la touche d'exécution suivie de la touche de fonction que vous sélectionnez. Cliquez sur le bouton Affectation d'un raccourci facultatif et cliquez sur la touche de fonction souhaitée ou appuyez sur la touche de fonction sur le clavier.
+
+Les fichiers d'exécution utilisateur peuvent être modifié dans la fenêtre d'exécution.
+
+Les fichiers d'exécution utilisateur peuvent être supprimés dans la fenêtre d'exécution.
+
+Remarque : Le programme de redéfinition de clavier peut être utilisé pour créer des macros de clavier simples. 
+
+++++"Redimensionnement d'une session 3270"
+La taille de la session 3270 peut être modifiée par un changement de police. Sélectionnez le menu déroulant "Polices".
+  
+La taille de la session peut aussi être modifiée en cliquant sur l'un des bords de la fenêtre 3270 à l'aide du bouton gauche de la souris, puis en déplaçant le pointeur de la souris et en relâchant le bouton. La taille de la fenêtre est alors ajustée en fonction de l'endroit où vous avez relâché le bouton de la souris.
+
+Vous pouvez utiliser le programme Configuration de l'émulateur IBM 3270 pour définir l'emplacement et la police de départ de votre fenêtre 3270.
+
+++++"Prise en charge de la règle"
+La session 3270 peut afficher une règle. Il s'agit d'un trait horizontal et/ou vertical qui s'affiche dans la fenêtre 3270.
+ 
+La prise en charge de la touche correspondante et le type de règle à afficher sont contrôlés à partir de l'option de menu "Préférences diverses" .
+
+Voir la section "Séquences de touches" pour connaître l'emplacement par défaut de la touche Règle.
+
+++++"Impression d'écran"
+////SCR This comment line is used by the help viewer program to find the Screen Print topic. This line belongs after the Screen Print topic (do not translate this comment line).
+La fonction d'impression d'écran de l'émulateur 3270 vous permet d'imprimer le contenu d'une session 3270 sur une imprimante locale connectée au poste de travail ou sur une imprimante réseau.
+
+L'autorisation d'utiliser l'impression d'écran peut être modifiée à l'aide du programme Configuration de l'émulateur IBM 3270. Toutes les imprimantes à votre disposition doivent être configurées.
+
+Pour démarrer l'impression d'écran, cliquez sur "Impression écran" dans le menu déroulant Impression ou appuyez simultanément sur Maj + Impr écran. L'option Préférences diverses permet d'activer l'impression d'écran sans utiliser la touche Maj. Vous pouvez affecter la fonction d'impression d'écran à une touche dans la redéfinition du clavier (action ImprFenêtreActive()) ; les dernières options d'impression et la dernière imprimante sont utilisées.
+
+Il est possible d'imprimer uniquement une partie des données affichées dans la session 3270. Si vous lancez la fonction d'impression d'écran alors qu'une zone est marquée à l'écran, seule la zone marquée est imprimée. Pour plus de détails sur la copie linéaire ou de bloc, reportez-vous à la section Copie.
+
+La fonction d'impression d'écran envoie le contenu de la session 3270 à l'imprimante indiquée. Avant l'impression, le contenu de la session 3270 est converti en PostScript Niveau 2 (PostScript est une marque Adobe Systems Incorporated), en fonction de la langue de votre session 3270. Vous trouverez plus de détails à ce sujet ci-après.
+
+////5250
+Impression image/télécopie : Les imprimantes PostScript peuvent généralement imprimer une image ou une télécopie que vous avez affichée dans votre session 3270. Vous avez le choix entre imprimer les données de l'image ou de la télécopie, ou les données de type caractères de la session 3270 si vous avez affiché une image ou une télécopie.
+
+////3270
+Impression GDDM : Les imprimantes PostScript peuvent généralement imprimer les graphiques GDDM affichés dans votre session 3270. Vous avez le choix entre imprimer les données du graphique, ou les données de type caractères de la session 3270 si vous avez affiché un graphique GDDM.
+
+////9999
+Remarque : Si vous cliquez sur le bouton Impression, toutes les modifications que vous avez effectuées dans la fenêtre Impression d'écran 3270 sont sauvegardées et seront utilisées la prochaine fois que vous sélectionnerez l'impression d'écran 3270.
+
+Avant l'impression, le contenu de la session 3270 est converti en fonction de la langue de votre session 3270. La langue de l'imprimante est supposée être la même que celle de votre session 3270. Remarque : Il est possible que les caractères ne s'impriment pas tous correctement dans toutes les langues.
+
+Pour les imprimantes PostScript, le contenu des sessions 3270 est converti en ISO Latin1 Encoding.
+
+La page de codes d'imprimante ASCII est répertoriée dans le tableau ci-dessous (pour savoir dans quel pays est parlée chaque langue, reportez-vous à la section Langue d'une session 3270) :
+
+Langue        Page
+session       de codes
+3270          imprimante ASCII
+
+Danois        850
+Néerlandais   850
+Flamand       850
+////Note: Sometimes called Belgian-Flemish
+Anglais       850
+Finnois       850
+Français      850
+Allemand      850
+Italien       850
+Norvégien     850
+Portugais     850
+Espagnol      850
+Suédois       850  
+
+////3270
+++++"Taille d'écran"
+Par défaut, les sessions 3270 prennent en charge une taille d'écran de 32 lignes par 80 colonnes. Il est possible de sélectionner d'autres tailles d'écran à partir du programme Configuration de l'émulateur IBM 3270 pour personnaliser le mode de démarrage de votre émulateur 3270. L'utilisation de la souris pour modifier la taille de la fenêtre 3270 ne modifiera en rien les valeurs définies pour le nombre de lignes et de colonnes de la session 3270.
+
+L'émulateur 3270 prend en charge les types de terminaux suivants ainsi que les tailles d'écran correspondantes :
+
+  Mod 2 - 24 x 80
+  Mod 3 - 32 x 80 (par défaut)
+  Mod 4 - 43 x 80
+  Mod 5 - 27 x 132
+
+Remarque : 32 x 80 est la seule taille d'écran prise en charge pour les graphiques.
+
+Remarque : Si le programme Configuration de l'émulateur IBM 3270 indique une taille d'écran supérieure à la capacité d'affichage de votre définition d'écran, la taille d'écran 24 x 80 est utilisée.
+////9999
+
+++++"Ligne d'état (OIA)"
+La ligne d'état (ou zone d'informations opérateur, OIA) se trouve au bas de chaque session 3270. Elle comprend les informations suivantes :
+
+////3270
+Un A souligné indique que l'émulateur est connecté au System/390 via une connexion TCP/IP.
+
+////9999
+La première partie de la ligne d'état indique le numéro de votre session 3270 sur le système.
+
+La deuxième partie correspond au nom du système avec lequel cette session 3270 communique.
+
+Remarque : Un indicateur de connexion s'affiche momentanément à l'ouverture de la session 3270.
+
+////5250
+La partie suivante de la ligne d'état comporte la mention "Message en attente" si l'indicateur de message en attente est activé pour cette session 3270.
+
+La partie suivante de la ligne d'état comporte plusieurs indicateurs relatifs à l'état du clavier de cette session 3270 :
+
+
+////In the sentence below, "X" does not get translated.
+- Un "X" majuscule indique que le clavier est verrouillé et attend des informations en provenance de l'i5/OS.
+////3270
+La partie suivante de la ligne d'état comporte plusieurs indicateurs relatifs à l'état du clavier de cette session 3270 :
+
+////In the sentence below, "X" does not get translated.
+- L'indicateur d'interdiction de saisie qui comporte un "X" majuscule et d'autres symboles indique que l'émulateur n'accepte pas de saisie au clavier, ainsi que d'autres états.
+
+////In the sentence below, "NUM" does not get translated.
+- Les lettres majuscules "NUM" indiquent que le curseur se trouve sur une zone d'entrée numérique.
+
+////9999
+////In the sentence below, ">>" does not get translated.
+- Deux chevrons fermants (>>) indiquent que la frappe continue est activée (par défaut).
+
+- Une flèche vers le haut indique qu'une touche Maj est enfoncée sur le clavier.
+
+////In the sentence below, "A" does not get translated.
+- Un "A" majuscule indique que le verrouillage des majuscules est activé.
+
+////In the sentence below, "V" does not get translated.
+- Un "V" inversé indique que le clavier est en mode d'insertion.
+
+////In the sentence below, "d" does not get translated.
+- Un indicateur semblable à un "d" minuscule indique que le clavier est en mode diacritique (cet indicateur n'est pas utilisé dans la plupart des langues).
+
+////3270
+- Un symbole de graphique en barres indique que la session 3270 prend en charge les graphiques.
+////5250
+- Un symbole de graphique en barres indique que la session 3270 peut afficher des images et des télécopies.
+
+- Les écrans 3270 de 27 lignes x 132 colonnes permettent d'utiliser une police plus grande, mais les 132 colonnes ne sont pas toutes affichées. Un indicateur de défilement à droite ou à gauche est affiché. Cliquez sur cet indicateur pour faire défiler les données.
+////9999
+
+La dernière partie de la ligne d'état affiche l'emplacement ligne/colonne du curseur de texte (l'option Préférences diverses permet d'activer et de désactiver l'affichage de l'indicateur ligne/colonne).
+
+////3270
+++++"Configuration de l'imprimante TN3270E"
+TN3270E (TN3270 Enhancements) permet la prise en charge de l'impression System/390 via l'émulateur 3270. La prise en charge TN3270E doit être activée sur le serveur pour permettre l'impression TN3270E. (L'impression TN3270E est parfois appelée impression 3270 LU1 ou 3270 LU3.)
+
+////PARALLEL1 and SERIAL1 must not be translated below.
+La configuration de l'imprimante TN3270E (décrite ci-après) utilise le nom de la file d'attente de l'imprimante. Les imprimantes connectées localement à un terminal portent le nom de file d'attente PARALLEL1 ou SERIAL1. L'administrateur affecte un nom de file d'attente à une imprimante distante.
+
+La prise en charge de l'impression TN3270E comprend :
+- Imprimantes génériques (non connectées à une application donnée),
+- Imprimantes assujetties à une application (lorsque l'application fonctionne, les demandes d'imprimante sont acheminées vers cette imprimante spécifique).
+
+Ces deux types d'imprimante TN3270E sont configurées à l'aide du programme Configuration de l'émulateur IBM 3270 dans votre session d'affichage 3270 : sélectionnez la session et cliquez sur Connexion-> Edition. Cliquez sur Connexion 3270 avancée..., puis entrez les informations de configuration de l'imprimante TN3270E dans la zone Autres paramètres. La zone Autres paramètres tient compte de la distinction entre les majuscules et les minuscules.
+
+Imprimantes TN3270E génériques
+------------------------------
+
+////PRINTER_GENERAL and PRINTER_NAME must not be translated below.
+Entrez les paramètres suivants dans la zone Autres paramètres : 
+
+-PRINTER_GENERAL XXXXXX, où XXXXXX est le nom de file d'attente (faire la distinction entre les majuscules et les minuscules).
+
+-PRINTER_NAME YYYYYY , où YYYYYY correspond à un ou plusieurs noms de LU d'imprimante disponibles pour cette session 3270. Le paramètre -PRINTER_NAME est facultatif ; s'il n'est pas défini, une imprimante par défaut peut être obtenue à partir d'un pool de noms de LU d'imprimante sur le système S/390. Le paramètre de nom d'imprimante YYYYYY représente un ou plusieurs noms de LU. Dans ce dernier cas, mettez chaque nom entre guillemets doubles et séparez-les par un espace. Par exemple, -PRINTER_NAME "PrinterLU1 PrinterLU2 PrinterLU3". Les noms de LU d'imprimante sont généralement obtenus auprès de l'administrateur du System/390.
+
+Imprimantes TN3270E assujetties à une application
+-------------------------------------------------
+
+////PRINTER_APP and DISPLAY_NAME must not be translated below.
+Entrez les paramètres suivants dans la zone Autres paramètres :
+
+-PRINTER_APP XXXXXX, où XXXXXX est le nom de file d'attente (faire la distinction entre les majuscules et les minuscules).
+
+-DISPLAY_NAME YYYYYY , où YYYYYY correspond à un ou plusieurs noms de LU d'imprimante disponibles pour cette session 3270. Le paramètre -DISPLAY_NAME est généralement requis pour ce type d'imprimantes TN3270E. YYYYYY représente généralement un ou plusieurs noms de LU affichés. Dans ce dernier cas, mettez chaque nom entre guillemets doubles et séparez-les par un espace. Par exemple, -DISPLAY_NAME "DisplayLU1 DisplayLU2 DisplayLU3". Pour plus de détails, reportez-vous à la section "Nom d'écran (Nom Lu 3270)". Pour obtenir un nom LU affiché, contactez l'administrateur System/390.
+
+////9999
+++++"Titre de fenêtre"
+Chaque session 3270 comporte un titre de fenêtre dans la partie supérieure de la fenêtre 3270. Le titre de fenêtre par défaut est composé de deux parties :
+
+1) La première partie est le texte du titre de la fenêtre. Il s'agit par défaut de "3270". Vous pouvez le remplacer par un texte de votre choix.
+
+2) La dernière partie est l'ID de votre session d'émulateur.
+
+Vous pouvez modifier le titre de la fenêtre (pour plus de détails, reportez-vous à la section "Paramètres supplémentaires).
+
+++++"Texte bidirectionnel (BIDI)"
+Présentation du texte bidirectionnel
+
+L'émulateur met en oeuvre les fonctions décrites dans les spécifications pour la prise en charge du texte bidirectionnel (BIDI) du terminal 5250, y compris la prise en charge de
+l'inversion d'écran et de l'orientation de zone. Ces fonctions BIDI sont disponibles lorsque l'émulateur est démarré dans un environnement local BIDI ou lorsque le paramètre de lancement LANGID indique l'une des langues BIDI. 
+Tous les paramètres d'environnement local et les noms de langue commençant par "ar" sont interprétés comme étant arabes (par exemple, "ar_EG" ou "ar_EG.UTF-8"), et tous les paramètres nationaux et les noms de langue commençant par "he" sont interprétés comme étant hébreux (par exemple, "he_IL" ou "he_IL.UTF-8").
+Un texte bidirectionnel (BIDI) mixte peut être entré dans les deux sens, de droite à gauche et de gauche à droite, en anglais et en langue nationale (arabe ou hébreu). Toutefois, lorsque le sens du curseur est défini en gauche à droite, la langue par défaut est l'anglais. En
+revanche, lorsque le sens du curseur est défini en droite à gauche, la langue par défaut est
+la langue nationale. Le sens du curseur par défaut dans une zone est défini par son orientation.
+La présentation de l'écran peut être inversée pour obtenir l'affichage de la totalité de l'image de l'écran en miroir. L'inversion de l'écran modifie la présentation des données à
+l'écran mais ne modifie pas les données proprement dites. Toutes les fonctions d'édition
+sont disponibles aussi bien sur un écran de droite à gauche (ou inversé) que sur un écran
+de gauche à droite.
+
+Les paramètres d'environnement local BIDI peuvent être définis à l'aide de la commande "chhmc". Par exemple, la commande "chhmc -c locale -s modify -l ar_EG" permet de faire passer un système en un environnement local arabe et la commande "chhmc -c locale -s modify -l he_IL", en un environnement local hébreu. 
+
+
+
+Sélection de la langue
+
+Les combinaisons de touches Ctrl+N et Ctrl+L permettent de changer de couche de langue.
+Si
+la couche de langue est le latin, le fait d'appuyer sur Ctrl+N la modifie en hébreu/arabe. 
+Inversement,  si la couche de langue est l'hébreu/arabe, le fait d'appuyer sur Ctrl+L la modifie en latin.
+
+
+
+Indicateurs de la zone d'informations système (ZIO)
+
+Dans la session hôte, la ligne au bas de l'écran s'appelle zone d'informations système (ZIO). Cette ligne est toujours définie de gauche à droite. 
+Pour l'environnement BIDI, les symboles suivants ont été ajoutés : 
+
+
+Indicateur de langue : 
+
+	H : Langue en cours, hébreu (sessions en hébreu uniquement)
+	Les caractères arabes EIN : Langue en cours, arabe (sessions en arabe uniquement)
+	E : Langue en cours, anglais (sessions en arabe et en hébreu)
+
+
+Sens de l'écran : 
+
+	S> : Sens de l'écran de gauche à droite
+	<S : Sens de l'écran de droite à gauche 
+
+
+Sens de la frappe : 
+
+	=> : De gauche à droite
+	<= : De droite à gauche
+
+
+Pour l'arabe, les symboles de mise en forme suivants ont été ajoutés :
+
+	Le caractère Alef-Madda indique le mode CSD.
+	Un GHEIN isolé indique le mode de mise en forme de base/isolée. 
+
+La combinaison de touches de base (Ctrl+B) permet de basculer entre les deux états et les deux modes. 
+
+
+
+Sens du texte
+
+Le sens du texte définit l'ordre de lecture de votre éditeur de texte. Le sens du texte correspond au sens du curseur par défaut et à l'alignement du texte par défaut. Cela signifie  que si le texte s'affiche en mode gauche à droite, vous devez sélectionner l'option gauche à droite. Si le texte s'affiche en mode droite à gauche, vous devez sélectionner l'option droite
+à gauche. 
+Certains éditeurs de texte fonctionnent en mode contextuel, ce qui signifie que le sens du texte de chaque paragraphe est défini par le premier caractère entré. Si le premier caractère est un caractère latin, le sens sera de gauche à droite. Si le premier caractère est un caractère
+de la langue nationale (arabe ou hébreu), le sens sera de droite à gauche. Lorsque vous utilisez
+un tel éditeur de texte, vous devez sélectionner l'option de sens du texte Contextuel dans votre émulateur.
+Il convient de noter que si l'éditeur de texte fonctionne en mode contextuel, l'ordre des segments peut brisé lorsque vous copiez ceux-ci de l'émulateur vers un éditeur de texte externe. En effet, certaines formes d'ordre de segments ne sont pas disponibles en mode de frappe Contextuel (ce qui signifie que s'ils sont collés dans l'éditeur externe, ils n'auront pas le  même aspect que dans l'émulateur).
+
+
+
+Forme numérale (arabe uniquement)
+
+La forme numérale définit comment les chiffres apparaissent dans un texte mixte arabe-latin. 
+Si l'application externe fonctionne uniquement avec des chiffres européens, vous devez sélectionner l'option Nominal dans le menu de préférences Forme numérale.
+Sélectionnez National si l'application est toujours utilisée avec des chiffres arabes nationaux. Vous devez sélectionner Contextuel si l'apparence des chiffres varie en fonction du segment dans lequel ils apparaissent (chiffres européens dans un segment latin et chiffres arabes nationaux dans un segment arabe).
+
+
+
+Redéfinition des touches bidirectionnelles
+
+	1. Cliquez avec le bouton droit de la souris sur une icône de session configurée. 
+
+	2. Cliquez sur Redéfinition du clavier. 
+
+	3. Appuyez sur la touche que vous souhaitez redéfinir. 
+
+	4. Sélectionnez  la fonction bidirectionnelle que vous souhaitez redéfinir. 
+
+
+Les fonctions bidirectionnelles suivantes sont disponibles pour les sessions 5250 bidirectionnelles : 
+
+	Inversion d'écran
+	Clavier en langue nationale
+	Clavier en latin
+	Inversion de zone
+	Fermeture
+	Changement de la mise en forme (arabe uniquement) 
+
+Par défaut, les combinaisons de touches suivantes sont définies :
+
+	Disposition de clavier en langue nationale (arabe ou hébreu) : Ctrl+N
+	Disposition de clavier latine : Ctrl+N
+	Inversion d'écran : Ctrl+S
+	Inversion de zone : Ctrl+F
+	Fermeture : Ctrl+C
+	Bascule entre la mise en forme automatique et de base : Ctrl+B
+
+
+
+Inversion de l'écran
+
+La combinaison de touches Ctrl+S permet d'inverser l'image de l'écran. 
+Si l'écran est orienté de gauche à droite, Ctrl+S change l'orientation de l'image de l'écran en droite vers gauche. 
+Si l'écran est orienté de droite à gauche, Ctrl+S inverse l'image de l'écran en gauche vers droite. 
+
+Lorsque l'orientation de l'écran change, la couche de langue est modifiée en la langue par défaut de la nouvelle orientation d'écran. 
+Si l'écran est inversé en droite vers gauche, la langue est modifiée en la langue nationale (hébreu ou arabe). Si l'écran est inversé en gauche vers droite, la langue est modifiée en latin. 
+
+L'inversion d'écran n'inverse pas la zone d'informations système.
+
+
+
+Inversion de zone
+
+Cette fonction est activée à l'aide de la combinaison de touches Ctrl+F et permet de basculer entre les orientations de zone gauche vers droite et droite vers gauche. Le texte de la zone n'est pas inversé. L'orientation du curseur devient identique à la nouvelle orientation de zone et la couche de langue correspondante est sélectionnée. 
+Si l'utilisateur sélectionne la fonction d'inversion de zone, le curseur est placé sur l'autre côté de cette zone ou ligne, sur ce qui devient la première position logique. Toutefois, la position du curseur reste la même si une touche de déplacement du curseur
+(touche flèche ou clic de souris) a été utilisée la dernière fois que la position du curseur
+a été modifiée. 
+
+
+
+Fermeture 
+
+Cette fonction est activée par la combinaison de touches Ctrl+. Elle permet de concaténer les données entrées dans un sens de frappe avec les données saisies dans le sens inverse. Elle fonctionne comme suit : Tous les espaces vides imbriqués  sont supprimés de la ligne en cours.Le texte concaténé est déplacé vers la limite droite de la zone (si le sens de la zone est droite vers gauche) ou vers la limite gauche de la zone (si le sens de la zone est gauche vers droite).Le sens du curseur devient identique à l'orientation de la zone.La valeur par défaut correspondant à cette orientation est affectée à la couche de langue.Si l'écran est orienté de gauche à droite, le curseur est placé sur la première position indéfinie à droite du texte concaténé.Si l'écran est orienté de droite à gauche, le curseur est placé sur la première position indéfinie à gauche du texte concaténé.
+Cette fonction apparaît dans Actions disponibles avec le nom FermetureDonnéesBIDI().
+
+
+Base
+
+Cette fonction est activée à l'aide de la combinaison de touches Ctrl+B. Elle permet d'activer et de désactiver la fonction automatique de détermination de la mise en forme pour le texte arabe de droite à gauche. Elle n'est applicable que lors du traitement de texte en arabe de droite à gauche. 
+
+
+
+Remarques spéciales relatives aux caractères arabes
+
+Cette rubrique explique comment traiter le caractère de queue Seen et le caractère LamAlef de la langue arabe.
+
+
+Utilisation du caractère de queue Seen
+
+Les caractères arabes Seen, Sheen, Saad et Daad constituent la famille de caractères de queue Seen. Chacun de ces caractères est constitué d'un caractère de corps Seen et d'un caractère de queue Seen.
+Un soin tout particulier doit être apporté à la suppression de ces caractères. Il existe trois méthodes de suppression :
+
+	1. Appuyer sur la touche d'espacement arrière après le caractère de queue Seen
+  Lorsque le curseur est positionné après un caractère de queue Seen, la touche d'espacement
+  arrière supprime à la fois le caractère Seen de corps et le caractère Seen de queue.2. Appuyer sur la touche d'espacement arrière sur le caractère de corps ou de queue Seen
+  Lorsque le curseur est positionné sur le caractère de corps ou de queue Seen, la touche
+  d'espacement arrière supprime le caractère précédant le caractère Seen.3. Appuyer sur la touche de suppression sur le caractère de corps ou de queue Seen
+  Lorsque le curseur est positionné sur le caractère de corps ou de queue Seen, la touche de
+  suppression supprime à la fois le caractère Seen de corps et le caractère Seen de queue.
+
+
+Utilisation du caractère LamAlef
+
+Le caractère LamAlef est habituellement stocké sous la forme d'un caractère unique dans des
+fichiers associés au CCSID 420 visuel. Pour des raisons de compatibilité avec la
+représentation implicite introduite par de nouveaux CCSID dans l'iSeries, le moteur de présentation Bidi effectue une conversion entre la représentation visuelle et implicite. Cela permet d'étendre la ligature <Lam-Alef> d'une représentation visuelle en <lam> et <Alef> en représentation implicite, ce qui consomme des espaces à la fin du texte arabe, par exemple, le début du texte français. 
+Lorsque <Lam-Alef> est converti au format implicite et que le espaces au début de la zone ne sont pas suffisants pour l'extension en <Lam> et <Alef>, le  caractère est perdu et remplacé par le caractère de commande <SUB>. 
+Pour remédier à cet incident, laissez un espace au début de la zone de chaque caractère LamAlef saisi. Le moteur de présentation pourra utiliser cet espace pour étendre le caractère <Lam-Alef>. 
+Ce comportement est pris en charge uniquement par l'émulation Host On-Demand, pas par le terminal 5250. 
+Pour activer l'allocation d'espace pour LamAlef, exécutez le programme setup5250 et indiquez Oui pour l'option Allocation d'espace pour caractères LamAlef.
+
+
+
+
+
+//// ENGL1SH_VERS10N 1.6.2.4 DO NOT REMOVE OR CHANGE THIS LINE

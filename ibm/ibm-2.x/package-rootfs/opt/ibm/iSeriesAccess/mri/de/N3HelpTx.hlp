@@ -1,0 +1,1532 @@
+////(This is a post-V2R1 GA updated English help text file.)
+////This file contains the main on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file will be stored in locale specific ASCII (code page 819 for Latin1 languages)
+
+////Help text format (this section is not displayed to IBM Emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1.
+//// 3. This help file contains help text for the IBM 3270 and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator.   A comment line of four "/" characters followed by
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+//// 3B. "5250" indicates subsequent data is only displayed in 5250 on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in both 3270 and 5250 on-line help, and non-IBM partner on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+////  3D. Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters. The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Order of topics: The emulator help viewer program automatically orders topics in alphabetical order when displaying the topics. There are many topics in this main emulator help text file; alphabetical order should make it easier for users to find the topic that they are looking for.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+
+----"3270-Hilfe"
+++++"3270-Hilfe verwenden"
+In diesem Abschnitt finden Sie Informationen zur Verwendung der 3270-Onlinehilfe.
+
+Das linke Teilfenster der 3270-Hilfe enthält eine Liste mit Hilfethemen. In diesen Themen können Sie mit Hilfe der Maus oder der Tasten "Bild auf" und "Bild ab" blättern. Wenn Sie mit der primären Maustaste (normalerweise die linke Taste) auf ein Thema klicken, wird im rechten Teilfenster eine Beschreibung des Themas angezeigt.
+
+In der Beschreibung im rechten Teilfenster können Sie ebenfalls mit Hilfe der Maus oder der Tasten "Bild auf" und "Bild ab" sowie der Pfeiltasten (Cursortasten) blättern.
+
+Mit Hilfe der entsprechenden Schaltflächen können Sie Textzeichenfolgen in den Abschnitten des Hilfetextes suchen. Die zu suchende Textzeichenfolge kann Leerzeichen enthalten. Die Groß-/Kleinschreibung muss nicht beachtet werden.
+
+Klicken Sie auf die Schaltflächen "Nächstes Thema" oder "Vorheriges Thema", um die Abschnitte anzuzeigen, die Sie bereits aufgerufen haben.
+
+Klicken Sie auf die Schaltfläche "Drucken", um das angezeigte Hilfethema oder alle Hilfethemen zu drucken.
+
+Klicken Sie auf die Schaltfläche "Verlassen", um die Hilfefunktion zu verlassen.
+
+Wenn die Auflösung Ihres Bildschirms 1024x768 oder höher ist, können Sie mit der Schaltfläche "Schriftart" die Schriftgröße zum Anzeigen der Onlinehilfe ändern.
+
+++++"Zusätzliche Parameter"
+Im Konfigurationsprogramm des IBM 3270-Emulators können Sie zusätzliche Parameter definieren. Zu den zusätzlichen Parametern gehören Standardwerte unter "Verschiedene Einstellungen" und weitere 3270-Einstellungen.
+
+Anmerkung: Zusätzliche Parameter gelten für alle 3270-Sitzungen.
+
+//// For the rest of this topic, the preference names and values (in upper case) must not be translated. The "(default)" and other lower case text should be translated.
+Die einzelnen zusätzlichen Parameter müssen jeweils in einer separaten Zeile angegeben werden. Das Format einer Zeile für einen zusätzlichen Parameter lautet wie folgt:
+
+  IBM3270*CURSOR_STYLE:BLOCK
+
+Dabei steht "IBM3270" für den Namen des 3270-Programms, gefolgt von "*", dem Namen der Einstellung, das Zeichen ":" sowie dem Einstellungswert.
+
+Die zusätzlichen Parameter, die über entsprechende Einstellungen unter "Verschiedene Einstellungen" verfügen, und die Parameterwerte sind im Folgenden aufgelistet. Das 3270-Programm zu "Verschiedene Einstellungen" bietet zusätzliche Informationen zu den einzelnen Einstellungen und den jeweiligen Werten. (Wenn eine Datei für die verschiedenen Einstellungen für einen Benutzer vorhanden ist, werden die Werte für die zusätzlichen Parameter nicht für die Parameter vom Typ "Verschiedene Einstellungen" verwendet. Wenn der Benutzer für die verschiedenen Einstellungen die Option "Als Standard setzen" festlegt, werden die Werte der zusätzlichen Parameter verwendet.)
+
+Name der Einstellung:   Werte der Einstellung
+---------------         -----------------
+
+CURSOR_STYLE:  Cursortyp
+   UNDERSCORE  Unterstreichungscursor
+   BLOCK  Blockcursor
+   BLOCK_INSERT_UNDERSCORE_REPLACE  (Standardwert) Block - Einfügen/Unterstreichung - Ersetzen
+   UNDERSCORE_INSERT_BLOCK_REPLACE  Unterstreichung - Einfügen/Block - Ersetzen
+
+CURSOR_BLINK:  Cursorblinken
+   DISABLE  (Standardwert) Kein Blinken
+   ENABLE  Cursor blinkt
+
+////5250
+ENTER_KEY:  Eingabetaste/rechte Strg-Taste
+   USE_DEFAULT  (Standardwert) Standardwert verwenden
+   ENTER_ENTER_AND_RIGHT_CTRL_NEWLINE  Eingabetaste = Eingabe; rechte Strg-Taste = Zeilenumbruch
+   ENTER_NEWLINE_AND_RIGHT_CTRL_ENTER  Eingabetaste = Zeilenumbruch; rechte Strg-Taste = Eingabe
+   ENTER_ENTER_AND_RIGHT_CTRL_FIELD_EXIT  Eingabetaste = Eingabe; rechte Strg-Taste = Feld verlassen
+   ENTER_FIELD_EXIT_AND_RIGHT_CTRL_ENTER  Eingabetaste = Feld verlassen; rechte Strg-Taste = Eingabe
+////3270
+Anmerkung: Die 3270-Eingabetaste wird als 3270-Einstellung im Konfigurationsprogramm für den IBM 3270-Emulator über dem Feld "Zusätzliche Parameter" festgelegt.
+////9999
+
+PRINT_KEY:  Drucktaste
+   USE_DEFAULT  (Standardwert) Standardwert verwenden
+   SHIFTED_PRINT_IS_SCREEN_PRINT  Umschaltaste + Drucktaste = Anzeigedruck
+   PRINT_IS_SCREEN_PRINT  Drucktaste = Anzeigedruck
+
+DESTRUCTIVE_BACKSPACE:  Rückschritt mit Löschen
+   ENABLE  (Standardwert) Löscht ein Zeichen
+   DISABLE  Kein Löschen
+
+INSERT_MODE:  Einfügemodus
+   DEFAULT_OFF_AUTOMATIC_RESET  (Standardwert) Standardwert aus/Automatisches Zurücksetzen
+   DEFAULT_OFF_NO_AUTOMATIC_RESET  Standardwert aus/Kein automatisches Zurücksetzen
+   DEFAULT_ON_NO_AUTOMATIC_RESET  Standardwert ein/Kein automatisches Zurücksetzen
+
+DEFAULT_COPY_TYPE:  Standardkopiertyp
+   LINEAR  (Standardwert) Linear
+   BLOCK  Block
+
+PASTE_LOCATION:  Einfügeposition
+   AT_CURSOR  (Standardwert) An der Cursorposition
+   AT_MOUSE_POINTER  Am Mauszeiger
+
+////5250
+AUTOMATIC_HELP:  Taste für automatische Hilfe
+   ENABLE  (Standardwert) Aktivieren
+   DISABLE  Inaktivieren
+
+////9999
+ERROR_RESET_KEYS:  Grundstellungstaste
+////5250
+   RESET_KEY_ONLY  (Standardwert) Nur mit der Grundstellungstaste
+   CURSOR_MOVEMENT_ALSO  Auch mit Cursortasten
+////3270
+   RESET_KEY_ONLY  Nur mit der Grundstellungstaste
+   CURSOR_MOVEMENT_ALSO  (Standardwert) Auch mit Cursortasten
+////9999
+   MOST_KEYS  Grundstellung durch fast alle Tasten
+
+AUDIO_ALARM:  Alarmsignal
+   DISABLE  Inaktivieren
+   ENABLE  (Standardwert) Aktivieren
+
+INPUT_ONLY_CURSOR_MOVEMENT:  Nur Cursor zu Einfügepositionen
+   DISABLE  (Standardwert) Inaktivieren
+   ENABLE  Aktivieren
+
+KEYBOARD_BUFFERING:  Pufferung für gesperrte Tastatur
+   DISABLE  Inakivieren
+////5250
+   ENABLE  Aktivieren
+   USE_AS400_SETTING  (Standardwert) i5/OS-Hosteinstellung verwenden
+////3270
+   ENABLE  (Standardwert) Aktivieren
+////9999
+
+////5250
+LARGE_SCREEN_BEHAVIOR:  Verhalten bei großer Anzeige
+   MOVE_WINDOW_AND_REDUCE_FONT_IF_NEEDED  Fenster verschieben
+   REDUCE_FONT_ONLY  Schrift verkleinern
+   USE_LAST_FONT  (Standardwert) Letzte Schriftart verwenden
+   REDUCE_FONT_AND_MOVE_WINDOW_IF_NEEDED Schrift verkleinern/Fenster verschieben
+
+////9999
+ROW_COLUMN_INDICATOR: Zeilen-/Spaltenanzeige
+   ENABLE  (Standardwert) Anzeigen
+   DISABLE  Nicht anzeigen
+
+RULE_LINE:  Lineal
+   DISABLE  Linealtaste nicht verfügbar
+   ENABLE_FOLLOW_CURSOR  Folgt dem Cursor
+   ENABLE_KEY_FIXED  Durch Linealtaste fixiert
+   ENABLE_KEY_FOLLOW_CURSOR  (Standardwert) Aktiviert/Folgt dem Cursor
+
+RULE_LINE_STYLE:  Linealdarstellung
+   BOTH  (Standardwert) Beides
+   HORIZONTAL  Nur horizontal
+   VERTICAL  Nur vertikal
+
+////5250
+BLUE_UNDERSCORE:  Blaue Unterstreichung
+   ENABLE  Aktivieren
+   DISABLE  (Standardwert) Inaktivieren
+
+////3270
+BRACKET:  Zeichen für eckige Klammer ändern
+   DISABLE  (Standardwert) Inaktivieren
+   ENABLE  Aktivieren
+
+AUTOMATIC_RECONNECT:  Verbindung automatisch wiederherstellen
+   DISABLE  Inaktivieren
+   ENABLE  (Standardwert) Aktivieren
+
+////9999
+HOTSPOTS:  Hotspots
+   DISABLE  Inaktivieren
+////5250
+   SINGLE_CLICK  (Standardwert) Einmal klicken
+   DOUBLE_CLICK  Doppelt klicken
+////3270
+   SINGLE_CLICK   Einmal klicken
+   DOUBLE_CLICK  (Standardwert) Doppelt klicken
+////9999
+
+HOTSPOT_HIGHLIGHTING:  Hotspot-Hervorhebung
+   DISABLE  (Standardwert) Keine Hervorhebung
+   ENABLE  Hervorhebung
+
+
+Die anderen zusätzlichen 3270-Parameter sind im Folgenden aufgelistet:
+
+Name der Einstellung:   Werte der Einstellung
+---------------         -----------------
+
+TITLE_OPTION:  Fenstertiteloptionen
+   TEXT_AND_SESSION_ID  (Standardwert) Titeltext und Sitzungs-ID
+   TEXT_ONLY  Nur Titeltext
+   SESSION_ID_ONLY  Nur Sitzungs-ID
+   TEXT_AND_HOST  Titeltext und Hostname
+   TEXT_HOST_AND_SESSION_ID  Titeltext, Hostname und Sitzungs-ID
+
+SESSION_ID:  Sitzungs-ID
+Die Sitzungs-ID wird normalerweise im Fenstertitel angezeigt. Der Wert kann bis zu 20 Zeichen (18 oder 19 Zeichen, wenn +n verwendet wird) in doppelten Anführungszeichen betragen. +n wird auch unterstützt, wenn n eine Zahl von 1 bis 99 ist. Beispiel: IBM3270*SESSION_ID:"JUAN"+3 enthält die Sitzungs-IDs JUAN1, JUAN2 und JUAN3.
+
+MAX_SESSIONS:  Maximale Anzahl an Sitzungen
+Der Wert ist die maximale Anzahl an 3270-Sitzungen, die der Benutzer starten kann, angegeben durch eine Zahl von 1 bis 99.
+
+DISPLAY_NAME:  Hostanzeigenname
+Die Einstellungswerte sind dieselben wie unter -DISPLAY_NAME (siehe hierzu "Anzeigenname").
+
+RETRY_COUNT:  Wiederholungsanzahl
+Der Wert ist die Anzahl an Wiederholungsversuchen bei einem Datenübertragungsfehler. Der Standardwert ist 144. 0 bedeutet nur manuelle Wiederholung; es werden keine automatischen Wiederholungsversuche durchgeführt.
+
+RETRY_INTERVAL:  Wiederholungsintervall
+Der Wert ist die Zeit zwischen den Wiederholungsversuchen, in Sekunden angegeben. Der Standardwert ist 300. Anmerkung: Bevor dieses Zeitintervall verwendet wird, werden drei Schnellversuche ausgeführt.
+
+INACTIVITY_TIMEOUT:  Inaktivitätszeitlimit
+Der Wert ist eine Zahl von 0 bis 9999, angegeben in Minuten. Der Standardwert ist 0 (kein Zeitlimit). Wenn der Wert nicht null ist, wird nach der entsprechenden Anzahl von Minuten Benutzerinaktivität ein Trennen/Wiederherstellen der Telnet-Sitzung ausgeführt.
+
+ICONIFIED_ACTION:  Sitzung als Symbol, wenn die Emulatoranzeige geändert wird
+   DISABLE  (Standardwert) Sitzung nicht als Symbol
+   BEEP  Alarmsignal ausgeben
+   DEICONIFY  Sitzung nicht mehr als Symbol anzeigen
+   BLINK  Symboltitel blinkt
+
+BLINKING_TEXT:  Blinkendes Textattribut
+   DISABLE  (Standardwert) Text blinkt nicht
+   ENABLE   Text nach einem Blinkattribut blinkt
+
+EURO: Euro-Symbol
+   ENABLE  (3270-EBCDIC-Codepage mit Euro-Symbol)
+   DISABLE  (3270-EBCDIC-Codepage ohne Euro-Symbol)
+
+////5250
+STAND_ALONE:
+   TRUE: Emulationssitzung als eigenen Prozess starten und nicht an eine andere Emulationssitzung anhängen
+   FALSE: (Standardwert) Wenn bereits eine andere ibm5250-Sitzung gestartet ist, die zweite Sitzung an diese Sitzung anhängen
+
+27X132_IN_800X600:  Ob 27 Zeilen mal 132 Spalten bei einer Bildschirmauflösung von 800 X 600 verfügbar sein sollen
+   ENABLE  27 Reihen mal 132 Spalten sind bei einer Auflösung von 800 X 600 verfügbar
+   DISABLE  (Standardwert) 27 Reihen mal 132 Spalten sind bei einer Auflösung von 800 X 600 nicht verfügbar
+////3270
+KEY_BUFFERING_DELAY:  Tastaturpufferungsverzögerung
+Der Wert ist eine Zahl von 0 bis 250, angegeben in Einheiten von 0,1 Sekunden. Die Zeitverzögerung tritt ein, nachdem die 3270-Tastatur entsperrt wird und bevor eine Taste mit Pufferung verarbeitet wird. Der Standardwert ist 3.
+
+PLAYBACK_DELAY:  Wiedergabeverzögerung
+Der Wert ist eine Zahl von 1 bis 250, angegeben in Einheiten von 0,1 Sekunden. Die Zeitverzögerung tritt ein, nachdem die 3270-Tastatur während der Wiedergabeverarbeitung entsperrt wird. Der Standardwert ist 20.
+
+INPUT_ONLY_COPY:  Kopieren nur für Eingabe
+   DISABLE  (Standardwert) Nicht verfügbar
+   ENABLE  Kopieren nur für Eingabe verfügbar
+
+NUMERIC_INPUT_CHECK:  Eingabefelder nur für numerische 3270-Zeichen
+   DISABLE  (Standardwert) Wird nicht erzwungen
+   ENABLE  In einem Eingabefeld nur für numerische 3270-Zeichen sind nur numerische Zeichen zulässig
+
+////9999
+++++"Automatisches Anmelden"
+In diesem Abschnitt wird das Erstellen einer Wiedergabedatei für automatisches Anmelden (eine Wiedergabedatei, die automatisch beim Start einer 3270-Sitzung gestartet wird) beschrieben. Mit Hilfe einer Wiedergabedatei für automatisches Anmelden können die Benutzer-ID und das Kennwort eines Benutzers während der Wiedergabe eingesetzt werden. Eine Wiedergabedatei für automatisches Anmelden wird wie folgt erstellt:
+
+1) Starten Sie eine 3270-Sitzung.
+
+2) Klicken Sie auf "Optionen", "Aufzeichnung..." und "Starten".
+
+3) Setzen Sie den Cursor in das Eingabefeld für die Benutzer-ID.
+
+4) Klicken Sie auf "Pause" (Sie müssen möglicherweise das Fenster "Optionen für Aufzeichnungspause" verschieben, um die Eingabefelder für die Benutzer-ID und das Kennwort für die 3270-Sitzung sehen zu können).
+
+5) Wählen Sie "Hier Benutzer-ID einfügen" aus.
+
+6) Klicken Sie auf den Fenstertitel der 3270-Sitzung, um den Cursor in der 3270-Sitzung zu aktivieren.
+
+7) Geben Sie Ihre Benutzer-ID im entsprechenden Eingabefeld ein (Ihre Benutzer-ID wird nicht aufgezeichnet).
+
+Anmerkung zu Schritt 7 und Schritt 13: Während der Wiedergabe werden die Benutzer-ID und das Kennwort (Schritt 13) verwendet, die im Konfigurationsprogramm des IBM 3270-Emulators beim Anmelden auf dem System verwendet werden. Wenn die Benutzer-ID und das Kennwort nicht konfiguriert sind, können Sie "Wiedergabe an dieser Stelle anhalten" auswählen, um dem Benutzer die Eingabe der Benutzer-ID oder des Kennworts auf diesem System zu ermöglichen.
+
+8) Klicken Sie auf "Aufzeichnung fortsetzen".
+
+9) Verschieben Sie den Cursor in das Eingabefeld für das Kennwort. Klicken Sie hierzu mit der Maus in das erste Eingabefeld für das Kennwort, oder drücken Sie die Taste Pos1 und anschließend die Tabulatortaste, um den Cursor in das Eingabefeld für das Kennwort zu verschieben (dadurch wird der Cursor in das Eingabefeld für das Kennwort zu einer Benutzer-ID verschoben, die bereits im Eingabefeld für die Benutzer-ID angegeben ist).
+
+10) Klicken Sie auf "Pause".
+
+11) Wählen Sie "Hier Kennwort einfügen" aus.
+
+12) Klicken Sie auf den Fenstertitel der 3270-Sitzung, um den Cursor in der 3270-Sitzung zu aktivieren.
+
+13) Geben Sie Ihr Kennwort ein (Ihr Kennwort wird nicht aufgezeichnet).
+
+14) Klicken Sie auf "Aufzeichnung fortsetzen". Anmerkung: Das Kennwort, das im Konfigurationsprogramm des IBM 3270-Emulators konfiguriert wurde, wird während der Wiedergabe zum automatischen Anmelden verwendet.
+
+15) Drücken Sie die Eingabetaste. Möglicherweise müssen Sie noch andere Tasten drücken, um Systemnachrichten nach dem Drücken der Eingabetaste zu entfernen.
+
+16) Falls gewünscht, können Sie die Wiedergabedatei jetzt ergänzen. Sie können z. B. eine bestimmte Systemanwendung starten.
+
+17) Klicken Sie auf "Aufzeichnung stoppen".
+
+18) Geben Sie einen Namen für diese Wiedergabedatei für automatisches Anmelden ein, und klicken Sie auf "Speichern".
+
+19) Starten Sie nun das Konfigurationsprogramm des IBM 3270-Emulators.
+
+20) Wählen Sie die Verbindung aus, die für ein automatisches Anmelden konfiguriert werden soll, und klicken Sie auf "Verbindung" -> "Bearbeiten".
+
+21) Klicken Sie auf "Erweiterte 3270-Verbindung...".
+
+Anmerkung: Wenn die Startleiste für ein automatisches Anmelden verwendet wird, ist der Desktop des Benutzers nur gesichert, wenn er gesperrt ist oder der Benutzer abgemeldet ist. Wenn der Desktop eines Benutzers nicht gesperrt ist und ein automatisches Anmelden über eine Startleiste ausgeführt wird, können sich auch Unbefugte am System anmelden, indem sie auf das Symbol für die Startleiste klicken. Es ist möglich, Schritt 9 zu ändern und "Wiedergabe an dieser Stelle anhalten" auszuwählen. In diesem Fall muss der Benutzer sein Kennwort eingeben, um die 3270-Sitzung zu starten.
+
+////In the sentence below, "-playback" must not be translated.
+22) Geben Sie den zusätzlichen Parameter "-playback" (oder "-PLAYBACK") gefolgt von einem Leerzeichen und dem Namen der Wiedergabedatei (beachten Sie die Groß-/Kleinschreibung) ein. Wenn der Name der Wiedergabedatei Leerzeichen enthält, setzen Sie den Dateinamen in doppelte Anführungszeichen (z. B. -playback "Name der Wiedergabedatei").
+
+23) Sie können im selben Fenster auch die 3270-Benutzer-ID und das zugehörige Kennwort des Benutzers konfigurieren.
+
+24) Klicken Sie auf "OK". Klicken Sie erneut auf "OK".
+
+Anmerkung: Wenn die Wiedergabedatei für automatisches Anmelden nicht richtig ausgeführt wird, können Sie die Wiedergabedatei erneut aufzeichnen und die vorhandene Datei ersetzen.
+
+Anmerkung: Wenn Sie diese Wiedergabedatei für automatisches Anmelden über das Pulldown-Menü "3270-Wiedergabe..." wiedergeben möchten, müssen Sie Ihr Kennwort eingeben.
+
+////3270
+++++"Klammer"
+Wenn Sie diese Option unter "Verschiedene Einstellungen" aktivieren, werden die linke und rechte eckige Klammer ([ und ]) in die entsprechenden ASCII-Darstellungen umgesetzt.
+
+Diese Funktion ist besonders für Programmierer nützlich, die mit der Programmiersprache C arbeiten. Diese Umsetzung wird von der Standardumsetzung von EBCDIC zu ASCII nicht richtig ausgeführt.
+
+////9999
+
+++++"Farbzuordnung"
+Mit Hilfe des 3270-Programms für Farbzuordnung können Sie die in den 3270-Sitzungen verwendeten Farben ändern.
+
+Verwenden Sie das Konfigurationsprogramm des IBM 3270-Emulators, um Berechtigungen für das 3270-Programm für Farbzuordnung zu vergeben.
+
+Das 3270-Programm für Farbzuordnung verfügt über vier Zugriffsebenen:
+
+1) Erweitert: Der Benutzer kann die Optionen zur Standardfarbzuordnung und zur erweiterten Farbzuordnung verwenden.
+
+2) Standard: Der Benutzer kann die Option zur Standardfarbzuordnung  verwenden (die Schaltfläche "Erweitert" ist nicht verfügbar).
+
+3) Inaktiviert: Die Option zur Farbzuordnung ist abgeblendet, d. h. nicht verfügbar.
+
+4) Verdeckt: Die Option zur Farbzuordnung wird im Pulldown-Menü nicht angezeigt.
+
+////Note: Some IBM Thin Client models hardware supports up to 256 colors. After this limit is reached, false colors may produce confusing browser or ICA images. The five IBM basic color schemes match the colors used by the Thin Client browser and Java. Advanced color schemes could use up to a maximum of 22 colors.
+
+Das 3270-Programm für Farbzuordnung verfügt über einen eigenen Hilfetext. Weitere Informationen zum 3270-Programm für Farbzuordnung finden Sie in diesem Hilfetext.
+
+Beim Starten einer 3270-Sitzung sucht der 3270-Emulator nach einer Farbzuordnungsdatei für die Sitzung. Dabei wird die im Folgenden beschriebene Reihenfolge eingehalten. Wenn eine Farbzuordnungsdatei gefunden wird, wird sie für die 3270-Sitzung verwendet:
+
+- Suche nach einer sitzungsspezifischen Farbzuordnungsdatei, die mit Hilfe des Programms zur Farbzuordnung ausgewählt wurde.
+
+- Suche nach einer Standard-Farbzuordnungsdatei, die Sie mit Hilfe des Farbzuordnungsprogramms ausgewählt haben.
+
+- Wenn keine der o. g. Dateien gefunden wird, verwendet der 3270-Emulator die Standardfarben (schwarzer Hintergrund).
+
+////5250
+++++"Spaltentrennzeichen"
+In 3270-Sitzungen werden normalerweise keine Spaltentrennzeichen (Punkte zwischen Zeichen in bestimmten Arten von i5/OS-Feldern) angezeigt. Sie können die Anzeige von Spaltentrennzeichen mit Hilfe des Konfigurationsprogramms des IBM 3270-Emulators aktivieren.
+////9999
+
+++++"Übertragungsfehlerbehebung"
+Der 3270-Emulator führt standardmäßig eine automatische Fehlerbehebung durch, wenn eine der folgenden Situationen eintritt:
+
+////5250
+- Eine 3270-Sitzung wird unterbrochen, weil der Emulator die Verbindung mit dem i5/OS-Host verloren hat.
+////3270
+- Eine 3270-Sitzung wird unterbrochen, weil der Emulator die Verbindung mit System/390 verloren hat.
+////9999
+- Eine 3270-Emulationssitzung kann nicht gestartet werden, da möglicherweise ein Übertragungsfehler aufgetreten ist.
+
+////In the paragraph below, "-RETRY_COUNT" must not be translated.
+Die automatische Fehlerbehebung mit Hilfe des Konfigurationsprogramms des IBM 3270-Emulators kann für den 3270-Emulator angepasst oder inaktiviert werden. Wählen Sie die Sitzung aus, und klicken Sie auf "Verbindung" -> "Bearbeiten". Klicken Sie auf "Erweiterte 3270-Verbindung...", und geben Sie im Feld "Weitere Parameter" den Text "-RETRY_COUNT", ein Leerzeichen und eine Zahl von 0 bis 9999 ein. Die Zahl "1" (oder jede größere Zahl) steht für die Anzahl an automatischen Wiederholungen, die der 3270-Emulator ausführen soll. Der Standardwert ist 144. Wenn die automatische Fehlerbehebung nicht erfolgreich ist, muss eine manuelle Fehlerbehebung durchgeführt werden. Die Zahl "0" bedeutet, dass die automatische Fehlerbehebung inaktiviert ist (manuelle Fehlerbehebung ist festgelegt). Bei der Option "-RETRY_COUNT" muss die Groß-/Kleinschreibung berücksichtigt werden.
+
+////In the paragraph below, "-RETRY_COUNT" and "-RETRY_INTERVAL" must not be translated.
+Die automatische Fehlerbehebung des 3270-Emulators führt drei schnelle Wiederholungen durch (ungefähr im Abstand von 20 Sekunden), gefolgt von der Anzahl an Wiederholungen, die durch "-RETRY_COUNT" angegeben sind. Es wird ein bestimmtes Wiederholungsinterval verwendet. Das Standardwiederholungsintervall ist 300 Sekunden (5 Minuten). Das Wiederholungsintervall kann mit der Option "-RETRY_INTERVAL", einem Leerzeichen und einer Zahl von 1 bis 9999 im Feld "Weitere Parameter" festgelegt werden. Die Zahl gibt das Zeitintervall zwischen den Wiederholungen in Sekunden an.
+
+Anmerkung: Während die automatische Fehlerbehebung ausgeführt wird, wird ein Dialogfenster angezeigt. Dies ermöglicht es dem Benutzer, die 3270-Emulationssitzung abzubrechen. Wenn der 3270-Emulator erfolgreich wiederhergestellt werden kann, wird das Dialogfenster ohne eine Benutzerinteraktion beendet.
+
+////5250
+++++"Steuerungsmenüauswahl"
+Wenn Sie die Option zur Anzeige des Steuerungsmenüs auswählen, werden verschiedene 3270-Tasten für i5/OS angezeigt. Wenn Sie eine dieser Tasten auswählen, wird dieselbe Funktion ausgeführt wie beim Drücken dieser Taste auf der Tastatur. Diese Funktion ist nützlich, wenn bestimmte Tasten auf der Tastatur schwierig zu finden sind.
+////9999
+
+++++"Kopieren"
+////CPY This comment line is used by the help viewer program to find the Copy topic. This line belongs after the Copy topic (do not translate this comment line).
+Daten aus einer 3270-Sitzung können in den Zwischenablagepuffer kopiert und anschließend in diese 3270-Sitzung, eine andere 3270-Sitzung oder in eine andere Anwendung eingefügt werden.
+
+Menüleiste "Kopieren": Die zu kopierenden Daten werden mit dem Mauszeiger markiert. Setzen Sie den Mauszeiger auf das erste Zeichen, halten Sie die primäre Maustaste (normalerweise die linke Maustaste) gedrückt, ziehen Sie den Mauszeiger auf das letzte Zeichen, und lassen Sie die Maustaste los. Wählen Sie nun die Option "Kopieren" im Menü "Bearbeiten" aus, um eine Kopie der Daten in den Zwischenablagepuffer zu übertragen.
+
+Sie können den Kopierbereich auch markieren, indem Sie die sekundäre Maustaste (normalerweise die rechte Maustaste) drücken. Dadurch werden die Daten zwischen dem Textcursor und dem Mauszeiger markiert. Mit der sekundären Maustaste können Sie den markierten Kopierbereich anpassen.
+
+Sie können außerdem einen Block (einen rechteckigen Bereich) kopieren. Klicken Sie doppelt mit der sekundären Maustaste, um einen Blockkopierbereich zwischen dem Textcursor und dem Mauszeiger zu markieren. Mit der sekundären Maustaste können Sie den markierten Blockkopierbereich anpassen.
+
+Unter "Verschiedene Einstellungen" und "Zusätzliche Parameter" kann die Standardkopieroption von linearer Kopie in Blockkopie geändert werden.
+
+////3270
+Ein einzelnes Wort oder eine Zeile kann ebenfalls markiert werden. Klicken Sie doppelt mit der primären Maustaste auf ein Wort, um es zu markieren. Klicken Sie dreimal mit der primären Maustaste, um die Zeile zu markieren, in der sich der Mauscursor befindet.
+
+Anmerkung: Ein einzelnes Klicken oder ein Doppelklicken mit der primären Maustaste auf einen Hotspot markiert möglicherweise keinen Kopierbereich. Dies richtet sich nach den Einstellungen für Hotspots unter "Verschiedene Einstellungen" (weitere Informationen finden Sie unter "Hotspots").
+
+////5250
+Anmerkung: Der Kopiervorgang kann an einem i5/OS-Hotspot (weitere Informationen hierzu finden Sie unter "Hotspots"), einem 3270-Auswahlfeld, einer Menüleiste, einem Pulldown-Menü, einer Schaltfläche oder einer Schiebeleiste nicht gestartet werden. Bei einigen i5/OS-Anwendungen dient die primäre Maustaste möglicherweise zum Ausführen einer Anwendungsfunktion und nicht zum Starten des Kopiervorgangs.
+
+////9999
+Anmerkung: Wenn die Menüauswahl "Bearbeiten" nicht angezeigt wird, kann sie mit Hilfe des Konfigurationsprogramms des IBM 3270-Emulators aktiviert werden.
+
+Eine Beschreibung zum Einfügen von Daten in diese oder eine andere Sitzung finden Sie unter "Einfügen".
+
+Sie können auch mit Hilfe der Tastatur kopieren: Halten Sie eine Umschalttaste gedrückt, drücken Sie die primäre Maustaste (Sie können die Umschalttaste nun loslassen), verschieben Sie den Mauszeiger, und lassen Sie die Maustaste los, um die zu kopierenden Daten zu markieren. Die markierten Daten werden automatisch in den Zwischenablagepuffer kopiert. Einen Blockkopierbereich können Sie mit Hilfe der Tastatur markieren, indem Sie eine Umschalttaste gedrückt halten, die primäre Maustaste drücken, loslassen und erneut drücken (innerhalb des Doppelklickzeitintervalls; Sie können die Umschalttaste nun loslassen), den Mauszeiger verschieben, und die Maustaste loslassen. Mit der sekundären Maustaste können Sie den markierten Kopierbereich anpassen (den Kopierbereich erneut kopieren).
+
+++++"Ausschneiden"
+Daten aus einer 3270-Sitzung können aus einem Eingabefeld ausgeschnitten (gelöscht) werden und in den Zwischenablagepuffer kopiert werden. Die ausgeschnittenen Daten können nun in diese 3270-Sitzung, in eine andere 3270-Sitzung oder in eine andere Anwendung eingefügt werden.
+
+Die zu kopierenden und zu löschenden Daten werden mit dem Mauszeiger markiert. Setzen Sie den Mauszeiger auf das erste Zeichen, halten Sie die primäre Maustaste (normalerweise die linke Maustaste) gedrückt, ziehen Sie den Mauszeiger auf das letzte Zeichen, und lassen Sie die Maustaste los. Wählen Sie nun die Option "Ausschneiden" im Menü "Bearbeiten" aus, um den ursprünglichen Text zu löschen und eine Kopie dieses Texts in den Zwischenablagepuffer zu übertragen. Ein markierter Ausschneidebereich kann durch Drücken der sekundären Maustaste (normalerweise die rechte Maustaste) angepasst werden.
+
+Eine Beschreibung zum Einfügen von Daten in diese oder eine andere Sitzung finden Sie unter "Einfügen".
+
+Eine Beschreibung zum Kopieren von Daten finden Sie unter "Kopieren". Die Option "Kopieren" unterstützt weitere Funktionen, wie z. B. das Kopieren eines Blocks (eines rechteckigen Bereichs).
+
+++++"Standardfarbzuordnungsdateien"
+Die Standardhintergrundfarbe für 3270-Sitzungen ist Schwarz. Sie können die Farben der 3270-Sitzungen mit Hilfe des Farbzuordnungsprogramms anpassen (mit einer entsprechenden Berechtigung). Auch wenn Sie nicht berechtigt sind, das Farbzuordnungsprogramm zu verwenden, können Sie ein Standardfarbschema verwenden.
+
+++++"Standardtastaturzuordnungsdateien"
+Sie können eine Standardtastaturzuordnungsdatei verwenden, um die Tastenfunktionen zu ändern, auch wenn Sie nicht berechtigt sind, das Programm zur Tastaturneubelegung zu verwenden.
+
+++++"Standardtastenblockdateien"
+Sie können das Standarddialogfenster oder das Pulldown-Menü für Tastenblockdateien verwenden, auch wenn Sie nicht berechtigt sind, das 3270-Programm "Tastenblock anpassen" zu verwenden.
+
+++++"Standardwiedergabedateien"
+Sie können die Standardaufzeichnungs-/wiedergabedateien verwenden, auch wenn Sie nicht berechtigt sind, das 3270-Aufzeichnungsprogramm zu verwenden.
+
+Anmerkung: Wiedergabedateien für automatisches Anmelden werden unterstützt; weitere Informationen finden Sie unter "Automatisches Anmelden".
+
+////5250
+++++"Anzeigenname (3270-Sitzung)"
+////In the paragraph below, "-DISPLAY_NAME" must not be translated.
+Mit Hilfe des Konfigurationsprogramms des IBM 3270-Emulators kann ein virtueller Anzeigenname für 3270-Sitzungen angegeben werden. Wählen Sie die Sitzung aus, und klicken Sie auf "Verbindung" -> "Bearbeiten". Klicken Sie auf "Erweiterte 3270-Verbindung..." und in das Feld "Weitere Parameter", geben Sie "-DISPLAY_NAME", ein Leerzeichen und einen Parameter ein (der Parameter wird im Folgenden beschrieben). Bei der Option "-DISPLAY_NAME" und dem Parameter muss die Groß-/Kleinschreibung berücksichtigt werden.
+
+////In the sentence below, "-DISPLAY_NAME" must not be translated.
+Über die Option "-DISPLAY_NAME" kann außerdem die Anzahl an 3270-Sitzungen gesteuert werden, die auf dem i5/OS-Zielsystem gestartet werden können. Beim i5/OS-Zielsystem muss es sich um Version 3/Release 2, Version 3/Release 7, Version 4/Release 1 oder eine neuere Version/Release-Kombination handeln.
+
+////This paragraph moved up from later in this topic and the 2 item added.
+Die Regeln für i5/OS-Anzeigennamen lauten wie folgt:
+
+- Jede aktive 3270-Sitzung muss über einen eindeutigen Sitzungsnamen (virtuellen Anzeigennamen) verfügen.
+
+- Anzeigennamen müssen aus 2 bis 10 Zeichen bestehen.
+
+- Das erste Zeichen muss ein Alphazeichen sein.
+
+- Als Zeichen können Alphazeichen, numerische Zeichen, Punkte und Unterstreichungszeichen verwendet werden.
+
+- Alle Alphazeichen müssen in Großbuchstaben geschrieben werden.
+
+Es gibt neun verschiedene Parametertypen für Anzeigennamen. Die ersten sieben Parametertypen richten sich nach dem Benutzer, unabhängig davon, welches Terminal verwendet wird. Die beiden letzten Parametertypen richten sich nach dem verwendeten Terminal.
+
+////In the paragraph below, "XXXXXX" must not be translated.
+1) "XXXXXX", wobei "XXXXXX" für den aus zwei bis zehn Zeichen bestehenden Namen der 3270-Sitzung steht. Der Benutzer kann nur eine einzige Sitzung starten.
+
+////In the paragraph below, "XXXXXX+n", "XXXXXX", "n", "JUAN+4",
+////"JUAN1", "JUAN2", "JUAN3", and "JUAN4" must not be translated.
+1) "XXXXXX+n", wobei "XXXXXX+n" für den aus ein bis neun Zeichen bestehenden Namen der 3270-Sitzung steht. Der Benutzer kann n Sitzungen starten. "n" steht für eine Zahl von 2 bis 9. Beispiel: "JUAN+4" ermöglicht es dem Benutzer, vier 3270-Sitzungen zu starten, wobei der Name der ersten Sitzung "JUAN1", der der zweiten Sitzung "JUAN2", der der dritten Sitzung "JUAN3" und der der vierten Sitzung "JUAN4" lautet.
+
+3) "XXXXX YYYYYYYY ZZZZ" steht für eine Liste möglicher Anzeigennamen, die durch Leerzeichen voneinander getrennt sind. Die Liste muss in Anführungszeichen stehen. Die einzelnen Namen müssen aus 2 bis 10 Zeichen bestehen. Die maximale Anzahl an Namen wird durch die Größe bestimmt, die unter "Weitere Parameter" im Konfigurationsprogramm des IBM 3270-Emulators angegeben ist.
+
+////In the paragraph below, "USE_USER_ID" must not be translated.
+4) "USE_USER_ID" ermöglicht es dem Benutzer, eine einzige 3270-Sitzung zu starten, wobei der Sitzungsname der Terminal-ID des Benutzers (2 bis 10 Zeichen) oder der 3270-Benutzer-ID entspricht, die im Konfigurationsprogramm des IBM 3270-Emulators festgelegt wurde.
+
+////In the paragraph below, "USE_USER_ID+n", "n", "USE_USER_ID+4",
+////"JUAN", "JUAN1", "JUAN2", "JUAN3", and "JUAN4" must not be translated.
+5) "USE_USER_ID+n" ermöglicht es dem Benutzer, n 3270-Sitzungen zu starten, wobei der Sitzungsname der Terminal-ID des Benutzers (oder der 3270-Benutzer-ID, die im Konfigurationsprogramm des IBM 3270-Emulators konfiguriert wurde) gefolgt von der Zahl n entspricht. n ist eine Zahl von 2 bis 9. Beispiel: "USE_USER_ID+4" und die Benutzer-ID "JUAN" ermöglichen die Sitzungsnamen "JUAN1", "JUAN2", "JUAN3" und "JUAN4". Anmerkung: Wenn die Benutzer-ID aus 10 Zeichen besteht, wird das letzte Zeichen durch die Zahl n ersetzt.
+
+////In the paragraph below, "USE_USER_ID+99" must not be translated.
+"USE_USER_ID+99" wird unterstützt (die Zahl 99 ist erforderlich). Diese Option ermöglicht mehreren Benutzern, dieselbe Benutzer-ID gemeinsam zu nutzen. Es können bis zu 99 3270-Sitzungen gestartet werden. Es wird jedoch empfohlen, nicht mehr als 40 3270-Sitzungen zu starten, da ansonsten die Leistung verringert wird. Die Sitzungszahlen von 1 bis 99 werden zufällig ausgewählt und an die Benutzer-ID angehängt. Wenn die Benutzer-ID aus 9 Zeichen besteht, wird das letzte Zeichen entfernt, bevor die ein- oder zweistellige Zahl hinzugefügt wird. Bei Benutzer-IDs, die aus 10 Zeichen bestehen, werden die letzten zwei Zeichen entfernt.
+
+////In the paragraph below, "USE_USER_ID+999" must not be translated.
+"USE_USER_ID+999" wird unterstützt (die Zahl 999 ist erforderlich). Es können bis zu 999 3270-Sitzungen gestartet werden. Die Sitzungszahlen von 1 bis 999 werden zufällig ausgewählt und an die Benutzer-ID angehängt. Wenn die Benutzer-ID aus 8 Zeichen besteht, wird das letzte Zeichen entfernt, bevor die ein-, zwei- oder dreistellige Zahl hinzugefügt wird. Wenn die Benutzer-ID aus 9 Zeichen besteht, werden die beiden letzten Zeichen entfernt. Wenn die Benutzer-ID aus 10 Zeichen besteht, werden die letzten drei Zeichen entfernt.
+
+////In the paragraph below, "USE_USER_ID", "DSP", "JUAN",
+////"DSPJUAN" must not be translated.
+6) "text+USE_USER_ID" ist eine weitere Variante von "USE_USER_ID". "text" steht für Zeichen, die vor die Benutzer-ID des Benutzers eingefügt werden. Beispiel: "DSP+USE_USER_ID" und die Benutzer-ID "JUAN" ergeben den Sitzungsnamen "DSPJUAN". Der Text kann aus 1 bis 8 Zeichen bestehen.
+
+////In the paragraph below, "USE_USER_ID+n" and "n" must not be translated.
+7) "text+USE_USER_ID+n" wird ebenfalls unterstützt. n ist eine Zahl von 2 bis 9.
+
+////In the paragraph below, "USE_USER_ID+99" and "USE_USER_ID+999" must not be translated.
+"text+USE_USER_ID+99" und "text+USE_USER_ID+999" werden unterstützt. Weitere Informationen hierzu finden Sie unter Punkt 5 dieser Auflistung.
+
+////In the paragraph below, "USE_USER_ID" must not be translated.
+"USE_USER_ID+text", "USE_USER_ID+text+n", "USE_USER_ID+text+99" und "USE_USER_ID+text+999" werden unterstützt. Weitere Informationen finden Sie unter Punkt 6 und 7 dieser Auflistung. Der Text darf nicht mit einem numerischen Zeichen beginnen.
+
+////In the paragraph below, "USE_HOST_NAME" must not be translated.
+8) "USE_HOST_NAME" ermöglicht es dem Benutzer, eine einzige 3270-Sitzung zu starten, wobei der Sitzungsname aus dem TCP/IP-Hostnamen des Terminals besteht. Der Hostname wird vom DNS (Domänennamensserver) beim Anmelden am Terminal gelesen. Dabei konvertiert der 3270-Emulator Klein- in Großbuchstaben. Wenn der Hostname länger als 10 Zeichen ist, wird der Sitzungsname abgeschnitten, beginnend mit dem Ende bis zu einem Punkt. Beispiel: Ein Terminal mit dem Hostnamen "ns23.newyork.ibm.com" hat den Sitzungsnamen "NS23".
+
+////In the paragraph below "USE_HOST_NAME+n" and "n" must not be translated.
+9) "USE_HOST_NAME+n" wird ebenfalls unterstützt. n ist eine Zahl von 2 bis 9.
+
+////In the paragraph below, "USE_MAC_ADDRESS", "T", "E", "X",
+////"00.00.E5.68.D5.99", and "TE568D599" must not be translated.
+////10) USE_MAC_ADDRESS allows the user to start a single 3270 session where the session name is created starting with an alpha character which indicates the type of communication card (T for token ring or E for Ethernet) followed by the lower four bytes of the MAC address. For example: USE_MAC_ADDRESS with token ring and a MAC address of 00.00.E5.68.D5.99 would result in a session name of TE568D599.
+
+////In the paragraph below, "USE_MAC_ADDRESS+n", "n", "E",
+////"USE_MAC_ADDRESS+3", "00.00.E5.68.D5.99", "TE568D5991","TE568D5992", and "TE568D5993" must not be translated.
+////11) USE_MAC_ADDRESS+n allows the user to start n 3270 sessions where the session name is created as above but with n appended to the end. n is a number from 2 to 9. For example: USE_MAC_ADDRESS+3 with token ring and a MAC address of 00.00.E5.68.D5.99 would allow session names of TE568D5991, TE568D5992, and TE568D5993.
+////3270
+++++"Anzeigenname (3270-LU-Name)"
+////In the paragraph below, "-DISPLAY_NAME" must not be translated.
+Mit Hilfe des Konfigurationsprogramms des IBM 3270-Emulators kann ein LU-Anzeigenname für 3270-Sitzungen angegeben werden. Wählen Sie die Sitzung aus, und klicken Sie auf "Verbindung" -> "Bearbeiten". Klicken Sie auf "Erweiterte 3270-Verbindung...", und geben Sie im Feld "Weitere Parameter" "-DISPLAY_NAME", ein Leerzeichen und einen Parameter ein (der Parameter wird im Folgenden beschrieben). Bei der Option "-DISPLAY_NAME" und dem Parameter muss die Groß-/Kleinschreibung berücksichtigt werden.
+
+Anmerkung: Um LU-Anzeigennamen für 3270-Sitzungen angeben zu können, sind TN3270-Erweiterungen (TN3270E) auf dem Server erforderlich.
+
+////In the sentence below, "-DISPLAY_NAME" must not be translated.
+Über die Option "-DISPLAY_NAME" kann außerdem die Anzahl an 3270-Sitzungen gesteuert werden, die auf dem System/390-Zielsystem gestartet werden können.
+
+Die Regeln für System/390-Anzeigennamen lauten wie folgt:
+
+- Jede aktive 3270-Sitzung muss über einen eindeutigen Sitzungsnamen (virtuellen Anzeigennamen) verfügen.
+
+- Anzeigennamen müssen aus 2 bis 8 Zeichen bestehen.
+
+- Das erste Zeichen muss ein Alphazeichen, @, # oder $ sein.
+
+- Als Zeichen können Alphazeichen, numerische Zeichen, @, # oder $ verwendet werden.
+
+- Alle Alphazeichen müssen in Großbuchstaben geschrieben werden.
+
+Es gibt sieben verschiedene Parametertypen für Anzeigennamen. Die ersten fünf Parametertypen richten sich nach dem Benutzer, unabhängig davon, welches Terminal verwendet wird. Die beiden letzten Parametertypen richten sich nach dem verwendeten Terminal.
+
+////In the paragraph below, "XXXXXX" must not be translated.
+1) "XXXXXX", wobei "XXXXXX" für den aus 2 bis 8 Zeichen bestehenden Namen der 3270-Sitzung steht. Der Benutzer kann nur eine einzige Sitzung starten.
+
+////In the paragraph below, "XXXXXX+n", "XXXXXX", "n", "JUAN+3",
+////"JUAN1", "JUAN2", and "JUAN3" must not be translated.
+1) "XXXXXX+n", wobei "XXXXXX+n" für den aus 1 bis 7 Zeichen bestehenden Namen der 3270-Sitzung steht. Der Benutzer kann n Sitzungen starten. "n" steht für eine Zahl von 2 bis 9. Beispiel: "JUAN+3" ermöglicht es dem Benutzer, drei 3270-Sitzungen zu starten, wobei der Name der ersten Sitzung "JUAN1", der der zweiten Sitzung "JUAN2" und der der dritten Sitzung "JUAN3" lautet.
+
+3) "XXXXX YYYYYYYY ZZZZ" steht für eine Liste möglicher Anzeigennamen, die durch Leerzeichen voneinander getrennt sind. Die Liste muss in Anführungszeichen stehen. Die einzelnen Namen müssen aus 2 bis 8 Zeichen bestehen. Die maximale Anzahl an Namen wird durch die Größe bestimmt, die unter "Weitere Parameter" im Konfigurationsprogramm des IBM 3270-Emulators angegeben ist.
+
+////In the paragraph below, "USE_USER_ID" must not be translated.
+4) "USE_USER_ID" ermöglicht es dem Benutzer, eine einzige 3270-Sitzung zu starten, wobei der Sitzungsname der Benutzer-ID des Benutzers (2 bis 8 Zeichen) oder der 3270-Benutzer-ID entspricht, die im Konfigurationsprogramm des IBM 3270-Emulators festgelegt wurde.
+
+////In the paragraph below, "USE_USER_ID+n", "n", "USE_USER_ID+3",
+////"JUAN", "JUAN1", "JUAN2", and "JUAN3" must not be translated.
+5) "USE_USER_ID+n" ermöglicht es dem Benutzer, n 3270-Sitzungen zu starten, wobei der Sitzungsname der Benutzer-ID des Benutzers (beschränkt auf 7 Zeichen) gefolgt von der Zahl n entspricht. n ist eine Zahl von 2 bis 9. Beispiel: "USE_USER_ID+3" und die Benutzer-ID "JUAN" ermöglichen die Sitzungsnamen "JUAN1", "JUAN2" und "JUAN3".
+
+////In the paragraph below, "USE_HOST_NAME" must not be translated.
+6) "USE_HOST_NAME" ermöglicht es dem Benutzer, eine einzige 3270-Sitzung zu starten, wobei der Sitzungsname aus dem TCP/IP-Hostnamen des Terminals besteht. Der Hostname wird vom DNS (Domänennamensserver) beim Anmelden am Terminal gelesen. Dabei konvertiert der 3270-Emulator Klein- in Großbuchstaben. Wenn der Hostname länger als 8 Zeichen ist, wird der Sitzungsname abgeschnitten, beginnend mit dem Ende bis zu einem Punkt. Beispiel: Ein Terminal mit dem Hostnamen "ns23.newyork.ibm.com" hat den Sitzungsnamen "NS23".
+
+////In the paragraph below "USE_HOST_NAME+n" and "n" must not be translated.
+7) "USE_HOST_NAME+n" wird ebenfalls unterstützt. n ist eine Zahl von 2 bis 9.
+
+////In the paragraph below, "USE_MAC_ADDRESS", "T", "E",
+////"00.00.E5.68.D5.99", and "T568D599" must not be translated.
+////8) USE_MAC_ADDRESS allows the user to start a single 3270 session where the session name is created starting with an alpha character which indicates the type of communication card (T for token ring or E for Ethernet) followed by the lower three and one half bytes of the MAC address. For example: USE_MAC_ADDRESS with token ring and a MAC address of 00.00.E5.68.D5.99 would result in a session name of T568D599.
+
+////In the paragraph below, "USE_MAC_ADDRESS+n", "n",
+////"USE_MAC_ADDRESS+2", "00.00.E5.68.D5.99", "T68D5991"
+////and "T68D5992" must not be translated.
+////9) USE_MAC_ADDRESS+n allows the user to start n 3270 sessions where the session name is created from the lower three bytes of the MAC address, with n appended to the end. n is a number from 2 to 9. For example: USE_MAC_ADDRESS+2 with token ring and a MAC address of 00.00.E5.68.D5.99 would allow session names of T68D5991 and T68D5992.
+////9999
+
+++++"Position der Eingabetaste"
+////5250
+Diese Option unter "Verschiedene Einstellungen" ermöglicht dem Benutzer, die Funktion der Eingabetaste auf die Position der rechten Strg-Taste zu übertragen.
+
+////3270
+Mit der Option unter "Verschiedene Einstellungen" und dem Konfigurationsprogramm des IBM 3270-Emulators können Sie die Funktion der Eingabetaste auf die rechte Strg-Taste übertragen.
+
+////9999
+Informationen zu den Standardtastenpositionen finden Sie im Abschnitt "Tastenkombinationen".
+
+
+////Do not use the Euro character itself in the help text below. For this release, it will not display in the help text viewer because ASCII code page 819 is used.
+++++"Euro-Symbol"
+Das Euro-Symbol wird vom 3270-Emulator in den folgenden Sprachen unterstützt: Dänisch, Niederländisch, Flämisch, Deutsch, Deutsch (Schweiz), britisches Englisch, amerikanisches Englisch, Finnisch, Französisch, Französisch (Belgien), Französisch (Kanada), Französisch (Schweiz), Italienisch (Schweiz), Norwegisch, Portugiesisch, brasilianisches Portugiesisch, Spanisch, Spanisch (Lateinamerika) und Schwedisch.
+
+////In the paragraph below, "$LANG" and "@euro" must not be translated.
+Der Emulator verwendet die Ländereinstellung, die durch die Systemumgebungsvariable $LANG angegeben wird. "@euro" kann zur Variable $LANG hinzugefügt werden, um das Euro-Symbol zu aktivieren (z. B. de_DE@euro).
+
+////In the paragraph below, "-EURO" and "-NOEURO" must not be translated.
+Anmerkung: Falls erforderlich können 3270-Emulationssitzungen die Einstellungen für die Sprache außer Kraft setzen. Wählen Sie im Konfigurationsprogramm des IBM 3270-Emulators die Sitzung aus, und klicken Sie auf "Verbindung" -> "Bearbeiten". Klicken Sie auf "Erweiterte 3270-Verbindung...", und geben Sie im Feld "Weitere Parameter" "-EURO" (aktiviert) oder "-NOEURO" (inaktiviert) ein. Bei den Optionen "-EURO" und "-NOEURO" muss die Groß-/Kleinschreibung berücksichtigt werden.
+
+++++"3270 verlassen"
+Diese Option beendet die 3270-Sitzung.
+
+////5250
+++++"Position der Taste zum Verlassen des Feldes"
+Mit Hilfe der Option unter "Verschiedene Einstellungen" kann der Benutzer die Funktionen der Eingabetaste und der Taste zum Verlassen des Feldes auf die Strg-Taste und die Eingabetaste übertragen.
+
+Informationen zu den Standardtastenpositionen finden Sie im Abschnitt "Tastenkombinationen".
+////9999
+
+++++"Schriftarten"
+Sie können die 3270-Schriftart mit Hilfe des Pulldown-Auswahlmenüs "Schriftarten" oder durch Ziehen der 3270-Fensterrahmen oder -Fensterecken (mit der Maus) ändern.
+
+Mit Hilfe des Konfigurationsprogramms des IBM 3270-Emulators können Sie die Ausgangsposition und -größe des 3270-Fensters festlegen (der 3270-Emulator passt die Fenstergröße möglicherweise an die Schriftgröße an).
+
+////3270
+++++"Grafiken"
+Für 3270-Sitzungen kann mit Hilfe des Konfigurationsprogramms des IBM 3270-Emulators GDDM-Grafikunterstützung aktiviert werden. Sie können die Grafikunterstützung für einzelne Sitzungen im Fenster für erweiterte 3270-Verbindungen aktivieren oder inaktivieren ("Verbindung" -> "Bearbeiten" -> "Erweiterte 3270-Verbindung..."). Mit Hilfe der 3270-Einstellungen können Sie Grafikunterstützung für alle 3270-Sitzungen aktivieren. Wenn die Grafikunterstützung aktiviert ist, wird ein entsprechendes Symbol rechts in der Statuszeile angezeigt.
+
+Anmerkung: Wenn GDDM-Grafikunterstützung verwendet wird, ist mehr Systemspeicher erforderlich als für 3270-Sitzungen ohne Grafikunterstützung (ungefähr 0,5 MB pro Sitzung). Je nach Konfiguration des Systems sollte die Grafikunterstützung nur verwendet werden, wenn dies erforderlich ist.
+
+////9999
+
+++++"Tippgeschwindigkeit bei gehaltener Taste"
+Es ist keine Emulatoreinstellung verfügbar, mit der die Geschwindigkeit angepasst werden kann, mit der Tastenanschläge verarbeitet werden, wenn eine Taste gedrückt gehalten wird. Möglicherweise ist eine Systemeinstellung verfügbar, je nachdem welches System verwendet wird.
+
+++++"Hotspots"
+////5250
+Die Maus kann für die Navigation in Anwendungsmenüs durch Klicken auf Hotspot-Positionen verwendet werden. Unter "Verschiedene Einstellungen" können Sie Hotspots inaktivieren, Hotspots für ein Klicken mit der primären Maustaste aktivieren oder Hotspots für Doppelklicken mit der primären Maustaste aktivieren. Die folgenden Hotspot-Funktionen werden unterstützt.
+////3270
+Die Maus kann für die Navigation in Anwendungsmenüs durch Klicken auf Hotspot-Positonen verwendet werden (diese Funktion wird manchmal auch als "Funktion für automatische Aktion" bezeichnet). Unter "Verschiedene Einstellungen" können Sie Hotspots inaktivieren, Hotspots für ein Klicken mit der primären Maustaste aktivieren oder Hotspots für Doppelklicken mit der primären Maustaste aktivieren. Die folgenden Hotspot-Funktionen werden unterstützt.
+////9999
+
+Durch Klicken mit der primären Maustaste (normalerweise die linke Maustaste) auf den Text einer Funktionstaste wird das Drücken dieser Funktionstaste emuliert (z. B. "F3=Verlassen").
+
+////5250
+Durch Klicken mit der primären Maustaste auf einen erkannten Menü-Hotspot wird das Drücken der Menünummer, gefolgt von der Eingabetaste, emuliert (z. B. "1. Benutzertasks").
+
+Durch Klicken mit der primären Maustaste auf "Weiter..." wird vorwärts durch die Daten geblättert; durch Klicken auf "Unten" wird rückwärts durch die Daten geblättert. Durch Klicken mit der sekundären Maustaste auf "Weiter..." oder "Unten" wird rückwärts durch die Daten geblättert.
+
+In einigen Fällen wird "Weiter -/+" angezeigt. Durch Klicken mit der primären Maustaste auf "-" wird rückwärts durch die Daten geblättert. Durch Klicken mit der primären Maustaste auf "+" wird vorwärts durch die Daten geblättert.
+
+Die Eingabetaste wird durch Doppelklicken mit der primären Maustaste emuliert. Durch das erste Klicken wird der Cursor positioniert, durch das zweite Klicken wird die Eingabetaste aktiviert.
+
+Ein Operatorfehler (ein solcher Fehler wird normalerweise im unteren Bereich einer 3270-Sitzung angezeigt und ist das Ergebnis eines Eingabefehlers) kann durch Klicken mit der primären Maustaste auf die Fehlerzeile rückgängig gemacht werden.
+////3270
+Ein Klicken der primären Maustaste auf "PA1", "PA2" oder "PA3" emuliert das Drücken dieser Tasten.
+////9999
+
+Die Standardaktion der primären Maustaste ist die Positionierung des Textcursors.
+
+Im Folgenden werden in diesem Abschnitt Einzelheiten zu Funktionen von 3270-Hotspots behandelt.
+
+////5250
+Mausereignisse werden normalerweise ignoriert, wenn die Tastatur gesperrt ist oder sich im Operatorfehlerstatus befindet. Eine Ausnahme ist, wenn Sie mit der primären Maustaste auf die Fehlerzeile klicken; dadurch wird ein Operatorfehler rückgängig gemacht.
+
+Für i5/OS-Anwendungen kann die Maus Ereignisse an die entsprechende i5/OS-Anwendung zurückgeben. Diese Funktion hat Priorität vor Hotspot-Funktionen.
+
+Details zur Funktionstastenemulation: Sie können mit der primären Maustaste auf jede Art von erkanntem Funktionstastentext klicken, z. B. "F23=Anfangsmenü festlegen". Folgende Funktionstastenformate werden erkannt:
+
+- "Fx=", wobei x eine Zahl von 1 bis 9 sein kann.
+- "Fyz=", wobei y "0", "1" oder "2" sein kann. Wenn y "0" ist, kann z eine Zahl von 1 bis 9 sein. Wenn y "1" ist, kann z eine Zahl von 0 bis 9 sein. Wenn y "2" ist, kann z eine Zahl von 0 bis 4 sein.
+- "PFx=" wird unterstützt wie "Fx=".
+- "PFyz=" wird unterstützt wie "Fyz=".
+
+Der Funktionstastentext wird in einem Eingabefeld nicht erkannt.
+
+Details zu Menü-Hotspots: Sie können mit der primären Maustaste auf jede Art von erkanntem Menüpunkttext klicken, z. B. "1. Benutzertasks". Folgende Merkmale gelten für erkannten Menüpunkttext:
+
+- Das Format des Menüpunkttexts lautet "xxn.yzzzzzzzz", wobei jedes x ein Leerzeichen, eine Null oder ein Anzeigeattribut ist. n kann eine ein- bis fünfstellige Zahl mit den Ziffern "0" bis "9" sein. y kann ein Leerzeichen oder eine Null sein. zz können alle Zeichen mit Ausnahme eines erkannten xx-Musters sein.
+- Ein x-Zeichen ist zulässig, wenn sich das x-Zeichen in Spalte 1 befindet.
+- Ein Menüpunkt kann bis zum Ende einer Zeile erkannt werden.
+
+Menüpunkttext wird nicht in einem Eingabefeld erkannt.
+
+Wenn ein gültiger Menü-Hotspot erkannt wird, wird die ein- bis fünfstellige Zahl automatisch einem gültigen Eingabefeld zugeordnet. Wenn sich der Cursor zu diesem Zeitpunkt in einem gültigen Eingabefeld befindet, wird die Zahl zugeordnet und der Rest des Eingabefelds entfernt. Eine Eingabetaste wird emuliert. Wenn der Cursor sich zu diesem Zeitpunkt nicht in einem gültigen Eingabefeld befindet, wird eine gültige Eingabe gesucht.
+////3270
+Details zur Funktionstastenemulation: Sie können mit der primären Maustaste auf jede Art von erkanntem Funktionstastentext klicken, z. B. "F23=Anfangsmenü festlegen". Folgende Funktionstastenformate werden erkannt:
+
+- "Fx=", wobei x eine Zahl von 1 bis 9 sein kann.
+- "Fyz=", wobei y "0", "1" oder "2" sein kann. Wenn y "0" ist, kann z eine Zahl von 1 bis 9 sein. Wenn y "1" ist, kann z eine Zahl von 0 bis 9 sein. Wenn y "2" ist, kann z eine Zahl von 0 bis 4 sein.
+- "PFx=" wird unterstützt wie "Fx=".
+- "PFyz=" wird unterstützt wie "Fyz=".
+- "x" wird unterstützt wie "Fx=".
+- "yz=" wird unterstützt wie "Fyz=".
+
+Der Funktionstastentext wird in einem Eingabefeld nicht erkannt.
+////9999
+////5250
+++++"Bild-/Faxanzeige"
+Der 3270-Emulator unterstützt das Anzeigen und Drucken von Bildern und Faxnachrichten. Die unterstützten Formate/Algorithmen werden im Folgenden beschrieben. Anmerkung: Damit der 3270-Emulator ein Bild oder Fax anzeigen kann, muss eine i5/OS-Anwendung ausgeführt werden, die für Bilder und Faxnachrichten aktiviert ist.
+
+Blättern für Bilder/Faxnachrichten: Sie können mit der Maus über die lokale Schiebeleiste für Bilder/Faxnachrichten in Bild-/Faxdaten blättern. Klicken Sie mit der primären Maustaste (normalerweise die linke Maustaste) auf ein Bild bzw. eine Faxnachricht, und verschieben Sie den Mauszeiger, um in den Daten zu blättern. Sie können auch die Tastatur verwenden, um in Bild-/Faxdaten zu blättern. Drücken Sie die Alt-Taste und eine der folgenden Tasten des numerischen Tastenblocks: "2", "4", "6" oder "8".
+
+Skalieren von Bildern/Faxnachrichten: Ihre Anwendung für Bilder/Faxnachrichten verfügt möglicherweise über Schaltflächen zum Skalieren. Sie können Bild-/Faxdaten auch skalieren, indem Sie mit der sekundären Maustaste auf die Bild-/Faxdaten klicken, den Mauszeiger verschieben, und die Maustaste loslassen. Die Bild-/Faxdaten innerhalb des rechteckigen Bereichs werden vergrößert angezeigt. Klicken Sie doppelt mit der sekundären Maustaste, um die ursprüngliche Skalierung wiederherzustellen.
+
+Durch das Balkendiagrammsymbol, das rechts in der Statuszeile angezeigt wird, wird angegeben, ob die Bild-/Faxunterstützung aktiviert ist.
+
+Anmerkung: Zum Anzeigen eines Bilds oder einer Faxnachricht ist für den 3270-Emulator mehr Systemspeicher erforderlich als für 3270-Sitzungen, in denen keine Bilder oder Faxnachrichten angezeigt werden. Wenn ein Bild oder eine Faxnachricht für die Anzeige auf Ihrem System zu groß ist, weil nicht ausreichend Speicher zur Verfügung steht, wird eine Fehlernachricht angezeigt.
+
+Informationen zum Drucken eines Bildes oder einer Faxnachricht, die in einer 3270-Sitzung angezeigt werden, finden Sie unter "Anzeigedruck".
+
+Der 3270-Emulator unterstützt folgende Bild-/Faxformate:
+
+1) TIFF-Format (TIFF ist eine Marke der Aldus Corporation): Pro TIFF-Format wird nur ein Bild unterstützt. Wenn eine TIFF-Datei mehrere Bilder enthält, muss i5/OS die einzelnen TIFF-Bilder separat senden. Folgende TIFF-Komprimierungsalgorithmen werden unterstützt:
+
+- Keine Komprimierung
+- CCITT Group 3 Fax, eindimensional geänderte Huffman-Laufzeitcodierung (Run Length Encoding)
+- CCITT Group 3 Faxkomprimierung
+- CCITT Group 4 Faxkomprimierung
+- PackBits-Laufzeitcodierung (Run Length Encoding)
+- Farbe
+- Graustufen
+
+2) IOCA-Format (nur Funktionssatz 10): Pro IOCA-Format wird nur ein Bild unterstützt. Folgende fünf IOCA-Komprimierungsalgorithmen mit Funktionssatz 10 werden unterstützt:
+
+- IBM MMR (Modified CCITT Modified Read-Algorithmus)
+- Keine Komprimierung
+- CCITT Group 3 Fax, eindimensional geänderte Huffman-Laufzeitcodierung (Run Length Encoding)
+- CCITT Group 3 Faxkomprimierung
+- CCITT Group 4 Faxkomprimierung
+
+3) PCX-Format: Folgende Komprimierungsalgorithmen werden unterstützt:
+- Keine Komprimierung
+- Laufzeitcodierung (Run Length Encoding)
+- Farbe
+
+4) 8 Bit Baseline DCT mit JPEG-Farb-/Graustufen (erweitertes Baseline wird nicht unterstützt)
+
+5) Standalone Group 3 Faxkomprimierung: Group 3 Fax von 4 Bytes Länge, 8-Bytes (normalerweise auf null gesetzt) und Faxnachrichten mit Group 3-Komprimierung
+////9999
+
+++++"Tastenkombinationen"
+////5250
+Einige 3270-Tastaturfunktionen sind auf PC-Tastaturen nicht gekennzeichnet. Die Tastaturfunktionen und Standardtastenkombinationen sind im Folgenden aufgelistet. Die OV/400-Editoranzeige bietet eindeutige Tastaturfunktionen, die unter "Tastenkombinationen des OV/400-Editors" beschrieben werden. Mit Hilfe des 3270-Programms zur Tastaturneubelegung können Sie die Positionen von 3270-Tastaturfunktionen auf der Tastatur neu festlegen.
+
+////SORT  This line tells the viewer program to place the following information in alphabetical order when displaying this topic.
+Abruf:  Taste "Esc"
+
+Zeichenvorschub:  Umschalttaste + Rückschritt-Taste
+
+Zeichenrückschritt:  Rückschritt-Taste
+
+Inhalt löschen:  Umschalttaste + Bild auf
+
+Cursorauswahl:  Alt + Einfg
+
+Dup:  Umschalttaste + Einfg
+
+Eingabe:  Eingabetaste (auch: Umschalttaste + Eingabetaste) (unter "Verschiedene Einstellungen" kann die Funktion dieser Taste mit der der Strg-Taste getauscht werden)
+
+Feldende löschen:  Alt + Entf
+
+Eingabe löschen:  Alt + Ende
+
+Erweiterte Anzeigeattribute:  Alt + l (Buchstabe l)
+
+F13 - F24:  Umschalttaste + F1 - F12
+
+Schneller Positionsanzeiger links: Alt + Cursor nach links
+
+Schneller Positionsanzeiger rechts: Alt + Cursor nach rechts
+
+Feld verlassen:  + (auf der rechten Seite der Tastatur, wenn der numerische Tastenblock nicht gesperrt ist) (unter "Verschiedene Einstellungen" kann die Funktion dieser Taste mit der der Strg-Taste oder der Eingabetaste getauscht werden)
+
+Feld markieren:  Umschalttaste + Pos1
+
+Feld Minus:  - (auf der rechten Seite der Tastatur, wenn der numerische Tastenblock nicht gesperrt ist)
+
+Feld Plus:  + (auf der rechten Seite der Tastatur, wenn der numerische Tastenblock nicht gesperrt ist) Anmerkung: "Feld verlassen" und "Feld Plus" bieten dieselbe Funktion.
+
+Hilfe:  Rollen (Sperrtaste)
+
+Hexadezimaltaste:  Alt + 7 (numerische Taste "7" über den Alphazeichentasten)
+
+Bild vorblättern: Alt + Numerischer Tastenblock "2"
+
+Bild nach links blättern: Alt + Numerischer Tastenblock "4"
+
+Bild nach rechts blättern: Alt + Numerischer Tastenblock "6"
+
+Bild zurückblättern: Alt + Numerischer Tastenblock "8"
+
+Anzeigedruck:  Umschalttaste + Anzeige drucken (unter "Verschiedene Einstellungen" können Sie die Funktion "Anzeige drucken" ohne Umschalttaste aktivieren)
+
+Neue Zeile:  Strg-Taste (über "Verschiedene Einstellungen" können Sie die Funktion dieser Taste mit der der Eingabetaste austauschen)
+
+PA1:  Umschalttaste + Entf
+
+PA2:  Umschalttaste + Ende
+
+PA3:  Umschalttaste + Bild ab
+
+Wiedergabe:  Alt + Bild auf
+
+Aufzeichnung:  Alt + Pos1
+
+Grundstellung:  Strg-Taste (unten links auf der Tastatur)
+
+Vorwärts blättern:  Bild auf
+
+Zurück blättern:  Bild ab
+
+Lineal:  Alt + Bild ab
+
+Systemanfrage:  Alt + Anzeige drucken (Anmerkung: Zum Senden der Daten an i5/OS müssen Sie anschließend die Eingabetaste drücken)
+
+Testanforderung:  Alt + Sperrtaste für Rollen
+////SORTOFF  This line tells the viewer program to stop alphabetical ordering.
+
+////3270
+Einige 3270-Tastaturfunktionen sind auf PC-Tastaturen nicht gekennzeichnet. Die Tastaturfunktionen und Standardtastenkombinationen sind im Folgenden aufgelistet. Mit Hilfe des 3270-Programms zur Tastaturneubelegung können Sie die Positionen von 3270-Tastaturfunktionen auf der Tastatur neu festlegen.
+
+////SORT  This line tells the viewer program to place the following information in alphabetical order when displaying this topic.
+Abruf:  Umschalttaste + Taste "Esc"
+
+Wort rückwärts löschen:  Alt + Rückschritt-Taste
+
+Ein Wort zurück:  Linke Strg-Taste + Cursor nach links oder Alt + b
+
+Inhalt löschen:  Taste "Esc" oder Pause
+
+Dup:  Alt + Ende
+
+Eingabe:  Eingabetaste (über "Verschiedene Einstellungen" oder mit Hilfe des Konfigurationsprogramms des IBM 3270-Emulators können Sie die Funktion dieser Taste mit der der rechten Strg-Taste austauschen)
+
+Feldende löschen:  Linke Strg-Taste + Ende oder linke Strg-Taste + k
+
+Eingabe löschen:  Linke Strg-Taste + Entf
+
+F13 - F24:  Umschalttaste + F1 - F12
+
+Feld markieren:  Umschalttaste + Pos1
+
+Ein Wort vorwärts:  Linke Strg-Taste + Cursor nach rechts oder Alt + f
+
+Wort löschen:  Alt + d
+
+Anzeigedruck:  Umschalttaste + Anzeige drucken (unter "Verschiedene Einstellungen" können Sie die Funktion "Anzeige drucken" ohne Umschalttaste aktivieren)
+
+Neue Zeile:  Rechte Strg-Taste (über "Verschiedene Einstellungen" oder mit Hilfe des Konfigurationsprogramms des IBM 3270-Emulators können Sie die Funktion dieser Taste mit der der Eingabetaste austauschen)
+
+Menüleiste hervorheben:  Linke Strg-Taste + Cursor aufwärts (hebt abwechselnd die Emulator-Menüleiste und den Haupttextbereich ohne Verwendung der Maus hervor)
+
+PA1:  Anzeige drucken, linke Strg-Taste + F1 oder linke Strg-Taste + z
+
+PA2:  Sperrtaste für Rollen, linke Strg-Taste + F2 oder linke Strg-Taste + l (Buchstabe "l")
+
+PA3:  Linke Strg-Taste + F3
+
+Wiedergabe:  Alt + Bild auf
+
+Aufzeichnung:  Alt + Pos1
+
+Grundstellung:  Alt + Taste "Esc" oder linke Strg-Taste + g
+
+Lineal:  Alt + Bild ab
+
+Systemanfrage:  Alt + Anzeige drucken
+
+Sperre aufheben:  Linke Strg-Taste + u
+////SORTOFF  This line tells the viewer program to stop alphabetical ordering.
+////9999
+
+++++"Tastaturmakros"
+Mit Hilfe von Tastaturmakros können Sie auf einfache Weise eine Zeichenfolge in eine 3270-Sitzung einfügen. Mit dem Programm zur Tastaturneubelegung können Sie einfache Tastaturmakros (mit bis zu maximal etwa 100 Zeichen) erstellen. Sie können außerdem ein einfaches Tastaturmakro für eine Taste des Tastenblocks festlegen.
+
+Sie können mit dem Aufzeichnungs-/Wiedergabeprogramm einfache oder komplexe Tastaturmakros erstellen. Die jeweilige Wiedergabedatei kann über das Pulldown-Menü "Wiedergabe" des Emulators, eine Tastenkombination, die über das Programm zur Tastaturneubelegung festgelegt wurde, oder mit einer Taste des Tastenblocks gestartet werden. Weitere Informationen hierzu finden Sie unter "Wiedergabe".
+  
+++++"Tastaturneubelegung"
+Mit dem 3270-Programm zur Tastaturneubelegung können Sie die Funktionen von Tasten innerhalb einer 3270-Sitzung ändern.
+
+Die Berechtigung zur Verwendung dieses Programm kann mit dem Konfigurationsprogramm des IBM 3270-Emulators geändert werden. Ansonsten könnten Benutzer mit dem Programm zur Tastaturneubelegung unbeabsichtigt die Funktionen von Tasten ändern und auf diese Weise Eingabefehler hervorrufen. Das 3270-Programm zur Tastaturneubelegung bietet drei Berechtigungsebenen:
+
+1) Aktiviert: Sie sind berechtigt, die Tastaturbelegung für 3270-Sitzungen zu ändern.
+
+2) Inaktiviert: Sie sind nicht berechtigt, das 3270-Programm zur Tastaturneubelegung zu verwenden. Der Pulldown-Menüpunkt "Tastaturneubelegung..." ist nicht verfügbar.
+
+3) Verdeckt: Sie sind nicht berechtigt, das 3270-Programm zur Tastaturneubelegung zu verwenden. Der Pulldown-Menüpunkt "Tastaturneubelegung..." wird nicht angezeigt.
+
+Das 3270-Programm zur Tastaturneubelegung verfügt über einen eigenen Hilfetext. Weitere Informationen zum 3270-Programm zur Tastaturneubelegung finden Sie in diesem Hilfetext.
+
+Anmerkung: Das Programm zur Tastaturneubelegung ist auf VGA-Bildschirmen nicht verfügbar. VGA-Bildschirme bieten nur eine geringe Auflösung (640 x 480) und sind normalerweise ältere PC-Bildschirme.
+
+Beim Starten einer 3270-Sitzung sucht der 3270-Emulator nach einer Tastaturbelegungsdatei für die Sitzung. Der Tastaturtyp muss übereinstimmen. Tastaturbelegungsdateien werden jeweils für einen Tastaturtyp verwendet (z. B. für eine PC-Tastatur mit 102 Tasten). Wenn eine entsprechende Tastaturbelegungsdatei gefunden wird, wird sie für die 3270-Sitzung verwendet. Bei der Suche nach dieser Datei gilt folgende Reihenfolge:
+
+//// $HOME/.iSeriesAccess/ibm3270/K should not be translated
+- Es wird nach einer Datei vom Typ "-keyfile" (Tastaturbelegungsdatei) gesucht, die Sie mit Hilfe des Programms zur Tastaturneubelegung erstellt haben (gespeichert im Verzeichnis $HOME/.iSeriesAccess/ibm_3270/K).
+
+- Es wird nach einer sitzungsspezifischen Tastaturbelegungsdatei gesucht, die Sie mit Hilfe des Programms zur Tastaturneubelegung erstellt haben.
+
+- Es wird nach einer Standardtastaturbelegungsdatei gesucht, die Sie mit Hilfe des Programms zur Tastaturneubelegung erstellt haben.
+
+- Wenn keine der oben aufgeführten Dateien gefunden wird, verwendet der 3270-Emulator die Standardtastaturaktionen.
+
+++++"Sprache einer 3270-Sitzung"
+Die Sprache, in der dieser Emulator-Hilfetext, die Menüleiste, die Pulldown-Menüs und die Dialogfenster angezeigt werden, richtet sich nach der Sprache, die für Systemnachrichten ausgewählt ist.
+
+Die Sprache für die 3270-Sitzungen entspricht standardmäßig der Sprache für die Tastatur oder der Einstellung der Umgebungsvariablen LANG. Die Sprache für 3270-Sitzungen entspricht der Sprache der 3270-Daten, die im 3270-Hauptfenster angezeigt werden. Sie können für bestimmte oder für alle 3270-Sitzungen eine andere Sprache als die Standardsprache verwenden.
+////3270
+
+Die Sprache für 3270-Sitzungen sollte mit der Primärsprache auf dem System/390-Zielsystem übereinstimmen.
+////9999
+
+////In the paragraph below, "$LANG" and "@euro" must not be translated.
+Der Emulator verwendet die Ländereinstellung, die durch die Systemumgebungsvariable $LANG angegeben wird. "@euro" kann zu $LANG hinzugefügt werden, um das Euro-Symbol zu aktivieren (z. B. de_DE@euro).
+
+////In the paragraph below, "-LANGID" must not be translated.
+Sie können mit Hilfe des optionalen Parameters -LANGID eine andere Sprache für eine 3270-Sitzung als die Standardsprache verwenden. Der Parameter -LANGID kann wie folgt im Konfigurationsprogramm des IBM 3270-Emulators festgelegt werden. Wählen Sie die Sitzung aus, und klicken Sie auf "Verbindung" -> "Bearbeiten". Klicken Sie auf "Erweiterte 3270-Verbindung..." und in das Feld "Weitere Parameter", geben Sie "-LANGID", ein Leerzeichen und einen Parameter ein (der Parameter wird im Folgenden beschrieben). Bei der Eingabe von -LANGID und des Parameters muss die Groß-/Kleinschreibung berücksichtigt werden.
+
+////In the following line, "-LANGID" must not be translated.
+-LANGID wird gefolgt von der Ländereinstellung für die gewünschte Sprache. Durch die Angabe von "-LANGID en_US" werden z. B. der Clientwert für $LANG außer Kraft gesetzt und die Werte für Englisch verwendet, durch die Angabe von "-LANGID es_ES" werden die Werte für Spanisch (Spanien) verwendet.
+
+   
+Anmerkung: Ein Benutzer des IBM 3270-Emulators kann gleichzeitig mehrere 3270-Sitzungen in verschiedenen Sprachen verwenden.
+
+////5250
+++++"Modus für große Anzeige: 27 mal 132"
+Sie können die Anzeigegröße von 27 Zeilen mal 132 Spalten für alle 3270-Sitzungen mit Hilfe des Konfigurationsprogramms des IBM 3270-Emulators inaktivieren (3270-Einstellungen).
+
+////In the paragraph below, "-wide disable" must not be translated.
+Sie können die Anzeigegröße von 27 Zeilen mal 132 Spalten für bestimmte 3270-Sitzungen mit Hilfe des Konfigurationsprogramms des IBM 3270-Emulators inaktivieren. Wählen Sie die Sitzung aus, und klicken Sie auf "Verbindung" -> "Bearbeiten". Klicken Sie auf "Erweiterte 3270-Verbindung...", und geben Sie Folgendes im Feld "Weitere Parameter" ein: -wide disable.
+
+Anmerkung: Viele i5/OS-Anzeigen verwenden eine Einstellung von 24 Zeilen mal 80 Spalten, unabhängig von der Einstellung für die Option "27 mal 132". Wenn i5/OS eine Anzeige von 27 mal 132 sendet, wird im 3270-Fenster möglicherweise die Schriftgröße geändert und das Fenster verschoben. Dieses Verhalten kann unter "Verschiedene Einstellungen" angepasst werden.
+
+Anmerkung: Auf älteren (VGA-)Bildschirmen können möglicherweise 27 Zeilen mal 132 Spalten nicht angezeigt werden. Der Bildschirm muss im Allgemeinen eine Auflösung ab 1024 x 768 (und die zugehörige Konfiguration) unterstützen, um 27 Zeilen mal 132 Spalten anzeigen zu können. 27 Zeilen mal 132 Spalten sind bei einer Bildschirmauflösung von 800 x 600 im Blättermodus verfügbar. Dafür muss unter "Weitere Parameter" der Parameter 27X132_IN_800X600 auf ENABLE (Aktivieren) gesetzt werden.
+
+////9999
+////++++"Left/Right Handed Mouse"
+////The mouse on a IBM Thin Client defaults to being a right handed mouse. The primary mouse button is the left mouse button. The primary mouse button on a left handed mouse is the right mouse button.
+
+////3270
+++++"Lichtstiftemulation"
+Mit Hilfe des 3270-Programms zur Tastaturneubelegung kann ein Lichtstift emuliert werden. Weitere Informationen zur Lichtstiftemulation finden Sie im Hilfetext zur Tastaturneubelegung.
+////9999
+
+++++"Maximieren"
+Das 3270-Fenster kann maximiert werden, so dass es die gesamte Anzeige ausfüllt. Klicken Sie auf das Rechteck in der oberen rechten Ecke des Fensters, um zwischen der normalen Fenstergröße und dem maximierten Fenster hin- und herzuschalten.
+
+++++"Verschiedene Einstellungen"
+////MIS This comment line is used by the help viewer program to find the Miscellaneous Preferences topic. This line belongs after the Miscellaneous Preferences topic (do not translate this comment line).
+Unter "Verschiedene Einstellungen" können Sie die Einstellungen für 3270-Sitzungen anpassen, wie z. B. die Cursordarstellung, die Funktion der Rückschritt-Taste und die Linealsteuerung.
+
+Anmerkung: Über das Konfigurationsprogramm des IBM 3270-Emulators können Sie die Einstellungen unter "Verschiedene Einstellungen" inaktivieren.
+
+Über das Konfigurationsprogramm des IBM 3270-Emulators können Sie Standardeinstellungen festlegen. Weitere Informationen hierzu finden Sie unter "Weitere Parameter".
+
+In der linken Hälfte des Fensters "Verschiedene Einstellungen" sind die Einstellungen aufgeführt, die geändert werden können. Es kann jeweils nur eine Einstellung ausgewählt werden.
+
+In der rechten Hälfte des Fensters "Verschiedene Einstellungen" werden die möglichen Optionen für die ausgewählte Einstellung angezeigt. Wenn eine Einstellung geändert wird, werden alle 3270-Emulationssitzungen temporär mit der neuen Einstellung aktualisiert. Wenn Sie z. B. die Cursorform ändern möchten, wählen Sie einfach die gewünschte Cursorform aus. Die Einstellungen werden nicht durch die Auswahl einer Einstellung in der linken Hälfte des Fensters geändert.
+
+Im unteren Bereich des Fensters "Verschiedene Einstellungen" befinden sich vier Schaltflächen:
+
+1) Klicken Sie auf "Speichern", um geänderte Einstellungen für eine spätere Verwendung zu speichern. Die Einstellungen werden in Ihrem Benutzerverzeichnis gespeichert.
+
+2) Klicken Sie auf "Verlassen", um das Fenster "Verschiedene Einstellungen" zu verlassen.
+
+3) Klicken Sie auf "Als Standards setzen", um alle Einstellungen auf die Standardwerte zurückzusetzen.
+
+4) Klicken Sie auf "Hilfe", um diesen Hilfetext anzuzeigen.
+
+Die Einstellungen unter "Verschiedene Einstellungen" werden für alle 3270-Sitzungen eines bestimmten Benutzers verwendet.
+
+////5250
+Wenn Sie die Funktionen der Eingabetaste/Taste zum Verlassen des Felds (Eingabetaste und Strg-Taste) oder der Drucktaste (Taste zum Drucken der Anzeige) ändern, können diese Tasten über das 3270-Programm zur Tastaturneubelegung nicht neu belegt werden.
+
+////3270
+Wenn Sie die Funktion der Drucktaste (Taste zum Drucken der Anzeige) ändern, kann diese Taste über das 3270-Programm zur Tastaturneubelegung nicht neu belegt werden.
+
+////9999
+
+++++"Mausfunktionen"
+////The mouse controls many functions on the Thin Client.
+
+////The mouse moves windows (by clicking and dragging the window title), changes window size (by pulling down "Fonts...", or dragging a window side or corner), and re-tiles windows.
+
+Mit der Maus können Sie folgende Aktionen ausführen:
+
+- Zugriff auf die Menüleiste und die Funktionen in den Pulldown-Menüs.
+
+- Ausschneiden, Kopieren und Einfügen: weitere Informationen hierzu finden Sie unter "Ausschneiden", "Kopieren" und "Einfügen".
+
+- 3270-Hotspots aktivieren: Beispielsweise durch die Auswahl von Funktionstasten (Weitere Informationen hierzu finden Sie unter "Hotspots").
+
+- Cursor positionieren (Standardaktion der primären Maustaste, normalerweise die linke Maustaste).
+
+////5250
+- Erweiterte 3270-Benutzerschnittstellenkonstrukte auswählen und steuern, wie z. B. Auswahlfelder, Schaltflächen und Schiebeleisten.
+
+////9999
+++++"Mausgeschwindigkeit"
+Über den IBM 3270-Emulator kann die Mausgeschwindigkeit (die Geschwindigkeit, mit der sich der Mauszeiger im Verhältnis zur Bewegung der Maus bewegt) nicht gesteuert werden.
+
+++++"Neue 3270-Sitzung"
+Über diesen Pulldown-Menüpunkt können Sie zusätzliche 3270-Sitzungen starten. Sie werden aufgefordert, den Hostnamen einzugeben. Der Name des aktuellen Hosts ist als Standardwert verfügbar. Als Hostname kann der Name des Namensservers des Systems oder die (numerische) IP-Adresse des Systems angegeben werden.
+
+////3270
+Wenn Sie eine neue 3270-Sitzung über das Menü "Befehl" starten, können Sie verschiedene Optionen für die Anzeigegröße auswählen. Der 3270-Emulator unterstützt folgende Terminaltypen und die entsprechenden Anzeigegrößen:
+
+  Mod 2 - 24 x 80
+  Mod 3 - 32 x 80 (Standardwert)
+  Mod 4 - 43 x 80
+  Mod 5 - 27 x 132
+
+Anmerkung: 32 x 80 ist die einzige Anzeigegröße, die die Darstellung von Grafiken unterstützt.
+
+Wenn eine Anzeigegröße nicht aufgeführt ist, ist die Bildschirmauflösung (normalerweise bei älteren Bildschirmmodellen) nicht geeignet, diese Anzeigegröße darzustellen (oder die Konfiguration Ihres Systems sieht eine niedrigere Auflösung vor). Anmerkung: Wenn Sie eine Anzeigegröße für eine Sitzung angeben, die größer ist als die, die mit der verwendeten Auflösung dargestellt werden kann, wird die Anzeigegröße 24 x 80 verwendet.
+
+////9999
+++++"Weitere Parameter"
+Im Feld "Weitere Parameter" des Fensters für die erweiterten 3270-Emulatorverbindungen im Konfigurationsprogramm des IBM 3270-Emulators können Sie 3270-Emulatoroptionen festlegen. Wählen Sie die Sitzung aus, und klicken Sie auf "Verbindung" -> "Bearbeiten". Klicken Sie auf "Erweiterte 3270-Verbindung...", und bearbeiten Sie die gewünschten Optionen unter "Weitere Parameter".
+
+Das Minuszeichen ("-") muss vor den einzelnen Parametern eingegeben werden. Bei der Angabe der Parameter muss die Groß-/Kleinschreibung berücksichtigt werden. Mehrere Optionen unter "Weitere Parameter" müssen durch ein Leerzeichen voneinander getrennt werden. Folgende Optionen sind unter "Weitere Parameter" verfügbar:
+
+//// For the rest of this topic, the parameters and values (in upper case) must not be translated.
+-TITLE_OPTION wird gefolgt von TEXT_AND_SESSION_ID (Standardwert - Titeltext und Sitzungs-ID), TEXT_ONLY (nur Titeltext), SESSION_ID_ONLY (nur Sitzungs-ID), TEXT_AND_HOST (Titeltext und Hostname) oder TEXT_HOST_AND_SESSION_ID (Titeltext, Hostname und Sitzungs-ID).
+
+-LANGID wird gefolgt von der Sprache dieser 3270-Sitzung, wie z. B. "en_US" für amerikanisches Englisch.
+
+-EURO und -NOEURO aktivieren bzw. inaktivieren das Euro-Symbol für diese 3270-Sitzung.
+
+////In the following line, do not translate -playback).
+-PLAYBACK (oder -playback) wird gefolgt von dem Namen einer Wiedergabedatei für automatisches Anmelden (Groß-/Kleinschreibung berücksichtigen).
+
+-KEYPAD (oder -keypad) wird gefolgt von dem Namen einer Datei für den Dialogfenstertastenblock (Groß-/Kleinschreibung berücksichtigen). Der Tastenblock wird angezeigt, wenn die 3270-Sitzung gestartet wird.
+
+-KEYFILE wird gefolgt von dem Namen einer Tastaturbelegungsdatei (Groß-/Kleinschreibung berücksichtigen). Mit dem Parameter -KEYFILE können Sie eine benannte Standardtastaturbelegungsdatei ändern.
+
+-DISPLAY_NAME gibt den Namen dieser 3270-Sitzung an.
+
+-ICONIC gibt an, dass die 3270-Sitzung als Symbol gestartet werden soll.
+
+////5250
+-STAND_ALONE gibt an, dass die 5250-Sitzung als eigener Prozess ausgeführt und nicht an eine andere 5250-Sitzung angehängt wird.
+
+-PORT wird gefolgt von einer i5/OS-Portnummer. Die Standardportnummer ist 23.
+////3270
+-PORT wird gefolgt von einer System/390-Portnummer. Die Standardportnummer ist 23.
+
+////5250
+++++"OV/400-Editorfunktion"
+////OVE This comment line is used by the help viewer program to find the OV/400 Editor Function topic. This line belongs after the OV/400 Editor Function topic (do not translate this comment line).
+Das 3270-Programm verfügt über eine OV/400-Editorfunktion, die den 3477-, 3487- und 3488-InfoWindow II-Terminals ähnelt. Informationen zu Tastenkombinationen finden Sie unter "Tastenkombinationen des OV/400-Editors".
+////9999
+
+////5250
+++++"Tastenkombinationen des OV/400-Editors"
+Viele Tastenfunktionen des OV/400-Editors sind auf PC-Tastaturen nicht gekennzeichnet. Diese Tastaturfunktionen und Standardtastenkombinationen sind im Folgenden aufgelistet. Mit Hilfe des 3270-Programms zur Tastaturneubelegung können Sie die Positionen von 3270-Tastaturfunktionen auf der Tastatur neu festlegen.
+
+////SORT  This line tells the viewer program to place the following information in alphabetical order when displaying this topic.
+Anfang Fettschrift:  Alt + b
+
+Anfang Unterstreichung:  Alt + u
+
+Zeilenanfang:  Umschalttaste + Cursor nach links (Pfeil nach links)
+
+Seitenende:  Umschalttaste + Cursor abwärts (Pfeil nach unten)
+
+Zeilenschaltung:  Alt + Eingabetaste in der Haupttastatur (nicht die Eingabetaste auf der rechten Seite der Tastatur)
+
+Text zentrieren:  Alt + c
+
+Textattribute anzeigen:  Alt + i
+
+Ende aktives Attribut:  Alt + j
+
+Ende laufende Spalte:  Alt + d
+
+Zeilenende:  Umschalttaste + Cursor nach rechts (Pfeil nach rechts)
+
+1/2 Zeile tiefer:  Alt + h
+
+1/2 Zeile höher:  Alt + y
+
+Tastaturänderung (Symbole):  Alt + a
+
+Nächster Stoppcode:  Alt + n
+
+Seitenende:  Alt + p
+
+Unveränderliche Zeilenschaltung:  - oder + (auf der rechten Seite der Tastatur, wenn der numerische Tastenblock nicht gesperrt ist)
+
+Unveränderlicher Leerschritt:  Keine Standardtastenkombination
+
+Unveränderlicher Tabulator:  Alt + t
+
+Stoppcode einfügen:  Alt + s
+
+Seitenanfang:  Umschalttaste + Cursor aufwärts (Pfeil nach oben)
+
+Wortunterstreichung:  Alt + w
+////SORTOFF  This line tells the viewer program to stop alphabetical ordering.
+////9999
+
+++++"Einfügen"
+Daten, die zuvor in den " Zwischenablagepuffer" ausgeschnitten oder kopiert wurden, können in eine 3270-Sitzung eingefügt werden.
+
+Verwenden Sie die Option "Einfügen", um eine Kopie der Daten, die im Zwischenablagepuffer gespeichert sind, in die 3270-Sitzung an die Position des Mauszeigers zu übertragen.
+
+Sie können auch die Tastatur verwenden, um Daten einzufügen. Halten Sie die Umschalttaste gedrückt, und drücken Sie die sekundäre Maustaste (normalerweise die rechte Maustaste). Unter "Verschiedene Einstellungen" können Sie als Position für das Einfügen der Daten mit Hilfe der Tastatur die Position des Mauszeigers anstelle der Position des Textcursors festlegen.
+
+Wenn die Daten aus einem Blockkopiervorgang innerhalb einer 3270-Sitzung stammen, werden sie als Block eingefügt.
+
+////5250
+Einschränkung für das Einfügen in eine OV/400-Editieranzeige: Ein Einfügevorgang wird gestoppt, wenn eine "Textanweisung" oder ein "Formatänderungszeichen" in den einzufügenden Daten festgestellt wird. Eine typische Textanweisung ist z. B. die Datumsanweisung. Ein Formatänderungszeichen wird durch den umgekehrten Großbuchstaben "F" angegeben. Wenn ein Einfügevorgang unterbrochen wird, wird der Operatorfehler "0072" oder "Taste nicht zulässig" angezeigt.
+////9999
+
+++++"Wiedergabe"
+////PLY This comment line is used by the help viewer program to find the Playback topic. This line belongs after the Playback topic (do not translate this comment line).Mit der Wiedergabefunktion können Sie zuvor aufgezeichnete Tastatureingaben im 3270-Fenster wiedergeben. Informationen zum Aufzeichnen finden Sie unter "Aufzeichnung".
+
+Die Berechtigung zur Verwendung der Aufzeichnungs-/Wiedergabefunktion kann mit dem Konfigurationsprogramm des IBM 3270-Emulators geändert werden. Für die 3270-Aufzeichnung/-Wiedergabe stehen drei Berechtigungsebenen zur Verfügung:
+
+1) Aktiviert: Sie sind berechtigt, Eingaben in 3270-Sitzungen aufzuzeichnen und wiederzugeben.
+
+1) Nur Wiedergabe: Sie sind berechtigt, Eingaben in 3270-Sitzungen wiederzugeben. Der Pulldown-Menüpunkt "Aufzeichnung..." wird nicht angezeigt.
+
+3) Verdeckt: Sie sind nicht berechtigt, die 3270-Aufzeichnung/-Wiedergabe zu verwenden. Die Pulldown-Menüpunkte "Aufzeichnung..." und "Wiedergabe" werden nicht angezeigt.
+ 
+
+Wiedergabe: Setzen Sie den Cursor auf die gewünschte Position in dem entsprechenden Menü, und starten Sie die Wiedergabe. Sie können eine Wiedergabedatei auf fünf verschiedene Arten starten:
+
+1) Wählen Sie den Pulldown-Menüpunkt "Wiedergabe..." und danach eine Wiedergabedatei aus. Klicken Sie dann auf die Schaltfläche "Starten".
+
+2) Drücken Sie die Wiedergabetaste und die entsprechende Funktionstaste (die Direktaufruftaste wird während der Aufzeichnung festgelegt). Die Position der Wiedergabetaste finden Sie unter "Tastenkombinationen".
+
+////Note: The translation of Play() below should match the translated resource text for Keyxxx52*play() in the keyboard remapping resource file.
+3) Geben Sie mit Hilfe des Programms zur Tastaturneubelegung eine Wiedergabedatei an, die gestartet wird, wenn Sie eine bestimmte Tastenkombination drücken. Fügen Sie den Namen der Wiedergabedatei zwischen die Klammern der Aktion "Play()" in der Tastaturneubelegung ein.
+
+4) Eine Wiedergabedatei kann für eine Taste des Tastenblocks angegeben werden. Weitere Informationen hierzu finden Sie unter "Dialog-/Pulldown-Tastenblock".
+
+5) Eine Wiedergabedatei für automatisches Anmelden wird beim Starten der 3270-Sitzung gestartet. Weitere Informationen hierzu finden Sie unter "Automatisches Anmelden".
+
+Für eine Datentaste in einem Eingabefeld mit Anzeigeunterdrückung wird die Wiedergabe angehalten (mit Ausnahme einer Wiedergabedatei für automatisches Anmelden beim Starten der 3270-Sitzung; in einigen Fällen wird eine Wiedergabedatei für automatisches Anmelden in einem Eingabefeld mit Anzeigeunterdrückung angehalten; weitere Informationen hierzu finden Sie unter "Automatisches Anmelden"). Während der Aufzeichnung kann eine Pause angegeben werden, um die Eingabe von Variablen (z. B. einer Teilenummer) oder von privaten Daten (wie z. B. eines Kennworts) zu ermöglichen. Um die Aufzeichnung wieder aufzunehmen, klicken Sie auf "Weiter".
+
+Die Wiedergabegeschwindigkeit kann mit Hilfe einer entsprechenden Schiebeleiste gesteuert werden.
+
+In der Statuszeile wird während der Wiedergabe ein entsprechendes Symbol angezeigt. Wenn Sie auf dieses Symbol klicken, wird die Wiedergabe gestoppt.
+
+Klicken Sie im Fenster "Wiedergabe" auf "Abbrechen", um die Wiedergabesitzung zu beenden.
+
+Benutzerwiedergabedateien können gelöscht werden, indem Sie die entsprechende Datei auswählen und auf die Schaltfläche "Löschen" klicken.
+
+////3270
+////In the paragraph below, "-PLAYBACK_NEW_SCREEN_DELAY" must not be translated.
+3270-Anwendungen heben manchmal die Tastatursperre auf, bevor die Aktualisierung der Anzeige abgeschlossen ist. Der 3270-Emulator wartet bis zu 2 Sekunden nach dem Aufheben der Tastatursperre, bevor eine Wiedergabe für eine aktualisierte Anzeige gestartet wird (d. h., aufgezeichnete Tastatureingaben gehen nicht verloren). Die Verzögerungsdauer kann angepasst werden. Der Parameter -PLAYBACK_NEW_SCREEN_DELAY kann über das Konfigurationsprogramm des IBM 3270-Emulators hinzugefügt werden. Wählen Sie die Sitzung aus, und klicken Sie auf "Verbindung" -> "Bearbeiten". Klicken Sie auf "Erweiterte 3270-Verbindung...", und geben Sie den Parameter im Feld "Weitere Parameter" ein. Bei der Eingabe des Parameters muss die Groß-/Kleinschreibung berücksichtigt werden. Der Parameter wird gefolgt von einem Leerzeichen und einer Zahl von 1 bis 255. Die Zahl gibt die Verzögerungsdauer in Einheiten von 0,1 Sekunden an.
+
+////9999
+++++"Dialog-/Pulldown-Tastenblock"
+Mit dem 3270-Emulator können Sie Dialog- und Pulldown-Tastenblöcke erstellen. Ein Tastenblock verfügt über Tasten. Den einzelnen Tasten des Tastenblocks ist jeweils eine Tastenkombination oder eine Wiedergabedatei zugeordnet.
+
+Anmerkung: Tastenblöcke können über das Konfigurationsprogramm des IBM 3270-Emulators inaktiviert werden.
+
+Der Pulldown-Menüpunkt "Tastenblock..." wird angezeigt, nachdem Sie mindestens einen Dialogfenstertastenblock erstellt haben. Mit dem Pulldown-Menüpunkt "Tastenblock..." können Sie einen oder mehrere Dialogfenstertastenblöcke starten. Wenn Sie eine Taste des Tastenblocks auswählen, wird die zugehörige Tastenblockaktion in der 3270-Sitzung verarbeitet, die diesen Dialogfenstertastenblock gestartet hat.
+
+Die Menüleiste "Tastenblock" wird angezeigt, nachdem Sie mindestens einen Pulldown-Tastenblock erstellt haben.
+
+Der Pulldown-Menüpunkt "Tastenblock anpassen..."  wird zum Erstellen von Tastenblöcken oder zum Ändern eines vorhandenen Tastenblocks verwendet.
+
+Die Tastenblockanpassung verfügt über einen eigenen Hilfetext. Klicken Sie im Fenster "Tastenblockanpassung" auf "Hilfe", um diesen Hilfetext aufzurufen.
+
+Ein von Ihnen erstellter Tastenblock ist in allen 3270-Sitzungen verfügbar.
+
+Anmerkung: Das Programm zur Tastenblockanpassung ist auf VGA-Bildschirmen nicht verfügbar. VGA-Bildschirme bieten nur eine geringe Auflösung (640 x 480) und sind normalerweise ältere PC-Bildschirme.
+
+////3270
+++++"Port"
+////In the paragraph below, "-port" should not be translated.
+Mit dem optionalen Telnet-Port-Parameter können Sie den Standartwert für den Ziel-Telnet-3270-Port außer Kraft setzen. Sie können diesen Parameter über das Konfigurationsprogramm des IBM 3270-Emulators festlegen.
+////9999
+
+++++"Aufzeichnung"
+////REC This comment line is used by the help viewer program to find the Record topic. This line belongs after the Record topic (do not translate this comment line).
+Mit der Aufzeichnungsfunktion können Sie Tastatureingaben während einer 3270-Sitzung für eine spätere Wiedergabe aufzeichnen.
+
+Verwenden Sie das Konfigurationsprogramm des IBM 3270-Emulators, um Berechtigungen für die Aufzeichnungs-/Wiedergabefunktion zu vergeben. Für die 3270-Aufzeichnung/-Wiedergabe stehen drei Berechtigungsebenen zur Verfügung:
+
+1) Aktiviert: Sie sind berechtigt, Eingaben in 3270-Sitzungen aufzuzeichnen und wiederzugeben.
+
+1) Nur Wiedergabe: Sie sind berechtigt, Eingaben in 3270-Sitzungen wiederzugeben. Der Pulldown-Menüpunkt "Aufzeichnung..." wird nicht angezeigt.
+
+3) Verdeckt: Sie sind nicht berechtigt, die 3270-Aufzeichnung/-Wiedergabe zu verwenden. Die Pulldown-Menüpunkte "Aufzeichnung..." und "Wiedergabe" werden nicht angezeigt.
+
+Aufzeichnung: Setzen Sie den Cursor auf die gewünschte Position in der Systemanzeige, und wählen Sie den Pulldown-Menüpunkt "Aufzeichnung..." aus (oder drücken Sie die Aufzeichnungstaste). Klicken Sie auf die Schaltfläche "Starten", um die Aufzeichnung zu starten. Ihre Tastatureingaben (und Mausereignisse) werden aufgezeichnet.
+  
+Klicken Sie auf "Pause", um die Aufzeichnung anzuhalten. Sie können eine Aufzeichnung auf drei verschiedene Arten anhalten:
+
+////5250
+1) Wählen Sie "Keine" aus, um die Aufzeichnung anzuhalten (um z. B. eine i5/OS-Nachricht zu verarbeiten, die während der Aufzeichnung angezeigt wird).
+
+////3270
+1) Wählen Sie "Keine" aus, um die Aufzeichnung anzuhalten.
+////9999
+
+2) Wählen Sie "Wiedergabe an dieser Stelle anhalten" aus, damit der Benutzer private Daten (z. B. ein Kennwort) oder variable Daten (z. B. eine Teilenummer) eingeben kann. Setzen Sie die Pause vor der Eingabe der ersten Tastatureingabe privater oder variabler Daten, und fahren Sie mit der Aufzeichnung fort, nachdem die letzte Tastatureingabe privater oder variabler Daten abgeschlossen ist.
+
+3) Wählen Sie "Benutzer-ID einfügen" und "Kennwort einfügen" aus, wenn ein automatisches Anmelden und der Start der Wiedergabedatei beim Starten einer 3270-Sitzung ausgeführt werden soll (weitere Informationen hierzu finden Sie unter "Automatisches Anmelden").
+
+Klicken Sie auf "Aufzeichnung fortsetzen", um die Aufzeichnung nach einer Pause fortzusetzen.
+
+Klicken Sie auf "Stoppen", wenn Sie die Aufzeichnung abschließen oder löschen möchten. Wählen Sie eine vorhandene Wiedergabedatei aus, die ersetzt (überschrieben) werden soll, geben Sie den Namen einer neuen Wiedergabedatei ein, oder klicken Sie auf "Nicht speichern", um eine Aufzeichnung zu löschen.
+
+Anmerkung: Das Aufzeichnungsprogramm beschränkt den Namen der Wiedergabedatei auf 32 Zeichen.
+
+Eine Wiedergabedatei kann über die Tastaturbelegungsfunktion einer Tastenkombination zugeordnet werden.
+
+Sie können eine Direktaufruftaste definieren. Auf diese Art können Sie die Wiedergabe mit der Wiedergabetaste gefolgt von der ausgewählten Funktionstaste starten. Klicken Sie auf die Schaltfläche "Optionalen Direktaufruf zuordnen" und auf die gewünschte Funktionstaste, oder drücken Sie die Funktionstaste auf der Tastatur.
+
+Benutzerwiedergabedateien können im Fenster "Wiedergabe" bearbeitet werden.
+
+Benutzerwiedergabedateien können im Fenster "Wiedergabe" gelöscht werden.
+
+Anmerkung: Mit dem Programm zur Tastaturneubelegung können Sie einfache Tastaturmakros erstellen.
+
+++++"Fenstergröße einer 3270-Sitzung ändern"
+Die Fenstergröße der 3270-Sitzung kann durch die Auswahl einer anderen Schriftgröße im Pulldown-Menü "Schriftarten..." geändert werden.
+  
+Die Fenstergröße der Sitzung kann auch durch Klicken der primären Maustaste (normalerweise die linke Maustaste) auf den Fensterrahmen einer 3270-Sitzung geändert werden. Klicken Sie auf den Fensterrahmen, halten Sie die Maustaste gedrückt, verschieben Sie den Mauszeiger, und lassen Sie die Maustaste wieder los. Die Fenstergröße der 3270-Sitzung wird angepasst, wenn Sie die Maustaste loslassen.
+
+Sie können mit dem Konfigurationsprogramm des IBM 3270-Emulators die Anfangsposition und Schriftgröße des 3270-Fensters festlegen.
+
+++++"Linealunterstützung"
+In der 3270-Sitzung kann ein Lineal angezeigt werden. Ein Lineal kann aus einer horizontalen, einer vertikalen oder einer horizontalen und einer vertikalen Linie im 3270-Fenster bestehen.
+
+Die Unterstützung für die Linealtaste und den Linealtyp, der angezeigt werden soll, können unter "Verschiedene Einstellungen" angepasst werden.
+
+Weitere Informationen zur Standardposition der Linealtaste finden Sie unter "Tastenkombinationen".
+
+++++"Anzeigedruck"
+////SCR This comment line is used by the help viewer program to find the Screen Print topic. This line belongs after the Screen Print topic (do not translate this comment line).
+Mit der Anzeigedruckfunktion des 3270-Emulators können Sie den Inhalt einer 3270-Sitzung auf einem lokalen Drucker oder einem Netzdrucker ausdrucken.
+
+Die Berechtigung zur Verwendung der Anzeigedruckfunktion kann mit dem Konfigurationsprogramm des IBM 3270-Emulators geändert werden. Die verfügbaren Drucker müssen zuvor konfiguriert werden.
+
+Der Anzeigedruck wird durch Klicken auf "Anzeigedruck..." im Pulldown-Menü "Drucken" oder durch Drücken der Umschalttaste und der Taste für den Anzeigedruck gestartet. Unter "Verschiedene Einstellungen" können Sie einen Anzeigedruck ohne Umschalttaste aktivieren. Sie können dem Anzeigedruck auch über eine Tastaturneubelegung eine einzelne Taste zuordnen (über die Aktion PrintScreenNow). Es werden die aktuellen Druckoptionen und der aktuelle Drucker verwendet.
+
+Das Drucken eines Abschnitts einer 3270-Sitzung wird ebenfalls unterstützt. Durch einen Anzeigedruck eines markierten Kopierbereichs (linearer Bereich oder Blockbereich; weitere Informationen hierzu finden Sie unter "Kopieren") werden nur die markierten Daten gedruckt.
+
+Der Anzeigedruck sendet den Inhalt der 3270-Sitzung an den angegebenen Drucker. Der Inhalt der 3270-Sitzung wird vor dem Drucken in PostScript Level 2 (PostScript ist eine Marke der Adobe Systems Incorporated), abhängig von der Sprache Ihrer 3270-Sitzung, umgewandelt. Weitere Informationen hierzu finden Sie in den folgenden Abschnitten.
+
+////5250
+Drucken von Bildern/Faxnachrichten: Mit einem PostScript-Drucker können Bilder oder Faxnachrichten, die in einer 3270-Sitzung angezeigt werden, normalerweise ausgedruckt werden. Sie können auswählen, ob Sie die Bild-/Faxdaten oder die Zeichendaten der 3270-Sitzung drucken möchten, wenn ein Bild oder eine Faxnachricht in der aktuellen Sitzung angezeigt wird.
+
+////3270
+GDDM-Drucken: Mit einem PostScript-Drucker können GDDM-Grafiken, die in einer 3270-Sitzung angezeigt werden, normalerweise ausgedruckt werden. Sie können auswählen, ob Sie die Grafikdaten oder die Zeichendaten der 3270-Sitzung drucken möchten, wenn GDDM-Grafiken in der aktuellen Sitzung angezeigt werden.
+
+////9999
+Anmerkung: Durch Klicken auf die Schaltfläche "Drucken" werden alle Änderungen gespeichert, die Sie im 3270-Fenster für den Anzeigedruck vornehmen, so dass Sie die Einstellungen beim nächsten Mal wieder verwenden können.
+
+Der Inhalt der 3270-Sitzung wird vor dem Drucken entsprechend der Sprache der 3270-Sitzung umgewandelt. Als Druckersprache wird die Sprache verwendet, die der Sprache Ihrer 3270-Sitzung entspricht. Anmerkung: Es werden möglicherweise nicht alle Zeichen in allen Sprachen richtig ausgedruckt.
+
+Bei PostScript-Druckern wird der Inhalt einer 3270-Sitzung in die ISO-Codierung Latin1 umgewandelt.
+
+Die Codepages für ASCII-Drucker sind in der folgenden Tabelle aufgeführt (weitere Informationen zur verwendeten Primärsprache finden Sie unter "Sprache einer 3270-Sitzung"):
+
+Sprache der   ASCII-
+3270-Sitzung  Drucker-
+              Code-
+              page
+
+Dänisch        850
+Niederländisch 850
+Flämisch       850
+////Note: Sometimes called Belgian-Flemish
+Englisch       850
+Finnisch       850
+Französisch    850
+Deutsch        850
+Italienisch    850
+Norwegisch     850
+Portugiesisch  850
+Spanisch       850
+Schwedisch     850
+
+////3270
+++++"Anzeigegröße"
+3270-Sitzungen unterstützen standardmäßig eine Anzeigegröße von 32 Zeilen mal 80 Spalten. Sie können zusätzliche Anzeigegrößen im Konfigurationsprogramm des IBM 3270-Emulators auswählen, wenn Sie die Startanzeige des 3270-Emulators anpassen möchten. Wenn Sie die Maus verwenden, um die Größe des 3270-Fensters anzupassen, werden die Einstellungen für die Zeilen und Spalten der 3270-Sitzung nicht geändert.
+
+Der 3270-Emulator unterstützt folgende Terminaltypen und die entsprechenden Anzeigegrößen:
+
+  Mod 2 - 24 x 80
+  Mod 3 - 32 x 80 (Standardwert)
+  Mod 4 - 43 x 80
+  Mod 5 - 27 x 132
+
+Anmerkung: 32 x 80 ist die einzige Anzeigegröße, die die Darstellung von Grafiken unterstützt.
+
+Anmerkung: Wenn im Konfigurationsprogramm des IBM 3270-Emulators eine Anzeigegröße angegeben ist, die von der Bildschirmauflösung nicht unterstützt wird, wird die Anzeigegröße 24 x 80 verwendet.
+////9999
+
+++++"Statuszeile (OIA)"
+Die Statuszeile (auch als OIA (Operator Indicator Area) bezeichnet) befindet sich im unteren Bereich jeder 3270-Sitzung. Die Statuszeile enthält folgende Informationen:
+
+////3270
+Ein unterstrichenes "A" gibt an, dass der Emulator über TCP/IP mit System/390 verbunden ist.
+
+////9999
+Im ersten Abschnitt der Statuszeile wird die Nummer der 3270-Sitzung auf dem System angegeben.
+
+Im nächsten Abschnitt der Statuszeile wird der Name des Systems angegeben, zu dem die 3270-Sitzung eine Verbindung hergestellt hat.
+
+Anmerkung: Wenn die 3270-Sitzung gestartet wird, wird für kurze Zeit ein Statusanzeiger für die Verbindung angezeigt.
+
+////5250
+Der nächste Abschnitt der Statuszeile enthält den Text "Nachricht wartet", wenn für diese 3270-Sitzung eine entsprechende Anzeige aktiviert wurde.
+
+Der nächste Abschnitt der Statuszeile enthält mehrere Anzeigen, die den Tastaturstatus für diese 3270-Sitzung angeben:
+
+////In the sentence below, "X" does not get translated.
+- Der Großbuchstabe "X" bedeutet, dass die Tastatur gesperrt ist und auf Daten von i5/OS wartet.
+////3270
+Der nächste Abschnitt der Statuszeile enthält mehrere Anzeigen, die den Tastaturstatus für diese 3270-Sitzung angeben:
+
+////In the sentence below, "X" does not get translated.
+- Die Anzeige "Keine Eingabe zulässig" enthält den Großbuchstaben "X" und einige andere Symbole und gibt an, dass der Emulator gegenwärtig keine Tastatureingabe akzeptiert. Außerdem enthalten die Symbole Informationen zu anderen Statusangaben.
+
+////In the sentence below, "NUM" does not get translated.
+- "NUM" gibt an, dass sich der Cursor in einem numerischen Eingabefeld befindet.
+
+////9999
+////In the sentence below, ">>" does not get translated.
+- Zwei schließende spitze Klammern (>>) geben an, dass die Eingabe nach rechts (Standardwert) aktiviert ist.
+
+- Ein Pfeil, der nach oben weist, gibt an, dass eine Umschalttaste auf der Tastatur gedrückt gehalten wird.
+
+////In the sentence below, "A" does not get translated.
+- "A" gibt an, dass der Großschreibmodus oder die Feststelltaste auf der Tastatur aktiviert ist (abhängig von der Sprache).
+
+////In the sentence below, "V" does not get translated.
+- Ein umgekehrtes "V" gibt an, dass der Einfügemodus der Tastatur aktiviert ist.
+
+////In the sentence below, "d" does not get translated.
+- Ein Zeichen ähnlich dem Kleinbuchstaben "d" gibt an, dass der diakritische Status der Tastatur aktiviert ist (diese Anzeige wird in den meisten Sprachen nicht verwendet).
+
+////3270
+- Ein Balkendiagrammsymbol gibt an, dass die Grafikfunktion für die 3270-Sitzung aktiviert ist.
+////5250
+- Ein Balkendiagrammsymbol gibt an, dass die Anzeige von Bildern und Faxnachrichten für die 3270-Sitzung aktiviert ist.
+
+- In Anzeigen mit 27 Zeilen x 132 Spalten kann eine größere Schriftart verwendet werden, wenn weniger als 132 Spalten angezeigt werden. Es wird eine Anzeige zum Blättern nach rechts oder links dargestellt. Klicken Sie auf die Anzeige, um in den Daten zu blättern.
+////9999
+
+Im letzten Abschnitt der Statuszeile wird die Position des Textcursors in den Zeilen und Spalten angegeben (unter "Verschiedene Einstellungen" können Sie festlegen, ob diese Position angezeigt wird).
+
+////3270
+++++"TN3270E-Druckerkonfiguration"
+TN3270-Erweiterungen (TN3270E) unterstützen die Druckfunktion von System/390 über den 3270-Emulator. TN3270E-Unterstützung ist für den Server erforderlich, um die TN3270E-Druckfunktion nutzen zu können. (TN3270E-Druck wird manchmal auch als 3270-LU1-Druck oder 3270-LU3-Druck bezeichnet.)
+
+////PARALLEL1 and SERIAL1 must not be translated below.
+Die TN3270E-Druckerkonfiguration (im Folgenden beschrieben) verwendet den Namen der Druckwarteschlange. Drucker, die lokal an ein Terminal angeschlossen sind, weisen den Warteschlangennamen PARALLEL1 oder SERIAL1 auf. Der Warteschlangenname für einen fernen Drucker wird vom Administrator zugeordnet.
+
+Zur TN3270E-Druckerunterstützung gehören:
+- Drucker zur allgemeinen Verwendung (nicht mit einer bestimmten Anwendung verbunden)
+- Anwendungsabhängige Drucker (wenn die Anwendung ausgeführt wird, werden die Druckanforderungen an einen bestimmten Drucker weitergeleitet)
+
+TN3270E-Drucker zur allgemeinen Verwendung und anwendungsabhängige Drucker werden im Konfigurationsprogramm des IBM 3270-Emulators konfiguriert, ebenso wie die Anzeige der 3270-Sitzung. Wählen Sie die Sitzung aus, und klicken Sie auf "Verbindung" -> "Bearbeiten". Klicken Sie auf "Erweiterte 3270-Verbindung...", und geben Sie die Daten zur TN3270E-Druckerkonfiguration im Feld "Weitere Parameter" ein. Beachten Sie bei der Eingabe im Feld "Weitere Parameter" die Groß-/Kleinschreibung.
+
+TN3270E-Drucker zur allgemeinen Verwendung
+------------------------------------------
+
+////PRINTER_GENERAL and PRINTER_NAME must not be translated below.
+Geben Sie folgende Parameter im Feld "Weitere Parameter" ein:
+
+-PRINTER_GENERAL XXXXXX, wobei XXXXXX für den Namen der Warteschlange (Groß-/Kleinschreibung berücksichtigen) steht.
+
+-PRINTER_NAME YYYYYY, wobei YYYYYY für mindestens einen Drucker-LU-Namen steht, den Sie für diese 3270-Sitzung verfügbar machen möchten. Der Parameter -PRINTER_NAME ist optional. Falls er nicht angegeben wird, kann ein Standarddrucker aus einem Drucker-LU-Namens-Pool auf S/390 abgerufen werden. Der Parameter für den Druckernamen (YYYYYY) kann für einen LU-Namen oder für mehrere LU-Namen stehen. Bei mehreren LU-Namen müssen Sie die Namen in doppelten Anführungszeichen und mit einem Leerzeichen zwischen den einzelnen Namen angeben. Beispiel: -PRINTER_NAME "DruckerLU1 DruckerLU2 DruckerLU3". Die Drucker-LU-Namen erhalten Sie normalerweise vom Administrator von System/390.
+
+Anwendungsabhängige TN3270E-Drucker
+-----------------------------------
+
+////PRINTER_APP and DISPLAY_NAME must not be translated below.
+Geben Sie folgende Parameter im Feld "Weitere Parameter" ein:
+
+-PRINTER_APP XXXXXX, wobei XXXXXX für den Namen der Warteschlange (Groß-/Kleinschreibung berücksichtigen) steht.
+
+-DISPLAY_NAME YYYYYY, wobei YYYYYY für mindestens einen Anzeige-LU-Namen steht, der für die Anzeige der 3270-Sitzung verwendet werden soll. Der Parameter -DISPLAY_NAME ist normalerweise für anwendungsabhängiges TN3270E-Drucken erforderlich. YYYYYY steht dabei normalerweise für einen oder mehrere Anzeige-LU-Namen. Bei mehreren LU-Namen müssen Sie die Namen in doppelten Anführungszeichen und mit einem Leerzeichen zwischen den einzelnen Namen angeben. Beispiel: -DISPLAY_NAME "AnzeigeLU1 AnzeigeLU2 AnzeigeLU3". Weitere Informationen hierzu finden Sie unter "Anzeigenname" (3270-LU-Name)". Die Anzeige-LU-Namen erhalten Sie normalerweise vom Administrator von System/390.
+
+////9999
+++++"Fenstertitel"
+Für jede 3270-Sitzung wird ein Fenstertitel oben im 3270-Fenster angezeigt. Der Standardfenstertitel besteht aus zwei Teilen.
+
+1) Der erste Abschnitt des Fenstertitels ist der Fenstertiteltext. Der Standardfenstertiteltext lautet "3270". Sie können diesen Text beliebig ändern.
+
+2) Der letzte Abschnitt des Fenstertitels ist die Sitzungs-ID der Emulationssitzung.
+
+Sie können den Inhalt des Fenstertitels ändern (weitere Informationen hierzu finden Sie unter "Zusätzliche Parameter").
+
+++++"Bidirektionaler Text (BIDI)"
+Besonderheiten bei der Präsentation von bidirektionalem Text
+
+Der Emulator implementiert die Funktionen, die in der Spezifikation für BIDI-Unterstützung (bidirektionale Unterstützung) des 5250-Terminals beschrieben sind, einschließlich Unterstützung von Anzeigenumkehr und Feldausrichtung. Diese BIDI-Funktionen sind verfügbar, wenn der Emulator in einer BIDI-Ländereinstellung gestartet wird oder wenn der Befehlszeilenparameter LANGID eine der BIDI-Sprachen bezeichnet.
+Alle Ländereinstellungen und Sprachennamen, die mit "ar" beginnen, werden als Arabisch interpretiert (zum Beispiel "ar_EG" oder "ar_EG.UTF-8"), und alle Ländereinstellungen und Sprachennamen, die mit "he" beginnen, werden als Hebräisch interpretiert (zum Beispiel "he_IL" oder "he_IL.UTF-8").
+Gemischte BIDI-Texte (bidirektionale Texte) können in beiden Ausrichtungen eingegeben werden, von rechts nach links und von links nach rechts, sowohl in Englisch als auch in den Landessprachen (Arabisch oder Hebräisch). Wenn allerdings als Cursorrichtung links-nach-rechts festgelegt ist, wird als Sprache standardmäßig Englisch eingestellt. Wenn jedoch als Cursorrichtung rechts-nach-links festgelegt ist, wird als Sprache standardmäßig die Landessprache eingestellt. Die Standardcursorrichtung in einem Feld wird von der Ausrichtung des Feldes bestimmt.
+Die Darstellung in der Anzeige kann umgekehrt werden, damit das gesamte Anzeigenbild spiegelgleich dargestellt wird. Bei der Anzeigenumkehrung wird die Darstellung der Daten auf dem Bildschirm geändert, nicht jedoch die Daten selbst. Alle Editierfunktionen sind sowohl in einer RTL-Anzeige (Right-To-Left, rechts-nach-links) als auch in einer LTR-Anzeige (Left-To-Right, links-nach-rechts) verfügbar.
+
+BIDI-Ländereinstellungen können mit dem Befehl "chhmc" festgelegt werden. Beispiel: Der Befehl "chhmc -c locale -s modify -l ar_EG" schaltet ein System in eine arabische Ländereinstellung um, der Befehl "chhmc -c locale -s modify -l he_IL" in eine hebräische Ländereinstellung.
+
+
+
+Sprachauswahl
+
+Mit den Tastenkombinationen Strg+N und Strg+L kann die Sprachbelegung umgeschaltet werden.
+Wenn die Sprachbelegung auf den lateinischen Zeichensatz eingestellt ist, wird mit Strg+N auf die Sprachbelegung Hebräisch/Arabisch gewechselt.
+Wenn die Sprachbelegung auf Hebräisch/Arabisch eingestellt ist, wird mit Strg+L zum lateinischen Zeichensatz gewechselt.
+
+
+
+
+OIA-Indikatoren verstehen
+
+In der Hostsitzung wird die untere Zeile der Anzeige als Bedienerinformationsbereich (OIA - Operator Information Area) bezeichnet. Diese Zeile wird stets von links nach rechts angezeigt.
+In der BIDI-Umgebung wurden die folgenden Symbole hinzugefügt:
+
+
+Sprachenkennung:
+
+  H: Aktuelle Sprache, Hebräisch (nur Hebräisch-Sitzungen)
+  Das arabische Zeichen EIN: Aktuelle Sprache, Arabisch (nur Arabisch-Sitzungen)
+  E: Aktuelle Sprache, Englisch (Sitzungen sowohl in Arabisch als auch in Hebräisch)
+
+
+Anzeigenausrichtung:
+
+  S> : Anzeigenausrichtung links-nach-rechts
+  <S : Anzeigenausrichtung rechts-nach-links
+
+
+Eingaberichtung:
+
+  => : Eingaberichtung links-nach-rechts
+  <= : Eingaberichtung rechts-nach-links
+
+
+Für Arabisch wurden die folgenden zusätzlichen Symbole für die Gestaltung hinzugefügt:
+
+  Das Zeichen Alef-Madda gibt den CSD-Modus an.
+  Das isolierte GHEIN gibt Basis-/isolierten Gestaltungsmodus an.
+
+Die Basistaste (Strg+B) schaltet zwischen den beiden Zuständen und den beiden Modi hin und her.
+
+
+
+Textausrichtung
+
+
+Mit der Textausrichtung wird die Lesereihenfolge für den Texteditor bestimmt. Die Textausrichtung stimmt mit der Standardcursorrichtung und der Standardtextausrichtung überein. Wenn daher der Text im Modus Links-nach-rechts (Left-To-Right) angezeigt wird, sollten Sie die Option "Links nach rechts" auswählen. Wenn der Text im Modus Rechts-nach-links (Right-to-Left) angezeigt wird, sollten Sie die Option "Rechts nach links" auswählen. Einige Texteditoren arbeiten kontextbezogen, das heißt, die Textausrichtung der einzelnen Abschnitte wird durch das erste eingegebene Zeichen festgelegt. Wenn zuerst ein lateinischer Buchstabe eingegeben wird, wird die Ausrichtung Links-nach-rechts aktiviert. Wenn es sich beim ersten Zeichen um ein nationales Sonderzeichen handelt (also Arabisch oder Hebräosch), wird die Ausrichtung Rechts-nach-links aktiviert. Wenn Sie einen kontextsensitiven Texteditor verwenden, sollten Sie die Option für die kontextgebundene Textausrichtung im Emulator auswählen.
+Wenn der Texteditor im Kontextmodus arbeitet, kann es sein, dass die Reihenfolge der Segmente unterbrochen wird, wenn Sie die Segmente vom Emulator in einen externen Texteditor kopieren. Dies geschieht, weil einige Formate der Segmentreihenfolge bei der Eingabe im Kontextmodus nicht verfügbar sind (das heißt, wenn sie in den externen Editor eingefügt werden, sehen sie nicht mehr so aus wie das Original im Emulator).
+
+
+
+Zeichengestaltung (nur Arabisch)
+
+Mit der Zeichengestaltung wird definiert, wie Ziffern in gemischten arabisch-lateinischen Texten dargestellt werden.
+Wenn die externe Anwendung nur mit europäischen Ziffern arbeitet, sollten Sie im Menü zur Zeichengestaltung die Option "Nominal" auswählen.
+Wenn die Anwendung stets mit arabisch-indischen Ziffern arbeitet, wählen Sie die Option "National" aus. Sie sollten die Kontextmodusoption auswählen, wenn sich die Darstellung der Ziffern nach dem Segment richtet, in dem sie angezeigt werden (das heißt, europäische Ziffern im lateinischen Segment, arabisch-indische Ziffern im arabischen Segment).
+
+
+
+Bidirektionale Tasten erneut zuordnen
+
+  1. Klicken Sie mit der rechten Maustaste auf ein konfiguriertes Sitzungssymbol.
+
+  2. Klicken Sie auf "Tastaturneubelegung".
+
+  3. Drücken Sie auf die Taste, die Sie erneut zuordnen möchten.
+
+  4. Wählen Sie die bidirektionale Funktion aus, die Sie erneut zuordnen möchten.
+
+
+Die folgenden bidirektionalen Funktionen sind für bidirektionale 5250-Sitzungen verfügbar:
+
+  Anzeigenumkehr
+  Nationale Tastaturbelegung
+  Lateinische Tastaturbelegung
+  Feldumkehr
+  Schließen
+  Umschalttaste für Gestaltungsbestimmung (nur für Arabisch)
+
+Standardmäßig werden die folgenden Tastenkombinationen definiert:
+
+  Nationale (arabische oder hebräische) Tastaturbelegung: Strg+N
+  Lateinische Tastaturbelegung: Strg+N
+  Anzeigenumkehr: Strg+S
+  Feldumkehr: Strg+F
+  Schließen: Strg+C
+  Umschalttaste für automatische oder Basisgestaltungsbestimmung: Strg+B
+
+
+
+Anzeigenumkehr
+
+Mit der Tastenkombination Strg+S wird das Anzeigenbild umgekehrt.
+Ist die Anzeige von links nach rechts ausgerichtet, wird das Anzeigenbild durch Drücken von Strg+S in rechts-nach-links umgekehrt.
+Ist die Anzeige von rechts nach links ausgerichtet, wird das Anzeigenbild durch Drücken von Strg+S in links-nach-rechts umgekehrt.
+
+
+Wenn die Anzeigenausrichtung geändert wird, wird die voreingestellte Sprache der neuen Anzeigenausrichtung für die Tastaturbelegung verwendet.
+Wenn die Anzeige in rechts-nach-links umgekehrt wird, wird die Sprache durch die Landessprache ersetzt (Hebräisch oder Arabisch). Wenn die Anzeige in links-nach-rechts umgekehrt wird, wird die Sprache durch den lateinischen Zeichensatz ersetzt.
+
+Durch die Anzeigenumkehr wird der Bedienerinformationsbereich nicht umgekehrt.
+
+
+
+Feldumkehr
+
+Diese Funktion wird durch die Tastenkombination Strg+F aktiviert und schaltet zwischen den Feldausrichtungen links-nach-rechts und rechts-nach-links hin und her. Der Text im Feld wird nicht umgekehrt. Die Cursorausrichtung wird an die neue Feldausrichtung angepasst, und die Sprachbelegung wird entsprechend ausgewählt.
+Wenn der Benutzer die Feldumkehrfunktion auswählt, springt der Cursor zur anderen Seite dieses Feldes oder dieser Zeile. Diese andere Seite wird nun die erste logische Position. Die Cursorposition bleibt jedoch unverändert, wenn beim letzten Ändern der Cursorposition eine Cursortaste (Pfeiltaste oder Mausklick) verwendet wurde.
+
+
+
+Schließen
+
+
+Diese Funktion wird durch die Tastenkombination Strg+C aktiviert. Mit dieser Funktion können Daten, die in eine Eingaberichtung eingegeben wurden, mit den Daten verknüpft werden, die vorher in die entgegengesetzte Richtung eingegeben wurden. Folgendes Vorgehen wird angewendet:
+  Alle eingebetteten Nullen werden aus der aktuellen Zeile gelöscht.
+  Verknüpfter Text wird an den rechten Rand (bei Feldrichtung rechts-nach-links) oder an den linken Rand (bei Feldrichtung links-nach-rechts) des Feldes versetzt.
+  Die Cursorrichtung wird an die Feldrichtung angepasst.
+  Für die Tastaturbelegung wird die Standardsprache für die Feldrichtung festgelegt.
+  Ist die Anzeigenausrichtung nun links-nach-rechts, wird der Cursor auf der ersten Null positioniert, die sich rechts vom verknüpften Text befindet.
+  Ist die Anzeigenausrichtung nun rechts-nach-links, wird der Cursor auf der ersten Null positioniert, die sich links vom verknüpften Text befindet.
+  Diese Funktion erscheint in der Liste der verfügbaren Aktionen mit dem Namen 'CloseBIDIData()'.
+
+
+Basis
+
+Diese Funktion wird durch die Tastenkombination Strg+B aktiviert und aktiviert oder inaktiviert die Funktion zur automatischen Gestaltungsbestimmung für arabischen Rechts-nach-links-Text. Die Funktion ist nur wirksam, wenn arabischer Rechts-nach-links-Text verarbeitet wird.
+
+
+
+Besondere Hinweise zu arabischen Zeichen
+
+Im Folgenden sind Möglichkeiten für die Handhabung der Zeichen "Seen Tail" und "LamAlef" der arabischen Sprache beschrieben.
+
+
+Arbeiten mit dem Zeichen "Seen Tail"
+
+Die arabischen Zeichen Seen, Sheen, Saad und Daad bilden die "Seen Tail"-Familie. Jedes einzelne "Seen"-Zeichen besteht aus einem "Seen-Body"-Zeichen und einem "Seen-Tail"-Zeichen.
+Beim Löschen dieser Zeichen ist besondere Vorsicht geboten. Es gibt drei Löschverfahren:
+
+  1. Drücken der Rückschritt-Taste nach dem Seen-Tail-Zeichen
+    Wenn der Cursor hinter einem Seen-Tail-Zeichen positioniert ist, wird durch Drücken der Rückschritt-Taste sowohl das Seen-Body-Zeichen als auch das Seen-Tail-Zeichen gelöscht.
+  2. Drücken der Rückschritt-Taste auf dem Seen-Body- oder Seen-Tail-Zeichen
+    Wenn der Cursor auf dem Seen-Body- oder Seen-Tail-Zeichen positioniert ist, wird durch Drücken der Rückschritt-Taste das Zeichen vor dem Seen-Zeichen gelöscht.
+  3. Drücken der Taste "Entf" auf dem Seen-Body- oder Seen-Tail-Zeichen
+    Wenn der Cursor auf dem Seen-Body- oder Seen-Tail-Zeichen positioniert ist, werden durch Drücken der Taste "Entf" das Seen-Body-Zeichen und das Seen-Tail-Zeichen gelöscht.
+
+
+Arbeiten mit dem Zeichen "LamAlef"
+
+Das Zeichen "LamAlef" wird traditionell als einzelnes Zeichen in Dateien mit der visuellen Dateikennung CCSID 420 gespeichert. Um die "Implicit"-Darstellung einzuhalten, die neue CCSIDs in iSeries eingeführt haben, wandelt die Bidi-Layout-Steuerkomponente zwischen visueller und impliziter Darstellung um. Dadurch wird die Ligatur <Lam-Alef> in der visuellen Darstellung auf <lam> und <Alef> in der impliziten Darstellung erweitert, wodurch z. B. die Leerzeichen am Ende des arabischen Texts, z. B. am Anfang des Feldes für Englisch, verbraucht werden.
+Wenn <Lam-Alef> in das implizite Format umgewandelt wird und die Leerstellen am Anfang des Feldes nicht ausreichen, um auf <Lam> und <Alef> zu erweitern, gehen diese Informationen verloren und werden durch das Steuerzeichen <SUB> ersetzt.
+Sie können dieses Problem lösen, wenn Sie am Anfang des Feldes für jedes eingegebene LamAlef-Zeichen eine Leerstelle belassen und dafür Sorge tragen, dass die Benutzer dort keine Daten eingeben. Die Layout-Steuerkomponente verwendet die Leerstelle, um das Zeichen <Lam-Alef> zu erweitern.
+Dieses Verhalten wird nur von der Host-On-Demand-Emulation unterstützt, nicht jedoch vom 5250-Terminal.
+Führen Sie das Programm setup5250 aus, um Platz für LamAlef zuzuordnen. Geben Sie bei der Option zur Platzzuordnung für LamAlef "Ja" an.
+
+
+
+
+
+//// ENGL1SH_VERS10N 1.6.2.4 DO NOT REMOVE OR CHANGE THIS LINE

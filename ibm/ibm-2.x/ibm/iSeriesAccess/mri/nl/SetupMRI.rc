@@ -1,0 +1,373 @@
+!
+!
+!
+! This file contains the resource text strings for the IBM 3270 and IBM 5250 Emulator 
+! Setup programs
+
+! This resource file is stored in locale specific ASCII (code page 819 for Latin1 languages).
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. Resource format: 
+!    - A resource line starts with one of the following strings:
+!      SetupXXXX* : for the combined setup program resources
+!      Setup3270* : for the 3270 setup program resources
+!      Setup5250* : for the 5250 setup program resources  
+!      AllShare* : for resources shared by the 5250, 3270 and combined setup programs.
+!    - Each string is followed by a resource name and a ":".  
+!		Do NOT make any changes to the text to the left of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+
+!******************************************************************************
+!************************ BEGIN DO NOT TRANSLATE ******************************
+!******************************************************************************
+!*   The first section of resources are are locale specific but               *
+!*   DO NOT REQUIRE TRANSLATION.                                              *
+!*                                                                            *
+!* This source file enables the resource section for Latin1 and Latin2.       *
+!*                                                                            *
+!* For ru_RU or Latin5 locales and DBCS locales                               *
+!*      1. Place a '!' as the first character in each line in the Latin1      *
+!*      and Latin2 section                                                    *
+!*      2. Remove the '!' character for each resource line in the apropriate  *
+!*      section that matches your locale.                                     *
+!*                                                                            *
+!* For example, ru_RU should place ! in front of all lines in the LATIN1      *
+!* section remove the ! from all lines in the LATIN5 section.                 *      
+!******************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN1 and LATIN2                ****************
+!**************************************************************************
+Setup5250*extraLargeFontList: -*-*-medium-r-normal-*-*-*-*-*-m-110-*-*
+Setup5250*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-110-*-*
+Setup5250*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-m-90-*-*
+Setup5250*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-m-60-*-*
+!**************************************************************************
+!****************   END LATIN1 and LATIN2                  ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN5                           ****************
+!**************************************************************************
+!Setup5250*extraLargeFontList: -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*
+!Setup5250*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*
+!Setup5250*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!Setup5250*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!**************************************************************************
+!****************   END   LATIN5                           ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (ja_JP ko_KR zh_CN )   ****************
+!**************************************************************************
+!Setup5250*extraLargeFontList: -*-*-medium-r-normal--24-*-*-*-c-*
+!Setup5250*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*
+!Setup5250*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!Setup5250*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*
+!**************************************************************************
+!**************************************************************************
+!****************   END DBCS (ja_JP ko_KR zh_CN )     ****************
+!**************************************************************************
+!**************************************************************************
+!****************   BEGIN DBCS ( zh_TW )   ****************
+!**************************************************************************
+!**** For  zh_TW
+!Setup5250*extraLargeFontList: -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Setup5250*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Setup5250*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Setup5250*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!**************************************************************************
+!****************   END DBCS ( zh_TW )     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   END DO NOT TRANSLATE                   ****************
+!**************************************************************************
+
+
+! ********************************************************************************
+! Setup Program Resources
+! ********************************************************************************
+!
+! In general, the following buttons should not be made much longer during translation.
+! Buttons have one to four words. Note: Testing is the only way to know for sure if all
+! buttons fit on the screen ok.  The emulators have a testing document that will be used
+! during testing; this will point out a problem if button text is too long. In many 
+! cases, buttons are presented side by side, where the total button text length cannot
+! increase significantly.
+! Note: \n causes a new line and should not be translated.
+! You can move, add, or remove \n within text strings.
+!
+! Password prompt panel 
+Setup5250*passwordPromptDialogWidth:            60
+Setup5250*passwordPromptDialogHeight:           10
+Setup5250*passwordPanelTitle.labelString:       Wachtwoord
+Setup5250*passwordPanelInstructions.labelString: Voor de gewenste bewerking is een wachtwoord\n\
+vereist. Geef het wachtwoord op.
+
+! Password change panel 
+Setup5250*passwordChangeDialogWidth:            60
+Setup5250*passwordChangeDialogHeight:           21
+Setup5250*passwordChangeDialog2Width:           60
+Setup5250*passwordChangeDialog2Height:          17
+Setup5250*passwordChangePanelTitle.labelString:       Wachtwoord wijzigen
+Setup5250*passwordChangePanelInstructions.labelString: Geef het huidige wachtwoord en een nieuw\n\
+wachtwoord op om het wachtwoord te wijzigen.
+Setup5250*passwordChangePanelInstructions2.labelString: Geef een nieuw wachtwoord op om het wachtwoord in te stellen.
+Setup5250*currentPassword.labelString:          Huidig wachtwoord:
+Setup5250*newPassword.labelString:              Nieuw wachtwoord:
+Setup5250*newPassword2.labelString:             Bevestig nieuw wachtwoord:
+
+! menu bar
+Setup5250*ConnectionCascade.labelString:        Verbinding
+SetupXXXX*NewConnectionCascade.labelString:     Nieuw...
+SetupXXXX*New3270ConnectionButton.labelString:     3270...
+SetupXXXX*New5250ConnectionButton.labelString:     5250...
+Setup5250*NewConnectionButton.labelString:      Nieuw...
+Setup5250*NewConnectionCascade.mnemonic:        N
+Setup5250*EditConnectionButton.labelString:     Bewerken...
+Setup5250*EditConnectionButton.mnemonic:        w
+Setup5250*BrowseConnectionButton.labelString:   Bladeren...
+Setup5250*BrowseConnectionButton.mnemonic:      B
+Setup5250*CopyConnectionButton.labelString:     Kopiëren...
+Setup5250*CopyConnectionButton.mnemonic:        K
+Setup5250*Copy:                                 Kopiëren 
+Setup5250*ConnectButton.labelString:            Verbinden
+Setup5250*RemoveConnectionButton.labelString:   Verwijderen...
+Setup5250*RemoveConnectionButton.mnemonic:      V
+Setup5250*ExitButton.labelString:               Afsluiten
+Setup5250*ExitButton.mnemonic:                  A
+Setup5250*PreferencesCascade.labelString:       Voorkeuren
+Setup5250*PreferencesCascade.mnemonic:          e
+Setup5250*Prefs3270Button.labelString:          3270...
+Setup5250*Prefs3270Button.mnemonic:             3
+Setup5250*Prefs5250Button.labelString:          5250...
+Setup5250*Prefs5250Button.mnemonic:             5
+Setup5250*OptionsCascade.labelString:           Opties
+Setup5250*OptionsCascade.mnemonic:              O
+Setup5250*PasswordButton.labelString:           Wachtwoord...
+Setup5250*HelpCascade.labelString:              Help
+Setup5250*HelpCascade.mnemonic:                 H
+Setup5250*HelpAboutButton.labelString:          Info...
+Setup5250*HelpContentsButton.labelString:       Inhoud...
+Setup5250*Help3270ContentsButton.labelString:   Inhoud 3270-configuratie...
+Setup5250*Help5250ContentsButton.labelString:   Inhoud 5250-configuratie...
+Setup5250*Help3270EmulatorContentsButton.labelString: Inhoud 3270-emulator...
+Setup5250*Help5250EmulatorContentsButton.labelString: Inhoud 5250-emulator...
+Setup5250*UserConnectionsListlabel.labelString:     Gebruikersverbindingen
+Setup5250*DefaultConnectionsListlabel.labelString:  Standaardverbindingen
+Setup5250*ProfileConnectionsListlabel.labelString:  Profielverbindingen
+	
+! Command lines
+Setup5250*GeometryTitle.labelString:            Vensterformaat en locatie in pixels (optioneel)
+Setup5250*GeometryTitle2.labelString:           Vensterformaat en locatie (optioneel)
+Setup5250*GeometryTitle3.labelString:           Schermgrootte (optioneel)
+Setup5250*GeometryFullScreenLabel.labelString:  Volledig\n\
+scherm
+Setup5250*GeometryFullScreenCheckBox.labelString:
+Setup5250*GeometryWidthLabel.labelString:       Breedte
+Setup5250*GeometryHeightLabel.labelString:      Hoogte
+Setup5250*GeometryColsLabel.labelString:        Kolommen
+Setup5250*GeometryRowsLabel.labelString:        Rijen
+Setup5250*GeometryHorizontalOffsetLabel.labelString: Horizontale\n\
+offset
+Setup5250*GeometryVerticalOffsetLabel.labelString:   Verticale\n\
+offset
+Setup5250*GeometryCornerLabel.labelString:      Hoek\n\
+voor offset
+Setup5250*cornerButton1.labelString:            Links bovenaan
+Setup5250*cornerButton2.labelString:            Rechts bovenaan
+Setup5250*cornerButton3.labelString:            Links onderaan
+Setup5250*cornerButton4.labelString:            Rechts onderaan
+
+! 3270 and 5250 Command Line Editing 
+Setup5250*CommandLine5250EditTitle.labelString: 5250-emulatorverbinding
+Setup5250*Advanced5250EditTitle.labelString:    Uitgebreide 5250-emulatorverbinding
+Setup5250*AS400.labelString:                    i5/OS-hostnaam of\n\
+IP-adres (optioneel)
+Setup5250*CommandLine3270EditTitle.labelString: 3270-emulatorverbinding
+Setup5250*Advanced3270EditTitle.labelString:    Uitgebreide 3270-emulatorverbinding
+Setup5250*s390.labelString:                     S/390-hostnaam of\n\
+IP-adres (optioneel)
+Setup5250*ConnectionDescription.labelString:    Beschrijving verbinding
+
+Setup5250*sessionTitle.labelString:             Sessietitel (optioneel)
+Setup5250*userid.labelString:                   Gebruikers-ID emulator (optioneel)
+Setup5250*password.labelString:                 Wachtwoord emulator (optioneel)
+Setup5250*displayName.labelString:              Naam beeldscherm (optioneel)
+Setup5250*port_string.labelString:              Telnet-poort (leeg=standaard=23)
+Setup5250*otherParameters.labelString:          Andere parameters (optioneel)
+
+Setup5250*OKButton.labelString:                 OK
+Setup5250*cancelButton.labelString:             Annuleren
+Setup5250*SetToDefaultsButton.labelString:      Standaardwaarden instellen
+Setup5250*helpButton.labelString:               Help
+Setup5250*advancedButton.labelString:           Uitgebreid...
+Setup5250*advanced5250Button.labelString:       Uitgebreide 5250-verbinding...
+Setup5250*5250PreferencesButton.labelString:    Algemene 5250-voorkeuren...
+Setup5250*advanced3270Button.labelString:       Uitgebreide 3270-verbinding...
+Setup5250*3270PreferencesButton.labelString:    Algemene 3270-voorkeuren...
+Setup5250*screenSizeLabel.labelString:          Schermgrootte:
+Setup5250*24x80.labelString:                    24x80 (Mod 2, niet grafisch)
+Setup5250*32x80.labelString:                    32x80 (Mod 3)
+Setup5250*43x80.labelString:                    43x80 (Mod 4, niet grafisch)
+Setup5250*27x132.labelString:                   27x132 (Mod 5, niet grafisch)
+Setup5250*graphicsLabel.labelString:            Grafische voorstellingen:
+Setup5250*customSize.labelString:               Ander (niet grafisch)
+Setup5250*tn3270eLabel.labelString:             TN3270E:
+
+! 3270 and 5250 Application Preferences 
+Setup5250*panel5250PrefsTitle.labelString: 5250-voorkeuren
+Setup5250*panel5250ProfilePrefsTitle.labelString: 5250-profielvoorkeuren
+Setup5250*5250AppPrefsPanelInstructions.labelString: 5250-voorkeuren gelden voor alle 5250-verbindingen.
+Setup5250*panel3270PrefsTitle.labelString: 3270-voorkeuren
+Setup5250*panel3270ProfilePrefsTitle.labelString: 3270-profielvoorkeuren
+Setup5250*3270AppPrefsPanelInstructions.labelString: 3270-voorkeuren gelden voor alle 3270-verbindingen.
+
+Setup5250*keymapAreaLabel.labelString: Toetsenbordindeling:
+Setup5250*keymapLabel.labelString: Toetsenbordindeling\n\
+wijzigen:
+
+Setup5250*keypadAreaLabel.labelString: Toetsenblok:
+Setup5250*keypadLabel.labelString: Toetsenblok wijzigen: 
+Setup5250*recplayAreaLabel.labelString: Opnemen/Afspelen:
+Setup5250*recplayLabel.labelString: Functie voor\n\
+Opnemen/Afspelen:
+
+Setup5250*colorsAreaLabel.labelString: Kleuren:
+Setup5250*colorsLabel.labelString: Instelbaarheid\n\
+van\n\
+kleuren:
+
+Setup5250*appearanceAreaLabel.labelString: Vorm:
+Setup5250*wideScreenLabel.labelString: 132 kolommen:
+Setup5250*columnSepLabel.labelString: Kolomscheidingstekens:
+Setup5250*enterKeyLabel.labelString: Toets voor\n\
+Enter-functie:
+
+Setup5250*allowUseAreaLabel.labelString: Gebruik toestaan van:
+Setup5250*commandMenuLabel.labelString: Menu Opdracht:
+Setup5250*editLabel.labelString: Menu Bewerken:
+Setup5250*optionLabel.labelString: Menu Opties:
+Setup5250*printLabel.labelString: Menu Afdrukken:
+Setup5250*helpLabel.labelString: Menu Help:
+Setup5250*controlLabel.labelString: Menu Besturing:
+Setup5250*graphicsLabel.labelString: Grafische voorstellingen:
+Setup5250*miscPrefLabel.labelString: Diverse\n\
+voorkeuren:
+Setup5250*fontMenuLabel.labelString: Lettertype instellen:
+Setup5250*newSessionLabel.labelString: Nieuw\n\
+sessievenster:
+Setup5250*browserLabel.labelString: Browserhotspot:
+Setup5250*desktopLabel.labelString: Bureaubladbestand:
+Setup5250*authenticationParameters.labelString: Verificatieparameters:
+Setup5250*additionalParameters.labelString: Aanvullende parameters:
+! preference choice values.
+Setup5250*prefdefault.labelString: Standaard
+Setup5250*prefEnabled.labelString: Ingeschakeld
+Setup5250*prefDisabled.labelString: Uitgeschakeld
+Setup5250*prefHidden.labelString: Verborgen
+Setup5250*prefBasic.labelString: Beperkt
+Setup5250*prefAdvanced.labelString: Uitgebreid
+Setup5250*prefPlaybackOnly.labelString: Alleen afspelen
+Setup5250*prefNoResizeOrMove.labelString: Nee, geen formaatwijziging of verplaatsing
+Setup5250*prefFixedFontsOnly.labelString: Alleen vaste lettertypen
+Setup5250*prefKeypadOnly.labelString: Alleen toetsenblok gebruiken
+Setup5250*prefKeyboardPrintOnly.labelString: Geen menu, alleen afdrukken via toetsenbord
+Setup5250*prefYes.labelString: Ja
+Setup5250*prefNo.labelString: Nee
+Setup5250*prefEnterKey.labelString: Enter-toets
+Setup5250*prefControlKey.labelString: Control-toets
+Setup5250*pref24x80.labelString: 24x80 (niet grafisch)
+Setup5250*pref32x80.labelString: 32x80
+Setup5250*pref43x80.labelString: 43x80 (niet grafisch)
+Setup5250*pref27x132.labelString: 27x132 (niet grafisch)
+Setup5250*prefNoAllowWMClose.labelString: Nee, maar venstersluiting toestaan
+Setup5250*prefYesReadOnly.labelString: Ja, maar alleen lezen
+
+! 3270 scrolled window sizes.
+Setup5250*CommandLine3270SizeWidth:                26
+Setup5250*CommandLine3270SizeHeight:               22
+Setup5250*CommandLine3270AdvSizeWidth:             68  
+Setup5250*CommandLine3270AdvSizeHeight:            33 
+Setup5250*AppPrefs3270SizeWidth:                   56 
+Setup5250*AppPrefs3270SizeHeight:                  30
+
+! 5250 scrolled window sizes.
+Setup5250*CommandLine5250SizeWidth:             36
+Setup5250*CommandLine5250SizeHeight:            22
+Setup5250*CommandLine5250AdvSizeWidth:          75
+Setup5250*CommandLine5250AdvSizeHeight:         29 
+Setup5250*AppPrefs5250SizeWidth:                65 
+Setup5250*AppPrefs5250SizeHeight:               30
+
+! messages
+Setup5250*SetNonKioskPrefsDialog.okLabelString:      Ja
+Setup5250*SetNonKioskPrefsDialog.cancelLabelString:  Nee
+Setup5250*SetKioskPrefsDialog.okLabelString:      Ja
+Setup5250*SetKioskPrefsDialog.cancelLabelString:  Nee
+Setup5250*SetKioskPrefsDialog.messageString: Alle emulatorvoorkeuren instellen op standaardwaarden\n\
+voor werkstand Enkelvoudige emulator?
+Setup5250*SetNonKioskPrefsDialog.messageString: Alle emulatorvoorkeuren instellen op standaardwaarden\n\
+voor werkstand Meerdere toepassingen?
+Setup5250*removeConnectionConfirmation.messageString: Geselecteerde verbinding verwijderen?
+Setup5250*Emulator5250Starting: De 5250-emulator wordt gestart. Even geduld a.u.b.
+Setup5250*Emulator3270Starting: De 3270-emulator wordt gestart. Even geduld a.u.b.
+Setup5250*3270PreferencesChanged: De gewijzigde voorkeuren kunnen pas worden doorgevoerd als alle actieve\n\
+3270-emulatiesessies zijn gesloten.
+Setup5250*Current3270SessionIsNotForConfiguration.messageString: Alle gewone 3270-emulatiesessies worden eerst gesloten\n\
+voordat er 3270-sessies voor profielwijziging worden gestart.
+Setup5250*Current3270SessionIsForConfiguration.messageString: Alle 3270-emulatiesessies voor profielwijziging worden\n\
+gesloten voordat de gewone 3270-sessies worden gestart.
+Setup5250*5250PreferencesChanged: De gewijzigde voorkeuren kunnen pas worden doorgevoerd als alle actieve\n\
+5250-emulatiesessies zijn gesloten.
+Setup5250*Current5250SessionIsNotForConfiguration.messageString: Alle gewone 5250-emulatiesessies worden eerst gesloten\n\
+voordat er 5250-sessies voor profielwijziging worden gestart.
+Setup5250*Current5250SessionIsForConfiguration.messageString: Alle 5250-emulatiesessies voor profielwijziging worden\n\
+gesloten voordat de gewone 5250-sessies worden gestart.
+! error messages
+Setup5250*ErrorPasswordIncorrect:               Het opgegeven wachtwoord is onjuist.
+Setup5250*ErrorCurrentPasswordIncorrect:        Het huidige wachtwoord is onjuist.
+Setup5250*ErrorNewPasswordsDontMatch:           Het nieuwe wachtwoord ter bevestiging komt niet overeen met het nieuwe wachtwoord.
+Setup5250*ErrorCantRemoveDefaultPWOnlyOverrideIt:  Het standaardwachtwoord kan niet worden verwijderd,\n\
+alleen vervangen door een gebruikerswachtwoord.
+Setup5250*ErrorNoConnectionDescription:         U moet een beschrijving voor de verbinding opgeven.
+Setup5250*ErrorConnectionDescriptionExistsAlready:  De opgegeven beschrijving van de verbinding bestaat al.
+Setup5250*ErrorUseUserIDInvalidDisplayName:     Beeldschermnaam USE_USER_ID wordt niet ondersteund.
+Setup5250*ErrorNonNumericDataNotAllowed:        Niet-numerieke gegevens zijn niet toegestaan.
+
+! misc
+Setup5250*okLabelString:                        OK
+Setup5250*cancelLabelString:                    Annuleren
+SetupXXXX*title:                                Emulatorconfiguratie
+SetupXXXX*iconName:                             Emulatorconfiguratie
+Setup3270*title:                                3270-configuratie
+Setup3270*iconName:                             3270-configuratie
+Setup5250*title:                                5250-configuratie
+Setup5250*iconName:                             5250-configuratie
+Setup5250*keymapFilename.labelString:           Bestandsnaam toetsenbord (optioneel)
+Setup5250*keypadFilename.labelString:           Bestandsnaam toetsenblok (optioneel)	
+Setup5250*sslFilename.labelString:              SSL-bestandsnaam (optioneel)	
+
+! help dialog.
+SetupXXXX*helpAboutTextTitle.labelString: Info Configuratie IBM-emulators
+SetupXXXX*helpAboutText.value: (C) Copyright 2001, 2005 IBM Corporation, Alle rechten voorbehouden.\n\
+\n\
+Dit programma wordt gebruikt voor het configureren en starten van IBM-emulators.
+Setup5250*helpAboutTextTitle.labelString: Info Configuratie IBM 5250-emulator
+Setup5250*helpAboutText.value: (C) Copyright 2001, 2005 IBM Corporation, Alle rechten voorbehouden.\n\
+\n\
+Dit programma wordt gebruikt voor het configureren en starten van een IBM 5250-emulator.
+Setup3270*helpAboutTextTitle.labelString: Info Configuratie IBM 3270-emulator
+Setup3270*helpAboutText.value: (C) Copyright 2001, 2005 IBM Corporation, Alle rechten voorbehouden.\n\
+\n\
+Dit programma wordt gebruikt voor het configureren en starten van een IBM 3270-emulator.
+
+!arabic parameters
+Setup5250*arabicParametersLabel.labelString: Arabische parameters
+Setup5250*allocateLamAlefLabel.labelString: Ruimte toewijzen\n\
+  voor LamAlef
+! ENGL1SH_VERS10N 1.4.2.1 DO NOT REMOVE OR CHANGE THIS LINE

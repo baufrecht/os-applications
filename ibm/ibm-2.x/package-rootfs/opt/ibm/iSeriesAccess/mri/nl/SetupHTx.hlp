@@ -1,0 +1,381 @@
+////This file is the on-line help for the IBM Emulator Setup Programs.
+////This help text file will be stored in locale specific ASCII (code page 819 for Latin1 languages).
+////Help text format:
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1.
+//// 3. This help file contains help text for the 3270 and 5250 emulator setup programs. There are some help text differences. The Network Station help viewer program will display the appropriate help text for the appropriate emulator. A comment line of four "/" characters followed by
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 setup on-line help.
+//// 3B. "5250" indicates subsequent data is only displayed in 5250 setup on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in both 3270 setup and 5250 setup on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters. The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Order of topics: The emulator help viewer program automatically orders topics in alphabetical order when displaying the topics. There are many topics in this main emulator help text file; alphabetical order should make it easier for users to find the topic that they are looking for.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed on the IBM Network Station).
+////About topic lengths (preceded by four "+" characters): The maximum characters in any topic should be about 38 characters. Exceeding 38 characters will cause the help viewer to display topics for most of the width of the help viewer window, instead of the main help text. You can abbreviate topic text as necessary.
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+////3252
+---- "Emulator Setup Program Help"
+////5250
+---- "5250 Emulator Setup Program Help"
+////3270
+---- "3270 Emulator Setup Program Help"
+////9999
+++++"Using the Help Viewer"
+This topic explains how to use this help viewer.
+
+In het linkergedeelte van het Help-venster ziet u een lijst van Help-onderwerpen. Met behulp van de muis, de Page Up- en Page Down-toetsen (met de muisaanwijzer in het linkervenster), de cursor-omhoogtoets (boven in het venster) en de cursor-omlaagtoets (onder in het venster) kunt u door deze onderwerpen bladeren (als er een bladerbalk in het midden is). 
+
+Als u met de muisaanwijzer een onderwerp aanwijst en daarbij de linkermuisknop indrukt, wordt in het rechterscherm een beschrijving afgebeeld van het geselecteerde onderwerp. 
+
+Met behulp van de muis, de Page Up- en Page Down-toetsen, de cursor-omhoogtoets (boven in het venster) en de cursor-omlaagtoets (onder in het venster) kunt u bladeren in de beschrijving in het rechterscherm. 
+
+Met behulp van de zoekknoppen kunt u in de Help-tekst zoeken naar een bepaald woord of een bepaalde woordgroep. 
+Een zoekreeks mag spaties bevatten en is niet hoofdlettergevoelig.
+
+U kunt de onderwerpen die u al hebt gezien opnieuw bekijken door op de knoppen Volgend en Vorig te klikken.
+
+Klik op de knop Afdrukken om de actieve Help-tekst of alle Help-teksten af te drukken (er moet een printer geconfigureerd zijn voordat de Help-tekst kan worden afgedrukt). 
+
+Klik op de knop Afsluiten om het Help-venster te sluiten. 
+
+Als uw beeldscherm een resolutie van 1024x768 of hoger heeft, kunt u met de knop Lettertype de lettergrootte wijzigen bij het bekijken van de Help.
+++++"Overzicht configuratieprogramma"
+////MAI Used by help viewer to find this topic.
+Het programma Emulatorconfiguratie wordt gebruikt om een IBM-emulator te configureren en starten. Het hoofdvenster bestaat uit twee delen: de menubalk en de lijst of lijsten van geconfigureerde verbindingen daaronder. De menubalk bestaat uit vier menu's: Verbinding, Voorkeuren, Opties en Help. De lijst van geconfigureerde verbindingen bevat verbindingen die geconfigureerd zijn (geen actieve verbindingen). Als er twee lijsten van verbindingen zijn, is de eerste lijst de lijst van 'Gebruikersverbindingen' en de tweede lijst de lijst van 'Standaardverbindingen'. Als er geen standaardverbindingen zijn, wordt de lijst 'Standaardverbindingen' niet afgebeeld. 
+
+Met het menu Verbinding kunt u emulatorverbindingen maken, bewerken, doorbladeren, kopiëren en verwijderen. Gebruik het menu Verbinding ook om een verbinding tot stand te brengen met behulp van een bepaalde verbindingsconfiguratie. De bewerkings-, blader-, kopieer-, verbindings- en verwijderingsacties zijn van toepassing op de verbinding die geselecteerd is in de lijst van verbindingen onder de menubalk. Als er geen verbindingsconfiguraties zijn, of er is geen verbinding geselecteerd, zijn alleen de opties Nieuw en Afsluiten beschikbaar in het menu Verbinding. Als er een verbinding is geselecteerd in de lijst 'Standaardverbindingen', zijn de opties Bewerken en Verwijderen niet beschikbaar in het menu Verbinding. Gebruik de optie Afsluiten om het configuratieprogramma af te sluiten. 
+
+Gebruik het menu Voorkeuren om uw voorkeuren voor de emulators te configureren. Voorkeuren zijn van toepassing op alle emulatorverbindingen, en worden soms vervangen door de afzonderlijke opties van de verbindingsconfiguratie. U moet alle emulatiesessies stoppen en opnieuw starten om uw voorkeuren door te voeren. 
+
+Gebruik het menu Opties voor het wijzigen van de werking van het Configuratieprogramma zelf. U kunt bijvoorbeeld met dit menu een wachtwoord voor het configuratieprogramma toevoegen. 
+
+Gebruik het menu Help om meer te weten te komen over het programma Emulatorconfiguratie, de Help bij het programma Emulatorconfiguratie oproepen of de Help-informatie voor de emulator zelf te bekijken.
+++++"Wachtwoord voor Configuratieprogramma"
+////PAS Used by help viewer to find this topic.
+Het venster Wachtwoord wijzigen wordt gebruikt voor het maken, wijzigen of verwijderen van het wachtwoord voor het Configuratieprogramma. U kunt dit venster openen door Wachtwoord te kiezen uit het menu Opties. 
+
+Als u een wachtwoord wilt wijzigen of verwijderen, moet u eerst het huidige wachtwoord opgeven. 
+
+Als u het wachtwoord wilt instellen of wijzigen, moet het nieuwe wachtwoord tweemaal worden opgegeven: eerst in het veld "Nieuw wachtwoord" en vervolgens in het veld "Nieuw wachtwoord bevestigen". Wachtwoorden zijn hoofdlettergevoelig, dus let op of Caps Lock in de juiste stand staat. 
+
+Als u een wachtwoord wilt verwijderen, wijzigt u het wachtwoord in een leeg wachtwoord (geef niets op in de velden "Nieuw wachtwoord" en "Nieuw wachtwoord bevestigen").
+////3270
+++++"3270-emulatorverbinding"
+////3CN Used by help viewer to find this topic.
+Het venster 3270-emulatorverbinding wordt gebruikt voor het maken, bewerken of doorbladeren van een verbindingsconfiguratie voor een 3270-emulator. U kunt dit venster openen door Nieuw, Bewerken of Bladeren te kiezen uit het menu Verbinding. 
+
+Beschrijving verbinding: 
+
+Dit is de naam of beschrijving van de verbindingsconfiguratie voor een 3270-emulator. Er kan van alles worden opgegeven in dit veld, maar u hebt het meeste aan informatie over het doelsysteem of het doel van deze verbinding. Deze beschrijving wordt alleen gebruikt in dit configuratieprogramma om de verbindingsconfiguratie in de lijst van geconfigureerde verbindingen te kunnen herkennen. De informatie wordt niet gebruikt in de emulator zelf. 
+
+S/390-hostnaam of IP-adres: 
+
+Dit is een optioneel veld. Als het leeg wordt gelaten, verschijnt er bij het starten van de 3270-emulator een venster waarin u gevraagd wordt de hostnaam of het (numerieke) IP-adres op te geven. 
+
+Er kan een uitgebreide verbindingsconfiguratie voor de 3270-emulator worden opgegeven voor deze emulatorverbinding. Dit doet u door de knop Uitgebreide 3270-verbinding te kiezen in het venster 3270-emulatorverbinding. 
+
+Veel voorkeuren voor de 3270-emulator zijn algemeen (de voorkeuren zijn van toepassing op alle 3270-emulatiesessies), bijvoorbeeld het in- of uitschakelen van de mogelijkheid om de toetsenbordindeling te wijzigen. Algemene voorkeuren geeft u op via het menu Voorkeuren of door de knop Algemene 3270-voorkeuren te kiezen in het venster 3270-emulatorverbinding.
+++++" - Uitgebreide configuratie"
+////3AC Used by help viewer to find this topic.
+Parameters voor Uitgebreide 3270-emulatorverbinding
+
+Sessietitel: 
+
+Deze tekst wordt weergegeven als de titel van de emulatiesessie. De standaardtitel is "3270". Deze waarde is optioneel. 
+
+Schermgrootte:
+
+Met deze optie kunt u het formaat van het scherm van uw 3270-sessie instellen (aantal rijen en kolommen). Opmerking: Meestal is een beeldschermresolutie van 1024x768 of hoger vereist om 27 rijen x 132 kolommen af te beelden. Een beeldschermresolutie van 800x600 of hoger is vereist voor het afbeelden van 43 rijen x 80 kolommen. Mogelijke waarden zijn: 24 x 80, 32 x 80, 43 x 80 en 27 x 132. De standaardwaarde is 32 x 80. 
+
+Grafische voorstellingen:
+
+Met de optie Grafische voorstellingen kunt u de mogelijkheid om grafische voorstellingen af te beelden binnen de 3270-sessie in- en uitschakelen. Grafische voorstellingen zijn alleen mogelijk bij een schermgrootte van 32 x 80. Mogelijke waarden zijn Ingeschakeld en Uitgeschakeld. 
+
+TN3270E:
+
+
+Mogelijke waarden zijn Ingeschakeld en Uitgeschakeld. De standaardwaarde is Ingeschakeld. Als u Ingeschakeld kiest, brengt de 3270-emulator een TN3270E-sessie (enhanced Telnet 3270) met de server tot stand. Als het niet mogelijk is om een TN3270E-sessie te starten, wordt er een standaard 3270-sessie gebruikt. Als u Uitgeschakeld kiest, kan er geen TN3270E-sessie tot stand worden gebracht. In plaats daarvan wordt er een standaard 3270-sessie gestart. 
+
+Telnet-poort:
+
+Deze optie geeft aan welke TCP/IP-poort op een System/390 wordt gebruikt voor het tot stand brengen van een 3270-sessie. De standaardwaarde is 23. Geldige waarden liggen tussen 1 en 65535. Als u een andere waarde dan de standaardwaarde wilt gebruiken, dient u eerst het juiste poortnummer op te vragen bij de systeembeheerder van de System/390- of Telnet-server op afstand.
+
+
+Vensterformaat en locatie in pixels (optioneel): 
+
+Met deze optie kunt u de grootte en locatie van het 3270-venster opgeven. De volgende velden bepalen de venstergrootte (breedte en hoogte) en de positie van het venster op het scherm (de horizontale en verticale offset en de hoek van waaruit deze is gemeten):
+
+
+Volledig scherm:
+Als u dit vakje selecteert, kan de 3270-sessie het gehele scherm in beslag nemen.
+
+Breedte:
+Deze waarde bepaalt de horizontale breedte van het venster (in pixels).
+
+Hoogte:
+Deze waarde bepaalt de verticale hoogte van het venster (in pixels).
+
+Horizontale offset:
+Deze waarde bepaalt de horizontale afstand ten opzichte van de hoek die is opgegeven bij Hoek voor offset (bijvoorbeeld Linksboven) (in pixels).
+
+Verticale offset:
+Deze waarde bepaalt de verticale afstand ten opzichte van de hoek die is opgegeven bij Hoek voor offset (bijvoorbeeld Linksboven) (in pixels).
+
+Hoek voor offset:
+Deze waarde geeft aan ten opzichte van welke hoek van het scherm (linksboven, rechtsboven, linksonder of rechtsonder) de waarden in de velden voor de horizontale en verticale offset worden toegepast.
+
+Gebruikers-ID emulator:
+Deze waarde wordt gebruikt voor het gebruikers-ID in de emulator. In geval van automatische aanmelding bij een emulator wordt deze waarde gebruikt voor het gebruikers-ID. 
+
+Wachtwoord emulator:
+Deze waarde wordt gebruikt voor het wachtwoord in de emulator. In geval van automatische aanmelding bij een emulator wordt deze waarde gebruikt voor het wachtwoord. Het wachtwoord wordt versleuteld opgeslagen. 
+
+Andere parameters:
+U kunt aanvullende parameters voor de 3270-emulator configureren. De parameterbeschrijvingen en de bijbehorende waarden vindt u in de online Help van de 3270-emulator. Andere parameters zijn hoofdlettergevoelig. 
+
+++++"3270-voorkeuren"
+////3PR Used by help viewer to find this topic.
+Door het instellen van 3270-voorkeuren kunt u opgeven of emulatoropties beschikbaar zijn of niet. Voorkeursinstellingen zijn van toepassing op alle 3270-sessies. Alle 3270-sessies moeten worden gesloten en opnieuw gestart om de voorkeuren door te voeren. 
+
+Toetsenbordindeling wijzigen: 
+
+Met Toetsenbord wijzigen kunt u de functie van toetsen in de 3270-emulator opnieuw toewijzen. Toetsenbord wijzigen is beschikbaar via het emulatormenu Opties. "Uitgeschakeld" houdt in dat de gebruiker de menuoptie Toetsenbordindeling wijzigen wel kan zien, maar niet kan selecteren (grijs weergegeven). "Verborgen" betekent dat de menuoptie Toetsenbordindeling wijzigen niet beschikbaar is in het menu Opties. In de online Help bij de 3270-emulator vindt u meer informatie over het wijzigen van de toetsenbordindeling. 
+
+Toetsenblok wijzigen: 
+
+Met Toetsenblok wijzigen kunt u aangepaste toetsenblokknoppen maken en gebruiken. "Ja" betekent dat u de toetsenblokknoppen kunt aanpassen. "Alleen toetsenblok gebruiken" houdt in dat alleen gebruikgemaakt kan worden van eerder gemaakte toetsenblokken. Toetsenblok aanpassen is beschikbaar via het emulatormenu Opties. In de online Help bij de 3270-emulator vindt u meer informatie over het wijzigen van het toetsenblok. 
+
+Functie voor Opnemen/Afspelen:
+
+Met de functie Opnemen/Afspelen kunt u toetsenreeksen opnemen en later afspelen in de 3270-emulator. Opnemen/Afspelen is beschikbaar via de emulatoroptie Opties. "Alleen afspelen" houdt in dat alleen gebruikgemaakt kan worden van eerder gemaakte afspeelbestanden. In de online Help bij de 3270-emulator vindt u meer informatie over opnemen en afspelen. 
+
+Instelbaarheid van kleuren:
+
+Met Instelbaarheid van kleuren kunt u de kleuren in uw 3270-sessies wijzigen. Instelbaarheid van kleuren is beschikbaar via de emulatoroptie Opties. "Beperkt" houdt in dat u kunt kiezen uit een set van 3270-kleurenschema's. "Uitgebreid" houdt in dat u uw eigen 3270-kleurenschema's kunt maken. In de online Help bij de 3270-emulator vindt u meer informatie over het toewijzen van kleuren. 
+
+Toets voor Enter-functie:
+
+Met de optie Toets voor Enter-functie geeft u de toets aan die u als Enter-toets wilt gebruiken. De standaardwaarde is de Enter-toets.
+
+
+Bureaubladbestand:
+
+Deze optie bepaalt of de 3270-emulator de laatste locatie en lettergrootte van 3270-emulatievensters opslaat en gebruikt. Als "Ja" of "Ja, maar alleen lezen" is geselecteerd, gebruikt de 3270-emulator de opgeslagen locatie en lettergrootte bij het starten van een 3270-emulator. Als "Ja" is geselecteerd, wordt de laatste locatie en lettergrootte ook opgeslagen bij het afsluiten van een 3270-emulator. Als "Nee" is geselecteerd voor Bureaubladbestand, wordt de laatste locatie en lettergrootte niet gebruikt of opgeslagen door de 3270-emulator. Opmerking: Als het vensterformaat en de locatie zijn ingesteld in de verbindingsconfiguratie, wordt de laatste locatie en lettergrootte niet gebruikt of opgeslagen door de 3270-emulator, ongeacht wat de instelling van deze optie is. 
+
+Menu Opdracht:
+
+Met deze optie kunt u opgeven of het menu Opdracht wordt afgebeeld op de menubalk van de 3270-emulator. "Ja" betekent dat de optie Opdracht beschikbaar is. Als de optie Opdracht is uitgeschakeld, hebt u geen toegang tot nieuwe 3270-sessies en kunt u ook geen 3270-sessie afsluiten met de optie Opdracht. 
+
+Menu Bewerken:
+
+Met deze optie kunt u opgeven of het menu Bewerken wordt afgebeeld op de menubalk van de 3270-emulator (kopiëren, knippen en plakken). 
+
+Menu Opties:
+
+Met deze optie kunt u opgeven of het menu Opties wordt afgebeeld op de menubalk van de 3270-emulator. Als het menu Opties is uitgeschakeld, hebt u geen toegang tot het selecteren van lettertypen, het wijzigen van het toetsenblok, de functies voor Opnemen/Afspelen, diverse voorkeursinstellingen (bijvoorbeeld de keuze van het cursortype), kleurentoewijzingen en het wijzigen van de toetsenbordindeling. 
+
+Menu Afdrukken:
+
+Met deze optie kunt u opgeven of het menu Afdrukken wordt afgebeeld op de menubalk van de 3270-emulator (om het 3270-emulatievenster af te drukken). "Geen menu, alleen afdrukken via toetsenbord" houdt in dat u een Print-toetsencombinatie kunt gebruiken om het 3270-emulatievenster af te drukken. Via Diverse voorkeuren en Toetsenbordindeling wijzigen kunt u de toetsencombinatie voor afdrukken opgeven. Opmerking: Er moet een printer zijn geconfigureerd voordat u een 3270-emulatievenster kunt afdrukken. 
+
+Menu Help:
+
+Met deze optie kunt u opgeven of het menu Help wordt afgebeeld op de menubalk van de 3270-emulator (om online Help bij de 3270-emulator af te beelden). 
+
+Diverse voorkeuren:
+
+Met de optie Diverse voorkeuren kunt u diverse voorkeuren voor de 3270-emulator in- of uitschakelen. Diverse voorkeuren is beschikbaar via het emulatormenu Opties. Met Diverse voorkeuren kunt u tot op zekere hoogte uw 3270-scherm aanpassen aan uw eigen voorkeur en smaak. Zo kunt u het type cursor kiezen (streepje of blokje) of een knipperende (of niet knipperende) cursor en het gebruik van positielijnen instellen. 
+
+Lettertype instellen:
+
+Met deze optie kunt u opgeven of de optie Lettertypen wordt afgebeeld in het menu Opties van de 3270-emulator. Deze optie bepaalt ook of de gebruiker het formaat van het 3270-emulatievenster kan wijzigen of dit kan verplaatsen. 
+
+Nieuw sessievenster:
+
+Met de optie Nieuw sessievenster kunt u het starten van een andere 3270-emulator voor een andere S/390-host in- of uitschakelen. Het nieuwe sessievenster van de emulator is beschikbaar via het menu Opdracht van de emulator (op voorwaarde dat het afbeelden van de optie Opdracht in de menubalk is ingeschakeld). 
+
+Gebruikers-ID emulator:
+Deze waarde wordt gebruikt voor het gebruikers-ID in de emulator. In geval van automatische aanmelding bij een emulator wordt deze waarde gebruikt voor het gebruikers-ID. 
+
+Wachtwoord emulator:
+Deze waarde wordt gebruikt voor het wachtwoord in de emulator. In geval van automatische aanmelding bij een emulator wordt deze waarde gebruikt voor het wachtwoord. Het wachtwoord wordt versleuteld opgeslagen. 
+
+Aanvullende parameters:
+
+U kunt aanvullende parameters voor de 3270-emulator configureren. De parameterbeschrijvingen en de bijbehorende waarden vindt u in de online Help van de 3270-emulator. Aanvullende parameters zijn hoofdlettergevoelig.
+////5250
+++++"5250-emulatorverbinding"
+////5CN Used by help viewer to find this topic.
+Het venster 5250-emulatorverbinding wordt gebruikt voor het maken of bewerken van een verbindingsconfiguratie voor een 5250-emulator. U kunt dit venster openen door Nieuw of Bewerken te kiezen uit het menu Verbinding. 
+
+Beschrijving verbinding: 
+
+Dit is de naam of beschrijving van de verbindingsconfiguratie voor een 5250-emulator. Er kan van alles worden opgegeven in dit veld, maar u hebt het meeste aan informatie over het doelsysteem of het doel van deze verbinding. Deze beschrijving wordt alleen gebruikt in dit configuratieprogramma om de verbindingsconfiguratie in de lijst van geconfigureerde verbindingen te kunnen herkennen. De informatie wordt niet gebruikt in de emulator zelf. 
+
+i5/OS-hostnaam of IP-adres:
+
+Dit is een optioneel veld. Als het leeg wordt gelaten, verschijnt er bij het starten van de 5250-emulator een venster waarin u gevraagd wordt de hostnaam of het (numerieke) IP-adres op te geven. 
+
+Er kan een uitgebreide verbindingsconfiguratie voor de 5250-emulator worden opgegeven voor deze emulatorverbinding. Dit doet u door de knop Uitgebreide 5250-verbinding te kiezen in het venster 5250-emulatorverbinding. 
+
+Veel voorkeuren voor de 5250-emulator zijn algemeen (de voorkeuren zijn van toepassing op alle 5250-emulatiesessies), bijvoorbeeld het in- of uitschakelen van de mogelijkheid om de toetsenbordindeling te wijzigen. Algemene voorkeuren geeft u op via het menu Voorkeuren of door de knop Algemene 5250-voorkeuren te kiezen in het venster 5250-emulatorverbinding.
+++++" - Uitgebreide configuratie"
+////5AC Used by help viewer to find this topic.
+Parameters voor 5250-emulatorverbinding: 
+
+Sessietitel: 
+
+Deze tekst wordt weergegeven als de sessietitel. De standaardtitel is "5250". Deze waarde is optioneel. 
+
+Beeldschermnaam: 
+
+Deze waarde bepaalt de naam van het 5250-scherm. Deze waarde is optioneel. Zie het onderwerp Naam beeldscherm in de online Help bij de 5250-emulator voor meer informatie. 
+
+Vensterformaat en locatie in pixels (optioneel): 
+
+Met deze optie kunt u de grootte en locatie van het 5250-venster opgeven. De volgende velden bepalen de venstergrootte (breedte en hoogte) en de positie van het venster op het scherm (de horizontale en verticale offset en de hoek van waaruit deze is gemeten):
+
+
+Volledig scherm:
+Als u dit vakje selecteert, kan de 5250-sessie het gehele scherm in beslag nemen.
+
+Breedte:
+Deze waarde bepaalt de horizontale breedte van het venster (in pixels).
+
+Hoogte:
+Deze waarde bepaalt de verticale hoogte van het venster (in pixels).
+
+Horizontale offset:
+Deze waarde bepaalt de horizontale afstand ten opzichte van de hoek die is opgegeven bij Hoek voor offset (bijvoorbeeld Linksboven) (in pixels).
+
+Verticale offset:
+Deze waarde bepaalt de verticale afstand ten opzichte van de hoek die is opgegeven bij Hoek voor offset (bijvoorbeeld Linksboven) (in pixels).
+
+Hoek voor offset:
+Deze waarde geeft aan ten opzichte van welke hoek van het scherm (linksboven, rechtsboven, linksonder of rechtsonder) de waarden in de velden voor de horizontale en verticale offset worden toegepast.
+
+Gebruikers-ID emulator:
+Deze waarde wordt gebruikt voor het gebruikers-ID in de emulator. In geval van automatische aanmelding bij een emulator wordt deze waarde gebruikt voor het gebruikers-ID. 
+
+Wachtwoord emulator:
+Deze waarde wordt gebruikt voor het wachtwoord in de emulator. In geval van automatische aanmelding bij een emulator wordt deze waarde gebruikt voor het wachtwoord. Het wachtwoord wordt versleuteld opgeslagen. 
+
+Telnet-poort:
+Geef de Telnet-poort op die is ingesteld voor de server. Als dit veld niet wordt ingevuld, wordt de standaard Telnet-poort, 23, gebruikt. 
+
+Naam toetsenbordbestand:
+Geef de naam op van een toetsenbordbestand en het volledige pad naar dit bestand.
+
+Naam toetsenblokbestand:
+Geef de naam op van een toetsenblokbestand en het volledige pad naar dit bestand.
+
+Naam SSL-bestand:
+Geef de naam van het SSL-bestand op en het volledige pad naar dit bestand.
+
+Andere parameters:
+U kunt aanvullende parameters voor de 5250-emulator configureren. De parameterbeschrijvingen en de bijbehorende waarden vindt u in de online Help van de 5250-emulator. Andere parameters zijn hoofdlettergevoelig. 
+
+++++"5250-voorkeuren"
+////5PR Used by help viewer to find this topic.
+Door het instellen van 5250-voorkeuren kunt u opgeven of emulatoropties beschikbaar zijn of niet. Voorkeursinstellingen zijn van toepassing op alle 5250-sessies. Alle 5250-sessies moeten worden gesloten en opnieuw gestart om de voorkeuren door te voeren. 
+
+Toetsenbordindeling wijzigen: 
+
+Met Toetsenbord wijzigen kunt u de functie van toetsen in de 5250-emulator opnieuw toewijzen. Toetsenbord wijzigen is beschikbaar via het emulatormenu Opties. "Uitgeschakeld" houdt in dat de gebruiker de menuoptie Toetsenbordindeling wijzigen wel kan zien, maar niet kan selecteren (grijs weergegeven). "Verborgen" betekent dat de menuoptie Toetsenbordindeling wijzigen niet beschikbaar is in het menu Opties. In de online Help bij de 5270-emulator vindt u meer informatie over het wijzigen van de toetsenbordindeling. 
+
+Toetsenblok wijzigen: 
+
+Met Toetsenblok wijzigen kunt u aangepaste toetsenblokknoppen maken en gebruiken. "Ja" betekent dat u de toetsenblokknoppen kunt aanpassen. "Alleen toetsenblok gebruiken" houdt in dat alleen gebruikgemaakt kan worden van eerder gemaakte toetsenblokken. Toetsenblok aanpassen is beschikbaar via het emulatormenu Opties. In de online Help bij de 5250-emulator vindt u meer informatie over het wijzigen van het toetsenblok. 
+
+Functie voor Opnemen/Afspelen:
+
+Met de functie Opnemen/Afspelen kunt u toetsenreeksen opnemen en later afspelen in de 5250-emulator. Opnemen/Afspelen is beschikbaar via de emulatoroptie Opties. "Alleen afspelen" houdt in dat alleen gebruikgemaakt kan worden van eerder gemaakte afspeelbestanden. In de online Help bij de 5270-emulator vindt u meer informatie over opnemen en afspelen. 
+
+Instelbaarheid van kleuren:
+
+Met Instelbaarheid van kleuren kunt u de kleuren in uw 5250-sessies wijzigen. Instelbaarheid van kleuren is beschikbaar via de emulatoroptie Opties. "Beperkt" houdt in dat u kunt kiezen uit een set van 5250-kleurenschema's. "Uitgebreid" houdt in dat u uw eigen 5250-kleurenschema's kunt maken. In de online Help bij de 5250-emulator vindt u meer informatie over het toewijzen van kleuren. 
+
+Arabische paramaters:
+Deze optie is ter bescherming van het LamAlef-teken in het Implicit-bestand op iSeries-systemen. Wanneer deze optie is geselecteerd, wordt voor elk LamAlef-teken ruimte gereserveerd aan het einde van het Arabische veld. Standaard is deze optie uitgeschakeld. 
+
+132 kolommen: 
+
+Als deze optie is ingeschakeld is een schermgrootte van 27 rijen x 132 kolommen toegestaan. De meeste i5/OS-schermen bestaan uit 24 rijen x 80 kolommen. Sommige i5/OS-schermen maken gebruik van 27 rijen x 132 kolommen als de 5250-emulator deze schermgrootte ondersteunt. In het algemeen is een beeldschermresolutie van 1024x768 of hoger vereist om 27 rijen x 132 kolommen af te beelden. 
+
+Kolomscheidingstekens:
+
+Met de optie Kolomscheidingstekens kunt u de weergave van kolomscheidingstekens tussen bepaalde typen 5250-invoervelden in- of uitschakelen. De standaardwaarde is Uitgeschakeld, hetgeen inhoudt dat kolomscheidingstekens niet worden afgebeeld in 5250-invoervelden. 
+
+Bureaubladbestand:
+
+Deze optie bepaalt of de 5250-emulator de laatste locatie en lettergrootte van 5250-emulatievensters opslaat en gebruikt. Als "Ja" of "Ja, maar alleen lezen" is geselecteerd, gebruikt de 5250-emulator de opgeslagen locatie en lettergrootte bij het starten van een 5250-emulator. Als "Ja" is geselecteerd, wordt de laatste locatie en lettergrootte ook opgeslagen bij het afsluiten van een 5250-emulator. Als "Nee" is geselecteerd voor Bureaubladbestand, wordt de laatste locatie en lettergrootte niet gebruikt of opgeslagen door de 5250-emulator. Opmerking: Als het vensterformaat en de locatie zijn ingesteld in de verbindingsconfiguratie, wordt de laatste locatie en lettergrootte niet gebruikt of opgeslagen door de 5250-emulator, ongeacht wat de instelling van deze optie is. 
+
+Menu Opdracht:
+
+Met deze optie kunt u opgeven of het menu Opdracht wordt afgebeeld op de menubalk van de 5250-emulator. "Ja" betekent dat de optie Opdracht beschikbaar is. Als de optie Opdracht is uitgeschakeld, hebt u geen toegang tot nieuwe 5250-sessies en kunt u ook geen 5250-sessie afsluiten met de optie Opdracht. 
+
+Menu Bewerken:
+
+Met deze optie kunt u opgeven of het menu Bewerken wordt afgebeeld op de menubalk van de 5250-emulator (kopiëren, knippen en plakken). 
+
+Menu Opties:
+
+Met deze optie kunt u opgeven of het menu Opties wordt afgebeeld op de menubalk van de 5250-emulator. Als het menu Opties is uitgeschakeld, hebt u geen toegang tot het selecteren van lettertypen, het wijzigen van het toetsenblok, de functies voor Opnemen/Afspelen, diverse voorkeursinstellingen (bijvoorbeeld de keuze van het cursortype), kleurentoewijzingen en het wijzigen van de toetsenbordindeling. 
+
+Menu Afdrukken:
+
+Met deze optie kunt u opgeven of het menu Afdrukken wordt afgebeeld op de menubalk van de 5250-emulator (om het 5250-emulatievenster af te drukken). "Geen menu, alleen afdrukken via toetsenbord" houdt in dat u een Print-toetsencombinatie kunt gebruiken om het 5250-emulatievenster af te drukken. Via Diverse voorkeuren en Toetsenbordindeling wijzigen kunt u de toetsencombinatie voor afdrukken opgeven. Opmerking: Er moet een printer zijn geconfigureerd voordat u een 5250-emulatievenster kunt afdrukken. 
+
+Menu Help:
+
+Met deze optie kunt u opgeven of het menu Help wordt afgebeeld op de menubalk van de 5250-emulator (om online Help bij de 5250-emulator af te beelden). 
+
+Menu Besturing:
+
+Met deze optie kunt u opgeven of het menu Besturing wordt afgebeeld op de menubalk van de 5250-emulator. Als u een toets kiest uit het menu Besturing, heeft dit hetzelfde effect als het indrukken van de toets op het toetsenbord. 
+
+Diverse voorkeuren:
+
+Met de optie Diverse voorkeuren kunt u diverse voorkeuren voor de 5250-emulator in- of uitschakelen. Diverse voorkeuren is beschikbaar via het emulatormenu Opties. Met Diverse voorkeuren kunt u tot op zekere hoogte uw 5250-scherm aanpassen aan uw eigen voorkeur en smaak. Zo kunt u het type cursor kiezen (streepje of blokje) of een knipperende (of niet knipperende) cursor en het gebruik van positielijnen instellen. 
+
+Lettertype instellen:
+
+Met deze optie kunt u opgeven of de optie Lettertypen wordt afgebeeld in het menu Opties van de 5250-emulator. Deze optie bepaalt ook of de gebruiker het formaat van het 5250-emulatievenster kan wijzigen of dit kan verplaatsen. 
+
+Nieuw sessievenster:
+
+Met de optie Nieuw sessievenster kunt u het starten van een andere 5250-emulator voor een andere i5/OS-host in- of uitschakelen. Het nieuwe sessievenster van de emulator is beschikbaar via het menu Opdracht van de emulator (op voorwaarde dat het afbeelden van de optie Opdracht in de menubalk is ingeschakeld). 
+
+Browserhotspot:
+
+
+Met de optie Browserhotspot kunt u het herkennen van een URL-hotspot en het starten van een browser in- of uitschakelen. Als deze optie is ingeschakeld en een gebruiker klikt op een geldige URL-hotspot, wordt de opdracht die is opgegeven bij de systeemomgevingsvariabele $BROWSER aangeroepen met de URL als parameter. De systeemvariabele $BROWSER moet worden gedefinieerd met de volledig gekwalificeerde naam of een naam die is aangetroffen in het systeempad ($PATH) naar de te gebruiken browser. Als de omgevingsvariabele $BROWSER niet wordt gevonden of niet geldig is, wordt er geen browser gestart. 
+
+
+Gebruikers-ID emulator:
+Deze waarde wordt gebruikt voor het gebruikers-ID in de emulator. In geval van automatische aanmelding bij een emulator wordt deze waarde gebruikt voor het gebruikers-ID. 
+
+Wachtwoord emulator:
+Deze waarde wordt gebruikt voor het wachtwoord in de emulator. In geval van automatische aanmelding bij een emulator wordt deze waarde gebruikt voor het wachtwoord. Het wachtwoord wordt versleuteld opgeslagen. 
+
+Aanvullende parameters:
+
+U kunt aanvullende parameters voor de 5250-emulator configureren. De parameterbeschrijvingen en de bijbehorende waarden vindt u in de online Help van de 5250-emulator. Aanvullende parameters zijn hoofdlettergevoelig.
+////9999
+++++"Standaardverbindingen"
+Als u standaard emulatorverbindingen wilt maken of wijzigen, start u het programma Emulatorconfiguratie en kiest u "Verbinding--> Nieuw" of selecteert u een reeds gedefinieerde verbinding en kiest u vervolgens "Verbinding-->Bewerken". Verbindingen worden opgeslagen in de emulatorvoorkeuren van de gebruiker in de directory $HOME/.iSeriesAccess/ibm_5250/. De opgeslagen verbindingen worden de standaardverbindingen voor deze gebruiker.
+++++"Standaard kleurentoewijzingen"
+Als u een standaard kleurentoewijzing voor de emulator wilt maken of wijzigen, start u een emulatiesessie vanuit het programma Emulatorconfiguratie en kiest u "Opties-> Kleurentoewijzing". De emulatorvoorkeur 'Instelbaarheid van kleuren' moet ingeschakeld zijn vanuit het programma Emulatorconfiguratie voor het wijzigen van een kleurentoewijzing. Kleurentoewijzingen die zijn gemaakt of gewijzigd, worden opgeslagen in het voorkeursbestand van de gebruiker in de directory $HOME/.iSeriesAccess/ibm_5250/.
+++++"Standaard toetsenbordindelingen"
+Als u een standaard toetsenbordindeling voor de emulator wilt maken of wijzigen, start u een emulatiesessie en kiest u "Opties-> Toetsenbordindeling wijzigen". De emulatorvoorkeur 'Toetsenbordindeling wijzigen' moet ingeschakeld zijn vanuit het programma Emulatorconfiguratie voor het wijzigen van een toetsenbordindeling. Toetsenbordindelingen die zijn gemaakt of gewijzigd, worden opgeslagen in het voorkeursbestand van de gebruiker in de directory $HOME/.iSeriesAccess/ibm_5250/.
+++++"Standaard toetsenblokken"
+Als u een standaard toetsenblok voor de emulator wilt maken of wijzigen, start u een emulatiesessie vanuit het programma Emulatorconfiguratie en kiest u "Opties-> Toetsenblok wijzigen. De emulatorvoorkeur 'Toetsenblok wijzigen' moet ingesteld zijn op 'Ja' vanuit het programma Emulatorconfiguratie voor het wijzigen van een toetsenblok. Toetsenblokken die zijn gemaakt of gewijzigd in de voorbeeldwerkstand, worden opgeslagen in het voorkeursbestand van de gebruiker in de directory $HOME/.iSeriesAccess/ibm_5250/.
+++++"Standaard diverse voorkeuren"
+Als u standaard diverse voorkeuren voor de emulator wilt maken, start u een emulatiesessie vanuit het programma Emulatorconfiguratie en kiest u "Opties -> Diverse voorkeuren". De emulatorvoorkeur 'Diverse voorkeuren' moet ingesteld zijn op 'Ja' vanuit het programma Emulatorconfiguratie voor het wijzigen van diverse voorkeuren. Diverse voorkeuren die gewijzigd zijn in de voorbeeldwerkstand worden opgeslagen in het voorkeursbestand van de gebruiker in de directory $HOME/.iSeriesAccess/ibm_5250/.
+++++"Standaard afspeelbestanden"
+Als u een standaard afspeelbestand voor de emulator wilt maken of wijzigen, start u een emulatiesessie en kiest u "Opties-> Opnemen". De emulatorvoorkeur 'Opnemen/Afspelen' moet ingeschakeld zijn vanuit het programma Emulatorconfiguratie voor het wijzigen van afspeelbestanden. Afspeelbestanden die zijn gemaakt of gewijzigd, worden opgeslagen in het voorkeurenbestand van de gebruiker in de directory $HOME/.iSeriesAccess/ibm_5250/.
+++++"Standaard voorkeuren"
+Als u standaard voorkeuren voor de emulator wilt maken, bekijken of wijzigen, start u het programma Emulatorconfiguratie. Voorkeuren worden opgeslagen in de emulatorvoorkeuren van de gebruiker in de directory $HOME/.iSeriesAccess/ibm_5250/. Deze voorkeuren worden de standaard voorkeuren voor deze gebruiker.
+//// ENGL1SH_VERS10N 1.5.2.1 DO NOT REMOVE OR CHANGE THIS LINE

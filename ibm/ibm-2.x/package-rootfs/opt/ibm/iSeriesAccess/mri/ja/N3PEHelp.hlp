@@ -1,0 +1,80 @@
+//// ENGLISH_SOURCE_VERSION= 1.2 
+////This file contains the playback editor program on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file will be stored in locale specific ASCII (code page 819 for Latin1 languages). 
+
+////Help text format (this section is not displayed to IBM emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1.
+//// 3. This help file contains help text for the 3270 and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator. A comment line of four "/" characters followed by:
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+//// 3B.  "5250" indicates subsequent data is only displayed in 5250 on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in both 3270 and 5250 on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+//// 3D Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters.  The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Do not change the order of topics in this help text file.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+
+----"3270 再生エディターのヘルプ"
+++++"一般情報"
+このヘルプ・ビュー・プログラムの使用については、メイン・エミュレーター・ヘルプの最初のトピックを参照してください (エミュレーター・ウィンドウの「ヘルプ」メニュー・バー選択項目を選択します) 。
+
+このヘルプ情報には、既存の再生ファイルの編集方法が説明されています。再生ファイルは、「オプション」メニューから「記録」オプションを使用して作成されるもので、ユーザーによって定義された各種のアクションおよびキー順からなります。
+
+注 : 一度に活動化できる再生エディター・プログラムは 1 つだけです。
+
+++++"ウィンドウ・レイアウト"
+再生エディター・ウィンドウには、キーボード・アクション選択域 (左)、再生アクション・リスト作業域 (右)、アクション・バー域 (下部)、およびメッセージ域 (下部) があります。
+
+キーボード・アクション選択域には次のものが含まれています。
+
+1) 「使用可能アクション・リスト」には、使用可能なキーボード・アクションがあります。このリストから選択したアクションは現行アクションとなります。
+
+2) 「文字リスト」には、使用可能なすべての文字がリストされています。選択された文字は、現行アクションになります。文字を選択するには、その文字をクリックします。
+
+3) 「アクションヘルプ」ボタンは、「アクションヘルプ」ウィンドウ中にキーボード・アクション定義を提供します。アクション定義は、印刷することができます。
+
+4) 「挿入アクション ->」ボタンは、選択された再生ファイル・アクションの上の再生アクション・リスト作業域に現行アクションを挿入します。
+
+注 : 1 つのアクションだけを現行アクションとすることができます。
+
+
+再生アクション・リスト作業域には次のものが含まれています。
+
+1) 「現行再生ファイル」には再生ファイル名が表示されます。
+
+2) 「現行再生ファイル・アクション」域には、現行再生ファイル中のキーボード・アクションがリストされます。アクションを挿入、編集、または除去するには、1 行のキーボード・アクション行を選択しなければなりません。アクション行は約 100 桁に制限されます。
+
+3) 「アクション編集」ボタンによって、選択したアクションを編集することができます。編集ウィンドウ中の「了解」ボタンは、編集されたアクションを置き換えます。「取消」ボタンは、アクションに対する変更を取り消します。
+
+4) 「行挿入」ボタンは、再生ファイル・アクション・リスト中の選択された位置にブランク行を挿入します。このブランク行は、その後で編集することができます。
+
+5) 「アクション除去」ボタンは、選択されたアクションを除去します。
+
+6) 「了解」ボタンは、再生ファイル・アクション・リストに対して行なわれた変更を受け入れます。
+
+7) 「取消」ボタンは、再生ファイル・アクション・リストに対して行なわれた変更を取り消します。
+
+
+アクション・バー・ボタンには次の機能があります。
+
+1) 「保管」によって、再生ファイルの変更を保管することができます。オリジナルの再生ファイルを変更するか、あるいは変更を新規再生ファイル中に保管することができます。
+
+2) 「終了」は、再生ファイル・エディター・プログラムを終了します。
+
+3 「ヘルプ」は、このヘルプ・テキストを表示します。
+
+
+メッセージ域 :
+通知およびエラー・メッセージを表示します。
+
+++++"マウス・アクション"
+使用可能アクション・リストには、再生ファイルに記録できるマウス・アクションを含め、再生ファイル中で使用できる使用可能なすべてのアクションがリストされます。マウス・アクションには、コンマで区切られた行とカラムの位置パラメーターがあります。たとえば、(12,61)。
+
+////3270
+++++"3270 早期キーボード・アンロック"
+注: 3270 アプリケーションは、時に画面更新が完了する前にキーボードをアンロックすることがあります。再生の時に 3270 エミュレーターによって自動的に遅延が加えられます。詳細については、メイン 3270 ヘルプの「再生」のトピックを参照してください。
+////9999

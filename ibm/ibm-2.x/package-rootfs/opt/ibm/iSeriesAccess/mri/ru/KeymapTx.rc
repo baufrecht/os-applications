@@ -1,0 +1,1749 @@
+!
+!
+!
+! This file contains the resource text strings for the IBM Network Station 3270, 5250, VTxxx
+! emulators, in particular the keyboard remapping, keypad customize, and playback edit programs.
+
+! This resource file is stored in locale specific ASCII (code page 819 for Latin1 languages).
+
+! Resource file format:
+! 1. Standard ASCII text file.
+! 2. Comment lines are preceded by a "!" character in column 1 (these lines not translated).
+! 3. Resource format:
+!    - A resource line starts with one of the following strings:
+!      Keymap52* : for keymapper resources
+!      Keypad52* : for keypad customize resources
+!      Playedit* : for playback editor resources
+!      Keyxxx52* : for resources shared by keymapper and keypad
+!      AllShare* : for resources shared by keymapper, keypad, and playback editor
+!    - Each string is followed by a resource name and a ":".
+!       Do NOT make any changes to the text to the left of the first ":"
+!    - Text to the right of the first ":" on a line is translated.
+
+
+!******************************************************************************
+!************************ BEGIN DO NOT TRANSLATE ******************************
+!******************************************************************************
+!*   The first section of resources are are locale specific but               *
+!*   DO NOT REQUIRE TRANSLATION.                                              *
+!*                                                                            *
+!* This source file enables the resource section for Latin1 and Latin2.       *
+!*                                                                            *
+!* For ru_RU or Latin5 locales and DBCS locales                               *
+!*      1. Place a '!' as the first character in each line in the Latin1      *
+!*      and Latin2 section                                                    *
+!*      2. Remove the '!' character for each resource line in the apropriate  *
+!*      section that matches your locale.                                     *
+!*                                                                            *
+!* For example, ru_RU should place ! in front of all lines in the LATIN1      *
+!* section remove the ! from all lines in the LATIN5 section.                 *
+!******************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN1 and LATIN2                ****************
+!**************************************************************************
+Keypad52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*
+Keypad52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+Keypad52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+Keymap52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+Keymap52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-70-*-*
+Keymap52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+Playedit*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+Playedit*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-70-*-*
+Playedit*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!**************************************************************************
+!****************   END LATIN1 and LATIN2                  ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN LATIN5                           ****************
+!**************************************************************************
+!Keypad52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-100-*-*
+!Keypad52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!Keypad52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!Keymap52*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!Keymap52*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-70-*-*
+!Keymap52*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!Playedit*largeFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-90-*-*
+!Playedit*mediumFontList:      -*-*-medium-r-normal-*-*-*-*-*-c-70-*-*
+!Playedit*smallFontList:       -*-*-medium-r-normal-*-*-*-*-*-c-60-*-*
+!**************************************************************************
+!****************   END   LATIN5                           ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (ja_JP ko_KR zh_CN)   ****************
+!**************************************************************************
+!Keypad52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*
+!Keypad52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!Keypad52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*
+!Keymap52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*
+!Keymap52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!Keymap52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*
+!Playedit*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*
+!Playedit*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*
+!Playedit*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*
+!**************************************************************************
+!****************   END DBCS (ja_JP ko_KR zh_CN)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   BEGIN DBCS (zh_TW)   ****************
+!**************************************************************************
+!Keypad52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Keypad52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Keypad52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Keymap52*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Keymap52*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Keymap52*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Playedit*largeFontList:       -*-*-medium-r-normal--24-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--24-240-0-0-c-*
+!Playedit*mediumFontList:      -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!Playedit*smallFontList:       -*-*-medium-r-normal--16-*-*-*-c-*,-arphic-ar pl mingti2l big5-medium-r-normal--16-160-0-0-c-*
+!**************************************************************************
+!****************   END DBCS (zh_TW)     ****************
+!**************************************************************************
+
+!**************************************************************************
+!****************   END DO NOT TRANSLATE                   ****************
+!**************************************************************************
+
+
+! ********************************************************************************
+! Keyboard Remapping Resources
+! ********************************************************************************
+!
+! In general, the following buttons should not be made much longer during translation.
+! Buttons have one to four words. Note: Testing is the only way to know for sure if all
+! buttons fit on the screen ok.  The emulators have a testing document that will be used
+! during testing; this will point out a problem if button text is too long. In many
+! cases, buttons are presented side by side, where the total button text length cannot
+! increase significantly.
+Keymap52*key.labelString:  Текущая клавиша
+!
+Keymap52*title:  Изменение раскладки клавиатуры
+!
+Keymap52*iname5250:  Раскладка 5250
+!
+Keymap52*iname3270:  Раскладка 3270
+!
+Keymap52*inameNSTERM:  Раскладка эмулятора VT
+!
+AllShare*fileSaveButton.labelString:  Сохранить
+!
+Keymap52*fileDeleteButton.labelString:  Удалить
+!
+Keymap52*applyTranslationsButton.labelString:  Применить в сеансе
+!
+AllShare*fileQuitButton.labelString:  Выход
+!
+AllShare*helpPush.labelString:  Справка
+!
+AllShare*lowMemMsgDialog.messageString:  Недостаточно памяти для запуска программы просмотра справки.
+!
+AllShare*quitDialog.dialogTitle:  Выход - Предупреждение
+!
+! Note: \n causes a new line in the dialogue box and should not be translated.
+! You can move, add, or remove \n within this text string.
+Keymap52*invalidExt.value: Имя файла раскладки клавиатуры содержит неверное или пустое расширение. \n\
+ Автоматически было добавлено правильное расширение. \n\
+ Обратите внимание на новое расширение файла, указанное в области сообщений.
+!
+Keymap52*invalidExtOkButton.labelString:  OK
+!
+Keymap52*invalidFileName.value:  Введен символ, недопустимый для имени файла.
+!
+Keymap52*invalidFileNameOkbutton.labelString:  OK
+!
+Keymap52*noKeyCaps.value: Программа изменения раскладки клавиатуры не обновлена для типа вашей клавиатуры. Текст на клавишах графической клавиатуры будет показан на английском языке.
+!
+Keymap52*noKeyCapOkbutton.labelString:  OK
+!
+Keymap52*EBCMismatchText.value: Язык сеанса эмуляции, в котором была вызвана программа изменения раскладки клавиатуры, не совпадает с языком IBM Network Station. Символы и строки, созданные с применением этой программы, могут оказаться нечитаемыми в сеансе эмуляции.
+!
+Keymap52*mismatchOKbutton.labelString:  OK
+!
+Keymap52*poorResolutionMsgText.value:   Разрешение монитора составляет менее 800x600 точек. Изменение раскладки клавиатуры не поддерживается для таких мониторов.
+!
+Keymap52*keymapFailureCancelBtn.labelString:  Отмена
+!
+Keymap52*saveDialog.dialogTitle:  Сохранить настроенную раскладку
+!
+Keymap52*saveBoxLabel*labelString:  Выберите вариант сохранения настроенной раскладки клавиатуры:
+!
+Keymap52*saveBoxToggle1.labelString:  Сохранить как значение по умолчанию для всех сеансов
+!
+Keymap52*saveBoxToggleNsterm1.labelString:      Сохранить как значение по умолчанию для этого типа терминала
+!
+Keymap52*saveBoxToggle2.labelString:  Сохранить только для этого сеанса
+!
+Keymap52*saveBoxToggle3.labelString:  Сохранить как файл раскладки клавиатуры (только администратор)
+!
+AllShare*saveBoxSaveBtn.labelString:  Сохранить
+!
+AllShare*saveBoxCancelBtn.labelString:  Отмена
+!
+Keymap52*fileNameSaveBoxLabel.labelString:  Введите имя файла раскладки клавиатуры:
+!
+Keymap52*fileDeleteDialog.dialogTitle:  Удалить файл настроенной раскладки клавиатуры
+!
+Keymap52*fileDeleteBoxLabel*labelString:  Выберите файлы для удаления:
+!
+KeyXXX52*fileDeleteBoxLabelAlt*labelString:  Нет файлов, доступных для удаления
+!
+KeyXXX52*fileDeleteBoxDeleteBtn.labelString:  Удалить
+!
+KeyXXX52*fileDeleteBoxCancelBtn.labelString:  Отмена
+!
+KeyXXX52*fileDeleteVerifyDialog.dialogTitle:  Подтвердить удаление
+!
+KeyXXX52*fileDeleteVerifyDialog.okLabelString:  OK
+!
+KeyXXX52*fileDeleteVerifyDialog.cancelLabelString:  Отмена
+
+! this cannot be much longer
+KeyXXX52*noundoDelete:  Удаление файлов нельзя отменить. Продолжить?
+!
+KeyXXX52*novalidDelete:  Не выбран ни один файл. Удаление невозможно.
+!
+Keymap52*fileWarningDialog.dialogTitle:  Раскладка клавиатуры - Предупреждение
+!
+AllShare*fileWarningDialog.okLabelString:  Да
+!
+AllShare*fileWarningDialog.cancelLabelString:  Нет
+!
+AllShare*fileAlreadyExists:  Файл уже существует. Заменить его?
+!
+Keymap52*transTempApp:  Настроенная раскладка клавиатуры на время применена в сеансе.
+!
+AllShare*nomakeDir:  Не удалось создать каталог.
+!
+AllShare*nofilepathSave:  Не удалось определить путь к файлу.
+!
+Keymap52*transRxd:  Из сеанса эмуляции получена исходная раскладка клавиатуры.
+!
+Keymap52*saveTran:  Сохранение файла настроенной раскладки...
+!
+Keymap52*savetoTranError:  Ошибка при сохранении файла настроенной раскладки: файл не сохранен.
+!
+Keymap52*savedtoTran:   Файл настроенной раскладки клавиатуры сохранен в:
+!
+Keymap52*quitDialog1:  Изменения, внесенные в раскладку клавиатуры, не применены и не сохранены.
+!
+Keymap52*quit1Tog1:  Выйти без применения и сохранения изменений.
+!
+Keymap52*quit1Tog2:  Применить и сохранить изменения перед выходом.
+!
+Keymap52*quitDialog2:  Изменения, внесенные в раскладку клавиатуры, применены, но не сохранены.
+!
+Keymap52*quit2Tog1:  Выйти и отменить изменения, внесенные в раскладку клавиатуры.
+!
+Keymap52*quit2Tog2:  Выйти без сохранения, оставив изменения временно примененными в сеансе.
+!
+Keymap52*quitDialog3:  Изменения, внесенные в раскладку клавиатуры, сохранены, но не применены.
+!
+Keymap52*quit3Tog1:  Выйти без применения изменений.
+!
+Keymap52*quitTog3.labelString:  Применить изменения в сеансе перед выходом.
+!
+AllShare*quitDialog*quitTog4.labelString:  Сохранить изменения перед выходом.
+!
+AllShare*quitDialog*exitBox.labelString:  Выход
+!
+AllShare*quitDialog*cancelBox.labelString:  Отмена
+!
+Keymap52*undoDialog.dialogTitle:  Окно восстановления
+!
+Keymap52*undoDialog1.labelString:  Выберите состояние раскладки, которое нужно восстановить.
+!
+Keymap52*undoDialog*undoBox.labelString:  OK
+!
+Keymap52*undoDialog*cancelBox.labelString:  Отмена
+!
+Keymap52*restoreWarning.dialogTitle:  Сообщение о выходе
+!
+Keymap52*restoreWarning.okLabelString:  OK
+
+! this cannot be made much longer during translation
+Keymap52*restoreWarning.messageString:  В сеансе восстановлено исходное состояние настроенной раскладки клавиатуры.
+!
+Keymap52*nonValidDialog.dialogTitle:  Предупреждение
+!
+KeyXXX52*nonValidDialog.okLabelString:  OK
+!
+Keymap52*nonValidDialog.messageString:  По крайней мере одно из присвоенных клавише действий недопустимо.
+!
+Keymap52*reservedtrans.dialogTitle:  Предупреждение
+!
+Keymap52*reservedtrans.okLabelString:  OK
+
+! this cannot be made much longer during translation
+Keymap52*reservedtrans.messageString:  Нельзя переопределять функции клавиш, зарезервированных Администратором окон.
+!
+Keymap52*lastButton.labelString:  Восстановить последнюю примененную раскладку
+!
+Keymap52*origButton.labelString:  Восстановить исходную раскладку
+
+! this cannot be made much longer during translation
+Keymap52*lastRest:  В настроенной раскладке клавиатуры восстановлены значения, которые были последними применены в сеансе.
+!
+Keymap52*origRest:  В настроенной раскладке восстановлены исходные значения.
+!
+Keymap52*noRest:  Опция восстановления не выбрана, поэтому изменения не внесены.
+!
+Keymap52*fileDeleted:  Выбранные файлы настроенных раскладок клавиатуры удалены.
+
+! this resource has been left intentionally blank, do not translate.
+Keymap52*blank:
+!
+Keymap52*basePb.labelString:  -> Основная
+!
+AllShare*changePb.labelString:  OK
+!
+AllShare*cancelPb.labelString:  Отмена
+!
+AllShare*actionHelp.labelString: Справка
+!
+AllShare*actionListLabel.labelString:  Список доступных действий:
+!
+AllShare*charListLabel.labelString:  Список символов:
+!
+AllShare*actionDef.labelString:  Определение действия:
+!
+AllShare*printActionDefTitle:  Определения доступных действий
+!
+Keymap52*restorePB.labelString:  Восстановить
+
+! this cannot be made any longer during translation.
+Keymap52*locatePB.labelString:  Найти
+
+! this cannot be made any longer during translation.
+Keymap52*nothingTB.labelString:  Нет
+!
+Keymap52*translistdialog.dialogTitle:  Расширенное изменение раскладки клавиатуры
+!
+Keymap52*noRemPass:  Операция недопустима, невозможно удалить пассивные раскладки.
+!
+Keymap52*searchFailed:  Поиск завершился неудачно, в раскладке клавиатуры нет указанных действий.
+!
+Keymap52*searchSuccess:  Поиск успешно выполнен...
+!
+Keymap52*searchSemi:  Поиск успешно выполнен... Клавиша для найденного действия недоступна.
+!
+Keymap52*noSearchMsg:  Невозможно выполнить поиск, не выбрано допустимое действие.
+!
+Keymap52*nonStand:  Для клавиши задан по крайней мере один вариант преобразования, который нельзя показать.
+!
+Keymap52*change.dialogTitle:  Раскладка клавиатуры - Предупреждение
+!
+KeyXXX52*change.messageString:  Перед просмотром другой клавиши сохраните или отмените изменения текущей.
+!
+KeyXXX52*change.okLabelString:  Продолжить  
+!
+Keymap52*editb.labelString:  Изменить
+!
+Keymap52*insertb.labelString:  Вставить
+!
+Keymap52*removeb.labelString:  Удалить
+!
+Keymap52*closeb.labelString:  Закрыть
+!
+Keymap52*editDialog.dialogTitle:  Окно изменения
+!
+Keymap52*editDialog*editLabel.labelString:  Изменить следующее преобразование:
+!
+Keymap52*editDialog*okButton.labelString:  OK
+!
+Keymap52*editDialog*clearButton.labelString:  Очистить
+!
+Keymap52*editDialog*cancelButton.labelString:  Отмена
+!
+Keymap52*Any:  -> Основная
+!
+Keymap52*Shift:  -> Shift
+!
+Keymap52*Lock:  -> Caps Lock
+!
+Keymap52*Lock122:  -> Shift Lock
+!
+Keymap52*Ctrl:  -> Левый Ctrl
+!
+Keymap52*CtrlNsterm: -> Ctrl
+!
+Keymap52*Alt:  -> Alt
+!
+Keymap52*Mod2:  -> Alt(Gr)
+!
+Keymap52*Mod3:  -> APL/Super
+!
+Keymap52*Mod4:  -> Mod4
+!
+Keymap52*Mod5:  -> Num Lock
+!
+Keymap52*Shift_Alt:  -> Shift Alt
+!
+Keymap52*cantdothat.dialogTitle:  Раскладка клавиатуры - Предупреждение
+!
+Keymap52*cantdothat.messageString:  Перед выбором опции в строке действия сохраните или отмените изменения текущей клавиши.
+!
+KeyXXX52*cantdothat.okLabelString:  Продолжить  
+!
+Keymap52*chooseApply:  Для применения изменений в сеансе нажмите кнопку Применить.
+!
+Keymap52*transListLabel.labelString:  Список преобразований:
+!
+Keymap52*seeHelpLabel.labelString:  Перед внесением расширенных изменений ознакомьтесь со справкой.
+!
+Keymap52*keyAction.labelString:  Клавиша/действие
+!
+Keymap52*nomapmod:  Модификаторы изменять нельзя.
+!
+AllShare*toobig:  Операция отменена: превышена максимальная длина действия.
+!
+Keymap52*currKeyLabel.labelString:  Текущая клавиша:
+!
+AllShare*printKeymap.labelString:  Печать
+!
+AllShare*printDialogCancelButton.labelString:  Отмена
+!
+AllShare*printDialogBoxLabel.labelString:  Выберите параметры печати
+!
+AllShare*printDialogPrintCommandLabel.labelString: Команда печати:
+!
+AllShare*printDialogSelectPrinter.labelString:  Выберите принтер:
+!
+AllShare*PrinterSelectServerDelineator:  @
+!
+AllShare*PrinterSelectLocalDesignator:  (Локальный)
+!
+AllShare*ActionHelpPrinted:  Справка по действиям напечатана
+!
+AllShare*printDialogPrintInProgress.labelString:  Печать...
+!
+AllShare*okLabelString:  OK
+!
+AllShare*cancelLabelString:  Отмена
+!
+! Start Action list translations (to be shared by keypad customizer and keymapper).
+!
+! Rules for translating actions:
+! 1) Action text (to the right of the ":") is translated
+! 2) All actions need to end in ()
+! 3) Action text may not contain spaces
+! 4) Action text may be separated by capitals or underscores (_)
+! 5) Because actions are cross-referenced, each translated action must be unique
+! 6) Action text should be a maximum of 29 characters, not counting the () characters
+!
+!    ValidActionText()
+!    InvalidActionText
+!    ValidActionText()
+!    Valid_Action_Text()
+!    Invalid Action Text()
+!
+!    Valid Unique action names:
+!    Keyxxx52*tab():  Tab()
+!    Keyxxx52*backtab():  BackTab()
+!    Keyxxx52*tabadvancefunction():  TabAdvance()
+!    Keyxxx52*tabfunction():  OfficeTabFunction()
+!
+!    Invalid action names, not unique:
+!    Keyxxx52*tab():  Tab()
+!    Keyxxx52*backtab():  Tab()
+!    Keyxxx52*tabadvancefunction():  Tab()
+!    Keyxxx52*tabfunction():  Tab()
+!
+! Each action is followed by an action definition (to the right of the ":") which is translated
+!
+Keyxxx52*nothing():  NoAction()
+AllShare*DEFnothing():  Это значение обозначает пустое действие.
+!
+Keyxxx52*ruleline():  RuleLine()
+AllShare*DEFruleline():  Переключатель просмотра линейки (позволяет показать или скрыть линейку). Линейка позволяет узнать текущую позицию курсора. В разделе Различные параметры можно включить или выключить функцию линейки, а также изменить ее стиль. По умолчанию функция линейки включена.
+!
+AllShare*string():  String()
+AllShare*DEFstring():  Показывает символ или строку символов в текущей позиции курсора. Действие задается в формате String(\"текст\"). Укажите текст, который должен быть показан на экране, заключив его в двойные кавычки (\"). String() применяется для создания макрокоманд клавиатуры.
+!
+Keyxxx52*play():  Play()
+AllShare*DEFplay():  Действие Play() показывает окно макрокоманды, в котором можно запустить файл макрокоманд. В качестве параметра действия Play() можно указать имя файла. В этом случае будет автоматически начато воспроизведение указанного файла.
+!
+Keyxxx52*record():  Record()
+AllShare*DEFrecord():  Показывает окно Запись, позволяющее начать запись последовательности макрокоманд.
+!
+AllShare*pause():  Pause()
+AllShare*DEFpause():  Прерывает воспроизведение или запись макрокоманды. Для продолжения операции пользователь должен выбрать Продолжить.
+!
+AllShare*local-screen-print():  ScreenPrint()
+AllShare*DEFlocal-screen-print():  Показывает окно, позволяющее напечатать текущее меню.
+!
+Keyxxx52*print-screen-now():  PrintScreenNow()
+AllShare*DEFprint-screen-now():  Печатает текущее меню с использованием тех параметров печати и принтера, которые применялись в последний раз.
+!
+AllShare*extended():  DisplayAttributes()
+AllShare*DEFextended():  Показывает все атрибуты поля.
+!
+AllShare*up():  CursorUp()
+AllShare*DEFup():  Перемещает курсор на одну позицию вверх.
+!
+AllShare*down():  CursorDown()
+AllShare*DEFdown():  Перемещает курсор на одну позицию вниз.
+!
+AllShare*left():  CursorLeft()
+AllShare*DEFleft():  Перемещает курсор на одну позицию влево.
+!
+AllShare*right():  CursorRight()
+AllShare*DEFright():  Перемещает курсор на одну позицию вправо.
+!
+AllShare*fastleft():  FastCursorLeft()
+AllShare*DEFfastleft():  Перемещает курсор на три позиции влево.
+!
+AllShare*fastright():  FastCursorRight()
+AllShare*DEFfastright():  Перемещает курсор на три позиции вправо.
+!
+AllShare*newline():  Newline()
+AllShare*DEFnewline():  Перемещает курсор в начало поля ввода, расположенного на следующей строке.
+!
+AllShare*home():  Home()
+AllShare*DEFhome():  Перемещает курсор в исходную позицию (обычно это первая позиция одного из полей ввода меню) и иногда отправляет код Home AID хосту.
+!
+AllShare*tab():  Tab()
+AllShare*DEFtab():  Перемещает курсор в следующее поле ввода.
+!
+AllShare*backtab():  BackTab()
+AllShare*DEFbacktab():  Если курсор находится в начале поля ввода или в области вывода, то курсор перемещается в начало предыдущего поля ввода. Если курсор находится внутри поля ввода, но не в его начале, то он перемещается в начало этого поля ввода.
+!
+AllShare*end():  EndOfLine()
+AllShare*DEFend():  Размещает курсор за последним непустым символом в поле ввода.
+!
+AllShare*tabadvancefunction():  TabAdvance()
+AllShare*DEFtabadvancefunction():  Перемещает курсор в следующее логическое поле ввода.
+!
+AllShare*insert():  Insert()
+AllShare*DEFinsert():  Включает режим вставки.
+!
+AllShare*delete():  Delete()
+AllShare*DEFdelete():  Удаляет символ, расположенный в текущей позиции курсора.
+!
+AllShare*backspace():  Backspace()
+AllShare*DEFbackspace():  Перемещает курсор на одну позицию назад. Дополнительно может удалять символ, расположенный перед курсором. Включить или выключить удаление символа по клавише Backspace можно на странице Различные параметры.
+!
+AllShare*erase-eof():  ErasetoEnd()
+AllShare*DEFerase-eof():  Удаляет все символы, начиная с текущей позиции курсора и до конца поля.
+!
+AllShare*erase-input():  EraseInputFields()
+AllShare*DEFerase-input():  Очищает все поля ввода текущего меню.
+!
+AllShare*dup():  Dup()
+AllShare*DEFdup():  Заполняет остаток текущего поля, начиная с позиции курсора, символами Dup.
+!
+AllShare*field-mark():  FieldMark()
+AllShare*DEFfield-mark():  Помечает поле особым символом.
+!
+AllShare*pf1():  PF1()
+AllShare*DEFpf1():  Выполняет действие, заданное для клавиши F1.
+!
+AllShare*pf2():  PF2()
+AllShare*DEFpf2():  Выполняет действие, заданное для клавиши F2.
+!
+AllShare*pf3():  PF3()
+AllShare*DEFpf3():  Выполняет действие, заданное для клавиши F3.
+!
+AllShare*pf4():  PF4()
+AllShare*DEFpf4():  Выполняет действие, заданное для клавиши F4.
+!
+AllShare*pf5():  PF5()
+AllShare*DEFpf5():  Выполняет действие, заданное для клавиши F5.
+!
+AllShare*pf6():  PF6()
+AllShare*DEFpf6():  Выполняет действие, заданное для клавиши F6.
+!
+AllShare*pf7():  PF7()
+AllShare*DEFpf7():  Выполняет действие, заданное для клавиши F7.
+!
+AllShare*pf8():  PF8()
+AllShare*DEFpf8():  Выполняет действие, заданное для клавиши F8.
+!
+AllShare*pf9():  PF9()
+AllShare*DEFpf9():  Выполняет действие, заданное для клавиши F9.
+!
+AllShare*pf10():  PF10()
+AllShare*DEFpf10():  Выполняет действие, заданное для клавиши F10.
+!
+AllShare*pf11():  PF11()
+AllShare*DEFpf11():  Выполняет действие, заданное для клавиши F11.
+!
+AllShare*pf12():  PF12()
+AllShare*DEFpf12():  Выполняет действие, заданное для клавиши F12.
+!
+AllShare*pf13():  PF13()
+AllShare*DEFpf13():  Выполняет действие, заданное для клавиши F13.
+!
+AllShare*pf14():  PF14()
+AllShare*DEFpf14():  Выполняет действие, заданное для клавиши F14.
+!
+AllShare*pf15():  PF15()
+AllShare*DEFpf15():  Выполняет действие, заданное для клавиши F15.
+!
+AllShare*pf16():  PF16()
+AllShare*DEFpf16():  Выполняет действие, заданное для клавиши F16.
+!
+AllShare*pf17():  PF17()
+AllShare*DEFpf17():  Выполняет действие, заданное для клавиши F17.
+!
+AllShare*pf18():  PF18()
+AllShare*DEFpf18():  Выполняет действие, заданное для клавиши F18.
+!
+AllShare*pf19():  PF19()
+AllShare*DEFpf19():  Выполняет действие, заданное для клавиши F19.
+!
+AllShare*pf20():  PF20()
+AllShare*DEFpf20():  Выполняет действие, заданное для клавиши F20.
+!
+AllShare*pf21():  PF21()
+AllShare*DEFpf21():  Выполняет действие, заданное для клавиши F21.
+!
+AllShare*pf22():  PF22()
+AllShare*DEFpf22():  Выполняет действие, заданное для клавиши F22.
+!
+AllShare*pf23():  PF23()
+AllShare*DEFpf23():  Выполняет действие, заданное для клавиши F23.
+!
+AllShare*pf24():  PF24()
+AllShare*DEFpf24():  Выполняет действие, заданное для клавиши F24.
+!
+AllShare*clear():  Clear()
+AllShare*DEFclear():  Отправляет хосту код Clear AID.
+!
+AllShare*enter():  Enter()
+AllShare*DEFenter():  Выполняет действие Enter для ввода данных.
+!
+AllShare*pa1():  PA1()
+AllShare*DEFpa1():  Отправляет хосту код PA1 AID.
+!
+AllShare*pa2():  PA2()
+AllShare*DEFpa2():  Отправляет хосту код PA2 AID.
+!
+AllShare*pa3():  PA3()
+AllShare*DEFpa3():  Отправляет хосту код PA3 AID.
+!
+AllShare*sysreq():  SystemRequest()
+AllShare*DEFsysreq():  Отправляет хосту System Request AID.
+!
+AllShare*reset():  Reset()
+AllShare*DEFreset():  Сбрасывает ошибку.
+!
+AllShare*hex-entry():  HexMode()
+AllShare*DEFhex-entry():  Устанавливает для следующих двух клавиш режим создания символа EBCDIC. Это могут быть клавиши 0-9 и a-f.
+!
+AllShare*hex():  Hex()
+AllShare*DEFhex():  В качестве параметра в скобках должен быть указан двухсимвольный кодовый знак. Это может быть значение от 00 до ff, представляющее символ кодовой страницы ASCII 819.
+!
+AllShare*cursor-select():  CursorSelect()
+AllShare*DEFcursor-select():  Выделяет поле, содержащее курсор.
+!
+AllShare*attention():  Attention()
+AllShare*DEFattention():  Отправляет хосту код Attention AID.
+!
+AllShare*print():  SystemPrint()
+AllShare*DEFprint():  Отправляет хосту код Print AID.
+!
+AllShare*scroll_image_up(): ScrollImageUp()
+AllShare*DEFscroll_image_up():  Прокручивает изображение вверх.
+!
+AllShare*scroll_image_down():   ScrollImageDown()
+AllShare*DEFscroll_image_down():  Прокручивает изображение вниз.
+!
+AllShare*scroll_image_right():  ScrollImageRight()
+AllShare*DEFscroll_image_right():  Прокручивает изображение вправо.
+!
+AllShare*scroll_image_left():   ScrollImageLeft()
+AllShare*DEFscroll_image_left():  Прокручивает изображение влево.
+!
+AllShare*help():  SystemHelp()
+AllShare*DEFhelp():  Отправляет хосту ход Help AID.
+!
+AllShare*rolldown():  PageUp()
+AllShare*DEFrolldown():  Показывает предыдущую страницу.
+!
+AllShare*rollup():  PageDown()
+AllShare*DEFrollup():  Показывает следующую страницу.
+!
+AllShare*fieldexit():  FieldExit()
+AllShare*DEFfieldexit():  Служит для перемещения к началу следующего поля меню.
+!
+AllShare*fieldplus():  FieldPlus()
+AllShare*DEFfieldplus():  Служит для перемещения к началу следующего поля меню.
+!
+AllShare*fieldminus():  FieldMinus()
+AllShare*DEFfieldminus():  Преобразует значение поля в отрицательное и выполняет переход к следующему полю.
+!
+AllShare*testreq():  TestRequest()
+AllShare*DEFtestreq():  Отправляет хосту код Test Request AID.
+!
+! Note: Office actions are used within the AS/400 OfficeVision editor.
+AllShare*tabfunction():  OfficeTabFunction()
+AllShare*DEFtabfunction():  В редакторе OV/400 - вставляет символ табуляции в текущей позиции курсора.
+!
+AllShare*textcarrierreturn():  OfficeCarrierReturn()
+AllShare*DEFtextcarrierreturn():  В редакторе OV/400 - вставляет символ возврата каретки в текущей позиции курсора.
+!
+AllShare*textrqtabfunction():  OfficeRequiredTabFunction()
+AllShare*DEFtextrqtabfunction():  В редакторе OV/400 - вставляет символ обязательной табуляции в текущей позиции курсора. Обязательная табуляция обозначает временный отступ, который остается до тех пор, пока не будет закрыт абзац (обязательным возвратом каретки).
+!
+AllShare*textunderscore():  OfficeStartUnderline()
+AllShare*DEFtextunderscore():  В редакторе OV/400 - включает режим подчеркивания, начиная с текущей позиции курсора.
+!
+AllShare*textintensify():  OfficeStartBold()
+AllShare*DEFtextintensify():  В редакторе OV/400 - включает режим выделения полужирным шрифтом, начиная с текущей позиции курсора.
+!
+AllShare*textendattribute():  OfficeEndUnderlineOrBold()
+AllShare*DEFtextendattribute():  В редакторе OV/400 - выключает режим подчеркивания или выделения полужирным шрифтом.
+!
+AllShare*textsymbolscmdprompt():  OfficeInsertSpecialCharacters()
+AllShare*DEFtextsymbolscmdprompt():  В редакторе OV/400 - показывает приглашение, в котором можно ввести символы, отсутствующие на клавиатуре.
+!
+AllShare*textrqspace():  OfficeRequiredSpace()
+AllShare*DEFtextrqspace():  В редакторе OV/400 - размещает обязательный пробел в текущей позиции курсора. Обязательный пробел отображается как обычный пробел, но сохраняет разделенные пробелом слова на одной строке.
+!
+AllShare*texttopofpage():  OfficeTopOfPage()
+AllShare*DEFtexttopofpage():  В редакторе OV/400 - перемещает курсор в начало текущей страницы (при необходимости выполняется прокрутка).
+!
+AllShare*textbottomofpage():  OfficeBottomOfPage()
+AllShare*DEFtextbottomofpage():  В редакторе OV/400 - перемещает курсор в конец текущей страницы (при необходимости выполняется прокрутка).
+!
+AllShare*textbeginofline():  OfficeBeginningOfLine()
+AllShare*DEFtextbeginofline():  В редакторе OV/400 - перемещает курсор в начало текущей текстовой строки.
+!
+AllShare*textpageend():  OfficeInsertPageEnd()
+AllShare*DEFtextpageend():  В редакторе OV/400 - вставляет символ конца страницы. При этом будет начата новая страница текста.
+!
+AllShare*textstopcodefunction():  OfficeStopCodeInsert()
+AllShare*DEFtextstopcodefunction():  В редакторе OV/400 - показывает приглашение, в котором можно определить новый код останова в текущей позиции курсора.
+!
+AllShare*textstopcodeadvance():  OfficeStopCodeAdvance()
+AllShare*DEFtextstopcodeadvance():  В редакторе OV/400 - перемещает курсор к следующему коду останова в документе.
+!
+AllShare*textaltd():  OfficeNextTextColumn()
+AllShare*DEFtextaltd():  В редакторе OV/400 - вставляет управляющий символ, задающий начало новой колонки текста, в текущей позиции курсора. Эта функция активна только во время редактирования нескольких колонок текста.
+!
+AllShare*textcent():  OfficeCenter()
+AllShare*DEFtextcent():  В редакторе OV/400 - размещает текущую строку текста по центру.
+!
+AllShare*textwordunderscore():  OfficeWordUnderscore()
+AllShare*DEFtextwordunderscore():  В редакторе OV/400 - вставляет управляющий символ подчеркивания слова в текущей позиции курсора. Курсор должен находиться в конце того текста, который необходимо подчеркнуть. Будет подчеркнут весь текст с начала текущего слова до курсора.
+!
+AllShare*texthalfindexup():  OfficeHalfIndexUp()
+AllShare*DEFtexthalfindexup():  В редакторе OV/400 - вставляет управляющий символ верхнего индекса (полстроки вверх) в текущей позиции курсора. Текст будет вводиться на полстроки выше до тех пор, пока не будет задан управляющий символ нижнего индекса.
+!
+AllShare*texthalfindexdown():  OfficeHalfIndexDown()
+AllShare*DEFtexthalfindexdown():  В редакторе OV/400 - вставляет управляющий символ нижнего индекса (полстроки вниз) в текущей позиции курсора. Текст будет вводиться на полстроки ниже до тех пор, пока не будет задан управляющий символ верхнего индекса.
+!
+AllShare*displaytextsymb():  OfficeDisplaySymbols()
+AllShare*DEFdisplaytextsymb():  В редакторе OV/400 - показывает управляющие символы, которые обычно скрыты. К таким символам относится табуляция, обязательная табуляция, возврат каретки, обязательный возврат каретки, обязательный пробел и конец страницы.
+!
+AllShare*kanji():  InsertSOandSI()
+AllShare*DEFkanji():  Вставляет скобочные символы DBCS (применяются в японском, корейском и китайском языках).
+!
+!//@bd_GBR1 start
+AllShare*lklayer():  LatinLayer()
+AllShare*DEFlklayer():  Задает кодировку для языка ввода равной Latin.
+!
+AllShare*nklayer():  BidiLayer()
+AllShare*DEFnklayer():  Задает национальную кодировку для языка ввода (например, для арабского или иврита).
+!//@bd_GBR1 end
+! //@bd_GBR1 rename AllShare*reverse():  ReverseCursor()
+AllShare*reverse():  FieldReverse()
+AllShare*DEFreverse():  Изменяет направление перемещения курсора в поле и выбирает противоположный языковой уровень для функциональных клавиш (применяется в арабском и иврите).
+!
+AllShare*close():  CloseBIDIData()
+AllShare*DEFclose():  Закрывает ввод данных в поле, удаляя вложенные пробелы и сдвигая данные в логическое начало поля (применяется в арабском и иврите).
+!
+AllShare*base():  BaseShape()
+AllShare*DEFbase():  Включает или выключает перерисовку символов (применяется в арабском языке).
+!
+AllShare*charadvance():  CharacterAdvance()
+AllShare*DEFcharadvance():  Помещает курсор на следующую позицию ввода в меню.
+!
+AllShare*displaySOSI():  DisplaySOandSI()
+AllShare*DEFdisplaySOSI():  Показывает все скобочные символы (применяются в японском, корейском и китайском языках).
+!
+AllShare*reverse-scn():  ReverseScreen()
+AllShare*DEFreverse-scn():  Обращает меню (применяется в арабском и иврите).
+!
+AllShare*EBChex():  EBCDICHexEntry()
+AllShare*DEFEBChex():  Разрешает использовать кодовые знаки EBCDIC для ввода данных (применяется в японском, корейском и китайском языках).
+!
+AllShare*AltView():  AlternateView()
+AllShare*DEFAltView():  Позволяет просматривать данные на японском языке в альтернативной кодовой странице.
+!
+Keyxxx52*noop():  NoAction()
+AllShare*DEFnoop():  Это значение обозначает пустое действие.
+!
+! There are no parentheses after Undefined, making this action different than other actions.
+Keyxxx52*undefined():  Не определено
+!
+AllShare*cursor-move():  MoveCursor()
+AllShare*DEFcursor-move():  Перемещает курсор в указанную позицию меню.
+!
+AllShare*forward-word():  NextWord()
+AllShare*DEFforward-word():  Перемещает курсор в начало следующего слова.
+!
+AllShare*backward-word():  PreviousWord()
+AllShare*DEFbackward-word():  Перемещает курсор в начало предыдущего слова.
+!
+AllShare*spbackspace():  AlternateBackspace()
+AllShare*DEFspbackspace():  Выполняет действие, аналогичное BackSpace(). Символы справа от курсора перемещаются только в том случае, если включен режим вставки.
+!
+AllShare*kill-word():  DeleteRemainderofWord()
+AllShare*DEFkill-word():  Удаляет все символы, начиная с текущей позиции курсора и до конца слова.
+!
+AllShare*backward-kill-word():  DeletePreviousWord()
+AllShare*DEFbackward-kill-word():  Удаляет символы предыдущего слова.
+!
+AllShare*cent():  Cent()
+AllShare*DEFcent():  Показывает символ цента в текущей позиции курсора.
+!
+AllShare*unlock():  UnlockKeyboard()
+AllShare*DEFunlock():  Разблокирует клавиатуру, чтобы с ее помощью можно было вводить данные.
+!
+AllShare*selpen-attn():  SelectorPenAttention()
+AllShare*DEFselpen-attn():  Отправляет хосту код Selector Pen Attention AID.
+!
+AllShare*select-field():  PenSelectField()
+AllShare*DEFselect-field():  Выделяет поле, которое можно выбрать.
+!
+AllShare*xh-attn():  AttentionAlternate()
+AllShare*DEFxh-attn():  Отправляет хосту код Alternate Attention AID.
+!
+Keyxxx52*insert-selection:  Paste()
+Keyxxx52*DEFinsert-selection:  Вставляет содержимое буфера обмена в текущей позиции курсора.
+!
+Keyxxx52*jump():  Jump()
+AllShare*DEFjump():  Переключается на следующий сеанс в списке сеансов. Если активен сеанс 1, то станет активным сеанс 2.
+!
+Keyxxx52*jump-to-session():  JumpToSession()
+AllShare*DEFjump-to-session():  Переключается на сеанс, указанный в скобках в качестве параметра. Если задан аргумент 2, то активным станет второй сеанс.
+!
+Keyxxx52*delay():  Delay()
+AllShare*DEFdelay(): Вставляет паузу между действиями, выполняемыми при нажатии одной клавиши. В скобках в качестве параметра указывается время задержки в десятых долях секунды (по умолчанию задержка составляет пять десятых секунды).
+!
+Keyxxx52*menu-bar-focus():  MenuBarFocus()
+AllShare*DEFmenu-bar-focus():  Позволяет перейти к строке меню без помощи мыши.
+!
+Keyxxx52*wider-font(): WiderFont()
+Keyxxx52*DEFwider-font(): Увеличивает ширину текущего шрифта.
+!
+Keyxxx52*narrower-font(): ThinnerFont()
+Keyxxx52*DEFnarrower-font(): Уменьшает ширину текущего шрифта.
+!
+Keyxxx52*taller-font(): TallerFont()
+Keyxxx52*DEFtaller-font(): Увеличивает высоту текущего шрифта.
+!
+Keyxxx52*shorter-font(): ShorterFont()
+Keyxxx52*DEFshorter-font(): Уменьшает высоту текущего шрифта.
+!
+! The following three key sequences should be translated; they may be used in the future for keyboard actions that we currently do not know about.
+Keyxxx52*key-seq1():  KeySequence1()
+Keyxxx52*key-seq2():  KeySequence2()
+Keyxxx52*key-seq3():  KeySequence3()
+!
+! General dead key (the first key of a key sequence to create a dead key character, for example tilda in many languages) that is not remappable because dead keys are processed by the Network Station kernel.
+! There are no parentheses at the end of the following line.
+Keyxxx52*unmappable():  Клавиша-модификатор
+!
+AllShare*inserteuro():  Euro()
+AllShare*DEFinserteuro():  Вставляет символ евро в текущей позиции курсора.
+!
+! Action List Translations for NSTerm (VTxxx)
+!
+Keymap52*vt-backspace(): VtBackspace()
+AllShare*DEFvt-backspace():  Перемещает курсор на одну позицию назад и удаляет символ, расположенный перед курсором.
+!
+Keymap52*enterkey(): EnterKey()
+Keymap52*DEFenterkey():  Отправляет хосту код символа возврата каретки.
+!
+Keymap52*local-print-buffer(): LocalPrintBuffer()
+Keymap52*DEFlocal-print-buffer():  Показывает окно, позволяющее напечатать текущее содержимое буфера прокрутки.
+!
+Keymap52*local-print-screen(): LocalPrintScreen()
+Keymap52*DEFlocal-print-screen():  Показывает окно, позволяющее напечатать текущее меню.
+!
+Keymap52*cut-clipboard(): CutClipboard()
+Keymap52*DEFcut-clipboard():  Копирует выделенный фрагмент данных в буфер обмена и удаляет этот фрагмент.
+!
+Keymap52*copy-clipboard(): CopyClipboard()
+Keymap52*DEFcopy-clipboard():  Копирует выделенный фрагмент данных в буфер обмена.
+!
+Keymap52*paste-clipboard(): PasteClipboard()
+Keymap52*DEFpaste-clipboard():  Копирует данные из буфера обмена в ту область меню, где расположен курсор.
+!
+Keymap52*beginning-of-buffer(): BeginningOfBuffer()
+Keymap52*DEFbeginning-of-buffer(): Позволяет перейти в начало буфера прокрутки.
+!
+Keymap52*end-of-buffer(): EndOfBuffer()
+Keymap52*DEFend-of-buffer():  Позволяет перейти в конец буфера прокрутки.
+!
+Keymap52*hard-reset(): HardReset()
+Keymap52*DEFhard-reset():  Переключает терминал в состояние по умолчанию, удаляет все данные текущего меню и очищает выбранные опции.
+!
+Keymap52*soft-reset(): SoftReset()
+Keymap52*DEFsoft-reset():  Переключает терминал в состояние по умолчанию.
+!
+Keymap52*vt-break(): VtBreak()
+Keymap52*DEFvt-break(): Отправляет хосту сигнал прерывания RS-232.
+!
+Keymap52*vt-find(): VtFind()
+Keymap52*DEFvt-find(): Выполняет функцию Найти, если терминал уровня VT200 или выше отправил хосту код DEC (CSI 1~).
+!
+Keymap52*vt-ins(): VtInsert()
+Keymap52*DEFvt-ins(): Выполняет функцию Вставить, если терминал уровня VT200 или выше отправил хосту код DEC (CSI 2~).
+!
+Keymap52*vt-delete(): VtRemove()
+Keymap52*DEFvt-delete(): Выполняет функцию Удалить, если терминал уровня VT200 или выше отправляет хосту код DEC (CSI 3~).
+!
+Keymap52*vt-select(): VtSelect()
+Keymap52*DEFvt-select(): Выполняет функцию Выбрать, если терминал уровня VT200 или выше отправил хосту код DEC (CSI 4~).
+!
+Keymap52*vt-prev-screen(): VtPreviousScreen()
+Keymap52*DEFvt-prev-screen(): Выполняет функцию Предыдущая страница, если терминал уровня VT200 или выше отправил хосту код DEC (CSI 5~).
+!
+Keymap52*vt-next-screen(): VtNextScreen()
+Keymap52*DEFvt-next-screen(): Выполняет функцию Следующая страница, если терминал уровня VT200 или выше отправил хосту код DEC (CSI 6~).
+!
+Keymap52*vt-prev-page(): VtPreviousPage()
+Keymap52*DEFvt-prev-page(): Показывает предыдущую страницу.
+!
+Keymap52*vt-next-page(): VtNextPage()
+Keymap52*DEFvt-next-page(): Показывает следующую страницу.
+!
+Keymap52*vt-do(): VtDo()
+Keymap52*DEFvt-do(): Запускает функцию Выполнить, если терминал уровня VT200 или выше отправил хосту код DEC (CSI 29~).
+!
+Keymap52*vt-help(): VtHelp()
+Keymap52*DEFvt-help(): Выполняет функцию Справка, если терминал уровня VT200 или выше отправил хосту код DEC (CSI 28~).
+!
+Keymap52*vt-next-line(): VtNextLine()
+Keymap52*DEFvt-next-line():  Показывает следующую строку.
+!
+Keymap52*vt-prev-line(): VtPreviousLine()
+Keymap52*DEFvt-prev-line(): Показывает предыдущую строку.
+!
+Keymap52*tty-interrupt(): TtyInterrupt()
+Keymap52*DEFtty-interrupt(): Отправляет хосту символ Прервать TTY (Ctrl-C).
+!
+Keymap52*tty-suspend(): TtySuspend()
+Keymap52*DEFtty-suspend(): Отправляет хосту символ Приостановить TTY (Ctrl-Z).
+!
+Keymap52*tty-start(): TtyStart()
+Keymap52*DEFtty-start(): Отправляет хосту символ Запустить TTY (Ctrl-Q).
+!
+Keymap52*tty-stop(): TtyStop()
+Keymap52*DEFtty-stop(): Отправляет хосту символ Остановить TTY (Ctrl-S).
+!
+Keymap52*delete-word(): TtyEraseWord()
+Keymap52*DEFdelete-word(): Отправляет хосту символ Удалить слово TTY (Ctrl-W).
+!
+Keymap52*line-feed(): TtyLineFeed()
+Keymap52*DEFline-feed(): Отправляет хосту символ перевода строки (Ctrl-J).
+!
+Keymap52*cr-lf(): TtyCR_LF()
+Keymap52*DEFcr-lf(): Отправляет хосту символ возврата каретки и символ перевода строки (Ctrl-M Ctrl-J).
+!
+Keymap52*escape(): EscapeCharacter()
+Keymap52*DEFescape(): Отправляет хосту Escape-символ (Ctrl-[).
+!
+Keymap52*udk-f1(): UDK_F1()
+Keymap52*DEFudk-f1():  Выполняет пользовательское действие DEC для клавиши F1.
+!
+Keymap52*udk-f2(): UDK_F2()
+Keymap52*DEFudk-f2():  Выполняет пользовательское действие DEC для клавиши F2.
+!
+Keymap52*udk-f3(): UDK_F3()
+Keymap52*DEFudk-f3():  Выполняет пользовательское действие DEC для клавиши F3.
+!
+Keymap52*udk-f4(): UDK_F4()
+Keymap52*DEFudk-f4():  Выполняет пользовательское действие DEC для клавиши F4.
+!
+Keymap52*udk-f5(): UDK_F5()
+Keymap52*DEFudk-f5():  Выполняет пользовательское действие DEC для клавиши F5.
+!
+Keymap52*udk-f6(): UDK_F6()
+Keymap52*DEFudk-f6():  Выполняет пользовательское действие DEC для клавиши F6.
+!
+Keymap52*udk-f7(): UDK_F7()
+Keymap52*DEFudk-f7():  Выполняет пользовательское действие DEC для клавиши F7.
+!
+Keymap52*udk-f8(): UDK_F8()
+Keymap52*DEFudk-f8():  Выполняет пользовательское действие DEC для клавиши F8.
+!
+Keymap52*udk-f9(): UDK_F9()
+Keymap52*DEFudk-f9():  Выполняет пользовательское действие DEC для клавиши F9.
+!
+Keymap52*udk-f10(): UDK_F10()
+Keymap52*DEFudk-f10():  Выполняет пользовательское действие DEC для клавиши F10.
+!
+Keymap52*udk-f11(): UDK_F11()
+Keymap52*DEFudk-f11():  Выполняет пользовательское действие DEC для клавиши F11.
+!
+Keymap52*udk-f12(): UDK_F12()
+Keymap52*DEFudk-f12():  Выполняет пользовательское действие DEC для клавиши F12.
+!
+Keymap52*udk-f13(): UDK_F13()
+Keymap52*DEFudk-f13():  Выполняет пользовательское действие DEC для клавиши F13.
+!
+Keymap52*udk-f14(): UDK_F14()
+Keymap52*DEFudk-f14():  Выполняет пользовательское действие DEC для клавиши F14.
+!
+Keymap52*udk-f15(): UDK_F15()
+Keymap52*DEFudk-f15():  Выполняет пользовательское действие DEC для клавиши F15.
+!
+Keymap52*udk-f16(): UDK_F16()
+Keymap52*DEFudk-f16():  Выполняет пользовательское действие DEC для клавиши F16.
+!
+Keymap52*udk-f17(): UDK_F17()
+Keymap52*DEFudk-f17():  Выполняет пользовательское действие DEC для клавиши F17.
+!
+Keymap52*udk-f18(): UDK_F18()
+Keymap52*DEFudk-f18():  Выполняет пользовательское действие DEC для клавиши F18.
+!
+Keymap52*udk-f19(): UDK_F19()
+Keymap52*DEFudk-f19():  Выполняет пользовательское действие DEC для клавиши F19.
+!
+Keymap52*udk-f20(): UDK_F20()
+Keymap52*DEFudk-f20():  Выполняет пользовательское действие DEC для клавиши F20.
+!
+Keymap52*udk-f21(): UDK_F21()
+Keymap52*DEFudk-f21():  Выполняет пользовательское действие DEC для клавиши F21.
+!
+Keymap52*udk-f22(): UDK_F22()
+Keymap52*DEFudk-f22():  Выполняет пользовательское действие DEC для клавиши F22.
+!
+Keymap52*udk-f23(): UDK_F23()
+Keymap52*DEFudk-f23():  Выполняет пользовательское действие DEC для клавиши F23.
+!
+Keymap52*udk-f24(): UDK_F24()
+Keymap52*DEFudk-f24():  Выполняет пользовательское действие DEC для клавиши F24.
+!
+Keymap52*udk-f25(): UDK_F25()
+Keymap52*DEFudk-f25():  Выполняет пользовательское действие DEC для клавиши F25.
+!
+Keymap52*udk-f26(): UDK_F26()
+Keymap52*DEFudk-f26():  Выполняет пользовательское действие DEC для клавиши F26.
+!
+Keymap52*udk-f27(): UDK_F27()
+Keymap52*DEFudk-f27():  Выполняет пользовательское действие DEC для клавиши F27.
+!
+Keymap52*udk-f28(): UDK_F28()
+Keymap52*DEFudk-f28():  Выполняет пользовательское действие DEC для клавиши F28.
+!
+Keymap52*udk-f29(): UDK_F29()
+Keymap52*DEFudk-f29():  Выполняет пользовательское действие DEC для клавиши F29.
+!
+Keymap52*udk-f30(): UDK_F30()
+Keymap52*DEFudk-f30():  Выполняет пользовательское действие DEC для клавиши F30.
+!
+Keymap52*udk-f31(): UDK_F31()
+Keymap52*DEFudk-f31():  Выполняет пользовательское действие DEC для клавиши F31.
+!
+Keymap52*udk-f32(): UDK_F32()
+Keymap52*DEFudk-f32():  Выполняет пользовательское действие DEC для клавиши F32.
+!
+Keymap52*udk-f33(): UDK_F33()
+Keymap52*DEFudk-f33():  Выполняет пользовательское действие DEC для клавиши F33.
+!
+Keymap52*udk-f34(): UDK_F34()
+Keymap52*DEFudk-f34():  Выполняет пользовательское действие DEC для клавиши F34.
+!
+Keymap52*udk-f35(): UDK_F35()
+Keymap52*DEFudk-f35():  Выполняет пользовательское действие DEC для клавиши F35.
+!
+Keymap52*x-f1(): F1()
+Keymap52*DEFx-f1():  Выполняет действие, заданное для клавиши F1.
+!
+Keymap52*x-f2(): F2()
+Keymap52*DEFx-f2():  Выполняет действие, заданное для клавиши F2.
+!
+Keymap52*x-f3(): F3()
+Keymap52*DEFx-f3():  Выполняет действие, заданное для клавиши F3.
+!
+Keymap52*x-f4(): F4()
+Keymap52*DEFx-f4():  Выполняет действие, заданное для клавиши F4.
+!
+Keymap52*x-f5(): F5()
+Keymap52*DEFx-f5():  Выполняет действие, заданное для клавиши F5.
+!
+Keymap52*x-f6(): F6()
+Keymap52*DEFx-f6():  Выполняет действие, заданное для клавиши F6.
+!
+Keymap52*x-f7(): F7()
+Keymap52*DEFx-f7():  Выполняет действие, заданное для клавиши F7.
+!
+Keymap52*x-f8(): F8()
+Keymap52*DEFx-f8():  Выполняет действие, заданное для клавиши F8.
+!
+Keymap52*x-f9(): F9()
+Keymap52*DEFx-f9():  Выполняет действие, заданное для клавиши F9.
+!
+Keymap52*x-f10(): F10()
+Keymap52*DEFx-f10():  Выполняет действие, заданное для клавиши F10.
+!
+Keymap52*x-f11(): F11()
+Keymap52*DEFx-f11():  Выполняет действие, заданное для клавиши F11.
+!
+Keymap52*x-f12(): F12()
+Keymap52*DEFx-f12():  Выполняет действие, заданное для клавиши F12.
+!
+Keymap52*x-f13(): F13()
+Keymap52*DEFx-f13():  Выполняет действие, заданное для клавиши F13.
+!
+Keymap52*x-f14(): F14()
+Keymap52*DEFx-f14():  Выполняет действие, заданное для клавиши F14.
+!
+Keymap52*x-f15(): F15()
+Keymap52*DEFx-f15():  Выполняет действие, заданное для клавиши F15.
+!
+Keymap52*x-f16(): F16()
+Keymap52*DEFx-f16():  Выполняет действие, заданное для клавиши F16.
+!
+Keymap52*x-f17(): F17()
+Keymap52*DEFx-f17():  Выполняет действие, заданное для клавиши F17.
+!
+Keymap52*x-f18(): F18()
+Keymap52*DEFx-f18():  Выполняет действие, заданное для клавиши F18.
+!
+Keymap52*x-f19(): F19()
+Keymap52*DEFx-f19():  Выполняет действие, заданное для клавиши F19.
+!
+Keymap52*x-f20(): F20()
+Keymap52*DEFx-f20():  Выполняет действие, заданное для клавиши F20.
+!
+Keymap52*x-f21(): F21()
+Keymap52*DEFx-f21():  Выполняет действие, заданное для клавиши F21.
+!
+Keymap52*x-f22(): F22()
+Keymap52*DEFx-f22():  Выполняет действие, заданное для клавиши F22.
+!
+Keymap52*x-f23(): F23()
+Keymap52*DEFx-f23():  Выполняет действие, заданное для клавиши F23.
+!
+Keymap52*x-f24(): F24()
+Keymap52*DEFx-f24():  Выполняет действие, заданное для клавиши F24.
+!
+Keymap52*x-f25(): F25()
+Keymap52*DEFx-f25():  Выполняет действие, заданное для клавиши F25.
+!
+Keymap52*x-f26(): F26()
+Keymap52*DEFx-f26():  Выполняет действие, заданное для клавиши F26.
+!
+Keymap52*x-f27(): F27()
+Keymap52*DEFx-f27():  Выполняет действие, заданное для клавиши F27.
+!
+Keymap52*x-f28(): F28()
+Keymap52*DEFx-f28():  Выполняет действие, заданное для клавиши F28.
+!
+Keymap52*x-f29(): F29()
+Keymap52*DEFx-f29():  Выполняет действие, заданное для клавиши F29.
+!
+Keymap52*x-f30(): F30()
+Keymap52*DEFx-f30():  Выполняет действие, заданное для клавиши F30.
+!
+Keymap52*x-f31(): F31()
+Keymap52*DEFx-f31():  Выполняет действие, заданное для клавиши F31.
+!
+Keymap52*x-f32(): F32()
+Keymap52*DEFx-f32():  Выполняет действие, заданное для клавиши F32.
+!
+Keymap52*x-f33(): F33()
+Keymap52*DEFx-f33():  Выполняет действие, заданное для клавиши F33.
+!
+Keymap52*x-f34(): F34()
+Keymap52*DEFx-f34():  Выполняет действие, заданное для клавиши F34.
+!
+Keymap52*x-f35(): F35()
+Keymap52*DEFx-f35():  Выполняет действие, заданное для клавиши F35.
+!
+Keymap52*vt-f1(): VtPF1()
+Keymap52*DEFvt-f1():  Отправляет приложению код символа (SS3 P), независимо от текущего режима.
+!
+Keymap52*vt-f2(): VtPF2()
+Keymap52*DEFvt-f2(): Отправляет приложению код символа (SS3 Q), независимо от текущего режима.
+!
+Keymap52*vt-f3(): VtPF3()
+Keymap52*DEFvt-f3(): Отправляет приложению код символа (SS3 R), независимо от текущего режима.
+!
+Keymap52*vt-f4(): VtPF4()
+Keymap52*DEFvt-f4(): Отправляет приложению код символа (SS3 S), независимо от текущего режима.
+!
+Keymap52*x-print(): X_Print()
+Keymap52*DEFx-print(): Отправляет хосту escape-последовательность ANSI (Ctrl-[[209q).
+!
+Keymap52*x-scroll-lock(): X_ScrollLock()
+Keymap52*DEFx-scroll-lock(): Отправляет хосту escape-последовательность ANSI (Ctrl-[[213q).
+!
+Keymap52*x-pause(): X_Pause()
+Keymap52*DEFx-pause(): Отправляет хосту escape-последовательность ANSI для клавиши Pause (Ctrl-[[217q).
+!
+Keymap52*x-ins(): X_Insert()
+Keymap52*DEFx-ins(): Отправляет хосту escape-последовательность ANSI (Ctrl-[[139q).
+!
+Keymap52*x-delete(): X_Delete()
+Keymap52*DEFx-delete(): Отправляет хосту escape-последовательность ANSI (Ctrl-[[P).
+!
+Keymap52*x-home(): X_Home()
+Keymap52*DEFx-home(): Отправляет хосту escape-последовательность ANSI (Ctrl-[[H).
+!
+Keymap52*x-end(): X_End()
+Keymap52*DEFx-end(): Отправляет хосту escape-последовательность ANSI (Ctrl-[[146q).
+!
+Keymap52*x-page-up(): X_PageUp()
+Keymap52*DEFx-page-up(): Отправляет хосту escape-последовательность ANSI (Ctrl-[[150q).
+!
+Keymap52*x-page-down(): X_PageDown()
+Keymap52*DEFx-page-down(): Отправляет хосту escape-последовательность ANSI (Ctrl-[[154q).
+!
+Keymap52*kp-numlock(): KP_NumLock()
+Keymap52*DEFkp-numlock():  Выполняет действие Numeric Lock.
+!
+Keymap52*kp-divide(): KP_Divide()
+Keymap52*DEFkp-divide():  Выполняет функцию деления, указанную на клавиатуре.
+!
+Keymap52*kp-multiply(): KP_Multiply()
+Keymap52*DEFkp-multiply():  Выполняет функцию умножения, указанную на клавиатуре.
+!
+Keymap52*kp-subtract(): KP_Minus()
+Keymap52*DEFkp-subtract():  В числовом режиме отправляет приложению знак минуса (-). В режиме приложения отправляет код символа SS3 l (ESC ? l).
+!
+Keymap52*kp-7(): KP_7()
+Keymap52*DEFkp-7():  В числовом режиме отправляет приложению символ 7. В режиме приложения отправляет код символа SS3 w (ESC ? w).
+!
+Keymap52*kp-8(): KP_8()
+Keymap52*DEFkp-8():  В числовом режиме отправляет приложению символ 8. В режиме приложения отправляет код символа SS3 x (ESC ? x).
+!
+Keymap52*kp-9(): KP_9()
+Keymap52*DEFkp-9():  В числовом режиме отправляет приложению символ 9. В режиме приложения отправляет код символа SS3 y (ESC ? y).
+!
+Keymap52*kp-4(): KP_4()
+Keymap52*DEFkp-4():  В числовом режиме отправляет приложению символ 4. В режиме приложения отправляет код символа SS3 t (ESC ? t).
+!
+Keymap52*kp-5(): KP_5()
+Keymap52*DEFkp-5():  В числовом режиме отправляет приложению символ 5. В режиме приложения отправляет код символа SS3 u (ESC ?u).
+!
+Keymap52*kp-6(): KP_6()
+Keymap52*DEFkp-6():  В числовом режиме отправляет приложению символ 6. В режиме приложения отправляет код символа SS3 v (ESC ? v).
+!
+Keymap52*kp-add(): KP_Plus()
+Keymap52*DEFkp-add():  Выполняет функцию сложения, указанную на клавиатуре.
+!
+Keymap52*kp-1(): KP_1()
+Keymap52*DEFkp-1():  В числовом режиме отправляет приложению символ 1. В режиме приложения отправляет код символа SS3 q (ESC ? q).
+!
+Keymap52*kp-2(): KP_2()
+Keymap52*DEFkp-2():  В числовом режиме отправляет приложению символ 2. В режиме приложения отправляет код символа SS3 r (ESC ? r).
+!
+Keymap52*kp-3(): KP_3()
+Keymap52*DEFkp-3():  В числовом режиме отправляет приложению символ 3. В режиме приложения отправляет код символа SS3 s (ESC ? s).
+!
+Keymap52*kp-0(): KP_0()
+Keymap52*DEFkp-0():  В числовом режиме отправляет приложению символ 0. В режиме приложения отправляет код символа SS3 p (ESC ? p).
+!
+Keymap52*kp-decimal(): KP_Decimal()
+Keymap52*DEFkp-decimal():  В числовом режиме отправляет десятичный разделитель приложению. В режиме приложения отправляет код символа SS3 n (ESC ? n).
+!
+Keymap52*kp-enter(): KP_Enter()
+Keymap52*DEFkp-enter():  В числовом режиме отправляет приложению функцию ввода. В режиме приложения отправляет код символа SS3 M (ESC ? M).
+!
+Keymap52*kp-space(): KP_Space()
+Keymap52*DEFkp-space():  Отправляет приложению символ пробела.
+!
+Keymap52*kp-tab(): KP_Tab()
+Keymap52*DEFkp-tab():  Отправляет приложению символ табуляции.
+!
+Keymap52*kp-equal(): KP_Equal()
+Keymap52*DEFkp-equal():  Отправляет приложению символ равенства (=).
+!
+Keymap52*kp-separator(): KP_Separator()
+Keymap52*DEFkp-separator():  Отправляет приложению разделитель.
+!
+Playedit*btn1-press():  MouseBtn1Press()
+Playedit*DEFbtn1-press():  Имитация нажатия кнопки мыши 1.
+!
+Playedit*btn1-release():  MouseBtn1Release()
+Playedit*DEFbtn1-release():  Имитация отпускания кнопки мыши 1.
+!
+Playedit*btn2-press():  MouseBtn2Press()
+Playedit*DEFbtn2-press():  Имитация нажатия кнопки мыши 2.
+!
+Playedit*btn2-release():  MouseBtn2Release()
+Playedit*DEFbtn2-release():  Имитация отпускания кнопки мыши 2.
+!
+Playedit*btn3-press():  MouseBtn3Press()
+Playedit*DEFbtn3-press():  Имитация нажатия кнопки мыши 3.
+!
+Playedit*btn3-release():  MouseBtn3Release()
+Playedit*DEFbtn3-release():  Имитация отпускания кнопки мыши 3.
+!
+Playedit*shift-btn1-press():  MouseShiftBtn1Press()
+Playedit*DEFshift-btn1-press():  Имитация нажатия кнопки мыши 1, когда нажата клавиша Shift.
+!
+Playedit*shift-btn1-release():  MouseShiftBtn1Release()
+Playedit*DEFshift-btn1-release():  Имитация отпускания кнопки мыши 1, когда нажата клавиша Shift.
+!
+Playedit*shift-btn2-press():  MouseShiftBtn2Press()
+Playedit*DEFshift-btn2-press():  Имитация нажатия кнопки мыши 2, когда нажата клавиша Shift.
+!
+Playedit*shift-btn2-release():  MouseShiftBtn2Release()
+Playedit*DEFshift-btn2-release():  Имитация отпускания кнопки мыши 2, когда нажата клавиша Shift.
+!
+Playedit*shift-btn3-press():  MouseShiftBtn3Press()
+Playedit*DEFshift-btn3-press():  Имитация нажатия кнопки мыши 3, когда нажата клавиша Shift.
+!
+Playedit*shift-btn3-release():  MouseShiftBtn3Release()
+Playedit*DEFshift-btn3-release():  Имитация отпускания кнопки мыши 3, когда нажата клавиша Shift.
+!
+Playedit*btn1-double-press():  MouseBtn1DoublePress()
+Playedit*DEFbtn1-double-press():  Имитация двойного нажатия кнопки мыши 1.
+!
+Playedit*btn1-triple-press():  MouseBtn1TriplePress()
+Playedit*DEFbtn1-triple-press():  Имитация тройного нажатия кнопки мыши 1.
+!
+Playedit*btn2-double-press():  MouseBtn2DoublePress()
+Playedit*DEFbtn2-double-press():  Имитация двойного нажатия кнопки мыши 2.
+!
+Playedit*btn2-triple-press():  MouseBtn2TriplePress()
+Playedit*DEFbtn2-triple-press():  Имитация тройного нажатия кнопки мыши 2.
+!
+Playedit*btn3-double-press():  MouseBtn3DoublePress()
+Playedit*DEFbtn3-double-press():  Имитация двойного нажатия кнопки мыши 3.
+!
+Playedit*btn3-triple-press():  MouseBtn3TriplePress()
+Playedit*DEFbtn3-triple-press():  Имитация тройного нажатия кнопки мыши 3.
+!
+Playedit*shift-btn1-double-press():  MouseShiftBtn1DoublePress()
+Playedit*DEFshift-btn1-double-press():  Имитация двойного нажатия кнопки мыши 1, когда нажата клавиша Shift.
+!
+Playedit*shift-btn1-triple-press():  MouseShiftBtn1TriplePress()
+Playedit*DEFshift-btn1-triple-press():  Имитация тройного нажатия кнопки мыши 1, когда нажата клавиша Shift.
+!
+Playedit*shift-btn2-double-press():  MouseShiftBtn2DoublePress()
+Playedit*DEFshift-btn2-double-press():  Имитация двойного нажатия кнопки мыши 2, когда нажата клавиша Shift.
+!
+Playedit*shift-btn2-triple-press():  MouseShiftBtn2TriplePress()
+Playedit*DEFshift-btn2-triple-press():  Имитация тройного нажатия кнопки мыши 2, когда нажата клавиша Shift.
+!
+Playedit*shift-btn3-double-press():  MouseShiftBtn3DoublePress()
+Playedit*DEFshift-btn3-double-press():  Имитация двойного нажатия кнопки мыши 3, когда нажата клавиша Shift.
+!
+Playedit*shift-btn3-triple-press():  MouseShiftBtn3TriplePress()
+Playedit*DEFshift-btn3-triple-press():  Имитация тройного нажатия кнопки мыши 3, когда нажата клавиша Shift.
+!
+AllShare*paste():  Paste()
+AllShare*DEFpaste():  Вставляет содержимое буфера обмена в текущей позиции курсора.
+!
+AllShare*copy():  Copy()
+AllShare*DEFcopy():  Копирует выделенные данные в буфер обмена.
+!
+AllShare*cut():  Cut()
+AllShare*DEFcut():  Удаляет выделенные данные.
+!
+Playedit*userid():  USERID()
+Playedit*DEFuserid():  Вводит ИД текущего пользователя. Это действие применяется для автоматической идентификации в сеансах эмуляции.
+!
+Playedit*password():  PASSWORD()
+Playedit*DEFpassword():  Вводит пароль текущего пользователя. Это действие применяется для автоматической идентификации в сеансах эмуляции.
+!
+AllShare*adjust-copy-left():  AdjustCopyAreaLeft()
+AllShare*DEFadjust-copy-left():  Задает начало области копирования, если оно еще не задано, и сдвигает область копирования на один символ влево от текущей позиции.
+!
+AllShare*adjust-copy-right():  AdjustCopyAreaRight()
+AllShare*DEFadjust-copy-right():  Задает начало области копирования, если оно еще не задано, и сдвигает область копирования на один символ вправо от текущей позиции.
+!
+AllShare*adjust-copy-up():  AdjustCopyAreaUp()
+AllShare*DEFadjust-copy-up():  Задает начало области копирования, если оно еще не задано, и сдвигает область копирования на одну строку вверх от текущей позиции.
+!
+AllShare*adjust-copy-down():  AdjustCopyAreaDown()
+AllShare*DEFadjust-copy-down():  Задает начало области копирования, если оно еще не задано, и сдвигает область копирования на одну строку вниз от текущей позиции.
+!
+AllShare*adjust-copy-anchor-left():  AdjustCopyAreaAnchorLeft()
+AllShare*DEFadjust-copy-anchor-left():  Задает начало области копирования, если оно еще не задано, и сдвигает правую границу области копирования на один символ вправо.
+!
+AllShare*adjust-copy-anchor-right():  AdjustCopyAreaAnchorRight()
+AllShare*DEFadjust-copy-anchor-right():  Задает начало области копирования, если оно еще не задано, и сдвигает левую  границу области копирования на один символ влево.
+!
+AllShare*adjust-copy-anchor-up():  AdjustCopyAreaAnchorUp()
+AllShare*DEFadjust-copy-anchor-up():  Задает начало области копирования, если оно еще не задано, и сдвигает нижнюю границу области копирования на одну строку вниз.
+!
+AllShare*adjust-copy-anchor-down():  AdjustCopyAreaAnchorDown()
+AllShare*DEFadjust-copy-anchor-down():  Задает начало области копирования, если оно еще не задано, и сдвигает верхнюю границу области копирования на одну строку вверх.
+!
+AllShare*toggle-default-copy-type():  ToggleDefaultCopyType()
+AllShare*DEFtoggle-default-copy-type():  Служит переключателем между блочным и построчным копированием.
+!
+Playedit*hex-string():  HexString()
+Playedit*DEFhex-string():  Разрешает вводить данные в шестнадцатеричном формате.
+!
+Playedit*graphics-hex-string():  GraphicsHexString()
+Playedit*DEFgraphics-hex-string():  Разрешает вводить графические данные в шестнадцатеричном формате EBCDIC.
+!
+Playedit*BIDItogglescrrev():  BIDIToggleScreenReverse()
+Playedit*DEFBIDItogglescrrev():  Включает или выключает обращение для меню (применяется в арабском и иврите).
+!
+Playedit*BIDItogglefieldrev():  BIDIToggleFieldReverse()
+Playedit*DEFBIDItogglefieldrev():  Включает или выключает обращение для поля (применяется в арабском и иврите).
+!
+Playedit*BIDItoggleautorev():  BIDIToggleAutoReverse()
+Playedit*DEFBIDItoggleautorev():  Включает или выключает автоматические обращение поля (применяется в арабском и иврите).
+!
+Playedit*BIDIpush():  BIDIPush()
+Playedit*DEFBIDIpush():  Включает режим нажимания (применяется в арабском и иврите).
+!
+Playedit*BIDIendpush():  BIDIEndPush()
+Playedit*DEFBIDIendpush():  Выключает режим нажимания (применяется в арабском и иврите).
+!
+Playedit*BIDItoggleautopush():  BIDIToggleAutoPush()
+Playedit*DEFBIDItoggleautopush():  Включает опцию автоматического перехода программы эмуляции в режим нажимания при переключении между двунаправленным языком и английским языком (применяется в арабском и иврите).
+!
+Playedit*BIDIsetshape():  BIDISetShape()
+Playedit*DEFBIDIsetshape():  Задает режим перерисовки символов для арабского языка.
+!
+Playedit*BIDIfieldshape():  BIDIFieldShape()
+Playedit*DEFBIDIfieldshape():  Перерисовывает символы в поле для арабского языка.
+!
+Playedit*BIDItogglenumswap():  BIDIToggleNumericSwapping()
+Playedit*DEFBIDItogglenumswap():  Включает или выключает замену арабских цифр на цифры хинди для арабского языка.
+!
+! End action names
+!
+!
+Keyxxx52*ERROR:  Недопустимое действие
+!
+Keymap52*managing_server_text.value:  Невозможно сохранить файл настроенной раскладки. Установите на управляющем сервере последний выпуск Администратора IBM Network Station.
+!
+Keymap52*managingBtn.labelString:  OK
+!
+Keymap52*general_fatal_error.value:  В программе изменения раскладки клавиатуры возникла ошибка. Работа программы будет завершена.
+!
+Keymap52*genfatalBtn.labelString:  Выход
+!
+Keymap52*general_nonfatal_text.value:  Ошибка настройки раскладки клавиатуры.
+!
+Keymap52*gennonfatBtn.labelString:  OK
+!
+!
+!************************************************************************
+!
+!
+!                        Keypad Customizer Resources
+!
+!
+!************************************************************************
+Keypad52*title:  Программа настройки дополнительной клавиатуры
+
+Keypad52*iname5250:  Программа настройки дополнительной клавиатуры 5250
+
+Keypad52*iname3270:  Программа настройки дополнительной клавиатуры 3270
+
+Keypad52*keypadTitle.dialogTitle:  Дополнительная клавиатура
+
+!following resource left blank on purpose, do not translate.
+AllShare*blankLabel.labelString:
+
+! initial popup dialog
+Keypad52*initialpopupDialoglist.labelString:  Выберите файл дополнительной клавиатуры:
+
+Keypad52*initialpopupDialogaltlabel.labelString:  Нет ни одного файла дополнительной клавиатуры.
+
+Keypad52*initialpopupDialogOKbtn.labelString:  OK
+
+Keypad52*initialpopupDialogcancelbtn.labelString:  Отмена
+
+Keypad52*initialpopupDialognewbtn.labelString:  Создать дополнительную клавиатуру
+
+!*************************************
+!**  Keypad Customizer Main Window  **
+!*************************************
+
+! In general, the following buttons should not be made much longer during translation.
+! Buttons have one to four words.
+
+Keypad52*keyAction.labelString:  Действие кнопки ->
+
+Keypad52*fileDeleteButton.labelString:  Очистить кнопку дополнительной клавиатуры
+
+Keypad52*selectplayfile.labelString:  Выбрать действие над файлом макрокоманды
+
+Keypad52*changeSize.labelString:  Изменить стиль дополнительной клавиатуры
+
+Keypad52*keypadfileDelete.labelString:  Удалить файл дополнительной клавиатуры
+
+Keypad52*transRxing:  Получение информации для программы настройки дополнительной клавиатуры из сеанса эмуляции.
+
+Keypad52*transRxd:  Информация для программы настройки дополнительной клавиатуры получена из сеанса эмуляции.
+
+Keypad52*currKeypadLabel.labelString:  Текущая дополнительная клавиатура:
+
+Keypad52*currKeyLabel.labelString:  Текущий текст на кнопке клавиатуры:
+
+Keypad52*currActLabel.labelString:  Текущее действие кнопки клавиатуры:
+
+!******************
+!**  Resolution  **
+!******************
+Keypad52*poorResolutionMsgText.value:   Разрешение монитора составляет менее 800x600 точек. Программа настройки дополнительной клавиатуры не поддерживает такие мониторы.
+
+Keypad52*keypadFailureCancelBtn.labelString:  Отмена
+
+!**************
+!**  Saving  **
+!**************
+Keypad52*saveDialog.dialogTitle:  Сохранить дополнительную клавиатуру
+
+Keypad52*saveBoxLabel*labelString:  Сохранить файл клавиатуры как:
+
+Keypad52*saveTran:  Файл дополнительной клавиатуры сохранен...
+
+Keypad52*fileWarningDialog.dialogTitle:  Дополнительная клавиатура - Предупреждение
+
+!**************
+!**  Delete  **
+!**************
+Keypad52*fileDeleteDialog.dialogTitle:  Удалить файл дополнительной клавиатуры
+
+Keypad52*fileDeleteBoxLabel.labelString:  Выберите дополнительные клавиатуры для удаления:
+
+Keypad52*fileDeleted:  Выбранные файлы дополнительных клавиатур удалены.
+
+!****************
+!**  Playback  **
+!****************
+Keypad52*invalidSelectionplay.messageString:  Не выбран ни один объект. Выберите объект в списке или нажмите Отмена.
+
+Keypad52*invalidSelectionplay.okLabelString:  Продолжить  
+
+Keypad52*selectPlaybackFile.labelString:  Выберите файл макрокоманд
+
+Keypad52*userPlaybackFiles.labelString:  Пользовательские файлы макрокоманд
+
+Keypad52*defaultPlaybackFiles.labelString:  Файлы макрокоманд по умолчанию
+
+AllShare*okLabel.labelString:  OK
+
+!********************
+!**  Keypad Style  **
+!********************
+Keypad52*selectSizeTitle.dialogTitle:  Стиль дополнительной клавиатуры
+
+Keypad52*selectKeypadSizeLabel.labelString:  Выберите стиль клавиатуры:
+
+Keypad52*selectKeypadStyle.labelString:  Стиль клавиатуры:
+
+Keypad52*popupStyleChoice.labelString:  Всплывающая клавиатура
+
+Keypad52*menuStyleChoice.labelString:  Выпадающая клавиатура
+
+Keypad52*selectKeypadSizeRows.labelString:  Строк:
+
+Keypad52*selectKeypadSizeCols.labelString:  Столбцов:
+
+Keypad52*selectKeypadSizeTextLen.labelString:  Длина текста:
+
+Keypad52*changeKeypadSizeMessage:  Выберите предпочитаемый стиль дополнительной клавиатуры...
+
+Keypad52*newPb.labelString:  Создать
+
+Keypad52*row_col_pulldownvalue.labelString:  - 
+
+Keypad52*invalidSizeSelection.messageString:  Выбранный размер слишком мал для текущей дополнительной клавиатуры.
+
+Keypad52*invalidSizeSelection.okLabelString:  Продолжить  
+
+!***********************
+!**  Warning dialogs  **
+!***********************
+Keypad52*change.dialogTitle:  Дополнительная клавиатура - Предупреждение
+
+Keypad52*unsaved.dialogTitle:  Дополнительная клавиатура - Предупреждение
+
+Keypad52*unsaved.messageString:  Изменения дополнительной клавиатуры не сохранены.
+
+Keypad52*unsaved.okLabelString:  Продолжить  
+
+Keypad52*nochange.dialogTitle:  Дополнительная клавиатура - Предупреждение
+
+! this cannot be made much longer during translation.
+Keypad52*nochange.messageString:  Перед внесением других изменений сохраните или отмените текущее изменение.
+
+Keypad52*nochange.okLabelString:  Продолжить  
+
+Keypad52*cantdothat.dialogTitle:  Дополнительная клавиатура - Предупреждение
+
+Keypad52*cantdothat.messageString:  Перед выбором другой опции сохраните или отмените изменения.
+
+!nothing selected in first dialog box
+Keypad52*invalidSelectionwarn.messageString:  Не выбран ни один объект. Выберите объект в списке, либо нажмите кнопку Создать или Отмена.
+
+Keypad52*invalidSelectionwarn.okLabelString:  Продолжить  
+
+Keypad52*noaccessDir:  Каталог недоступен.
+
+Keypad52*selectKeypadButton.messageString:  Перед началом настройки необходимо выбрать кнопку дополнительной клавиатуры.
+
+Keypad52*generalError.dialogTitle:  Ошибка дополнительной клавиатуры
+
+Keypad52*generalError.messageString:  При выполнении действия возникла ошибка.
+
+Keypad52*generalError.okLabelString:  OK
+
+Keypad52*emptyList:  Список преобразований содержит ошибку. Его нельзя сохранить или применить.
+
+Keypad52*ErrorMsgFileNameChars.messageString:  Введен символ, недопустимый для имени файла.
+
+Keypad52*EBCMismatchText.value: Язык сеанса эмуляции, в котором была вызвана программа изменения дополнительной клавиатуры, не совпадает с языком IBM Network Station. Символы и строки, созданные с применением этой программы, могут оказаться нечитаемыми в сеансе эмуляции.
+
+!************************
+!**  Various Messages  **
+!************************
+! help button pressed
+Keypad52*helpMessage:  Загрузка программы просмотра справки...
+
+! after OK clicked
+Keypad52*chooseSave:  Для сохранения изменений нажмите Сохранить.
+
+! after Cancel clicked
+Keypad52*chooseCancel:  Текущие изменения отменены.
+
+! original message when new keypad opens
+Keypad52*chooseNew:  Изменить новую дополнительную клавиатуру
+
+! button pressed in keypad
+Keypad52*continueedit:  Изменить текущую кнопку...
+
+! click button action -> with nothing selected
+Keypad52*noActionSelected:  В списке действий или в списке символов не выбрана ни одна запись.
+
+! swapping messages (next 2)
+Keypad52*swapinprogress:  Нажмите кнопку OK или Отмена, либо переместите другие кнопки клавиатуры...
+
+Keypad52*swaprunninginfo:  Перемещение кнопки...
+
+! following 3 messages for invalid keypad action
+Keypad52*nonValidDialog.dialogTitle:  Предупреждение - Дополнительная клавиатура
+
+Keypad52*nonValidDialog.messageString:  Для кнопки заданы недопустимые действия дополнительной клавиатуры.
+
+Keypad52*deleteKeypadMessage:  Выберите дополнительные клавиатуры для удаления...
+
+!***************
+!**  Exiting  **
+!***************
+Keypad52*quitDialog1:  Изменения, внесенные в дополнительную клавиатуру, не сохранены.
+
+Keypad52*quit1Tog1:  Выйти без сохранения изменений.
+
+Keypad52*quit1Tog2:  Сохранить изменения перед выходом.
+
+!************************************************************************
+!
+!
+!                        Playback Editor Resources
+!
+!
+!************************************************************************
+Playedit*title:  Редактор файлов макрокоманд
+
+Playedit*iname5250:  Редактор файлов макрокоманд 5250
+
+Playedit*iname3270:  Редактор файлов макрокоманд 3270
+
+Playedit*editorTitle.dialogTitle:  Редактор файлов макрокоманд
+
+!****  Main Window
+Playedit*keyAction.labelString:  Вставить действие->
+
+Playedit*deleteAction.labelString:  Удалить действие
+
+Playedit*insertAction.labelString:  Вставить строку
+
+Playedit*editAction.labelString:  Изменить действие
+
+Playedit*transRxing:  Получение информации для редактора файлов макрокоманд из сеанса эмуляции.
+
+Playedit*transRxd:  Информация для редактора файлов макрокоманд получена из сеанса эмуляции.
+
+Playedit*currFileLabel.labelString:  Текущий файл макрокоманды:
+
+Playedit*currActLabel.labelString:  Действия файла макрокоманды:
+
+!** Resolution
+Playedit*poorResolutionMsgText.value:  Разрешение монитора составляет менее 800x600 точек. Редактор файлов макрокоманд не поддерживает такие мониторы.
+
+!** Saving
+Playedit*saveDialog.dialogTitle:  Сохранить файл макрокоманды
+
+Playedit*saveBoxLabel*labelString:  Сохранить файл макрокоманды как:
+
+Playedit*saveTran:  Файл макрокоманды сохранен...
+
+Playedit*fileWarningDialog.dialogTitle:  Предупреждение - Редактор макрокоманд
+
+!** Edit
+Playedit*editBoxLabel*labelString:  Изменить действие:
+
+!** Warning Dialogs
+Playedit*PlaybackMsgFileNoOpen.value:  Невозможно открыть файл макрокоманды. Работа приложения будет завершена.
+
+Playedit*PlaybackMsgFileNoRead.value:  Невозможно прочитать файл макрокоманды. Работа приложения будет завершена.
+
+Playedit*PlaybackMsgFileCorrupt.value:  Файл макрокоманды создан не с помощью приложения Запись программы эмуляции. Невозможно открыть файл. Работа приложения будет завершена.
+
+Playedit*noaccessDir:  Каталог недоступен.
+
+Playedit*selectInsertLocation.messageString:  Выделите строку, в которую нужно вставить это действие.
+
+Playedit*ErrorMsgFileNameChars.messageString:  Введен символ, недопустимый для имени файла.
+
+Playedit*EBCMismatchText.value:  Язык сеанса эмуляции, в котором был вызван редактор файлов макрокоманд, не совпадает с языком IBM Network Station. Символы и строки, созданные с применением этой программы, могут оказаться нечитаемыми в сеансе эмуляции.
+
+Playedit*nonValidDialog.messageString:  Действия недопустимы.
+
+!** Messages
+Playedit*helpMessage:  Загрузка программы просмотра справки...
+
+Playedit*chooseSave:  Для сохранения изменений нажмите Сохранить.
+
+Playedit*chooseCancel:  Текущие изменения отменены.
+
+Playedit*noActionSelected.messageString:  В списке действий или в списке символов не выбрана ни одна запись.
+
+Playedit*nothingHighlightedDelete.messageString:  Для удаления не выбран ни один объект.
+
+Playedit*nothingHighlightedInsert.messageString:  Выделите позицию вставки.
+
+Playedit*nothingHighlightedEdit.messageString:  Для изменения не выбран ни один объект.
+
+!** Exit
+Playedit*quitDialog1:  Изменения, внесенные в файл макрокоманды, не сохранены.
+
+Playedit*quit1Tog1:  Выйти без сохранения изменений.
+
+Playedit*quit1Tog2:  Сохранить изменения перед выходом.
+
+!**************************************************
+!*
+!*        Printing translations
+!*
+!*      Added by AJMEYER for V310.nc
+!*
+!**************************************************
+
+AllShare*printDialogPrinterTypeLabel.labelString:  Тип принтера:
+
+AllShare*printDialogPrinterTypeMenu*postscript.labelString:  PostScript
+
+AllShare*printDialogPrinterTypeMenu*ascii.labelString:  ASCII
+
+AllShare*printDialogPrinterTypeMenu*pcl.labelString:  PCL
+
+AllShare*printDialogPrinterSelectControls_popup.title:   Выбор принтера
+
+AllShare*printSelectDialogOKButton.labelString:  OK
+
+AllShare*printSelectDialogCancelButton.labelString:  Отмена
+! ENGL1SH_VERS10N 1.6.2.2 DO NOT REMOVE OR CHANGE THIS LINE

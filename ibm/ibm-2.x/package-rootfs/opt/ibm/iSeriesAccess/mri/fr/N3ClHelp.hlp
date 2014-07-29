@@ -1,0 +1,102 @@
+//// ENGLISH_SOURCE_VERSION= 1.2 
+////This file contains the color mapping program on-line help text for the IBM 3270 and 5250 emulators.
+////This help text file will be stored in locale specific ASCII (code page 819 for Latin1 languages). 
+
+////Help text format (this section is not displayed to IBM emulator users):
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1.
+//// 3. This help file contains help text for the 3270 and 5250 emulators. There are some help text differences. The emulator help viewer program will display the appropriate help text for the appropriate emulator. A comment line of four "/" characters followed by
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 on-line help.
+//// 3B. "5250" indicates subsequent data is only displayed in 5250 on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in both 3270 and 5250 on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+//// 3D. Except for comment lines, there should be no "5250" in this file. The emulator help viewer program will convert all "3270" to "5250" when displaying this on-line help text in a 5250 emulator.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters.  The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Do not change the order of topics in this help text file.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed).
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+
+----"Définition de couleurs 3270 - Aide"
+++++"Informations générales"
+Pour plus de détails sur l'utilisation du programme d'affichage de l'aide, reportez-vous à la première section de l'aide principale de l'émulateur (sélectionnez le menu "Aide" dans la fenêtre de l'émulateur).
+
+Ces informations décrivent comment utiliser le programme de définition de couleurs pour modifier les couleurs de vos sessions d'émulation 3270.
+
+Remarque : Vous ne pouvez activer qu'un seul programme de définition de couleurs à la fois.
+
+++++"Définition de couleurs - Sélection de fichier"
+Au début d'une session 3270, l'émulateur 3270 recherche un fichier de définition de couleurs propre à la session. Il procède dans l'ordre suivant et dès qu'il trouve un fichier de définition de couleurs, il l'utilise pour la session 3270 :
+
+- Il recherche un fichier de définition de couleurs propre à la session, éventuellement sélectionné à l'aide du programme de définition de couleurs.
+
+- Il recherche un fichier de définition de couleurs par défaut éventuellement sélectionné à l'aide du programme de définition de couleurs.
+
+- S'il ne trouve aucun de ces fichiers, l'émulateur 3270 utilise les couleurs par défaut (arrière-plan noir).
+
+++++"Présentation de la fenêtre"
+La fenêtre de définition des couleurs de base est composée d'une zone de sélection de palettes de couleurs (à gauche), d'une zone de modèle de fenêtres de session 3270 et de programme d'assistance (dans la partie inférieure droite) et d'une barre de sélection/zone de message (dans la partie inférieure).
+
+La fenêtre de définition des couleurs étendues est composée d'une zone de sélection d'éléments (à gauche), d'une zone de sélection de couleurs (dans la partie supérieure droite), d'une zone de modèle de fenêtres de session 3270 et de programme d'assistance (dans la partie inférieure droite), ainsi que d'une barre de sélection/zone de message (dans la partie inférieure).
+
+La zone de sélection de couleurs comprend :
+
+1) Une barre multicolore contenant 20 couleurs initiales afin de vous permettre de sélectionner celle que vous voulez donner à l'un des éléments.
+
+2) Les règles rouge/vert/bleu permettant de créer une nouvelle nuance pour l'un des éléments.
+
+3) La fenêtre "Couleur en cours", qui affiche la nouvelle couleur à mesure que vous la modifiez à l'aide de la barre multicolore et des règles rouge/vert/bleu.
+
+4) Le bouton "Appliquer la couleur en cours", qui applique la couleur modifiée à la zone de modèle de fenêtres de session 3270 et de programme d'assistance. Vous devez cliquer sur ce bouton pour que les modifications soient prises en compte dans la session.
+
+
+Les boutons de la barre de sélection fournissent les fonctions suivantes :
+
+1) "Sauvegarde" permet de sauvegarder les modifications de définition de couleurs dans un fichier.
+
+2) "Suppression" permet de supprimer des fichiers de définition de couleurs créés précédemment.
+
+3) "Appliquer à la session" permet d'appliquer les modifications à la session à partir de laquelle le programme de définition de couleurs a été lancé. Cela permet de tester les modifications avant de les sauvegarder dans un fichier.
+
+4) "Sortie" permet de quitter le programme de définition de couleurs.
+
+5) "Aide" permet d'afficher ce texte d'aide.
+
+Zone de message :
+Affiche des messages d'information et d'erreur.
+
+++++"Définition des couleurs de base"
+Cette option permet de sélectionner un fichier de définition de couleurs comme palette par défaut pour la session en cours et pour les sessions 3270 futures.
+
+La définition de couleurs de base propose cinq palettes de couleurs standard et les palettes de couleurs étendues que vous avez créées. Remarque : Trois des cinq palettes de couleurs standard utilisent les mêmes couleurs pour les fenêtres du programme d'assistance (par exemple, les couleurs de cette fenêtre d'aide 3270).
+
+++++"Définition de couleurs étendues"
+L'option de définition de couleurs étendues vous permet de créer une palette de couleurs étendues (un fichier de définition de couleurs). Il est possible de modifier les couleurs des divers éléments (ou composantes) d'une session 3270. Il est recommandé de sélectionner d'abord la palette de couleurs la plus proche à l'aide de l'option de définition de couleurs de base. Utilisez ensuite l'option de définition de couleurs étendues pour modifier la couleur d'éléments spécifiques.
+
+Remarque : Certains modèles IBM Thin Client prend généralement en charge jusqu'à 256 couleurs (1 mégaoctet de mémoire RAM vidéo). Une fois cette limite atteinte, des couleurs erronées risquent de produire des images incorrectes dans le navigateur. Les cinq palettes de couleurs de base IBM correspondent aux couleurs utilisées par le navigateur et par Java. Les palettes de couleurs étendues peuvent utiliser 22 couleurs au maximum. Le navigateur et Java allouent une palette de couleurs (pour les postes Thin Clients en 256 couleurs) en utilisant les valeurs de rouge, de vert et de bleu suivantes : 0, 51, 102, 153, 204 et 255.
+ 
+Pour modifier la couleur d'un élément, commencez par sélectionner ce dernier afin d'afficher sa couleur en cours. Si vous voulez en modifier considérablement la couleur, cliquez dans la barre multicolore pour sélectionner une couleur de base, que vous modifierez à votre gré. Il est possible de régler les valeurs rouge/vert/bleu. Par exemple, vous pouvez faire glisser la règle associée à la couleur rouge (placez le pointeur de la souris sur la règle, cliquez sur cette dernière à l'aide du bouton gauche de la souris et faites-la glisser), cliquer à un autre endroit de la règle, ou cliquer sur les boutons "-" ou "+". La plage de valeurs pour le rouge, le vert et le bleu va de 0 à 255. Cliquez ensuite sur le bouton "Appliquer la couleur en cours" ; la zone de travail située dans la partie inférieure droite est alors mise à jour.
+
+La partie inférieure droite de la zone de travail comprend une zone de programme d'assistance et une zone 3270. Les couleurs du programme d'assistance s'appliqueront à la fenêtre d'aide en ligne 3270, à la fenêtre des préférences diverses, aux fenêtres d'enregistrement/exécution, à la fenêtre de redéfinition de clavier et à la fenêtre de définition de couleurs (lorsque vous ouvrirez de nouveau cette dernière). La zone 3270 affiche une barre de menus, l'arrière-plan de la session principale avec sept couleurs d'avant-plan, un bouton de fonction, une règle et une ligne d'état.
+
+Pour tester une palette de couleurs dans la session en cours, cliquez sur le bouton "Appliquer à la session". Pour sauvegarder une palette de couleurs étendues, cliquez sur le bouton Sauvegarde. Le nom de votre fichier de définition de couleurs est ajouté à la liste des palettes de couleurs qui s'affiche lorsque vous sélectionnez l'option de définition de couleurs de base. Cette dernière permet de sélectionner une palette de couleurs à appliquer à une ou plusieurs sessions 3270. Remarque : Le programme de définition de couleurs n'admet pas de noms de fichiers de couleurs étendues de plus de 32 caractères.
+
+Il est possible de modifier une palette de couleurs étendues existante. Pour cela, sélectionnez cette dernière à l'aide de l'option de définition de couleurs de base et appliquez-la à la session. Utilisez ensuite l'option de définition de couleurs étendues pour définir la couleur des éléments. Entrez le nom de la palette de couleurs étendues existante lorsque vous sauvegardez la palette de couleurs.
+   
+Remarque : L'option Etendue n'empêche pas de définir des couleurs d'avant-plan et d'arrière-plan identiques ou très proches. Le texte devient alors illisible. La zone de travail permet de vérifier que toutes les couleurs d'avant-plan sont lisibles.
+
+++++"Application de modifications de définition de couleurs"
+Le bouton Appliquer à la session permet d'appliquer provisoirement les modifications apportées à la définition de couleurs dans la session d'émulation à partir de laquelle a été lancé le programme de définition de couleurs. Vous pouvez alors tester vos modifications. Pour savoir comment sauvegarder vos modifications afin de les utiliser ultérieurement, reportez-vous à la section "Sauvegarde de fichiers de définition de couleurs".
+
+++++"Sauvegarde des fichiers de définition de couleurs"
+Le bouton Sauvegarde permet de sauvegarder les définitions de couleurs que vous avez modifiées en vue d'une utilisation ultérieure. Les modifications sont sauvegardées dans un fichier de définition de couleurs. Lorsque vous sauvegardez une palette de couleurs étendues, le nom de votre fichier de définition de couleurs est ajouté à la liste des palettes de couleurs qui s'affiche lorsque vous sélectionnez l'option de définition de couleurs de base. Cette option permet de sélectionner la manière dont les modifications de couleurs sont sauvegardées (dans un fichier qui sera utilisé par défaut dans toutes vos sessions, ou uniquement pour la session en cours).
+
+L'utilisation de fichiers de définition de couleurs propres à chaque session permet d'utiliser des combinaisons de couleurs différentes dans vos sessions 3270. Ces fichiers sont prioritaires dans la session 3270 à partir de laquelle ils ont été créés (identifiée par son numéro et par son nom).
+
+Le fichier de définition de couleurs par défaut vient en deuxième position au niveau des priorités ; il est utilisé dans toutes les sessions qui n'ont pas de fichier de définition de couleurs spécifique.
+
+Pour savoir comment supprimer un fichier de définition de couleurs, voir la section "Suppression de fichiers de définition de couleurs".
+
+++++"Suppression de fichiers de définition de couleurs"
+Cliquez sur le bouton "Suppression" de la barre de sélection pour supprimer les fichiers de définition de couleurs qui ont été créés. Sélectionnez les fichiers de définition de couleurs que vous souhaitez supprimer, puis cliquez sur le bouton Suppression.

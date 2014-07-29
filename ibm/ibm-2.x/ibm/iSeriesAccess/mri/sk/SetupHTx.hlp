@@ -1,0 +1,378 @@
+////This file is the on-line help for the IBM Emulator Setup Programs. 
+////This help text file will be stored in locale specific ASCII (code page 819 for Latin1 languages). 
+////Help text format:
+//// 1. Standard ASCII text file. Each paragraph is one line of ASCII text.
+//// 2. Comment lines are preceded by four "/" characters. The first "/" character must be in column 1.
+//// 3. This help file contains help text for the 3270 and 5250 emulator setup programs. There are some help text differences. The Network Station help viewer program will display the appropriate help text for the appropriate emulator. A comment line of four "/" characters followed by
+//// 3A. "3270" indicates subsequent data is only displayed in 3270 setup on-line help.
+//// 3B. "5250" indicates subsequent data is only displayed in 5250 setup on-line help.
+//// 3C. "9999" indicates subsequent data is displayed in both 3270 setup and 5250 setup on-line help. A comment line of "9999" is not required at the beginning of the file, this is the assumed initial state.
+//// 4. Exactly one help window title must appear in the help text and is preceded by four "-" characters. The first "-" character must be in column 1. The window title text must appear within double quotes. All text before the window title (this text) is not displayed to the user.
+//// 5. Each topic is preceded by four "+" characters. The first "+" character must be in column 1. The topic text must appear within double quotes. The first topic follows the window title.
+//// 6. Order of topics: The emulator help viewer program automatically orders topics in alphabetical order when displaying the topics. There are many topics in this main emulator help text file; alphabetical order should make it easier for users to find the topic that they are looking for.
+//// 7. Only one space should be used between sentences (otherwise a line starting a new sentence within a paragraph will appear indented when displayed on the IBM Network Station).
+////About topic lengths (preceded by four "+" characters): The maximum characters in any topic should be about 38 characters. Exceeding 38 characters will cause the help viewer to display topics for most of the width of the help viewer window, instead of the main help text. You can abbreviate topic text as necessary.
+
+////If the help text file is being translated, all text below this point should be translated, except for comment lines which indicate specific parameters which should not be translated.
+
+////3252
+---- "Emulator Setup Program Help"
+////5250
+---- "5250 Emulator Setup Program Help"
+////3270
+---- "3270 Emulator Setup Program Help"
+////9999
+++++"Using the Help Viewer"
+This topic explains how to use this help viewer.
+
+¥avý panel okna pomoci obsahuje zoznam tém pomoci. Tieto témy sa dajú rolova» (ak existuje stredná posuvná li¹ta) pomocou my¹i, klávesu Page Up alebo klávesu Page Down (keï je ukazovateµ my¹i v µavom paneli), klávesom Cursor Up (navrchu okna) alebo klávesu Cursor Down (naspodku okna).
+
+Ukázaním na tému pomocou ukazovateµa my¹i a stlaèením primárneho tlaèidla my¹i (zvyèajne µavé tlaèidlo) sa do pravého panelu umiestni opis danej témy.
+
+Opis v pravom paneli mô¾ete rolova» pomocou my¹i, klávesu Page Up, klávesu Page Down, klávesom Cursor Up (navrchu okna) alebo klávesom Cursor Down (naspodku okna).
+
+Tlaèidlá vyhµadávania vám umo¾òujú vyhµada» textový re»azec v texte pomoci. Hµadací re»azec mô¾e obsahova» medzery a nerozli¹uje veµkos» písmen.
+
+Ak chcete znovu zobrazi» témy, ktoré ste u¾ videli, kliknite na tlaèidlá Nasledujúca téma a Predo¹lá téma.
+
+Ak chcete vytlaèi» zobrazenú tému pomoci alebo v¹etky témy pomoci, kliknite na tlaèidlo Vytlaèi» (pred vytlaèením textu pomoci u¾ musí by» nakonfigurovaná tlaèiareò).
+
+Ak chcete odstráni» okno s pomocou, kliknite na tlaèidlo Ukonèi».
+
+Ak je rozlí¹enie vá¹ho monitora 1024x768 alebo vy¹¹ie, tlaèidlo Písma vám umo¾òuje zmeni» veµkos» písma poèas prezerania pomoci.
+++++"Prehµad programom Nastavovanie"
+////MAI Used by help viewer to find this topic.
+Program Nastavovanie emulátora sa pou¾íva na nastavovanie a spustenie vá¹ho emulátora IBM. Hlavné okno obsahuje dve oblasti: ponuková li¹ta a zoznam nakonfigurovaných pripojení alebo zoznamy pod ním. Ponuková li¹ta obsahuje ¹tyri s»ahovacie zoznamy: Pripojenie, Preferencie, Voµby a Pomoc. Zoznam nakonfigurovaných pripojení obsahuje pripojenia, ktoré boli nakonfigurované (nie pripojenia, ktoré sú aktívne). Ak existujú 2 zoznamy pripojení, prvý zoznam je zoznam 'U¾ívateµské pripojenia' a druhý zoznam je zoznam 'Predvolené pripojenia'. Ak neexistujú ¾iadne predvolené pripojenia, zoznam 'Predvolené pripojenia' sa nezobrazí.
+
+S»ahovaciu ponuku Pripojenie pou¾ite na vytváranie, úpravu, prehµadávanie, kopírovanie a odstraòovanie konfigurácií pripojenia emulátora. S»ahovaciu ponuku Pripojenie tie¾ pou¾ite na pripojenie pomocou konkrétnej konfigurácie pripojenia. Operácie úprav, prehµadania, kopírovania, pripojenia a odstránenia sa týkajú aktuálne vybratého pripojenia v zozname pripojení pod ponukovou li¹tou. Ak neexistujú ¾iadne konfigurácie pripojení alebo nie je ¾iadna vybratá, k dispozícii sú operácie Nová a Ukonèi» pripojenie. Ak je v zozname 'Predvolené pripojenia' vybraté pripojenie, nie sú dostupné operácie Upravi» a Odstráni» pripojenie. Na ukonèenie programu Nastavovanie pou¾ite voµbu Ukonèi».
+
+S»ahovaciu ponuku Preferencie pou¾ite na konfiguráciu preferencií pre va¹e emulátory. Preferencie sa týkajú v¹etkých pripojení emulátorov a niekedy mô¾u nahradi» konfiguraèné voµby jednotlivých pripojení. Preferencie nadobudnú úèinnos» po zastavení a opätovnom spustení V©ETKÝCH relácií emulátora.
+
+S»ahovaciu ponuku Voµby pou¾ite na zmenu èinnosti samotného programu Nastavovanie. Túto ponuku pou¾ite na príklad na pridanie hesla programu Nastavovanie.
+
+S»ahovaciu ponuku Pomoc po u¾ite na získanie informácií o programe Nastavovanie emulátora, na zobrazenie pomoci k programu Nastavovanie emulátora alebo na zobrazenie pomoci pre samotný emulátor.
+++++"Heslo programu Nastavovanie"
+////PAS Used by help viewer to find this topic.
+Panel Zmeni» heslo sa pou¾íva na vytvorenie, zmenu alebo odstránenie hesla programu Nastavovanie. Ak sa chcete dosta» na tento panel, vyberte Heslo zo s»ahovacej ponuky Voµby.
+
+Ak chcete zmeni» alebo odstráni» heslo, musíte najprv zada» aktuálne heslo.
+
+Ak chcete vytvori» alebo zmeni» heslo, nové heslo musíte zada» dvakrát: prvýkrát do poµa "Nové heslo" a potom do poµa "Potvrdi» nové heslo". Nezabudnite, ¾e heslá rozli¹ujú veµkos» písmen, preto skontrolujte, ¾e Caps Lock je v správnom stave.
+
+Ak chcete odstráni» heslo, zmeòte heslo na prázdne (niè nezadajte do poµa "Nové heslo" ani "Potvrdi» nové heslo").
+////3270
+++++"Pripojenie emulátora 3270"
+////3CN Pou¾ívaný prehliadaèom pomoci na vyhµadanie tejto témy.
+Panel pripojenia emulátora 3270 sa pou¾íva na vytváranie, úpravy alebo vyhµadávanie konfigurácií pripojení emulátora 3270. Ak sa chcete dosta» na tento panel, vyberte Nové, Upravi» alebo Prehµada» zo s»ahovacej ponuky Pripojenie.
+
+Opis pripojenia:
+
+Toto je názov alebo opis konfigurácie pripojenia emulátora 3270. Do tohto poµa mô¾ete zada» èokoµvek, ale zvyèajne je vhodné zada» nieèo, èo identifikuje cieµový systém alebo úèel tohto pripojenia. Táto konfigurácia sa pou¾íva len v tomto programe Nastavovanie na identifikovanie konfigurácie pripojenia v nakonfigurovanom zozname pripojení. Nepou¾íva sa v samotnom emulátore.
+
+Názov hostiteµa S/390 alebo adresa IP:
+
+Toto je voliteµné pole. Ak ostane prázdne, pri spustení emulátora 3270 sa zobrazí dialógové okno po¾adujúce názov hostiteµa alebo (èíselnú) adresu IP.
+
+Pre toto pripojenie emulátora je mo¾né zada» konfiguráciu roz¹íreného pripojenia emulátora 3270. Spravte to stlaèením tlaèidla Roz¹írené pripojenie 3270... z panelu Pripojenie emulátora 3270.
+
+Veµa preferencií emulátora 3270 je globálnych (tieto preferencie sa týkajú v¹etkých relácií emulátora 3270); napríklad povolenie alebo zakázanie premapovania klávesnice emulátora. Zadajte globálne preferencie pomocou s»ahovacej ponuky Globálne preferencie 3270... z panelu Pripojenia emulátora 3270.
+++++" - Roz¹írená konfigurácia"
+////3AC Used by help viewer to find this topic.
+Parametre Roz¹íreného pripojenia emulátora 3270:
+
+Nadpis relácie:
+
+Táto textová hodnota sa zobrazí v nadpise relácie emulátora. Predvolený textový nadpis je "3270". Táto hodnota je voliteµná.
+
+Veµkos» obrazovky:
+
+Táto voµba nastaví veµkos» (poèet riadkov a ståpcov), ktoré má pou¾íva» va¹a relácia 3270. Poznámka: Pre podporu 27 riadkov na 132 ståpcov je zvyèajne vy¾adované rozlí¹enie monitora 1024x768 alebo väè¹ie. Pre podporu 43 riadkov na 80 ståpcov je vy¾adované rozlí¹enie monitora 800x600 alebo väè¹ie. Mo¾né hodnoty sú: 24 na 80, 32 na 80, 43 na 80 a 27 na 132. Predvolená hodnota je 32 na 80.
+
+Grafika:
+
+Voµba grafika vám umo¾òuje povoli» alebo zakáza» kompatibilitu relácie 3270 na zobrazovanie grafiky. Grafika je dostupná len pre veµkos» obrazovky 32 na 80. Mo¾né hodnoty sú: Povolené alebo Zakázané.
+
+TN3270E:
+
+Mo¾né hodnoty sú: Povolené alebo Zakázané. Predvolená hodnota je Povolené. Výber Povolené spôsobí, ¾e emulátor 3270 dohodne reláciu TN3270E (roz¹írené Telnet 3270) so serverom, alebo ak sa nedá dohodnú» TN3270E, pou¾itie ¹tandardnej relácie 3270. Výber Zakázané nedovolí relácii TN3270E vytvori» pripojenie; pou¾ije sa ¹tandardná relácia 3270.
+
+Port Telnet:
+
+Táto voµba urèuje, ktorý port TCP/IP v System/390 sa pou¾íva na vytvorenie relácie 3270. Predvolené nastavenie je 23. Iné hodnoty sú v rozsahu od 1 do 65535. Ak chcete pou¾i» èíslo portu iné ako predvolené, mali by ste kontaktova» administrátora systému vzdialeného System/390 alebo serveru Telnet, ktorý vám poskytne správne èíslo portu pre daný poèítaè.
+
+Veµkos» okna a umiestnenie v pixeloch (voliteµné):
+
+Táto voµba vám umo¾òuje urèi» úvodnú veµkos» a umiestnenie okna 3270. Nasledujúce polia definujú veµkos» okna (¹írku a vý¹ku) a pozíciu okna na monitore (vodorovné a zvislé posunutie a roh pre posunutie):
+
+Celá obrazovka:
+Zaèiarknutie tohto políèka dovoµuje oknu 3270 pou¾i» celú obrazovku.
+
+©írka:
+Táto hodnota urèuje vodorovnú ¹írku okna (v pixeloch).
+
+Vý¹ka:
+Táto hodnota urèuje zvislú vý¹ku okna (v pixeloch).
+
+Vodorovné posunutie:
+Táto hodnota urèuje vodorovnú vzdialenos» od rohu urèeného ako hodnota Roh pre posunutie (napríklad ¥avý horný) (v pixeloch). 
+
+Zvislé posunutie:
+Táto hodnota urèuje zvislú vzdialenos» od rohu urèeného ako hodnota Roh pre posunutie (napríklad ¥avý horný) (v pixeloch).
+
+Roh pre posunutie:
+Táto hodnota urèuje, od ktorého rohu (µavý horný, pravý horný, µavý dolný alebo pravý dolný) sa poèítajú hodnoty pre polia Vodorovné a Zvislé posunutie.
+
+ID u¾ívateµa emulátora:
+Táto hodnota sa pou¾íva v emulátore pre ID u¾ívateµa, ak to je potrebné. Napríklad, ak sa pou¾íva automatické prihlásenie do emulátora, táto hodnota sa pou¾ije pre ID u¾ívateµa.
+
+Heslo emulátora:
+Táto hodnota sa pou¾íva v emulátore pre heslo, ak to je potrebné. Napríklad, ak sa pou¾íva automatické prihlásenie do emulátora, táto hodnota sa pou¾ije pre heslo. Heslo sa ukladá v kódovanom tvare.
+
+Iné parametre:
+Mô¾ete nakonfigurova» ïal¹ie parametre pre emulátor 3270. Opisy parametrov a ich hodnoty nájdete v online pomoci k emulátoru 3270. Iné parametre rozli¹ujú veµkos» písmen.
+
+++++"Preferencie 3270"
+////3PR Used by help viewer to find this topic.
+Preferencie 3270 dovoµujú sprístupòova» alebo zakazova» voµby emulátora. Nastavenie preferencií sa týka v¹etkých relácií 3270. Preferencie nadobudnú úèinnos» len po zatvorení v¹etkých relácií emulátora 3270 a ich opätovnom spustení.
+
+Schopnos» premapovania klávesov:
+
+Premapovanie klávesnice vám dovoµuje premapova» klávesnice v emulátore 3270. Premapovanie klávesnice je dostupné cez s»ahovaciu ponuku Voµby emulátora. "Zakázané" znamená, ¾e u¾ívateµ vidí voµbu Premapovanie klávesnice, ale nemô¾e ju vybra» (je sivá). "Skryté" znamená, ¾e u¾ívateµ nebude vidie» voµbu Premapovanie klávesnice v s»ahovacej ponuke Voµby. Premapovanie klávesnice je vysvetlené v online pomoci k emulátoru 3270.
+
+Schopnos» klávesnice:
+
+Schopnos» klávesnice vám umo¾òuje vytvára» a pou¾íva» prispôsobené tlaèidlá klávesníc. "Áno" vám dovoµuje prispôsobova» tlaèidlá klávesníc. "Len pou¾íva» klávesnice" znamená, ¾e mô¾ete len pou¾íva» predtým vytvorené klávesnice. Prispôsobenie pomocnej klávesnice je dostupné cez s»ahovaciu ponuku Voµby emulátora. Prispôsobenie pomocnej klávesnice je vysvetlené v online pomoci k emulátoru.
+
+Schopnos» zaznamenáva»/prehráva»:
+
+Zaznamena»/prehra» vám umo¾òuje zaznamena» a neskôr prehra» zaznamenané postupnosti klávesov v emulátore 3270. Zaznamenávanie a prehrávanie je dostupné cez s»ahovaciu ponuku Voµby emulátora. "Len prehra»" znamená, ¾e mô¾ete pou¾i» len predtým vytvorené prehrávacie súbory. Zaznamenávanie a prehrávanie
+je vysvetlené v online pomoci k emulátoru.
+
+Schopnos» prispôsobenia farieb:
+
+Prispôsobenie farieb vám dovoµuje upravi» farby vo va¹ich reláciách 3270. Mapovanie farieb je dostupné cez s»ahovaciu ponuku Voµby emulátora. "Základné" mapovanie farieb vám umo¾òuje vybra» si z farebných schém 3270. "Roz¹írené" vám dovoµuje vytvori» va¹e vlastné farebné schémy 3270. Mapovanie farieb je vysvetlené v online pomoci emulátora 3270.
+
+Kláves pre funkciu Enter:
+
+Voµba Kláves pre Enter urèuje kláves, ktorý chcete pou¾íva» ako kláves Enter. Predvolene je nastavený kláves Enter. 
+
+Súbor pracovnej plochy:
+
+Táto voµba urèuje, èi emulátor 3270 ukladá a pou¾íva posledné umiestnenie a veµkos» písma okien relácií 3270. Ak je vybraté "Áno" alebo "Áno, ale len èítanie", emulátor 3270 pou¾ije ulo¾ené umiestnenie a veµkos» písma pri spustení emulátora 3270. Ak je vybraté "Áno", posledné umiestnenie a veµkos» písma sa ulo¾í pri ukonèení emulátora 3270. Ak je vybraté "Nie" pre súbor pracovnej plochy, emulátor 3270 nepou¾ije ani neulo¾í posledné umiestnenie a veµkos» písma. Poznámka: Ak je úvodné umiestnenie okna a veµkos» nastavené v konfigurácii pripojenia, emulátor 3270 nepou¾ije ani neulo¾í posledné umiestnenie a veµkos» písma - bez ohµadu na toto nastavenie.
+
+Ponuka Príkaz:
+
+Voµba ponuky Príkaz vám dovoµuje povoli» alebo zakáza» voµbu Príkaz ponukovej li¹ty 3270. "Áno" znamená, ¾e voµba Príkaz je dostupná. Ak je zakázaná voµba Príkaz, nebudete ma» prístup k novým reláciám 3270 ani nebudete môc» ukonèi» reláciu 3270 pomocou voµby Príkaz.
+
+Ponuka Upravi»:
+
+Ponuka Upravi» vám dovoµuje povoli» alebo zakáza» voµbu Upravi» v ponukovej li¹te 3270 (kopírova», vystrihova» a prilepova»).
+
+Ponuka Voµba:
+
+Ponuka Voµba vám dovoµuje povoli» alebo zakáza» výber Voµba ponukovej li¹ty 3270. Ak je zakázaný výber Voµba, nemô¾ete pristupova» k výberu písiem, Prispôsobeniu pomocnej klávesnice, výberom zaznamenávania/prehrávania, Rôznym preferenciám (napríklad výber ¹týlu kurzora), Mapovaniu farieb ani k Premapovaniu klávesnice.
+
+Ponuka Tlaèi».
+
+Voµba Tlaèi» vám umo¾òuje povoli» alebo zakáza» výber Tlaèi» ponukovej li¹ty 3270 (na tlaè obrazovky 3270). "®iadna ponuka, len tlaè z klávesnice" znamená, ¾e mô¾ete pou¾i» postupnos» klávesov na tlaè obrazovky 3270. Rôzne preferencie a premapovanie klávesnice mô¾e urèova» postupnos» klávesu pre tlaè. Poznámka: Pou¾itie tlaèe obrazovky 3270 je podmienené nakonfigurovanou tlaèiaròou.
+
+Ponuka Pomoc:
+
+Voµba Pomoc vám dovoµuje povoli» alebo zakáza» výber Pomoc ponukovej li¹ty 3270 (zobrazí online pomoc emulátora 3270).
+
+Rôzne preferencie:
+
+Voµba Rôzne preferencie vám dovoµuje povoli» alebo zakáza» Rôzne preferencie 3270. Rôzne preferencie sú dostupné cez s»ahovaciu ponuku Voµba emulátora. Rôzne preferencie urèujú (pre istú oblas») vzhµad obrazovky va¹ej relácie 3270. Napríklad mô¾ete vybra» ¹týl kurzora (podèiarknutie alebo blok), blikanie kurzora (alebo neblikanie) a pou¾itie riadkov pravidiel.
+
+Zoznam ponuky Písmo:
+
+Voµba zoznamu ponuky Písmo vám dovoµuje povoli» alebo zakáza» voµbu Písma v s»ahovacej ponuke Voµba emulátora 3270. Táto voµba tie¾ urèuje, èi mô¾e u¾ívateµ zmeni» veµkos» alebo presunú» okno emulátora 3270.
+
+Nové okno relácie:
+
+Voµba Nové okno relácie vám dovoµuje povoli» alebo zakáza» spustenie iného emulátora 3270 v inom hostiteµovi S/390. Nové okno relácie emulátora je dostupné cez s»ahovaciu ponuku Príkaz emulátora (ak je povolený výber ponuky Príkaz).
+
+ID u¾ívateµa emulátora:
+Táto hodnota sa pou¾íva v emulátore pre ID u¾ívateµa, ak to je potrebné. Napríklad, ak sa pou¾íva automatické prihlásenie do emulátora, táto hodnota sa pou¾ije pre ID u¾ívateµa.
+
+Heslo emulátora:
+Táto hodnota sa pou¾íva v emulátore pre heslo, ak to je potrebné. Napríklad, ak sa pou¾íva automatické prihlásenie do emulátora, táto hodnota sa pou¾ije pre heslo. Heslo sa ukladá v kódovanom tvare.
+
+Iné parametre:
+
+Pre emulátor 3270 mô¾ete nakonfigurova» iné parametre. Opisy parametrov a ich hodnoty nájdete v online pomoci emulátora 3270. Iné parametre rozli¹ujú veµkos» písmen.
+////5250
+++++"Pripojenie emulátora 5250"
+////5CN Used by help viewer to find this topic.
+Panel pripojenia emulátora 5250 sa pou¾íva na vytváranie alebo úpravy konfigurácie pripojenia emulátora 5250. Ak sa chcete dosta» na tento panel, vyberte Nové alebo Upravi» zo s»ahovacej ponuky Pripojenie.
+
+Opis pripojenia:
+
+Toto je názov alebo opis konfigurácie pripojenia emulátora 5250. Do tohto poµa mô¾ete zada» èokoµvek, ale zvyèajne je vhodné zada» nieèo, èo identifikuje cieµový systém alebo úèel tohto pripojenia. Táto konfigurácia sa pou¾íva len v tomto programe Nastavovanie na identifikovanie konfigurácie pripojenia v nakonfigurovanom zozname pripojení. Nepou¾íva sa v samotnom emulátore.
+
+Názov hostiteµa i5/OS alebo IP adresa...:
+
+Toto je voliteµné pole. Ak ostane prázdne, pri spustení emulátora 3270 sa zobrazí dialógové okno po¾adujúce názov hostiteµa alebo (èíselnú) adresu IP.
+
+Pre toto pripojenie emulátora je mo¾né zada» konfiguráciu roz¹íreného pripojenia emulátora 5250. Spravte to stlaèením tlaèidla Roz¹írené pripojenie 5250... z panelu Pripojenie emulátora 5250.
+
+Veµa preferencií emulátora 5250 je globálnych (tieto preferencie sa týkajú v¹etkých relácií emulátora 5250); napríklad povolenie alebo zakázanie premapovania klávesnice emulátora. Zadajte globálne preferencie pomocou s»ahovacej ponuky Globálne preferencie 5250... z panelu Pripojenia emulátora 5250.
+++++" - Roz¹írená konfigurácia"
+////5AC Used by help viewer to find this topic.
+Parametre Roz¹íreného pripojenia emulátora 5250:
+
+Nadpis relácie:
+
+Táto textová hodnota sa zobrazí v nadpise relácie. Predvolený textový nadpis je "5250".  Táto hodnota je voliteµná.
+
+Názov obrazovky:
+
+Táto hodnota urèuje názov obrazovky 5250. Táto hodnota je voliteµná. Pozrite si tému Názov obrazovky v online pomoci k emulátoru 5250, kde nájdete viac informácií. 
+
+Veµkos» okna a umiestnenie v pixeloch (voliteµné):
+
+Táto voµba vám umo¾òuje urèi» úvodnú veµkos» a umiestnenie okna 5250. Nasledujúce polia definujú veµkos» okna (¹írku a vý¹ku) a pozíciu okna na monitore (vodorovné a zvislé posunutie a roh pre posunutie): 
+
+Celá obrazovka:
+Zaèiarknutie tohto políèka dovoµuje oknu 5250 pou¾i» celú obrazovku. 
+
+©írka:
+Táto hodnota urèuje vodorovnú ¹írku okna (v pixeloch).
+
+Vý¹ka:
+Táto hodnota urèuje zvislú vý¹ku okna (v pixeloch).
+
+Vodorovné posunutie:
+Táto hodnota urèuje vodorovnú vzdialenos» od rohu urèeného ako hodnota Roh pre posunutie (napríklad ¥avý horný) (v pixeloch).
+
+Zvislé posunutie:
+Táto hodnota urèuje zvislú vzdialenos» od rohu urèeného ako hodnota Roh pre posunutie (napríklad ¥avý horný) (v pixeloch).
+
+Roh pre posunutie:
+Táto hodnota urèuje, od ktorého rohu (µavý horný, pravý horný, µavý dolný alebo pravý dolný) sa poèítajú hodnoty pre polia Vodorovné a Zvislé posunutie.
+
+ID u¾ívateµa emulátora:
+Táto hodnota sa pou¾íva v emulátore pre ID u¾ívateµa, ak to je potrebné. Napríklad, ak sa pou¾íva automatické prihlásenie do emulátora, táto hodnota sa pou¾ije pre ID u¾ívateµa.
+
+Heslo emulátora:
+Táto hodnota sa pou¾íva v emulátore pre heslo, ak to je potrebné. Napríklad, ak sa pou¾íva automatické prihlásenie do emulátora, táto hodnota sa pou¾ije pre heslo. Heslo sa ukladá v kódovanom tvare.
+
+Port pre telnet:
+©pecifikujte port pre telnet, ktorý je nastavený na port pre telnet vá¹ho servera. Medzery znamenajú predvolený port pre telnet, 23.
+
+Názov súboru mapovania klávesov:
+Zadajte názov súboru mapovania klávesov spolu s celou cestou k danému súboru.
+
+Názov súboru klávesnice:
+Zadajte názov súboru klávesnice spolu s celou cestou k danému súboru.
+
+Názov súboru SSL:
+Zadajte názov súboru SSL spolu s celou cestou k danému súboru.
+
+Iné parametre:
+Mô¾ete nakonfigurova» ïal¹ie parametre pre emulátor 5250. Opisy parametrov a ich hodnoty nájdete v online pomoci k emulátoru 5250. Iné parametre rozli¹ujú veµkos» písmen.
+
+++++"Preferencie 5250"
+////5PR Used by help viewer to find this topic.
+Preferencie 5250 dovoµujú sprístupòova» alebo zakazova» voµby emulátora. Nastavenie preferencií sa týka v¹etkých relácií 5250. Preferencie nadobudnú úèinnos» len po zatvorení v¹etkých relácií emulátora 5250 a ich opätovnom spustení.
+
+Schopnos» premapovania klávesov:
+
+Premapovanie klávesnice vám dovoµuje premapova» klávesnice v emulátore 5250. Premapovanie klávesnice je dostupné cez s»ahovaciu ponuku Voµby emulátora. "Zakázané" znamená, ¾e u¾ívateµ vidí voµbu Premapovanie klávesnice, ale nemô¾e ju vybra» (je sivá). "Skryté" znamená, ¾e u¾ívateµ nebude vidie» voµbu Premapovanie klávesnice v s»ahovacej ponuke Voµby. Premapovanie klávesnice je vysvetlené v online pomoci k emulátoru 5250.
+
+Schopnos» klávesnice:
+
+Schopnos» klávesnice vám umo¾òuje vytvára» a pou¾íva» prispôsobené tlaèidlá klávesníc. "Áno" vám dovoµuje prispôsobova» tlaèidlá klávesníc. "Len pou¾íva» klávesnice" znamená, ¾e mô¾ete len pou¾íva» predtým vytvorené klávesnice. Prispôsobenie pomocnej klávesnice je dostupné cez s»ahovaciu ponuku Voµby emulátora. Prispôsobenie pomocnej klávesnice je vysvetlené v online pomoci k emulátoru 5250.
+
+Schopnos» zaznamenáva»/prehráva»:
+
+Zaznamena»/prehra» vám umo¾òuje zaznamena» a neskôr prehra» zaznamenané postupnosti klávesov v emulátore 5250. Zaznamenávanie a prehrávanie je dostupné cez s»ahovaciu ponuku Voµby emulátora. "Len prehra»" znamená, ¾e mô¾ete pou¾i» len predtým vytvorené prehrávacie súbory. Zaznamenávanie a Prehrávanie
+je vysvetlené v online pomoci k emulátoru 5250.
+
+Schopnos» prispôsobenia farieb:
+
+Prispôsobenie farieb vám dovoµuje upravi» farby vo va¹ich reláciách 5250. Mapovanie farieb je dostupné cez s»ahovaciu ponuku Voµby emulátora. "Základné" mapovanie farieb vám umo¾òuje vybra» si z farebných schém 5250. "Roz¹írené" vám dovoµuje vytvori» va¹e vlastné farebné schémy 5250. Mapovanie farieb je vysvetlené v online pomoci emulátora 5250.
+
+Parametre arabèiny:
+Táto voµba má chráni» znak LamAlef na Implicitnom súbore v systémoch iSeries. Keï je táto voµba zapnutá, ka¾dý znak LamAlef vyhradí priestor na konci poµa Arabèina. ©tandardne
+je vypnutá. 
+
+132 ståpcov:
+
+Ak to je povolené, je k dispozícii veµkos» obrazovky 27 riadkov na 132 ståpcov. Väè¹ina obrazoviek i5/OS má 24 riadkov s 80 ståpcami. Ak emulátor 5250 podporuje 27 riadkov so 132 ståpcami, niektoré obrazovky i5/OS pou¾ívajú túto veµkos» obrazovky. Vo v¹eobecnosti, na zobrazenie 27 riadkov na 132 ståpcov sa vy¾aduje rozlí¹enie 1024x768 alebo vy¹¹ie.
+
+Oddeµovaèe ståpcov:
+
+Voµba Oddeµovaèe ståpcov povoµuje alebo zakazuje zobrazovanie oddeµovaèov ståpcov v niektorých typoch vstupných polí 5250. Predvolene je povolená a oddeµovacie znaky sa nezobrazia vo vstupných poliach 5250.
+
+Súbor pracovnej plochy:
+
+Táto voµba urèuje, èi emulátor 5250 ukladá a pou¾íva posledné umiestnenie a veµkos» písma okien relácií 5250. Ak je vybraté "Áno" alebo "Áno, ale len èítanie", emulátor 5250 pou¾ije ulo¾ené umiestnenie a veµkos» písma pri spustení emulátora 5250. Ak je vybraté "Áno", posledné umiestnenie a veµkos» písma sa ulo¾í pri ukonèení emulátora 5250. Ak je vybraté "Nie" pre súbor pracovnej plochy, emulátor 5250 nepou¾ije ani neulo¾í posledné umiestnenie a veµkos» písma. Poznámka: Ak je úvodné umiestnenie okna a veµkos» nastavené v konfigurácii pripojenia, emulátor 5250 nepou¾ije ani neulo¾í posledné umiestnenie a veµkos» písma - bez ohµadu na toto nastavenie.
+
+Ponuka Príkaz:
+
+Voµba ponuky Príkaz vám dovoµuje povoli» alebo zakáza» voµbu Príkaz ponukovej li¹ty 5250. "Áno" znamená, ¾e voµba Príkaz je dostupná. Ak je zakázaná voµba Príkaz, nebudete ma» prístup k novým reláciám 5250 ani nebudete môc» ukonèi» reláciu 5250 pomocou voµby Príkaz.
+
+Ponuka Upravi»:
+
+Ponuka Upravi» vám dovoµuje povoli» alebo zakáza» voµbu Upravi» v ponukovej li¹te 5250 (kopírova», vystrihova» a prilepova»).
+
+Ponuka Voµba:
+
+Ponuka Voµba vám dovoµuje povoli» alebo zakáza» výber Voµba ponukovej li¹ty 5250. Ak je zakázaný výber Voµba, nemô¾ete pristupova» k výberu písiem, Prispôsobeniu pomocnej klávesnice, výberom zaznamenávania/prehrávania, Rôznym preferenciám (napríklad výber ¹týlu kurzora), Mapovaniu farieb ani k Premapovaniu klávesnice.
+
+Ponuka Tlaèi».
+
+Voµba Tlaèi» vám umo¾òuje povoli» alebo zakáza» výber Tlaèi» ponukovej li¹ty 5250 (na tlaè obrazovky 5250). "®iadna ponuka, len tlaè z klávesnice" znamená, ¾e mô¾ete pou¾i» postupnos» klávesov na tlaè obrazovky 5250. Rôzne preferencie a premapovanie klávesnice mô¾e urèova» postupnos» klávesu pre tlaè. Poznámka: Pou¾itie tlaèe obrazovky 5250 je podmienené nakonfigurovanou tlaèiaròou.
+
+Ponuka Pomoc:
+
+Voµba Pomoc vám dovoµuje povoli» alebo zakáza» výber Pomoc ponukovej li¹ty 5250 (zobrazí online pomoc emulátora 5250).
+
+Ponuka Ovládanie:
+
+Voµba ponuky Ovládanie vám dovoµuje povoli» alebo zakáza» voµbu Ovládanie ponukovej li¹ty 5250. Výber
+klávesu v ponuke Ovládanie vykoná rovnakú funkciu ako keby ste stlaèili daný kláves na va¹ej klávesnici.
+
+Rôzne preferencie:
+
+Voµba Rôzne preferencie vám dovoµuje povoli» alebo zakáza» Rôzne preferencie 5250. Rôzne preferencie sú dostupné cez s»ahovaciu ponuku Voµba emulátora. Rôzne preferencie urèujú (pre istú oblas») vzhµad obrazovky va¹ej relácie 5250. Napríklad mô¾ete vybra» ¹týl kurzora (podèiarknutie alebo blok), blikanie kurzora (alebo neblikanie) a pou¾itie riadkov pravidiel.
+
+Zoznam ponuky Písmo:
+
+Voµba zoznamu ponuky Písmo vám dovoµuje povoli» alebo zakáza» voµbu Písma v s»ahovacej ponuke Voµba emulátora 5250. Táto voµba tie¾ urèuje, èi mô¾e u¾ívateµ zmeni» veµkos» alebo presunú» okno emulátora 5250.
+
+Nové okno relácie:
+
+Voµba Nové okno relácie vám umo¾òuje povoli» alebo zakáza» spustenie iného emulátora 5250 pre iného hostiteµa i5/OS. Nové okno relácie emulátora je dostupné cez s»ahovaciu ponuku Príkaz emulátora (ak je povolený výber ponuky Príkaz).
+
+Aktívne miesto prehliadaèa: 
+
+Voµba Aktívne miesto prehliadaèa vám dovoµuje povoli» alebo zakáza» rozpoznanie aktívneho miesta URL a spustenie prehliadaèa.  Keï je táto voµba povolená a u¾ívateµ klikne na platné aktívne miesto URL, príkaz zadaný v systémovej premennej prostredia $BROWSER sa zavolá s URL odovzdaným ako parameter.  Systémová premenná $BROWSER musí by» definovaná plne kvalifikovaným názvom alebo názvom zo systémového $PATH pre prehliadaè, ktorý sa má pou¾i».  Ak sa premenná prostredia $BROWSER nenájde alebo je neplatná, prehliadaè sa nespustí. 
+
+
+ID u¾ívateµa emulátora:
+Táto hodnota sa pou¾íva v emulátore pre ID u¾ívateµa, ak to je potrebné. Napríklad, ak sa pou¾íva automatické prihlásenie do emulátora, táto hodnota sa pou¾ije pre ID u¾ívateµa.
+
+Heslo emulátora:
+Táto hodnota sa pou¾íva v emulátore pre heslo, ak to je potrebné. Napríklad, ak sa pou¾íva automatické prihlásenie do emulátora, táto hodnota sa pou¾ije pre heslo. Heslo sa ukladá v kódovanom tvare.
+
+Iné parametre:
+
+Pre emulátor 5250 mô¾ete nakonfigurova» iné parametre. Opisy parametrov a ich hodnoty nájdete v online pomoci emulátora 5250. Iné parametre rozli¹ujú veµkos» písmen.
+////9999
+++++"Predvolené pripojenia"
+Ak chcete vytvori» alebo upravi» predvolené pripojenia emulátora, spustite program Nastavovanie emulátora a vyberte "Pripojenie--> Nové..." alebo vyberte u¾ definované pripojenie a potom "Pripojenie --> Upravi»...".  Pripojenia sa ukladajú do preferencií emulátora u¾ívateµa do adresára $HOME/.iSeriesAccess/ibm_5250/.  Po ulo¾ení pripojení sa stávajú predvolenými pripojeniami pre daného u¾ívateµa.  
+++++"Predvolené mapy farieb"
+Ak chcete vytvori» alebo upravi» predvolené mapy farieb emulátora, spustite reláciu emulátora z programu Nastavovanie emulátora a vyberte "Voµba -> Mapovanie farieb...".  Nezabudnite, ¾e preferencia emulátora 'Schopnos» prispôsobenia farieb' musí by» 'Povolená' v nástroji Nastavovanie emulátora, aby sa dali upravi» mapy farieb. Mapy farieb, ktoré sú vytvorené alebo upravené sa ulo¾ia do súboru preferencií u¾ívateµa v adresári $HOME/.iSeriesAccess/ibm_5250/.
+++++"Predvolené mapy klávesnice"
+Ak chcete vytvori» alebo upravi» predvolené mapy klávesnice emulátora, spustite reláciu emulátora a vyberte "Voµba -> Premapovanie klávesnice...". Nezabudnite, ¾e preferencia emulátora 'Schopnos» premapovania klávesnice' musí by» 'Povolená' v nástroji Nastavovanie emulátora, aby sa dali upravi» mapy klávesnice. Mapy klávesnice, ktoré sú vytvorené alebo upravené sa ulo¾ia do súboru preferencií u¾ívateµa v adresári $HOME/.iSeriesAccess/ibm_5250/.
+++++"Predvolené klávesnice"
+Ak chcete vytvori» alebo zmeni» predvolené klávesnice emulátora, spustite reláciu emulátora z programu Nastavovanie emulátora a vyberte "Voµba -> Prispôsobi» pomocnú klávesnicu...".  Nezabudnite, ¾e preferencia emulátora 'Schopnos» klávesnice' musí by» 'Áno' v nástroji Nastavovanie emulátora, aby sa dali upravi» klávesnice. Klávesnice, ktoré sú vytvorené alebo upravené v re¾ime uká¾ky sa ulo¾ia do súboru preferencií u¾ívateµa v adresári $HOME/.iSeriesAccess/ibm_5250/.
+++++"Predvolené rôzne preferencie"
+Ak chcete upravi» predvolené Rôzne preferencie emulátora, spustite reláciu emulátora z programu Nastavovanie emulátora a vyberte "Voµba -> Rôzne preferencie...". Nezabudnite, ¾e preferencia emulátora 'Rôzne preferencie' pre pou¾itie schopnosti musí by» nastavená na 'Áno' v nástroji Nastavovanie emulátora, aby sa dali upravi» Rôzne preferencie. Rôzne preferencie, ktoré sú upravené v re¾ime uká¾ky sa ulo¾ia do súboru preferencií u¾ívateµa v adresári $HOME/.iSeriesAccess/ibm_5250/.
+++++"Predvolené prehrávacie súbory"
+Ak chcete vytvori» alebo upravi» predvolené prehrávacie súbory emulátora, spustite reláciu emulátora a vyberte "Voµba -> Zaznamena»...".  Nezabudnite, ¾e preferencia emulátora 'Schopnos» zaznamenávania/prehrávania' musí by» 'Povolená' v nástroji Nastavovanie emulátora, aby sa dali upravi» prehrávacie súbory. Prehrávacie súbory, ktoré sú vytvorené alebo upravené sa ulo¾ia do súboru preferencií u¾ívateµa v adresári $HOME/.iSeriesAccess/ibm_5250/.
+++++"Predvolené preferencie"
+Ak chcete vytvori», zobrazi» alebo upravi» predvolené preferencie emulátora, spustite program Nastavovanie emulátora. Preferencie sa ukladajú do preferencií emulátora u¾ívateµa do adresára $HOME/.iSeriesAccess/ibm_5250/ a stanú sa predvolenými preferenciami pre daného u¾ívateµa.
+//// ENGL1SH_VERS10N 1.5.2.1 DO NOT REMOVE OR CHANGE THIS LINE
