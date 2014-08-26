@@ -1,3 +1,15 @@
+tcos-scripts (2.0-35) UNRELEASED; urgency=low
+
+  [ Joern Frenzel ]
+  * NEW: added tcos-system-analyse.sh
+      - nice script to discover systems key data
+
+  [ Steffen Hoenig ]
+  * FIX: interpret the ntp information (Location settings) correctl
+    (/etc/ntp.conf)
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Thu, 31 Jul 2014 16:46:43 +0200
+
 tcos-scripts (2.0-34) unstable; urgency=low
 
   * FIX: https://github.com/openthinclient/openthinclient-os-core/issues/14

@@ -1,4 +1,4 @@
 73d5668e28cb104bb5a927588fed9984  package-rootfs/lib/i386-linux-gnu/security/pam_sso-tcos.so
 d82c89026a47f90302c345aa5f761d3d  package-rootfs/usr/local/bin/sso-tcos-auth
 0c04ce565fa9e4ff49d3d5b07f06b15c  package-rootfs/usr/local/bin/sso-tcos-auth-arg
-af630a3c5cf512043e5af35c59834bb9  sfs/package/sso-tcos.sfs
+c34dbea7754fd794a05f5afc2180d3a0  sfs/package/sso-tcos.sfs

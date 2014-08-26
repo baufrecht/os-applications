@@ -75,8 +75,7 @@ domain = l.ENTRY.get('Application.Account.Domain', '')
 if domain != '':
 	parameter += ' -d ' + domain
 
-"""
-sso_type = l.ENTRY.get('General.ActivateSSO', 'No')
+sso_type = l.ENTRY.get('Application.Account.ActivateSSO', 'No')
 tcos_username = os.getenv('USER')
 # FIXME: check for autologin instead of USER==tcos
 if sso_type == 'Yes' and tcos_username != "tcos" and tcos_username != None:
@@ -84,24 +83,24 @@ if sso_type == 'Yes' and tcos_username != "tcos" and tcos_username != None:
 	if tcostoken != None:
 		parameter += ' -u ' + tcos_username
 		try:
-			if os.path.isfile('/opt/sso-tcos/bin/sso-tcos-auth'):
-				auth = os.popen('/opt/sso-tcos/bin/sso-tcos-auth')
+			if os.path.isfile('/usr/local/bin/sso-tcos-auth'):
+				auth = os.popen('/usr/local/bin/sso-tcos-auth')
 				password = auth.read()
 				auth.close()
 				if password != "":
 					parameter += ' -p ' + u.shellQuote(password)
 		except:
 			pass
-else: """
-username = l.ENTRY.get('Application.Account.User', '')
-if username != '':
-	parameter += ' -u ' + username
-elif os.getenv('USER') == "tcos":
-	parameter += ' -u ""'
+else: 
+	username = l.ENTRY.get('Application.Account.User', '')
+	if username != '':
+		parameter += ' -u ' + username
+	elif os.getenv('USER') == "tcos":
+		parameter += ' -u ""'
 
-password = l.ENTRY.get('Application.Account.Password', '')
-if password != '':
-	parameter += ' -p ' + u.shellQuote(password)
+	password = l.ENTRY.get('Application.Account.Password', '')
+	if password != '':
+		parameter += ' -p ' + u.shellQuote(password)
 
 # own color map if screen palette based
 if u.getScreenDepth() == '8':

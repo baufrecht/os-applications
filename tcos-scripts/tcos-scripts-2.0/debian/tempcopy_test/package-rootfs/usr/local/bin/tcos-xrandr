@@ -139,7 +139,7 @@ try: subprocess.check_call('xrandr ' + xrandrAddModeCmd, shell=True)
 except subprocess.CalledProcessError :
     print >>sys.stderr, "WARNING: xrandrAddModeCmd failed, trying xrandNewMode." 
     syslog.syslog("WARNING: xrandrAddModeCmd failed, trying xrandNewMode.")
-    # try to create the Mode first
+    # If addmode fails, try to create it first.
     try:
         print "New mode: " +  xrandrNewModeCmd
         subprocess.check_call(xrandrNewModeCmd, shell=True)
@@ -162,5 +162,4 @@ except subprocess.CalledProcessError :
 # example
 # xrandr --addmode HDMI1 1920x1080
 # xrandr --output HDMI1 --primary --mode 1920x1080 --pos 1280x0 --rotate normal --output LVDS1 --off --output DP1 --off --output VGA1 --mode 1280x1024 --pos 0x56 --rotate normal
-
 

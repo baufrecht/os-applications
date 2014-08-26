@@ -76,14 +76,27 @@ def writeEnvironment(filename="/etc/environment"):
 
     u.writeDictionaryToFile(entry_dict, filename)
 
-def writeNtpdate(filename="/etc/default/ntpdate"):
-    ntpservers = locations_entry.get("Time.ntpservers", "pool.ntp.org")
-    ntpoptions = "-u"
+def write_ntpd_conf(filename="/etc/ntp.conf"):
+    boiler = \
+"""
+driftfile /tmp/ntp.drift
+statistics loopstats peerstats clockstats
+filegen loopstats file loopstats type day enable
+filegen peerstats file peerstats type day enable
+filegen clockstats file clockstats type day enable
+restrict -4 default kod notrap nomodify nopeer noquery
+restrict -6 default kod notrap nomodify nopeer noquery
+restrict 127.0.0.1
+restrict ::1
 
-    entry_dict = {"NTPSERVERS" : ntpservers,
-                  "NTPOPTIONS" : ntpoptions}
-
-    u.writeDictionaryToFile(entry_dict, filename)
+"""
+    ntpservers = locations_entry.get("Time.ntpservers", "pool.ntp.org").split() # get a list of ntpservers
+    # build the custom server line
+    appendix=""
+    for server in ntpservers:
+            appendix += ' '.join(['server', server, '\n'])
+    with open(filename, 'w') as fobj:
+            fobj.write(boiler + appendix)
 
 def writeKeyboard(filename="/etc/default/keyboard"):
     types = []
@@ -128,6 +141,6 @@ if __name__ == "__main__":
     startSyslog_ng()
     write_timezones()
     writeEnvironment("/etc/environment")
-    writeNtpdate("/etc/default/ntpdate")
+    write_ntpd_conf()
     writeKeyboard()
     write_hostname()

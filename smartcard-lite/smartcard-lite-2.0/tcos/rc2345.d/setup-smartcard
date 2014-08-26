@@ -1,0 +1,47 @@
+#!/usr/bin/python
+
+import subprocess
+
+import pytcos.tcos as tcos
+import xml.etree.ElementTree as ET
+import xml.dom.minidom as minidom
+
+from subprocess import check_output as output
+
+s = tcos.System()
+l = tcos.Ldap()
+
+mac = s.getMac()
+ldap_url = s.getLdapUrl()
+client_dn = l.getClientDn(mac, ldap_url)
+devices_dn = l.getDevicesDn(client_dn, ldap_url)
+
+dev_port = 0
+
+
+def kill_daemon(path):
+    proc = subprocess.Popen(["pgrep", "path"], stdout=subprocess.PIPE)
+    out, err = proc.communicate()
+    for pid in out.splitlines():
+        os.kill(pid, 9)
+
+def start_daemon(path):
+    # end it ...
+    proc = path.rsplit('/')[-1] # basename
+    kill_daemon(proc)
+
+    # ... before we will start it again
+    try:
+        subprocess.check_call([path])
+    except:
+        print('Error: coudn\'t start ' + path)
+
+# check if there is a smartcard reader AT ALL
+
+
+for d in devices_dn:
+    if l.getGroupOfUniqueNamesInfo(d, ldap_url)["schema"] == "smartcard-lite":
+        start_daemon('/usr/sbin/pcscd')
+    else:
+        # not a smartcard reader
+        pass

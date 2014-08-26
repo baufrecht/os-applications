@@ -453,7 +453,7 @@
         <group name="Account">
             <label lang="de" value="Anmeldung (optional)"/>
             <label lang="en" value="Account (optional)"/>
-            <!--choice name="activateSSO" value="no">
+            <choice name="activateSSO" value="no">
 			<label lang="en" value="use single sign-on"/>
 			<label lang="de" value="single sign-on aktivieren"/>
                         <option name="yes" value="yes">
@@ -464,7 +464,7 @@
                                 <label lang="en" value="no"/>
                                 <label lang="de" value="nein"/>
                         </option>
-                </choice-->
+                </choice>
             <entry name="Domain" value="">
                 <label lang="de" value="Domäne"/>
                 <label lang="en" value="Domain"/>

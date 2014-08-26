@@ -1,0 +1,15 @@
+ACTION=="remove", GOTO="persistent_smartcard_end"
+SUBSYSTEMS=="usb", IMPORT{builtin}="usb_id"
+
+# Cherry ST-2xxx reader
+ATTRS{product}=="SmartTerminal ST-2xxx", ATTRS{manufacturer}=="Cherry GmbH", SYMLINK+="usb/smartcard/$env{ID_SERIAL}"
+
+# Cherry 1503 reader / eGK Terminal
+ATTRS{product}=="eGK Terminal", ATTRS{manufacturer}=="CHERRY", SYMLINK+="usb/smartcard/$env{ID_SERIAL}"
+ATTRS{idVendor}=="046a", ATTRS{idProduct}=="0080", GROUP="users", MODE="0666"
+KERNEL=="hiddev*", ATTRS{idVendor}=="046a", ATTRS{idProduct}=="0080", SYMLINK+="usb/smartcard/hid_%n"
+
+
+LABEL="persistent_smartcard_end"
+
+

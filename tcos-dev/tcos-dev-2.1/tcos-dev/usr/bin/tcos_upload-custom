@@ -1,0 +1,73 @@
+#!/bin/bash
+
+REMOTE=root@172.21.44.2
+DIR=/var/www-vhosts/archive.openthinclient.org/openthinclient/customer
+SERVER=http://archive.openthinclient.org/openthinclient/customer
+HASH=$(/usr/bin/pwgen -s 8 1)
+ARCH=i386
+
+usage() {
+ 
+         echo "Usage: ${0##*/} <package to upload> [remote-hash]"
+         exit 65
+}
+
+upload_file() {
+    remote=$1
+    path=$2
+    file=$3
+    prefix=$4
+    
+
+    # stream the file over a pipe to ssh
+    cat $file | ssh $remote "mkdir -p $path/${prefix}_$HASH; cat >> $path/${prefix}_$HASH/`basename $file`"
+}
+
+update_metadata() {
+    remote=$1
+    path=$2
+
+    #
+    ssh $remote "cd $path/${prefix}_$HASH; apt-ftparchive packages . > Packages; gzip -9cf < Packages > Packages.gz ; bzip2 -9cf < Packages > Packages.bz2; \
+	    		         apt-ftparchive sources . > Sources; gzip -9cf < Sources > Sources.gz; bzip2 -9cf < Sources > Sources.bz2; \
+			         apt-ftparchive release . > Release \
+	        "
+}
+    
+# Check arguments
+if [ $# -ge 1 ]; then
+        DEBS="$@"
+	[ -n "$2" ] && HASH="$2"
+else
+        usage
+        exit
+fi
+
+# Uploading packages
+
+for d in $DEBS
+do
+   if echo $d | /bin/grep -qs "\.deb$"
+   then
+       bn=$(basename $d)
+       dn=$(dirname $d)
+       base=${bn%%_*b}
+       changelog=${dn}/${base}.changelog
+       version=$(grep -m 1 -i $base $changelog | awk '{print $2}' | tr -d '()')
+       changes=${dn}/${base}_${version}_${ARCH}.changes
+       dsc=${dn}/${base}_${version}.dsc
+       tgz=${dn}/${base}_${version}.tar.gz
+       
+       echo -e "Uploading:\n"
+       for f in $d $dsc $changes $changelog $tgz
+       do
+	   echo -e "--> $f\n"
+           upload_file $REMOTE $DIR $f $base
+       done
+       
+       echo -e "Generating: Packages.gz\n"	
+       update_metadata $REMOTE $DIR
+
+       echo -e "Insert the following line to your sources.list:\ndeb ${SERVER}/${prefix}-${HASH} ./\n"
+    fi
+done

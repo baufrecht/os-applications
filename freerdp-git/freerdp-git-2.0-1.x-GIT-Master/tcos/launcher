@@ -110,8 +110,8 @@ else:
 	if User != "tcos" and User != "" and UserToken != None:
 		Parameters += ' /u:' + User 
 		try:
-                        if os.path.isfile('/opt/sso-tcos/bin/sso-tcos-auth'):
-                                Auth = os.popen('/opt/sso-tcos/bin/sso-tcos-auth')
+                        if os.path.isfile('/usr/local/bin/sso-tcos-auth'):
+                                Auth = os.popen('/usr/local/bin/sso-tcos-auth')
                                 Password = Auth.read()
                                 Auth.close()
                                 if Password != "":

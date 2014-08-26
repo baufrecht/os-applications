@@ -1,3 +1,10 @@
+sso-tcos (2.0-4) unstable; urgency=low
+
+  * created a link betwenn /lib/i386... /lib/security to workaround the pam
+    issue "couldn't load pam_sso..." 
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Mon, 11 Aug 2014 15:57:58 +0200
+
 sso-tcos (2.0-3) unstable; urgency=low
 
   * fixed empty package content

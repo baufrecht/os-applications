@@ -1,0 +1,13 @@
+Source: smartcard-lite
+Section: unknown
+Priority: optional
+Maintainer: Steffen Hoenig <s.hoenig@openthinclient.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+
+Package: smartcard-lite
+Architecture: any
+Depends: base
+Conflicts: smartcard
+Description: automates the invocation of pcscd
+
