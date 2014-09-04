@@ -1,9 +1,4 @@
-000_none_public/
-desktop/altes-1erPaket/
-tempcopy/
-tempcopy_test/
-*.deb
-*.tar.gz
-*.dsc
-*.changes
+*tempcopy*
 *.sfs
+*.tar.gz
+*.deb

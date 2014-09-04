@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Thu, 04 Sep 2014 14:51:38 +0200
+Source: smartcard-lite
+Binary: smartcard-lite
+Architecture: source i386
+Version: 2.0-2
+Distribution: UNRELEASED
+Urgency: low
+Maintainer: Steffen Hoenig <s.hoenig@openthinclient.com>
+Changed-By: Steffen Hoenig <s.hoenig@openthinclient.com>
+Description: 
+ smartcard-lite - automates the invocation of pcscd
+Changes: 
+ smartcard-lite (2.0-2) UNRELEASED; urgency=low
+ .
+   * little fixes (start-behaviour)
+Checksums-Sha1: 
+ 0a9ea09c708db4992647c33639934bd1e5be9d86 546 smartcard-lite_2.0-2.dsc
+ 41dd9a103ee1f1a730b03c44a0f60fd5a50fca58 3294 smartcard-lite_2.0-2.tar.gz
+ 945c65a5a71f20716aabb844ab93d6b927631114 2482 smartcard-lite_2.0-2_i386.deb
+Checksums-Sha256: 
+ 27af12441f0311a9f10aecbfd40990d45cb811a8e9b72c01c97473ac46cbdf17 546 smartcard-lite_2.0-2.dsc
+ c6c00adb4ed3fe0daba5fbd318552bb798ba8f3d29b878f38e4f23fcabb5507c 3294 smartcard-lite_2.0-2.tar.gz
+ 680887b3a8281bba56a0bf67863f5d7d8acd6bde82bd823388c2d07bec87744c 2482 smartcard-lite_2.0-2_i386.deb
+Files: 
+ 7cf98c8addd9cf9ac2fdac2e86342060 546 unknown optional smartcard-lite_2.0-2.dsc
+ 116b8dc91c1c5664a2afdd5f0190993e 3294 unknown optional smartcard-lite_2.0-2.tar.gz
+ 3534647fd1d842b4cd2e22d680132f14 2482 unknown optional smartcard-lite_2.0-2_i386.deb
