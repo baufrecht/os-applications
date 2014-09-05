@@ -1,8 +1,8 @@
 Application packages for openthinclient OS, version 2.x
 ==============
 
-This repo provides the tcos-develop folders for all application packages
-- one application per folder. Please install the [tcos-dev package] (http://packages.openthinclient.org/openthinclient/v2/devel/tcos-dev_2.1-1_all.deb) in on a debian wheezy and read [this](http://openthinclient.org/Packaging%20Tutorial?structure=#2_create_OTC_Packages ) 
+This repo provides the tcos-develop folders for all application packages - one application per folder. 
+Please install the tcos-dev package on a debian wheezy or use our docker container and read [this](http://openthinclient.org/Packaging%20Tutorial?structure=#2_create_OTC_Packages) 
 to know how to use the tcos-dev tools.
 
 While the documentation is slightly outdated, the use of the tools is still the same.
