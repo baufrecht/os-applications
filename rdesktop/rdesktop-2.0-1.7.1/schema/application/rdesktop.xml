@@ -17,6 +17,18 @@
                                 <label lang="de" value="Nein"/>
                         </option>
                 </choice>
+                <choice name="Rdesktop_18" value="No">
+                        <label lang="en" value="rdesktop 1.8"/>
+                        <label lang="de" value="rdesktop 1.8"/>
+                        <option name="Yes" value="Yes">
+                                <label lang="en" value="Yes"/>
+                                <label lang="de" value="Ja"/>
+                        </option>
+                        <option name="No" value="No">
+                                <label lang="en" value="No"/>
+                                <label lang="de" value="Nein"/>
+                        </option>
+                </choice>
 		<entry name="custom_icon" value="">
 			<label value="benutzerdefiniertes Symbol" lang="de"/>
 			<label value="custom icon" lang="en"/>

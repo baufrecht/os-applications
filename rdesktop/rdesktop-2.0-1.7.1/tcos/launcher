@@ -115,9 +115,16 @@ if start_deferral != 0 :
 # if the first one fails, it will use the second one
 #
 server_list = l.ENTRY.get('Application.Server', 'tserver').split()
+
+if l.ENTRY.get('General.Rdesktop18', ''):
+    app="/opt/rdesktop/bin/rdesktop"
+else:
+    app="/usr/bin/rdesktop"
+
+
 while True:
         for i in range(len(server_list)):
-                cmdline = ['/usr/bin/rdesktop',
+                cmdline = [app,
                            parameter.strip(),
                            server_list[i]]
 		print ' '.join(cmdline)
