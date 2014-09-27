@@ -61,9 +61,9 @@
                 <label lang="en" value="No"/>
             </option>
         </choice>
-        <choice name="dpms-off__BOOL" value="false">
-            <label lang="de" value="Energiesparmodus deaktivieren"/>
-            <label lang="en" value="Disable display power saving mode"/>
+        <choice name="dpms-on__BOOL" value="true">
+            <label lang="de" value="Energiesparmodus aktivieren"/>
+            <label lang="en" value="Enable display power saving mode"/>
             <option value="true">
                 <label lang="de" value="Ja"/>
                 <label lang="en" value="Yes"/>
@@ -81,11 +81,11 @@
     <group name="org_mate_marco_global-keybindings">
         <label value="Tastaturkürzel" lang="de"/>
         <label value="Keybindings"     lang="en"/>
-        <entry name="switch-windows" value="&lt;Alt&gt;+&lt;Tab&gt;">
+        <entry name="switch-windows" value="&lt;Alt&gt;&lt;Tab&gt;">
             <label lang="de" value="Fensterumschalter"/>
             <label lang="en" value="Switch windows"/>
         </entry>
-        <entry name="run-command-1" value="&lt;Ctrl&gt;+&lt;Alt&gt;+x">
+        <entry name="run-command-1" value="&lt;Ctrl&gt;&lt;Alt&gt;x">
             <label lang="de" value="Terminal öffnen"/>
             <label lang="en" value="Open terminal"/>
         </entry>
