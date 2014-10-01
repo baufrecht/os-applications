@@ -28,9 +28,9 @@ if depth != '__auto__':
 #
 WindowType = l.ENTRY.get('Application.Window.WindowType', 'fullscreen')
 if WindowType == 'fullscreen':
-	parameter += ' -f ' 
+	parameter += ' -f '
 elif WindowType == 'save-taskbar':
-	# get dims 
+	# get dims
 	dims = u.getFullscreenDimensions()
 	parameter += ' -D -g' + dims + ' '
 elif WindowType == 'manual':
@@ -56,8 +56,8 @@ if l.ENTRY.get('Application.Connection.BitmapUpdates', 'False') == 'True':
         parameter += ' -b '
 
 
-## seriel 
-# 
+## seriel
+#
 if l.ENTRY.get('Application.Connection.Com1', 'False') == 'True':
 	parameter += ' -r comport:COM1=/dev/ttyS0'
 if l.ENTRY.get('Application.Connection.Com2', 'False') == 'True':
@@ -91,7 +91,7 @@ if sso_type == 'Yes' and tcos_username != "tcos" and tcos_username != None:
 					parameter += ' -p ' + u.shellQuote(password)
 		except:
 			pass
-else: 
+else:
 	username = l.ENTRY.get('Application.Account.User', '')
 	if username != '':
 		parameter += ' -u ' + username
@@ -105,7 +105,6 @@ else:
 # own color map if screen palette based
 if u.getScreenDepth() == '8':
 	parameter += ' -C'
-	
 exit_action = l.ENTRY.get('General.ExitAction', '')
 start_deferral = int(l.ENTRY.get('General.StartDeferral', 0))
 if start_deferral != 0 :
@@ -116,10 +115,10 @@ if start_deferral != 0 :
 #
 server_list = l.ENTRY.get('Application.Server', 'tserver').split()
 
-if l.ENTRY.get('General.Rdesktop18', ''):
-    app="/opt/rdesktop/bin/rdesktop"
-else:
+if l.ENTRY.get('General.Rdesktop_legacy', ''):
     app="/usr/bin/rdesktop"
+else:
+    app="/opt/rdesktop/bin/rdesktop"
 
 
 while True:
@@ -133,7 +132,6 @@ while True:
                         break
         if exit_action != 'Restart':
                 break
-	
 if exit_action == 'Logout':
 	os.system("tcos-logout")
 elif exit_action == 'Reboot':

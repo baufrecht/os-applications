@@ -1,9 +1,15 @@
-rdesktop (2.0-1.7.1-5) UNRELEASED; urgency=medium
+rdesktop (2.0-1.8.2-1) unstable; urgency=medium
+
+  * switched rdesktop 1.8 to default and the 1.7 to legacy
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Wed, 01 Oct 2014 13:18:48 +0200
+
+rdesktop (2.0-1.7.1-5) unstable; urgency=medium
 
   * added external rdesktop 1.8.2 binary with usbrdr support (usbrdr binaries
     are not part of the package) 
 
- -- Steffen Hoenig <s.hoenig@openthinclient.com>  Sat, 27 Sep 2014 17:44:13 +0200
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Wed, 01 Oct 2014 13:17:21 +0200
 
 rdesktop (2.0-1.7.1-4) unstable; urgency=low
 

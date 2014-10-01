@@ -17,9 +17,9 @@
                                 <label lang="de" value="Nein"/>
                         </option>
                 </choice>
-                <choice name="Rdesktop_18" value="No">
-                        <label lang="en" value="rdesktop 1.8"/>
-                        <label lang="de" value="rdesktop 1.8"/>
+                <choice name="Rdesktop_legacy" value="No">
+                        <label lang="en" value="rdesktop (legacy)"/>
+                        <label lang="de" value="rdesktop (legacy)"/>
                         <option name="Yes" value="Yes">
                                 <label lang="en" value="Yes"/>
                                 <label lang="de" value="Ja"/>
