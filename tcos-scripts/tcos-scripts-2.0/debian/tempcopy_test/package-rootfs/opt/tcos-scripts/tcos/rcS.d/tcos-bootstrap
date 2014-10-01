@@ -87,7 +87,6 @@ filegen clockstats file clockstats type day enable
 restrict -4 default kod notrap nomodify nopeer noquery
 restrict -6 default kod notrap nomodify nopeer noquery
 restrict 127.0.0.1
-restrict ::1
 
 """
     ntpservers = locations_entry.get("Time.ntpservers", "pool.ntp.org").split() # get a list of ntpservers

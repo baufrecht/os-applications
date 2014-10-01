@@ -81,7 +81,7 @@
     <group name="org_mate_marco_global-keybindings">
         <label value="Tastaturkürzel" lang="de"/>
         <label value="Keybindings"     lang="en"/>
-        <entry name="switch-windows" value="&lt;Alt&gt;&lt;Tab&gt;">
+        <entry name="switch-windows" value="&lt;Alt&gt;Tab">
             <label lang="de" value="Fensterumschalter"/>
             <label lang="en" value="Switch windows"/>
         </entry>

@@ -2,27 +2,27 @@
 
 # standard modules
 import string
-#import shutil
-#import signal
-#import subprocess
 import sys
-#import tempfile
 import base64
 import commands
-#import fileinput
-#import glob
 import ldapurl
 import os
-# import re
-# import tempfile
 import subprocess
 import syslog
-
+import time
 from subprocess import call
-
 
 # TCOS modules
 import pytcos.tcos as tcos
+
+
+# import re
+# import tempfile
+
+def myLog(message, bad=False):
+    syslog.syslog(message)
+    if bad : print >>sys.stderr, message
+    return
 
 u = tcos.Util()
 s = tcos.System()
@@ -37,8 +37,7 @@ devices_dn = l.getDevicesDn(client_dn, ldap_url)
 try :  
     connectors = subprocess.check_output('xrandr -q | grep connect | cut -f1 -d " "', shell=True)
 except :  
-    syslog.syslog('WARNING: could not querry your grafic card connectors using xrandr. Better luck, next time.')
-    print >>sys.stderr, 'WARNING: could not querry your grafic card connectors using xrandr. Better luck, next time.'
+    myLog('WARNING: could not querry your grafic card connectors using xrandr. Better luck, next time.', bad=True)
     sys.exit(1)
 
 connectorsToTurnOff = connectors.split('\n')
@@ -57,8 +56,7 @@ for device in devices_dn:
     if deviceType == "display":
         # prevent running twice
         if displayFound: 
-            print >>sys.stderr, 'WARNING: Found more than one displayset asigned to this client. Using only the first one.'
-            syslog.syslog('WARNING: Found more than one displayset asigned to this client. Using only the first one.')
+            myLog('WARNING: Found more than one displayset asigned to this client. Using only the first one.', bad=True)
             sys.exit()
         displayFound = True
 
@@ -70,11 +68,8 @@ for device in devices_dn:
             syslog.syslog("INFO: setting up xrand")
             try: retcode = subprocess.call(xrandrCmd, shell=True)
             except OSError as e:
-                print >>sys.stderr, 'ERROR: Command "' + xrandrCmd + ' " failed.' 
-                syslog.syslog('ERROR: Command "' + xrandrCmd + ' " failed.' )
+                myLog('ERROR: Command "' + xrandrCmd + ' " failed.', bad=True)
                 sys.exit(1)
-                # TODO: handle resolution von env here
-                sys.exit(0)
         ###################################################################
 
         # substract the Connectors the users wants to use
@@ -128,36 +123,42 @@ for device in devices_dn:
 
 # trigger commands to system
 #
-
+print "Turnoff cmd:" + xrandrTurnOffCmd
 try: subprocess.check_call('xrandr ' + xrandrTurnOffCmd, shell=True)
 except subprocess.CalledProcessError :
-    print >>sys.stderr, "WARNING: xrandrTurnOffCmd failed." 
-    syslog.syslog("WARNING: xrandrTurnOffCmd failed.")
+    myLog('WARNING: xrandrTurnOffCmd failed. This could happen.', bad=True)
     pass 
 
 try: subprocess.check_call('xrandr ' + xrandrAddModeCmd, shell=True)
 except subprocess.CalledProcessError :
-    print >>sys.stderr, "WARNING: xrandrAddModeCmd failed, trying xrandNewMode." 
-    syslog.syslog("WARNING: xrandrAddModeCmd failed, trying xrandNewMode.")
+    myLog('WARNING: xrandrAddModeCmd failed, trying to create mode now.', bad=True)
     # If addmode fails, try to create it first.
     try:
         print "New mode: " +  xrandrNewModeCmd
         subprocess.check_call(xrandrNewModeCmd, shell=True)
+        # try to add mode again
         subprocess.check_call('xrandr ' + xrandrAddModeCmd, shell=True)
     except subprocess.CalledProcessError :
-        print >>sys.stderr, "WARNING: xrandrAddModeCmd failed again. Even after --newmode." 
-        syslog.syslog("WARNING: xrandrAddModeCmd failed again.  Even after --newmode.")
+        myLog('WARNING: xrandrAddModeCmd failed again. Even after --newmode.', bad=True)
         pass 
 
 exe = 'xrandr ' + xrandrCmd
 syslog.syslog('INFO: ' + exe )        
 print 'Resulting final command: ' + exe         
 
-try: subprocess.check_call(exe, shell=True)
+try: 
+    subprocess.check_call(exe, shell=True)
 except subprocess.CalledProcessError :
-    print >>sys.stderr, "WARNING: xrandr failed." 
-    syslog.syslog("WARNING: xrandr failed.")
-    sys.exit(1)
+    myLog('WARNING: xrandr failed the first time. Trying again.', bad=True)
+    try: 
+        # some stupide hardware, i.e. VIA Technologies, Inc. CN700/P4M800 Pro/P4M800 CE/VN800 Graphics [S3 UniChrome Pro] [1106:3344] 
+        # needs a second kick
+        # This applies to OTC-Models 1564, 1056 .
+        time.sleep(3)
+        subprocess.check_call(exe, shell=True)
+    except subprocess.CalledProcessError :
+        myLog('WARNING: xrandr failed a second time. Giving up now.', bad=True)
+        sys.exit(1)        
 
 # example
 # xrandr --addmode HDMI1 1920x1080

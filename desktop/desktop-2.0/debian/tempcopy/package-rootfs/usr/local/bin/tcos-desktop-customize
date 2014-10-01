@@ -125,17 +125,20 @@ if __name__ == '__main__':
     '''IMPORTANT: As the java component does not initialize empty elements we
        do need to provide the default settings as a dict
     '''
-    DEFAULT = {'org_mate_desktop_media-handling_automount': True,
-               'org_mate_desktop_media-handling_automount-open': False,
-               'org_mate_panel_toplevels_top_auto-hide': False,
-               'org_mate_screensaver_idle-activation-enabled': False,
-               'org_mate_screensaver_dpms-off': False,
-	       'org_mate_screensaver_dpms-time': 600,
-               'org_mate_marco_global-keybindings_run-command-1': '<Control><Alt>x',
-               'org_mate_marco_global-keybindings_numlock': 'none'}
+    DEFAULT = {'org_mate_desktop_media-handling.automount': True,
+               'org_mate_desktop_media-handling.automount-open': False,
+               'org_mate_panel_toplevels_top.auto-hide': False,
+               'org_mate_screensaver.idle-activation-enabled': False,
+               'org_mate_screensaver.dpms-on': True,
+	       'org_mate_screensaver.dpms-time': 600,
+               'org_mate_marco_global-keybindings.run-command-1': '<Ctrl><Alt>x',
+               'org_mate_marco_global-keybindings.switch-windows': '<Alt>Tab',
+               'org_mate_marco_global-keybindings.numlock': 'none'}
+
 
     try: 
         ENTRY.pop('schema_version')
+        # overwrite values from DEFAULT with managersettings
         DEFAULT.update(ENTRY)
     except:
         pass
@@ -149,22 +152,26 @@ if __name__ == '__main__':
         print('Write Error:', err)
 	
     # update dconf
-    os.system('sudo dconf update')
+    os.system('sudo chmod 000 /usr/bin/caja; sudo dconf update; sleep 0.2; sudo chmod 755 /usr/bin/caja')
 
-    # check, if dpms should be disabled
-    if DEFAULT['org.mate.screensaver.dpms-off']:
-       call('xset -dpms', shell=True)
-    else:
+   
+    # check, if dpms should be enabled or disabled
+    if DEFAULT['org_mate_screensaver.dpms-on']:
+       call('xset +dpms', shell=True)
        # set dpms time
-       time =  DEFAULT['org.mate.screensaver.dpms-time']
+       time =  DEFAULT['org_mate_screensaver.dpms-time']
+       # man xset
+       # [+dpms] [-dpms]
+       #     [dpms standby [ suspend [ off]]]      [dpms force {standby|suspend|off|on}]
        call(' '.join(['xset dpms', str(time), str(time), str(time)]), shell=True)
+    else:
+       call('xset -dpms', shell=True)
 
     # numlockx does not match here, because the user session ist not set up yet
     # this is done in tcos-desktop-populate
 
-    numlock = DEFAULT['org.mate.marco.global-keybindings.numlock']
+    numlock = DEFAULT['org_mate_marco_global-keybindings.numlock']
     if numlock == "on":
         call('touch /tmp/tcos_numlock_ON', shell=True)
     elif numlock == "off":
         call('touch /tmp/tcos_numlock_OFF', shell=True)
-

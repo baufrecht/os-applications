@@ -1,4 +1,20 @@
-tcos-scripts (2.0-35) UNRELEASED; urgency=low
+tcos-scripts (2.0-37) unstable; urgency=low
+
+  * add a second "xrand kick" in tcos-xrandr to support silly chipsets,
+      this applies to OTC-Modells 1056 and 1567
+  * implement a logging function in tcos-xrandr
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Wed, 24 Sep 2014 13:47:04 +0200
+
+tcos-scripts (2.0-36) unstable; urgency=low
+
+  * tcos-system-analyse.sh rename to tcos-system-analyse
+      - uses now lspci -nnk
+  * set link to launcher_arg.py
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 19 Sep 2014 16:20:05 +0200
+
+tcos-scripts (2.0-35) unstable; urgency=low
 
   [ Joern Frenzel ]
   * NEW: added tcos-system-analyse.sh

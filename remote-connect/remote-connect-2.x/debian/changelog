@@ -1,3 +1,9 @@
+remote-connect (2.0-10) unstable; urgency=low
+
+  * fix: launcher calls x11vnc now with -ncache 0, users claimed about it
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 19 Sep 2014 21:30:59 +0200
+
 remote-connect (2.0-9) unstable; urgency=low
 
   * fix: launcher calls x11vnc with -rfbauth now

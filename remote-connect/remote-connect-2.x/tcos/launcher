@@ -60,7 +60,7 @@ if SysLang.count("de_"):
         ConnectionPermisson = l.ENTRY.get('Settings.ConnectionPermisson', 'ask')
         showDisconnectDialog = l.ENTRY.get('Settings.showDisconnectDialog','yes')
 
-        VncCommand = 'x11vnc -ncache 10 ' + passwdParam + ' '
+        VncCommand = 'x11vnc -ncache 0 ' + passwdParam + ' '
         if ConnectionPermisson == "ask":
             VncCommand += ' -accept "zenity --question --title \\"Remote Verbindungsversuch\\"  --text \\"Wollen Sie die Verbindung auf Ihren Bildschirm zulassen\\"" '
         if showDisconnectDialog == "yes":
@@ -80,7 +80,7 @@ else :
         ConnectionPermisson = l.ENTRY.get('Settings.ConnectionPermisson', 'ask')
         showDisconnectDialog = l.ENTRY.get('Settings.showDisconnectDialog','yes')
 
-        VncCommand = 'x11vnc -ncache 10 ' + passwdParam + ' '
+        VncCommand = 'x11vnc -ncache 0 ' + passwdParam + ' '
         if ConnectionPermisson == "ask":
             VncCommand += ' -accept "zenity --question --title \\"remote view request\\\"  --text \\"Allow a remote view request?\\"" '
         if showDisconnectDialog == "yes":

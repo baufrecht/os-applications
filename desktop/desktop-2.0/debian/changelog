@@ -1,6 +1,30 @@
-desktop (2.0-12) UNRELEASED; urgency=low
+desktop (2.0-15) unstable; urgency=low
 
-  * FIX: defaults in the manager weren't visible 
+  * fixed caja popping up after "conf update"
+     - this was really annoying
+     - chmod the binary of caja to 000 before and back again to 755 after calling dconf
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Sun, 28 Sep 2014 00:04:12 +0200
+
+desktop (2.0-14) unstable; urgency=low
+
+  * fixed default value for org_mate_marco_global-keybindings.switch-windows
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 19 Sep 2014 14:34:39 +0200
+
+desktop (2.0-13) unstable; urgency=low
+
+  * fixes: https://github.com/openthinclient/os-applications/issues/13
+      desktop: hotkey for task-switch dysfunctional
+  * fixes: https://github.com/openthinclient/os-applications/issues/12
+      desktop: display power management without functions
+  * fixes a none working numlock manager setting
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Mon, 15 Sep 2014 10:29:02 +0200
+
+desktop (2.0-12) unstable; urgency=low
+
+  * FIX: defaults in the manager weren't visible
 
  -- Steffen Hoenig <s.hoenig@openthinclient.com>  Thu, 05 Jun 2014 21:00:34 +0200
 

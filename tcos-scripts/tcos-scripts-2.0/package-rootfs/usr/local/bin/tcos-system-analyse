@@ -4,7 +4,7 @@
 
 IFS=$'\n'
 for command in $(cat <<EOF
-lspci -k
+lspci -nnk
 lsusb -v
 fdisk -l /dev/sda /dev/sdb /dev/sdc /dev/sdd 
 cat /proc/cpuinfo 
@@ -28,5 +28,3 @@ EOF
 done
 
 hwinfo
-
-
