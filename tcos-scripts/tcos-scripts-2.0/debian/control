@@ -2,12 +2,13 @@ Source: tcos-scripts
 Section: unknown
 Priority: optional
 Maintainer: Joern Frenzel <j.frenzel@openthinclient.com>
+Uploaders: Steffen Hoenig <s.hoenig@openthinclient.com>
 Build-Depends: debhelper (>= 8.0.0)
 Standards-Version: 3.9.3
 
 Package: tcos-scripts
 Architecture: any
-Depends:
+Depends: base (>= 2.0-22)
 Conflicts: initscripts-tcos
 Description: tcos client scripts
  This scripts are takeing care about the clients configuration,

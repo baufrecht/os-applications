@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 tcos-scripts (2.0-38) unstable; urgency=low
 
   * fix: bail out after user specific xrandr command
 
  -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 28 Nov 2014 16:14:42 +0100
+=======
+tcos-scripts (2.0-38) unstable; urgency=medium
+
+  * added update_dns function to tcos-bootstrap, which notifies the dhcp
+    server of the clients hostname
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Fri, 07 Nov 2014 20:33:20 +0100
+>>>>>>> 06c307f2c0a96710eee1cb3baa0fc37cdca26689
 
 tcos-scripts (2.0-37) unstable; urgency=low
 

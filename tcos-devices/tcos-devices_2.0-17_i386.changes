@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Mon, 17 Nov 2014 13:47:20 +0100
+Source: tcos-devices
+Binary: tcos-devices
+Architecture: source i386
+Version: 2.0-17
+Distribution: unstable
+Urgency: medium
+Maintainer: Steffen Hoenig <s.hoenig@openthinclient.com>
+Changed-By: Steffen Hoenig <s.hoenig@openthinclient.com>
+Description: 
+ tcos-devices - Schemas for openthinclient manager
+Changes: 
+ tcos-devices (2.0-17) unstable; urgency=medium
+ .
+   * addded DFP options for fglrx
+Checksums-Sha1: 
+ ac103934cf9b58f44b0ce4a72dec84dabe124405 539 tcos-devices_2.0-17.dsc
+ 5187399db58382fc5ce1e23e24008303fccd27f8 16879 tcos-devices_2.0-17.tar.gz
+ 7cc7a84744210e9812bf3c5bd64cd85f3ed70de1 15376 tcos-devices_2.0-17_i386.deb
+Checksums-Sha256: 
+ b9fa9d25e3136342cdc04fabee101fb9dfd42df69a93a5699c40cb71281364af 539 tcos-devices_2.0-17.dsc
+ 3fbe5274814305c79c21220777b0dce37d52ba973b098dda3e3094907264a76e 16879 tcos-devices_2.0-17.tar.gz
+ cb5ed3446ebd9442cbb4b1b4eb24e144dfcde6141f03f4b1653c891ff02e51fa 15376 tcos-devices_2.0-17_i386.deb
+Files: 
+ c5153d03ac6e7565869f50ac560dd334 539 admin optional tcos-devices_2.0-17.dsc
+ 3ffd50a47459335ccff7dcc492ad75e2 16879 admin optional tcos-devices_2.0-17.tar.gz
+ 363e2541ca1da002fa2a3c5fea34ef6c 15376 admin optional tcos-devices_2.0-17_i386.deb

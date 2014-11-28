@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Mon, 17 Nov 2014 14:01:18 +0100
+Source: tcos-devices
+Binary: tcos-devices
+Architecture: source i386
+Version: 2.0-18
+Distribution: UNRELEASED
+Urgency: low
+Maintainer: Steffen Hoenig <s.hoenig@openthinclient.com>
+Changed-By: Steffen Hoenig <s.hoenig@openthinclient.com>
+Description: 
+ tcos-devices - Schemas for openthinclient manager
+Changes: 
+ tcos-devices (2.0-18) UNRELEASED; urgency=low
+ .
+   * forgot 2nd display
+Checksums-Sha1: 
+ 6ac03b5c70501126720382702430f3569e27bfda 539 tcos-devices_2.0-18.dsc
+ 8954c0c5887cd0085268d67c03506e4b89c3be04 16942 tcos-devices_2.0-18.tar.gz
+ a84a3e1ff3a5d5709f39c26ba8318eff263af859 15372 tcos-devices_2.0-18_i386.deb
+Checksums-Sha256: 
+ a8c8cf2a1faaba6b5af630c269a19efea15d322c677ddf79d302242ad2775c5a 539 tcos-devices_2.0-18.dsc
+ 6d08f72b6cd787baa64a7528e2162e03c9e47ea993e184918ec42d948a90b701 16942 tcos-devices_2.0-18.tar.gz
+ 205492e2cf1a54941bf0e4bef479c0ae40e4506106f57fdbba34c63ca0b2571d 15372 tcos-devices_2.0-18_i386.deb
+Files: 
+ 62445a0e2abaeeba9c0af92b5d939b98 539 admin optional tcos-devices_2.0-18.dsc
+ 3fa55af4d5c2baf322418132b5ba06b9 16942 admin optional tcos-devices_2.0-18.tar.gz
+ 5237a1236701972885bccc66f4a7f750 15372 admin optional tcos-devices_2.0-18_i386.deb

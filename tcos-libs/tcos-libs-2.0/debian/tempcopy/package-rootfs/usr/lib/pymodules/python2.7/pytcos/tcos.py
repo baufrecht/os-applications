@@ -1000,8 +1000,10 @@ class Ldap(Logger):
 
     def getAppgroupsDn(self, client_dn, user_dn, ldap_url):
         usergroups = self.getUsergroupsDn(user_dn, ldap_url)
+        clientgroups = self.getClientgroupsDn(client_dn, ldap_url)
         direct_appgroups = self.getGroupOfUniqueNamesDn("appgroups",
                                                         usergroups +
+                                                        clientgroups +
                                                         [user_dn, client_dn],
                                                         ldap_url)
         appgroups = self.getGroupOfUniqueNamesDnRecursiv("appgroups",
@@ -1009,12 +1011,25 @@ class Ldap(Logger):
                                                          ldap_url)
         return appgroups
 
+    def getClientgroupsDn(self, client_dn, ldap_url):
+        direct_clientgroups = self.getGroupOfUniqueNamesDn("clientgroups",
+                                                           client_dn,
+                                                           ldap_url)
+        clientgroups = self.getGroupOfUniqueNamesDnRecursiv("clientgroups",
+                                                            direct_clientgroups,
+                                                            ldap_url)
+        return clientgroups
+
     def getAppsDn(self, client_dn, user_dn, ldap_url):
         appgroups = self.getAppgroupsDn(client_dn, user_dn, ldap_url)
+        clientgroups = self.getClientgroupsDn(client_dn, ldap_url)
         usergroups = self.getUsergroupsDn(user_dn, ldap_url)
         apps_for_appgroups = self.getGroupOfUniqueNamesDn("apps",
                                                           appgroups,
                                                           ldap_url)
+        apps_for_clientgroups = self.getGroupOfUniqueNamesDn("apps",
+                                                             clientgroups,
+                                                             ldap_url)
         apps_for_usergroups = self.getGroupOfUniqueNamesDn("apps",
                                                            usergroups,
                                                            ldap_url)
@@ -1025,6 +1040,7 @@ class Ldap(Logger):
                                                      [user_dn],
                                                      ldap_url)
         apps = apps_for_appgroups + \
+	       apps_for_clientgroups + \
                apps_for_usergroups + \
                apps_for_client + \
                apps_for_user
