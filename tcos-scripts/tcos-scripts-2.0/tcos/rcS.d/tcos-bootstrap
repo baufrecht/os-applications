@@ -1,17 +1,9 @@
 #!/usr/bin/env python
 
-import base64
 import commands
-import fileinput
-import glob
-import ldapurl
-import os
-import re
 import pytcos.tcos as tcos
-import tempfile
 import subprocess
 
-from string import Template
 
 u = tcos.Util()
 s = tcos.System()
@@ -26,6 +18,7 @@ locations_entry = l.getNismapentry(locations_dn, ldap_url)
 
 hostname = l.getCnByDn(client_dn)
 ip_eth0 = commands.getoutput("LANG=C ifconfig eth0 2>/dev/null | sed -n 's/.*inet addr:\\([0-9.]\\+\\).*/\\1/p'")
+
 
 # functions
 def writeSyslog_ng(filename="/etc/syslog-ng/syslog-ng.conf"):
@@ -47,11 +40,13 @@ def writeSyslog_ng(filename="/etc/syslog-ng/syslog-ng.conf"):
             "};")
     f.close()
 
+
 def startSyslog_ng():
     try:
         subprocess.call("update-rc.d -f syslog-ng start 14 2 . stop 90 0 1 6 .", shell=True)
     except:
         print("Couldn't start syslog-ng")
+
 
 def write_timezones(destination="/etc/localtime"):
     localtime = locations_entry.get("Time.localtime", "posix/Etc/GMT")
@@ -62,6 +57,7 @@ def write_timezones(destination="/etc/localtime"):
     with open("/etc/timezone", 'w') as fobj:
         # strip strange 'posix' value:
         fobj.write(localtime.strip('posix/') + '\n')
+
 
 def writeEnvironment(filename="/etc/environment"):
     path = "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11"
@@ -75,6 +71,7 @@ def writeEnvironment(filename="/etc/environment"):
                       }
 
     u.writeDictionaryToFile(entry_dict, filename)
+
 
 def write_ntpd_conf(filename="/etc/ntp.conf"):
     boiler = \
@@ -91,7 +88,7 @@ restrict 127.0.0.1
 """
     ntpservers = locations_entry.get("Time.ntpservers", "pool.ntp.org").split() # get a list of ntpservers
     # build the custom server line
-    appendix=""
+    appendix = ""
     for server in ntpservers:
             appendix += ' '.join(['server', server, '\n'])
     with open(filename, 'w') as fobj:
@@ -118,20 +115,29 @@ def writeKeyboard(filename="/etc/default/keyboard"):
         u.writeDictionaryToFile(entry_dict, filename)
         # Notify Udev for changes
         try:
-            subprocess.check_call(['udevadm','trigger', '--subsystem-match=input', '--action=change'])
-        except CalledProcessError as e:
-            print "Couldn't trigger udevadm (Error: %s)" % e
+            subprocess.check_call(['udevadm', 'trigger', '--subsystem-match=input', '--action=change'])
+        except:
+            print "Couldn't trigger udevadm"
+
 
 def write_hostname(filename="/etc/hostname"):
     with open(filename) as f:
-        content = f.readline().strip('\n')
-        f.close()
-        # 'openthinclient' is provided by an applied config, hostname is set in
-        # the manager console
-        if content == 'openthinclient' and len(hostname) != 0:
-            with open(filename, 'w') as f:
-                f.write(hostname + '\n')
-                f.close()
+        etc_hostname = f.readline().strip('\n')
+    # 'openthinclient' is provided by an applied config, hostname is set in
+    # the manager console
+    if etc_hostname == 'openthinclient' and len(hostname) != 0:
+        with open(filename, 'w') as f:
+            f.write(hostname + '\n')
+            f.close()
+
+
+def update_dns(hostname, filename="/etc/hostname"):
+    with open(filename) as f:
+        etc_hostname = f.readline().strip('\n')
+    try:
+        subprocess.check_call(['/busybox/sbin/udhcpc', '-o', '-F', etc_hostname])
+    except:
+        print "Couldn't update DNS (udhcpc)"
 
 # main
 if __name__ == "__main__":
@@ -143,3 +149,4 @@ if __name__ == "__main__":
     write_ntpd_conf()
     writeKeyboard()
     write_hostname()
+    update_dns(hostname)

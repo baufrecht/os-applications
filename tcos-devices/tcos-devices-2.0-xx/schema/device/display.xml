@@ -59,8 +59,10 @@
 
 	    <option name="DisplayPort-0" value="DisplayPort-0" />
 	    <option name="DisplayPort-1" value="DisplayPort-1" />
-	    <option name="DisplayPort-2" value="DisplayPort-1" />
-
+	    <option name="DisplayPort-2" value="DisplayPort-2" />
+	    <option name="DFP1" value="DFP1" />
+	    <option name="DFP2" value="DFP2" />
+	    <option name="DFP3" value="DFP3" />
 	    <option name="DP-0" value="DP-0" />
 	    <option name="DP-1" value="DP-1" />
 	    <option name="DP-2" value="DP-2" />
@@ -177,7 +179,9 @@
 	    <option name="DisplayPort-0" value="DisplayPort-0" />
 	    <option name="DisplayPort-1" value="DisplayPort-1" />
 	    <option name="DisplayPort-2" value="DisplayPort-1" />
-
+	    <option name="DFP1" value="DFP1" />
+	    <option name="DFP2" value="DFP2" />
+	    <option name="DFP3" value="DFP3" />
 	    <option name="DP-0" value="DP-0" />
 	    <option name="DP-1" value="DP-1" />
 	    <option name="DP-2" value="DP-2" />

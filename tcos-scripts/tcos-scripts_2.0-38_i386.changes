@@ -1,0 +1,29 @@
+Format: 1.8
+Date: Fri, 07 Nov 2014 20:33:20 +0100
+Source: tcos-scripts
+Binary: tcos-scripts
+Architecture: source i386
+Version: 2.0-38
+Distribution: unstable
+Urgency: medium
+Maintainer: Joern Frenzel <j.frenzel@openthinclient.com>
+Changed-By: Steffen Hoenig <s.hoenig@openthinclient.com>
+Description: 
+ tcos-scripts - tcos client scripts
+Changes: 
+ tcos-scripts (2.0-38) unstable; urgency=medium
+ .
+   * added update_dns function to tcos-bootstrap, which notifies the dhcp
+     server of the clients hostname
+Checksums-Sha1: 
+ ecbba7f841054a89a4cdfe21bb9fb40eaff021c2 597 tcos-scripts_2.0-38.dsc
+ acd4cc1c07150f06c27f7f3e8cb4d02c973c11cf 11590 tcos-scripts_2.0-38.tar.gz
+ 1a32a9b983dc3a7680e501e3ad8c3b2d678fc33d 8948 tcos-scripts_2.0-38_i386.deb
+Checksums-Sha256: 
+ f0a2ab6ab366ccb5d94cd7502e518c0053b3872eee500ad3b00cc362ac4732f8 597 tcos-scripts_2.0-38.dsc
+ 54612c3d08e340a8d409899babb072171f3ab37069824d4583fa31ea57ce29ee 11590 tcos-scripts_2.0-38.tar.gz
+ 723433a52b6f0032a5b1d467ef941e6edadde50faa5afb4d830346281f2710c8 8948 tcos-scripts_2.0-38_i386.deb
+Files: 
+ 4fc0a112104d190550745e2ff35fa625 597 unknown optional tcos-scripts_2.0-38.dsc
+ f741b9ac7dcf20883d878b103dfb1d20 11590 unknown optional tcos-scripts_2.0-38.tar.gz
+ bfd03a6e1acd425641ebf97ddf01b721 8948 unknown optional tcos-scripts_2.0-38_i386.deb

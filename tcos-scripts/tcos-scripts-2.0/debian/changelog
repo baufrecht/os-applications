@@ -1,3 +1,10 @@
+tcos-scripts (2.0-38) unstable; urgency=medium
+
+  * added update_dns function to tcos-bootstrap, which notifies the dhcp
+    server of the clients hostname
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Fri, 07 Nov 2014 20:33:20 +0100
+
 tcos-scripts (2.0-37) unstable; urgency=low
 
   * add a second "xrand kick" in tcos-xrandr to support silly chipsets,
