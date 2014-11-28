@@ -152,7 +152,7 @@ if __name__ == '__main__':
         print('Write Error:', err)
 	
     # update dconf
-    os.system('sudo chmod 000 /usr/bin/caja; sudo dconf update; sleep 0.2; sudo chmod 755 /usr/bin/caja')
+    os.system('sudo chmod 000 /usr/bin/caja; sudo dconf update; sleep 1; sudo chmod 755 /usr/bin/caja')
 
    
     # check, if dpms should be enabled or disabled

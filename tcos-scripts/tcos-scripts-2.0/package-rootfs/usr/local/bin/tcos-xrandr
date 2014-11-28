@@ -70,6 +70,7 @@ for device in devices_dn:
             except OSError as e:
                 myLog('ERROR: Command "' + xrandrCmd + ' " failed.', bad=True)
                 sys.exit(1)
+            sys.exit(0)
         ###################################################################
 
         # substract the Connectors the users wants to use
