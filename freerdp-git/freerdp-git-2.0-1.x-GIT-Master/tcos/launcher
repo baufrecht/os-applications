@@ -42,7 +42,7 @@ KeyboardLayout = ' /kbd:' + l.ENTRY.get('Application.ConnectionParameters.Keyboa
 Parameters = ProtocolSecurity + ColorDepth + KeyboardLayout
 
 # add bool parameters if needed
-if l.ENTRY.get('Application.ConnectionParameters.redirectClipboard', 'yes') == 'yes':  
+if l.ENTRY.get('Application.ConnectionParameters.redirectClipboard', 'no') == 'yes':  
 	Parameters += ' +clipboard' 
 if l.ENTRY.get('Application.ConnectionParameters.AudioMode', 'no') == 'yes':
 	Parameters += ' /sound'

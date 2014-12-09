@@ -1,9 +1,9 @@
 Package: freerdp-git
-Version: 2.0-1.2-07
+Version: 2.0-1.2-08
 Architecture: i386
 Maintainer: Joern Frenzel <j.frenzel@openthinclient.com>
-Installed-Size: 892
-Depends: base (>= 2.0-17)
+Installed-Size: 1556
+Depends: base (>= 2.0-25)
 Section: x11
 Priority: optional
 Description: RDP client for Windows Terminal Services (GIT version)

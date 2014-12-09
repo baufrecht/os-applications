@@ -1,6 +1,19 @@
-freerdp-git (2.0-1.2-07) UNRELEASED; urgency=low
+freerdp-git (2.0-1.2-08) unstable; urgency=low
 
-  * reintegrated sso 
+  * NEW:
+      - binaries compiled from git master branch on 11/29/2014
+      - depends now on base 2.0-25
+  * FIX: have libfreerdp-plugins-standard
+      -	closes https://github.com/openthinclient/os-applications/issues/9
+  * CAVEAT:
+      - clipboard redirection is known to cause the connection to crash
+      - default is "disabled"
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 05 Dec 2014 21:54:44 +0100
+
+freerdp-git (2.0-1.2-07) unstable; urgency=low
+
+  * reintegrated sso
 
  -- Steffen Hoenig <s.hoenig@openthinclient.com>  Mon, 11 Aug 2014 16:42:46 +0200
 

@@ -9,8 +9,8 @@ Build-Depends: debhelper (>= 8.0.0)
 Package-List: 
  tcos-devices deb admin optional
 Checksums-Sha1: 
- 8954c0c5887cd0085268d67c03506e4b89c3be04 16942 tcos-devices_2.0-18.tar.gz
+ aa27b8864e2c563d70d80549a6aba365bcabfc75 16880 tcos-devices_2.0-18.tar.gz
 Checksums-Sha256: 
- 6d08f72b6cd787baa64a7528e2162e03c9e47ea993e184918ec42d948a90b701 16942 tcos-devices_2.0-18.tar.gz
+ 6f0dfe912666b8e7127ea6c71adcd53efa4120ec0197e77f5e688f15cc551185 16880 tcos-devices_2.0-18.tar.gz
 Files: 
- 3fa55af4d5c2baf322418132b5ba06b9 16942 tcos-devices_2.0-18.tar.gz
+ 387ef8ddf8545a7dc8e9fbdfeb75cbe4 16880 tcos-devices_2.0-18.tar.gz

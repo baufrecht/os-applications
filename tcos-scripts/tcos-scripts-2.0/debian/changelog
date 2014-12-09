@@ -1,17 +1,28 @@
-<<<<<<< HEAD
-tcos-scripts (2.0-38) unstable; urgency=low
+tcos-scripts (2.0-40) unstable; urgency=low
 
-  * fix: bail out after user specific xrandr command
+  * modified tcos/rcS.d/tcos-pam_ldap
+      - set display-setup-script=/usr/local/bin/tcos-xrandr in lightdm.conf
+  * modified /usr/local/bin/tcos-xrandr
+      - write .tcos_displayrc to /tmp to ensure it is never overwritten
+        by NFS mount to /home/tcos
+      - this has been an untracked bug
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 05 Dec 2014 11:25:58 +0100
+
+tcos-scripts (2.0-39) unstable; urgency=low
+
+  * fix tcos-xrandr: bail out after user specific xrandr command
+  * fix tcos-mount-nfs-home:
+      - have a workaround for https://github.com/openthinclient/os-core/issues/19
 
  -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 28 Nov 2014 16:14:42 +0100
-=======
+
 tcos-scripts (2.0-38) unstable; urgency=medium
 
   * added update_dns function to tcos-bootstrap, which notifies the dhcp
     server of the clients hostname
 
  -- Steffen Hoenig <s.hoenig@openthinclient.com>  Fri, 07 Nov 2014 20:33:20 +0100
->>>>>>> 06c307f2c0a96710eee1cb3baa0fc37cdca26689
 
 tcos-scripts (2.0-37) unstable; urgency=low
 

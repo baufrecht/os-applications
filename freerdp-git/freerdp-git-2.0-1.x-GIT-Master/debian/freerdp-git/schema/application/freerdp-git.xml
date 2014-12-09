@@ -130,7 +130,7 @@
                 <option name="RDP" value="rdp"/>
                 <option name="NLA" value="nla"/>
             </choice>
-            <choice name="redirectClipboard" value="yes">
+            <choice name="redirectClipboard (beta)" value="no">
                 <label lang="de" value="Clipboard übertragen"/>
                 <label lang="en" value="Redirect clipboard"/>
                 <option name="yes" value="yes">

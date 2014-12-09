@@ -1,12 +1,12 @@
-tcos-devices (2.0-18) UNRELEASED; urgency=low
+tcos-devices (2.0-18) unstable; urgency=low
 
-  * forgot 2nd display 
+  * forgot 2nd display
 
  -- Steffen Hoenig <s.hoenig@openthinclient.com>  Mon, 17 Nov 2014 14:01:18 +0100
 
 tcos-devices (2.0-17) unstable; urgency=medium
 
-  * added DFP options for fglrx 
+  * added DFP options for fglrx
 
  -- Steffen Hoenig <s.hoenig@openthinclient.com>  Mon, 17 Nov 2014 13:47:20 +0100
 

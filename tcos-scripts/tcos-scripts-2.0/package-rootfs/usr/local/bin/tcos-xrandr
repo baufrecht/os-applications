@@ -47,7 +47,7 @@ xrandrCmd = ''
 xrandrNewModeCmd = ''
 xrandrAddModeCmd = ''
 displayFound = False
-tcos_screenrc = '/home/tcos/.tcos_displayrc'
+tcos_screenrc = '/tmp/.tcos_displayrc'
 
 # do we have to use settings from manager?
 # 
@@ -63,9 +63,9 @@ for device in devices_dn:
         ###################################################################
         # check if the user has set his own command, run it and bail out
         #
-        xrandrCmd = l.getNismapentry(device, ldap_url).get('xrandcmd', '')
+        xrandrCmd = l.getNismapentry(device, ldap_url).get('xrandrcmd', '')
         if xrandrCmd != "" :
-            syslog.syslog("INFO: setting up xrand")
+            syslog.syslog("INFO: Using custom xrandr command")
             try: retcode = subprocess.call(xrandrCmd, shell=True)
             except OSError as e:
                 myLog('ERROR: Command "' + xrandrCmd + ' " failed.', bad=True)
@@ -120,6 +120,10 @@ for device in devices_dn:
                     xrandrCmd += ' ' + secondScreenPosition + ' ' +  primary_screen
                 xrandrAddModeCmd +=  ' --addmode ' + connector + ' ' + mode
         f_screenrc.close()
+        # file should be owned by tcos, just to allow a second run as user (for debug, or changes at runtime)
+        try: subprocess.check_call('sudo chown tcos.tcos ' + f_screenrc, shell=True)
+        except :
+            pass 
 
 
 # trigger commands to system

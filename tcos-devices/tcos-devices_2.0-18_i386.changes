@@ -4,25 +4,25 @@ Source: tcos-devices
 Binary: tcos-devices
 Architecture: source i386
 Version: 2.0-18
-Distribution: UNRELEASED
+Distribution: unstable
 Urgency: low
 Maintainer: Steffen Hoenig <s.hoenig@openthinclient.com>
 Changed-By: Steffen Hoenig <s.hoenig@openthinclient.com>
 Description: 
  tcos-devices - Schemas for openthinclient manager
 Changes: 
- tcos-devices (2.0-18) UNRELEASED; urgency=low
+ tcos-devices (2.0-18) unstable; urgency=low
  .
    * forgot 2nd display
 Checksums-Sha1: 
- 6ac03b5c70501126720382702430f3569e27bfda 539 tcos-devices_2.0-18.dsc
- 8954c0c5887cd0085268d67c03506e4b89c3be04 16942 tcos-devices_2.0-18.tar.gz
- a84a3e1ff3a5d5709f39c26ba8318eff263af859 15372 tcos-devices_2.0-18_i386.deb
+ c014096068935bcd4391d78b4695704925d66ca3 539 tcos-devices_2.0-18.dsc
+ aa27b8864e2c563d70d80549a6aba365bcabfc75 16880 tcos-devices_2.0-18.tar.gz
+ 7d36afb9396eff8f8a7b29bf0b5ad62cfb7d0212 15250 tcos-devices_2.0-18_i386.deb
 Checksums-Sha256: 
- a8c8cf2a1faaba6b5af630c269a19efea15d322c677ddf79d302242ad2775c5a 539 tcos-devices_2.0-18.dsc
- 6d08f72b6cd787baa64a7528e2162e03c9e47ea993e184918ec42d948a90b701 16942 tcos-devices_2.0-18.tar.gz
- 205492e2cf1a54941bf0e4bef479c0ae40e4506106f57fdbba34c63ca0b2571d 15372 tcos-devices_2.0-18_i386.deb
+ 61ae48b139a9bfe00c99d5e3d240289d6382ec49fe0fa25cbfc52481eadf3264 539 tcos-devices_2.0-18.dsc
+ 6f0dfe912666b8e7127ea6c71adcd53efa4120ec0197e77f5e688f15cc551185 16880 tcos-devices_2.0-18.tar.gz
+ 98331399ffbceed2fc4adda8646d6b7b56afe6f1b5e80df2ed1d6b58cc0eada5 15250 tcos-devices_2.0-18_i386.deb
 Files: 
- 62445a0e2abaeeba9c0af92b5d939b98 539 admin optional tcos-devices_2.0-18.dsc
- 3fa55af4d5c2baf322418132b5ba06b9 16942 admin optional tcos-devices_2.0-18.tar.gz
- 5237a1236701972885bccc66f4a7f750 15372 admin optional tcos-devices_2.0-18_i386.deb
+ 8820f43c7e96dead4ea4c8be2de1bae5 539 admin optional tcos-devices_2.0-18.dsc
+ 387ef8ddf8545a7dc8e9fbdfeb75cbe4 16880 admin optional tcos-devices_2.0-18.tar.gz
+ 7f20f351e0689655fc8117246615de83 15250 admin optional tcos-devices_2.0-18_i386.deb

@@ -1,4 +1,4 @@
-tcos-libs (2.0-12) UNRELEASED; urgency=medium
+tcos-libs (2.0-12) unstable; urgency=medium
 
   * merged Andreas' additions: client groups 
 

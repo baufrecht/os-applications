@@ -63,6 +63,7 @@ def write_lightdmconf(filename="/etc/lightdm/lightdm.conf"):
 [SeatDefaults]
 greeter-session=lightdm-greeter
 greeter-hide-users=true
+display-setup-script=/usr/local/bin/tcos-xrandr 
 session-wrapper=/etc/X11/Xsession
 session-setup-script=/usr/local/bin/tcos-postlogin 
 autologin-user=tcos
@@ -75,6 +76,7 @@ autologin-user-timeout=0
 [SeatDefaults]
 greeter-session=lightdm-greeter
 greeter-hide-users=true
+display-setup-script=/usr/local/bin/tcos-xrandr 
 session-wrapper=/etc/X11/Xsession
 session-setup-script=/usr/local/bin/tcos-postlogin 
 autologin-user=
@@ -84,5 +86,3 @@ autologin-user-timeout=0
         fobj.write(content)
 
 write_lightdmconf()
-
-
