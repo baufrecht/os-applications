@@ -22,7 +22,7 @@ ExitAction = l.ENTRY.get('General.ExitAction', '')
 Port = l.ENTRY.get('Application.Port', '')
 Server = l.ENTRY.get('Application.Server', '')
 
-manualParameters = l.ENTRY.get('Application.ConnectionParameters.Parameter', '')
+manualParameters = l.ENTRY.get('Application.ConnectionParameters.Parameter', '-themes -encryption +gfx-h264 +gfx-progressive +gfx-thin-client')
 ProtocolSecurity = ' /sec:' + l.ENTRY.get('Application.ConnectionParameters.ProtocolSecurity', 'rdp')
 
 Domain = l.ENTRY.get('Application.Account.Domain', '')

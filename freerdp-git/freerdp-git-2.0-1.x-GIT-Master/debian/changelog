@@ -1,3 +1,17 @@
+freerdp-git (2.0-1.2-09) unstable; urgency=low
+
+  * new build from git master branch as of todays morning
+      - latest commit 53686e414a, Marc-André Moreau
+      - build with -DWITH_DEBUG_ALL=ON
+  * change launcher and schema  to have some default manual parameters
+  * this version seems to fix some untracked but show stopping issues
+      - connection was freezing while using google chrome browser
+      - connection suddenly stops/crashes
+      - clipboard issue (see below) seems to be fixed
+  * Thanks to Dr. Wolfgang Zweygart for testing and debugging!
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Wed, 10 Dec 2014 12:11:28 +0100
+
 freerdp-git (2.0-1.2-08) unstable; urgency=low
 
   * NEW:

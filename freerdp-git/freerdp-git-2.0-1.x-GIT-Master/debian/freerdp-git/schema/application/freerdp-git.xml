@@ -120,7 +120,7 @@
         <group name="ConnectionParameters">
             <label lang="de" value="Verbindungsparameter"/>
             <label lang="en" value="Connection parameter"/>
-            <entry name="Parameter">
+            <entry name="Parameter" value="-themes -encryption +gfx-h264 +gfx-progressive +gfx-thin-client">
                 <label lang="de" value="Manuelle Startparameter"/>
                 <label lang="en" value="Manual start parameters"/>
             </entry>
