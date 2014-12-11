@@ -1,3 +1,9 @@
+tcos-devices (2.0-19) unstable; urgency=low
+
+  * fixed some missing xml-files
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Thu, 11 Dec 2014 11:49:38 +0100
+
 tcos-devices (2.0-18) unstable; urgency=low
 
   * forgot 2nd display
