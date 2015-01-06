@@ -22,11 +22,8 @@ ExitAction = l.ENTRY.get('General.ExitAction', '')
 Port = l.ENTRY.get('Application.Port', '')
 Server = l.ENTRY.get('Application.Server', '')
 
-manualParameters = l.ENTRY.get('Application.ConnectionParameters.Parameter', '')
-if l.ENTRY.get('Application.ConnectionParameters.ProtocolSecurity', 'none') == 'none' :
-	ProtocolSecurity = ''
-else:
-	ProtocolSecurity = ' /sec:' + l.ENTRY.get('Application.ConnectionParameters.ProtocolSecurity', 'rdp')
+manualParameters = l.ENTRY.get('Application.ConnectionParameters.Parameter', '-themes -encryption +gfx-h264 +gfx-progressive +gfx-thin-client')
+ProtocolSecurity = ' /sec:' + l.ENTRY.get('Application.ConnectionParameters.ProtocolSecurity', 'rdp')
 
 Domain = l.ENTRY.get('Application.Account.Domain', '')
 User = l.ENTRY.get('Application.Account.User', '')
@@ -34,37 +31,32 @@ Password = l.ENTRY.get('Application.Account.Password', '')
 activateSSO = l.ENTRY.get('Application.Account.activateSSO','no')
 
 # color depth
-if l.ENTRY.get('Application.Window.ColorDepth', '32') == '_system_' :
+if l.ENTRY.get('Application.Window.ColorDepth', '_system_') == '_system_' :
 	ColorDepth = ' /bpp:' +  commands.getoutput('xwininfo -root | grep Depth | awk \'{print $2}\'')
 	#ColorDepth = ' /bpp:' + str(u.getScreenDepth()).strip('(\')') # u.getScreenDepth() sucks, it returns tuples
 else:
-	ColorDepth = ' /bpp:' + l.ENTRY.get('Application.Window.ColorDepth', '32')
-if l.ENTRY.get('Application.ConnectionParameters.KeyboardLayout', 'none') == 'none' :
-	KeyboardLayout = ''
-else:
-	KeyboardLayout = ' /kbd:' + l.ENTRY.get('Application.ConnectionParameters.KeyboardLayout', '0x00020409')
+	ColorDepth = ' /bpp:' + l.ENTRY.get('Application.Window.ColorDepth', '8')
+KeyboardLayout = ' /kbd:' + l.ENTRY.get('Application.ConnectionParameters.KeyboardLayout', '0x00020409')
 
 # set some  always used parameters in front of line 
 Parameters = ProtocolSecurity + ColorDepth + KeyboardLayout
 
 # add bool parameters if needed
-if l.ENTRY.get('Application.ConnectionParameters.Fullscreen', 'yes') == 'yes':  
-	Parameters += ' /f' 
 if l.ENTRY.get('Application.ConnectionParameters.redirectClipboard', 'no') == 'yes':  
 	Parameters += ' +clipboard' 
-if l.ENTRY.get('Application.ConnectionParameters.AudioMode', 'yes') == 'yes':
-	Parameters += ' /sound:sys:pulse'
+if l.ENTRY.get('Application.ConnectionParameters.AudioMode', 'no') == 'yes':
+	Parameters += ' /sound'
 if l.ENTRY.get('Application.ConnectionParameters.Mic', 'no') == 'yes':
 	Parameters += ' /microphone'
-if l.ENTRY.get('Application.ConnectionParameters.redirectSmartcard', 'yes') == 'yes':
-	Parameters += ' /smartcard'
-if l.ENTRY.get('Application.ConnectionParameters.redirectMedia', 'yes') == 'yes':
-	Parameters += ' "/drive:USB,/media"'	# we need to quote the parameter, otherwise os.system eats the commas
-if l.ENTRY.get('Application.ConnectionParameters.smoothFonts', 'no') == 'yes':
+if l.ENTRY.get('Application.ConnectionParameters.redirectSmartcard', 'no') == 'yes':
+	Parameters += ' /smartcard:0'
+if l.ENTRY.get('Application.ConnectionParameters.redirectMedia', 'no') == 'yes':
+	Parameters += ' "/a:drive,media,/media"'	# we need to quote the parameter, otherwise os.system eats the commas
+if l.ENTRY.get('Application.ConnectionParameters.smoothFonts', 'yes') == 'yes':
 	Parameters += ' +fonts'
-if l.ENTRY.get('Application.ConnectionParameters.GDIrendering', 'none') == 'hw':
+if l.ENTRY.get('Application.ConnectionParameters.GDIrendering', 'hw') == 'hw':
 	Parameters += ' /gdi:hw'
-elif l.ENTRY.get('Application.ConnectionParameters.GDIrendering', 'none') == 'sw':
+elif l.ENTRY.get('Application.ConnectionParameters.GDIrendering', 'hw') == 'sw':
 	Parameters += ' /gdi:sw'
 if l.ENTRY.get('Application.ConnectionParameters.remoteFX', 'no') == 'yes':
 	Parameters += ' /rfx'
@@ -77,7 +69,7 @@ if l.ENTRY.get('Application.ConnectionParameters.remoteFX', 'no') == 'yes':
 if l.ENTRY.get('Application.Window.Multimon', 'no') == 'yes':
 	Parameters += ' /f /multimon:force'
 else:	
-	WindowType = l.ENTRY.get('Application.Window.WindowType', 'none')
+	WindowType = l.ENTRY.get('Application.Window.WindowType', 'fullscreen_primary_TB')
 	#
 	# CAVAET: is the second display always the right one?
 	# What in case the user sets --left-of in xrandr?

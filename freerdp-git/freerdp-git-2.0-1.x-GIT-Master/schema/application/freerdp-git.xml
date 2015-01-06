@@ -72,7 +72,7 @@
                     <label lang="en" value="No"/>
                 </option>
             </choice>
-            <choice name="WindowType" value="none">
+            <choice name="WindowType" value="fullscreen_primary_TB">
                 <label lang="de" value="Fenstergrösse"/>
                 <label lang="en" value="Screen size"/>
                 <option value="fullscreen_primary_TB">
@@ -104,7 +104,7 @@
                 <label lang="de" value="Fensterhöhe"/>
                 <label lang="en" value="Window height"/>
             </entry>
-            <choice name="ColorDepth" value="__auto__">
+            <choice name="Depth" value="__auto__">
                 <label lang="de" value="Farbtiefe"/>
                 <label lang="en" value="Color depth"/>
                 <option name="auto" value="__auto__">
@@ -115,34 +115,20 @@
                 <option name="15 Bit" value="15"/>
                 <option name="16 Bit" value="16"/>
                 <option name="24 Bit" value="24"/>
-                <option name="32 Bit" value="32"/>
             </choice>
         </group>
         <group name="ConnectionParameters">
             <label lang="de" value="Verbindungsparameter"/>
             <label lang="en" value="Connection parameter"/>
-            <entry name="Parameter" value="">
+            <entry name="Parameter" value="-themes -encryption +gfx-h264 +gfx-progressive +gfx-thin-client">
                 <label lang="de" value="Manuelle Startparameter"/>
                 <label lang="en" value="Manual start parameters"/>
             </entry>
-            <choice name="ProtocolSecurity" value="none">
+            <choice name="ProtocolSecurity" value="rdp">
                 <label lang="de" value="Sicherheitsprotokoll"/>
                 <label lang="en" value="Protocol security"/>
-                <option name="none" value="none"/>
                 <option name="RDP" value="rdp"/>
                 <option name="NLA" value="nla"/>
-            </choice>
-            <choice name="Fullscreen" value="yes">
-                <label lang="de" value="Vollbild"/>
-                <label lang="en" value="Fullscreen"/>
-                <option name="no" value="no">
-                    <label lang="de" value="Nein"/>
-                    <label lang="en" value="No"/>
-                </option>
-                <option name="yes" value="yes">
-                    <label lang="de" value="Ja"/>
-                    <label lang="en" value="Yes"/>
-                </option>
             </choice>
             <choice name="redirectClipboard (beta)" value="no">
                 <label lang="de" value="Clipboard übertragen"/>
@@ -156,7 +142,7 @@
                     <label lang="en" value="No"/>
                 </option>
             </choice>
-            <choice name="AudioMode" value="yes">
+            <choice name="AudioMode" value="no">
                 <label lang="de" value="Soundausgabe übertragen (beta)"/>
                 <label lang="en" value="Redirect sound output (beta)"/>
                 <option name="yes" value="yes">
@@ -180,7 +166,7 @@
                     <label lang="en" value="No"/>
                 </option>
             </choice>
-            <choice name="smoothFonts" value="no">
+            <choice name="smoothFonts" value="yes">
 	      <label lang="de" value="Schriften glätten"/>
 	      <label lang="en" value="Smooth fonts"/>
 	      <option name="yes" value="yes">
@@ -192,7 +178,7 @@
 		<label lang="en" value="No"/>
 	      </option>
 	  </choice>
-          <choice name="GDIrendering" value="none">
+          <choice name="GDIrendering" value="hw">
 	    <label lang="de" value="GDI rendering"/>
 	    <label lang="en" value="GDI rendering"/>
 	    <option value="hw">
@@ -244,10 +230,9 @@
 				<label lang="en" value="no"/>
 			</option>
 		</choice-->
-            <choice name="KeyboardLayout" value="none">
+            <choice name="KeyboardLayout" value="0x00020409">
                 <label lang="de" value="Tastatur Layout"/>
                 <label lang="en" value="Keyboard layout"/>
-                <option name="default" value="none"/>
                 <option name="UnitedStates-International" value="0x00020409"/>
                 <option name="Arabic(101)" value="0x00000401"/>
                 <option name="Bulgarian" value="0x00000402"/>
@@ -405,7 +390,7 @@
 				<label lang="en" value="no"/>
 			</option>
 		</choice-->
-            <choice name="redirectMedia" value="yes">
+            <choice name="redirectMedia" value="no">
                 <label lang="de" value="USB Datenträger verbinden"/>
                 <label lang="en" value="Connect USB storage devices"/>
                 <option name="yes" value="yes">
@@ -417,7 +402,7 @@
                     <label lang="en" value="No"/>
                 </option>
             </choice>
-            <choice name="redirectSmartcard" value="yes">
+            <choice name="redirectSmartcard" value="no">
                 <label lang="de" value="Smartcard verbinden"/>
                 <label lang="en" value="Connect smartcards"/>
                 <option name="yes" value="yes">
