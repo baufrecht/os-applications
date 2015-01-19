@@ -4,25 +4,25 @@ Source: tcos-libs
 Binary: tcos-libs
 Architecture: source i386
 Version: 2.0-12
-Distribution: UNRELEASED
+Distribution: unstable
 Urgency: medium
 Maintainer: Steffen Hoenig <s.hoenig@openthinclient.com>
 Changed-By: Steffen Hoenig <s.hoenig@openthinclient.com>
 Description: 
  tcos-libs  - python libraries for openthinclient
 Changes: 
- tcos-libs (2.0-12) UNRELEASED; urgency=medium
+ tcos-libs (2.0-12) unstable; urgency=medium
  .
    * merged Andreas' additions: client groups
 Checksums-Sha1: 
- 4f2fa7c20422c8291345375f268cec1a8e29ce8e 523 tcos-libs_2.0-12.dsc
- a527cc8d4bbc7f6026f4aab5bae50132b9e2b652 41458 tcos-libs_2.0-12.tar.gz
- 0a901381d936aaa13e56d51badd0e024c420bdd9 13340 tcos-libs_2.0-12_i386.deb
+ 0c884ecdc6eb6241ea16d2837b617f6bfaf05a95 523 tcos-libs_2.0-12.dsc
+ b06a63420085b37375a5fcfa8d4578dd7eb0428d 41908 tcos-libs_2.0-12.tar.gz
+ 7058ac85636765d58e143c6621b8e6ddb8b27164 13340 tcos-libs_2.0-12_i386.deb
 Checksums-Sha256: 
- fb4db70d46b06a096861fcfee74f722ce90af84ee14a402e1e6876e832a33b12 523 tcos-libs_2.0-12.dsc
- d85c98b542a54e640f78d89d60e6189e3cca3f7b0d0476a56198df4a5fae840d 41458 tcos-libs_2.0-12.tar.gz
- 5a621ae8648dd0bac6ea0afab298a0a1b9e009203f6e905bc7d13f45fed527e5 13340 tcos-libs_2.0-12_i386.deb
+ 5d315b8a1116ec457615fb260db1bf1ee9d10e21e5c5ba2167225771ebd15d7a 523 tcos-libs_2.0-12.dsc
+ c94cabdc1c7469b1be31e1081abe4c2658eef198030e7a29b4a73062a52d6b3c 41908 tcos-libs_2.0-12.tar.gz
+ ddb88961084b41e595aa822087e623f798a5ef43a94d86d21c34b00854aeccac 13340 tcos-libs_2.0-12_i386.deb
 Files: 
- 32ae1890f455481323ed9cc1a19feb78 523 unknown optional tcos-libs_2.0-12.dsc
- 9724e78c58f0f2cb7a972d7cd7ffecb1 41458 unknown optional tcos-libs_2.0-12.tar.gz
- f8f40ce062cfdc679faa0046e749a93e 13340 unknown optional tcos-libs_2.0-12_i386.deb
+ e2d69e7d898e9fee640a45cb38ac5203 523 unknown optional tcos-libs_2.0-12.dsc
+ f2d99d0d04cad1f7bfc7adb6d29da582 41908 unknown optional tcos-libs_2.0-12.tar.gz
+ 31354df8c4a6c3da0d92f1ade8337dca 13340 unknown optional tcos-libs_2.0-12_i386.deb

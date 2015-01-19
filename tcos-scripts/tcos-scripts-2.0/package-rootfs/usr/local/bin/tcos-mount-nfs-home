@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 # Standard modules
-# standard modules
 import string
 #import shutil
 #import signal
@@ -58,7 +57,7 @@ persistenthomeFound = False
 
 for device in devices_dn:
     deviceType = ld.getGroupOfUniqueNamesInfo(device, ldap_url)["schema"]
-   # print deviceType
+    # print deviceType
     if deviceType == "persistenthome":
         if persistenthomeFound: 
             print >>sys.stderr, 'WARNING: Found more than one persistanthome asigned to this client. Using only the first one.'
@@ -70,13 +69,13 @@ for device in devices_dn:
         #Commands basteln
         NFSMountCommand = mountcmd + ' ' + mountopt + ' ' + nfsserver + ':' + mountdir_remote + '/' + macvsuser + ' ' + mountdir_local + '/' + "tcos"
         NFSMountCommand_home = mountcmd + ' ' + mountopt + ' ' + nfsserver + ':' + mountdir_remote + ' ' + mountdir_local
+
         # print NFSMountCommand
         # ersteinmal alle homes Mounten ob nachzuschauen ob MAC (oder User) schon vorhanden ist:
         try:
            returnCode = os.system(NFSMountCommand_home)
         except:
            print returnCode
-
 
         if os.path.exists(mountdir_local + '/' + macvsuser):
            try:
@@ -92,6 +91,14 @@ for device in devices_dn:
                 
             except:
                 print returnCode
+        
+        # have a workaround for pulse audio
+        # this should fix: https://github.com/openthinclient/os-core/issues/19
+        #
+        returnCode = os.system('target=$(mktemp -d --tmpdir=/tmp .pulse_tcos_bindmount_target_XXXXXX); \
+                                mkdir -p /home/tcos/.pulse; \
+                                sudo mount -o bind,uid=1000,gid=1000 $target /home/tcos/.pulse')
     else:
         exit
 
+ 

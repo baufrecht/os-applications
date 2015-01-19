@@ -8,7 +8,7 @@ Standards-Version: 3.9.3
 
 Package: tcos-scripts
 Architecture: any
-Depends: base (>= 2.0-22)
+Depends: base (>= 2.0-25)
 Conflicts: initscripts-tcos
 Description: tcos client scripts
  This scripts are takeing care about the clients configuration,

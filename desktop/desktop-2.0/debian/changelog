@@ -1,6 +1,6 @@
 desktop (2.0-15) unstable; urgency=low
 
-  * fixed caja popping up after "conf update"
+  * fixed caja popping up after "dconf update"
      - this was really annoying
      - chmod the binary of caja to 000 before and back again to 755 after calling dconf
 

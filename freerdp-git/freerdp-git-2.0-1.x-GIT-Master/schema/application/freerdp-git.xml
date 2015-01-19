@@ -120,7 +120,7 @@
         <group name="ConnectionParameters">
             <label lang="de" value="Verbindungsparameter"/>
             <label lang="en" value="Connection parameter"/>
-            <entry name="Parameter">
+            <entry name="Parameter" value="-themes -encryption +gfx-h264 +gfx-progressive +gfx-thin-client">
                 <label lang="de" value="Manuelle Startparameter"/>
                 <label lang="en" value="Manual start parameters"/>
             </entry>
@@ -130,7 +130,7 @@
                 <option name="RDP" value="rdp"/>
                 <option name="NLA" value="nla"/>
             </choice>
-            <choice name="redirectClipboard" value="yes">
+            <choice name="redirectClipboard (beta)" value="no">
                 <label lang="de" value="Clipboard übertragen"/>
                 <label lang="en" value="Redirect clipboard"/>
                 <option name="yes" value="yes">

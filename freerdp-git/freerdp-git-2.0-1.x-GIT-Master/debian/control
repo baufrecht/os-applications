@@ -6,7 +6,7 @@ Standards-Version: 3.6.2
 
 Package: freerdp-git
 Architecture: any
-Depends: base (>= 2.0-17)
+Depends: base (>= 2.0-25)
 Description: RDP client for Windows Terminal Services (GIT version)
  FreeRDP is a client for Windows Terminal Services implementing the Remote
  Desktop Protocol (RDP).
