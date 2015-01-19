@@ -1,0 +1,29 @@
+Format: 1.8
+Date: Tue, 25 Nov 2014 21:38:30 +0100
+Source: rdesktop
+Binary: rdesktop
+Architecture: source i386
+Version: 2.0-1.8.2-4
+Distribution: unstable
+Urgency: low
+Maintainer: Joern Frenzel <t.bauspiess@openthinclient.com>
+Changed-By: Steffen Hoenig <s.hoenig@openthinclient.com>
+Description: 
+ rdesktop   - RDP client for Windows NT/2000 Terminal Server
+Changes: 
+ rdesktop (2.0-1.8.2-4) unstable; urgency=low
+ .
+   * added raddin capapbility (oop.patch)
+   * reorganized version selection
+Checksums-Sha1: 
+ 5b2fd168ef5a89e0726db72a350de9885cdc7657 539 rdesktop_2.0-1.8.2-4.dsc
+ 2035a00d2b9cf8a409846376b69a628aff4de7d7 465812 rdesktop_2.0-1.8.2-4.tar.gz
+ b444a0859d098be5040b5ecd46591222ad8d0f78 464828 rdesktop_2.0-1.8.2-4_i386.deb
+Checksums-Sha256: 
+ 0283bf25a1e844fc81a9c04571e5d2d05788ced89e1480bdecce7890cb342f36 539 rdesktop_2.0-1.8.2-4.dsc
+ 562a35572015a77b9cb908a14cd8462304c8509cb0abbe8491b9870a19bcf4b5 465812 rdesktop_2.0-1.8.2-4.tar.gz
+ 6271e6a383a798fab36b4c7f1cce4610534bde88f2677250921167faa80382e9 464828 rdesktop_2.0-1.8.2-4_i386.deb
+Files: 
+ 443a6dcf02fcc62cc02e03521bee91f3 539 x11 optional rdesktop_2.0-1.8.2-4.dsc
+ 55ec63f33b0c1cdea6fd7a92392a8d6e 465812 x11 optional rdesktop_2.0-1.8.2-4.tar.gz
+ 50bfacbdadb779fa8bae9e67743d05e9 464828 x11 optional rdesktop_2.0-1.8.2-4_i386.deb

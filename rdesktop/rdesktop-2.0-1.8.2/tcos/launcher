@@ -38,7 +38,9 @@ elif WindowType == 'manual':
 
 # WindowType can also get value "none"
 # this is for SeamlessRDP mode
-
+manual_parameter = l.ENTRY.get('Application.Connection.Parameter','')
+if manual_parameter != "":
+    parameter += ' ' + manual_parameter
 
 if l.ENTRY.get('Application.Connection.Numlock', 'True') != 'False':
 	parameter += ' -N '
@@ -115,7 +117,8 @@ if start_deferral != 0 :
 #
 server_list = l.ENTRY.get('Application.Server', 'tserver').split()
 
-if l.ENTRY.get('General.Rdesktop_legacy', ''):
+version =l.ENTRY.get('General.Version', '1.7.1')
+if version == "1.7.1":
     app="/usr/bin/rdesktop"
 else:
     app="/opt/rdesktop/bin/rdesktop"

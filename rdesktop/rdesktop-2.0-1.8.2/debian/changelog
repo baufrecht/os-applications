@@ -1,3 +1,17 @@
+rdesktop (2.0-1.8.2-4) unstable; urgency=low
+
+  * added raddin capapbility (oop.patch)
+  * reorganized version selection
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Tue, 25 Nov 2014 21:38:30 +0100
+
+rdesktop (2.0-1.8.2-3) unstable; urgency=medium
+
+  * fixes naming issues in rdesktop.xml and manual start parameters
+  * fixes issues with rdesktop bin
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Wed, 15 Oct 2014 21:23:20 +0200
+
 rdesktop (2.0-1.8.2-1) unstable; urgency=medium
 
   * switched rdesktop 1.8 to default and the 1.7 to legacy

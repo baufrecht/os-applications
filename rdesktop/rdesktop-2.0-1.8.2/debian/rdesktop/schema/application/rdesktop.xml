@@ -17,16 +17,16 @@
                                 <label lang="de" value="Nein"/>
                         </option>
                 </choice>
-                <choice name="Rdesktop_legacy" value="No">
-                        <label lang="en" value="rdesktop (legacy)"/>
-                        <label lang="de" value="rdesktop (legacy)"/>
-                        <option name="Yes" value="Yes">
-                                <label lang="en" value="Yes"/>
-                                <label lang="de" value="Ja"/>
+                <choice name="Version" value="1.7.1">
+                        <label lang="en" value="version"/>
+                        <label lang="de" value="Version"/>
+                        <option name="rdesktop_17" value="1.7.1">
+			    <label lang="en" value="1.7.1"/>
+			    <label lang="de" value="1.7.1"/>
                         </option>
-                        <option name="No" value="No">
-                                <label lang="en" value="No"/>
-                                <label lang="de" value="Nein"/>
+                        <option name="rdesktop_18" value="1.8.2">
+			    <label lang="en" value="1.8.2"/>
+			    <label lang="de" value="1.8.2"/>
                         </option>
                 </choice>
 		<entry name="custom_icon" value="">
@@ -122,7 +122,7 @@
 				<option name="24 Bit" value="24"/>
 			</choice>
 		</group>
-		<group name="ConnectionParameters">
+		<group name="Connection">
 			<label lang="de" value="Verbindungparamter"/>
 			<label lang="en" value="connection parameter"/>
 			<entry name="Parameter">
@@ -237,7 +237,6 @@
 					<label lang="en" value="No"/>
 				</option>
 			</choice>
-			
 		</group>
 		<group name="Account">
 		<choice name="ActivateSSO" value="No">
