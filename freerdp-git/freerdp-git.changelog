@@ -1,3 +1,17 @@
+freerdp-git (2.0-1.2-11) unstable; urgency=low
+
+  * fixed a nasty bug in getting credentials for NLA connects
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Thu, 29 Jan 2015 11:46:27 +0100
+
+freerdp-git (2.0-1.2-10) unrelease; urgency=low
+
+  * have dialog for username and password to support nla
+  * new options nla and cert-ignore
+  * have new option to choose binary
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Tue, 27 Jan 2015 18:15:33 +0100
+
 freerdp-git (2.0-1.2-09) unstable; urgency=low
 
   * new build from git master branch as of todays morning

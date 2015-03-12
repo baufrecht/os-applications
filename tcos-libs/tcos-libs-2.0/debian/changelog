@@ -1,3 +1,10 @@
+tcos-libs (2.0-13) unstable; urgency=low
+
+  * tcos.py fixed wrong paht for custom icons
+  * tcos.py new function to username and password, supporting the usage of sso
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Tue, 27 Jan 2015 18:47:04 +0100
+
 tcos-libs (2.0-12) unstable; urgency=medium
 
   * merged Andreas' additions: client groups 

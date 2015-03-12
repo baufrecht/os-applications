@@ -338,8 +338,63 @@ class Util(Logger):
     def shellQuoteList(self, args):
         return " ".join([self.shellQuote(arg) for arg in args])
 
-# TODO: move System class to Util class?
+    def getUserPass(self, useSSO="no", dialogTitle="Login"):
+        if useSSO == "yes" and os.getenv('USER') != "tcos":
+            username = os.getenv('USER')
+            tcostoken = os.getenv('TCOS_TOKEN')
+            if username != None and tcostoken != None:
+                username = self.shellQuote(username)
+                try:
+                    if os.path.isfile('/usr/local/bin/sso-tcos-auth'):
+                        auth = os.popen('/usr/local/bin/sso-tcos-auth')
+                        password = auth.read()
+                        auth.close()
+                        if password != '':
+                            password = self.shellQuote(password)
+                            return [username, password]
+                        else :
+                            raise Exception('Password from SSO was empty.')
+                except:
+                    pass
+
+        dialog = gtk.Dialog(dialogTitle,
+                            None,
+                            gtk.DIALOG_MODAL | gtk.DIALOG_DESTROY_WITH_PARENT,
+                            (gtk.STOCK_CANCEL, gtk.RESPONSE_REJECT,
+                             gtk.STOCK_OK, gtk.RESPONSE_ACCEPT))
+        dialog.set_default_response(gtk.RESPONSE_ACCEPT)
+        userbox = gtk.HBox(True)
+        user_label = gtk.Label('Username:')
+        userbox.pack_start(user_label)
+        user_input = gtk.Entry()
+        user_input.set_activates_default(True)
+        userbox.pack_start(user_input)
+        dialog.vbox.pack_start(userbox)
+        passbox = gtk.HBox(True)
+        pass_label = gtk.Label('Password:')
+        passbox.pack_start(pass_label)
+        pass_input = gtk.Entry()
+        pass_input.set_activates_default(True)
+        pass_input.set_visibility(False)
+        passbox.pack_start(pass_input)
+        dialog.vbox.pack_start(passbox)
+        dialog.show_all()
+        dialog_response = dialog.run()
+        if dialog_response == gtk.RESPONSE_ACCEPT:
+            username = self.shellQuote(user_input.get_text())
+            password = self.shellQuote(pass_input.get_text())
+            if username and password:
+                dialog.destroy()
+                return [username, password]
+        else:
+            dialog.destroy()
+            return None
+        dialog.destroy()
+        return []
+
+
 class System(Logger):
+    import gtk
     def __init__(self):
         # self.LOG is filled and needed by Logger.log()
         self.LOG = []
@@ -1000,8 +1055,10 @@ class Ldap(Logger):
 
     def getAppgroupsDn(self, client_dn, user_dn, ldap_url):
         usergroups = self.getUsergroupsDn(user_dn, ldap_url)
+        clientgroups = self.getClientgroupsDn(client_dn, ldap_url)
         direct_appgroups = self.getGroupOfUniqueNamesDn("appgroups",
                                                         usergroups +
+                                                        clientgroups +
                                                         [user_dn, client_dn],
                                                         ldap_url)
         appgroups = self.getGroupOfUniqueNamesDnRecursiv("appgroups",
@@ -1009,12 +1066,25 @@ class Ldap(Logger):
                                                          ldap_url)
         return appgroups
 
+    def getClientgroupsDn(self, client_dn, ldap_url):
+        direct_clientgroups = self.getGroupOfUniqueNamesDn("clientgroups",
+                                                           client_dn,
+                                                           ldap_url)
+        clientgroups = self.getGroupOfUniqueNamesDnRecursiv("clientgroups",
+                                                            direct_clientgroups,
+                                                            ldap_url)
+        return clientgroups
+
     def getAppsDn(self, client_dn, user_dn, ldap_url):
         appgroups = self.getAppgroupsDn(client_dn, user_dn, ldap_url)
+        clientgroups = self.getClientgroupsDn(client_dn, ldap_url)
         usergroups = self.getUsergroupsDn(user_dn, ldap_url)
         apps_for_appgroups = self.getGroupOfUniqueNamesDn("apps",
                                                           appgroups,
                                                           ldap_url)
+        apps_for_clientgroups = self.getGroupOfUniqueNamesDn("apps",
+                                                             clientgroups,
+                                                             ldap_url)
         apps_for_usergroups = self.getGroupOfUniqueNamesDn("apps",
                                                            usergroups,
                                                            ldap_url)
@@ -1025,6 +1095,7 @@ class Ldap(Logger):
                                                      [user_dn],
                                                      ldap_url)
         apps = apps_for_appgroups + \
+	       apps_for_clientgroups + \
                apps_for_usergroups + \
                apps_for_client + \
                apps_for_user
@@ -1223,7 +1294,7 @@ class Desktop(Logger):
             app_exec = None
             app_icon = None
         if app_icon_custom:
-            app_icon = "/var/tcos/custom/icons/" + app_icon_custom
+            app_icon = "/tcos/link/custom/icons/" + app_icon_custom
 
         new_desktop_file_entries = self.getDesktopFileEntries(merge_desktop_filename)
         if new_desktop_file_entries.has_key("X-TCOS-EXECFIELDCODE"):

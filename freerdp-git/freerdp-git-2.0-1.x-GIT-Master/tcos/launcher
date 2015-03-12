@@ -11,8 +11,26 @@ import tempfile
 import commands
 import pytcos.tcos as tcos
 
+
+# TODO
+# Grep for authentication error in case of NLA usage and react
+# Prevent a loop in case of NLA and exitaction = restart
+# double check the funtionality of NLA with external credentials
+# implement TLS for compatibility in case of expired password
+
+
+
 # to have a test
 # /usr/bin/xfreerdp /sec:rdp /bpp:16 /kbd:0x00000407 +clipboard /a:smartcard /a:drive,media,/media /w:1024 /h:768 /d:opentc /v:otc-tserver /u:user /p:lalal
+
+
+# are we in debug mode?
+if os.getenv('DEBUG', None) == "TRUE" or os.getenv('DEBUG', None) == "true": 
+        debug = True
+else :
+        debug = False
+
+
 
 l = tcos.Launcher()
 u = tcos.Util()
@@ -23,23 +41,24 @@ Port = l.ENTRY.get('Application.Port', '')
 Server = l.ENTRY.get('Application.Server', '')
 
 manualParameters = l.ENTRY.get('Application.ConnectionParameters.Parameter', '-themes -encryption +gfx-h264 +gfx-progressive +gfx-thin-client')
-ProtocolSecurity = ' /sec:' + l.ENTRY.get('Application.ConnectionParameters.ProtocolSecurity', 'rdp')
+ProtocolSecurity = l.ENTRY.get('Application.ConnectionParameters.ProtocolSecurity', 'nla')
+ValidateCert = l.ENTRY.get('Application.ConnectionParameters.ValidateCert', 'no')
 
 Domain = l.ENTRY.get('Application.Account.Domain', '')
-User = l.ENTRY.get('Application.Account.User', '')
-Password = l.ENTRY.get('Application.Account.Password', '')
+User = u.shellQuote(l.ENTRY.get('Application.Account.User', ''))
+Password = u.shellQuote(l.ENTRY.get('Application.Account.Password', ''))
 activateSSO = l.ENTRY.get('Application.Account.activateSSO','no')
 
 # color depth
 if l.ENTRY.get('Application.Window.ColorDepth', '_system_') == '_system_' :
-	ColorDepth = ' /bpp:' +  commands.getoutput('xwininfo -root | grep Depth | awk \'{print $2}\'')
-	#ColorDepth = ' /bpp:' + str(u.getScreenDepth()).strip('(\')') # u.getScreenDepth() sucks, it returns tuples
+	ColorDepth = commands.getoutput('xwininfo -root | grep Depth | awk \'{print $2}\'')
+	#ColorDepth = str(u.getScreenDepth()).strip('(\')') # u.getScreenDepth() sucks, it returns tuples
 else:
 	ColorDepth = ' /bpp:' + l.ENTRY.get('Application.Window.ColorDepth', '8')
-KeyboardLayout = ' /kbd:' + l.ENTRY.get('Application.ConnectionParameters.KeyboardLayout', '0x00020409')
+KeyboardLayout = l.ENTRY.get('Application.ConnectionParameters.KeyboardLayout', '0x00020409')
 
 # set some  always used parameters in front of line 
-Parameters = ProtocolSecurity + ColorDepth + KeyboardLayout
+Parameters = ' /sec:' + ProtocolSecurity + ' /bpp:' +  ColorDepth +  ' /kbd:' + KeyboardLayout
 
 # add bool parameters if needed
 if l.ENTRY.get('Application.ConnectionParameters.redirectClipboard', 'no') == 'yes':  
@@ -96,38 +115,39 @@ if Domain != '': Parameters += ' /d:' + Domain
 if Port != '': Parameters += ' /port:' + Port
 if Server != '': Parameters += ' /v:' + Server
 
-# SSo vs. no SSO
-if activateSSO != 'yes':
-	# if SSO is NOT used
-	if User != '': 
-		Parameters += ' /u:' + User 
-		if Password != '': 
-			Parameters += ' /p:' + Password
-else:
-	# if SSO is used
-	User = os.getenv('USER') # get systems username
-	UserToken = os.getenv('TCOS_TOKEN')
-	if User != "tcos" and User != "" and UserToken != None:
-		Parameters += ' /u:' + User 
-		try:
-                        if os.path.isfile('/usr/local/bin/sso-tcos-auth'):
-                                Auth = os.popen('/usr/local/bin/sso-tcos-auth')
-                                Password = Auth.read()
-                                Auth.close()
-                                if Password != "":
-                                        Parameters += ' /p:' + Password
-                except:
-                        pass
+# NLA always requieres to know the user and password 
+#
+if ProtocolSecurity == 'nla' :
+	if activateSSO == 'yes' :
+		User, Password = u.getUserPass('yes', 'Login for Windows')
+	else :
+		User, Password = u.getUserPass('no', 'Login for Windows')
+	if User == '\'\'' or Password == '\'\''  :
+		os.system('zenity --error --text "Fehlerhafte Anmeldung.\nWrong authentication."')
+		sys.exit()
 
-#StartCmdline = ' '.join(['/usr/bin/xfreerdp', 
-	#Parameters.strip()
-	#])
+elif ProtocolSecurity == 'rdp' and activateSSO == 'yes' :
+ 	User, Password = u.getUserPass('yes', 'Login for Windows')
 
+if ValidateCert == 'no' :
+	Parameters += ' /cert-ignore' 
 
-StartCmdline = '/opt/freerdp-git/bin/xfreerdp' + Parameters
+# Use password only in conjunction with user
+if User != '' and User != '\'\''  :
+	Parameters += ' /u:' + User 
+	if Password != '' and Password != '\'\''  :
+		Parameters += ' /p:' + Password 
 
-#print StartCmdline
-#sys.exit()
+#if User != '' : 
+#	Parameters += ' /u:' + User 
+
+# StartCmdline = ' '.join(['/usr/bin/xfreerdp', Parameters.strip()])
+
+StartCmdline = l.ENTRY.get('General.Version', '/opt/freerdp-git/bin/xfreerdp') + Parameters
+
+if debug :
+	print StartCmdline
+	sys.exit()
 
 while True:
 	returncode = os.system(StartCmdline)
@@ -139,3 +159,4 @@ elif ExitAction == 'Reboot':
 	os.system("tcos-reboot")
 elif ExitAction == 'Shutdown':
 	os.system("tcos-shutdown")
+
