@@ -1,3 +1,9 @@
+tcos-libs (2.0-14) unstable; urgency=low
+
+  * sourced out all gtk-stuff to tcos_gtk.py
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Wed, 04 Mar 2015 16:52:49 +0100
+
 tcos-libs (2.0-13) unstable; urgency=low
 
   * tcos.py fixed wrong paht for custom icons
@@ -7,7 +13,7 @@ tcos-libs (2.0-13) unstable; urgency=low
 
 tcos-libs (2.0-12) unstable; urgency=medium
 
-  * merged Andreas' additions: client groups 
+  * merged Andreas' additions: client groups
 
  -- Steffen Hoenig <s.hoenig@openthinclient.com>  Wed, 01 Oct 2014 17:36:29 +0200
 
@@ -19,7 +25,7 @@ tcos-libs (2.0-11) unstable; urgency=low
 
 tcos-libs (2.0-10) unstable; urgency=low
 
-  * NEW: debug.py for embedding 
+  * NEW: debug.py for embedding
   * FIX: adapted the behaviour of UserGroups as we did in 2.0-9 for Users
 
  -- Steffen Hoenig <s.hoenig@openthinclient.com>  Thu, 03 Jul 2014 18:51:06 +0200

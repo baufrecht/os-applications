@@ -10,14 +10,16 @@ import sys
 import tempfile
 import commands
 import pytcos.tcos as tcos
+import pytcos.tcos_gtk as tcos_gtk
 
 
 # TODO
-# Grep for authentication error in case of NLA usage and react
-# Prevent a loop in case of NLA and exitaction = restart
-# double check the funtionality of NLA with external credentials
-# implement TLS for compatibility in case of expired password
+# Grep for authentication error in case of NLA or TLS usage and react
 
+# Done
+# implement TLS for compatibility in case of expired password
+# prevent a lethal loop in case of NLA or TLS and exitaction = restart
+# double check the funtionality of NLA with external credentials
 
 
 # to have a test
@@ -30,24 +32,23 @@ if os.getenv('DEBUG', None) == "TRUE" or os.getenv('DEBUG', None) == "true":
 else :
         debug = False
 
-
-
 l = tcos.Launcher()
 u = tcos.Util()
+u_gtk = tcos_gtk.Util()
 
 ExitAction = l.ENTRY.get('General.ExitAction', '')
-
 Port = l.ENTRY.get('Application.Port', '')
 Server = l.ENTRY.get('Application.Server', '')
 
 manualParameters = l.ENTRY.get('Application.ConnectionParameters.Parameter', '-themes -encryption +gfx-h264 +gfx-progressive +gfx-thin-client')
-ProtocolSecurity = l.ENTRY.get('Application.ConnectionParameters.ProtocolSecurity', 'nla')
+ProtocolSecurity = l.ENTRY.get('Application.ConnectionParameters.ProtocolSecurity', 'tls')
 ValidateCert = l.ENTRY.get('Application.ConnectionParameters.ValidateCert', 'no')
 
 Domain = l.ENTRY.get('Application.Account.Domain', '')
 User = u.shellQuote(l.ENTRY.get('Application.Account.User', ''))
 Password = u.shellQuote(l.ENTRY.get('Application.Account.Password', ''))
 activateSSO = l.ENTRY.get('Application.Account.activateSSO','no')
+
 
 # color depth
 if l.ENTRY.get('Application.Window.ColorDepth', '_system_') == '_system_' :
@@ -57,106 +58,103 @@ else:
 	ColorDepth = ' /bpp:' + l.ENTRY.get('Application.Window.ColorDepth', '8')
 KeyboardLayout = l.ENTRY.get('Application.ConnectionParameters.KeyboardLayout', '0x00020409')
 
-# set some  always used parameters in front of line 
-Parameters = ' /sec:' + ProtocolSecurity + ' /bpp:' +  ColorDepth +  ' /kbd:' + KeyboardLayout
-
-# add bool parameters if needed
-if l.ENTRY.get('Application.ConnectionParameters.redirectClipboard', 'no') == 'yes':  
-	Parameters += ' +clipboard' 
-if l.ENTRY.get('Application.ConnectionParameters.AudioMode', 'no') == 'yes':
-	Parameters += ' /sound'
-if l.ENTRY.get('Application.ConnectionParameters.Mic', 'no') == 'yes':
-	Parameters += ' /microphone'
-if l.ENTRY.get('Application.ConnectionParameters.redirectSmartcard', 'no') == 'yes':
-	Parameters += ' /smartcard:0'
-if l.ENTRY.get('Application.ConnectionParameters.redirectMedia', 'no') == 'yes':
-	Parameters += ' "/a:drive,media,/media"'	# we need to quote the parameter, otherwise os.system eats the commas
-if l.ENTRY.get('Application.ConnectionParameters.smoothFonts', 'yes') == 'yes':
-	Parameters += ' +fonts'
-if l.ENTRY.get('Application.ConnectionParameters.GDIrendering', 'hw') == 'hw':
-	Parameters += ' /gdi:hw'
-elif l.ENTRY.get('Application.ConnectionParameters.GDIrendering', 'hw') == 'sw':
-	Parameters += ' /gdi:sw'
-if l.ENTRY.get('Application.ConnectionParameters.remoteFX', 'no') == 'yes':
-	Parameters += ' /rfx'
-
-#if l.ENTRY.get('Application.ConnectionParameters.', 'no') == 'yes':
-#	Parameters += ''
-
-# all the window positioning stuff
-#
-if l.ENTRY.get('Application.Window.Multimon', 'no') == 'yes':
-	Parameters += ' /f /multimon:force'
-else:	
-	WindowType = l.ENTRY.get('Application.Window.WindowType', 'fullscreen_primary_TB')
-	#
-	# CAVAET: is the second display always the right one?
-	# What in case the user sets --left-of in xrandr?
-	#
-	if WindowType == 'fullscreen_primary':
-		Parameters += ' /f /monitors:0 ' 
-	elif WindowType == 'fullscreen_primary_TB':
-		if os.getenv('firstscreenWidth') == "" or os.getenv('firstscreenHeigth') == "" :
-			Parameters += ' /f /monitors:0 ' # fallback
-		else:
-			Parameters += ' -decorations /size:' + os.getenv('firstscreenWidth') + 'x' + str(int(os.getenv('firstscreenHeigth'))-25) + '+0+25' + ' /monitors:0 ' 
-	elif WindowType == 'fullscreen_secondary':
-		Parameters += ' /f /monitors:1 ' 
-	elif WindowType == 'manual':
-		#  have window decoration while using manual size
-		Parameters += ' +decorations /size:' + l.ENTRY.get('Application.Window.Width', '800') + 'x' + l.ENTRY.get('Application.Window.Height', '600') + ' '
-
-	
-# have the manual parameters 	
-Parameters += ' ' + manualParameters
-	
-# add session credentials if not empty
-if Domain != '': Parameters += ' /d:' + Domain 
-if Port != '': Parameters += ' /port:' + Port
-if Server != '': Parameters += ' /v:' + Server
-
-# NLA always requieres to know the user and password 
-#
-if ProtocolSecurity == 'nla' :
-	if activateSSO == 'yes' :
-		User, Password = u.getUserPass('yes', 'Login for Windows')
-	else :
-		User, Password = u.getUserPass('no', 'Login for Windows')
-	if User == '\'\'' or Password == '\'\''  :
-		os.system('zenity --error --text "Fehlerhafte Anmeldung.\nWrong authentication."')
-		sys.exit()
-
-elif ProtocolSecurity == 'rdp' and activateSSO == 'yes' :
- 	User, Password = u.getUserPass('yes', 'Login for Windows')
-
-if ValidateCert == 'no' :
-	Parameters += ' /cert-ignore' 
-
-# Use password only in conjunction with user
-if User != '' and User != '\'\''  :
-	Parameters += ' /u:' + User 
-	if Password != '' and Password != '\'\''  :
-		Parameters += ' /p:' + Password 
-
-#if User != '' : 
-#	Parameters += ' /u:' + User 
-
-# StartCmdline = ' '.join(['/usr/bin/xfreerdp', Parameters.strip()])
-
-StartCmdline = l.ENTRY.get('General.Version', '/opt/freerdp-git/bin/xfreerdp') + Parameters
-
-if debug :
-	print StartCmdline
-	sys.exit()
 
 while True:
-	returncode = os.system(StartCmdline)
-	if ExitAction != 'Restart':
-		break
-if ExitAction == 'Logout':
+    #
+    # set some  always used parameters in front of line 
+    Parameters = ' /sec:' + ProtocolSecurity + ' /bpp:' +  ColorDepth +  ' /kbd:' + KeyboardLayout
+
+    # add bool parameters if needed
+    if l.ENTRY.get('Application.ConnectionParameters.redirectClipboard', 'no') == 'yes':  
+            Parameters += ' +clipboard' 
+    if l.ENTRY.get('Application.ConnectionParameters.AudioMode', 'no') == 'yes':
+            Parameters += ' /sound'
+    if l.ENTRY.get('Application.ConnectionParameters.Mic', 'no') == 'yes':
+            Parameters += ' /microphone'
+    if l.ENTRY.get('Application.ConnectionParameters.redirectSmartcard', 'no') == 'yes':
+            Parameters += ' /smartcard:0'
+    if l.ENTRY.get('Application.ConnectionParameters.redirectMedia', 'no') == 'yes':
+            Parameters += ' "/a:drive,media,/media"'	# we need to quote the parameter, otherwise os.system eats the commas
+    if l.ENTRY.get('Application.ConnectionParameters.smoothFonts', 'yes') == 'yes':
+            Parameters += ' +fonts'
+    if l.ENTRY.get('Application.ConnectionParameters.GDIrendering', 'hw') == 'hw':
+            Parameters += ' /gdi:hw'
+    elif l.ENTRY.get('Application.ConnectionParameters.GDIrendering', 'hw') == 'sw':
+            Parameters += ' /gdi:sw'
+    if l.ENTRY.get('Application.ConnectionParameters.remoteFX', 'no') == 'yes':
+            Parameters += ' /rfx'
+
+    # all the window positioning stuff
+    #
+    if l.ENTRY.get('Application.Window.Multimon', 'no') == 'yes':
+            Parameters += ' /f /multimon:force'
+    else:	
+            WindowType = l.ENTRY.get('Application.Window.WindowType', 'fullscreen_primary_TB')
+            #
+            # CAVAET: is the second display always the right one?
+            # What in case the user sets --left-of in xrandr?
+            #
+            if WindowType == 'fullscreen_primary':
+                    Parameters += ' /f /monitors:0 ' 
+            elif WindowType == 'fullscreen_primary_TB':
+                    if os.getenv('firstscreenWidth') is None or os.getenv('firstscreenHeigth') is None :
+                            os.system('zenity --error --text "No propper screen settings found.\nFalling back to fullscreen.\nPlease contact your administrator."')
+                            if debug: 
+                                    print "\n WARNING: No propper screen settings found. Falling back to fullscreen. \n"
+                            Parameters += ' /f /monitors:0 ' # fallback
+                    else:
+                            Parameters += ' -decorations /size:' + os.getenv('firstscreenWidth') + 'x' + str(int(os.getenv('firstscreenHeigth'))-25) + '+0+25' + ' /monitors:0 ' 
+            elif WindowType == 'fullscreen_secondary':
+                    Parameters += ' /f /monitors:1 ' 
+            elif WindowType == 'manual':
+                    #  have window decoration while using manual size
+                    Parameters += ' +decorations /size:' + l.ENTRY.get('Application.Window.Width', '800') + 'x' + l.ENTRY.get('Application.Window.Height', '600') + ' '
+
+    # have the manual parameters 	
+    Parameters += ' ' + manualParameters
+
+    # add session credentials if not empty
+    if Domain != '': Parameters += ' /d:' + Domain 
+    if Port != '': Parameters += ' /port:' + Port
+    if Server != '': Parameters += ' /v:' + Server
+
+    # NLA and TLS always requiere to know the user and password in advance
+    #
+    if ProtocolSecurity == 'nla' or ProtocolSecurity == 'tls' :
+            if activateSSO == 'yes' :
+                    User, Password = u_gtk.getUserPass('yes', 'Login for Windows')
+            else :
+                    User, Password = u_gtk.getUserPass('no', 'Login for Windows')
+            if User == '\'\'' or Password == '\'\''  :
+                    os.system('zenity --error --text "Fehlerhafte Anmeldung.\nWrong authentication."')
+                    sys.exit()
+
+    elif ProtocolSecurity == 'rdp' and activateSSO == 'yes' :
+            User, Password = u_gtk.getUserPass('yes', 'Login for Windows')
+
+    if ValidateCert == 'no' :
+            Parameters += ' /cert-ignore' 
+
+    # Use password only in conjunction with user
+    if User != '' and User != '\'\''  :
+            Parameters += ' /u:' + User 
+            if Password != '' and Password != '\'\''  :
+                    Parameters += ' /p:' + Password 
+
+    StartCmdline = l.ENTRY.get('General.Version', '/opt/freerdp-git/bin/xfreerdp') + Parameters
+
+    if debug :
+            print StartCmdline
+            sys.exit()
+
+    returncode = os.system(StartCmdline)
+
+    if ExitAction != 'Restart':
+	break
+    if ExitAction == 'Logout':
 	os.system("tcos-logout")
-elif ExitAction == 'Reboot':
+    elif ExitAction == 'Reboot':
 	os.system("tcos-reboot")
-elif ExitAction == 'Shutdown':
+    elif ExitAction == 'Shutdown':
 	os.system("tcos-shutdown")
 

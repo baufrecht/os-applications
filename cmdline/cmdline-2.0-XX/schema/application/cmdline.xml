@@ -17,6 +17,10 @@
 				<label lang="de" value="Nein"/>
 			</option>
 		</choice>
+		<entry name="custom_icon" value="">
+		  <label value="Benutzerdefiniertes Symbol" lang="de"/>
+		  <label value="Custom icon" lang="en"/>
+		</entry>
 	</group>
 	<group name="Application">
                 <label lang="en" value="Application settings"/>

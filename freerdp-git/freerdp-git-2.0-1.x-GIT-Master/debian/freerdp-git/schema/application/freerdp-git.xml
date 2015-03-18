@@ -29,7 +29,6 @@
 	<label lang="de" value="1.2.x (kompiliert von git master branch)"/>
       </option>
     </choice>
-
     <entry name="custom_icon" value="">
       <label value="Benutzerdefiniertes Symbol" lang="de"/>
       <label value="Custom icon" lang="en"/>
@@ -138,12 +137,16 @@
 	<label lang="en" value="Manual start parameters"/>
       </entry>
 
-      <choice name="ProtocolSecurity" value="nla">
+      <choice name="ProtocolSecurity" value="tls">
 	<label lang="de" value="Sicherheitsprotokoll"/>
 	<label lang="en" value="Protocol security"/>
+	<option  value="tls">
+	  <label lang="de" value="TLS, nötig für MS RDP-Verbindungsbroker"/>
+	  <label lang="en" value="TLS, mandatory for MS RDP-Connectionbroker"/>
+	</option>
 	<option value="nla">
-	  <label lang="de" value="NLA, nötig für MS RDP-Verbindungsbroker"/>
-	  <label lang="en" value="NLA, mandatory for MS RDP-Connectionbroker"/>
+	  <label lang="de" value="NLA"/>
+	  <label lang="en" value="NLA"/>
 	</option>
 	<option  value="rdp">
 	  <label lang="en" value="RDP, for backward compatibility"/>
@@ -162,8 +165,6 @@
 	  <label lang="de" value="ja"/>
 	</option>
       </choice>
-
-
       <choice name="redirectClipboard (beta)" value="no">
 	<label lang="de" value="Clipboard übertragen"/>
 	<label lang="en" value="Redirect clipboard"/>
