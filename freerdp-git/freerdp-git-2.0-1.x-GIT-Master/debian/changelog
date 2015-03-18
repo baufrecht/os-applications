@@ -1,3 +1,12 @@
+freerdp-git (2.0-1.2-12) statble; urgency=low
+
+  * tcos/launcher
+      - implement TLS for compatibility in case of expired password
+      - prevent a lethal loop in case of NLA or TLS and exitaction = restart
+      - double check the funtionality of NLA with external credentials
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Mon, 16 Mar 2015 17:28:07 +0100
+
 freerdp-git (2.0-1.2-11) unstable; urgency=low
 
   * fixed a nasty bug in getting credentials for NLA connects
