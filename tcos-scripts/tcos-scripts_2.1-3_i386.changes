@@ -1,0 +1,29 @@
+Format: 1.8
+Date: Thu, 19 Mar 2015 03:29:01 +0100
+Source: tcos-scripts
+Binary: tcos-scripts
+Architecture: source i386
+Version: 2.1-3
+Distribution: unstable
+Urgency: low
+Maintainer: Joern Frenzel <j.frenzel@openthinclient.com>
+Changed-By: Lars Behrens <l.behrens@openthinclient.com>
+Description:
+ tcos-scripts - tcos client scripts
+Changes:
+ tcos-scripts (2.1-3) unstable; urgency=low
+ .
+   * Non-maintainer upload.
+   *
+Checksums-Sha1:
+ 0ba55b06b8051a3ac7ba36b1ba13cbc312d67bff 598 tcos-scripts_2.1-3.dsc
+ d7df3fc8ac3eb8b893e5eefbf174cd0c51f31b26 13259 tcos-scripts_2.1-3.tar.gz
+ 8780b312882124bdce582dcb95de0a68a48405d0 10314 tcos-scripts_2.1-3_i386.deb
+Checksums-Sha256:
+ d4af76f414db4fa8ee2c04dd0b60f4dd3111a86bd46117e1a4d2e1a5f9dd9380 598 tcos-scripts_2.1-3.dsc
+ abb816ba86818191e561b19b9f4915529000ccf184bac1c5e7daaf449757711f 13259 tcos-scripts_2.1-3.tar.gz
+ d66abdcc63e488b747cece90405a0b79abe0ab84adc8bccd3a6670ea983201da 10314 tcos-scripts_2.1-3_i386.deb
+Files:
+ d3f454c39eeb8aafd912728dd1d3675c 598 unknown optional tcos-scripts_2.1-3.dsc
+ 5a7a0519d1facef725539d9d236b160a 13259 unknown optional tcos-scripts_2.1-3.tar.gz
+ 38643b6ed1ddf10585c79a55bf7031d7 10314 unknown optional tcos-scripts_2.1-3_i386.deb

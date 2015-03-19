@@ -2,6 +2,21 @@
 <schema name="desktop" type="application" version="1">
   <label lang="de" value="Desktop"/>
   <label lang="en" value="Desktop"/>
+    <group name="lightdmparser">
+      <label lang="de" value="Xserver Optionen"/>
+      <label lang="en" value="Xserver options"/>
+      <choice name="allow-tcp" value="false">
+        <option value="true">
+              <label lang="de" value="Ja"/>
+              <label lang="en" value="Yes"/>
+        </option>
+        <option value="false">
+              <label lang="de" value="Nein"/>
+              <label lang="en" value="No"/>
+        </option>
+      </choice>
+    </group>
+
     <group name="org_mate_desktop_media-handling">
       <label lang="de" value="Externe Medien"/>
       <label lang="en"  value="External media"/>

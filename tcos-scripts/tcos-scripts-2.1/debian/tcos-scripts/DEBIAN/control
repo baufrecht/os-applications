@@ -1,0 +1,13 @@
+Package: tcos-scripts
+Version: 2.1-4
+Architecture: i386
+Maintainer: Joern Frenzel <j.frenzel@openthinclient.com>
+Installed-Size: 28
+Depends: base (>= 2.0-25)
+Conflicts: initscripts-tcos
+Section: unknown
+Priority: optional
+Description: tcos client scripts
+ This scripts are takeing care about the clients configuration,
+ by pulling all the information from the management backend,
+ patching configs etc..
