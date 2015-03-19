@@ -2144,4 +2144,20 @@
       <label lang="de" value="uz: Uzbek (Latin)"/>
     </option>
   </choice>
+  <choice name="forcelayout" value="no">
+    <label lang="en" value="force Layout"/>
+    <label lang="de" value="Layout erzwingen"/>
+
+    <tip lang="de" value=""/>
+    <tip lang="en" value=""/> 
+ 
+    <option name="yes" value="yes">
+      <label lang="en" value="force"/>
+      <label lang="de" value="erzwingen"/>
+    </option>
+    <option name="no" value="no">
+      <label lang="en" value="disabled"/>
+      <label lang="de" value="deaktiviert"/>
+    </option>
+  </choice>
 </schema>
