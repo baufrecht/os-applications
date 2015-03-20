@@ -64,8 +64,10 @@
 	    <option name="DFP2" value="DFP2" />
 	    <option name="DFP3" value="DFP3" />
 	    <option name="DP-0" value="DP-0" />
-	    <option name="DP-1" value="DP-1" />
+ 	    <option name="DP-1" value="DP-1" />
 	    <option name="DP-2" value="DP-2" />
+	    <option name="DP-3" value="DP-3" />
+	    <option name="DP-4" value="DP-4" />
 	    <option name="TMDS" value="TMDS" />                                                                                                                                                 
 	    <option name="TMDS1" value="TMDS1" />                                                                                                                                             
 	    <option name="TMDS2" value="TMDS2" />                                                                                                                                             
@@ -185,6 +187,8 @@
 	    <option name="DP-0" value="DP-0" />
 	    <option name="DP-1" value="DP-1" />
 	    <option name="DP-2" value="DP-2" />
+	    <option name="DP-3" value="DP-3" />
+	    <option name="DP-4" value="DP-4" />
 	    <option name="TMDS" value="TMDS" />                                                                                                                                                 
 	    <option name="TMDS1" value="TMDS1" />                                                                                                                                             
 	    <option name="TMDS2" value="TMDS2" />                                                                                                                                             

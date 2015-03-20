@@ -1,8 +1,8 @@
 4f7e4f0f647b62276c36b7df6a4d47f2  schema/applicationgroup.xml
 3cf7f49ea53d331a7d6b1b6cbac734cc  schema/client.xml
 e52e8316ec8dac948f0b158b982966df  schema/device/autologin.xml
-41e452fde2a1d39bce8d731596bcf15c  schema/device/display.xml
-03bfb51873a8fdce0cab41a1c12498c8  schema/device/keyboard.xml
+3cdcda0f95c0fd66944d5eb33635ea03  schema/device/display.xml
+e1ac586cfe2fed24b49ce13cf53159cf  schema/device/keyboard.xml
 65212e8017b23ff0c63488417f55d959  schema/device/nfs.xml
 89ba3c4bfa7ce37dc8e0fe318de73d6a  schema/hardwaretype.xml
 4765c2dfa37d94e767366e60be124370  schema/location.xml

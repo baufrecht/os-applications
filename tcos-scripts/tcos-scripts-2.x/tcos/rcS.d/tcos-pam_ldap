@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 import base64
-#import tcos
 import ldapurl
 import pytcos.tcos as tcos
 l = tcos.Ldap() 
@@ -95,3 +94,25 @@ autologin-user-timeout=0
         fobj.write(content)
 
 write_lightdmconf()
+<<<<<<< HEAD:tcos-scripts/tcos-scripts-2.1/tcos/rcS.d/tcos-pam_ldap
+=======
+
+#client_dn = l.getClientDn(s.getMac(), ldap_url)
+#location_dn = l.getLocationsDn(client_dn, ldap_url)
+#user_dn = l.getUserDn('tcos', ldap_url)
+#apps_dn_list = l.getAppsDn(client_dn, user_dn, ldap_url)
+#for app_dn in apps_dn_list:
+#  unique_name = l.getGroupOfUniqueNamesInfo(app_dn, ldap_url)
+#  if unique_name['schema'] == 'desktop':
+#    ENTRY = l.getNismapentry(app_dn, ldap_url)
+#
+#  ENTRY.pop('schema_version')
+#  if ENTRY['lightdmparser.allow-tcp'] == 'true':
+#     print "allow-tcp is set true"
+#     file = open("/etc/lightdm/lightdm.conf", 'a')
+#     file.write("xserver-allow-tcp=true\n")
+#  else:
+#     print "allow-tcp is set false"
+#file.close()
+
+>>>>>>> 0dcc28c7ac80dbdbe94534b32696fb0c68fc7142:tcos-scripts/tcos-scripts-2.x/tcos/rcS.d/tcos-pam_ldap

@@ -1,7 +1,6 @@
 tcos-scripts (2.1-4) unstable; urgency=low
 
-  * Non-maintainer upload.
-  * 
+  * moved aside tcos/rcS.d/tcos-pam_ldap to rcS.d_dev
 
  -- Lars Behrens <l.behrens@openthinclient.com>  Thu, 19 Mar 2015 03:29:01 +0100
 
