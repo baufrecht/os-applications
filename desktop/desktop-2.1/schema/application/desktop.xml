@@ -15,6 +15,10 @@
               <label lang="en" value="No"/>
         </option>
       </choice>
+      <entry name="xhosts" value="default is empty">
+        <label lang="de" value="ip Adresse hinzufügen"/>
+        <label lang="en" value="add ip address"/>
+      </entry>
     </group>
 
     <group name="org_mate_desktop_media-handling">
