@@ -10,8 +10,8 @@ Build-Depends: debhelper (>= 8.0.0)
 Package-List: 
  tcos-scripts deb unknown optional
 Checksums-Sha1: 
- d75a5cb0bf988ba549d5cf3057510ea0ee8f3604 13863 tcos-scripts_2.1-4.tar.gz
+ b7463be10bc5d689c24ccfb72ba8a5a030612222 20280 tcos-scripts_2.1-4.tar.gz
 Checksums-Sha256: 
- 9856ece92f68134bd28911ae6d165ceb4c0da121ca4a2de903a43635f0eb5ff1 13863 tcos-scripts_2.1-4.tar.gz
+ a2353bd2656f8bbe5b3c3de5a02bb440b36e96b46ab2253ac44c8c6d143177fe 20280 tcos-scripts_2.1-4.tar.gz
 Files: 
- c508bdc202bbc4e5de5345fdd64c2b7c 13863 tcos-scripts_2.1-4.tar.gz
+ 7f0abb61ba322f7b6ebb690df79be8ce 20280 tcos-scripts_2.1-4.tar.gz
