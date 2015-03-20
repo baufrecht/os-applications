@@ -50,12 +50,13 @@ u.writeDictionaryToFile(entry_dict, filename, " ", "")
 mac = s.getMac()
 client_dn = l.getClientDn(mac, ldap_url)
 devices_dn = l.getDevicesDn(client_dn, ldap_url)
-
+user_dn = l.getUserDn('tcos', ldap_url)
+apps_dn_list = l.getAppsDn(client_dn, user_dn, ldap_url)
 
 def write_lightdmconf(filename="/etc/lightdm/lightdm.conf"):
-    
+ 
     types = map(lambda d: l.getGroupOfUniqueNamesInfo(d, ldap_url)["schema"], \
-            devices_dn)
+            devices_dn+apps_dn_list)
     if "autologin" in types:
        content="""\
 [LightDM]
@@ -82,28 +83,15 @@ session-setup-script=/usr/local/bin/tcos-postlogin
 autologin-user=
 autologin-user-timeout=0
 """
+##X-remote-tcp
+####################################################
+#    if "desktop" in types:
+#        for app_dn in apps_dn_list:
+#            if l.getGroupOfUniqueNamesInfo(app_dn, ldap_url)['schema'] == 'desktop':
+#                if l.getNismapentry(app_dn, ldap_url)['lightdmparser.allow-tcp'] == 'true':
+#                    content+="xserver-allow-tcp=true\n"
+
     with open(filename, 'w') as fobj:
         fobj.write(content)
 
 write_lightdmconf()
-
-client_dn = l.getClientDn(s.getMac(), ldap_url)
-location_dn = l.getLocationsDn(client_dn, ldap_url)
-user_dn = l.getUserDn('tcos', ldap_url)
-apps_dn_list = l.getAppsDn(client_dn, user_dn, ldap_url)
-exit(0)
-for app_dn in apps_dn_list:
-  unique_name = l.getGroupOfUniqueNamesInfo(app_dn, ldap_url)
-  if unique_name['schema'] == 'desktop':
-    ENTRY = l.getNismapentry(app_dn, ldap_url)
-
-  ENTRY.pop('schema_version')
-  if ENTRY['lightdmparser.allow-tcp'] == 'true':
-     print "allow-tcp is set true"
-     file = open("/etc/lightdm/lightdm.conf", 'a')
-     file.write("xserver-allow-tcp=true\n")
-  else:
-     print "allow-tcp is set false"
-
-file.close()
-
