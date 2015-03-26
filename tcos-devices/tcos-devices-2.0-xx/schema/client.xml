@@ -34,23 +34,115 @@
       <label lang="de" value="Name der Startdatei" />
       <label lang="en" value="Boot file name" />
     </entry>
-    
-		<entry name="KernelName">
-			<label lang="de" value="Name des Kernels" />
-			<label lang="en" value="kernel file name" />
-		</entry>
 
-		<entry name="InitrdName">
-			<label lang="de" value="Name der initrd Datei" />
-			<label lang="en" value="initrd file name" />
-		</entry>
-    
+    <choice name="KernelName" value="vmlinuz">
+      <label lang="de" value="nutze Kernel" />
+      <label lang="en" value="use kernel" />
+      <tip lang="de" value="&lt;html&gt;
+        Wählen sie hier den passenden Kernel für Ihre Hardware. In den meisten&lt;br&gt;
+        Fällen können  den Standardkernel benutzen.
+      &lt;/html&gt;"/>
+      <tip lang="en" value="&lt;html&gt;
+        Choose your proper kernel here. The default kernel is a good choice &lt;br&gt;
+        in most cases.
+      &lt;/html&gt;"/>
+      <option value="vmlinuz">
+       <label lang="de" value="Standardkernel, meist passend"/>
+       <label lang="en" value="default kernel"/>
+      </option>
+      <option value="vmlinuz_non-pae">
+       <label lang="en" value="non-PAE Kernel for older machines, max. 2GB RAM"/>
+       <label lang="de" value="nicht-PAE Kernel, max. 2GB RAM"/>
+      </option>
+      <option value="vmlinuz_via">
+       <label lang="en" value="Kernel 3.2 for use with VIA-GPU"/>
+       <label lang="de" value="Kernel 3.2 für VIA-Grafik"/>
+      </option>
+      <option value="vmlinuz_via_non_pae">
+       <label lang="en" value="non-PAE Kernel 3.2 for use with VIA-GPU, max. 2GB RAM"/>
+       <label lang="de" value="nicht-PAE Kernel 3.2 für VIA-Grafik, max. 2GB RAM"/>
+      </option>
+    </choice>
+
+    <!--entry name="KernelName">
+      <label lang="de" value="Name des Kernels" />
+      <label lang="en" value="kernel file name" />
+    </entry-->
+    <entry name="InitrdName">
+      <label lang="de" value="Name der initrd Datei" />
+      <label lang="en" value="initrd file name" />
+    </entry>
     <entry name="ExtraOptions">
       <label lang="de" value="Zusätzliche Kernel-Parameter" />
       <label lang="en" value="Additional kernel parameters" />
     </entry>
   </section>
-  
+
+  <section name="HardwareOptions">
+    <label lang="de" value="hardware-spezifische Optionen (Tooltips bei mouse over)" />
+    <label lang="en" value="hardware specific options (tooltips on mouse over)" />
+    <choice name="fglrx" value="false">
+      <label lang="de" value="nutze AMD-Treiber für GPU " />
+      <label lang="en" value="use AMD driver for GPU" />
+      <tip lang="de" value="&lt;html&gt;
+	Nutzt (wenn möglich) den herstellereigenen Treiber &quot;fglrx&quot; um &lt;br&gt;
+        bessere Grafikleistung zu erzielen.
+      &lt;/html&gt;"/>
+      <tip lang="en" value="&lt;html&gt;
+	Use (if possible) the proprietary &quot;fglrx&quot; module &lt;br&gt;
+        to get better graphic performance.
+      &lt;/html&gt;"/>
+      <option value="false">
+       <label lang="en" value="no"/>
+       <label lang="de" value="nein"/>
+      </option>
+      <option value="true">
+       <label lang="en" value="yes"/>
+       <label lang="de" value="ja"/>
+      </option>
+    </choice>
+    <choice name="nvidia" value="false">
+      <label lang="de" value="nutze Nvidia-Treiber für GPU " />
+      <label lang="en" value="use Nvidia driver for GPU" />
+      <tip lang="de" value="&lt;html&gt;
+	Nutzt (wenn möglich) den herstellereigenen Treiber &quot;nvidia&quot; um &lt;br&gt;
+        bessere Grafikleistung zu erzielen.
+      &lt;/html&gt;"/>
+      <tip lang="en" value="&lt;html&gt;
+	Use (if possible) the proprietary &quot;nvidia&quot; module &lt;br&gt;
+        to get better graphic performance.
+      &lt;/html&gt;"/>
+      <option value="false">
+       <label lang="en" value="no"/>
+       <label lang="de" value="nein"/>
+      </option>
+      <option value="true">
+       <label lang="en" value="yes"/>
+       <label lang="de" value="ja"/>
+      </option>
+    </choice>
+    <choice name="via" value="false">
+      <label lang="de" value="nutze VIA-Treiber für GPU (nur mit VIA-Kernel) " />
+      <label lang="en" value="use VIA driver for GPU (only with VIA-Kernel" />
+      <tip lang="de" value="&lt;html&gt;
+	Nutzt (wenn möglich) den herstellereigenen Treiber &quot;via&quot; um &lt;br&gt;
+        bessere Grafikleistung zu erzielen. Nur mit VIA-Kernel nutzbar.
+      &lt;/html&gt;"/>
+      <tip lang="en" value="&lt;html&gt;
+	Use (if possible) the proprietary &quot;via&quot; module &lt;br&gt;
+        to get better graphic performance. Only usable in conjunction with VIA-Kernel.
+      &lt;/html&gt;"/>
+      <option value="false">
+       <label lang="en" value="no"/>
+       <label lang="de" value="nein"/>
+      </option>
+      <option value="true">
+       <label lang="en" value="yes"/>
+       <label lang="de" value="ja"/>
+      </option>
+    </choice>
+  </section>
+
   <!-- nur zum Debugging
     <section name="BootOptions">
     <label lang="de" value="Noch ein Abschnitt" />
