@@ -1,6 +1,6 @@
-desktop (2.1-1.7) unstable; urgency=low
+desktop (2.1-2.1) unstable; urgency=low
 
-  * Non-maintainer upload.
+  * Xserver-listen-tcp as "Experteneinstellung" added to Configuration
   * 
 
  -- Lars Behrens <l.behrens@openthinclient.com>  Thu, 19 Mar 2015 04:58:58 +0100
