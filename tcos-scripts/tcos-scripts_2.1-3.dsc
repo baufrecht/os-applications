@@ -7,11 +7,11 @@ Maintainer: Joern Frenzel <j.frenzel@openthinclient.com>
 Uploaders: Steffen Hoenig <s.hoenig@openthinclient.com>
 Standards-Version: 3.9.3
 Build-Depends: debhelper (>= 8.0.0)
-Package-List:
- tcos-scripts deb unknown optional arch=any
-Checksums-Sha1:
- d7df3fc8ac3eb8b893e5eefbf174cd0c51f31b26 13259 tcos-scripts_2.1-3.tar.gz
-Checksums-Sha256:
- abb816ba86818191e561b19b9f4915529000ccf184bac1c5e7daaf449757711f 13259 tcos-scripts_2.1-3.tar.gz
-Files:
- 5a7a0519d1facef725539d9d236b160a 13259 tcos-scripts_2.1-3.tar.gz
+Package-List: 
+ tcos-scripts deb unknown optional
+Checksums-Sha1: 
+ ca5a7b65515073077e8fe80ae09c5a8df97ef005 12371 tcos-scripts_2.1-3.tar.gz
+Checksums-Sha256: 
+ 04eb628b32853555a6c812492c4b0f905bcf81d51270073af894c84307b75bfb 12371 tcos-scripts_2.1-3.tar.gz
+Files: 
+ 7a8029e9e6078316682a7ca230ac7521 12371 tcos-scripts_2.1-3.tar.gz

@@ -1,29 +1,28 @@
 Format: 1.8
-Date: Thu, 19 Mar 2015 03:29:01 +0100
+Date: Thu, 26 Mar 2015 16:36:12 +0100
 Source: tcos-scripts
 Binary: tcos-scripts
 Architecture: source i386
 Version: 2.1-3
 Distribution: unstable
-Urgency: low
+Urgency: medium
 Maintainer: Joern Frenzel <j.frenzel@openthinclient.com>
 Changed-By: Lars Behrens <l.behrens@openthinclient.com>
-Description:
+Description: 
  tcos-scripts - tcos client scripts
-Changes:
- tcos-scripts (2.1-3) unstable; urgency=low
+Changes: 
+ tcos-scripts (2.1-3) unstable; urgency=medium
  .
-   * Non-maintainer upload.
-   *
-Checksums-Sha1:
- 0ba55b06b8051a3ac7ba36b1ba13cbc312d67bff 598 tcos-scripts_2.1-3.dsc
- d7df3fc8ac3eb8b893e5eefbf174cd0c51f31b26 13259 tcos-scripts_2.1-3.tar.gz
- 8780b312882124bdce582dcb95de0a68a48405d0 10314 tcos-scripts_2.1-3_i386.deb
-Checksums-Sha256:
- d4af76f414db4fa8ee2c04dd0b60f4dd3111a86bd46117e1a4d2e1a5f9dd9380 598 tcos-scripts_2.1-3.dsc
- abb816ba86818191e561b19b9f4915529000ccf184bac1c5e7daaf449757711f 13259 tcos-scripts_2.1-3.tar.gz
- d66abdcc63e488b747cece90405a0b79abe0ab84adc8bccd3a6670ea983201da 10314 tcos-scripts_2.1-3_i386.deb
-Files:
- d3f454c39eeb8aafd912728dd1d3675c 598 unknown optional tcos-scripts_2.1-3.dsc
- 5a7a0519d1facef725539d9d236b160a 13259 unknown optional tcos-scripts_2.1-3.tar.gz
- 38643b6ed1ddf10585c79a55bf7031d7 10314 unknown optional tcos-scripts_2.1-3_i386.deb
+   * Extended lightdm parser with xserver-listen-tcp property
+Checksums-Sha1: 
+ 436307f94a12cd480d303a53e79988b8d566707a 593 tcos-scripts_2.1-3.dsc
+ ca5a7b65515073077e8fe80ae09c5a8df97ef005 12371 tcos-scripts_2.1-3.tar.gz
+ 75a0d3d86ed700e83290bb59a80e7370ba743d9a 9236 tcos-scripts_2.1-3_i386.deb
+Checksums-Sha256: 
+ 9b4a28cec7358e4170dddbdae0ac31b075862bcc4667d25953c58c7943cedb7f 593 tcos-scripts_2.1-3.dsc
+ 04eb628b32853555a6c812492c4b0f905bcf81d51270073af894c84307b75bfb 12371 tcos-scripts_2.1-3.tar.gz
+ 10b069f1c8d41c1617cc5fae6b89b1bc8f45f1da44d2f3076757447b2d81f9b8 9236 tcos-scripts_2.1-3_i386.deb
+Files: 
+ 5ea31887a938e955efb3a97a258d103d 593 unknown optional tcos-scripts_2.1-3.dsc
+ 7a8029e9e6078316682a7ca230ac7521 12371 unknown optional tcos-scripts_2.1-3.tar.gz
+ 5e4affc5fb66d61efef64fe22cf5a9d3 9236 unknown optional tcos-scripts_2.1-3_i386.deb

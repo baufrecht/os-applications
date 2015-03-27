@@ -82,16 +82,13 @@ session-setup-script=/usr/local/bin/tcos-postlogin
 autologin-user=
 autologin-user-timeout=0
 """
-##X-remote-tcp
-####################################################
-#    if "desktop" in types:
-#        for app_dn in apps_dn_list:
-#            if l.getGroupOfUniqueNamesInfo(app_dn, ldap_url)['schema'] == 'desktop':
-#                if l.getNismapentry(app_dn, ldap_url)['lightdmparser.allow-tcp'] == 'true':
-#                    content+="xserver-allow-tcp=true\n"
+    if "desktop" in types:
+        for app_dn in apps_dn_list:
+            if l.getGroupOfUniqueNamesInfo(app_dn, ldap_url)['schema'] == 'desktop':
+                if l.getNismapentry(app_dn, ldap_url)['lightdmparser.X-listen-tcp'] == 'true':
+                    content+="xserver-allow-tcp=true\n"
 
     with open(filename, 'w') as fobj:
         fobj.write(content)
 
 write_lightdmconf()
-
