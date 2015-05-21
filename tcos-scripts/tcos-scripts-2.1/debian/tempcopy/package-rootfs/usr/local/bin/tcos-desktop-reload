@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+
+
+import os
+
+#
+# Write *.desktop files
+#
+import pytcos.tcos as tcos
+
+d = tcos.Desktop()
+
+# Remove .desktop files
+d.removeDesktopFiles()
+
+# Write .desktop files
+d.writeDesktopFiles()
+
+# BUG: executable bit is not set
+
+desktop_path = '/home/' + os.getenv('USER') + '/Desktop/'
+
+for desktop_file in os.listdir(desktop_path):
+    os.system('chmod a+x ' + '"' + desktop_path + desktop_file + '"')

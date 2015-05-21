@@ -1,0 +1,36 @@
+#!/usr/bin/env python 
+
+#
+# set up the Desktop after the user (auto-)logins 
+#
+
+import os
+import glob
+
+# this locks down the desktop, and/or does modifications
+# according to settings made in package desktop
+# there is no need to use it
+desktop_script = "/usr/local/bin/tcos-desktop-customize"
+
+if os.path.exists(desktop_script):
+    try:
+        os.system(desktop_script)
+    except:
+        pass
+
+# this runs all other PostLogins scripts 
+#
+post_login = '/opt/*/tcos/PostLogin/*'
+
+try:
+    files = glob.glob(post_login)
+
+except Exception, e:
+    print e + ' couldn\'t access the post login directory'
+
+for f in files:
+    try:
+        print f
+	os.system(f)
+    except:
+        pass
