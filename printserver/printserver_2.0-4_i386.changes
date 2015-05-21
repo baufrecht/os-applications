@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Tue, 15 Jul 2014 20:19:39 +0200
+Source: printserver
+Binary: printserver
+Architecture: source i386
+Version: 2.0-4
+Distribution: unstable
+Urgency: low
+Maintainer: Steffen Hoenig <s.hoenig@openthinclient.com>
+Changed-By: Steffen Hoenig <s.hoenig@openthinclient.com>
+Description: 
+ printserver - Printserver (HP JetDirect emulation)
+Changes: 
+ printserver (2.0-4) unstable; urgency=low
+ .
+   * new: parallel port is implemented
+Checksums-Sha1: 
+ e016c3463f452f1ade60bc989a0f30139e868c3a 528 printserver_2.0-4.dsc
+ fe28d7c2493e87f489e876fae703b545f7346f51 6440 printserver_2.0-4.tar.gz
+ e7f67d46d34edd4c97d82c641872ccc7bea95eca 5582 printserver_2.0-4_i386.deb
+Checksums-Sha256: 
+ 5aef61e1a1f51a691e5bda99c62fc39954f6f759b03cd7750b2a26ceb0ffe965 528 printserver_2.0-4.dsc
+ 23505b320ee4a8b85f04277879eb6302e723374630db3451c39e60986008d80b 6440 printserver_2.0-4.tar.gz
+ d8b8dc596ed5d2794e0c259b6d17a82822061a0afa67e3aa0a63b13104c2d6c5 5582 printserver_2.0-4_i386.deb
+Files: 
+ 0d693fb7137b2217e30a1c5282ba7e28 528 unknown optional printserver_2.0-4.dsc
+ 152b2da783038096403b695cb9e59e8f 6440 unknown optional printserver_2.0-4.tar.gz
+ a96d4902420bfd6e712de2afd2b1922f 5582 unknown optional printserver_2.0-4_i386.deb

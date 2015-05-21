@@ -1,3 +1,9 @@
+printserver (2.0-5) UNRELEASED; urgency=low
+
+  * further tunings for parallel port
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Tue, 25 Nov 2014 17:37:00 +0100
+
 printserver (2.0-4) unstable; urgency=low
 
   * new: parallel port is implemented 
