@@ -1,8 +1,8 @@
 Package: tcos-devices
-Version: 2.0-19
+Version: 2.0-20
 Architecture: i386
 Maintainer: Steffen Hoenig <s.hoenig@openthinclient.com>
-Installed-Size: 195
+Installed-Size: 196
 Conflicts: openthinclient-schema
 Section: admin
 Priority: optional

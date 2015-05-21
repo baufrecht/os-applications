@@ -56,13 +56,6 @@ panel-right-stick=false
 position=24
 toplevel-id='top'
 
-[org/mate/panel/objects/object_2]
-applet-iid='MixerAppletFactory::MixerApplet'
-object-type='applet'
-panel-right-stick=true
-position=152
-toplevel-id='top'
-
 [org/mate/panel/objects/object_3]
 applet-iid='UniversityPythonAppletFactory::UniversityPythonApplet'
 object-type='applet'

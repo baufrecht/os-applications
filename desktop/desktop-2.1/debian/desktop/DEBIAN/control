@@ -1,8 +1,8 @@
 Package: desktop
-Version: 2.1-1
+Version: 2.1-2.1
 Architecture: i386
 Maintainer: Steffen Hoenig <s.hoenig@openthinclient.com>
-Installed-Size: 1733
+Installed-Size: 1758
 Depends: base, tcos-libs (>= 2.0-7)
 Conflicts: tcos-branding
 Section: unknown

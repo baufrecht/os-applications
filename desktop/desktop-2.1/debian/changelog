@@ -1,3 +1,10 @@
+desktop (2.1-2.1) unstable; urgency=low
+
+  * Xserver-listen-tcp as "Experteneinstellung" added to Configuration
+  * 
+
+ -- Lars Behrens <l.behrens@openthinclient.com>  Thu, 19 Mar 2015 04:58:58 +0100
+
 desktop (2.1-1) unstable; urgency=medium
 
   * removed the entry of the mixer-applet in dconf db file

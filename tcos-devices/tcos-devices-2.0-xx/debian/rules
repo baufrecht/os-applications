@@ -61,7 +61,16 @@ install: build
 #	# we use hardlinks to save time and discspace
 
 #	# schema is not a part of the sfs-file 
-	-rm -rf debian/tcos-devices 
+#	rm -rf debian/tempcopy debian/tcos-devices
+#	mkdir -p debian/tempcopy debian/tcos-devices/sfs/package && \
+#	cp -al package-rootfs debian/tempcopy/ && \
+#	cp -al tcos debian/tempcopy/package-rootfs/opt/tcos-devices/
+#	cp -al schema debian/tcos-devices/
+#	cd debian/tempcopy/package-rootfs && mksquashfs . ../../tcos-devices/sfs/package/tcos-devices.sfs -noappend -always-use-fragments
+#       # schema is not a part of the sfs-file 
+#        cp -al schema debian/sceleton/
+#
+	rm -rf debian/tempcopy debian/tcos-devices 
 	mkdir -p debian/tcos-devices && \
 	cp -al schema debian/tcos-devices/
 

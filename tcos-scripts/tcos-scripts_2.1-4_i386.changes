@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Thu, 19 Mar 2015 03:29:01 +0100
+Source: tcos-scripts
+Binary: tcos-scripts
+Architecture: source i386
+Version: 2.1-4
+Distribution: unstable
+Urgency: low
+Maintainer: Joern Frenzel <j.frenzel@openthinclient.com>
+Changed-By: Lars Behrens <l.behrens@openthinclient.com>
+Description: 
+ tcos-scripts - tcos client scripts
+Changes: 
+ tcos-scripts (2.1-4) unstable; urgency=low
+ .
+   * moved aside tcos/rcS.d/tcos-pam_ldap to rcS.d_dev
+Checksums-Sha1: 
+ fb60b07f9b202092bfe145cf34ed1f4c7be245bf 593 tcos-scripts_2.1-4.dsc
+ b7463be10bc5d689c24ccfb72ba8a5a030612222 20280 tcos-scripts_2.1-4.tar.gz
+ 868a39ab469415a993768df17fe2d5673115300d 9330 tcos-scripts_2.1-4_i386.deb
+Checksums-Sha256: 
+ daa8e925cad7f87a86b6081699b1bb36e5d4bf2f1c7e81d99038e8ab3fb1fb8a 593 tcos-scripts_2.1-4.dsc
+ a2353bd2656f8bbe5b3c3de5a02bb440b36e96b46ab2253ac44c8c6d143177fe 20280 tcos-scripts_2.1-4.tar.gz
+ 84b1eb6b2e7fe3098435f1687f642782246b6b186548db6dc939833aa582faec 9330 tcos-scripts_2.1-4_i386.deb
+Files: 
+ b92b726ebc1db219e601c879f67255f5 593 unknown optional tcos-scripts_2.1-4.dsc
+ 7f0abb61ba322f7b6ebb690df79be8ce 20280 unknown optional tcos-scripts_2.1-4.tar.gz
+ 83a8870b9446965e72c0ad17a60bba7d 9330 unknown optional tcos-scripts_2.1-4_i386.deb
