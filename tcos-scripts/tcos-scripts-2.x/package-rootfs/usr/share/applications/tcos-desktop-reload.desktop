@@ -1,9 +1,0 @@
-#!/usr/bin/env xdg-open
-[Desktop Entry]
-Version=1.0
-Name=Refresh desktop
-Name[de]=Desktop aktualisieren
-Exec=tcos-desktop-reload
-Type=Application
-Categories=TCOS
-Icon=stock_refresh
