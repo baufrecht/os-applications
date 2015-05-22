@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Thu, 12 Mar 2015 18:48:36 +0100
+Source: desktop
+Binary: desktop
+Architecture: source i386
+Version: 2.1-1
+Distribution: unstable
+Urgency: medium
+Maintainer: Steffen Hoenig <s.hoenig@openthinclient.com>
+Changed-By: Steffen Hoenig <s.hoenig@openthinclient.com>
+Description: 
+ desktop    - Customize the TCOS desktop experience.
+Changes: 
+ desktop (2.1-1) unstable; urgency=medium
+ .
+   * removed the entry of the mixer-applet in dconf db file
+Checksums-Sha1: 
+ d32a6fdac17fac8d521819fc9cf940fe5f22be5c 513 desktop_2.1-1.dsc
+ 67f8af3ca8c41d679c940aa5ca0b973cf684e1cb 3540387 desktop_2.1-1.tar.gz
+ 027c1ad5b8c353d7b6e178ed8ea94688a9b0e4a4 1769872 desktop_2.1-1_i386.deb
+Checksums-Sha256: 
+ 20aeea21366a36f07cdd97b4864a3e3450ac38e6abae715fa73c526b0d1d5ff0 513 desktop_2.1-1.dsc
+ 8f6da71e6633372d39d90c14f5eb002109fb307601ac1b3619aad967fe23b3ec 3540387 desktop_2.1-1.tar.gz
+ 2ee3e7b37499d5425c40b6d993161eb7d0858bdb031104fa487d1126cd32f030 1769872 desktop_2.1-1_i386.deb
+Files: 
+ 12e96f76b184ffac4be5f7546d0276c8 513 unknown optional desktop_2.1-1.dsc
+ cd866b90dda1dae0ca2a59d165e5dc35 3540387 unknown optional desktop_2.1-1.tar.gz
+ 0b3c4326e0b7d77ad58bbf76b7776d7a 1769872 unknown optional desktop_2.1-1_i386.deb

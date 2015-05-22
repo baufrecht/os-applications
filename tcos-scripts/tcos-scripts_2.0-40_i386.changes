@@ -1,0 +1,33 @@
+Format: 1.8
+Date: Fri, 05 Dec 2014 11:25:58 +0100
+Source: tcos-scripts
+Binary: tcos-scripts
+Architecture: source i386
+Version: 2.0-40
+Distribution: unstable
+Urgency: low
+Maintainer: Joern Frenzel <j.frenzel@openthinclient.com>
+Changed-By: Joern Frenzel <j.frenzel@openthinclient.com>
+Description: 
+ tcos-scripts - tcos client scripts
+Changes: 
+ tcos-scripts (2.0-40) unstable; urgency=low
+ .
+   * modified tcos/rcS.d/tcos-pam_ldap
+       - set display-setup-script=/usr/local/bin/tcos-xrandr in lightdm.conf
+   * modified /usr/local/bin/tcos-xrandr
+       - write .tcos_displayrc to /tmp to ensure it is never overwritten
+         by NFS mount to /home/tcos
+       - this has been an untracked bug
+Checksums-Sha1: 
+ 43baeeb675bee261f5d7f4fbb09370fbaa71bd0a 597 tcos-scripts_2.0-40.dsc
+ f0981d2e1984c25f9ee287b1f337cc677a9bdffc 12489 tcos-scripts_2.0-40.tar.gz
+ 259205f48a7974f3ed0eb8a98921b0a32c6603d9 9534 tcos-scripts_2.0-40_i386.deb
+Checksums-Sha256: 
+ 01eb70cd412107c68876479b6665096bf511bc4b1bb9aef80b1f30c29f1f4eff 597 tcos-scripts_2.0-40.dsc
+ e83c22f3be647910cf2a20697f8f1286e18b1186fb07c1fb248c3af7b858895c 12489 tcos-scripts_2.0-40.tar.gz
+ de23067b3fd25fae9fe4341624d89591cae85e326ca57dc4fb14d1acb890495f 9534 tcos-scripts_2.0-40_i386.deb
+Files: 
+ dfe0a5a792015cd34dd1b87f0e27c1f9 597 unknown optional tcos-scripts_2.0-40.dsc
+ d7b41d6d9978c31f9fba81e031257800 12489 unknown optional tcos-scripts_2.0-40.tar.gz
+ f1001a578ee39ad9423c906eb25a8bef 9534 unknown optional tcos-scripts_2.0-40_i386.deb

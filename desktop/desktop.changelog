@@ -1,3 +1,9 @@
+desktop (2.1-1) unstable; urgency=medium
+
+  * removed the entry of the mixer-applet in dconf db file
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Thu, 12 Mar 2015 18:48:36 +0100
+
 desktop (2.0-15) unstable; urgency=low
 
   * fixed caja popping up after "dconf update"

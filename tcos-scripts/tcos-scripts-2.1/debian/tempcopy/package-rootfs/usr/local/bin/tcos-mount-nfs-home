@@ -1,0 +1,104 @@
+#!/usr/bin/env python
+
+# Standard modules
+import string
+#import shutil
+#import signal
+#import subprocess
+import sys
+#import tempfile
+import base64
+import commands
+#import fileinput
+#import glob
+import ldapurl
+import os
+
+# import re
+# import tempfile
+import subprocess
+import syslog
+
+
+# TCOS modules
+import pytcos.tcos as tcos
+
+# l = tcos.Launcher()
+u = tcos.Util()
+s = tcos.System()
+ld = tcos.Ldap()
+
+# SystemVariablen
+
+mac = s.getMac()
+ldap_url = s.getLdapUrl()
+client_dn = ld.getClientDn(mac, ldap_url)
+devices_dn = ld.getDevicesDn(client_dn, ldap_url)
+
+nfsserver = s.getNfsrootServer()
+nfsserverroot = s.getNfsroot()
+user = s.getUsername()
+mountdir_remote =  s.getNfshomePath()
+
+# CommandVariablen
+
+# vers=2 = OTC Java NFS is Version 2
+mountcmd = 'sudo mount'
+umountcmd = 'sudo umount'
+mountdir_local = '/home'
+mountopt = '-o nolock,vers=2,rw,actimeo=0'
+
+macvsuser = user
+
+# Ein NFS Home ohne Username ist wie eine MAC ohne :
+mac = mac.replace(':','')
+
+persistenthomeFound = False
+
+for device in devices_dn:
+    deviceType = ld.getGroupOfUniqueNamesInfo(device, ldap_url)["schema"]
+    # print deviceType
+    if deviceType == "persistenthome":
+        if persistenthomeFound: 
+            print >>sys.stderr, 'WARNING: Found more than one persistanthome asigned to this client. Using only the first one.'
+            syslog.syslog('WARNING: Found more than one persistanthome asigned to this client. Using only the first one.')
+            sys.exit()
+        persistenthomeFound = True
+
+        if user == "tcos": macvsuser=mac
+        #Commands basteln
+        NFSMountCommand = mountcmd + ' ' + mountopt + ' ' + nfsserver + ':' + mountdir_remote + '/' + macvsuser + ' ' + mountdir_local + '/' + "tcos"
+        NFSMountCommand_home = mountcmd + ' ' + mountopt + ' ' + nfsserver + ':' + mountdir_remote + ' ' + mountdir_local
+
+        # print NFSMountCommand
+        # ersteinmal alle homes Mounten ob nachzuschauen ob MAC (oder User) schon vorhanden ist:
+        try:
+           returnCode = os.system(NFSMountCommand_home)
+        except:
+           print returnCode
+
+        if os.path.exists(mountdir_local + '/' + macvsuser):
+           try:
+               returnCode = os.system(umountcmd + ' /' + mountdir_local + '&&' + NFSMountCommand)
+               
+           except:
+               print returnCode
+
+        else:
+            try:
+                os.system ('sudo mkdir -p ' + mountdir_local + '/' + macvsuser)
+                returnCode = os.system(umountcmd + ' /' + mountdir_local + '&&' + NFSMountCommand)
+                
+            except:
+                print returnCode
+        
+        # have a workaround for pulse audio
+        # this should fix: https://github.com/openthinclient/os-core/issues/19
+        #
+        returnCode = os.system('target=$(mktemp -d --tmpdir=/tmp .pulse_tcos_bindmount_target_XXXXXX); \
+                                mkdir -p /home/tcos/.pulse; \
+                                sudo mount -o bind,uid=1000,gid=1000 $target /home/tcos/.pulse')
+    else:
+        exit
+
+ 
