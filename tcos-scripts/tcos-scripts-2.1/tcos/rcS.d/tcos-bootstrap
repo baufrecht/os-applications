@@ -133,9 +133,9 @@ def write_hostname(filename="/etc/hostname"):
 
 def update_dns(hostname, filename="/etc/hostname"):
     with open(filename) as f:
-        etc_hostname = f.readline().strip('\n')
+        the_sytems_hostname = f.readline().strip('\n')
     try:
-        subprocess.check_call(['/sbin/udhcpc', '-o', '-F', etc_hostname])
+        subprocess.check_call(['/sbin/udhcpc', '-F ' , the_sytems_hostname])
     except:
         print "Couldn't update DNS (udhcpc)"
 
