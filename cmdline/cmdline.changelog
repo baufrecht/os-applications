@@ -1,3 +1,11 @@
+cmdline (2.0-02) unstable; urgency=low
+
+  * have custom icon
+  * place your icon in custom/icons/ on server side
+
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Sat, 06 Jun 2015 16:53:32 +0200
+
 cmdline (2.0-01) unstable; urgency=low
 
   * Initial for version 2
