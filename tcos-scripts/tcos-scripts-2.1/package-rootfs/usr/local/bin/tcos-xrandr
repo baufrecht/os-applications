@@ -128,7 +128,7 @@ for device in devices_dn:
 
 # trigger commands to system
 #
-print "Turnoff cmd:" + xrandrTurnOffCmd
+print "Turnoff cmd: xrandr" + xrandrTurnOffCmd
 try: subprocess.check_call('xrandr ' + xrandrTurnOffCmd, shell=True)
 except subprocess.CalledProcessError :
     myLog('WARNING: xrandrTurnOffCmd failed. This could happen.', bad=True)

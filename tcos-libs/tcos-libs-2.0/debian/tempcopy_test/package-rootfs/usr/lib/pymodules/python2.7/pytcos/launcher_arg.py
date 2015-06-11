@@ -19,7 +19,7 @@ for i, val in enumerate(sys.argv):
 def get_hashed_arg(arg):
 	ldap_url  = s.getLdapUrl()
 	user_dn   = ld.getUserDn(user, ldap_url)
-	mac	  = s.getMac(iface="eth0")
+	mac	  = s.getMac()
 	client_dn = ld.getClientDn(mac, ldap_url)
 	apps_dn	  = ld.getAppsDn(client_dn, user_dn, ldap_url)
 

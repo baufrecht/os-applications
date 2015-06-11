@@ -342,7 +342,12 @@ class System(Logger):
         # self.LOG is filled and needed by Logger.log()
         self.LOG = []
 
-    def getMac(self, iface="eth0"):
+    def getMac(self, iface="autodetect"):
+        if iface == "autodetect":
+            if  os.getenv('TCOS_NIC', 0) != 0 :
+                iface = os.getenv('TCOS_NIC')
+            else :
+                iface = "eth0"
         # get mac via sysfs
         f_name = '/sys/class/net/' + iface + '/address'
         try:

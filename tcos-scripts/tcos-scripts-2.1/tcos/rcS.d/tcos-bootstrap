@@ -3,6 +3,7 @@
 import commands
 import subprocess
 import os
+import time
 
 import pytcos.tcos as tcos
 
@@ -18,7 +19,7 @@ locations_dn = l.getLocationsDn(client_dn, ldap_url)
 locations_entry = l.getNismapentry(locations_dn, ldap_url)
 
 hostname = l.getCnByDn(client_dn)
-ip_eth0 = commands.getoutput("LANG=C ifconfig eth0 2>/dev/null | sed -n 's/.*inet addr:\\([0-9.]\\+\\).*/\\1/p'")
+#ip_eth0 = commands.getoutput("LANG=C ifconfig eth0 2>/dev/null | sed -n 's/.*inet addr:\\([0-9.]\\+\\).*/\\1/p'")
 
 
 # functions
@@ -72,7 +73,7 @@ def writeEnvironment(filename="/etc/environment"):
     lang = locations_entry.get("Lang.lang", "en_US.UTF-8")
     language = lang.split(".",1)[0]
 
-    f = open(filename, "w")
+    f = open(filename, "a")
     f.write('###### following modifications are made by tcos-bootstrap ######\n') 
     f.write('export LANG=' + lang + '\n') 
     f.write('export PATH=' + path + '\n') 
@@ -99,13 +100,18 @@ restrict -6 default kod notrap nomodify nopeer noquery
 restrict 127.0.0.1
 
 """
-    ntpservers = ""
-    # The environment variable UDHCPC_ntpsrv is given by /etc/environment and set by Initrd/init
 
-    if  os.getenv('UDHCPC_ntpsrv', 0) != 0 :
-        ntpservers += os.getenv['UDHCPC_ntpsrv'] + " "
+#    We accept ntp-servers in two ways:
+#       - via environment variable udhcpc_ntpsrv (given by /etc/environment and set by Initrd/init)
+#       - via otc-manager, property of "location"
 
-    ntpservers = locations_entry.get("Time.ntpservers", "pool.ntp.org").split() # get a list of ntpservers
+    if  os.getenv('udhcpc_ntpsrv', 0) != 0 :
+        udhcpc_ntpsrv = os.getenv('udhcpc_ntpsrv').split()
+    else :
+        udhcpc_ntpsrv = []
+    location_ntpsrv = locations_entry.get("Time.ntpservers", "pool.ntp.org").split() 
+    ntpservers = udhcpc_ntpsrv + location_ntpsrv 
+
     # build the custom server line
     appendix = ""
     for server in ntpservers:
@@ -155,9 +161,14 @@ def write_hostname(filename="/etc/hostname"):
 def update_dns(hostname, filename="/etc/hostname"):
     with open(filename) as f:
         the_sytems_hostname = f.readline().strip('\n')
+
+    if  os.getenv('TCOS_NIC', 0) != 0 :
+        tcos_nic = os.getenv('TCOS_NIC')
+    else :
+        tcos_nic = "eth0"
     try:
         # Just try to push the hostname to the Nameserver. Do nothing more!
-        os.system('udhcpc -s /bin/true -F ' + the_sytems_hostname + ' &>/dev/null')
+        os.system('udhcpc -n -q -i ' + tcos_nic + ' -s /bin/true -F ' + the_sytems_hostname + ' &>/dev/null')
     except:
         #subprocess.call('/bin/bash')
         print "Couldn't update DNS (udhcpc)"
@@ -167,9 +178,16 @@ if __name__ == "__main__":
     writeSyslog_ng("/etc/syslog-ng/syslog-ng.conf")
     # start syslog as early as possible
     startSyslog_ng()
+    #print "write_timezones()"
     write_timezones()
+    #print "writeenv"
     writeEnvironment("/etc/environment")
+    #print "write ntp.conf"
     write_ntpd_conf()
+    #print "write_keyboard"
     writeKeyboard()
+    #print "write hostname"
     write_hostname()
+    #print "update_dns"
     update_dns(hostname)
+    #print "############# FERTIG #####################"
