@@ -1,0 +1,79 @@
+rdesktop (2.1-1.8.3-12) unstable; urgency=medium
+
+  * Patched for Cherry Smartreader Support (1503/04)
+
+ -- Lars Behrens <l.behrens@openthinclient.com>  Thu, 04 Jun 2015 18:31:55 +0200
+
+rdesktop (2.1-1.8.3-10) unstable; urgency=low
+
+  * Keymap path fixed
+  *  
+
+ -- Lars Behrens <l.behrens@openthinclient.com>  Thu, 12 Mar 2015 18:28:09 +0100
+
+rdesktop (2.1-1.8.3-9.3) unstable; urgency=low
+
+  * updated to version 1.8.3
+  * added debug mode in tcos/launcher 
+
+ -- Lars Behrens <l.behrens@openthinclient.com>  Tue, 10 Mar 2015 16:13:03 +0100
+
+
+rdesktop (2.0-1.8.2-4) unstable; urgency=low
+
+  * added raddin capapbility (oop.patch)
+  * reorganized version selection
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Tue, 25 Nov 2014 21:38:30 +0100
+
+rdesktop (2.0-1.8.2-3) unstable; urgency=medium
+
+  * fixes naming issues in rdesktop.xml and manual start parameters
+  * fixes issues with rdesktop bin
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Wed, 15 Oct 2014 21:23:20 +0200
+
+rdesktop (2.0-1.8.2-1) unstable; urgency=medium
+
+  * switched rdesktop 1.8 to default and the 1.7 to legacy
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Wed, 01 Oct 2014 13:18:48 +0200
+
+rdesktop (2.0-1.7.1-5) unstable; urgency=medium
+
+  * added external rdesktop 1.8.2 binary with usbrdr support (usbrdr binaries
+    are not part of the package) 
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Wed, 01 Oct 2014 13:17:21 +0200
+
+rdesktop (2.0-1.7.1-4) unstable; urgency=low
+
+  * re-integrated sso capability 
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Sat, 27 Sep 2014 17:44:10 +0200
+
+rdesktop (2.0-1.7.1-3) unstable; urgency=low
+
+  [ Joern Frenzel ]
+  * CHANGE redesigned handling for screensize options in launcher and xml
+
+ -- root <root@otc-dev-V2>  Mon, 11 Aug 2014 17:08:27 +0200
+
+rdesktop (2.0-1.7.1-2) unstable; urgency=low
+
+  [ Tina Bauspiess ]
+  * minor changes to establish compatibility with otc v2
+  * edited schema xml, minor fixes
+
+  [ Joern Frenzel ]
+  * change launcher and xml schema
+  * new tcos-shutdown and friends in use, have two new parameters in manager
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 20 Dec 2013 22:07:51 +0100
+
+rdesktop (2.0-1.7.1-1) unstable; urgency=low
+
+  * Initial release
+
+ -- root <root@otc-dev-V2>  Tue, 10 Dec 2013 10:39:32 +0100
+
