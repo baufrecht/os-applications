@@ -17,16 +17,16 @@
 	<label lang="de" value="Nein"/>
       </option>
     </choice>
-    <choice name="Version" value="/opt/freerdp-git/bin/xfreerdp">
+    <choice name="Version" value="/v1.1">
       <label lang="en" value="use version"/>
       <label lang="de" value="nutze Version"/>
-      <option value="/usr/bin/xfreerdp">
-	<label lang="de" value="1.1.x aus Debian Wheezy Backports"/>
-	<label lang="en" value="1.1.x from debian Wheezy backports"/>
+      <option value="/v1.1">
+	<label lang="de" value="1.1.x (Kompiliert von pre-release git -stable)"/>
+	<label lang="en" value="1.1.x (build from pre-release git -stable)"/>
       </option>
-      <option  value="/opt/freerdp-git/bin/xfreerdp">
-	<label lang="en" value="1.2.x (build from git master branch)"/>
-	<label lang="de" value="1.2.x (kompiliert von git master branch)"/>
+      <option  value="/v1.2">
+	<label lang="en" value="1.2.x (build from debian freerdp-src -stable)"/>
+	<label lang="de" value="1.2.x (kompiliert von debian freerdp-src -stable)"/>
       </option>
     </choice>
     <entry name="custom_icon" value="">
