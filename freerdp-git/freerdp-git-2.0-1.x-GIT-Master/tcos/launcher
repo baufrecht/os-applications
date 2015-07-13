@@ -20,7 +20,7 @@ import pytcos.tcos_gtk as tcos_gtk
 # implement TLS for compatibility in case of expired password
 # prevent a lethal loop in case of NLA or TLS and exitaction = restart
 # double check the funtionality of NLA with external credentials
- 
+
 
 # to have a test
 # /usr/bin/xfreerdp /sec:rdp /bpp:16 /kbd:0x00000407 +clipboard /a:smartcard /a:drive,media,/media /w:1024 /h:768 /d:opentc /v:otc-tserver /u:user /p:lalal
@@ -49,11 +49,11 @@ User = u.shellQuote(l.ENTRY.get('Application.Account.User', ''))
 Password = u.shellQuote(l.ENTRY.get('Application.Account.Password', ''))
 activateSSO = l.ENTRY.get('Application.Account.activateSSO','no')
 
- 
+
 # color depth
 if l.ENTRY.get('Application.Window.ColorDepth', '_system_') == '_system_' :
-	ColorDepth = commands.getoutput('xwininfo -root | grep Depth | awk \'{print $2}\'')
-	#ColorDepth = str(u.getScreenDepth()).strip('(\')') # u.getScreenDepth() sucks, it returns tuples
+   ColorDepth = commands.getoutput('xwininfo -root | grep Depth | awk \'{print $2}\'')
+   #ColorDepth = str(u.getScreenDepth()).strip('(\')') # u.getScreenDepth() sucks, it returns tuples
 else:
 	ColorDepth = ' /bpp:' + l.ENTRY.get('Application.Window.ColorDepth', '8')
 KeyboardLayout = l.ENTRY.get('Application.ConnectionParameters.KeyboardLayout', '0x00020409')
@@ -74,7 +74,7 @@ while True:
     if l.ENTRY.get('Application.ConnectionParameters.redirectSmartcard', 'no') == 'yes':
             Parameters += ' /smartcard:0'
     if l.ENTRY.get('Application.ConnectionParameters.redirectMedia', 'no') == 'yes':
-            Parameters += ' "/a:drive,media,/media"'	# we need to quote the parameter, otherwise os.system eats the commas
+            Parameters += ' "/a:drive,media,/media"'		     # we need to quote the parameter, otherwise os.system eats the commas
     if l.ENTRY.get('Application.ConnectionParameters.smoothFonts', 'yes') == 'yes':
             Parameters += ' +fonts'
     if l.ENTRY.get('Application.ConnectionParameters.GDIrendering', 'hw') == 'hw':
@@ -88,7 +88,7 @@ while True:
     #
     if l.ENTRY.get('Application.Window.Multimon', 'no') == 'yes':
             Parameters += ' /f /multimon:force'
-    else:	
+    else:   
             WindowType = l.ENTRY.get('Application.Window.WindowType', 'fullscreen_primary_TB')
             #
             # CAVAET: is the second display always the right one?
@@ -109,8 +109,10 @@ while True:
             elif WindowType == 'manual':
                     #  have window decoration while using manual size
                     Parameters += ' +decorations /size:' + l.ENTRY.get('Application.Window.Width', '800') + 'x' + l.ENTRY.get('Application.Window.Height', '600') + ' '
-
-    # have the manual parameters 	
+    # Determine the selected freerdp version
+    Version = l.ENTRY.get('General.Version', '/v1.1')
+    print Version
+    # have the manual parameters	
     Parameters += ' ' + manualParameters
 
     # add session credentials if not empty
@@ -120,16 +122,25 @@ while True:
 
     # NLA and TLS always requiere to know the user and password in advance
     #
-    if ProtocolSecurity == 'nla' or ProtocolSecurity == 'tls':
-	    # eigentlich nur wenn user und pass leer sind 
+    if ProtocolSecurity == 'nla' or ProtocolSecurity == 'tls' :
             if activateSSO == 'yes' :
                     User, Password = u_gtk.getUserPass('yes', 'Login for Windows')
+           
             else :
+                # If Credentials exist in freerdp configuration parse these
+                if User != '' and User != '\'\''  :
+                    Parameters += ' /u:' + User 
+                    if Password != '' and Password != '\'\''  :
+                        Parameters += ' /p:' + Password 
+                # Otherwise ask for credentials
+                else:
                     User, Password = u_gtk.getUserPass('no', 'Login for Windows')
+
+            # In case of wrong credentials an exhaustive loop needs to be prevented
             if User == '\'\'' or Password == '\'\''  :
                     os.system('zenity --error --text "Fehlerhafte Anmeldung.\nWrong authentication."')
                     sys.exit()
- 
+
     elif ProtocolSecurity == 'rdp' and activateSSO == 'yes' :
             User, Password = u_gtk.getUserPass('yes', 'Login for Windows')
 
@@ -142,9 +153,7 @@ while True:
             if Password != '' and Password != '\'\''  :
                     Parameters += ' /p:' + Password 
 
-    StartCmdline = l.ENTRY.get('General.Version', '/opt/freerdp-git/bin/xfreerdp') + Parameters
-
-    # falsche credentials aus dem manager irgendwie abfangen.
+    StartCmdline = '/opt/freerdp-git' + Version +'/bin/xfreerdp' + Parameters
 
     if debug :
             print StartCmdline
@@ -152,16 +161,21 @@ while True:
 
     returncode = os.system(StartCmdline)
 
-    #fehlerbehandlung
+    print returncode
+ 
     if ExitAction != 'Restart':
-	break
+       break
+    # Check in case of automatic cedential parsing if returncode indicates Authentication failure
+    # Exhaustive loop prevention
+    if ProtocolSecurity == 'nla' and returncode == 33536 :
+        os.system('zenity --error --text  "Authentication Failure, please check the credentials"')
+        sys.exit()
 
-# ende while 
 
 if ExitAction == 'Logout':
-	os.system("tcos-logout")
+    os.system("tcos-logout")
 elif ExitAction == 'Reboot':
-	os.system("tcos-reboot")
+    os.system("tcos-reboot")
 elif ExitAction == 'Shutdown':
-	os.system("tcos-shutdown")
+    os.system("tcos-shutdown")
 

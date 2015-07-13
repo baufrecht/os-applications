@@ -1,5 +1,5 @@
 Package: rdesktop
-Version: 2.1-1.8.3-12
+Version: 2.1-1.8.3-14
 Architecture: i386
 Maintainer: Lars Behrens <l.behrens@openthinclient.com>
 Installed-Size: 510
@@ -11,67 +11,3 @@ Description: RDP client for Windows NT/2000 Terminal Server
  of natively speaking its Remote Desktop Protocol (RDP) in order to present
  the user's NT/2000 desktop. Unlike Citrix ICA, no server extensions are
  required.
- .
- .
- http://jenerpeon.de/
-License: rdesktop LICENSE AGREEMENT
- .
- .
- LICKING "I ACCEPT" BELOW, YOU ARE AGREEING TO BE BOUND BY THE TERMS OF THIS
- LICENSE AND REPRESENTING THAT YOU HAVE THE AUTHORITY TO ENTER INTO THIS LICENSE
- ON BEHALF OF YOUR COMPANY ("YOU").
- .
- .
- .
- Use of this component is subject to the Citrix license covering the Citrix
- product(s) with which you will be using this component. This component is only
- licensed for use with such Citrix product(s).
- .
- .
- YOU ARE NOT ALLOWED TO:
- .
- .
- (i) using, copying (except as necessary for back-up or archival purposes or to
- the extent expressly permitted by applicable law and to the extent that Citrix
- is not permitted by that applicable law to exclude or limit such rights),
- modifying, or transferring the Citrix Deliverables or Products or any copy in
- whole or in part, or granting any rights in the Citrix Deliverables or
- Products;
- .
- .
- (ii) translating, reverse engineering, decompiling, disassembling, or creating
- derivative works based on the Citrix Deliverables or Products; or
- .
- .
- (iii) renting or leasing the Citrix Deliverables or Products.
- .
- .
- (iv) use, export or re-export the Citrix Deliverables in any form without the
- appropriate government licenses.
- .
- .
- CITRIX AND ITS SUPPLIERS MAKE AND YOU RECEIVE NO WARRANTIES OR CONDITIONS,
- EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, AND CITRIX AND ITS SUPPLIERS
- SPECIFICALLY DISCLAIM ANY CONDITIONS OF QUALITY AND ANY IMPLIED WARRANTIES,
- INCLUDING, WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY,
- NONINFRINGEMENT, OR FITNESS FOR A PARTICULAR PURPOSE. YOU ASSUME THE
- RESPONSIBILITY FOR THE USE OF, AND RESULTS OBTAINED FROM THE CITRIX
- DELIVERABLES.
- .
- .
- IN NO EVENT SHALL THE LIABILITY OF CITRIX, ITS AFFILIATES OR SUPPLIERS EXCEED
- ONE HUNDRED US DOLLARS ($100.00). SOME JURISDICTIONS DO NOT ALLOW THE
- LIMITATION OR EXCLUSION OF LIABILITY FOR INCIDENTAL OR CONSEQUENTIAL DAMAGES,
- SO THE ABOVE LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU.
- .
- .
- .
- Citrix Systems, Inc.
- .
- 851 West Cypress Creek Road
- .
- Fort Lauderdale, FL 33309
- .
- 1-800-437-7503
- .
- http://www.citrix.com/
