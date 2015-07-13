@@ -20,7 +20,7 @@ import pytcos.tcos_gtk as tcos_gtk
 # implement TLS for compatibility in case of expired password
 # prevent a lethal loop in case of NLA or TLS and exitaction = restart
 # double check the funtionality of NLA with external credentials
-
+ 
 
 # to have a test
 # /usr/bin/xfreerdp /sec:rdp /bpp:16 /kbd:0x00000407 +clipboard /a:smartcard /a:drive,media,/media /w:1024 /h:768 /d:opentc /v:otc-tserver /u:user /p:lalal
@@ -49,7 +49,7 @@ User = u.shellQuote(l.ENTRY.get('Application.Account.User', ''))
 Password = u.shellQuote(l.ENTRY.get('Application.Account.Password', ''))
 activateSSO = l.ENTRY.get('Application.Account.activateSSO','no')
 
-
+ 
 # color depth
 if l.ENTRY.get('Application.Window.ColorDepth', '_system_') == '_system_' :
 	ColorDepth = commands.getoutput('xwininfo -root | grep Depth | awk \'{print $2}\'')
@@ -120,7 +120,8 @@ while True:
 
     # NLA and TLS always requiere to know the user and password in advance
     #
-    if ProtocolSecurity == 'nla' or ProtocolSecurity == 'tls' :
+    if ProtocolSecurity == 'nla' or ProtocolSecurity == 'tls':
+	    # eigentlich nur wenn user und pass leer sind 
             if activateSSO == 'yes' :
                     User, Password = u_gtk.getUserPass('yes', 'Login for Windows')
             else :
@@ -128,7 +129,7 @@ while True:
             if User == '\'\'' or Password == '\'\''  :
                     os.system('zenity --error --text "Fehlerhafte Anmeldung.\nWrong authentication."')
                     sys.exit()
-
+ 
     elif ProtocolSecurity == 'rdp' and activateSSO == 'yes' :
             User, Password = u_gtk.getUserPass('yes', 'Login for Windows')
 
@@ -143,18 +144,24 @@ while True:
 
     StartCmdline = l.ENTRY.get('General.Version', '/opt/freerdp-git/bin/xfreerdp') + Parameters
 
+    # falsche credentials aus dem manager irgendwie abfangen.
+
     if debug :
             print StartCmdline
             sys.exit()
 
     returncode = os.system(StartCmdline)
 
+    #fehlerbehandlung
     if ExitAction != 'Restart':
 	break
-    if ExitAction == 'Logout':
+
+# ende while 
+
+if ExitAction == 'Logout':
 	os.system("tcos-logout")
-    elif ExitAction == 'Reboot':
+elif ExitAction == 'Reboot':
 	os.system("tcos-reboot")
-    elif ExitAction == 'Shutdown':
+elif ExitAction == 'Shutdown':
 	os.system("tcos-shutdown")
 

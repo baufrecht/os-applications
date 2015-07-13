@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 
 import commands
-import pytcos.tcos as tcos
 import subprocess
+import os
+import time
 
+import pytcos.tcos as tcos
 
 u = tcos.Util()
 s = tcos.System()
@@ -17,13 +19,12 @@ locations_dn = l.getLocationsDn(client_dn, ldap_url)
 locations_entry = l.getNismapentry(locations_dn, ldap_url)
 
 hostname = l.getCnByDn(client_dn)
-ip_eth0 = commands.getoutput("LANG=C ifconfig eth0 2>/dev/null | sed -n 's/.*inet addr:\\([0-9.]\\+\\).*/\\1/p'")
+#ip_eth0 = commands.getoutput("LANG=C ifconfig eth0 2>/dev/null | sed -n 's/.*inet addr:\\([0-9.]\\+\\).*/\\1/p'")
 
 
 # functions
 def writeSyslog_ng(filename="/etc/syslog-ng/syslog-ng.conf"):
     logserver = s.getNfsrootServer()
-
     f = open(filename, "w")
     f.write("@version: 3.3\n" +
             "source s_all {\n" +
@@ -42,8 +43,12 @@ def writeSyslog_ng(filename="/etc/syslog-ng/syslog-ng.conf"):
 
 
 def startSyslog_ng():
+    # subprocess.call("update-rc.d -f syslog-ng start 14 2 . stop 90 0 1 6 .", shell=True)
+
+    # Start logger here, whatever the system does think about.
+    subprocess.call('find /etc/rc*.d/ -iname "*syslog-ng" -exec rm -f {} \;', shell=True)
     try:
-        subprocess.call("update-rc.d -f syslog-ng start 14 2 . stop 90 0 1 6 .", shell=True)
+        subprocess.call('rm -f /var/lib/syslog-ng/*; /etc/init.d/syslog-ng start', shell=True)
     except:
         print("Couldn't start syslog-ng")
 
@@ -60,17 +65,26 @@ def write_timezones(destination="/etc/localtime"):
 
 
 def writeEnvironment(filename="/etc/environment"):
+    # keep in mind:
+       # /etc/environment is already modified in Initrd/init
+       # we need to append
+    
     path = "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11"
     lang = locations_entry.get("Lang.lang", "en_US.UTF-8")
     language = lang.split(".",1)[0]
 
-    entry_dict = {
-                  "export LANG" : lang,
-                      "export PATH" : path,
-                  "export LANGUAGE" : language,
-                      }
+    f = open(filename, "a")
+    f.write('###### following modifications are made by tcos-bootstrap ######\n') 
+    f.write('export LANG=' + lang + '\n') 
+    f.write('export PATH=' + path + '\n') 
+    f.write('export LANGUAGE=' + language + '\n') 
 
-    u.writeDictionaryToFile(entry_dict, filename)
+    #    entry_dict = {
+    #                  "export LANG" : lang,
+    #                      "export PATH" : path,
+    #                  "export LANGUAGE" : language,
+    #                      }
+    #    u.writeDictionaryToFile(entry_dict, filename)
 
 
 def write_ntpd_conf(filename="/etc/ntp.conf"):
@@ -86,7 +100,18 @@ restrict -6 default kod notrap nomodify nopeer noquery
 restrict 127.0.0.1
 
 """
-    ntpservers = locations_entry.get("Time.ntpservers", "pool.ntp.org").split() # get a list of ntpservers
+
+#    We accept ntp-servers in two ways:
+#       - via environment variable udhcpc_ntpsrv (given by /etc/environment and set by Initrd/init)
+#       - via otc-manager, property of "location"
+
+    if  os.getenv('udhcpc_ntpsrv', 0) != 0 :
+        udhcpc_ntpsrv = os.getenv('udhcpc_ntpsrv').split()
+    else :
+        udhcpc_ntpsrv = []
+    location_ntpsrv = locations_entry.get("Time.ntpservers", "pool.ntp.org").split() 
+    ntpservers = udhcpc_ntpsrv + location_ntpsrv 
+
     # build the custom server line
     appendix = ""
     for server in ntpservers:
@@ -123,8 +148,10 @@ def writeKeyboard(filename="/etc/default/keyboard"):
 def write_hostname(filename="/etc/hostname"):
     with open(filename) as f:
         etc_hostname = f.readline().strip('\n')
-    # 'openthinclient' is provided by an applied config, hostname is set in
-    # the manager console
+    # The way, the clients hostname comes in place.
+         # 1) The default hostname 'openthinclient' is provided by an applied config inside the os-core Makefile.
+         # 2) If the client receives an name while running Initrd/init, the hostname will be updated.
+         # 3) If NOT, the clients name will be set here - to the name given in otc-manager.
     if etc_hostname == 'openthinclient' and len(hostname) != 0:
         with open(filename, 'w') as f:
             f.write(hostname + '\n')
@@ -133,10 +160,17 @@ def write_hostname(filename="/etc/hostname"):
 
 def update_dns(hostname, filename="/etc/hostname"):
     with open(filename) as f:
-        etc_hostname = f.readline().strip('\n')
+        the_sytems_hostname = f.readline().strip('\n')
+
+    if  os.getenv('TCOS_NIC', 0) != 0 :
+        tcos_nic = os.getenv('TCOS_NIC')
+    else :
+        tcos_nic = "eth0"
     try:
-        subprocess.check_call(['/sbin/udhcpc', '-o', '-F', etc_hostname])
+        # Just try to push the hostname to the Nameserver. Do nothing more!
+        os.system('udhcpc -n -q -i ' + tcos_nic + ' -s /bin/true -F ' + the_sytems_hostname + ' &>/dev/null')
     except:
+        #subprocess.call('/bin/bash')
         print "Couldn't update DNS (udhcpc)"
 
 # main
@@ -144,9 +178,16 @@ if __name__ == "__main__":
     writeSyslog_ng("/etc/syslog-ng/syslog-ng.conf")
     # start syslog as early as possible
     startSyslog_ng()
+    #print "write_timezones()"
     write_timezones()
+    #print "writeenv"
     writeEnvironment("/etc/environment")
+    #print "write ntp.conf"
     write_ntpd_conf()
+    #print "write_keyboard"
     writeKeyboard()
+    #print "write hostname"
     write_hostname()
+    #print "update_dns"
     update_dns(hostname)
+    #print "############# FERTIG #####################"

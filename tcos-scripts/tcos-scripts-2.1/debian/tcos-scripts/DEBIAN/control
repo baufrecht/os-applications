@@ -1,9 +1,8 @@
 Package: tcos-scripts
-Version: 2.1-6
+Version: 2.1-8
 Architecture: i386
 Maintainer: Joern Frenzel <j.frenzel@openthinclient.com>
-Installed-Size: 13
-Depends: base (>= 2.1-0)
+Installed-Size: 24
 Conflicts: initscripts-tcos
 Section: unknown
 Priority: optional

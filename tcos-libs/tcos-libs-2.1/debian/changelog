@@ -1,3 +1,17 @@
+tcos-libs (2.1-2) unstable; urgency=low
+
+  * rollback the dependency in control file
+  * contrariwise dependencies seem to confuse the package manager
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 26 Jun 2015 22:03:34 +0200
+
+tcos-libs (2.1-1) unstable; urgency=low
+
+  * get ready for base 2.1-6
+      - modified launcher_arg.py and tcos.py to handle environment var TCOS_NIC
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 19 Jun 2015 15:51:57 +0200
+
 tcos-libs (2.0-14) unstable; urgency=low
 
   * sourced out all gtk-stuff to tcos_gtk.py
