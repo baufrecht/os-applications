@@ -1,3 +1,11 @@
+tcos-devices (2.1-1) unstable; urgency=low
+
+  * have a lot more switches for clients and hardwaretypes
+  * Kernel, GPU-Driver and much more can now be chosen by switch
+  * have a nice configurable splashscreen by default
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 26 Jun 2015 21:50:53 +0200
+
 tcos-devices (2.0-20) unstable; urgency=low
 
   * display.xml: add DP-3 and DP-4 to list of connectors

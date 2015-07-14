@@ -8,10 +8,9 @@ Standards-Version: 3.9.3
 
 Package: tcos-scripts
 Architecture: any
-Depends: base (>= 2.1-0)
+Depends: 
 Conflicts: initscripts-tcos
 Description: tcos client scripts
  This scripts are takeing care about the clients configuration,
  by pulling all the information from the management backend,
  patching configs etc..
-

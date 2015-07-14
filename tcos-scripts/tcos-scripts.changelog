@@ -1,3 +1,22 @@
+tcos-scripts (2.1-8) unstable; urgency=low
+
+  * rollback the dependency in control file
+  * contrariwise dependencies seem to confuse the package manager
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 26 Jun 2015 21:58:05 +0200
+
+tcos-scripts (2.1-7) unstable; urgency=low
+
+  * get ready for base 2.1-6 in many ways
+    - changed udhcpc call in tcos-bootstrap, does no longer change any settings on the running system
+    - syslog-ng is now started directly instead of modifying rcd scripts
+    - ntp-servers from DHCP-answer are now in game
+    - tcos.py and launcher_arg.py can now handle a TCOS_NIC, eth0 isn't hardcoded any longer
+  * fixed empty (under some circumstances) /etc/resolv.conf
+  * fixed missing (under some circumstances) default gw
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Tue, 16 Jun 2015 17:51:53 +0200
+
 tcos-scripts (2.1-6) unstable; urgency=low
 
   * merged git-directories
