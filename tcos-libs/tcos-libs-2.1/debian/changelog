@@ -1,0 +1,573 @@
+tcos-libs (2.1-2) unstable; urgency=low
+
+  * rollback the dependency in control file
+  * contrariwise dependencies seem to confuse the package manager
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 26 Jun 2015 22:03:34 +0200
+
+tcos-libs (2.1-1) unstable; urgency=low
+
+  * get ready for base 2.1-6
+      - modified launcher_arg.py and tcos.py to handle environment var TCOS_NIC
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 19 Jun 2015 15:51:57 +0200
+
+tcos-libs (2.0-14) unstable; urgency=low
+
+  * sourced out all gtk-stuff to tcos_gtk.py
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Wed, 04 Mar 2015 16:52:49 +0100
+
+tcos-libs (2.0-13) unstable; urgency=low
+
+  * tcos.py fixed wrong paht for custom icons
+  * tcos.py new function to username and password, supporting the usage of sso
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Tue, 27 Jan 2015 18:47:04 +0100
+
+tcos-libs (2.0-12) unstable; urgency=medium
+
+  * merged Andreas' additions: client groups
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Wed, 01 Oct 2014 17:36:29 +0200
+
+tcos-libs (2.0-11) unstable; urgency=low
+
+  * fix a bug in screen dimension handling, type conversion was missing
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Mon, 14 Jul 2014 18:15:08 +0200
+
+tcos-libs (2.0-10) unstable; urgency=low
+
+  * NEW: debug.py for embedding
+  * FIX: adapted the behaviour of UserGroups as we did in 2.0-9 for Users
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Thu, 03 Jul 2014 18:51:06 +0200
+
+tcos-libs (2.0-9) unstable; urgency=low
+
+  * CHANGE: behaviour of Ldap.getUserDn('tcos', ldap_url) now doesn't look for
+    the userdn on secondary LDAP servers
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Tue, 20 May 2014 15:29:58 +0200
+
+tcos-libs (2.0-8) unstable; urgency=low
+
+  * CHANGE: tcos.py uses dconf now to get desktop dimensions
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Mon, 24 Mar 2014 16:32:59 +0100
+
+tcos-libs (2.0-7) unstable; urgency=low
+
+  * NEW: added a type emulation for xml scheme (bool, int, float)
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Fri, 21 Feb 2014 16:49:27 +0100
+
+tcos-libs (2.0-6) unstable; urgency=low
+
+  * FIX: took base out of Depends
+  * NEW: ipaddress applet
+  * NEW: define exception for mozo made custom menus
+  * FIX: strange indentation issue
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Tue, 14 Jan 2014 18:40:13 +0100
+
+tcos-libs (2.0-02) unstable; urgency=low
+
+  * delete folder tcos and folder schema, package does not need it
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Mon, 07 Oct 2013 13:36:43 +0200
+
+tcos-libs (2.0-01) unstable; urgency=low
+
+  * CHANGE: package rename
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Tue, 01 Oct 2013 18:34:56 +0200
+
+python-tcos (2.0-03) unstable; urgency=low
+
+  * new path for tcos.py an co.
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 27 Sep 2013 20:28:49 +0200
+
+python-tcos (2.0-02) unstable; urgency=low
+
+  * first try to lift it up to otc-version 2.0.x
+  * have new folder structure inside sfs
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Tue, 24 Sep 2013 21:06:33 +0200
+
+python-tcos (0.4.5-32) unstable; urgency=low
+
+  * launcher-arg.py: change output order
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 23 Aug 2013 16:22:07 +0200
+
+python-tcos (0.4.5-31) unstable; urgency=low
+
+  * launcher-arg.py: tabular output
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Fri, 23 Aug 2013 14:10:27 +0200
+
+python-tcos (0.4.5-30) unstable; urgency=low
+
+  * launcher-arg.py: small improvements for explicit calling
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Fri, 23 Aug 2013 13:13:13 +0200
+
+python-tcos (0.4.5-29) unstable; urgency=low
+
+  * launcher-arg.py: added external call capability
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Fri, 23 Aug 2013 12:41:09 +0200
+
+python-tcos (0.4.5-27) unstable; urgency=low
+
+  * FIX: typo
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Tue,  9 Jul 2013 16:07:07 +0200
+
+python-tcos (0.4.5-26) unstable; urgency=low
+
+  * FIX: debian/rules makefile
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Tue,  9 Jul 2013 15:55:35 +0200
+
+python-tcos (0.4.5-25) unstable; urgency=low
+
+  * DUMMY: +1
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Tue,  9 Jul 2013 15:47:30 +0200
+
+python-tcos (0.4.5-24) unstable; urgency=low
+
+  * DUMMY: +1
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Tue,  9 Jul 2013 15:39:33 +0200
+
+python-tcos (0.4.5-23) unstable; urgency=low
+
+  *  FIX: remove tcos.pyc, otherwise your new code will not be evaluated
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Tue,  9 Jul 2013 15:24:49 +0200
+
+python-tcos (0.4.5-22) unstable; urgency=low
+
+  * DUMMY: +1
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Tue,  9 Jul 2013 15:17:03 +0200
+
+python-tcos (0.4.5-21) unstable; urgency=low
+
+  * FIX: 'General.custom_icon' setting was broken
+  * ADD: launcher-arg.py, to generate b16 encoded argument strings
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Tue,  9 Jul 2013 15:11:46 +0200
+
+python-tcos (0.4.5-20 ) unstable; urgency=low
+
+  * FIX: typo again
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Tue,  9 Jul 2013 13:09:09 +0200
+
+python-tcos (0.4.5-19)  unstable; urgency=low
+
+  * FIX: typo
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Tue,  9 Jul 2013 13:04:01 +0200
+
+python-tcos (0.4.5-18)  unstable; urgency=low
+
+  * Add: Set-Env.Py Helper, Instances useful variables to quickly debug
+    methods and properties -> run it like python -i set-env.py 
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Tue,  9 Jul 2013 12:53:58 +0200
+
+python-tcos (0.4.5-17) u nstable; urgency=low
+
+  * FIX: tcos.py wasn't updated correctly
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Tue,  9 Jul 2013 11:59:28 +0200
+
+python-tcos (0.4.5-16) unstable; urgency=low
+
+  * ADD 'General.custom_icon' setting
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Tue,  9 Jul 2013 11:24:12 +0200
+ 
+python-tcos (0.4.5-15) unstable; urgency=low
+
+  * ADD: tcos/Desktop/writeDesktopFiles: update local mimedb
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Thu, 27 Jun 2013 17:53:31 +0200
+
+python-tcos (0.4.5-11) unstable; urgency=low
+
+  * src/tcos.py:
+        always return expanded system variables in Ldap().getNismapentry()
+
+ -- Martin Kreiner <m.kreiner@openthinclient.com>  Tue,  7 Sep 2010 05:40:02 +0200
+
+python-tcos (0.4.5-10) unstable; urgency=low
+
+  * src/tcos.py:
+        handle DirectoryType.OPENLDAP_LOCAL as DirectoryType.RFC in
+        Ldap().getUserDn() and Ldap().getUsergroupsDn()
+
+ -- Martin Kreiner <m.kreiner@openthinclient.com>  Sat, 28 Aug 2010 11:45:00 +0200
+
+python-tcos (0.4.5-9) unstable; urgency=low
+
+  * src/tcos.py:
+        - added OPENLDAP_LOCAL Ldap().DirectoryType()
+        - return OPENLDAP_LOCAL if host is 127.* in Ldap().guessServerType()
+
+ -- Martin Kreiner <m.kreiner@openthinclient.com>  Sat, 28 Aug 2010 11:20:21 +0200
+
+python-tcos (0.4.5-8) unstable; urgency=low
+
+  * src/tcos.py:
+        localhost -> 127.0.0.1 in System().getLdapUrl()
+
+ -- Martin Kreiner <m.kreiner@openthinclient.com>  Thu, 26 Aug 2010 09:08:36 +0200
+
+python-tcos (0.4.5-7) unstable; urgency=low
+
+  * src/tcos.py:
+        - added Util().isRunning()
+        - return localhost ldap url if localboot and slapd is running in
+          System().getLdapUrl()
+
+ -- Martin Kreiner <m.kreiner@openthinclient.com>  Thu, 26 Aug 2010 06:20:07 +0200
+
+python-tcos (0.4.5-6) unstable; urgency=low
+
+  * src/tcos.py:
+        - added Util().isMounted()
+        - added System().isLocalBoot()
+
+ -- Martin Kreiner <m.kreiner@openthinclient.com>  Thu, 26 Aug 2010 05:10:38 +0200
+
+python-tcos (0.4.5-5) unstable; urgency=low
+
+  * src/*:
+        removed deprecated ".svn" folder
+
+ -- Martin Kreiner <m.kreiner@openthinclient.com>  Tue, 17 Aug 2010 20:38:18 +0200
+
+python-tcos (0.4.5-4) unstable; urgency=low
+
+  * src/tcos.py:
+        preperations for using slapd locally
+        - introduce use_secondary_ldap_url in getUserDn()
+        - catch KeyError in getNismapentry()
+
+ -- Martin Kreiner <m.kreiner@openthinclient.com>  Tue, 29 Jun 2010 16:52:50 +0200
+
+python-tcos (0.4.5-3) unstable; urgency=low
+
+  * src/tcos.py:
+        fixed unbound autostart_desktop_file_foldername variable
+
+ -- Martin Kreiner <m.kreiner@openthinclient.com>  Mon, 12 Apr 2010 06:46:32 +0200
+
+python-tcos (0.4.5-2) unstable; urgency=low
+
+  * src/tcos.py:
+       modified <app_schema>.desktop-reload hook
+
+ -- Martin Kreiner <m.kreiner@openthinclient.com>  Mon, 12 Apr 2010 06:02:47 +0200
+
+python-tcos (0.4.5-1) unstable; urgency=low
+
+  * src/tcos.py:
+        - merged UserGroupSettings class with SecondaryLdapConnection class
+        - check location for overwrite in SecondaryLdapConnection
+        CLOSES: Process secondary LDAP directory settings in locations on
+                client-side
+        https://issues.openthinclient.org/otc/browse/SUITE-385
+
+ -- Martin Kreiner <m.kreiner@openthinclient.com>  Tue, 23 Mar 2010 23:32:46 +0100
+
+python-tcos (0.4.1-6) unstable; urgency=low
+
+  * src/tcos.py:
+        implement <app_schema>.desktop-reload hook
+
+ -- Martin Kreiner <m.kreiner@openthinclient.com>  Sat, 17 Oct 2009 18:45:35 +0200
+
+python-tcos (0.4.1-5) unstable; urgency=low
+
+  * src/tcos.py:
+        added Ldap().getMemberUidDn()
+        IN PROGRESS: Support OpenLDAP in hybrid mode
+        https://issues.openthinclient.org/otc/browse/SUITE-333
+
+ -- Martin Kreiner <m.kreiner@openthinclient.com>  Thu,  1 Oct 2009 06:07:03 +0200
+
+python-tcos (0.4.1-4) unstable; urgency=low
+
+  * src/tcos.py:
+        IN PROGRESS: Support OpenLDAP in hybrid mode
+        https://issues.openthinclient.org/otc/browse/SUITE-333
+
+ -- Martin Kreiner <m.kreiner@openthinclient.com>  Wed,  9 Sep 2009 01:08:54 +0200
+
+python-tcos (0.4.1-3) unstable; urgency=low
+
+  * src/tcos.py:
+        test for len(match) first to avoid misleading exceptions in
+        getClientDn() and getUserDn()
+
+ -- Martin Kreiner <m.kreiner@openthinclient.com>  Wed, 12 Aug 2009 20:22:29 +0200
+
+python-tcos (0.4.1-2) unstable; urgency=low
+
+  * src/tcos.py:
+        try default MAC 00:00:00:00:00:00 in getClientDn()
+
+ -- Martin Kreiner <m.kreiner@openthinclient.com>  Wed, 12 Aug 2009 16:30:22 +0200
+
+python-tcos (0.4.1-1) unstable; urgency=low
+
+  * src/tcos.py:
+        fixed gnome-panel lies about one pixel in getFullscreenDimensions()
+
+ -- Martin Kreiner <m.kreiner@openthinclient.com>  Thu, 23 Jul 2009 18:15:33 +0200
+
+python-tcos (0.3.0-3) unstable; urgency=low
+
+  * src/tcos.py:
+        removed last changes as initscripts-tcos/tcos/PostLogin/desktop
+        takes care of it now
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Thu, 27 Nov 2008 12:38:38 +0100
+
+python-tcos (0.3.0-2) unstable; urgency=low
+
+  * src/tcos.py:
+         fix *.desktop file permissions on non TCOS nfs or RAM homes in
+         Desktop.writeDesktopFile()
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Thu, 27 Nov 2008 12:38:21 +0100
+
+python-tcos (0.3.0-1) unstable; urgency=low
+
+  * src/tcos.py:
+        Closes: Missing client desktop applications (AD + Automatic Login)
+        https://issues.openthinclient.org/otc/browse/SUITE-233
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Mon, 18 Aug 2008 18:30:08 +0200
+
+python-tcos (0.2.2-15) unstable; urgency=low
+
+  * src/tcos.py:
+        getUserDn(): bugfix for non existing users in ADS
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Sat, 26 Jul 2008 02:19:43 +0200
+
+python-tcos (0.2.2-14) unstable; urgency=low
+
+  * src/tcos.py:
+        getAppsDn():
+            - make sure we get this order:
+              appgroups -> usergroups -> client -> user
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Mon, 21 Jul 2008 21:48:54 +0200
+
+python-tcos (0.2.2-13) unstable; urgency=low
+
+  * src/tcos.py:
+        getFullscreenDimensions():
+            - added check if gnome-panel is actually running
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Mon, 21 Jul 2008 14:27:09 +0200
+
+python-tcos (0.2.2-12) unstable; urgency=low
+
+  * src/tcos.py:
+        getCmdlineParam():
+            - fixed regex to get last parameter as well,
+            - return empty string (instead of throwing exception) if parameter
+              not found
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Sun, 13 Jul 2008 14:01:12 +0200
+
+python-tcos (0.2.2-11) unstable; urgency=low
+
+  * src/tcos.py:
+        added shellQuote() and shellQuoteList()
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Tue,  8 Jul 2008 20:26:13 +0200
+
+python-tcos (0.2.2-10) unstable; urgency=low
+
+  * src/tcos.py:
+        added getPrintersDnByClient(), getPrintersDnByUser()
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Tue,  8 Jul 2008 18:05:21 +0200
+
+python-tcos (0.2.2-9) unstable; urgency=low
+
+  * src/tcos.py:
+        removed url decoding in getLdapUrl(). proper encoding on server side
+        now.
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Mon, 30 Jun 2008 21:33:00 +0200
+
+python-tcos (0.2.2-8) unstable; urgency=low
+
+  * src/tcos.py:
+        added url decoding to getLdapUrl()
+        Closes: Encode LDAP URL for kernel command line parameter "ldapurl"
+                https://issues.openthinclient.org/otc/browse/SUITE-206
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Mon, 30 Jun 2008 18:08:20 +0200
+
+python-tcos (0.2.2-7) unstable; urgency=low
+
+  * src/tcos.py:
+        Closes: Quite a thinko in getGroupOfUniqueNamesDnRecursiv() on client
+                side
+                https://issues.openthinclient.org/otc/browse/SUITE-185
+  * debian/rules: include sources
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Mon, 28 Apr 2008 17:35:22 +0200
+
+python-tcos (0.2.2-6) unstable; urgency=low
+
+  * allow suppression of desktop files for applications by ".nodesktop" file
+  * minor typo fixed
+
+ -- Tobias Abt <t.abt@levigo.de>  Fri, 18 Apr 2008 19:55:27 +0200
+
+python-tcos (0.2.2-5) unstable; urgency=low
+
+  * src/tcos.py: added Ldap.getCnByDn()
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Wed, 16 Apr 2008 22:19:19 +0200
+
+python-tcos (0.2.2-4) unstable; urgency=low
+
+  * created launcher.getAppInfo()
+
+ -- Tobias Abt <t.abt@levigo.de>  Wed, 16 Apr 2008 19:51:44 +0200
+
+python-tcos (0.2.2-3) unstable; urgency=low
+
+  * change u.getFullscreenDimensions() to alternatively return single
+    dimension values
+
+ -- Tobias Abt <t.abt@levigo.de>  Wed, 16 Apr 2008 13:34:45 +0200
+
+python-tcos (0.2.2-2) unstable; urgency=low
+
+  * src/tcos.py:
+        getGroupOfUniqueNamesDn(), getGroupOfUniqueNamesDnRecursiv(),
+        getMemberOfDnRecursiv(): ldap.filter.escape_filter_chars()
+
+        Closes: Escape special characters for DN-search on client side
+        https://issues.openthinclient.org/otc/browse/SUITE-157
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Thu, 10 Apr 2008 18:38:09 +0000
+
+python-tcos (0.2.2-1) unstable; urgency=low
+
+  * src/tcos.py:
+        writeDictionaryToFile(): don't write if entry_dict[key] is None
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Sun,  6 Apr 2008 20:40:21 +0000
+
+python-tcos (0.2.1-2) unstable; urgency=low
+
+  * src/tcos.py:
+        writeDesktopFiles(), removeDesktopFiles(): introduced autostart
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Wed, 12 Mar 2008 15:10:27 +0000
+
+python-tcos (0.2.0-1) unstable; urgency=low
+
+  * src/tcos.py:
+        getMergedDesktopFileEntries(): introduced X-TCOS-EXECFIELDCODE
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Tue, 26 Feb 2008 23:33:46 +0000
+
+python-tcos (0.1.0-1) unstable; urgency=low
+
+  * New openthinclient versioning
+  * Added copyright/licence header
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Sat, 15 Dec 2007 01:10:42 +0000
+
+python-tcos (0.2-6) unstable; urgency=low
+
+  * src/tcos.py: Quickfix for lowercase DN
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Fri, 14 Dec 2007 21:26:14 +0000
+
+python-tcos (0.2-5) unstable; urgency=low
+
+  * src/tcos.py: CeptixRealmConfiguration -> RealmConfiguration
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Mon, 22 Oct 2007 20:22:16 +0000
+
+python-tcos (0.2-4) unstable; urgency=low
+
+  * src/tcos.py: Updated to revision 44190.
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Thu, 20 Sep 2007 18:02:31 +0000
+
+python-tcos (0.2-3) unstable; urgency=low
+
+  * src/tcos.py: Updated to revision 42909
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Wed, 25 Jul 2007 16:03:23 +0000
+
+python-tcos (0.2-2) unstable; urgency=low
+
+  * src/tcos.py: Updated to revision 42899
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Wed, 25 Jul 2007 14:35:23 +0000
+
+python-tcos (0.2-1) unstable; urgency=low
+
+  * tcos.py: ADS integration
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Thu, 12 Jul 2007 14:49:05 +0000
+
+python-tcos (0.1-6) unstable; urgency=low
+
+  * tcos.py: cleanup + fixes
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Thu, 19 Apr 2007 12:43:20 +0000
+
+python-tcos (0.1-5) unstable; urgency=low
+
+  * tcos.py: class Util(): Added isMountpoint(), mount()
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Wed, 31 Jan 2007 22:00:25 +0000
+
+python-tcos (0.1-4) unstable; urgency=low
+
+  * debian/control: Added python-gnome2 dependency
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Fri,  5 Jan 2007 17:34:24 +0000
+
+python-tcos (0.1-3) unstable; urgency=low
+
+  * kiosk user adjustments
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Mon, 27 Nov 2006 19:15:40 +0000
+
+python-tcos (0.1-2) unstable; urgency=low
+
+  * first attempts to the "who matches who"
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Mon, 16 Oct 2006 21:38:41 +0000
+
+python-tcos (0.1-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Martin Kreiner <m.kreiner@levigo.de>  Fri,  4 Aug 2006 20:06:05 +0000
+

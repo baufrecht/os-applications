@@ -1,0 +1,14 @@
+Source: tcos-libs
+Section: unknown
+Priority: optional
+Maintainer: Steffen Hoenig <s.hoenig@openthinclient.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+
+Package: tcos-libs
+Architecture: any
+Depends: 
+Conflicts: python-tcos
+Description: python libraries for openthinclient
+ This libraries are used by the launchers and and other 
+ scripts doing the magic inside a running client.

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema single-instance-only="true" name="persistenthome" type="device" version="1">
+        <label lang="de" value="peristentes Home Verzeichnis auf NFS Server, siehe Einstellungen der Umgebung" />
+        <label lang="en" value="persistent Home Directory on NFS Server, see Realm Settings" />
+</schema>
+
