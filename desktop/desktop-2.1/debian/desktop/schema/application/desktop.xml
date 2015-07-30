@@ -123,5 +123,19 @@
         <label lang="de" value="ip Adresse hinzufügen"/>
         <label lang="en" value="add ip address"/>
       </entry>
+      <choice name="session" value="mate">
+        <option value="mate">
+              <label lang="de" value="Desktop"/>
+              <label lang="en" value="Desktop"/>
+        </option>
+        <option value="terminal">
+              <label lang="de" value="Terminal"/>
+              <label lang="en" value="Terminal"/>
+        </option>
+        <option value="kiosk">
+            <label lang="de" value="Kiosk-Modus"/>
+            <label lang="en" value="Kiosk mode"/>
+        </option>
+      </choice>
     </group>
 </schema>

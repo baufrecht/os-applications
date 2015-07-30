@@ -3,13 +3,15 @@
 import pytcos.tcos as tcos
 import os
 import re
+import time
 
-from subprocess import call
+from subprocess import call, check_call
 
 l = tcos.Ldap()
 s = tcos.System()
 d = tcos.Desktop()
 u = tcos.Util()
+log = tcos.Logger()
 
 ldap_url = s.getLdapUrl()
 client_dn = l.getClientDn(s.getMac(), ldap_url)
@@ -40,13 +42,13 @@ def format_ldap_key(ldap_keys):
         key = entry[0][s:]
         value = entry[1]
         return {'schema':schema, key:value}
-   
+
     list_dicts = []
 
     for items in ldap_keys.items():
 
         list_dicts.append(ldap_to_dict(items))
-    
+
     return list_dicts
 
 
@@ -62,7 +64,7 @@ def merge_dicts(d_list, special_key):
             if group in d.items():
                 merged_dict.update(d)
         return merged_dict
-    
+
     groups = [item
               for d in d_list
               for item in d.items() if item[0] == special_key]
@@ -84,7 +86,7 @@ def format_key(k_dict):
 	  return 'true'
 	else:
 	  return 'false'
-    
+
     try:
         formatted_key = '[' + k_dict['schema'] + ']' + '\n'
     except KeyError as err:
@@ -136,7 +138,7 @@ if __name__ == '__main__':
                'org_mate_marco_global-keybindings.numlock': 'none'}
 
 
-    try: 
+    try:
         ENTRY.pop('schema_version')
         # overwrite values from DEFAULT with managersettings
         DEFAULT.update(ENTRY)
@@ -150,11 +152,11 @@ if __name__ == '__main__':
 	write_keys(os.path.join(PATH_SCHEMA, FILE), md)
     except IOError as err:
         print('Write Error:', err)
-	
+
     # update dconf
     os.system('sudo chmod 000 /usr/bin/caja; sudo dconf update; sleep 1; sudo chmod 755 /usr/bin/caja')
 
-   
+
     # check, if dpms should be enabled or disabled
     if DEFAULT['org_mate_screensaver.dpms-on']:
        call('xset +dpms', shell=True)
