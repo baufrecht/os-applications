@@ -1,8 +1,8 @@
 Package: tcos-libs
-Version: 2.1-2
+Version: 2.1-3
 Architecture: i386
 Maintainer: Steffen Hoenig <s.hoenig@openthinclient.com>
-Installed-Size: 32
+Installed-Size: 17
 Conflicts: python-tcos
 Section: unknown
 Priority: optional

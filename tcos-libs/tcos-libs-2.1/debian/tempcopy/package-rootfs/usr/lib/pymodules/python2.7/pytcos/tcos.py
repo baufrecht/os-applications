@@ -185,7 +185,7 @@ class Util(Logger):
 
     def getPrimaryScreenDimensions(self, geometrystring=True, withouttaskbar=True):
         x = os.getenv('firstscreenWidth')
-        y = os.getenv('firstscreenHeigth') 
+        y = os.getenv('firstscreenHeigth')
         if x == "" or y == "":
             return FLASE
         if withouttaskbar == True:
@@ -206,15 +206,15 @@ class Util(Logger):
         else:
              screen_geometry = int(x), int(y), 0, int(panel_size)
         return screen_geometry
-        
+
     def getSecondaryScreenDimensions(self, geometrystring=True):
         x = os.getenv('secondscreenWidth')
-        y = os.getenv('secondscreenHeigth') 
+        y = os.getenv('secondscreenHeigth')
         if x == "" or y == "":
             return FLASE
         #
         # CAVEAT: How should we know the y-offset?
-        # 
+        #
 
         # should we return a string or a dict?
         if geometrystring == True:
@@ -1139,7 +1139,7 @@ class Ldap(Logger):
                 '''
                 p = re.compile(r'__[A-Z]*$')
                 m = p.search(key)
-                
+
                 if m:
                     if 'BOOL' in m.group():
                         if 'true' in val:
@@ -1409,12 +1409,15 @@ class Desktop(Logger):
             if not "mozo" in filename:
                 os.remove(filename)
 
+
 class Launcher(Logger):
-    def __init__(self, ldap_url=None):
+    def __init__(self, ldap_url=None, hashed_dn=None):
         # self.LOG is filled and needed by Logger.log()
         self.LOG = []
 
         self.ENTRY = {}
+
+        self.HASHED_DN = hashed_dn
 
         self.DN = self.getDn()
 
@@ -1427,16 +1430,20 @@ class Launcher(Logger):
         if self.LDAP_URL:
             self.ENTRY = self.getEntry()
 
+
     def getDn(self):
-        if len(sys.argv) >= 2:
-            try:
-                dn_encode = base64.b16decode(sys.argv[1])
-                return dn_encode
-            except TypeError:
-                return sys.argv[1]
+        if self.HASHED_DN:
+            hashed_string = self.HASHED_DN
+        elif len(sys.argv) >= 2:
+            hashed_string = sys.argv[1]
         else:
-            e = "No Application DN passed via argv[1]"
+            e = "No Application DN passed"
             self.log(3, e)
+        try:
+            dn_encode = base64.b16decode(hashed_string)
+            return dn_encode
+        except TypeError:
+            return hashed_string
 
     def getEntry(self):
         entry = {}
