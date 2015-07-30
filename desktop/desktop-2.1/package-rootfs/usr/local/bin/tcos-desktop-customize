@@ -129,6 +129,7 @@ if __name__ == '__main__':
     '''
     DEFAULT = {'org_mate_desktop_media-handling.automount': True,
                'org_mate_desktop_media-handling.automount-open': False,
+               'org_mate_panel_toplevels_top.orientation': 'top',
                'org_mate_panel_toplevels_top.auto-hide': False,
                'org_mate_screensaver.idle-activation-enabled': False,
                'org_mate_screensaver.dpms-on': True,
