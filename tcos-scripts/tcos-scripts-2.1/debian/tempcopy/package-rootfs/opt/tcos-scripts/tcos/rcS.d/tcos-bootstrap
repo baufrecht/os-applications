@@ -68,16 +68,16 @@ def writeEnvironment(filename="/etc/environment"):
     # keep in mind:
        # /etc/environment is already modified in Initrd/init
        # we need to append
-    
+
     path = "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11"
     lang = locations_entry.get("Lang.lang", "en_US.UTF-8")
     language = lang.split(".",1)[0]
 
     f = open(filename, "a")
-    f.write('###### following modifications are made by tcos-bootstrap ######\n') 
-    f.write('export LANG=' + lang + '\n') 
-    f.write('export PATH=' + path + '\n') 
-    f.write('export LANGUAGE=' + language + '\n') 
+    f.write('###### following modifications are made by tcos-bootstrap ######\n')
+    f.write('export LANG=' + lang + '\n')
+    f.write('export PATH=' + path + '\n')
+    f.write('export LANGUAGE=' + language + '\n')
 
     #    entry_dict = {
     #                  "export LANG" : lang,
@@ -109,8 +109,8 @@ restrict 127.0.0.1
         udhcpc_ntpsrv = os.getenv('udhcpc_ntpsrv').split()
     else :
         udhcpc_ntpsrv = []
-    location_ntpsrv = locations_entry.get("Time.ntpservers", "pool.ntp.org").split() 
-    ntpservers = udhcpc_ntpsrv + location_ntpsrv 
+    location_ntpsrv = locations_entry.get("Time.ntpservers", "pool.ntp.org").split()
+    ntpservers = udhcpc_ntpsrv + location_ntpsrv
 
     # build the custom server line
     appendix = ""
@@ -173,6 +173,55 @@ def update_dns(hostname, filename="/etc/hostname"):
         #subprocess.call('/bin/bash')
         print "Couldn't update DNS (udhcpc)"
 
+def change_session_type():
+    user_dn = l.getUserDn('tcos', ldap_url)
+    apps_dn_list = l.getAppsDn(client_dn, user_dn, ldap_url)
+    for app_dn in apps_dn_list:
+       unique_name = l.getGroupOfUniqueNamesInfo(app_dn, ldap_url)
+       if unique_name['schema'] == 'desktop':
+           ENTRY = l.getNismapentry(app_dn, ldap_url)
+    try:
+        session = ENTRY.get('lightdmparser.session', "mate")
+    except:
+        session = "mate"
+    exec_list = []
+    if session == "mate":
+        exec_list.append("mate-session")
+    elif session == "terminal":
+        exec_list.append("xterm")
+    elif session == "kiosk":
+        exec_list.append("maxwm")
+    else:
+        pass
+
+    with open('/etc/X11/Xsession.d/99x11-common_start', 'w') as xsession_f:
+        from string import Template
+        boilerplate="""
+# This file is sourced by Xsession(5), not executed.
+# TCOS modified: s.passow@openthinclient.org
+
+# tcos-nfs-mount persistent/home on NFS
+
+tcos-mount-nfs-home
+
+# bring in tcos display settings variables
+# the file .tcos_displayrc is written by /usr/local/bin/tcos-xrandr
+# /usr/local/bin/tcos-xrandr is triggerd by lightdm as session-setup-script
+[ -f /tmp/.tcos_displayrc ] && . /tmp/.tcos_displayrc
+
+
+# populate desktop icons
+tcos-desktop-populate
+
+# start X
+"""
+        t = Template("""exec ${program} """)
+        final_string = "\n".join([boilerplate, t.substitute(program=exec_list[0])])
+        if len(exec_list) > 1:
+            for exe in exec_list[1:]:
+                "\n".join([final_string, t.substitute(program=exe)])
+        xsession_f.write(final_string)
+
 # main
 if __name__ == "__main__":
     writeSyslog_ng("/etc/syslog-ng/syslog-ng.conf")
@@ -191,3 +240,4 @@ if __name__ == "__main__":
     #print "update_dns"
     update_dns(hostname)
     #print "############# FERTIG #####################"
+    change_session_type()

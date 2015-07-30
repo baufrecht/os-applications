@@ -4,14 +4,62 @@
 # TCOS modules
 import pytcos.tcos as tcos
 
+import time
 import os
-from subprocess import call
+from subprocess import call, check_call
+
+l = tcos.Ldap()
+s = tcos.System()
+d = tcos.Desktop()
+u = tcos.Util()
+log = tcos.Logger()
+
+ldap_url = s.getLdapUrl()
+client_dn = l.getClientDn(s.getMac(), ldap_url)
+location_dn = l.getLocationsDn(client_dn, ldap_url)
+user_dn = l.getUserDn('tcos', ldap_url)
+apps_dn_list = l.getAppsDn(client_dn, user_dn, ldap_url)
+
+def autostart_items_for_nonmate():
+    '''workaround for starting programs without being in a mate-session
+    '''
+    for app_dn in apps_dn_list:
+       unique_name = l.getGroupOfUniqueNamesInfo(app_dn, ldap_url)
+       if unique_name['schema'] == 'desktop':
+           ENTRY = l.getNismapentry(app_dn, ldap_url)
+
+    log.log(0, 'Start, in the function')
+    try:
+        session = ENTRY.get('lightdmparser.session', "mate")
+    except:
+        session = "mate"
+    exec_list = []
+    if session == "mate":
+        # mate handles auto-start on its own
+        return 0
+    elif session == "terminal":
+        exec_list.append("xterm")
+        # terminal only, no autostarts
+        return 0
+    elif session == "kiosk":
+        log.log(0, 'In session== "kiosk"')
+        from xdg import DesktopEntry
+        while True:
+            if os.path.isdir("/home/tcos/.config/autostart"):
+                break
+            time.sleep(1)
+        for desktop_file in os.listdir('/home/tcos/.config/autostart'):
+            filename='/home/tcos/Desktop/'+desktop_file
+            entry = DesktopEntry.DesktopEntry(filename=filename)
+            STATE = check_call('DISPLAY=:0 '+entry.getExec(), shell=True)
+    else:
+        pass
 
 ###########################################################################
 #
 # we need to set the numblock here - ON or OFF
 # the files in tmp are written in tcos-desktop-customize
-# 
+#
 if os.path.isfile('/tmp/tcos_numlock_ON'):
     try: call('numlockx on', shell=True)
     except: pass
@@ -34,3 +82,4 @@ except:
 # Write .desktop files
 d.writeDesktopFiles()
 
+autostart_items_for_nonmate()
