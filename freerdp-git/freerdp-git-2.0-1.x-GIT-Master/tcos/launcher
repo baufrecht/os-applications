@@ -75,11 +75,11 @@ while True:
             Parameters += ' /smartcard:0'
     if l.ENTRY.get('Application.ConnectionParameters.redirectMedia', 'no') == 'yes':
             Parameters += ' "/a:drive,media,/media"'		     # we need to quote the parameter, otherwise os.system eats the commas
-    if l.ENTRY.get('Application.ConnectionParameters.smoothFonts', 'yes') == 'yes':
+    if l.ENTRY.get('Application.ConnectionParameters.smoothFonts', 'no') == 'yes':
             Parameters += ' +fonts'
-    if l.ENTRY.get('Application.ConnectionParameters.GDIrendering', 'hw') == 'hw':
+    if l.ENTRY.get('Application.ConnectionParameters.GDIrendering', '') == 'hw':
             Parameters += ' /gdi:hw'
-    elif l.ENTRY.get('Application.ConnectionParameters.GDIrendering', 'hw') == 'sw':
+    elif l.ENTRY.get('Application.ConnectionParameters.GDIrendering', '') == 'sw':
             Parameters += ' /gdi:sw'
     if l.ENTRY.get('Application.ConnectionParameters.remoteFX', 'no') == 'yes':
             Parameters += ' /rfx'
@@ -110,7 +110,7 @@ while True:
                     #  have window decoration while using manual size
                     Parameters += ' +decorations /size:' + l.ENTRY.get('Application.Window.Width', '800') + 'x' + l.ENTRY.get('Application.Window.Height', '600') + ' '
     # Determine the selected freerdp version
-    Version = l.ENTRY.get('General.Version', '/v1.1')
+    Version = l.ENTRY.get('General.Version', '/v1.2')
     print Version
     # have the manual parameters	
     Parameters += ' ' + manualParameters
@@ -152,6 +152,8 @@ while True:
             Parameters += ' /u:' + User 
             if Password != '' and Password != '\'\''  :
                     Parameters += ' /p:' + Password 
+    if not "/u:" in Parameters:
+            Parameters+= ' /u:' 
 
     StartCmdline = '/opt/freerdp-git' + Version +'/bin/xfreerdp' + Parameters
 
