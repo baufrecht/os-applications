@@ -1,4 +1,31 @@
-freerdp-git (2.0-1.2-15) unstable; urgency=medium
+freerdp-git (2.0-1.2-18.1) unstable; urgency=low
+
+  * fixed default value issues.
+  * 
+
+ -- Lars Behrens <l.behrens@openthinclient.com> Wed, 09 Sep 2015 10:51:06 +0000
+
+freerdp-git (2.0-1.2-18) unstable; urgency=low
+
+  * Package now includes the latest freerdp-nightly build, which substitudes former git-version.
+  * 
+ 
+
+ -- Lars Behrens <l.behrens@openthinclient.com> Wed, 09 Sep 2015 10:51:06 +0000
+
+freerdp-git (2.1-1.2-16.12) unstable; urgency=medium
+
+  * Added xfreerdp 1.0.1 from debian wheezy
+
+ -- Lars Behrens <l.behrens@openthinclient.com>  Tue, 25 Aug 2015 12:21:54 +0200
+
+freerdp-git (2.1-1.2-16.7) unstable; urgency=low
+
+  * Recompiled with new compiler options according to debian build
+
+ -- Lars Behrens <l.behrens@openthinclient.com>  Mon, 24 Aug 2015 10:20:19 +0200
+
+freerdp-git (2.1-1.2-15) unstable; urgency=medium
 
   * Bug: endless loop after nla with wrong credentials fixed
   * Autologin with credentials of configuration without sso implemented
