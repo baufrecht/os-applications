@@ -1,0 +1,29 @@
+Format: 1.8
+Date: Sat, 06 Jun 2015 16:53:32 +0200
+Source: cmdline
+Binary: cmdline
+Architecture: source i386
+Version: 2.0-02
+Distribution: unstable
+Urgency: low
+Maintainer: Joern Frenzel <j.frenzel@openthinclient.com>
+Changed-By: Joern Frenzel <j.frenzel@openthinclient.com>
+Description:
+ cmdline    - General commandline application for TCOS
+Changes:
+ cmdline (2.0-02) unstable; urgency=low
+ .
+   * have custom icon
+   * place your icon in custom/icons/ on server side
+Checksums-Sha1:
+ 945c047154f1b14978145e59d0475f8ea68ec110 513 cmdline_2.0-02.dsc
+ 0b06ce622f473c513a9174c3c59cfcf96ede3c42 5563 cmdline_2.0-02.tar.gz
+ 3fcc677ae79261640fdfe16ea83e8265bde3d065 4622 cmdline_2.0-02_i386.deb
+Checksums-Sha256:
+ c0f8836831b5ecb36a4d1d619c6dd5858f7f19751cddb5fdacae21119dc24f64 513 cmdline_2.0-02.dsc
+ 9cc0196776adc159a0b76fe9e89695baf91bcafe9e6241ca7d0fc1689d815fc9 5563 cmdline_2.0-02.tar.gz
+ b5dd62deef29acf8e414a5d4d4431d514977be6af751d5ecd3f6e77a93350c5c 4622 cmdline_2.0-02_i386.deb
+Files:
+ a6b9bad121a1bec0ced3429a6dbc9d44 513 unknown optional cmdline_2.0-02.dsc
+ 06ccb6929bbe44ad36006f3dc5b2816e 5563 unknown optional cmdline_2.0-02.tar.gz
+ f549c6e9b3066de077799748aaab17c1 4622 unknown optional cmdline_2.0-02_i386.deb

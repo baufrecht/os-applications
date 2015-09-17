@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Wed, 22 Jul 2015 23:19:54 +0200
+Source: desktop
+Binary: desktop
+Architecture: source i386
+Version: 2.1-3
+Distribution: unstable
+Urgency: medium
+Maintainer: Steffen Hoenig <s.hoenig@openthinclient.com>
+Changed-By: Steffen Hoenig <s.hoenig@openthinclient.com>
+Description:
+ desktop    - Customize the TCOS desktop experience.
+Changes:
+ desktop (2.1-3) unstable; urgency=medium
+ .
+   * added Session type Desktop, Autostart programs, Terminal
+Checksums-Sha1:
+ 0b14217a61bc390c8cfbbe249b2304f5b65339fc 518 desktop_2.1-3.dsc
+ 511a31d8247a7db879680feae2fe9f6a922a84f6 3542692 desktop_2.1-3.tar.gz
+ dc4498bb0a8fb45cb8a1ccd89f7bb82304222411 1773502 desktop_2.1-3_i386.deb
+Checksums-Sha256:
+ c3563e5edade91bdc6a3b42feb5b3acd9f4313448174f61e8321120256114845 518 desktop_2.1-3.dsc
+ 25567b62cab8245f63ba2880d5c573b1e0fe7f961a4e5af6905236cc1242e290 3542692 desktop_2.1-3.tar.gz
+ 5202fb7de2f9dc7cae1d30687af3d89e3ac9c0ca264fc3c7cd69e3958d480e35 1773502 desktop_2.1-3_i386.deb
+Files:
+ d1be32028d5a37c94df23ce534eb3852 518 unknown optional desktop_2.1-3.dsc
+ 17fc18d89c4615c72303ce84ce81f3f8 3542692 unknown optional desktop_2.1-3.tar.gz
+ 659b83d1ecc01a8442e3fb636b6297aa 1773502 unknown optional desktop_2.1-3_i386.deb

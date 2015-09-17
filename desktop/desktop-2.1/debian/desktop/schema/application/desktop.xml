@@ -45,6 +45,18 @@
                 <label lang="en" value="No"/>
             </option>
         </choice>
+        <choice name="orientation" value="top">
+            <label lang="de" value="Taskleiste Ausrichtung"/>
+            <label lang="en" value="Taskbar orientation"/>
+            <option value="top">
+                <label lang="de" value="oben"/>
+                <label lang="en" value="top"/>
+            </option>
+            <option value="bottom">
+                <label lang="de" value="unten"/>
+                <label lang="en" value="bottom"/>
+            </option>
+        </choice>
     </group>
     <group name="org_mate_screensaver">
         <label value="Bildschirmeinstellungen" lang="de"/>

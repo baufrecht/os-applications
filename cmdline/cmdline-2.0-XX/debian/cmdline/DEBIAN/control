@@ -2,7 +2,7 @@ Package: cmdline
 Version: 2.0-02
 Architecture: i386
 Maintainer: Joern Frenzel <j.frenzel@openthinclient.com>
-Installed-Size: 30
+Installed-Size: 6
 Depends: base (>= 2.0)
 Section: unknown
 Priority: optional

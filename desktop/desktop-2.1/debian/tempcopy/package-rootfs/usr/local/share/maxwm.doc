@@ -1,0 +1,5 @@
+requirements:
+libc6-dev
+libx11-dev
+
+gcc -I/usr/include/ -L/usr/lib/ -lX11 maxwm.c -o maxwm

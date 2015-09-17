@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Tue, 14 Jul 2015 23:48:40 +0200
+Source: tcos-libs
+Binary: tcos-libs
+Architecture: source i386
+Version: 2.1-3
+Distribution: unstable
+Urgency: medium
+Maintainer: Steffen Hoenig <s.hoenig@openthinclient.com>
+Changed-By: Steffen Hoenig <s.hoenig@openthinclient.com>
+Description:
+ tcos-libs  - python libraries for openthinclient
+Changes:
+ tcos-libs (2.1-3) unstable; urgency=medium
+ .
+   * added archive_metadata to usr/bin
+Checksums-Sha1:
+ 6cf65ce74cd5c0c413d011f509a1bcd1e6bcf990 524 tcos-libs_2.1-3.dsc
+ 14e341154a3bcc9bbea6a2a9f9cd8e9cec79e99b 32568 tcos-libs_2.1-3.tar.gz
+ 586796a6cec61066d6f651885582b16a75d02971 14646 tcos-libs_2.1-3_i386.deb
+Checksums-Sha256:
+ 1c46b1ea3220efdd9de05b91b24a78a4bbc72993c7a8056f7bc5b4e290dee87e 524 tcos-libs_2.1-3.dsc
+ 185e315a4dd5b2d86565cd37ca8cdb0afdb4505783301d8dec5dcea80a3b87c0 32568 tcos-libs_2.1-3.tar.gz
+ 11a18319ded563594d1c97990a04577846817a62474c22ce7f8efcb6cc889f77 14646 tcos-libs_2.1-3_i386.deb
+Files:
+ c91f0367b5c7e7f4ac566e1a3ab0c9a8 524 unknown optional tcos-libs_2.1-3.dsc
+ f85b9a1865dd57081822f027b4807fb6 32568 unknown optional tcos-libs_2.1-3.tar.gz
+ 854d48ecd9108cfee6fa178a66486e0a 14646 unknown optional tcos-libs_2.1-3_i386.deb

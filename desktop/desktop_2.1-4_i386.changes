@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Thu, 30 Jul 2015 14:51:27 +0200
+Source: desktop
+Binary: desktop
+Architecture: source i386
+Version: 2.1-4
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Steffen Hoenig <s.hoenig@openthinclient.com>
+Changed-By: Steffen Hoenig <s.hoenig@openthinclient.com>
+Description:
+ desktop    - Customize the TCOS desktop experience.
+Changes:
+ desktop (2.1-4) UNRELEASED; urgency=medium
+ .
+   * added panel orientation (credit goes to Stephan Passow)
+Checksums-Sha1:
+ 5671b3fec0f19566174e2836650f1414a5b32bb1 518 desktop_2.1-4.dsc
+ 68ef5d99572134a5feb3e682771db2b1e189c0c3 3542062 desktop_2.1-4.tar.gz
+ bc92b430e21f488d036b73ec05f636af6146af35 1773594 desktop_2.1-4_i386.deb
+Checksums-Sha256:
+ 478b07db332dacce0f05bda6ac65e7987009d879dad1566650e414a7143468cd 518 desktop_2.1-4.dsc
+ 66075502851194e7ac3c1e898d024b085eefa1fa6a41e1bbb4135ca1b7cbd416 3542062 desktop_2.1-4.tar.gz
+ a392adc48a33c18a57a6a192379fad127f3a13b7ed969810c2b92ebe4fe4f988 1773594 desktop_2.1-4_i386.deb
+Files:
+ c2ddbae71cd68e82b5a8696c2a127c52 518 unknown optional desktop_2.1-4.dsc
+ 2fb50aa0b40a26292ba664b2e8c21b76 3542062 unknown optional desktop_2.1-4.tar.gz
+ e80414cc47e2874389f28e5b59fd1eff 1773594 unknown optional desktop_2.1-4_i386.deb

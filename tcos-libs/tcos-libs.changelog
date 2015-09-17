@@ -1,3 +1,9 @@
+tcos-libs (2.1-3) unstable; urgency=medium
+
+  * added archive_metadata to usr/bin
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Tue, 14 Jul 2015 23:48:40 +0200
+
 tcos-libs (2.1-2) unstable; urgency=low
 
   * rollback the dependency in control file
