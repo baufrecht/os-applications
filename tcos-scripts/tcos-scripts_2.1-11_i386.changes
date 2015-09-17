@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Thu, 17 Sep 2015 13:26:45 +0000
+Source: tcos-scripts
+Binary: tcos-scripts
+Architecture: source i386
+Version: 2.1-11
+Distribution: unstable
+Urgency: low
+Maintainer: Joern Frenzel <j.frenzel@openthinclient.com>
+Changed-By: Steffen Hoenig <s.hoenig@openthinclient.com>
+Description: 
+ tcos-scripts - tcos client scripts
+Changes: 
+ tcos-scripts (2.1-11) unstable; urgency=low
+ .
+   * added session-cleanup-script in lightdm.conf (triggers /opt/tcos/*/PreLogout)
+Checksums-Sha1: 
+ 4a85b31b37c514ca007738737c10987477b3cb5b 597 tcos-scripts_2.1-11.dsc
+ 2b8a2e7341e484e26b0c625ef5203727015a594c 13125 tcos-scripts_2.1-11.tar.gz
+ ed234d99a7da8d414317d5f5a32e2a19d1963bb0 9728 tcos-scripts_2.1-11_i386.deb
+Checksums-Sha256: 
+ 00c6572c2fdbfcfde57871f8d88db66313cca0528e28a246d415d8b23e2bc462 597 tcos-scripts_2.1-11.dsc
+ 057e570809bb5a7227044eb93ccc813014c10702314f133f06cc29da07a2d1bb 13125 tcos-scripts_2.1-11.tar.gz
+ 624d4d026b5b0e48bedefef59263e73886f369591030775374d0682f45c4db4d 9728 tcos-scripts_2.1-11_i386.deb
+Files: 
+ 13927801422230752b5173ba02b8111b 597 unknown optional tcos-scripts_2.1-11.dsc
+ 2e06cf314f30cb95c2230f7f01566d99 13125 unknown optional tcos-scripts_2.1-11.tar.gz
+ 9b8ddf55557116643a88199f118f5d6d 9728 unknown optional tcos-scripts_2.1-11_i386.deb

@@ -1,0 +1,24 @@
+#!/usr/bin/env python 
+
+#
+#  executes scripts in /opt/*/tcos/PreLogout
+#
+
+import os
+import glob
+# this runs all other PostLogins scripts 
+#
+scripts = '/opt/*/tcos/PreLogout/*'
+
+try:
+    files = glob.glob(scripts)
+
+except Exception, e:
+    print e + ' couldn\'t access the PreLogout directory'
+
+for f in files:
+    try:
+        print f
+	os.system(f)
+    except:
+        pass
