@@ -3,13 +3,15 @@
 import pytcos.tcos as tcos
 import os
 import re
+import time
 
-from subprocess import call
+from subprocess import call, check_call
 
 l = tcos.Ldap()
 s = tcos.System()
 d = tcos.Desktop()
 u = tcos.Util()
+log = tcos.Logger()
 
 ldap_url = s.getLdapUrl()
 client_dn = l.getClientDn(s.getMac(), ldap_url)
@@ -40,13 +42,13 @@ def format_ldap_key(ldap_keys):
         key = entry[0][s:]
         value = entry[1]
         return {'schema':schema, key:value}
-   
+
     list_dicts = []
 
     for items in ldap_keys.items():
 
         list_dicts.append(ldap_to_dict(items))
-    
+
     return list_dicts
 
 
@@ -62,7 +64,7 @@ def merge_dicts(d_list, special_key):
             if group in d.items():
                 merged_dict.update(d)
         return merged_dict
-    
+
     groups = [item
               for d in d_list
               for item in d.items() if item[0] == special_key]
@@ -84,7 +86,7 @@ def format_key(k_dict):
 	  return 'true'
 	else:
 	  return 'false'
-    
+
     try:
         formatted_key = '[' + k_dict['schema'] + ']' + '\n'
     except KeyError as err:
@@ -113,34 +115,72 @@ def write_keys(file_path, config_dicts):
         for d in config_dicts:
             fobj.write(format_key(d))
 
+def slideshow_folder(slideshow):
+    try:
+        d_file = open('/usr/share/applications/screensavers/personal-slideshow.desktop', 'r', -1) 
+        d_buffer = d_file.read().split('\n')
+        d_file.close()
+    except:
+        log.log(3,'Failed to read: /usr/share/applications/screensavers/personal-slideshow.desktop')
+        pass
+    try:
+        d_index = d_buffer.index('Exec=/usr/lib/mate-screensaver/slideshow')
+    except:
+        log.log(3,'Entry: Exec=/usr/lib/mate-screensaver/slideshow in /usr/share/applications/screensavers/personal-slideshow.desktop not found')
+    d_extend = d_buffer.pop(d_index) + ' --location=' + slideshow
+    d_buffer.insert(d_index, d_extend)
+    try:
+        d_file = open('/usr/share/applications/screensavers/personal-slideshow.desktop', 'w', -1)        
+        d_file.writelines(["%s\n" % item for item in d_buffer])
+        d_file.flush()
+        d_file.close()
+    except:
+        log.log(3,'Failed write file : /usr/share/applications/screensavers/personal-slideshow.desktop')
+
+
 if __name__ == '__main__':
     '''IMPORTANT: As there is no trivial way to identify a single app_dn, this
        is meant as a means to pick up one desktop configuration that applies
     '''
     for app_dn in apps_dn_list:
-       unique_name = l.getGroupOfUniqueNamesInfo(app_dn, ldap_url)
-       if unique_name['schema'] == 'desktop':
-           ENTRY = l.getNismapentry(app_dn, ldap_url)
+        unique_name = l.getGroupOfUniqueNamesInfo(app_dn, ldap_url)
+        if unique_name['schema'] == 'desktop':
+            ENTRY = l.getNismapentry(app_dn, ldap_url)
+            # Customize desktop file, so slideshow starts with custom location 
+    
+            if 'org_mate_screensaver.custom-slideshow' in ENTRY:
+                slideshow = ENTRY['org_mate_screensaver.custom-slideshow']
+                if not os.path.exists(slideshow):
+                    log.log(2,"path to slideshow does not exist!")
+                elif slideshow != '':
+                    slideshow_folder(slideshow)
+                ENTRY.pop('org_mate_screensaver.custom-slideshow')
+
 
     '''IMPORTANT: As the java component does not initialize empty elements we
        do need to provide the default settings as a dict
     '''
     DEFAULT = {'org_mate_desktop_media-handling.automount': True,
                'org_mate_desktop_media-handling.automount-open': False,
+               'org_mate_panel_toplevels_top.orientation': 'top',
                'org_mate_panel_toplevels_top.auto-hide': False,
                'org_mate_screensaver.idle-activation-enabled': False,
                'org_mate_screensaver.dpms-on': True,
 	       'org_mate_screensaver.dpms-time': 600,
+               'org_mate_screensaver.themes': '',
                'org_mate_marco_global-keybindings.run-command-1': '<Ctrl><Alt>x',
                'org_mate_marco_global-keybindings.switch-windows': '<Alt>Tab',
-               'org_mate_marco_global-keybindings.numlock': 'none'}
+               'org_mate_marco_global-keybindings.numlock': 'none',
+               'org_mate_desktop_session.idle-delay': 5 }
 
-
-    try: 
+     
+    try:
         ENTRY.pop('schema_version')
         # overwrite values from DEFAULT with managersettings
         DEFAULT.update(ENTRY)
     except:
+   #     log.log(2,"not as bad as you might think")
+   #     raise
         pass
 
     # e.G. {'org.mate.screensaver.mode': 'blank', 'org.mate.screensaver.}
@@ -149,12 +189,13 @@ if __name__ == '__main__':
     try:
 	write_keys(os.path.join(PATH_SCHEMA, FILE), md)
     except IOError as err:
+        log.log(2,"unable to merge dicts")
         print('Write Error:', err)
-	
+        pass
+
     # update dconf
     os.system('sudo chmod 000 /usr/bin/caja; sudo dconf update; sleep 1; sudo chmod 755 /usr/bin/caja')
 
-   
     # check, if dpms should be enabled or disabled
     if DEFAULT['org_mate_screensaver.dpms-on']:
        call('xset +dpms', shell=True)
