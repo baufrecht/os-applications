@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Wed, 22 Jul 2015 16:31:44 +0200
+Source: tcos-scripts
+Binary: tcos-scripts
+Architecture: source i386
+Version: 2.1-9
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Joern Frenzel <j.frenzel@openthinclient.com>
+Changed-By: Steffen Hoenig <s.hoenig@openthinclient.com>
+Description:
+ tcos-scripts - tcos client scripts
+Changes:
+ tcos-scripts (2.1-9) UNRELEASED; urgency=medium
+ .
+   * added Session type (will be interpreted in tcos-desktop-populate)
+Checksums-Sha1:
+ 92f24a9d4934fe5cd306ad217fbea423fee1f000 598 tcos-scripts_2.1-9.dsc
+ 671555dfced0a40543e210c81df727504df70715 12945 tcos-scripts_2.1-9.tar.gz
+ 4fe831970e29541def94917bb7f501c92054f294 9652 tcos-scripts_2.1-9_i386.deb
+Checksums-Sha256:
+ f2735a572b3e2d8edd39107a05f6dac44a3a2e2ee8030f5b51a1eb7e724f1242 598 tcos-scripts_2.1-9.dsc
+ 043df3dba3cf5536e20008ff85bbaf959192e2a33de74caf84e13adb4be9e045 12945 tcos-scripts_2.1-9.tar.gz
+ 338e15a7be930bd6d64dee78695eb886e1a5b4b6e690763d7115c663c883af00 9652 tcos-scripts_2.1-9_i386.deb
+Files:
+ 60a4222b072f9d131c4eec0f27c69782 598 unknown optional tcos-scripts_2.1-9.dsc
+ 8f996afaf0a5d9b8d22c6ee1e9469db0 12945 unknown optional tcos-scripts_2.1-9.tar.gz
+ 3e816552aad254fc29e805ceeb01f691 9652 unknown optional tcos-scripts_2.1-9_i386.deb

@@ -1,0 +1,29 @@
+Format: 1.8
+Date: Fri, 26 Jun 2015 21:58:05 +0200
+Source: tcos-scripts
+Binary: tcos-scripts
+Architecture: source i386
+Version: 2.1-8
+Distribution: unstable
+Urgency: low
+Maintainer: Joern Frenzel <j.frenzel@openthinclient.com>
+Changed-By: Joern Frenzel <j.frenzel@openthinclient.com>
+Description:
+ tcos-scripts - tcos client scripts
+Changes:
+ tcos-scripts (2.1-8) unstable; urgency=low
+ .
+   * rollback the dependency in control file
+   * contrariwise dependencies seem to confuse the package manager
+Checksums-Sha1:
+ f56d2532dfcd50d73c6121d1f57191fdcd95080f 598 tcos-scripts_2.1-8.dsc
+ 0fcbf74cef35663f8877bf746d72fd9e1935381d 12901 tcos-scripts_2.1-8.tar.gz
+ 66272d6a7e1533b6cffe5e42033507f2f32db4bd 9732 tcos-scripts_2.1-8_i386.deb
+Checksums-Sha256:
+ 5f9e8eb9349f5f04fe96a70d0541378065e1a1ec1f176362a79116309935efa8 598 tcos-scripts_2.1-8.dsc
+ f67f8b7f16f4974ec6b98bec7a86af3d3cd35e7d204a8a445bdbebe3f20fd7dc 12901 tcos-scripts_2.1-8.tar.gz
+ 0ca353edb64355455ddcfc4a8ec22b2b4a698b77f05db2127f185445a7b5999d 9732 tcos-scripts_2.1-8_i386.deb
+Files:
+ 0fffd631450174543bf272efeb5c309c 598 unknown optional tcos-scripts_2.1-8.dsc
+ 02ba13054ceeb6d2f17d3e9a46d7bf36 12901 unknown optional tcos-scripts_2.1-8.tar.gz
+ 1a2387bdf06f8f0fb20a1d21bf91491f 9732 unknown optional tcos-scripts_2.1-8_i386.deb

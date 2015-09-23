@@ -173,14 +173,12 @@ if __name__ == '__main__':
                'org_mate_marco_global-keybindings.numlock': 'none',
                'org_mate_desktop_session.idle-delay': 5 }
 
-     
     try:
         ENTRY.pop('schema_version')
         # overwrite values from DEFAULT with managersettings
         DEFAULT.update(ENTRY)
     except:
-   #     log.log(2,"not as bad as you might think")
-   #     raise
+        log.log(2,"not as bad as you might think")
         pass
 
     # e.G. {'org.mate.screensaver.mode': 'blank', 'org.mate.screensaver.}
@@ -195,6 +193,7 @@ if __name__ == '__main__':
 
     # update dconf
     os.system('sudo chmod 000 /usr/bin/caja; sudo dconf update; sleep 1; sudo chmod 755 /usr/bin/caja')
+
 
     # check, if dpms should be enabled or disabled
     if DEFAULT['org_mate_screensaver.dpms-on']:
