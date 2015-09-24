@@ -115,14 +115,47 @@ def write_keys(file_path, config_dicts):
         for d in config_dicts:
             fobj.write(format_key(d))
 
+def slideshow_folder(slideshow):
+    try:
+        d_file = open('/usr/share/applications/screensavers/personal-slideshow.desktop', 'r', -1) 
+        d_buffer = d_file.read().split('\n')
+        d_file.close()
+    except:
+        log.log(3,'Failed to read: /usr/share/applications/screensavers/personal-slideshow.desktop')
+        pass
+    try:
+        d_index = d_buffer.index('Exec=/usr/lib/mate-screensaver/slideshow')
+    except:
+        log.log(3,'Entry: Exec=/usr/lib/mate-screensaver/slideshow in /usr/share/applications/screensavers/personal-slideshow.desktop not found')
+    d_extend = d_buffer.pop(d_index) + ' --location=' + slideshow
+    d_buffer.insert(d_index, d_extend)
+    try:
+        d_file = open('/usr/share/applications/screensavers/personal-slideshow.desktop', 'w', -1)        
+        d_file.writelines(["%s\n" % item for item in d_buffer])
+        d_file.flush()
+        d_file.close()
+    except:
+        log.log(3,'Failed write file : /usr/share/applications/screensavers/personal-slideshow.desktop')
+
+
 if __name__ == '__main__':
     '''IMPORTANT: As there is no trivial way to identify a single app_dn, this
        is meant as a means to pick up one desktop configuration that applies
     '''
     for app_dn in apps_dn_list:
-       unique_name = l.getGroupOfUniqueNamesInfo(app_dn, ldap_url)
-       if unique_name['schema'] == 'desktop':
-           ENTRY = l.getNismapentry(app_dn, ldap_url)
+        unique_name = l.getGroupOfUniqueNamesInfo(app_dn, ldap_url)
+        if unique_name['schema'] == 'desktop':
+            ENTRY = l.getNismapentry(app_dn, ldap_url)
+            # Customize desktop file, so slideshow starts with custom location 
+    
+            if 'org_mate_screensaver.custom-slideshow' in ENTRY:
+                slideshow = ENTRY['org_mate_screensaver.custom-slideshow']
+                if not os.path.exists(slideshow):
+                    log.log(2,"path to slideshow does not exist!")
+                elif slideshow != '':
+                    slideshow_folder(slideshow)
+                ENTRY.pop('org_mate_screensaver.custom-slideshow')
+
 
     '''IMPORTANT: As the java component does not initialize empty elements we
        do need to provide the default settings as a dict
@@ -134,16 +167,18 @@ if __name__ == '__main__':
                'org_mate_screensaver.idle-activation-enabled': False,
                'org_mate_screensaver.dpms-on': True,
 	       'org_mate_screensaver.dpms-time': 600,
+               'org_mate_screensaver.themes': '',
                'org_mate_marco_global-keybindings.run-command-1': '<Ctrl><Alt>x',
                'org_mate_marco_global-keybindings.switch-windows': '<Alt>Tab',
-               'org_mate_marco_global-keybindings.numlock': 'none'}
-
+               'org_mate_marco_global-keybindings.numlock': 'none',
+               'org_mate_desktop_session.idle-delay': 5 }
 
     try:
         ENTRY.pop('schema_version')
         # overwrite values from DEFAULT with managersettings
         DEFAULT.update(ENTRY)
     except:
+        log.log(2,"not as bad as you might think")
         pass
 
     # e.G. {'org.mate.screensaver.mode': 'blank', 'org.mate.screensaver.}
@@ -152,7 +187,9 @@ if __name__ == '__main__':
     try:
 	write_keys(os.path.join(PATH_SCHEMA, FILE), md)
     except IOError as err:
+        log.log(2,"unable to merge dicts")
         print('Write Error:', err)
+        pass
 
     # update dconf
     os.system('sudo chmod 000 /usr/bin/caja; sudo dconf update; sleep 1; sudo chmod 755 /usr/bin/caja')
