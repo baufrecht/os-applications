@@ -55,17 +55,13 @@ install: build
 #	dh_testroot
 #	dh_clean -k 
 
-# 	# copy the things we need inside a temporary copy 
-#	# we use hardlinks to save time and diskspace
+	rm -rf debian/tempcopy debian/tcos-scripts
+	mkdir -p debian/tempcopy debian/tcos-scripts/sfs/package
+	cp -al package-rootfs debian/tempcopy
+	cp -al tcos debian/tempcopy/package-rootfs/opt/tcos-scripts
 
-#	rm -rf debian/tempcopy debian/tcos-scripts > /dev/null 2>&1
-#	rm -rf debian/tempcopy debian/tcos-scripts 
-	-rm -rf debian/tempcopy debian/tcos-scripts &> /dev/null 
-	mkdir -p debian/tempcopy debian/tcos-scripts/sfs/package 
-	cp -al package-rootfs debian/tempcopy/
-	cp -al tcos debian/tempcopy/package-rootfs/opt/tcos-scripts/ 
-	cd debian/tempcopy/package-rootfs && mksquashfs . ../../tcos-scripts/sfs/package/tcos-scripts.sfs -noappend -always-use-fragments
-
+	cd debian/tempcopy/package-rootfs && \
+	mksquashfs . ../../tcos-scripts/sfs/package/tcos-scripts.sfs -noappend -always-use-fragments
 
 # Build architecture-independent files here.
 binary-indep: build install
