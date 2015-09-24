@@ -30,5 +30,13 @@
 			<label lang="en" value="Commandline"/>
 		</entry>
 	</group>
+	<group name="License">
+		<label lang="en" value="License"></label>
+		<label lang="de" value="Lizenz"></label>
+		<entry name="File">
+			<label lang="de" value="Datei"></label>
+			<label lang="en" value="File"></label>
+		</entry>
+	</group>
 </schema>
 

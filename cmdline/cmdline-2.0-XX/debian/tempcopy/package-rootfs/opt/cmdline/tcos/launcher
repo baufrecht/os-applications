@@ -3,5 +3,8 @@
 # standard modules
 import sys
 import worker
+import pytcos.tcos as tcos
 
-worker.Starter(hashed_dn=sys.argv[1])
+l = tcos.Launcher(hashed_dn=sys.argv[1])
+
+worker.Starter(entry_dict=l.ENTRY)

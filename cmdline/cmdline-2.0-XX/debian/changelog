@@ -1,3 +1,10 @@
+cmdline (2.1-1) UNRELEASED; urgency=medium
+
+  * Non-maintainer upload.
+  * test-build for licensing purposes
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Wed, 19 Aug 2015 21:27:31 +0200
+
 cmdline (2.0-02) unstable; urgency=low
 
   * have custom icon

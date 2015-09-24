@@ -1,0 +1,29 @@
+Format: 1.8
+Date: Wed, 19 Aug 2015 21:27:31 +0200
+Source: cmdline
+Binary: cmdline
+Architecture: source i386
+Version: 2.1-1
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Joern Frenzel <j.frenzel@openthinclient.com>
+Changed-By: Steffen Hoenig <s.hoenig@openthinclient.com>
+Description:
+ cmdline    - General commandline application for TCOS
+Changes:
+ cmdline (2.1-1) UNRELEASED; urgency=medium
+ .
+   * Non-maintainer upload.
+   * test-build for licensing purposes
+Checksums-Sha1:
+ 66726d71d67d0d4272545d246625ce6284cbee59 509 cmdline_2.1-1.dsc
+ 71ceceb5498109d68d5abac471114f8f619ee5bc 6794 cmdline_2.1-1.tar.gz
+ bba7befb1a14c2b606180c5ac6a4478ddf80e6a6 5952 cmdline_2.1-1_i386.deb
+Checksums-Sha256:
+ 303fd182284d299f8323af0286d956e327d2a5ea724beaab746c3bf90411f96e 509 cmdline_2.1-1.dsc
+ 3df377da0bbb71c6a66f3ca286b539429f215ef33fdef2c1d984fe4be967423c 6794 cmdline_2.1-1.tar.gz
+ 414b26d841d8360dc1e90f1869184f20fd28218d39a282eca1f5609e11234f3c 5952 cmdline_2.1-1_i386.deb
+Files:
+ 7c3214126649846f97c7344fdb3c7fa0 509 unknown optional cmdline_2.1-1.dsc
+ bae902109532b6b9dbdcac4290bf8aa9 6794 unknown optional cmdline_2.1-1.tar.gz
+ e815f25dab7b805ea91fc33133b36652 5952 unknown optional cmdline_2.1-1_i386.deb
