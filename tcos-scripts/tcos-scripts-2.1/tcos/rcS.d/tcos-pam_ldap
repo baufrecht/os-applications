@@ -66,6 +66,7 @@ greeter-hide-users=true
 display-setup-script=/usr/local/bin/tcos-xrandr 
 session-wrapper=/etc/X11/Xsession
 session-setup-script=/usr/local/bin/tcos-postlogin 
+session-cleanup-script=/usr/local/bin/tcos-prelogout
 autologin-user=tcos
 autologin-user-timeout=0
 """
@@ -79,6 +80,7 @@ greeter-hide-users=true
 display-setup-script=/usr/local/bin/tcos-xrandr 
 session-wrapper=/etc/X11/Xsession
 session-setup-script=/usr/local/bin/tcos-postlogin 
+session-cleanup-script=/usr/local/bin/tcos-prelogout
 autologin-user=
 autologin-user-timeout=0
 """

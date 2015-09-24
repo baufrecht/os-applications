@@ -11,7 +11,11 @@ u = tcos.Util()
 s = tcos.System()
 l = tcos.Ldap()
 
-mac = s.getMac()
+try:
+    mac = s.getMac(iface=os.getenv('TCOS_NIC'))
+except:
+    mac = s.getMac()
+ 
 ldap_url = s.getLdapUrl()
 client_dn = l.getClientDn(mac, ldap_url)
 devices_dn = l.getDevicesDn(client_dn, ldap_url)
@@ -211,7 +215,7 @@ tcos-mount-nfs-home
 
 
 # populate desktop icons
-tcos-desktop-populate
+tcos-desktop-populate &
 
 # start X
 """
