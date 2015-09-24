@@ -1,8 +1,11 @@
-desktop (2.1-4) UNRELEASED; urgency=medium
+desktop (2.1-5) UNRELEASED; urgency=medium
 
   * added panel orientation (credit goes to Stephan Passow)
+  * kiosk-mode: replaced maxwm with dwm (maxwm symlinks to dwm)
+  * kiosk-mode: spawn a terminal with ctrl+alt+x, switch virtual desktops with
+    alt+0 (1, 2, ...)
 
- -- Steffen Hoenig <s.hoenig@openthinclient.com>  Thu, 30 Jul 2015 14:51:27 +0200
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Thu, 24 Sep 2015 15:07:45 +0000
 
 desktop (2.1-3) unstable; urgency=medium
 
