@@ -344,10 +344,12 @@ class System(Logger):
 
     def getMac(self, iface="autodetect"):
         if iface == "autodetect":
-            if  os.getenv('TCOS_NIC', 0) != 0 :
-                iface = os.getenv('TCOS_NIC')
-            else :
-                iface = "eth0"
+            try:
+                import netifaces as ni
+                iface = ni.gateways()['default'][2][1]
+            except:
+                self.log(3, 'Couldn\'t autodetect iface, Fallback to eth0.')
+                iface = 'eth0'
         # get mac via sysfs
         f_name = '/sys/class/net/' + iface + '/address'
         try:
@@ -1043,7 +1045,7 @@ class Ldap(Logger):
                                                      [user_dn],
                                                      ldap_url)
         apps = apps_for_appgroups + \
-	       apps_for_clientgroups + \
+         apps_for_clientgroups + \
                apps_for_usergroups + \
                apps_for_client + \
                apps_for_user
@@ -1450,6 +1452,7 @@ class Launcher(Logger):
 
         l = Ldap()
         entry = l.getNismapentry(self.DN, self.LDAP_URL)
+        entry.update(l.getGroupOfUniqueNamesInfo(self.DN, self.LDAP_URL))
 
         if entry:
             return entry

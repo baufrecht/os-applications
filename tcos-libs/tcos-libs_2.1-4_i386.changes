@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Wed, 05 Aug 2015 20:48:11 +0200
+Source: tcos-libs
+Binary: tcos-libs
+Architecture: source i386
+Version: 2.1-4
+Distribution: unstable
+Urgency: medium
+Maintainer: Steffen Hoenig <s.hoenig@openthinclient.com>
+Changed-By: Steffen Hoenig <s.hoenig@openthinclient.com>
+Description:
+ tcos-libs  - python libraries for openthinclient
+Changes:
+ tcos-libs (2.1-4) unstable; urgency=medium
+ .
+   * added netifaces autodetection to System.getMac()
+Checksums-Sha1:
+ 6c2c7acf1053d2366b1c687a80188220cbaa643a 524 tcos-libs_2.1-4.dsc
+ 3123099b00699a42cd766ed46c8176dae34cea5c 43454 tcos-libs_2.1-4.tar.gz
+ 4dbdab4261e50091380939e1c0c0f4368decaff9 26728 tcos-libs_2.1-4_i386.deb
+Checksums-Sha256:
+ 121c201f1ad7978e0de4a84bedcca580f53362e5775e2d4a9366372b8b0a3942 524 tcos-libs_2.1-4.dsc
+ be06b26c981ab95ba51df06173910041f0aaf7e42c2a4934a04c81b6c776efbd 43454 tcos-libs_2.1-4.tar.gz
+ 41e36c49020b191c5a2bd9a29a11f5181f161aead565152eece2b261e198b835 26728 tcos-libs_2.1-4_i386.deb
+Files:
+ 1adbb2a94d3c63025f92a19700c0d4b9 524 unknown optional tcos-libs_2.1-4.dsc
+ 8fde15c4053066a165421f58007bd89f 43454 unknown optional tcos-libs_2.1-4.tar.gz
+ f844739babb6f26b24f01f2c0d90c81a 26728 unknown optional tcos-libs_2.1-4_i386.deb

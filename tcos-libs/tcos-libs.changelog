@@ -1,3 +1,18 @@
+tcos-libs (2.1-5) UNRELEASED; urgency=medium
+
+  * new support for licence handling:
+    - pytcos/notifications.py wraps output
+    - pytcos/lincense.py contains a class for Licenses, Validations
+  * tcos.py: the tcos.ENTRY dict contains the program type and program name 
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Wed, 19 Aug 2015 20:41:48 +0200
+
+tcos-libs (2.1-4) unstable; urgency=medium
+
+  * added netifaces autodetection to System.getMac()
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Wed, 05 Aug 2015 20:48:11 +0200
+
 tcos-libs (2.1-3) unstable; urgency=medium
 
   * added archive_metadata to usr/bin

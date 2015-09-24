@@ -15,14 +15,14 @@ Changes:
  .
    * added archive_metadata to usr/bin
 Checksums-Sha1:
- 6cf65ce74cd5c0c413d011f509a1bcd1e6bcf990 524 tcos-libs_2.1-3.dsc
- 14e341154a3bcc9bbea6a2a9f9cd8e9cec79e99b 32568 tcos-libs_2.1-3.tar.gz
- 586796a6cec61066d6f651885582b16a75d02971 14646 tcos-libs_2.1-3_i386.deb
+ 0faba313f870471953c09ebef6046e4d21eba711 524 tcos-libs_2.1-3.dsc
+ 18328d8a8bc528f4bcffd76eaf6a4e3749ae87ad 43417 tcos-libs_2.1-3.tar.gz
+ 46556e4cb10e8490c771e0b7d366b600a7252a0f 26726 tcos-libs_2.1-3_i386.deb
 Checksums-Sha256:
- 1c46b1ea3220efdd9de05b91b24a78a4bbc72993c7a8056f7bc5b4e290dee87e 524 tcos-libs_2.1-3.dsc
- 185e315a4dd5b2d86565cd37ca8cdb0afdb4505783301d8dec5dcea80a3b87c0 32568 tcos-libs_2.1-3.tar.gz
- 11a18319ded563594d1c97990a04577846817a62474c22ce7f8efcb6cc889f77 14646 tcos-libs_2.1-3_i386.deb
+ 96bbdb2335d1e7c0fc026a0461c9f5bd395dda8434291404bfa3e4b678a5a9fd 524 tcos-libs_2.1-3.dsc
+ f79803834a08dd6c6eb6f8fd66006132f2e2d52c03ed943a112667d321c926e7 43417 tcos-libs_2.1-3.tar.gz
+ cc9c5a8658d6d290ca3ffce75aef8c3d9f6f34501ed1b9f2d3ab01860ee942b2 26726 tcos-libs_2.1-3_i386.deb
 Files:
- c91f0367b5c7e7f4ac566e1a3ab0c9a8 524 unknown optional tcos-libs_2.1-3.dsc
- f85b9a1865dd57081822f027b4807fb6 32568 unknown optional tcos-libs_2.1-3.tar.gz
- 854d48ecd9108cfee6fa178a66486e0a 14646 unknown optional tcos-libs_2.1-3_i386.deb
+ ac1e52d09826af20d0bf72f114d7921a 524 unknown optional tcos-libs_2.1-3.dsc
+ 55d185d76937a54ca949ce25ad423c8e 43417 unknown optional tcos-libs_2.1-3.tar.gz
+ 964ce198981bf1dd908386adb3987b8d 26726 unknown optional tcos-libs_2.1-3_i386.deb

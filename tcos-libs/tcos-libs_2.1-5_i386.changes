@@ -1,0 +1,31 @@
+Format: 1.8
+Date: Wed, 19 Aug 2015 20:41:48 +0200
+Source: tcos-libs
+Binary: tcos-libs
+Architecture: source i386
+Version: 2.1-5
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Steffen Hoenig <s.hoenig@openthinclient.com>
+Changed-By: Steffen Hoenig <s.hoenig@openthinclient.com>
+Description:
+ tcos-libs  - python libraries for openthinclient
+Changes:
+ tcos-libs (2.1-5) UNRELEASED; urgency=medium
+ .
+   * new support for licence handling:
+     - pytcos/notifications.py wraps output
+     - pytcos/lincense.py contains a class for Licenses, Validations
+   * tcos.py: the tcos.ENTRY dict contains the program type and program name
+Checksums-Sha1:
+ 2c664b36576e9e026a5a7caf5f00fb0dae3441e0 524 tcos-libs_2.1-5.dsc
+ 59775ca1247cf8bed5cddc1351aa9ae31dc992ac 46076 tcos-libs_2.1-5.tar.gz
+ ed4bd09e956db30586d4febd0ca47414c66a6d6a 29486 tcos-libs_2.1-5_i386.deb
+Checksums-Sha256:
+ 75784607c8492b219aa7a825def1489c5f87f2819da679979abb690cc91dc744 524 tcos-libs_2.1-5.dsc
+ b8c36ac2ce21f340ea58dfe87206fcbe80bbd50c0d30d86011c6c2041d3b339e 46076 tcos-libs_2.1-5.tar.gz
+ dfb08f6ea821e6f7d9a73c3541d31c1156de5336b4bb39dd83cb0cfd16156a94 29486 tcos-libs_2.1-5_i386.deb
+Files:
+ 9a93e379c570c3dfe174dc3b1eb28c87 524 unknown optional tcos-libs_2.1-5.dsc
+ 71b8148a989418d29a50f371186a960d 46076 unknown optional tcos-libs_2.1-5.tar.gz
+ 1c1946b6939d0a766c93655bad25cb03 29486 unknown optional tcos-libs_2.1-5_i386.deb
