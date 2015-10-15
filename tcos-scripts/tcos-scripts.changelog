@@ -1,9 +1,15 @@
-tcos-scripts (2.1-15) UNRELEASED; urgency=low
+tcos-scripts (2.1-16) unstable; urgency=low
+
+  * fix: tcos-prelogout was missing
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Thu, 15 Oct 2015 14:22:16 +0000
+
+tcos-scripts (2.1-15) unstable; urgency=low
 
   * tcos-xrandr rewrite
   * version bump
 
- -- Steffen Hoenig <s.hoenig@openthinclient.com>  Thu, 15 Oct 2015 12:05:49 +0000
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Thu, 15 Oct 2015 14:21:15 +0000
 
 tcos-scripts (2.1-11) unstable; urgency=low
 

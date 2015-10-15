@@ -1,0 +1,25 @@
+#!/usr/bin/env python 
+
+#
+# set up the Desktop after the user (auto-)logins 
+#
+
+import os
+import glob
+
+# this runs all PreLogout scripts 
+#
+pre_logout = '/opt/*/tcos/PreLogout/*'
+
+try:
+    files = glob.glob(pre_logout)
+
+except Exception, e:
+    print e + ' couldn\'t access the pre_logout directory'
+
+for f in files:
+    try:
+        print f
+	os.system(f)
+    except:
+        pass
