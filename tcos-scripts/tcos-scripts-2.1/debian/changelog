@@ -1,3 +1,10 @@
+tcos-scripts (2.1-15) UNRELEASED; urgency=low
+
+  * tcos-xrandr rewrite
+  * version bump
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Thu, 15 Oct 2015 12:05:49 +0000
+
 tcos-scripts (2.1-11) unstable; urgency=low
 
   * added session-cleanup-script in lightdm.conf (triggers /opt/tcos/*/PreLogout) 

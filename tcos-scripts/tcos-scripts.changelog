@@ -1,8 +1,28 @@
-tcos-scripts (2.1-9) UNRELEASED; urgency=medium
+tcos-scripts (2.1-15) UNRELEASED; urgency=low
+
+  * tcos-xrandr rewrite
+  * version bump
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Thu, 15 Oct 2015 12:05:49 +0000
+
+tcos-scripts (2.1-11) unstable; urgency=low
+
+  * added session-cleanup-script in lightdm.conf (triggers /opt/tcos/*/PreLogout) 
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Thu, 17 Sep 2015 13:26:45 +0000
+
+tcos-scripts (2.1-10) unstable; urgency=medium
+
+  * changed tcos-bootstrap to reflect changes in tcos.py and use
+    TCOS_NIC if set
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Thu, 17 Sep 2015 13:25:32 +0000
+
+tcos-scripts (2.1-9) unstable; urgency=medium
 
   * added Session type (will be interpreted in tcos-desktop-populate)
 
- -- Steffen Hoenig <s.hoenig@openthinclient.com>  Wed, 22 Jul 2015 16:31:44 +0200
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Wed, 05 Aug 2015 20:56:31 +0200
 
 tcos-scripts (2.1-8) unstable; urgency=low
 
