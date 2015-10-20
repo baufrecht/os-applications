@@ -1,3 +1,9 @@
+tcos-scripts (2.1-17) unstable; urgency=low
+
+  * fix: autostart for mate and non-matesession 
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Tue, 20 Oct 2015 12:19:54 +0000
+
 tcos-scripts (2.1-16) unstable; urgency=low
 
   * fix: tcos-prelogout was missing

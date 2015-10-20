@@ -20,6 +20,12 @@ location_dn = l.getLocationsDn(client_dn, ldap_url)
 user_dn = l.getUserDn('tcos', ldap_url)
 apps_dn_list = l.getAppsDn(client_dn, user_dn, ldap_url)
 
+def try_exec(cmd):
+    try:
+        check_call(cmd, shell=True)
+    except:
+        log.log(2, 'Cmd: {} failed. Continue.'.format(cmd))
+
 def autostart_items_for_nonmate():
     '''workaround for starting programs without being in a mate-session
     '''
@@ -51,7 +57,7 @@ def autostart_items_for_nonmate():
         for desktop_file in os.listdir('/home/tcos/.config/autostart'):
             filename='/home/tcos/Desktop/'+desktop_file
             entry = DesktopEntry.DesktopEntry(filename=filename)
-            STATE = check_call('DISPLAY=:0 '+entry.getExec(), shell=True)
+            try_exec('DISPLAY=:0 '+entry.getExec())
     else:
         pass
 
