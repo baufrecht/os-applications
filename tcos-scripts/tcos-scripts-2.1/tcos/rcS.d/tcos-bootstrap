@@ -215,7 +215,7 @@ tcos-mount-nfs-home
 
 
 # populate desktop icons
-tcos-desktop-populate &
+tcos-desktop-populate
 
 # start X
 """
