@@ -139,7 +139,7 @@ def main():
     ### Parse User Command if exists
     if getUserCommand(device):
         try:
-            subprocess.check_call(getUserCommand(device))
+            subprocess.check_call(getUserCommand(device),shell=True)
             print getUserCommand(device)
 	except:
             log.log(2,"User Command failed! Please check the syntax, falling back to manager configuration")
@@ -194,6 +194,9 @@ def main():
                 '--mode', str(displayset[screen]['resolution']),
                 '--rotate', str(displayset[screen]['rotation']), 
                 str(displayset[screen]['position'])))
+            if screen == 'firstscreen':
+                cmdline = s.join((cmdline, '--primary'))
+
             try: 
                 log.log(0,cmdline)
                 subprocess.check_call(cmdline, shell=True)
