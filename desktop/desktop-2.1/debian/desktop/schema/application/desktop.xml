@@ -2,7 +2,7 @@
 <schema name="desktop" type="application" version="1">
   <label lang="de" value="Desktop"/>
   <label lang="en" value="Desktop"/>
-      <group name="org_mate_desktop_media-handling">
+       <group name="org_mate_desktop_media-handling">
       <label lang="de" value="Externe Medien"/>
       <label lang="en"  value="External media"/>
       <choice  name="automount__BOOL" value="true">
@@ -33,18 +33,6 @@
     <group name="org_mate_panel_toplevels_top">
         <label value="Panel" lang="de"/>
         <label value="Panel" lang="en"/>
-        <choice name="auto-hide__BOOL" value="false">
-            <label lang="de" value="Taskleiste automatisch verstecken"/>
-            <label lang="en" value="Taskbar autohide"/>
-            <option value="true">
-                <label lang="de" value="Ja"/>
-                <label lang="en" value="Yes"/>
-            </option>
-            <option value="false">
-                <label lang="de" value="Nein"/>
-                <label lang="en" value="No"/>
-            </option>
-        </choice>
         <choice name="orientation" value="top">
             <label lang="de" value="Taskleiste Ausrichtung"/>
             <label lang="en" value="Taskbar orientation"/>
@@ -57,14 +45,14 @@
                 <label lang="en" value="bottom"/>
             </option>
         </choice>
-    </group>
-    <group name="org_mate_screensaver">
-        <label value="Bildschirmeinstellungen" lang="de"/>
-        <label value="Screen settings" lang="en"/>
-        <choice name="idle-activation-enabled__BOOL" value="false">
-            <label lang="de" value="Bildschirmschoner aktivieren"/>
-            <label lang="en" value="activate screensaver"/>
-             <option value="true">
+      </group>
+      <group name="org_mate_desktop_session">
+        <label value="Abmelden" lang="de"/>
+        <label value="Logout" lang="en"/>
+          <choice name="logout-prompt__BOOL" value="true">
+            <label lang="de" value="Zeige Logout Prompt"/>
+            <label lang="en" value="Show logout prompt"/>
+            <option value="true">
                 <label lang="de" value="Ja"/>
                 <label lang="en" value="Yes"/>
             </option>
@@ -72,24 +60,23 @@
                 <label lang="de" value="Nein"/>
                 <label lang="en" value="No"/>
             </option>
-        </choice> 
-        <choice name="themes" value="screensavers-personal-slideshow">
-            <label lang="de" value="custom slideshow aktivieren"/>
-            <label lang="en" value="activate custom slideshow"/>
-             <option value="screensavers-personal-slideshow">
+        </choice>
+    </group>
+    <group name="org_mate_screensaver">
+        <label value="Bildschirmeinstellungen" lang="de"/>
+        <label value="Screen settings" lang="en"/>
+        <choice name="idle-activation-enabled__BOOL" value="false">
+            <label lang="de" value="Bildschirmsperre nach 5 min aktivieren"/>
+            <label lang="en" value="Enable screen lock after 5 minutes"/>
+            <option value="true">
                 <label lang="de" value="Ja"/>
                 <label lang="en" value="Yes"/>
             </option>
-            <option value="">
+            <option value="false">
                 <label lang="de" value="Nein"/>
                 <label lang="en" value="No"/>
             </option>
-        </choice> 
- 
-        <entry name="custom-slideshow" value="/home/tcos/Pictures">
-            <label lang="de" value="Pfad zur Diashow"/>
-            <label lang="en" value="diashow"/>
-        </entry> 
+        </choice>
         <choice name="dpms-on__BOOL" value="true">
             <label lang="de" value="Energiesparmodus aktivieren"/>
             <label lang="en" value="Enable display power saving mode"/>
@@ -105,14 +92,6 @@
 	<entry name="dpms-time__INT" value="600">
 	     <label lang="de" value="Sekunden bis Aktivierung des Energiesparmodus"/>
 	     <label lang="en" value="Seconds to wait for activating power saving mode"/>
-	</entry>
-    </group>
-    <group name="org_mate_desktop_session">
-         <label lang="de" value="Einstellungen der desktop Session"/>
-         <label lang="en" value="Desktop session settings"/>
-        <entry name="idle-delay__INT" value="5">
-	     <label lang="de" value="Minuten bis zur Aktivierung des Bildschirmschoners"/>
-	     <label lang="en" value="Minutes to wait for activating screen saver"/>
 	</entry>
     </group>
     <group name="org_mate_marco_global-keybindings">

@@ -136,7 +136,8 @@ if __name__ == '__main__':
 	       'org_mate_screensaver.dpms-time': 600,
                'org_mate_marco_global-keybindings.run-command-1': '<Ctrl><Alt>x',
                'org_mate_marco_global-keybindings.switch-windows': '<Alt>Tab',
-               'org_mate_marco_global-keybindings.numlock': 'none'}
+               'org_mate_marco_global-keybindings.numlock': 'none',
+               'org_mate_desktop_session.logout-prompt': True}
 
 
     try:

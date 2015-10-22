@@ -33,18 +33,6 @@
     <group name="org_mate_panel_toplevels_top">
         <label value="Panel" lang="de"/>
         <label value="Panel" lang="en"/>
-        <choice name="auto-hide__BOOL" value="false">
-            <label lang="de" value="Taskleiste automatisch verstecken"/>
-            <label lang="en" value="Taskbar autohide"/>
-            <option value="true">
-                <label lang="de" value="Ja"/>
-                <label lang="en" value="Yes"/>
-            </option>
-            <option value="false">
-                <label lang="de" value="Nein"/>
-                <label lang="en" value="No"/>
-            </option>
-        </choice>
         <choice name="orientation" value="top">
             <label lang="de" value="Taskleiste Ausrichtung"/>
             <label lang="en" value="Taskbar orientation"/>
@@ -55,6 +43,22 @@
             <option value="bottom">
                 <label lang="de" value="unten"/>
                 <label lang="en" value="bottom"/>
+            </option>
+        </choice>
+      </group>
+      <group name="org_mate_desktop_session">
+        <label value="Abmelden" lang="de"/>
+        <label value="Logout" lang="en"/>
+          <choice name="logout-prompt__BOOL" value="true">
+            <label lang="de" value="Zeige Logout Prompt"/>
+            <label lang="en" value="Show logout prompt"/>
+            <option value="true">
+                <label lang="de" value="Ja"/>
+                <label lang="en" value="Yes"/>
+            </option>
+            <option value="false">
+                <label lang="de" value="Nein"/>
+                <label lang="en" value="No"/>
             </option>
         </choice>
     </group>
