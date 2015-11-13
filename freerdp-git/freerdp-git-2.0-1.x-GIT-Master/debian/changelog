@@ -1,3 +1,10 @@
+freerdp-git (2.0-1.2-19) unstable; urgency=medium
+
+  * moved freerdp nightly to /opt/freerdp-nightly for consistency 
+  * with builtin addin praefix
+
+ -- Lars Behrens <l.behrens@openthinclient.com>  Fri, 13 Nov 2015 17:23:01 +0100
+
 freerdp-git (2.0-1.2-18.1) unstable; urgency=low
 
   * fixed default value issues.

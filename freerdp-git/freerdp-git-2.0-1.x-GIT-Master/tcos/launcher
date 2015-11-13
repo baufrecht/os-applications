@@ -155,8 +155,12 @@ while True:
     if not "/u:" in Parameters:
             Parameters+= ' /u:' 
 
-    StartCmdline = '/opt/freerdp-git' + Version +'/bin/xfreerdp' + Parameters
-
+    praef=''
+    if Version == '/v1.2':
+        StartCmdline = '/opt/freerdp-nightly/bin/xfreerdp'+Parameters
+    else:
+        StartCmdline = '/opt/freerdp-git'+Version+'/bin/xfreerdp'+Parameters
+    
     if debug :
             print StartCmdline
             sys.exit()
