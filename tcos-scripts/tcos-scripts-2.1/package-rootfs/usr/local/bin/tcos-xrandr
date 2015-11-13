@@ -77,6 +77,8 @@ def getOffConnectors(connectors):
         pass 
 
 def getConnector(device, Display, connectors):
+    connectors.append('NONE')
+    connectors.append('disabled')
     if Display == 'firstscreen':
         connector = l.getNismapentry(device, ldap_url).get(Display + '.connect', 'DVI')
     elif Display == 'secondscreen':
@@ -86,6 +88,20 @@ def getConnector(device, Display, connectors):
         sys.exit(0)
     if not connector in connectors:
         log.log(3, "Misconfigured Displayset: connector not found in active list")
+        try:
+            message='\"Fehlerhafte Ausgangszuweisung\n'\
+                 +'Geraet Display mit DN:'\
+                 +getAssignedDisplay()\
+                 +'\nVerwenden Sie die Ausgaenge:\n'\
+                 +(' ').join(connectors)\
+                 +'\nMomentan verwendete Ausgaenge\n'\
+                 +l.getNismapentry(device, ldap_url).get('firstscreen' + '.connect', 'DVI')\
+                 +' und '+l.getNismapentry(device, ldap_url).get('secondscreen' + '.connect', 'NONE')\
+                 +'\nFallback in den default mode'\
+                 +'\"'
+            subprocess.Popen('sleep 10; zenity --error --text '+message, shell=True)
+        except:
+            pass 
         sys.exit(0)
     else:
         log.log(3, "found:"+connector)
@@ -122,13 +138,14 @@ def main():
     # Variable declaration
     device = getAssignedDisplay()
     displayset = {} 
+    connectors = getConnectors()
     for screen in ('firstscreen','secondscreen'):
         settings = {
-            'connected_to': getConnector(device, screen, getConnectors()),
+            'connected_to': getConnector(device, screen, connectors),
             'resolution': getResolution(device, screen),
             'rotation' : getRotation(device, screen),
             'frequency' : getFrequency(device,screen),
-            'position' : str(s.join((getScreenPosition(device,screen), getConnector(device, 'firstscreen')))),
+            'position' : str(s.join((getScreenPosition(device,screen), getConnector(device, 'firstscreen', connectors)))),
             'newmode' : getNewMode(device,getResolution(device,screen),getFrequency(device,screen))
         }
         log.log(3, "checkpoint 0"+screen)
