@@ -32,7 +32,7 @@ s = ' '
 # check if xrandr runs at all and get all connectors
 def getConnectors():
     try:
-        connectors = subprocess.check_output('xrandr -q | grep connect | cut -f1 -d " "', shell=True).split('\n')
+        connectors = subprocess.check_output('xrandr -q | grep -w connected | cut -f1 -d " "', shell=True).split('\n')
     except :  
         log.log(3, "could not querry your grafic card connectors using xrandr. Better luck, next time.")
 	sys.exit(0)
@@ -73,15 +73,24 @@ def getOffConnectors(connectors):
             offString += s.join(('--output', turnOff, '--off',' '))
         return offString 
     except:
-        log.error("retrieving connector failed")
+        log.log(3,"retrieving connector failed")
         pass 
 
-def getConnector(device, Display):
-    if Display == 'firstscreen':           
-        return l.getNismapentry(device, ldap_url).get(Display + '.connect', 'DVI')
+def getConnector(device, Display, connectors):
+    if Display == 'firstscreen':
+        connector = l.getNismapentry(device, ldap_url).get(Display + '.connect', 'DVI')
+    elif Display == 'secondscreen':
+        connector = l.getNismapentry(device, ldap_url).get(Display + '.connect', 'NONE')
     else:
-        return l.getNismapentry(device, ldap_url).get(Display + '.connect', 'NONE')
- 
+        log.log(3, "screen selection invalid (only first-/ secondscreen allowed)")
+        sys.exit(0)
+    if not connector in connectors:
+        log.log(3, "Misconfigured Displayset: connector not found in active list")
+        sys.exit(0)
+    else:
+        log.log(3, "found:"+connector)
+        return connector
+
 def getRotation(device, Display):
     return l.getNismapentry(device, ldap_url).get(Display + '.rotation', 'normal')
 
@@ -115,15 +124,16 @@ def main():
     displayset = {} 
     for screen in ('firstscreen','secondscreen'):
         settings = {
-            'connected_to': getConnector(device, screen),
+            'connected_to': getConnector(device, screen, getConnectors()),
             'resolution': getResolution(device, screen),
             'rotation' : getRotation(device, screen),
             'frequency' : getFrequency(device,screen),
             'position' : str(s.join((getScreenPosition(device,screen), getConnector(device, 'firstscreen')))),
             'newmode' : getNewMode(device,getResolution(device,screen),getFrequency(device,screen))
         }
+        log.log(3, "checkpoint 0"+screen)
         displayset[screen]=settings
-
+        log.log(3, "checkpoint 1")
     #### Initialize defaults 
     displayset['firstscreen']['position'] = ''
     displayset['secondscreen']['frequency'] = ''

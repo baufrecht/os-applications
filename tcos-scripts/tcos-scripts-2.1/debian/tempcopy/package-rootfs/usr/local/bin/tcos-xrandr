@@ -1,5 +1,4 @@
 #! /usr/bin/python
-
 # standard modules
 import string
 import sys
@@ -11,18 +10,14 @@ import subprocess
 import syslog
 import time
 from subprocess import call
-
 # TCOS modules
 import pytcos.tcos as tcos
 
-
-# import re
-# import tempfile
-
-def myLog(message, bad=False):
-    syslog.syslog(message)
-    if bad : print >>sys.stderr, message
-    return
+log = tcos.Logger()
+# 0 debug
+# 1 info
+# 2 warning
+# 3 error
 
 u = tcos.Util()
 s = tcos.System()
@@ -32,140 +27,194 @@ mac = s.getMac()
 ldap_url = s.getLdapUrl()
 client_dn = l.getClientDn(mac, ldap_url)
 devices_dn = l.getDevicesDn(client_dn, ldap_url)
+s = ' '
 
 # check if xrandr runs at all and get all connectors
-try :  
-    connectors = subprocess.check_output('xrandr -q | grep connect | cut -f1 -d " "', shell=True)
-except :  
-    myLog('WARNING: could not querry your grafic card connectors using xrandr. Better luck, next time.', bad=True)
-    sys.exit(1)
-
-connectorsToTurnOff = connectors.split('\n')
-
-xrandrTurnOffCmd = ''
-xrandrCmd = ''
-xrandrNewModeCmd = ''
-xrandrAddModeCmd = ''
-displayFound = False
-tcos_screenrc = '/tmp/.tcos_displayrc'
-
-# do we have to use settings from manager?
-# 
-for device in devices_dn:
-    deviceType = l.getGroupOfUniqueNamesInfo(device, ldap_url)["schema"]
-    if deviceType == "display":
-        # prevent running twice
-        if displayFound: 
-            myLog('WARNING: Found more than one displayset asigned to this client. Using only the first one.', bad=True)
-            sys.exit()
-        displayFound = True
-
-        ###################################################################
-        # check if the user has set his own command, run it and bail out
-        #
-        xrandrCmd = l.getNismapentry(device, ldap_url).get('xrandrcmd', '')
-        if xrandrCmd != "" :
-            syslog.syslog("INFO: Using custom xrandr command")
-            try: retcode = subprocess.call(xrandrCmd, shell=True)
-            except OSError as e:
-                myLog('ERROR: Command "' + xrandrCmd + ' " failed.', bad=True)
-                sys.exit(1)
-            sys.exit(0)
-        ###################################################################
-
-        # substract the Connectors the users wants to use
-        try: connectorsToTurnOff.remove(l.getNismapentry(device, ldap_url).get('firstscreen.connect', 'DVI')) 
-        except: pass
-        try: connectorsToTurnOff.remove(l.getNismapentry(device, ldap_url).get('secondscreen.connect', 'NONE')) 
-        except: pass
-
-        # turn off all unused or disconnected connectors
-        for turnOff in connectorsToTurnOff :
-	     if turnOff: xrandrTurnOffCmd += ' --output ' + turnOff + ' --off '
-
-        f_screenrc = open(tcos_screenrc,"w")
-        for Display in  ("firstscreen",  "secondscreen") :
-            mode = l.getNismapentry(device, ldap_url).get(Display + '.resolution', '1920x1080')
-            if Display == "firstscreen" : 
-                connector = primary_screen = l.getNismapentry(device, ldap_url).get(Display + '.connect', 'DVI')
-                # In case of the mode is not known by xrandr, we prepare a 'xrandr --nemode ...' here.
-                # But it will be triggered only if addmode fails. This hopefully helps with some DVI-VGA adapters
-                # eating the EDID information.
-                # We cover this case only for the first screen.
-                fallBackFrequency = l.getNismapentry(device, ldap_url).get('firstscreen.fallbackfrequency', '')
-                x,y = mode.split("x")
-                if fallBackFrequency != '':
-                    cvt_string = commands.getoutput("cvt " + x + " " + y + " " + fallBackFrequency + " | grep -v \\# |awk '{for(i=3;i<=NF;++i) printf(\"%s \",  $i) }'")
-                else: 
-                    # try reduced blanking (means 60 Hz) in case of doubt
-                    cvt_string = commands.getoutput("cvt -r " + x + " " + y + "| grep -v \\# |awk '{for(i=3;i<=NF;++i) printf(\"%s \",  $i) }'")
-                xrandrNewModeCmd += 'xrandr --newmode ' + mode + ' ' + cvt_string + ';' 
-
-            elif Display == "secondscreen" : 
-                connector = l.getNismapentry(device, ldap_url).get(Display + '.connect', 'NONE')
-
-            if connector != "NONE":
-                rotate = l.getNismapentry(device, ldap_url).get(Display + '.rotation', 'normal')
-                xrandrCmd +=  ' --output ' + connector + ' --mode ' + mode + ' --rotate ' + rotate 
-                
-                # handle rotation and send environment vars  to tcos_screenrc
-                if rotate != "normal" and rotate != "inverted" : x,y = y,x # swap (flip) if display is rotated left or right
-                f_screenrc.write('export ' + Display + 'Width=' + x + '\n')
-                f_screenrc.write('export ' + Display + 'Heigth=' + y + '\n')
-
-                if Display == "firstscreen" :
-                    xrandrCmd += ' ' + '--primary '
-                else : 
-                    secondScreenPosition = l.getNismapentry(device, ldap_url).get('secondscreen.positioning', ' --right-of')
-                    xrandrCmd += ' ' + secondScreenPosition + ' ' +  primary_screen
-                xrandrAddModeCmd +=  ' --addmode ' + connector + ' ' + mode
-        f_screenrc.close()
-        # file should be owned by tcos, just to allow a second run as user (for debug, or changes at runtime)
-        try: subprocess.check_call('sudo chown tcos.tcos ' + f_screenrc, shell=True)
-        except :
-            pass 
-
-
-# trigger commands to system
-#
-print "Turnoff cmd: xrandr" + xrandrTurnOffCmd
-try: subprocess.check_call('xrandr ' + xrandrTurnOffCmd, shell=True)
-except subprocess.CalledProcessError :
-    myLog('WARNING: xrandrTurnOffCmd failed. This could happen.', bad=True)
-    pass 
-
-try: subprocess.check_call('xrandr ' + xrandrAddModeCmd, shell=True)
-except subprocess.CalledProcessError :
-    myLog('WARNING: xrandrAddModeCmd failed, trying to create mode now.', bad=True)
-    # If addmode fails, try to create it first.
+def getConnectors():
     try:
-        print "New mode: " +  xrandrNewModeCmd
-        subprocess.check_call(xrandrNewModeCmd, shell=True)
-        # try to add mode again
-        subprocess.check_call('xrandr ' + xrandrAddModeCmd, shell=True)
-    except subprocess.CalledProcessError :
-        myLog('WARNING: xrandrAddModeCmd failed again. Even after --newmode.', bad=True)
+        connectors = subprocess.check_output('xrandr -q | grep -w connected | cut -f1 -d " "', shell=True).split('\n')
+    except :  
+        log.log(3, "could not querry your grafic card connectors using xrandr. Better luck, next time.")
+	sys.exit(0)
+    return connectors
+
+def getCustomConnector(device, screen):
+    try:
+        connector = l.getNismapentry(device, ldap_url).get(screen+'.cust_connector', '')
+    except:
+        log.log(2, "reading custom connector: failed")
+    else:
+        log.log(0, "reading custom connector:"+connector+":OK")
+    return connector
+
+def getAssignedDisplay():
+    for device in devices_dn:
+        deviceType = l.getGroupOfUniqueNamesInfo(device, ldap_url)["schema"]
+        if deviceType == "display":
+            log.log(0,"assigned display found")
+            return device
+    log.log(3,'no displayset assigned to this client') 
+    sys.exit(0)
+
+def getUserCommand(device):
+    return l.getNismapentry(device, ldap_url).get('xrandrcmd', '')
+       
+def getUnassignedConnectors(connectors, device):
+    try: connectors.remove(l.getNismapentry(device, ldap_url).get('firstscreen.connect', 'DVI'))
+    except: log.log(2,'no screen assigned')
+    try: connectors.remove(l.getNismapentry(device, ldap_url).get('secondscreen.connect', 'NONE'))
+    except: log.log(2,'second screen not assigned')
+
+def getOffConnectors(connectors):
+    try:
+        offString = ''
+        connectors = filter(None,connectors)
+        for turnOff in connectors:
+            offString += s.join(('--output', turnOff, '--off',' '))
+        return offString 
+    except:
+        log.log(3,"retrieving connector failed")
         pass 
 
-exe = 'xrandr ' + xrandrCmd
-syslog.syslog('INFO: ' + exe )        
-print 'Resulting final command: ' + exe         
+def getConnector(device, Display, connectors):
+    if Display == 'firstscreen':
+        connector = l.getNismapentry(device, ldap_url).get(Display + '.connect', 'DVI')
+    elif Display == 'secondscreen':
+        connector = l.getNismapentry(device, ldap_url).get(Display + '.connect', 'NONE')
+    else:
+        log.log(3, "screen selection invalid (only first-/ secondscreen allowed)")
+        sys.exit(0)
+    if not connector in connectors:
+        log.log(3, "Misconfigured Displayset: connector not found in active list")
+        sys.exit(0)
+    else:
+        log.log(3, "found:"+connector)
+        return connector
 
-try: 
-    subprocess.check_call(exe, shell=True)
-except subprocess.CalledProcessError :
-    myLog('WARNING: xrandr failed the first time. Trying again.', bad=True)
-    try: 
-        # some stupide hardware, i.e. VIA Technologies, Inc. CN700/P4M800 Pro/P4M800 CE/VN800 Graphics [S3 UniChrome Pro] [1106:3344] 
-        # needs a second kick
-        # This applies to OTC-Models 1564, 1056 .
-        time.sleep(3)
-        subprocess.check_call(exe, shell=True)
-    except subprocess.CalledProcessError :
-        myLog('WARNING: xrandr failed a second time. Giving up now.', bad=True)
-        sys.exit(1)        
+def getRotation(device, Display):
+    return l.getNismapentry(device, ldap_url).get(Display + '.rotation', 'normal')
 
-# example
-# xrandr --addmode HDMI1 1920x1080
-# xrandr --output HDMI1 --primary --mode 1920x1080 --pos 1280x0 --rotate normal --output LVDS1 --off --output DP1 --off --output VGA1 --mode 1280x1024 --pos 0x56 --rotate normal
+def getResolution(device, Display):
+    return l.getNismapentry(device, ldap_url).get(Display + '.resolution', '1920x1080')
 
+def getNewMode(device, mode, frequency):
+    x,y = mode.split("x")
+    if frequency == '':
+        newmode = subprocess.check_output(s.join(('cvt -r',x,y, '| grep -v \\# ')),shell=True)
+    else:
+        newmode = subprocess.check_output(s.join(('cvt',x,y,frequency,'| grep -v \\# ')),shell=True)
+    return s.join(newmode.split()[2:])
+
+def getChipset(device):
+    return l.getNismapentry(device, ldap_url).get('graphic', 'default')
+
+def getResList(connector):
+    resregex = ' xrandr | awk \'/([0-9]+x[0-9]+)/ { print $1 }\' | sed -r -n \'/' + connector + '/,/[A-Z]/p\' | sed -e \'1d\' -e \'$d\''
+    return filter(None,subprocess.check_output(resregex ,shell=True).split('\n')[::-1])
+
+def getScreenPosition(device,screen):
+    return l.getNismapentry(device, ldap_url).get('secondscreen.positioning', ' --right-of')   
+
+def getFrequency(device,screen):
+    return l.getNismapentry(device, ldap_url).get('firstscreen.fallbackfrequency', '')
+
+def main():
+    # Variable declaration
+    device = getAssignedDisplay()
+    displayset = {} 
+    for screen in ('firstscreen','secondscreen'):
+        settings = {
+            'connected_to': getConnector(device, screen, getConnectors()),
+            'resolution': getResolution(device, screen),
+            'rotation' : getRotation(device, screen),
+            'frequency' : getFrequency(device,screen),
+            'position' : str(s.join((getScreenPosition(device,screen), getConnector(device, 'firstscreen')))),
+            'newmode' : getNewMode(device,getResolution(device,screen),getFrequency(device,screen))
+        }
+        log.log(3, "checkpoint 0"+screen)
+        displayset[screen]=settings
+        log.log(3, "checkpoint 1")
+    #### Initialize defaults 
+    displayset['firstscreen']['position'] = ''
+    displayset['secondscreen']['frequency'] = ''
+    #### first turn off all unused connectors 
+    try:
+	subprocess.check_call('xrandr ' + getOffConnectors(getConnectors()),shell=True)
+    except:
+        log.log(2,"turning off unused connectors failed")
+        pass
+    else:
+        log.log(0, "turned off: "+(getOffConnectors(getConnectors())))
+
+    ### Parse User Command if exists
+    if getUserCommand(device):
+        try:
+            subprocess.check_call(getUserCommand(device),shell=True)
+            print getUserCommand(device)
+	except:
+            log.log(2,"User Command failed! Please check the syntax, falling back to manager configuration")
+            pass
+        else:
+            log.log(0,"adjusted specified settings")
+            sys.exit(0)
+
+    ####  screen configuration
+    for screen in ('firstscreen', 'secondscreen'):
+        cust_connector = getCustomConnector(device,screen) 
+        if cust_connector != '':
+            log.log(1, "custom connector found:"+str(cust_connector))
+            displayset[screen]['connected_to'] = cust_connector
+        if l.getNismapentry(device, ldap_url).get(screen+'.connect', 'NONE') != 'NONE' or cust_connector != '':
+            if displayset[screen]['frequency'] != '':
+                mode = displayset[screen]['resolution']+'_'+displayset[screen]['frequency']
+                cmdNewMode = s.join(('xrandr', 
+                    '--newmode', mode, 
+                    displayset[screen]['newmode']))
+                cmdAddMode = s.join(('xrandr',
+                    '--addmode', mode, 
+                    displayset[screen]['resolution']))
+                try:
+                    log.log(0,"cmdNewMode:"+cmdNewMode)
+                    log.log(0,"cmdAddMode:"+cmdAddMode)
+                    subprocess.check_call(cmdNewMode, shell=True)
+                    subprocess.check_call(cmdAddMode, shell=True)
+                except:
+                    log.log(2,"mode allready exists!")
+                    pass
+                else:
+                    displayset[screen]['resolution'] = mode
+                
+            # special treatment for rs690 (futro clients)
+            #if getChipset(device) == 'rs690':
+            #    rsresolutions = getResList(displayset[screen]['connected_to'])
+            #    for res in rsresolutions:
+            #        cmdline = s.join(('xrandr', 
+            #            '--output', displayset[screen]['connected_to'], 
+            #            '--mode', res,
+            #            '--rotate', displayset[screen]['rotation'], 
+            #            displayset[screen]['position'] ))
+            #        subprocess.check_call(cmdline, shell=True)
+            #        log.log(0,cmdline)
+            #        if(res==displayset[screen]['resolution']):
+            #            sys.exit(0) 
+            #else:
+            #log.log(1,"position:"+displayset[screen]['position'])
+            cmdline = s.join(('xrandr', 
+                '--output', str(displayset[screen]['connected_to']), 
+                '--mode', str(displayset[screen]['resolution']),
+                '--rotate', str(displayset[screen]['rotation']), 
+                str(displayset[screen]['position'])))
+            if screen == 'firstscreen':
+                cmdline = s.join((cmdline, '--primary'))
+
+            try: 
+                log.log(0,cmdline)
+                subprocess.check_call(cmdline, shell=True)
+            except:
+                log.log(3,screen+"configuration failed")
+                pass
+        else: 
+            log.log(2,screen+" not assigned")
+
+if __name__ == "__main__": 
+    main()
