@@ -89,7 +89,7 @@ def getConnector(device, Display, connectors):
     if not connector in connectors:
         log.log(3, "Misconfigured Displayset: connector not found in active list")
         try:
-            message='\"Fehlerhafte Ausgangszuweisung\n'\
+            message='\"Wenden Sie sich an Ihren Administrator\n'\
                  +'Geraet Display mit DN:'\
                  +getAssignedDisplay()\
                  +'\nVerwenden Sie die Ausgaenge:\n'\
@@ -99,7 +99,7 @@ def getConnector(device, Display, connectors):
                  +' und '+l.getNismapentry(device, ldap_url).get('secondscreen' + '.connect', 'NONE')\
                  +'\nFallback in den default mode'\
                  +'\"'
-            subprocess.Popen('sleep 10; zenity --error --text '+message, shell=True)
+            subprocess.Popen('sleep 10; zenity --info --text '+message, shell=True)
         except:
             pass 
         sys.exit(0)
