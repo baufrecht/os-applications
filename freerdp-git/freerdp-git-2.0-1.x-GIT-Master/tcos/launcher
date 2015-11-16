@@ -152,14 +152,14 @@ while True:
             Parameters += ' /u:' + User 
             if Password != '' and Password != '\'\''  :
                     Parameters += ' /p:' + Password 
+
     if not "/u:" in Parameters:
             Parameters+= ' /u:' 
 
-    praef=''
     if Version == '/v1.2':
         StartCmdline = '/opt/freerdp-nightly/bin/xfreerdp'+Parameters
     else:
-        StartCmdline = '/opt/freerdp-git'+Version+'/bin/xfreerdp'+Parameters
+        StartCmdline = '/opt/freerdp-git/v1.1/bin/xfreerdp'+Parameters
     
     if debug :
             print StartCmdline
