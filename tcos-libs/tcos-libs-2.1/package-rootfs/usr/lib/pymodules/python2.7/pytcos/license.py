@@ -51,6 +51,13 @@ class License:
             d['iv'] = Random.get_random_bytes(16)
         return (d['master_key'], d['iv'])
 
+    @staticmethod
+    def write_keys(f="key.dat"):
+        d = dict()
+        d['master_key'] = Random.get_random_bytes(24)
+        d['iv'] = Random.get_random_bytes(16)
+        with open(f, 'wb') as fobj:
+            fobj.write(License.serialize_dict(d))
 
     def update_date(self, d):
         date_multi, date_unit = d['usage_time'][:-1], d['usage_time'][-1:]
@@ -100,18 +107,20 @@ class License:
         aes = self._get_aes_obj()
         return aes.decrypt(data)
 
-    def serialize_dict(self, d):
+    @staticmethod
+    def serialize_dict(d):
         '''returns a py2 compatible serialized dict'''
         return pickle.dumps(d, protocol=2)
 
-    def deserialize_obj(self, obj):
+    @staticmethod
+    def deserialize_obj(obj):
         '''returns a python dict from a serialized object'''
         return pickle.loads(obj)
 
     def write_lic(self, d, filename):
         file = open(filename, 'wb')
         if d.get('checksum'):
-            file.write(self.encrypt(self.serialize_dict(d)))
+            file.write(self.encrypt(License.serialize_dict(d)))
             file.close()
             return True
         else:
@@ -122,7 +131,7 @@ class License:
         content = file.read()
         file.close()
         try:
-            return self.deserialize_obj(self.decrypt(content))
+            return License.deserialize_obj(self.decrypt(content))
         except:
             raise
 
