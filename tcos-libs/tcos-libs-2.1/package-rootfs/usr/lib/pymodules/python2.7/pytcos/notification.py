@@ -11,7 +11,7 @@ class Notify(object):
         }
         self.notify_send = {
             'path': '/usr/bin/notify-send',
-            'arguments': '-u critical'
+            'arguments': '-u critical -t 0'
         }
         self.NOTIFIER = {'zenity': self.zenity, 'notify_send': self.notify_send,}
         if app is not None:

@@ -1,11 +1,11 @@
-tcos-libs (2.1-5) UNRELEASED; urgency=medium
+tcos-libs (2.1-6) UNRELEASED; urgency=medium
 
   * new support for licence handling:
     - pytcos/notifications.py wraps output
     - pytcos/lincense.py contains a class for Licenses, Validations
   * tcos.py: the tcos.ENTRY dict contains the program type and program name 
 
- -- Steffen Hoenig <s.hoenig@openthinclient.com>  Wed, 19 Aug 2015 20:41:48 +0200
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Wed, 18 Nov 2015 19:48:20 +0000
 
 tcos-libs (2.1-4) unstable; urgency=medium
 
