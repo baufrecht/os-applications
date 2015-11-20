@@ -1,5 +1,5 @@
-**tempcopy/*
-**tempcopy_test/*
+tempcopy
+tempcopy_test
 *.sfs
 *.tar.gz
 *.deb
