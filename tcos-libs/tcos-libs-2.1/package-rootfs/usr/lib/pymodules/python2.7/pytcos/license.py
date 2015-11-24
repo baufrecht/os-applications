@@ -158,6 +158,11 @@ class Validator(License):
                 # wrong key?
                 self.Validationstatus = self.Validationtype['NOT_VALID']
 
+        self.schema_type = schema_values.get('schema', '')
+
+        if not self.schema_type:
+         	self.Validationstatus = self.Validationtype['NOT_VALID'] 
+
     def check(self):
         # job is already done
         try:
@@ -165,9 +170,13 @@ class Validator(License):
         except:
             # we need to check for creation_date, expiration_date and checksum
             today = datetime.date.today()
+            print(self.lic)
             # creation date is in the future
             if self.lic['creation_date'] > today:
                 return self.Validationtype['NOT_VALID']
+            # license type doesn't fit
+            if self.lic['package_name'] != self.schema_type:
+            	return self.Validationtype['NOT_VALID']
             # expiration date is in the past
             if self.lic['expiration_date'] < today:
                 return self.Validationtype['EXPIRED']
@@ -180,11 +189,12 @@ class Validator(License):
     # this is the very first method to enforce licensing, yet this one is quite simple and inflexible, so
     # more to come :-)
     def simple_notify(self):
+    	n = Notify()
+        l = tcos.Logger()
         status = self.check()
+        #n.notify(text=str(status))
 
         if status['id'] != 0:
-            n = Notify()
-            l = tcos.Logger()
             if status['id'] == 1:
 
                 n.notify(text=r"License for {} has expired. {}".format(self.lic['package_name'],
