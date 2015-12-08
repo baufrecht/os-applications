@@ -1,8 +1,22 @@
-desktop (2.1-5) UNRELEASED; urgency=low
+desktop (2.1-7) unstable; urgency=low
 
+  * bump 
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Tue, 01 Dec 2015 14:32:21 +0000
+
+desktop (2.1-6) unstable; urgency=low
+
+  * [mate-screensaver] added lock-enable option to schema 
+  * [mate-screensaver] fixed a regression regarding the dia show
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Tue, 01 Dec 2015 14:32:12 +0000
+
+desktop (2.1-5) unstable; urgency=low
+
+  [ Stephan Passow ]
   * added panel orientation (credit goes to Stephan Passow) 
 
- -- Stephan Passow <stephan.otc@qmsrc.de>  Thu, 22 Oct 2015 17:43:35 +0000
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Wed, 25 Nov 2015 15:14:58 +0000
 
 desktop (2.1-4) unstable; urgency=medium
 
