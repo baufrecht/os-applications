@@ -49,7 +49,7 @@ def format_ldap_key(ldap_keys):
         list_dicts.append(ldap_to_dict(items))
 
     return list_dicts
-
+"""
 def gen_shutdown():
     obj_name = "[org/mate/panel/objects/object_10]"
     obj_type = "object-type='launcher'"
@@ -83,8 +83,7 @@ def make_launchers(ENTRY):
         launcher2 = ENTRY['launcher2']
     except:
         pass
-
-
+"""
 
 def merge_dicts(d_list, special_key):
     '''merge groups of dictionaries. Use value of special_key to form
@@ -242,9 +241,10 @@ if __name__ == '__main__':
     except:
         pass
 
+    """
     # parse launchers to branding00
     make_launchers(ENTRY)
-
+    """
     # e.G. {'org.mate.screensaver.mode': 'blank', 'org.mate.screensaver.}
     dict_lists = format_ldap_key(DEFAULT)
     md = merge_dicts(dict_lists, special_key='schema')
