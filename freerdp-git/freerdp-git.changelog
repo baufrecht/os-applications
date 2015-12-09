@@ -1,22 +1,45 @@
-freerdp-git (2.0-1.2-18.2) unstable; urgency=medium
+freerdp-git (2.1-1.2-22) unstable; urgency=medium
 
-  * added variable praefix for ld_path in cmdline
+  * changed: build compression to Zgzip
   * 
 
- -- Lars Behrens <l.behrens@openthinclient.com>  Fri, 13 Nov 2015 17:23:01 +0100
+ -- Lars Behrens <l.behrens@openthinclient.com>  Fri, 23 Nov 2015 14:22:30 +0100
+
+freerdp-git (2.1-1.2-21) unstable; urgency=low
+
+  * added: network type parameter
+  * moved freerdp-nightly from /opt/freerdp-git/v1.2/ to /opt/freerdp-nightly
+
+ -- Lars Behrens <l.behrens@openthinclient.com>  Fri, 20 Nov 2015 14:22:30 +0100
+
+freerdp-git (2.1-1.2-20) unstable; urgency=low
+
+  * fixed typo in xml-file
+  * fixed versioning
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Thu, 17 Sep 2015 12:20:57 +0200
+
+freerdp-git (2.0-1.2-19) unstable; urgency=low
+
+  * package uses now  freerdp-nightly 1.2.1+0~20150915014835.163~1.gbp735383
+      - internal version (inside binary) is 1.2.5-dev
+  * second binary (version 1.1) still on board, but version 1.2 is now default
+  * redesign of manager items, have a lot mor switches
+  * default values heavily optimized to save CPU performance
+  * separat section for RFX parameters
+  * kicked out all gdi parameters (useless)
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Wed, 16 Sep 2015 16:29:16 +0200
 
 freerdp-git (2.0-1.2-18.1) unstable; urgency=low
 
   * fixed default value issues.
-  * 
 
  -- Lars Behrens <l.behrens@openthinclient.com> Wed, 09 Sep 2015 10:51:06 +0000
 
 freerdp-git (2.0-1.2-18) unstable; urgency=low
 
   * Package now includes the latest freerdp-nightly build, which substitudes former git-version.
-  * 
- 
 
  -- Lars Behrens <l.behrens@openthinclient.com> Wed, 09 Sep 2015 10:51:06 +0000
 
