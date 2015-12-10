@@ -5,13 +5,11 @@ tcos-scripts (2.1-20) unstable; urgency=medium
 
  -- Lars Behrens <l.behrens@openthinclient.com>  Fri, 20 Nov 2015 14:22:30 +0100
 
-
 tcos-scripts (2.1-19) unstable; urgency=medium
 
   * in case output is not in connected list fallback to default
 
  -- Lars Behrens <l.behrens@openthinclient.com>  Fri, 13 Nov 2015 16:22:30 +0100
-
 
 tcos-scripts (2.1-18) unstable; urgency=medium
  

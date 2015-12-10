@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-
+#!/usr/bin/python
 import pytcos.tcos as tcos
 import os
 import re
@@ -50,7 +49,41 @@ def format_ldap_key(ldap_keys):
         list_dicts.append(ldap_to_dict(items))
 
     return list_dicts
+"""
+def gen_shutdown():
+    obj_name = "[org/mate/panel/objects/object_10]"
+    obj_type = "object-type='launcher'"
+    obj_location = "launcher-location='/usr/share/applications/debian-xterm.desktop'"
+    obj_id = "toplevel-id='top'"
+    obj_position = "position=0"
 
+    snippet = ('\n').join(obj_name,obj_type,obj_location,obj_id,obj_position)
+    return snippet
+
+def gen_suspend():
+    obj_name = "[org/mate/panel/objects/object_10]"
+    obj_type = "object-type='launcher'"
+    obj_location = "launcher-location='/usr/share/applications/debian-xterm.desktop'"
+    obj_id = "toplevel-id='top'"
+    obj_position = "position=0"
+
+    snippet = ('\n').join(obj_name,obj_type,obj_location,obj_id,obj_position)
+    return snippet
+
+def make_launchers(ENTRY):
+    try:
+        launcher1 = ENTRY['launcher1']
+    except:
+        pass
+    else:
+         #waehle snippet
+         #speicher snippet in dbconf (branding)
+         #speichere object id in org_mate_panel_general_obj_id_list
+    try:
+        launcher2 = ENTRY['launcher2']
+    except:
+        pass
+"""
 
 def merge_dicts(d_list, special_key):
     '''merge groups of dictionaries. Use value of special_key to form
@@ -208,6 +241,10 @@ if __name__ == '__main__':
     except:
         pass
 
+    """
+    # parse launchers to branding00
+    make_launchers(ENTRY)
+    """
     # e.G. {'org.mate.screensaver.mode': 'blank', 'org.mate.screensaver.}
     dict_lists = format_ldap_key(DEFAULT)
     md = merge_dicts(dict_lists, special_key='schema')

@@ -29,6 +29,7 @@ mac = s.getMac()
 ldap_url = s.getLdapUrl()
 client_dn = l.getClientDn(mac, ldap_url)
 devices_dn = l.getDevicesDn(client_dn, ldap_url)
+tcos_screenrc = "/tmp/.tcos_displayrc"
 s = ' '
 DEBUG = False
 
@@ -49,6 +50,18 @@ def getCustomConnector(device, screen):
     else:
         log.log(0, "reading custom connector:"+connector+":OK")
     return connector
+
+def setScreenrc(display, device):
+    with open(tcos_screenrc, 'w') as fobj:
+        x,y = getResolution(device, display).split('x')
+        screenWidth = s.join(('export', display+'Width='+x, '\n'))
+        screenHeight = s.join(('export', display+'Height='+y, '\n'))
+        log.log(1, "writing /tmp/.tcos_displayrc")
+        try:
+             fobj.write(screenWidth)
+             fobj.write(screenHeight)
+        except: 
+             log.log(2, "unable to write /tmp/.tcos_displayrc")
 
 def getAssignedDisplay():
     for device in devices_dn:
@@ -233,6 +246,9 @@ def main():
             except:
                 log.log(3,screen+"configuration failed")
                 pass
+            else: 
+                setScreenrc(screen, device)
+                log.log(1, "Screen:" + screen + "written to /tmp/.screenrc")
         else:
             log.log(2,screen+" not assigned")
 

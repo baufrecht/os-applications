@@ -45,7 +45,31 @@
                 <label lang="en" value="bottom"/>
             </option>
         </choice>
-      </group>
+        <!--        <choice name="launcher1">
+            <label lang="de" value="Launcher 1 auswahl" />
+            <label lanv="en" value="choose launcher 1" />
+            <option value="NONE">
+                <label lang="de" value="Bereitschaft" />
+                <label lang="en" value="standby" />
+            </option>
+            <option value="NONE">
+                <label lang="de" value="Herunterfahren" />
+                <label lang="en" value="shutdown" />
+            </option>
+        </choice>
+        <choice name="launcher2">
+            <label lang="de" value="Launcher 2 auswahl" />
+            <label lanv="en" value="choose launcher 2" />
+            <option value="NONE">
+                <label lang="de" value="Bereitschaft" />
+                <label lang="en" value="standby" />
+            </option>
+            <option value="NONE">
+                <label lang="de" value="Herunterfahren" />
+                <label lang="en" value="shutdown" />
+            </option>
+        </choice>
+      </group> -->
       <group name="org_mate_desktop_session">
         <label value="Abmelden" lang="de"/>
         <label value="Logout" lang="en"/>
