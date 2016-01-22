@@ -1325,6 +1325,7 @@ class Desktop(Logger):
         f.write("[Desktop Entry]\n")
         for k, v in desktop_file_entry_dict.iteritems():
             f.write(k + "=" + v + "\n")
+        os.chmod(desktop_file, 0o554)
         f.close()
 
     def writeDesktopFiles(self, desktop_file_foldernames=[], autostart_desktop_file_foldernames=[]):
