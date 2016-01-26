@@ -1,4 +1,75 @@
-freerdp-git (2.0-1.2-12) statble; urgency=low
+freerdp-git (2.1-1.2-22) unstable; urgency=medium
+
+  * changed: build compression to Zgzip
+  * 
+
+ -- Lars Behrens <l.behrens@openthinclient.com>  Fri, 23 Nov 2015 14:22:30 +0100
+
+freerdp-git (2.1-1.2-21) unstable; urgency=low
+
+  * added: network type parameter
+  * moved freerdp-nightly from /opt/freerdp-git/v1.2/ to /opt/freerdp-nightly
+
+ -- Lars Behrens <l.behrens@openthinclient.com>  Fri, 20 Nov 2015 14:22:30 +0100
+
+freerdp-git (2.1-1.2-20) unstable; urgency=low
+
+  * fixed typo in xml-file
+  * fixed versioning
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Thu, 17 Sep 2015 12:20:57 +0200
+
+freerdp-git (2.0-1.2-19) unstable; urgency=low
+
+  * package uses now  freerdp-nightly 1.2.1+0~20150915014835.163~1.gbp735383
+      - internal version (inside binary) is 1.2.5-dev
+  * second binary (version 1.1) still on board, but version 1.2 is now default
+  * redesign of manager items, have a lot mor switches
+  * default values heavily optimized to save CPU performance
+  * separat section for RFX parameters
+  * kicked out all gdi parameters (useless)
+
+ -- Joern Frenzel <j.frenzel@openthinclient.com>  Wed, 16 Sep 2015 16:29:16 +0200
+
+freerdp-git (2.0-1.2-18.1) unstable; urgency=low
+
+  * fixed default value issues.
+
+ -- Lars Behrens <l.behrens@openthinclient.com> Wed, 09 Sep 2015 10:51:06 +0000
+
+freerdp-git (2.0-1.2-18) unstable; urgency=low
+
+  * Package now includes the latest freerdp-nightly build, which substitudes former git-version.
+
+ -- Lars Behrens <l.behrens@openthinclient.com> Wed, 09 Sep 2015 10:51:06 +0000
+
+freerdp-git (2.1-1.2-16.12) unstable; urgency=medium
+
+  * Added xfreerdp 1.0.1 from debian wheezy
+
+ -- Lars Behrens <l.behrens@openthinclient.com>  Tue, 25 Aug 2015 12:21:54 +0200
+
+freerdp-git (2.1-1.2-16.7) unstable; urgency=low
+
+  * Recompiled with new compiler options according to debian build
+
+ -- Lars Behrens <l.behrens@openthinclient.com>  Mon, 24 Aug 2015 10:20:19 +0200
+
+freerdp-git (2.1-1.2-15) unstable; urgency=medium
+
+  * Bug: endless loop after nla with wrong credentials fixed
+  * Autologin with credentials of configuration without sso implemented
+
+ -- Lars Behrens <l.behrens@openthinclient.com>  Fri, 26 Jun 2015 12:43:12 +0200
+
+freerdp-git (2.0-1.2-14) unstable; urgency=low
+
+  * version update freerdp-1.1
+  * version update freerdp-1.2
+
+ -- Lars Behrens <l.behrens@openthinclient.com>  Tue, 16 Jun 2015 14:55:48 +0200
+
+freerdp-git (2.0-1.2-12) unstable; urgency=low
 
   * tcos/launcher
       - implement TLS for compatibility in case of expired password
@@ -13,7 +84,7 @@ freerdp-git (2.0-1.2-11) unstable; urgency=low
 
  -- Joern Frenzel <j.frenzel@openthinclient.com>  Thu, 29 Jan 2015 11:46:27 +0100
 
-freerdp-git (2.0-1.2-10) unrelease; urgency=low
+freerdp-git (2.0-1.2-10) unstable; urgency=low
 
   * have dialog for username and password to support nla
   * new options nla and cert-ignore

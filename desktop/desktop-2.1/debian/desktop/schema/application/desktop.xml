@@ -61,13 +61,29 @@
                 <label lang="en" value="No"/>
             </option>
         </choice>
+          <entry name="idle-delay__INT" value="5">
+       <label lang="de" value="Zeit bis die Desktop als inaktiv gekennzeichnet wird (in Minuten)"/>
+       <label lang="en" value="Time before session is considered idle (minutes)"/>
+  </entry>
     </group>
     <group name="org_mate_screensaver">
         <label value="Bildschirmeinstellungen" lang="de"/>
         <label value="Screen settings" lang="en"/>
         <choice name="idle-activation-enabled__BOOL" value="false">
-            <label lang="de" value="Bildschirmsperre nach 5 min aktivieren"/>
-            <label lang="en" value="Enable screen lock after 5 minutes"/>
+            <label lang="de" value="Bildschirmschoner aktivieren"/>
+            <label lang="en" value="Enable screen saver"/>
+            <option value="true">
+                <label lang="de" value="Ja"/>
+                <label lang="en" value="Yes"/>
+            </option>
+            <option value="false">
+                <label lang="de" value="Nein"/>
+                <label lang="en" value="No"/>
+            </option>
+        </choice>
+        <choice name="lock-enabled__BOOL" value="false">
+            <label lang="de" value="Bildschirmsperre aktivieren"/>
+            <label lang="en" value="Enable screen lock"/>
             <option value="true">
                 <label lang="de" value="Ja"/>
                 <label lang="en" value="Yes"/>
@@ -89,10 +105,14 @@
                 <label lang="en" value="No"/>
             </option>
         </choice>
-	<entry name="dpms-time__INT" value="600">
-	     <label lang="de" value="Sekunden bis Aktivierung des Energiesparmodus"/>
-	     <label lang="en" value="Seconds to wait for activating power saving mode"/>
-	</entry>
+        <entry name="dpms-time__INT" value="600">
+            <label lang="de" value="Zeit bis der Bildschirm abgeschaltet wird (DPMS) in Sekunden"/>
+            <label lang="en" value="Sets the time until the monitor will be switched off. (DPMS). In Seconds"/>
+        </entry>
+        <entry name="custom-slideshow" value="">
+            <label lang="de" value="Benutzer definierte Diashow (Pfad)"/>
+            <label lang="en" value="custom slideshow (path)"/>
+        </entry>
     </group>
     <group name="org_mate_marco_global-keybindings">
         <label value="Tastaturkürzel" lang="de"/>

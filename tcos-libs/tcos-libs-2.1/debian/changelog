@@ -1,11 +1,17 @@
-tcos-libs (2.1-5) UNRELEASED; urgency=medium
+tcos-libs (2.1-8) UNRELEASED; urgency=low
+
+  * moved license.py to a new package: tcos-license 
+
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Thu, 26 Nov 2015 18:22:55 +0000
+
+tcos-libs (2.1-6) unstable; urgency=medium
 
   * new support for licence handling:
     - pytcos/notifications.py wraps output
     - pytcos/lincense.py contains a class for Licenses, Validations
   * tcos.py: the tcos.ENTRY dict contains the program type and program name 
 
- -- Steffen Hoenig <s.hoenig@openthinclient.com>  Wed, 19 Aug 2015 20:41:48 +0200
+ -- Steffen Hoenig <s.hoenig@openthinclient.com>  Tue, 24 Nov 2015 17:21:48 +0000
 
 tcos-libs (2.1-4) unstable; urgency=medium
 
