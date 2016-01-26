@@ -57,37 +57,46 @@ persistenthomeFound = False
 
 for device in devices_dn:
     deviceType = ld.getGroupOfUniqueNamesInfo(device, ldap_url)["schema"]
-    # print deviceType
     if deviceType == "persistenthome":
         if persistenthomeFound: 
             print >>sys.stderr, 'WARNING: Found more than one persistanthome asigned to this client. Using only the first one.'
             syslog.syslog('WARNING: Found more than one persistanthome asigned to this client. Using only the first one.')
             sys.exit()
         persistenthomeFound = True
-
+        print deviceType
+        mount_type = ld.getNismapentry(device, ldap_url).get('home.hometype', '')
+        mount_partition = ld.getNismapentry(device, ldap_url).get('partition', '')
+        print mount_type
+        print mount_partition
         if user == "tcos": macvsuser=mac
         #Commands basteln
-        NFSMountCommand = mountcmd + ' ' + mountopt + ' ' + nfsserver + ':' + mountdir_remote + '/' + macvsuser + ' ' + mountdir_local + '/' + "tcos"
-        NFSMountCommand_home = mountcmd + ' ' + mountopt + ' ' + nfsserver + ':' + mountdir_remote + ' ' + mountdir_local
-
-        # print NFSMountCommand
+        if mount_type == "NFS":
+                MountCommand = mountcmd + ' ' + mountopt + ' ' + nfsserver + ':' + mountdir_remote + '/' + macvsuser + ' ' + mountdir_local + '/' + "tcos"
+                MountCommand_home = mountcmd + ' ' + mountopt + ' ' + nfsserver + ':' + mountdir_remote + ' ' + mountdir_local
+        else:
+                MountCommand = mountcmd + ' ' + mount_partition  + ' ' +mountdir_local+ ' && ' + 'sudo ln -s /home/'+macvsuser + ' /home/tcos && sudo chown -R 1000:1000 /home/'+macvsuser 
+                MountCommand_home = mountcmd + ' ' + mount_partition + ' ' +mountdir_local 
+        
+        print MountCommand
+        print MountCommand_home
+        print macvsuser
         # ersteinmal alle homes Mounten ob nachzuschauen ob MAC (oder User) schon vorhanden ist:
         try:
-           returnCode = os.system(NFSMountCommand_home)
+           returnCode = os.system(MountCommand_home)
         except:
            print returnCode
 
         if os.path.exists(mountdir_local + '/' + macvsuser):
            try:
-               returnCode = os.system(umountcmd + ' /' + mountdir_local + '&&' + NFSMountCommand)
+               returnCode = os.system(umountcmd + ' /' + mountdir_local + '&&' + MountCommand)
                
            except:
                print returnCode
 
         else:
             try:
-                os.system ('sudo mkdir -p ' + mountdir_local + '/' + macvsuser)
-                returnCode = os.system(umountcmd + ' /' + mountdir_local + '&&' + NFSMountCommand)
+                os.system ('sudo mkdir -p ' + mountdir_local + '/' + macvsuser + ' && chmod 1000:1000 -R /home/'+macvsuser) 
+                returnCode = os.system(umountcmd + ' /' + mountdir_local + '&&' + MountCommand)
                 
             except:
                 print returnCode
@@ -96,7 +105,8 @@ for device in devices_dn:
         # this should fix: https://github.com/openthinclient/os-core/issues/19
         #
         returnCode = os.system('target=$(mktemp -d --tmpdir=/tmp .pulse_tcos_bindmount_target_XXXXXX); \
-                                mkdir -p /home/tcos/.pulse; \
+                                sudo mkdir -p /home/tcos && sudo chown 1000:1000 /home/tcos; \
+                                sudo mkdir -p /home/tcos/.pulse; \
                                 sudo mount -o bind,uid=1000,gid=1000 $target /home/tcos/.pulse')
     else:
         exit
