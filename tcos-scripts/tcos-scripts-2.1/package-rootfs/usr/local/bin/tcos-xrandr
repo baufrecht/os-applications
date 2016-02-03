@@ -11,6 +11,7 @@ import subprocess
 import syslog
 import re
 import time
+import unittest
 from subprocess import call
 # TCOS modules
 import pytcos.tcos as tcos
@@ -42,6 +43,13 @@ def getConnectors():
         sys.exit(0)
     return connectors
 
+def init():
+    try:
+        os.remove(tcos_screenrc)
+    except:
+        log.log(0, "tcos_screenrc does not exist")
+        pass
+
 def getCustomConnector(device, screen):
     try:
         connector = l.getNismapentry(device, ldap_url).get(screen+'.cust_connector', '')
@@ -52,7 +60,7 @@ def getCustomConnector(device, screen):
     return connector
 
 def setScreenrc(display, device):
-    with open(tcos_screenrc, 'w') as fobj:
+    with open(tcos_screenrc, 'a') as fobj:
         x,y = getResolution(device, display).split('x')
         screenWidth = s.join(('export', display+'Width='+x, '\n'))
         screenHeight = s.join(('export', display+'Height='+y, '\n'))
@@ -60,6 +68,7 @@ def setScreenrc(display, device):
         try:
              fobj.write(screenWidth)
              fobj.write(screenHeight)
+             fobj.write(secondScreenPos)
         except: 
              log.log(2, "unable to write /tmp/.tcos_displayrc")
 
@@ -155,6 +164,7 @@ def getFrequency(device,screen):
 
 def main():
     # Variable declaration
+    init()
     device = getAssignedDisplay()
     displayset = {}
     connectors = getConnectors()
@@ -214,21 +224,6 @@ def main():
                 if (mode in getResList(displayset[screen]['connected_to'])):
                     displayset[screen]['resolution']=mode
 
-            # special treatment for rs690 (futro clients)
-            #if getChipset(device) == 'rs690':
-            #    rsresolutions = getResList(displayset[screen]['connected_to'])
-            #    for res in rsresolutions:
-            #        cmdline = s.join(('xrandr',
-            #            '--output', displayset[screen]['connected_to'],
-            #            '--mode', res,
-            #            '--rotate', displayset[screen]['rotation'],
-            #            displayset[screen]['position'] ))
-            #        subprocess.check_call(cmdline, shell=True)
-            #        log.log(0,cmdline)
-            #        if(res==displayset[screen]['resolution']):
-            #            sys.exit(0)
-            #else:
-            #log.log(1,"position:"+displayset[screen]['position'])
             mode = displayset[screen]['resolution']
             cmdline = s.join(('xrandr',
                 '--output', str(displayset[screen]['connected_to']),
@@ -237,6 +232,16 @@ def main():
                 str(displayset[screen]['position'])))
             if screen == 'firstscreen':
                 cmdline = s.join((cmdline, '--primary'))
+            if screen == 'secondscreen':
+                # write screen Positioning into /tmp/.tcos_diplayrc. 
+                with open(tcos_screenrc, 'a') as fobj:
+                    firstscreenPos = displayset['secondscreen']['position']
+                    if firstscreenPos.find('right-of') != -1:
+                        fobj.write("export primary="+'left'+'\n')
+                    if firstscreenPos.find('left-of') != -1:
+                        fobj.write("export primary="+'right'+'\n')
+                    else: 
+                        log.log(1, "positioning no screenposition found for second display")
             if DEBUG == True:
                 print(cmdline)
                 sys.exit(0)
