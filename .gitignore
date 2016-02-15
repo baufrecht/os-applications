@@ -3,3 +3,6 @@ tempcopy_test
 *.sfs
 *.tar.gz
 *.deb
+
+# vim
+*.swp
